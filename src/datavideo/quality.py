@@ -6,7 +6,6 @@ from pathlib import Path
 from typing import Any
 
 from .model_client import make_quality_client
-from .dynamic_data import plan_dynamic_state_keyframes
 from .schemas import ensure_dir, read_json, write_csv, write_json
 
 
@@ -132,21 +131,6 @@ def _rule_check_clip(clip_root: Path) -> list[dict[str, Any]]:
     events_csv = _read_csv(clip_root / "data_change_events.csv")
     if events and len(events_csv) != len(events):
         issues.append(_issue(clip_id, NEEDS_REVIEW, "event_csv_json_count_mismatch", "data_change_events.csv row count differs from dynamic_data.json", str(clip_root / "data_change_events.csv"), layer="rules"))
-
-    semantic_state_inputs = clip_root / "semantic_state_input_manifest.json"
-    semantic_state_svgs = clip_root / "semantic_state_svg_manifest.json"
-    semantic_state_plan = plan_dynamic_state_keyframes(dynamic)
-    if semantic_state_plan.get("should_save"):
-        if not semantic_state_inputs.exists():
-            issues.append(_issue(clip_id, NEEDS_REVIEW, "missing_semantic_state_inputs", "Multi-state data sample has no semantic state input manifest", str(semantic_state_inputs), layer="rules"))
-        if not semantic_state_svgs.exists():
-            issues.append(_issue(clip_id, NEEDS_REVIEW, "missing_semantic_state_svgs", "Multi-state data sample has no semantic state SVG manifest", str(semantic_state_svgs), layer="rules"))
-    if semantic_state_svgs.exists():
-        manifest = _json_or_issue(semantic_state_svgs, clip_id, issues, "semantic_state_svg_manifest.json")
-        rows = manifest.get("semantic_svgs") if isinstance(manifest, dict) and isinstance(manifest.get("semantic_svgs"), list) else []
-        for row in rows:
-            if not row.get("success"):
-                issues.append(_issue(clip_id, NEEDS_REVIEW, "semantic_state_svg_failed", str(row.get("failure_reason") or "State semantic SVG failed"), str(row.get("semantic_svg") or semantic_state_svgs), layer="rules"))
 
     return issues
 

@@ -110,6 +110,28 @@ def clean_states(
                 best_by_label[label] = r
         rows = list(best_by_label.values())
 
+        # A row whose entity label is a bare number equal to its own value is
+        # a value misread as an entity (e.g. "53" -> 53 next to "Country 1" ->
+        # 53).  When the same (metric, value) already exists under a labelled
+        # entity in this state, drop the numeric-entity duplicate.
+        def _is_numeric_entity(row: dict[str, Any]) -> bool:
+            return bool(re.fullmatch(r"-?\d+(?:\.\d+)?", str(row.get("entity") or "").strip()))
+
+        if any(_is_numeric_entity(r) for r in rows):
+            labelled_sigs = {
+                (str(r.get("metric") or "").strip(), _as_float(r.get("value")))
+                for r in rows
+                if not _is_numeric_entity(r)
+            }
+            rows = [
+                r
+                for r in rows
+                if not (
+                    _is_numeric_entity(r)
+                    and (str(r.get("metric") or "").strip(), _as_float(r.get("value"))) in labelled_sigs
+                )
+            ]
+
         # Title/label-value confusion: a label like "380,000 km: Average
         # Distance to the Moon" embeds its own value before a colon.
         rows = [r for r in rows if not _label_embeds_own_value(r.get("entity"), r.get("value"))]
@@ -137,6 +159,22 @@ def clean_states(
         if len(eids) == 1 and not (eids & aligned_ids):
             rows = []
         cleaned.extend(rows)
+    # Stray duplicate rows: the VLM recovery can emit the same entity again
+    # in an unnamed state while CV alignment already placed it in the frame
+    # state (e.g. bar_74 "McDonald's 37,000" appears both in state_001 and in
+    # a keyless state_004).  A non-aligned row of an aligned entity whose own
+    # state has no explicit key is a duplicate reading of the same static
+    # chart, not a real state; drop it so the final table keeps the
+    # CV-verified observation.
+    deduped: list[dict[str, Any]] = []
+    for row in cleaned:
+        eid = str(row.get("entity_id") or "")
+        has_key = str(row.get("state_key") or row.get("state_label") or "").strip() != ""
+        is_aligned = str(row.get("source_type")) == "visual_frame_align"
+        if eid in aligned_ids and not has_key and not is_aligned:
+            continue
+        deduped.append(row)
+    cleaned = deduped
     return cleaned
 
 
@@ -250,9 +288,14 @@ def reconcile_dynamic_data(
             row["needs_review"] = True
         row["raw_text"] = value_text
         row["evidence_text"] = value_text or f"{value:g}"
+        # Prefer the unit symbol actually printed in the frame (standard
+        # table read); fall back to the tick-label unit.  An empty frame unit
+        # means the chart prints no unit symbol -- never invent one.
+        frame_unit = str((cv_report.get("standard_table") or {}).get("unit") or "").strip()
         tick_unit = str(cv_report.get("tick_unit") or "").strip()
-        if tick_unit and str(row.get("unit") or "").strip().lower() in ("", "none", "unknown", "unit"):
-            row["unit"] = tick_unit
+        unit_source = frame_unit or tick_unit
+        if unit_source and str(row.get("unit") or "").strip().lower() in ("", "none", "unknown", "unit"):
+            row["unit"] = unit_source
         row["evidence_frames"] = [
             {
                 "frame_id": Path(image_path).stem,
@@ -266,6 +309,22 @@ def reconcile_dynamic_data(
 
     if not changed:
         return None
+
+    # Bar charts use one unit across a state; a stray hallucinated unit
+    # (e.g. "Billion" for store counts) is corrected to the majority unit
+    # of the aligned bars.  Only applies when there is a clear majority.
+    unit_counts: dict[str, int] = {}
+    for row in states:
+        unit = str(row.get("unit") or "").strip()
+        if unit:
+            unit_counts[unit] = unit_counts.get(unit, 0) + 1
+    if unit_counts:
+        majority_unit, majority_n = max(unit_counts.items(), key=lambda kv: kv[1])
+        if majority_n >= 2 and majority_n > sum(unit_counts.values()) - majority_n:
+            for row in states:
+                unit = str(row.get("unit") or "").strip()
+                if unit and unit != majority_unit:
+                    row["unit"] = majority_unit
 
     states = clean_states(states, bars)
     final_table = build_final_data_table(states)

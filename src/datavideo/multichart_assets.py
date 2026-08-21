@@ -168,6 +168,18 @@ def _combined_keyframe_score(score: dict[str, Any]) -> float:
     )
 
 
+def _image_sharpness(path: str | Path) -> float:
+    """Laplacian variance as a blur measure.  Low values mean a blurry frame
+    (motion blur / cross-fade), which is a poor static representative."""
+    try:
+        gray = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
+        if gray is None:
+            return 0.0
+        return float(cv2.Laplacian(gray, cv2.CV_64F).var())
+    except Exception:
+        return 0.0
+
+
 def _as_list(value: Any) -> list[Any]:
     return value if isinstance(value, list) else []
 
@@ -715,6 +727,7 @@ def select_keyframe(
                 "raw_response": model_score["raw_response"],
                 "model_status": model_score["model_status"],
                 "failure_reason": model_score["failure_reason"],
+                "sharpness": _image_sharpness(frame["path"]),
             }
         )
 
@@ -746,6 +759,38 @@ def select_keyframe(
                 - 3.0 * (1.0 - item["bar_regularity"]),
                 4,
             )
+        # The clip-wide full bar count is the modal count among frames that
+        # show at least two bars.  A single noisy over-count (text blob) or
+        # an incomplete early frame must not define the target.
+        counts = [
+            int(item["cv_bar_count"])
+            for item in scored_rows
+            if int(item["cv_bar_count"]) >= 2
+        ]
+        modal_count = max(set(counts), key=counts.count) if counts else 0
+        for item in scored_rows:
+            item["_bar_full_count"] = modal_count
+    # Blurry frames (motion blur, cross-fade, mid-transition) are poor static
+    # representatives regardless of chart type.  Penalise frames that are far
+    # below the clip's own sharpness median, so the score is scale-agnostic.
+    sharpness_values = [item.get("sharpness", 0.0) for item in scored_rows]
+    med_sharp = float(sorted(sharpness_values)[len(sharpness_values) // 2]) if sharpness_values else 0.0
+    if med_sharp > 0:
+        # Bar charts: blurry frames (motion blur / cross-fade) are excluded
+        # outright when a sharp alternative exists, so the "most bars" rule
+        # never lands on a smeared transition frame.
+        is_bar_like = "bar" in chart_type or "combined" in chart_type
+        clear = [item for item in scored_rows if item.get("sharpness", 0.0) >= 0.35 * med_sharp]
+        if is_bar_like and len(clear) >= 1:
+            for item in scored_rows:
+                if item.get("sharpness", 0.0) < 0.35 * med_sharp:
+                    item["blur_penalized"] = True
+            scored_rows = clear
+        else:
+            for item in scored_rows:
+                if item.get("sharpness", 0.0) < 0.35 * med_sharp:
+                    item["combined_score"] = round(item["combined_score"] - 6.0, 4)
+                    item["blur_penalized"] = True
     # Line/area charts draw both the polylines and the axis ticks
     # progressively: completeness is the drawing progress (rightmost point
     # of the slowest line, normalised by frame width) plus how many value
@@ -808,7 +853,15 @@ def select_keyframe(
     ):
         try:
             ctx_duration = _duration_seconds(context_video)
-            best_clip_bars = max((item.get("cv_bar_count") or 0) for item in scored_rows)
+            # Use the clip-wide modal full count as the tail gate, not the
+            # noisy per-frame maximum (a single over-counted frame would
+            # otherwise raise the bar and block a genuinely complete tail).
+            best_clip_bars = max(
+                (int(item.get("_bar_full_count") or 0) for item in scored_rows),
+                default=0,
+            )
+            if best_clip_bars <= 0:
+                best_clip_bars = max((item.get("cv_bar_count") or 0) for item in scored_rows)
             scan_dir = ensure_dir(Path(cfg.get("processed_root", "data/processed")) / clip_id / "context_tail_frames")
             # Take the first frame *after* the annotated interval that is more
             # complete than anything inside it.  This catches charts that
@@ -821,6 +874,10 @@ def select_keyframe(
                 path = scan_dir / f"context_tail_{t:.2f}.png"
                 try:
                     extract_still(context_video, t, path, force=True)
+                    tail_sharp = _image_sharpness(str(path))
+                    if med_sharp > 0 and tail_sharp < 0.35 * med_sharp:
+                        t += 0.3
+                        continue
                     tail_bars = detect_bars(str(path))
                     cnt = len(tail_bars)
                     tail_orientation = tail_bars[0].get("orientation") if tail_bars else "vertical"
@@ -885,8 +942,33 @@ def select_keyframe(
         asset = str(extract_still(context_video, context_ts, out_dir / "selected.png", force=True))
         state_rows: list[dict[str, Any]] = []
     else:
-        timestamp = _safe_still_timestamp(float(selected["timestamp"]), duration, cfg)
-        asset = str(extract_still(normalized_video, timestamp, out_dir / "selected.png", force=True))
+        # Verify the chosen frame at the final (full-resolution) extraction:
+        # the scoring-time bar count comes from scaled candidate frames and
+        # can differ (e.g. an early frame that detected text blobs as bars
+        # but has no chart at full resolution).  Walk the ranked candidates
+        # until one actually yields bars.
+        ranked = sorted(
+            scored_rows,
+            key=lambda item: _selection_rank(item, chart_type, cfg),
+            reverse=True,
+        )
+        asset = None
+        for candidate in ranked:
+            candidate_ts = _safe_still_timestamp(float(candidate["timestamp"]), duration, cfg)
+            probe_path = out_dir / "keyframe_probe.png"
+            try:
+                extract_still(normalized_video, candidate_ts, probe_path, force=True)
+                probe_bars = detect_bars(str(probe_path))
+            except Exception:
+                probe_bars = []
+            if len(probe_bars) >= 2:
+                selected = candidate
+                timestamp = candidate_ts
+                asset = str(extract_still(normalized_video, timestamp, out_dir / "selected.png", force=True))
+                break
+        if asset is None:
+            timestamp = _safe_still_timestamp(float(selected["timestamp"]), duration, cfg)
+            asset = str(extract_still(normalized_video, timestamp, out_dir / "selected.png", force=True))
         state_rows = _select_state_rows(scored_rows, selected, cfg, chart_type)
     states_dir = ensure_dir(out_dir / "states")
     if force:

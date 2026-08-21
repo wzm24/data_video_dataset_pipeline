@@ -814,31 +814,66 @@ def plan_dynamic_state_keyframes(
     if not result.get("include_in_dataset") or not result.get("dynamic_data"):
         return {"should_save": False, "reason": "not_dynamic_recovered_data", "states": []}
 
+    # Only an explicit printed state label (year/period read from the frame)
+    # defines a state.  Rows without one are animation frames or duplicates
+    # of the same static chart, not separate states, so they never form a
+    # state group.
     groups: dict[str, list[dict[str, Any]]] = {}
     order: dict[str, float] = {}
     for row in states:
         if not isinstance(row, dict):
             continue
-        state_id = row.get("state_id")
-        if state_id in (None, ""):
+        state_key = row.get("state_key") or row.get("state_label")
+        if state_key in (None, ""):
             continue
-        state_id = str(state_id)
-        groups.setdefault(state_id, []).append(row)
+        state_key = str(state_key)
+        groups.setdefault(state_key, []).append(row)
         start = _as_float(row.get("state_start"))
-        order[state_id] = min(order.get(state_id, start if start is not None else 0.0), start if start is not None else 0.0)
+        order[state_key] = min(order.get(state_key, start if start is not None else 0.0), start if start is not None else 0.0)
 
     complete_groups = []
-    for state_id, rows in groups.items():
+    for state_key, rows in groups.items():
         numeric_rows = [row for row in rows if row.get("value") is not None]
         if not numeric_rows or len(numeric_rows) != len(rows):
             continue
         has_evidence = all(row.get("evidence_frames") or row.get("evidence_sentence_id") for row in rows)
         if not has_evidence:
             continue
-        complete_groups.append((order.get(state_id, 0.0), state_id, rows))
+        complete_groups.append((order.get(state_key, 0.0), state_key, rows))
     complete_groups = sorted(complete_groups, key=lambda item: (item[0], item[1]))
+    if not groups:
+        return {"should_save": False, "reason": "no_explicit_state_labels", "states": []}
     if len(complete_groups) < 2:
         return {"should_save": False, "reason": "fewer_than_two_complete_evidenced_data_states", "states": []}
+
+    # A printed year/period only denotes a real state when the same entities
+    # are re-rendered under different labels (e.g. 1990 vs 2017).  Groups
+    # whose entities are disjoint (years used as x-axis categories, or line
+    # data points) describe one static chart, not multiple states.
+    all_ids = [
+        {str(r.get("entity_id") or "") for r in rows if r.get("entity_id")}
+        for _, _, rows in complete_groups
+    ]
+    shared_entity = any(
+        all_ids[i] & all_ids[j]
+        for i in range(len(all_ids))
+        for j in range(i + 1, len(all_ids))
+    )
+    if not shared_entity:
+        return {"should_save": False, "reason": "disjoint_entities_not_states", "states": []}
+
+    # Marks read from one and the same frame (e.g. all x-axis values of one
+    # line chart) are points of a single static chart, not video states.
+    evidence_frames = {
+        (
+            row.get("source_frame_id") or row.get("source_frame_path"),
+            _as_float(row.get("timestamp")),
+        )
+        for group in complete_groups
+        for row in (_dynamic_keyframe_row(group),)
+    }
+    if len(evidence_frames) <= 1:
+        return {"should_save": False, "reason": "static_chart_points_from_single_visual_frame", "states": []}
 
     first = complete_groups[0]
     last = complete_groups[-1]
@@ -853,24 +888,6 @@ def plan_dynamic_state_keyframes(
         picks = sorted({round(index * (total - 1) / (limit - 1)) for index in range(limit)})
         complete_groups = [complete_groups[index] for index in picks]
     planned = [_dynamic_keyframe_row(group) for group in complete_groups]
-    # A static chart can contain many recovered data marks in one representative
-    # frame. If the extractor did not provide an explicit state key, those rows
-    # are chart data points/series groups rather than video states.
-    chart_type = str(result.get("chart_type") or "").lower()
-    planned_evidence = {
-        (
-            row.get("source_frame_id") or row.get("source_frame_path"),
-            _as_float(row.get("timestamp")),
-        )
-        for row in planned
-    }
-    has_explicit_state_key = any(row.get("state_key") not in (None, "") for row in planned)
-    if len(planned_evidence) <= 1 and (chart_type in {"line", "area", "scatter"} or not has_explicit_state_key):
-        return {
-            "should_save": False,
-            "reason": "static_chart_points_from_single_visual_frame",
-            "states": [],
-        }
     if any(row.get("timestamp") is None and not row.get("source_frame_path") for row in planned):
         return {"should_save": False, "reason": "missing_visual_frame_evidence", "states": []}
     return {
@@ -882,7 +899,8 @@ def plan_dynamic_state_keyframes(
 
 
 def _dynamic_keyframe_row(group: tuple[float, str, list[dict[str, Any]]]) -> dict[str, Any]:
-    _, state_id, rows = group
+    _, state_key, rows = group
+    state_id = rows[0].get("state_id") or state_key
     visual_evidence = []
     for row in rows:
         for frame in row.get("evidence_frames") or []:

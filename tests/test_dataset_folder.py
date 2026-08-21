@@ -143,8 +143,6 @@ def test_build_dataset_folder_creates_per_state_subfolders(tmp_path):
     for state_key in ["1990", "2017"]:
         state_dir = dataset / "states" / state_key
         assert (state_dir / "semantic.svg").exists()
-        assert (state_dir / "semantic_components.svg").exists()
-        assert (state_dir / "keyframe.png").exists()
         assert (state_dir / "data_table.csv").exists()
         assert (state_dir / "intent.json").exists()
         static_intent = json.loads((state_dir / "intent.json").read_text(encoding="utf-8"))
@@ -191,3 +189,50 @@ def test_build_dataset_folder_static_clip_keeps_flat_layout(tmp_path):
     assert (dataset / "data_table.csv").exists()
     assert (dataset / "intent.json").exists()
     assert not (dataset / "states").exists()
+
+
+def test_build_dataset_folder_uses_plateau_states_when_scan_exists(tmp_path):
+    clip = tmp_path / "bar_74"
+    for state_id in ["state_01", "state_02"]:
+        state_dir = clip / "semantic_states" / state_id
+        state_dir.mkdir(parents=True)
+        (state_dir / "semantic.svg").write_text(f"<svg>{state_id}</svg>", encoding="utf-8")
+        (state_dir / "data_table.csv").write_text("entity,value\nA,10\n", encoding="utf-8")
+        (state_dir / "intent.json").write_text(json.dumps({"state_key": state_id}), encoding="utf-8")
+    (clip / "state_scan_report.json").write_text(
+        json.dumps(
+            {
+                "states": [
+                    {"state_id": "state_01", "start": 0.0, "end": 2.0, "bar_count": 4},
+                    {"state_id": "state_02", "start": 5.0, "end": 8.0, "bar_count": 4},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    (clip / "keyframes").mkdir(parents=True)
+    (clip / "keyframes" / "selected.png").write_bytes(b"selected")
+    (clip / "semantic.svg").write_text("<svg>primary</svg>", encoding="utf-8")
+    (clip / "final_data_table.csv").write_text("entity,value\nA,20\n", encoding="utf-8")
+    (clip / "animation_detection.json").write_text(
+        json.dumps({"major_actions": [], "overall_description": "x"}),
+        encoding="utf-8",
+    )
+    clip_report = {
+        "clip": {"clip_id": "bar_74", "raw_video_title": "T", "chart_type": "bar", "start_seconds": 0.0, "end_seconds": 10.0},
+        "context": {},
+        "asr": {},
+        "keyframes": {"timestamps": {"selected": 9.0}, "assets": {"selected": str(clip / "keyframes" / "selected.png")}},
+    }
+
+    result = build_dataset_folder(clip, clip_report)
+
+    dataset = clip / "dataset"
+    assert result["state_count"] == 2
+    for state_key in ["state-01", "state-02"]:
+        state_dir = dataset / "states" / state_key
+        assert (state_dir / "semantic.svg").exists()
+        assert (state_dir / "data_table.csv").exists()
+        assert (state_dir / "intent.json").exists()
+    # The primary semantic.svg still comes from the clip's final render.
+    assert (dataset / "semantic.svg").read_text(encoding="utf-8") == "<svg>primary</svg>"

@@ -207,7 +207,16 @@ def create_context_media(
     probe = ffprobe(media["video"])
     duration = float(probe["format"]["duration"])
     if requires_context_redownload:
-        context_source = _reference_interval(row)
+        ref = _reference_interval(row)
+        ctx = _context_interval(row, cfg)
+        # The fallback raw video may be either an exact reference clip
+        # (duration ~ reference) or a padded context download
+        # (duration ~ context interval). Detect which one by its duration
+        # so the visual clip is cut from the correct offset.
+        if abs(duration - (ctx["end"] - ctx["start"])) < 1.0:
+            context_source = ctx
+        else:
+            context_source = ref
     else:
         context_source["end"] = min(context_source["end"], context_source["start"] + duration)
 

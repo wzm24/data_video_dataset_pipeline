@@ -23,7 +23,16 @@ from typing import Any
 import cv2
 import numpy as np
 
+from .frames import extract_frames
+from .keyframes import extract_still
+from .media import ffprobe
 from .schemas import ensure_dir, write_json
+
+
+# A number token, optionally with thousands separators and a % suffix
+# ("30,000", "36.1%", "890").  Shared by the vision crop fallback so values
+# such as 43,000 are kept whole instead of being truncated to 43.
+_NUMBER_TOKEN_RE = re.compile(r"-?\d+(?:,\d{3})*(?:\.\d+)?\s*%?")
 
 
 VISION_DEFAULTS = {
@@ -148,9 +157,10 @@ def _estimate_background_mask(hsv: np.ndarray) -> np.ndarray:
     bg_hue = int(np.searchsorted(cum, max(1, cum[-1] // 2)))
     return _hue_near(h, bg_hue, 18) | (s < 30) | border
 
-
-def detect_bars(image_path: str | Path) -> list[dict[str, Any]]:
-    """Detect colored bar regions in a chart keyframe via color segmentation.
+def _detect_bars_color(image_path: str | Path) -> list[dict[str, Any]]:
+    """Detect bar regions via saturated-color segmentation (the robust,
+    selective path).  Only pixels with real color saturation are kept, which
+    naturally excludes black/gray grid lines, axis text and labels.
 
     Orientation is inferred from the candidate geometry: vertical bars share a
     bottom baseline (height encodes the value), horizontal bars share a left
@@ -190,6 +200,182 @@ def detect_bars(image_path: str | Path) -> list[dict[str, Any]]:
     for b in candidates:
         b["orientation"] = orientation
     return candidates
+
+
+def _detect_bars_contrast(image_path: str | Path) -> list[dict[str, Any]]:
+    """Detect bars by luminance contrast against the background.
+
+    Fallback for light-gray / white bars on dark (or mid-tone) panels, which
+    have little or no color saturation and are invisible to the color path.
+    Unlike the earlier unconditional fusion, this path only runs when the
+    color path found too few bars, and it keeps strict filters: a larger
+    morphology kernel, a resolution-scaled minimum thickness (kills grid-line
+    slivers), a solid fill ratio, and the same baseline/edge alignment checks.
+    """
+    img = cv2.imread(str(image_path))
+    if img is None:
+        return []
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    h, s, v = hsv[:, :, 0], hsv[:, :, 1], hsv[:, :, 2]
+    H, W = img.shape[:2]
+
+    # Background luminance comes from the frame border (which is almost always
+    # background), NOT from _estimate_background_mask: that mask marks every
+    # low-saturation pixel as background, which would erase exactly the
+    # light-gray/white bars this fallback is meant to recover.
+    border = np.zeros(v.shape, dtype=bool)
+    band_w = max(8, W // 40)
+    band_h = max(8, H // 40)
+    border[:band_h, :] = True
+    border[-band_h:, :] = True
+    border[:, :band_w] = True
+    border[:, -band_w:] = True
+    bg_v = float(np.median(v[border])) if border.sum() > 50 else 255.0
+    contrast = (
+        (np.abs(v.astype(np.int16) - bg_v) > max(28.0, 0.12 * bg_v)) & (v > 20)
+    ).astype(np.uint8) * 255
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 7))
+    fg = cv2.morphologyEx(contrast, cv2.MORPH_CLOSE, kernel)
+    fg = cv2.morphologyEx(fg, cv2.MORPH_OPEN, kernel)
+    n, _, stats, _ = cv2.connectedComponentsWithStats(fg, 8)
+
+    min_thickness = max(12.0, H * 0.02)
+    raw_candidates: list[dict[str, Any]] = []
+    for i in range(1, n):
+        x, y, w, hh, area = stats[i]
+        if y < 80 or w < 25 or hh < min_thickness:
+            continue
+        if x < 5 or y < 5 or x + w > W - 5 or y + hh > H - 5:
+            continue
+        region = fg[y : y + hh, x : x + w]
+        if region.sum() < area * 0.3:
+            continue
+        raw_candidates.append({"x": int(x), "y": int(y), "w": int(w), "h": int(hh)})
+
+    split_candidates: list[dict[str, Any]] = []
+    for b in raw_candidates:
+        pieces = _split_merged_bar(fg, b["x"], b["y"], b["w"], b["h"])
+        split_candidates.extend(pieces)
+
+    orientation = _classify_bar_orientation(split_candidates)
+    if orientation == "horizontal":
+        candidates = _keep_horizontal_bars(split_candidates)
+        # Recover an unaligned but bar-shaped component dropped by the shared
+        # left-edge filter: a highlighted bar is often merged with its
+        # category label, so its blob starts left of the axis.  Clip it back
+        # to the common left edge and keep it when its thickness matches.
+        if candidates:
+            thicknesses = [b["h"] for b in candidates]
+            med_t = float(np.median(thicknesses))
+            edges = [b["x"] for b in candidates]
+            edge = max(set(edges), key=edges.count)
+            kept_ids = {id(b) for b in candidates}
+            for b in split_candidates:
+                if id(b) in kept_ids:
+                    continue
+                if not (med_t * 0.55 <= b["h"] <= med_t * 2.0):
+                    continue
+                if b["w"] < 3.0 * b["h"]:
+                    continue
+                if b["x"] < edge - 2 and b["x"] + b["w"] > edge:
+                    b = {**b, "x": edge, "w": b["x"] + b["w"] - edge}
+                candidates.append(b)
+            candidates = _dedupe_y_overlap(candidates)
+    elif orientation == "vertical":
+        candidates = _keep_vertical_bars(split_candidates)
+    for b in candidates:
+        b["orientation"] = orientation
+    return candidates
+
+
+def detect_bars(image_path: str | Path) -> list[dict[str, Any]]:
+    """Detect bar regions, preferring the selective color path.
+
+    The color path is robust for ordinary charts (saturated bars on a light
+    background) and never mistakes grid lines / text for bars.  It is only
+    replaced by the luminance-contrast fallback when it finds too few bars
+    (e.g. light-gray bars on a dark panel), so noisy contrast signals cannot
+    poison charts the color path handles correctly.
+    """
+    color_bars = _detect_bars_color(image_path)
+    if len(color_bars) >= 3:
+        return color_bars
+    try:
+        contrast_bars = _detect_bars_contrast(image_path)
+    except Exception:
+        contrast_bars = []
+    if len(contrast_bars) > len(color_bars):
+        return contrast_bars
+    return color_bars
+
+def _filter_consistent_width(
+    candidates: list[dict[str, Any]],
+    frame_width: int,
+) -> list[dict[str, Any]]:
+    """Keep vertical bars that share a similar width and drop stray text
+    blobs.  Real bars in one chart use the same category width; value labels
+    and other text have irregular, often much narrower or wider boxes."""
+    if len(candidates) < 3:
+        return candidates
+    # The reference width must come from bar-like (tall) components; a frame
+    # full of text blobs would otherwise pull the median down and filter out
+    # the real (wider) bars.
+    ref = [b for b in candidates if b["h"] >= 40] or candidates
+    widths = np.array([b["w"] for b in ref])
+    med = float(np.median(widths))
+    if med <= 0 or med < frame_width * 0.01:
+        return candidates
+    kept = [b for b in candidates if med * 0.45 <= b["w"] <= med * 2.0]
+    return kept if len(kept) >= 2 else candidates
+
+
+def _runs_above(proj: np.ndarray, threshold: int) -> list[tuple[int, int]]:
+    """Return (start, end) runs where ``proj > threshold``."""
+    runs: list[tuple[int, int]] = []
+    start = -1
+    for idx, val in enumerate(proj):
+        if val > threshold and start < 0:
+            start = idx
+        elif val <= threshold and start >= 0:
+            runs.append((start, idx))
+            start = -1
+    if start >= 0:
+        runs.append((start, len(proj)))
+    return runs
+
+
+def _split_merged_bar(
+    fg: np.ndarray,
+    x: int,
+    y: int,
+    w: int,
+    h: int,
+) -> list[dict[str, Any]]:
+    """Split a merged bar component into individual bars using projection gaps.
+
+    Vertical bars sit side by side (gaps appear in the column projection),
+    horizontal bars stack top-to-bottom (gaps appear in the row projection).
+    Whichever direction yields multiple solid segments splits the blob.
+    """
+    region = fg[y : y + h, x : x + w] > 0
+    col = region.sum(axis=0)
+    row = region.sum(axis=1)
+    col_thresh = max(2.0, 0.15 * float(col.max())) if col.size else 0.0
+    row_thresh = max(2.0, 0.15 * float(row.max())) if row.size else 0.0
+    col_runs = _runs_above(col, int(col_thresh))
+    if len(col_runs) >= 2:
+        pieces = []
+        for s, e in col_runs:
+            if e - s >= 8:
+                pieces.append({"x": int(x + s), "y": int(y), "w": int(e - s), "h": int(h)})
+        if len(pieces) >= 2:
+            return pieces
+    row_runs = _runs_above(row, int(row_thresh))
+    pieces = []
+    for s, e in row_runs:
+        if e - s >= 8:
+            pieces.append({"x": int(x), "y": int(y + s), "w": int(w), "h": int(e - s)})
+    return pieces or [{"x": int(x), "y": int(y), "w": int(w), "h": int(h)}]
 
 
 def _classify_bar_orientation(candidates: list[dict[str, Any]]) -> str:
@@ -239,7 +425,6 @@ def _keep_vertical_bars(candidates: list[dict[str, Any]]) -> list[dict[str, Any]
     candidates.sort(key=lambda b: b["x"])
     return candidates
 
-
 def _keep_horizontal_bars(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Keep components that form horizontal bars: the majority share a common
     left (or right) edge and have a similar thickness; sort top-to-bottom."""
@@ -270,6 +455,239 @@ def _keep_horizontal_bars(candidates: list[dict[str, Any]]) -> list[dict[str, An
         kept = [b for b in kept if b["w"] >= max(25.0, 0.12 * maxw)]
     kept.sort(key=lambda b: b["y"])
     return kept
+
+def _merge_vertical_neighbors(
+    bars: list[dict[str, Any]],
+    gap: int = 15,
+) -> list[dict[str, Any]]:
+    """Merge components that are vertically adjacent with the same left edge
+    and width.  A bar whose top strip has a different (e.g. lighter) fill can
+    be split into two blobs; merging them back yields one bar."""
+    bars = sorted(bars, key=lambda b: (b["x"], b["y"]))
+    merged: list[dict[str, Any]] = []
+    for b in bars:
+        if (
+            merged
+            and abs(b["x"] - merged[-1]["x"]) <= 2
+            and abs(b["w"] - merged[-1]["w"]) <= 2
+            and b["y"] - (merged[-1]["y"] + merged[-1]["h"]) <= gap
+        ):
+            prev = merged[-1]
+            prev["h"] = b["y"] + b["h"] - prev["y"]
+        else:
+            merged.append(dict(b))
+    return merged
+
+
+def _y_overlap(a: dict[str, Any], b: dict[str, Any]) -> bool:
+    """True when two horizontal-bar candidates overlap in the y range by more
+    than half of the shorter one.  Real horizontal bars stack top-to-bottom
+    without overlap; an overlapping blob is a value label / decoration of one
+    of the bars (e.g. a label rendered just outside the bar's right end)."""
+    a0, a1 = a["y"], a["y"] + a["h"]
+    b0, b1 = b["y"], b["y"] + b["h"]
+    inter = min(a1, b1) - max(a0, b0)
+    return inter > 0.5 * min(a["h"], b["h"])
+
+
+def _dedupe_y_overlap(bars: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Drop smaller blobs that overlap a retained bar in the y range."""
+    bars = sorted(bars, key=lambda b: (b["y"], -b["h"]))
+    kept: list[dict[str, Any]] = []
+    for b in bars:
+        if any(_y_overlap(b, k) for k in kept):
+            continue
+        kept.append(b)
+    return kept
+
+
+def _bar_length_vector(bars: list[dict[str, Any]]) -> list[float] | None:
+    """Normalized bar lengths in categorical order (height for vertical bars,
+    width for horizontal bars), divided by the longest bar."""
+    if not bars:
+        return None
+    lengths = [_bar_length(b) for b in bars]
+    max_len = max(lengths)
+    if max_len <= 0:
+        return None
+    return [length / max_len for length in lengths]
+
+
+def _frame_sharpness(path: str | Path) -> float:
+    try:
+        gray = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
+        if gray is None:
+            return 0.0
+        return float(cv2.Laplacian(gray, cv2.CV_64F).var())
+    except Exception:
+        return 0.0
+
+
+def _segment_bar_plateaus(
+    observations: list[dict[str, Any]],
+    *,
+    sample_fps: float,
+    min_plateau_seconds: float,
+    length_tolerance: float,
+) -> list[list[dict[str, Any]]]:
+    """Cut a bar-geometry time series into steady plateaus.
+
+    A plateau is a maximal run where the bar count and every normalized
+    length stay within ``length_tolerance``, lasting at least
+    ``min_plateau_seconds``.  Frames with no detectable bars break the run;
+    transitions (changing lengths) never form a state.
+    """
+    raw: list[list[dict[str, Any]]] = []
+    current: list[dict[str, Any]] = []
+    for obs in observations:
+        if obs["vector"] is None:
+            if current:
+                raw.append(current)
+                current = []
+            continue
+        if not current:
+            current = [obs]
+            continue
+        prev = current[-1]
+        same_count = obs["bar_count"] == prev["bar_count"]
+        same_shape = same_count and all(
+            abs(a - b) <= length_tolerance
+            for a, b in zip(obs["vector"], prev["vector"])
+        )
+        if same_shape:
+            current.append(obs)
+        else:
+            raw.append(current)
+            current = [obs]
+    if current:
+        raw.append(current)
+    kept = [
+        run
+        for run in raw
+        if run[-1]["timestamp"] - run[0]["timestamp"] + 1.0 / sample_fps >= min_plateau_seconds
+    ]
+    # Merge adjacent plateaus with the same count and shape: a brief dip
+    # below the minimum duration (e.g. a one-frame detection glitch) should
+    # not split one steady state into two.
+    def _same_shape(left: list[dict[str, Any]], right: list[dict[str, Any]]) -> bool:
+        a, b = left[-1], right[0]
+        if a["bar_count"] != b["bar_count"] or a["vector"] is None or b["vector"] is None:
+            return False
+        return all(abs(x - y) <= length_tolerance for x, y in zip(a["vector"], b["vector"]))
+
+    merged: list[list[dict[str, Any]]] = []
+    for run in kept:
+        if merged and _same_shape(merged[-1], run):
+            merged[-1] = [*merged[-1], *run]
+        else:
+            merged.append(run)
+    return merged
+
+
+def detect_bar_states(
+    video: str | Path,
+    cfg: dict[str, Any] | None = None,
+    *,
+    sample_fps: float = 2.0,
+    min_plateau_seconds: float = 0.8,
+    length_tolerance: float = 0.06,
+    min_bars: int = 2,
+    expected_bar_count: int | None = None,
+    out_dir: str | Path | None = None,
+) -> list[dict[str, Any]]:
+    """Segment a bar clip into steady states from bar geometry over time.
+
+    A state is a plateau with the FULL bar count (``expected_bar_count``,
+    normally the keyframe's detected count) holding the same normalized
+    lengths for at least ``min_plateau_seconds``.  Rise/fall transitions and
+    partial-reveal stages (fewer bars appearing one by one) never form a
+    state, and the VLM's state/year labels are deliberately ignored (they
+    are frequently hallucinated, e.g. bar_74's invented "2019").
+    """
+    cfg = cfg or {}
+    state_cfg = cfg.get("state_detection") or {}
+    sample_fps = float(state_cfg.get("sample_fps", sample_fps))
+    min_plateau_seconds = float(state_cfg.get("min_plateau_seconds", min_plateau_seconds))
+    length_tolerance = float(state_cfg.get("length_tolerance", length_tolerance))
+    min_bars = int(state_cfg.get("min_bars", min_bars))
+    expected_bar_count = int(expected_bar_count or state_cfg.get("expected_bar_count") or 0) or None
+    out_dir = ensure_dir(out_dir) if out_dir is not None else None
+
+    scan_root = (
+        ensure_dir(Path(cfg.get("processed_root", "data/processed")) / "state_scan")
+        if out_dir is None
+        else ensure_dir(out_dir / "state_scan")
+    )
+    duration = float(ffprobe(video)["format"]["duration"])
+    frames = extract_frames(video, scan_root, sample_fps, 768, "state_scan", force=True)
+
+    observations = []
+    for frame in frames:
+        try:
+            bars = detect_bars(frame["path"])
+        except Exception:
+            bars = []
+        vector = _bar_length_vector(bars) if len(bars) >= min_bars else None
+        observations.append(
+            {
+                "timestamp": round(float(frame["timestamp"]), 3),
+                "path": str(frame["path"]),
+                "bar_count": len(bars) if vector is not None else 0,
+                "vector": vector,
+                "sharpness": round(_frame_sharpness(frame["path"]), 3),
+            }
+        )
+
+    plateaus = _segment_bar_plateaus(
+        observations,
+        sample_fps=sample_fps,
+        min_plateau_seconds=min_plateau_seconds,
+        length_tolerance=length_tolerance,
+    )
+    full_count = expected_bar_count
+    if full_count is None:
+        counts = [obs["bar_count"] for obs in observations if obs["bar_count"] > 0]
+        full_count = max(counts) if counts else 0
+    plateaus = [run for run in plateaus if run[0]["bar_count"] == full_count]
+
+    states: list[dict[str, Any]] = []
+    for idx, run in enumerate(plateaus, start=1):
+        duration_plateau = run[-1]["timestamp"] - run[0]["timestamp"] + 1.0 / sample_fps
+        # Representative: the sharpest settled frame, preferring one at least
+        # 40% into the plateau (away from the entry edge).
+        start_idx = max(0, min(len(run) - 1, int(len(run) * 0.4)))
+        candidate = max(run[start_idx:], key=lambda obs: obs["sharpness"])
+        representative_path = candidate["path"]
+        if out_dir is not None:
+            target = out_dir / "state_frames" / f"state_{idx:02d}.png"
+            extract_still(video, candidate["timestamp"], target, force=True)
+            representative_path = str(target)
+        states.append(
+            {
+                "state_id": f"state_{idx:02d}",
+                "start": run[0]["timestamp"],
+                "end": run[-1]["timestamp"],
+                "duration": round(duration_plateau, 3),
+                "bar_count": run[0]["bar_count"],
+                "length_vector": [round(value, 4) for value in run[0]["vector"]],
+                "full_bar_count": full_count,
+                "representative_timestamp": candidate["timestamp"],
+                "representative_path": representative_path,
+                "sample_count": len(run),
+            }
+        )
+    if out_dir is not None:
+        write_json(
+            out_dir / "state_scan_report.json",
+            {
+                "clip_duration": round(duration, 3),
+                "sample_fps": sample_fps,
+                "full_bar_count": full_count,
+                "states": states,
+                "observations": observations,
+            },
+        )
+    return states
 
 
 def _clean_vision_label(part: str) -> str:
@@ -306,12 +724,28 @@ def _labels_match(want: str, label: str) -> bool:
     return want_tokens <= label_tokens or label_tokens <= want_tokens
 
 
+def _looks_like_value_label(text: str) -> bool:
+    """Whether a vision "label" is really a printed VALUE misread as a
+    category (e.g. "43,000", "36.1%", "43000") rather than a numeric
+    category such as a year ("2019").  Years are bare 2-4 digit tokens;
+    values carry group separators, decimals, unit symbols, or are longer.
+    """
+    token = str(text or "").strip()
+    if not token:
+        return True
+    if re.search(r"[,\.%$]", token):
+        return True
+    if re.fullmatch(r"[0-9]{5,}", token):
+        return True
+    return False
+
+
 def _labeled_value_pairs(text: str) -> list[tuple[str, str]]:
     """Extract ``Label: value`` pairs from a vision response."""
     pairs: list[tuple[str, str]] = []
-    for match in re.finditer(r"([A-Za-z][A-Za-z0-9 $&'\-\.\,]*?):\s*(-?\d+(?:\.\d+)?\s*%?)", text):
+    for match in re.finditer(r"([A-Za-z][A-Za-z0-9 $&'\-\.\,]*?):\s*(-?\d+(?:,\d{3})*(?:\.\d+)?\s*%?)", text):
         label = _clean_vision_label(match.group(1))
-        value_match = re.search(r"-?\d+(?:\.\d+)?\s*%?", match.group(2))
+        value_match = re.search(r"-?\d+(?:,\d{3})*(?:\.\d+)?\s*%?", match.group(2))
         if label and value_match:
             pairs.append((label, value_match.group(0).strip()))
     return pairs
@@ -343,41 +777,68 @@ def match_entities(
     entities: list[dict[str, Any]],
     vision_order: list[str] | None = None,
 ) -> tuple[list[dict[str, Any]], list[str]]:
-    """Match boxes to entities by left-to-right order (vision-confirmed if available).
+    """Match boxes to entities by categorical order (vision-confirmed if
+    available).
 
-    When the vision model reports a category label that is not present in the
-    recovered entities, a new entity is created from the frame label so the
-    bar can still be aligned and reconciled into the data table.
+    Pass 1 matches labels (including numeric categories such as years) from
+    the vision order against the recovered entities.  Pass 2 assigns the
+    first still-unmatched entity to any bar whose label is missing or
+    unreadable (e.g. a clipped brand logo), so the bar keeps the recovered
+    entity name instead of inventing a new one.  A label that names no
+    recovered entity creates a new frame entity only when it is a real
+    category (years are fine); a value-like token (e.g. "43,000") is a
+    misread and never becomes an entity.
     """
-    aligned: list[dict[str, Any]] = []
+    aligned: list[dict[str, Any] | None] = [None] * len(boxes)
     warnings: list[str] = []
+    used_entities: set[int] = set()
+    pending: list[tuple[int, str]] = []
 
     for i, box in enumerate(boxes):
-        entity = None
+        want = ""
         if vision_order and i < len(vision_order):
             want = _clean_vision_label(vision_order[i])
-            norm_want = _normalize_label(want)
-            if norm_want:
-                for e in entities:
-                    label = _normalize_label(e.get("label"))
-                    if label == norm_want or (
-                        label and _labels_match(want, str(e.get("label") or ""))
-                    ):
-                        entity = e
-                        break
-            if entity is None and norm_want:
-                entity = {
-                    "id": re.sub(r"[^a-z0-9]+", "-", want.lower()).strip("-") or f"bar-{i + 1}",
-                    "label": want,
-                    "entity_source": "frame",
-                }
-                warnings.append(f"created entity from frame label: {want}")
-        if entity is None and i < len(entities):
-            entity = entities[i]
+        norm_want = _normalize_label(want)
+        entity = None
+        if norm_want:
+            for ei, e in enumerate(entities):
+                if ei in used_entities:
+                    continue
+                label = _normalize_label(e.get("label"))
+                if label == norm_want or (label and _labels_match(want, str(e.get("label") or ""))):
+                    entity = e
+                    used_entities.add(ei)
+                    break
+        if entity is None:
+            pending.append((i, want))
+            continue
+        aligned[i] = (
+            {
+                **box,
+                "entity_id": entity["id"],
+                "label": entity["label"],
+                "entity_source": entity.get("entity_source", "recovered"),
+            }
+        )
+
+    unused = [ei for ei in range(len(entities)) if ei not in used_entities]
+    for i, want in pending:
+        box = boxes[i]
+        entity = None
+        if unused:
+            entity = entities[unused.pop(0)]
+        elif not _looks_like_value_label(want):
+            # A label that names an entity the recovered table missed.
+            entity = {
+                "id": re.sub(r"[^a-z0-9]+", "-", want.lower()).strip("-") or f"bar-{i + 1}",
+                "label": want,
+                "entity_source": "frame",
+            }
+            warnings.append(f"created entity from frame label: {want}")
         if entity is None:
             warnings.append(f"no entity for box #{i + 1} at x={box['x']}")
             continue
-        aligned.append(
+        aligned[i] = (
             {
                 **box,
                 "entity_id": entity["id"],
@@ -387,7 +848,7 @@ def match_entities(
         )
     if len(boxes) > len(entities):
         warnings.append(f"detected {len(boxes)} bars but only {len(entities)} entities recovered")
-    return aligned, warnings
+    return [a for a in aligned if a is not None], warnings
 
 
 def read_entity_order(
@@ -426,6 +887,237 @@ def read_entity_order(
         if part and part.lower() not in skip:
             labels.append(part)
     return labels
+
+
+def _extract_json_object(text: str) -> dict[str, Any] | None:
+    """Extract the first balanced ``{...}`` JSON object from a model response."""
+    text = str(text or "")
+    start = text.find("{")
+    if start < 0:
+        return None
+    depth = 0
+    in_str = False
+    esc = False
+    for idx in range(start, len(text)):
+        ch = text[idx]
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+        elif ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                try:
+                    return json.loads(text[start : idx + 1])
+                except (TypeError, ValueError):
+                    return None
+    return None
+
+
+def read_chart_table(
+    image_path: str | Path,
+    cfg: dict[str, Any] | None = None,
+    orientation: str = "vertical",
+    attempts: int = 2,
+) -> dict[str, Any]:
+    """Read the complete data table from the keyframe via the vision model.
+
+    This is the authoritative data source for the keyframe state: it returns
+    every bar's category label and printed value in categorical order, plus
+    the in-frame title and unit symbol.  A value is only marked ``verified``
+    when at least two independent reads agree, so a single hallucinated
+    number falls back to the per-bar crop read / scale estimation downstream.
+    """
+    if orientation == "horizontal":
+        prompt = (
+            "这是横向条形图的一帧。请完整读出图表数据，只返回一个 JSON 对象，"
+            "不要任何解释或 markdown：{\"title\": \"图表标题原文，读不准就空字符串\", "
+            "\"unit\": \"数值单位符号（如 $、%、k、M；没有就空字符串，禁止臆测）\", "
+            "\"bars\": [{\"label\": \"条形名称\", \"value\": 数字}]}。"
+            "要求：1) 按从上到下顺序列出每根条形；2) value 必须是画面中实际印刷的数字，"
+            "保留完整大小（37,000 写成 37000）；3) 数值可能印在条形内部、右端、"
+            "或条形名称旁边（如名称正下方的数据标签），只要属于该条形行的印刷数字都算；"
+            "4) 坐标轴刻度（如 0/10,000）不是条形数值，绝不能写进 bars；"
+            "5) 完全没有印刷数值的条形省略 value 或填 null，绝不能编造；"
+            "6) 标签读不准就填空字符串，绝不能编造。"
+        )
+    else:
+        prompt = (
+            "这是柱状图的一帧。请完整读出图表数据，只返回一个 JSON 对象，"
+            "不要任何解释或 markdown：{\"title\": \"图表标题原文，读不准就空字符串\", "
+            "\"unit\": \"数值单位符号（如 $、%、k、M；没有就空字符串，禁止臆测）\", "
+            "\"bars\": [{\"label\": \"柱子底部名称\", \"value\": 数字}]}。"
+            "要求：1) 按从左到右顺序列出每根柱子；2) value 必须是画面中实际印刷的数字，"
+            "保留完整大小（37,000 写成 37000）；3) 数值可能印在柱子内部、顶部、"
+            "或柱子名称旁边（如名称正上方的数据标签），只要属于该柱子列的印刷数字都算；"
+            "4) 坐标轴刻度（如 0/10,000）不是柱子数值，绝不能写进 bars；"
+            "5) 完全没有印刷数值的柱子省略 value 或填 null，绝不能编造；"
+            "6) 标签读不准就填空字符串，绝不能编造。"
+        )
+    raw_attempts: list[str] = []
+    row_sets: list[list[dict[str, Any]]] = []
+    titles: list[str] = []
+    units: list[str] = []
+    for _ in range(max(1, attempts)):
+        try:
+            text = _call_vision(image_path, prompt, cfg, temperature=0.0)
+        except Exception:
+            continue
+        raw_attempts.append(text)
+        obj = _extract_json_object(text)
+        if not isinstance(obj, dict):
+            continue
+        title = str(obj.get("title") or "").strip()
+        unit = str(obj.get("unit") or "").strip()
+        if title:
+            titles.append(title)
+        if unit:
+            units.append(unit)
+        rows: list[dict[str, Any]] = []
+        for bar in obj.get("bars") if isinstance(obj.get("bars"), list) else []:
+            if not isinstance(bar, dict):
+                continue
+            label = str(bar.get("label") or "").strip()
+            value = bar.get("value")
+            value_num: float | None = None
+            value_text = ""
+            if value not in (None, ""):
+                if isinstance(value, (int, float)) and not isinstance(value, bool):
+                    value_num = float(value)
+                    value_text = f"{value_num:g}"
+                else:
+                    match = _NUMBER_TOKEN_RE.search(str(value))
+                    if match:
+                        token = match.group(0).strip()
+                        value_text = token
+                        try:
+                            value_num = float(token.replace(",", "").rstrip("%"))
+                        except ValueError:
+                            value_num = None
+            rows.append({"label": label, "value": value_num, "value_text": value_text})
+        row_sets.append(rows)
+
+    count = max((len(rows) for rows in row_sets), default=0)
+    merged: list[dict[str, Any]] = []
+    for idx in range(count):
+        candidates = [rows[idx] for rows in row_sets if idx < len(rows)]
+        if not candidates:
+            break
+        labels = {c["label"] for c in candidates if c["label"]}
+        label = sorted(labels)[0] if len(labels) == 1 else (next(iter(labels)) if labels else "")
+        value: float | None = None
+        value_text = ""
+        agreeing = 0
+        if len({c["value"] for c in candidates if c.get("value") is not None}) == 1:
+            value = next((c["value"] for c in candidates if c.get("value") is not None), None)
+            agreeing = sum(1 for c in candidates if c.get("value") == value)
+            for c in candidates:
+                if c.get("value") == value and c.get("value_text"):
+                    value_text = c["value_text"]
+                    break
+        verified = agreeing >= 2
+        merged.append(
+            {
+                "label": label,
+                "value": value,
+                "value_text": value_text,
+                "verified": verified,
+            }
+        )
+    return {
+        "title": titles[0] if titles else "",
+        "unit": units[0] if units else "",
+        "bars": merged,
+        "attempt_count": len(row_sets),
+        "raw_attempts": raw_attempts,
+    }
+
+
+def read_bar_label(
+    image_path: str | Path,
+    box: dict[str, Any],
+    cfg: dict[str, Any] | None = None,
+) -> str:
+    """Read one bar's category label from a focused crop (left of a horizontal
+    bar, below a vertical bar).  Used when the full-frame table read missed a
+    small / clipped label."""
+    img = cv2.imread(str(image_path))
+    if img is None:
+        return ""
+    H, W = img.shape[:2]
+    if str(box.get("orientation")) == "horizontal":
+        # Category text sits to the LEFT of a horizontal bar; some charts also
+        # print it just above the bar, so include a band above as well.
+        x2 = max(10, int(box["x"]) - 2)
+        x1 = max(0, x2 - 240)
+        y1 = max(0, int(box["y"]) - 28)
+        y2 = min(H, int(box["y"] + box["h"]) + 10)
+    else:
+        y1 = int(box["y"] + box["h"]) + 2
+        y2 = min(H, y1 + 70)
+        x1 = max(0, int(box["x"]) - 90)
+        x2 = min(W, int(box["x"] + box["w"]) + 90)
+    if y2 <= y1:
+        y2 = y1 + 1
+    if x2 <= x1:
+        x2 = x1 + 1
+    crop = img[y1:y2, x1:x2]
+    crop_path = Path(image_path).with_name(f"label_crop_{int(box['x'])}_{int(box['y'])}.png")
+    cv2.imwrite(str(crop_path), crop)
+    try:
+        text = _call_vision(crop_path, "读出这个裁剪图里的文字，只返回文字本身，不要解释。", cfg, temperature=0.0)
+    except Exception:
+        return ""
+    label = text.strip().strip("\"'`。，,. ")
+    if not re.search(r"[A-Za-z0-9\u4e00-\u9fff]", label):
+        return ""
+    return label[:60] if len(label) > 60 else label
+
+
+def _assign_table_values(
+    aligned: list[dict[str, Any]],
+    table: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Merge verified table values into the CV-aligned bars.
+
+    Matches by label first (normalized), then by categorical position, so a
+    bar whose label the table read with a slight spelling difference still
+    receives its verified printed value.
+    """
+    rows = table.get("bars") or []
+    by_label: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        norm = _normalize_label(row.get("label"))
+        if norm:
+            by_label.setdefault(norm, row)
+    out: list[dict[str, Any]] = []
+    for idx, item in enumerate(aligned):
+        row = None
+        norm = _normalize_label(item.get("label"))
+        if norm and norm in by_label:
+            row = by_label[norm]
+        elif idx < len(rows):
+            row = rows[idx]
+        if row and row.get("verified") and row.get("value") is not None:
+            out.append(
+                {
+                    **item,
+                    "value": row["value"],
+                    "value_text": row.get("value_text") or "",
+                    "value_read_verified": True,
+                }
+            )
+        else:
+            out.append({**item, "value": None, "value_text": None, "value_read_verified": False})
+    return out
 
 
 def read_frame_title(
@@ -471,6 +1163,24 @@ def verify_alignment(image_path: str | Path, cfg: dict[str, Any] | None = None) 
 
 
 def _crop_value_region(img: np.ndarray, box: dict[str, Any]) -> np.ndarray:
+    if str(box.get("orientation")) == "horizontal":
+        # Horizontal bars print the value at the right end (or just inside
+        # the end).  Crop a band centred vertically on the bar, starting at
+        # ~55% of the bar width (so values printed inside the bar tail are
+        # included) and extending ~140px past the right edge (right-end
+        # labels).  This is scale-agnostic: no absolute pixel thresholds.
+        H, W = img.shape[:2]
+        bar_x2 = int(box["x"] + box["w"])
+        x1 = max(0, int(box["x"] + box["w"] * 0.55))
+        x2 = min(W, bar_x2 + 140)
+        y1 = max(0, int(box["y"]) - 6)
+        y2 = min(H, int(box["y"] + box["h"]) + 6)
+        if x2 <= x1:
+            x2 = min(W, x1 + 140)
+        if y2 <= y1:
+            y1 = max(0, int(box["y"]) - 8)
+            y2 = min(H, int(box["y"] + box["h"]) + 8)
+        return img[y1:y2, x1:x2]
     x1 = max(0, box["x"] - 20)
     x2 = min(img.shape[1], box["x"] + box["w"] + 20)
     y1 = max(0, box["y"] - 60)
@@ -497,6 +1207,8 @@ def read_bar_values(
         value_prompt = (
             "这是横向条形图。请找出画面中**实际印刷了数值**的条形，用「标签: 数值」的格式"
             "列出它们的左侧完整名称和右端数值（例如 Less than $20,000: 890）。"
+            "注意：坐标轴上的刻度数字（如底部 x 轴的 0/100/200 或 $30,000）**不是条形数值**，"
+            "绝不能当作条形的值；只读与条形相邻（内部/右端）的数值标签。"
             "没有印刷数值的条形**绝对不能写数值、绝对不能编造**，只列有数值的条形即可；"
             "宁可少报，不要瞎编。不要解释。"
         )
@@ -504,6 +1216,8 @@ def read_bar_values(
         value_prompt = (
             "这是柱状图的一帧。请找出画面中**实际印刷了数值**的柱子，用「标签: 数值」"
             "的格式列出它们的底部标签和顶部数值（例如 Sub-Saharan Africa: 36.1%）。"
+            "注意：坐标轴上的刻度数字（如左侧 y 轴的 0/$30,000）**不是柱子数值**，"
+            "绝不能当作柱子的值；只读与柱子相邻（上方/内部）的数值标签。"
             "没有印刷数值的柱子**绝对不能写数值、绝对不能编造**，只列有数值的柱子即可；"
             "宁可少报，不要瞎编。不要解释。"
         )
@@ -531,7 +1245,7 @@ def read_bar_values(
                     assigned.add(idx)
                     break
         if not assigned and orientation != "horizontal":
-            tokens = re.findall(r"-?\d+(?:\.\d+)?\s*%?", text)
+            tokens = re.findall(r"-?\d+(?:,\d{3})*(?:\.\d+)?\s*%?", text)
             percentages = [token for token in tokens if "%" in token]
             sequence = percentages if len(percentages) >= len(aligned) else tokens
             for idx, item in enumerate(aligned):
@@ -573,7 +1287,7 @@ def read_bar_values(
                     cfg,
                     temperature=0.0,
                 )
-                match = re.search(r"-?\d+(?:\.\d+)?\s*%?", crop_text)
+                match = _NUMBER_TOKEN_RE.search(crop_text)
                 value_text = match.group(0).strip() if match else None
             except Exception:
                 value_text = None
@@ -865,7 +1579,6 @@ def detect_axis_tick_marks(
             return [{"coord": coord} for coord in series]
     return []
 
-
 def _detect_tick_label_blocks(
     img: np.ndarray,
     orientation: str = "vertical",
@@ -974,7 +1687,6 @@ def _dominant_even_series(values: list[float], tolerance: float = 0.45) -> list[
                 best = series
     return best
 
-
 def _rebuild_even_ticks(detected: list[float], count: int, tolerance: float = 14.0) -> list[float]:
     """Rebuild a complete evenly-spaced tick set from noisy partial detections.
 
@@ -1022,7 +1734,6 @@ def _rebuild_even_ticks(detected: list[float], count: int, tolerance: float = 14
         return points
     return best[0]
 
-
 def _thin_binary(binary: np.ndarray) -> np.ndarray:
     """Zhang-Suen thinning: binary 0/255 -> single-pixel skeleton."""
     skeleton = binary.copy()
@@ -1067,7 +1778,6 @@ def _thin_binary(binary: np.ndarray) -> np.ndarray:
             if markers:
                 changed = True
     return skeleton
-
 
 def _line_trace_yx(
     skeleton: np.ndarray,
@@ -1538,10 +2248,10 @@ def _cluster_consecutive(values: list[int], *, gap: int) -> list[list[int]]:
             bands.append([value])
     return bands
 
-
 def _parse_tick_labels(text: str) -> tuple[list[float], str]:
     """Parse a vision JSON array of axis tick labels into numbers + unit."""
     unit = "$" if "$" in text else ("%" if "%" in text else "")
+    suffix_unit = ""
     match = re.search(r"\[.*\]", text, re.S)
     if not match:
         return [], unit
@@ -1555,20 +2265,23 @@ def _parse_tick_labels(text: str) -> tuple[list[float], str]:
     for entry in raw:
         text_entry = str(entry).strip()
         low_entry = text_entry.lower()
-        multiplier = 1.0
         if low_entry.endswith("k"):
-            multiplier = 1e3
+            suffix_unit = "k"
         elif low_entry.endswith("m"):
-            multiplier = 1e6
+            suffix_unit = "m"
         elif low_entry.endswith("b"):
-            multiplier = 1e9
+            suffix_unit = "b"
         digits = re.sub(r"[^0-9.\-]", "", text_entry)
         if not digits:
             return [], unit
         try:
-            labels.append(float(digits) * multiplier)
+            # Preserve the chart's own scaling: "20k" stays 20 with unit "k",
+            # "20000" stays 20000 with no suffix.  Do not silently rescale.
+            labels.append(float(digits))
         except ValueError:
             return [], unit
+    if suffix_unit:
+        unit = unit + suffix_unit if unit else suffix_unit
     return labels, unit
 
 
@@ -1589,14 +2302,14 @@ def read_tick_labels(
         prompt = (
             "这是横向条形图。请读出底部横轴（数值轴）上的刻度标签，"
             "从左到右依次列出，只返回 JSON 数字数组，例如 [0, 100, 200]。"
-            '若标签带 "$" 或 "%" 等符号请保留，例如 ["$0", "$100"]。'
+            '若标签带 "$" "%" "k" "M" 等符号请保留原样，例如 ["$0", "$50k", "$100k"]。'
             "必须精确读出每个数字的完整大小（如 15,000 与 30,000 不能读成 8,000/16,000），不要解释。"
         )
     else:
         prompt = (
             "这是柱状图。请读出左侧纵轴（数值轴）上的刻度标签，"
             "从下到上依次列出，只返回 JSON 数字数组，例如 [0, 10, 20]。"
-            '若标签带 "$" 或 "%" 等符号请保留，例如 ["0%", "10%"]。'
+            '若标签带 "$" "%" "k" "M" 等符号请保留原样，例如 ["0%", "50k", "100k"]。'
             "必须精确读出每个数字的完整大小（如 15,000 与 30,000 不能读成 8,000/16,000），不要解释。"
         )
     attempts: list[tuple[list[float], str]] = []
@@ -1771,7 +2484,9 @@ def read_line_data(
         "请为每条折线读出10到15个数据点，从横轴起点到最右端终点均匀分布，"
         "必须包含起点和终点，以及所有明显的峰/谷转折点和途中均匀的中间点。"
         "不要让后半段缺失。每个点给出（横轴标签, 数值）。"
-        "只返回JSON：{\"unit\":\"%\",\"series\":[{\"name\":\"系列名\","
+        "只返回JSON：{\"unit\":\"图中y轴刻度使用的单位符号（如$、%、k、M；"
+        "若图中没有任何单位符号则填空字符串\\\"\\\"，禁止臆测单位）\","
+        "\"series\":[{\"name\":\"系列名\","
         "\"points\":[[标签,数值],[标签,数值],...]}]}。按横轴顺序排列，"
         "点要均匀覆盖整条线，从起点一直读到终点，不要省略后半段。"
         "不要计算，按线在y轴刻度处的位置读数。"
@@ -2511,16 +3226,9 @@ def _render_overlay(
     bar_color = (230, 25, 75)
     for a in aligned:
         d.rectangle([a["x"], a["y"], a["x"] + a["w"], a["y"] + a["h"]], outline=bar_color, width=3)
-        boxes = (text_boxes or {}).get(str(a.get("entity_id") or "")) or {}
-        for key in ("value_box", "label_box"):
-            box = boxes.get(key)
-            if not isinstance(box, (list, tuple)) or len(box) != 4:
-                continue
-            x1, y1, x2, y2 = [int(v) for v in box]
-            if x2 <= x1 or y2 <= y1 or x2 > img.width or y2 > img.height:
-                continue
-            outline = _contrast_outline_color(np.asarray(img), (x1, y1, x2, y2))
-            d.rectangle([x1, y1, x2, y2], outline=outline, width=3)
+        # Only the bar box is drawn.  Value/label boxes were removed: they
+        # cluttered the review image and their positions are not reliable
+        # (values are read by the vision model, not from these boxes).
     img.save(out)
     return out.exists()
 
@@ -2537,17 +3245,6 @@ def _render_aligned_svg(
     for i, a in enumerate(aligned):
         eid = re.sub(r"[^a-z0-9]+", "-", str(a.get("entity_id") or "").lower()).strip("-") or f"bar-{i}"
         value = a.get("value_text") or ""
-        boxes = (text_boxes or {}).get(str(a.get("entity_id") or "")) or {}
-        value_box_attr = (
-            f' data-value-box="{",".join(str(int(v)) for v in boxes["value_box"])}"'
-            if boxes.get("value_box")
-            else ""
-        )
-        label_box_attr = (
-            f' data-label-box="{",".join(str(int(v)) for v in boxes["label_box"])}"'
-            if boxes.get("label_box")
-            else ""
-        )
         orientation = str(a.get("orientation") or ("horizontal" if a["w"] >= a["h"] else "vertical"))
         anim_prop = "width" if orientation == "horizontal" else "height"
         anchor = "left" if orientation == "horizontal" else "bottom"
@@ -2569,32 +3266,25 @@ def _render_aligned_svg(
                 vy = max(0, a["y"] - 36)
                 text_anchor = "middle"
                 tx = a["x"] + a["w"] / 2
-            lines.append(
-                f'<rect id="{eid}-value-box" data-role="value-box" data-entity-id="{eid}" '
-                f'x="{vx:.1f}" y="{vy:.1f}" width="{vw:.1f}" height="28" fill="#ffffff" stroke="#333333" stroke-width="2"{value_box_attr}/>'
-            )
+            # Value text only, no surrounding box (keeps the chart clean;
+            # values come from the vision read, not from this geometry).
             lines.append(
                 f'<text data-role="value-label" x="{tx:.1f}" y="{vy + 21}" '
                 f'text-anchor="{text_anchor}" font-size="20" font-weight="700">{html.escape(value)}</text>'
             )
         label = str(a.get("label") or "")
         if label:
-            lw = max(float(a["w"]), _text_width_estimate(label, 16) + 18)
+            # Category text is still emitted (it is the semantic label), but
+            # the surrounding white box is dropped: it drew a rectangle around
+            # every label and cluttered the chart.
+            text_anchor = "middle"
+            tx = a["x"] + a["w"] / 2
             if orientation == "horizontal":
-                lx = a["x"] - 4
                 ly = max(0, a["y"] - 34)
                 text_anchor = "start"
-                tx = lx + 9
+                tx = a["x"] + 4
             else:
-                baseline = a["y"] + a["h"]
-                lx = a["x"] + a["w"] / 2 - lw / 2
-                ly = baseline + 8
-                text_anchor = "middle"
-                tx = a["x"] + a["w"] / 2
-            lines.append(
-                f'<rect id="{eid}-label-box" data-role="category-box" data-entity-id="{eid}" '
-                f'x="{lx:.1f}" y="{ly:.1f}" width="{lw:.1f}" height="28" fill="#ffffff" stroke="#333333" stroke-width="2"{label_box_attr}/>'
-            )
+                ly = a["y"] + a["h"] + 8
             lines.append(
                 f'<text data-role="category-label" x="{tx:.1f}" y="{ly + 21}" '
                 f'text-anchor="{text_anchor}" font-size="16">{html.escape(label)}</text>'
@@ -2616,20 +3306,67 @@ def run_cv_align(
     out_dir = ensure_dir(out_dir)
     boxes = detect_bars(image_path)
     orientation = boxes[0].get("orientation") if boxes else "vertical"
-    try:
-        vision_order = read_entity_order(image_path, cfg, orientation)
-    except Exception:
-        vision_order = None
+    # Standard data source: one structured table read per keyframe.  It
+    # returns labels + printed values + in-frame title/unit in one shot, so
+    # it replaces the separate entity-order read and the per-bar full-frame
+    # value scans (fewer vision calls, consistent label/value pairing).
+    table = read_chart_table(image_path, cfg, orientation)
+    vision_order = [row["label"] for row in table["bars"]]
+    if any(not label for label in vision_order):
+        # The table read can miss a small / clipped label (e.g. the top bar
+        # of bar_74).  Try a dedicated category-label read, then per-bar
+        # label crops for anything still empty.
+        try:
+            order_fallback = read_entity_order(image_path, cfg, orientation)
+        except Exception:
+            order_fallback = []
+        for idx, label in enumerate(vision_order):
+            if label:
+                continue
+            if idx < len(order_fallback) and order_fallback[idx]:
+                vision_order[idx] = order_fallback[idx]
+            elif idx < len(boxes):
+                try:
+                    vision_order[idx] = read_bar_label(image_path, boxes[idx], cfg)
+                except Exception:
+                    pass
     aligned, warnings = match_entities(boxes, entities, vision_order)
-    values = read_bar_values(image_path, aligned, cfg, orientation)
-    for item in values:
-        if item.get("value_text"):
+    values = _assign_table_values(aligned, table)
+    # Per-bar crop fallback for bars whose value the table could not verify
+    # (single-read or absent); only when the table recovered at least one
+    # value, so charts with no printed values go straight to tick estimation.
+    any_table_value = any(item.get("value") is not None for item in values)
+    if any_table_value:
+        img = cv2.imread(str(image_path))
+        for idx, item in enumerate(values):
+            if item.get("value_read_verified") or img is None:
+                continue
+            crop = _crop_value_region(img, item)
+            crop_path = Path(image_path).with_name(f"value_crop_{idx:02d}.png")
+            cv2.imwrite(str(crop_path), crop)
             try:
-                item["value"] = float(re.sub(r"[^0-9.]", "", item["value_text"]))
-            except ValueError:
-                item["value"] = None
-        else:
-            item["value"] = None
+                crop_text = _call_vision(
+                    crop_path,
+                    "读出这个裁剪图里的数字或百分比，只返回数字和单位，如 36.1% 或 6.9。",
+                    cfg,
+                    temperature=0.0,
+                )
+                match = _NUMBER_TOKEN_RE.search(crop_text)
+                if match:
+                    token = match.group(0).strip()
+                    try:
+                        num = float(token.replace(",", "").rstrip("%"))
+                    except ValueError:
+                        num = None
+                    if num is not None:
+                        values[idx] = {
+                            **item,
+                            "value": num,
+                            "value_text": token,
+                            "value_read_verified": True,
+                        }
+            except Exception:
+                pass
     # A zero read on a visible bar is almost always a misread of an unlabeled
     # bar (or an axis tick), not a genuine zero; let the scale estimation
     # fill it in instead.
@@ -2642,6 +3379,25 @@ def run_cv_align(
     for item in values:
         if item.get("value_text"):
             item["value_read_verified"] = True
+    # Drop frame-read values that are grossly inconsistent with the bar
+    # geometry (e.g. a y-axis tick label like $30,000 misread as a bar's
+    # value).  A real printed value tracks the bar's length ratio; a value
+    # that is 10x off that ratio is a misread and should fall back to the
+    # scale estimation instead of poisoning the calibration.
+    verified = [float(v["value"]) for v in values if v.get("value_read_verified") and v.get("value")]
+    lengths = [_bar_length(v) for v in values if _bar_length(v) > 0]
+    if len(verified) >= 2 and lengths:
+        max_verified = max(verified)
+        max_length = max(lengths)
+        for item in values:
+            if not item.get("value_read_verified") or not item.get("value"):
+                continue
+            value_ratio = float(item["value"]) / max_verified
+            length_ratio = _bar_length(item) / max_length
+            if length_ratio > 0 and (value_ratio < 0.1 * length_ratio or value_ratio > 10.0 * length_ratio):
+                item["value"] = None
+                item["value_text"] = None
+                item["value_read_verified"] = False
     estimated_count = estimate_unlabeled_values(values)
     tick_marks: list[dict[str, Any]] = []
     tick_unit = ""
@@ -2673,6 +3429,23 @@ def run_cv_align(
                             orientation,
                         )
                 tick_estimated_count = estimate_unlabeled_values_from_ticks(values, paired)
+                # A directly-read value that strongly conflicts with the axis
+                # scale (e.g. a $30,000 tick label misread as a bar value) is
+                # a misread: clear it so the scale estimation takes over.
+                scale = _tick_scale(tick_marks)
+                if scale is not None:
+                    for item in values:
+                        if not item.get("value_read_verified") or not item.get("value"):
+                            continue
+                        if str(item.get("orientation") or "") == "horizontal":
+                            coord = float(item.get("x") or 0.0) + _bar_length(item)
+                        else:
+                            coord = float(item.get("y") or 0.0)
+                        expected = _estimate_coord_value(coord, scale)
+                        if expected > 0 and abs(float(item["value"]) - expected) / expected > 2.0:
+                            item["value"] = None
+                            item["value_text"] = None
+                            item["value_read_verified"] = False
     estimated_count += tick_estimated_count
     for item in values:
         item["value_plausible"], item["plausibility_message"] = _value_plausibility(item, values)
@@ -2717,7 +3490,15 @@ def run_cv_align(
         "value_geometry_consistent": consistent,
         "consistency_message": message,
         "implausible_bars": implausible,
-        "value_read_method": "vision_full_frame",
+        "value_read_method": "vision_standard_table",
+        "standard_table": {
+            "title": table.get("title") or "",
+            "unit": table.get("unit") or "",
+            "bars": table.get("bars") or [],
+            "attempt_count": table.get("attempt_count") or 0,
+        },
+        "frame_title": table.get("title") or "",
+        "frame_unit": table.get("unit") or "",
         "vision_entity_order": vision_order or [],
         "alignment_verified": verified,
         "alignment_verify_message": verify_message,

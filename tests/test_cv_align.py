@@ -132,11 +132,13 @@ def test_parse_tick_labels():
     labels, unit = _parse_tick_labels('["0%", "50%"]')
     assert unit == "%"
     assert _parse_tick_labels("no array here") == ([], "")
-    # thousand/million suffixes must scale the value (50k -> 50000)
+    # thousand/million suffixes are kept as the unit instead of silently
+    # rescaling the value: "50k" stays 50 with unit "k"
     labels, unit = _parse_tick_labels('["50k", "100k", "350k"]')
-    assert labels == [50000.0, 100000.0, 350000.0]
+    assert labels == [50.0, 100.0, 350.0]
+    assert unit == "k"
     labels, unit = _parse_tick_labels('["$0", "$500k", "$1m"]')
-    assert labels == [0.0, 500000.0, 1000000.0]
+    assert labels == [0.0, 500.0, 1.0]
 
 
 def test_infer_baseline_coord_from_bar_geometry():
@@ -451,7 +453,7 @@ def test_parse_label_json_keeps_comma_labels_intact():
     ]
 
 
-def test_render_aligned_svg_has_value_and_category_boxes(tmp_path):
+def test_render_aligned_svg_has_value_and_category_text(tmp_path):
     aligned = [
         {"x": 172, "y": 330, "w": 158, "h": 236, "entity_id": "ssa", "label": "Sub-Saharan Africa", "value_text": "36.1%"},
         {"x": 953, "y": 560, "w": 157, "h": 6, "entity_id": "eu", "label": "European Union", "value_text": "1%"},
@@ -459,8 +461,12 @@ def test_render_aligned_svg_has_value_and_category_boxes(tmp_path):
     out = tmp_path / "aligned.svg"
     assert _render_aligned_svg(aligned, out)
     svg = out.read_text(encoding="utf-8")
-    assert 'data-role="value-box"' in svg
-    assert 'data-role="category-box"' in svg
+    # Value and category text stay, but their surrounding boxes were removed
+    # so the review chart shows only bars.
+    assert 'data-role="value-box"' not in svg
+    assert 'data-role="category-box"' not in svg
+    assert 'data-role="value-label"' in svg
+    assert 'data-role="category-label"' in svg
     assert "36.1%" in svg
     assert "European Union" in svg
 
@@ -486,7 +492,7 @@ def test_render_overlay_renders_with_boxes(tmp_path):
     assert out.stat().st_size > 0
 
 
-def test_render_overlay_boxes_original_text_positions(tmp_path):
+def test_render_overlay_only_bar_boxes(tmp_path):
     img = np.full((720, 1280, 3), BG, dtype=np.uint8)
     frame = tmp_path / "frame.png"
     cv2.imwrite(str(frame), img)
@@ -509,10 +515,10 @@ def test_render_overlay_boxes_original_text_positions(tmp_path):
     from PIL import Image
 
     rendered = Image.open(out).convert("RGB")
-    # transparent outline (white on the purple background) around the original
-    # text positions, and the bar box in red
-    assert rendered.getpixel((181, 220)) == (255, 255, 255)
-    assert rendered.getpixel((181, 620)) == (255, 255, 255)
+    # Only the bar box is drawn in red; value/label text boxes are no longer
+    # rendered.
+    assert rendered.getpixel((181, 220)) != (255, 255, 255)
+    assert rendered.getpixel((181, 620)) != (255, 255, 255)
     assert rendered.getpixel((173, 400)) == (230, 25, 75)
 
 

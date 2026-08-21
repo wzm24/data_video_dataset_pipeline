@@ -74,7 +74,7 @@ def test_quality_check_accepts_standard_no_data_exclusion(tmp_path):
     assert not any(issue["issue_code"] == "included_without_numeric_facts" for issue in report["issues"])
 
 
-def test_quality_check_flags_multi_state_missing_semantic_inputs(tmp_path):
+def test_quality_check_accepts_multi_state_without_semantic_state_inputs(tmp_path):
     clip = _write_base_clip(
         tmp_path,
         states=[
@@ -85,8 +85,11 @@ def test_quality_check_flags_multi_state_missing_semantic_inputs(tmp_path):
 
     report = check_clip_quality(clip, {"quality": {"enable_vlm": False}})
 
-    assert report["status"] == NEEDS_REVIEW
-    assert {issue["issue_code"] for issue in report["issues"]} >= {"missing_semantic_state_inputs", "missing_semantic_state_svgs"}
+    codes = {issue["issue_code"] for issue in report["issues"]}
+    # Per-state semantic inputs/SVGs are no longer required: each state is
+    # an independent data-driven SVG generation and can be adjusted manually.
+    assert "missing_semantic_state_inputs" not in codes
+    assert "missing_semantic_state_svgs" not in codes
 
 
 def test_quality_check_flags_data_entity_missing_from_semantic(tmp_path):

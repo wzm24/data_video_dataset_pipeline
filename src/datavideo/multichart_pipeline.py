@@ -9,7 +9,7 @@ from typing import Any
 
 from datavideo.context import create_context_media
 from .animation import detect_animation, reconcile_intent_with_data
-from datavideo.cv_align import run_cv_align
+from datavideo.cv_align import _looks_like_value_label, detect_bar_states, run_cv_align
 from datavideo.cv_align import run_cv_align_line
 from datavideo.cv_align import reconcile_line_dynamic
 from datavideo.cv_align import read_frame_title
@@ -21,18 +21,17 @@ from datavideo.metadata import read_clip_rows
 from datavideo.narration import transcribe_context_audio
 from datavideo.semantic_render import (
     frame_title_status,
+    match_chart_style,
     metadata_from_dynamic,
     prefer_frame_visible_title,
     render_data_driven,
     render_data_driven_line,
-    render_dynamic_states,
     resolve_render_title,
 )
 from datavideo.schemas import ensure_dir, read_json, write_json, write_jsonl
 
 from .multichart_assets import (
     _keyframe_timestamp,
-    build_semantic_state_svgs,
     recover_clip_data,
     select_keyframe,
 )
@@ -247,10 +246,6 @@ def _state_groups(dynamic: dict[str, Any] | None) -> list[tuple[str, str, list[d
     states = dynamic.get("states") if isinstance(dynamic, dict) else []
     if not isinstance(states, list):
         return []
-    # Rows without an explicit state key are static chart marks recovered from
-    # one visual state, not separate video states. Keep them as one flat sample.
-    if states and not any(isinstance(row, dict) and row.get("state_key") not in (None, "") for row in states):
-        return []
     chart_type = str(dynamic.get("chart_type") or "").lower() if isinstance(dynamic, dict) else ""
     if chart_type in {"line", "area", "scatter"}:
         visual_ranges = set()
@@ -262,19 +257,38 @@ def _state_groups(dynamic: dict[str, Any] | None) -> list[tuple[str, str, list[d
             visual_ranges.add((_as_number(row.get("state_start")), _as_number(row.get("state_end"))))
         if len(visual_ranges) <= 1:
             return []
+    # Only an explicit printed state label (year/period read from the frame)
+    # defines a state.  Rows without one (auto state_id from animation frames
+    # or duplicates of a static chart) never become state groups.
     groups: dict[str, list[dict[str, Any]]] = {}
     order: dict[str, float] = {}
     labels: dict[str, str] = {}
     for row in states:
         if not isinstance(row, dict):
             continue
-        key = str(row.get("state_key") or row.get("state_label") or row.get("state_id") or "")
+        key = str(row.get("state_key") or row.get("state_label") or "")
         if not key:
             continue
         start = _as_number(row.get("state_start"))
         groups.setdefault(key, []).append(row)
         order[key] = min(order.get(key, start if start is not None else 0.0), start if start is not None else 0.0)
         labels[key] = str(row.get("state_label") or row.get("state_key") or labels.get(key, key))
+    if not groups:
+        return []
+    # Real states re-render the same entities under different labels (1990 vs
+    # 2017); groups with disjoint entities (e.g. years used as categories) are
+    # one static chart, not multiple states.
+    group_ids = [
+        {str(row.get("entity_id") or "") for row in rows if row.get("entity_id")}
+        for rows in groups.values()
+    ]
+    shared = any(
+        group_ids[i] & group_ids[j]
+        for i in range(len(group_ids))
+        for j in range(i + 1, len(group_ids))
+    )
+    if len(groups) >= 2 and not shared:
+        return []
     return [
         (key, labels.get(key, key), groups[key])
         for key in sorted(
@@ -311,31 +325,6 @@ def _find_state_render_dir(
     return None
 
 
-def _find_state_keyframe(clip_root: Path, state_key: str) -> Path | None:
-    """Locate the extracted keyframe PNG for one state."""
-    manifest_path = clip_root / "keyframes" / "keyframe_manifest.json"
-    if manifest_path.exists():
-        try:
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except Exception:
-            manifest = {}
-        for state in manifest.get("states") or []:
-            if isinstance(state, dict) and str(state.get("state_key") or "") == state_key:
-                asset = state.get("asset")
-                if asset and Path(asset).is_file():
-                    return Path(asset)
-    safe = _safe_state_key(state_key)
-    state_dir = clip_root / "keyframes" / "states"
-    if state_dir.is_dir():
-        matches = sorted(state_dir.glob(f"state_*{safe}*.png"))
-        if matches:
-            return matches[0]
-        matches = sorted(state_dir.glob("state_*.png"))
-        if len(matches) == 1:
-            return matches[0]
-    return None
-
-
 def _pick_primary_state(
     clip_report: dict[str, Any],
     groups: list[tuple[str, str, list[dict[str, Any]]]],
@@ -363,6 +352,196 @@ def _pick_primary_state(
         if any(str(row.get("source_type") or "") == "visual_frame_align" for row in rows):
             return key
     return groups[-1][0]
+
+
+def _metadata_from_cv_report(
+    cv_report: dict[str, Any],
+    base_metadata: dict[str, Any] | None,
+) -> dict[str, Any] | None:
+    """Build render metadata for one plateau state from its CV align report."""
+    bars = cv_report.get("bars") or []
+    series = []
+    for bar in bars:
+        label = str(bar.get("label") or bar.get("entity_id") or "").strip()
+        value = bar.get("value")
+        if not label or not isinstance(value, (int, float)):
+            continue
+        series.append(
+            {
+                "name": label,
+                "entity_id": bar.get("entity_id"),
+                "values": [float(value)],
+                "metric": "",
+            }
+        )
+    if not series:
+        return None
+    standard = cv_report.get("standard_table") or {}
+    base = base_metadata or {}
+    return {
+        "title": str(standard.get("title") or base.get("title") or "Data Chart"),
+        "chart_type": "bar",
+        "unit": str(standard.get("unit") or base.get("unit") or ""),
+        "series": series,
+        "orientation": str(cv_report.get("orientation") or "vertical"),
+    }
+
+
+def _write_state_csv(path: Path, cv_report: dict[str, Any], clip_id: str) -> bool:
+    fieldnames = [
+        "clip_id",
+        "entity_id",
+        "entity",
+        "metric",
+        "value",
+        "unit",
+        "type",
+        "source_type",
+        "confidence",
+        "review_status",
+    ]
+    rows = []
+    for bar in cv_report.get("bars") or []:
+        if bar.get("value") is None:
+            continue
+        rows.append(
+            {
+                "clip_id": clip_id,
+                "entity_id": bar.get("entity_id"),
+                "entity": bar.get("label"),
+                "metric": "value",
+                "value": bar.get("value"),
+                "unit": bar.get("unit")
+                or (cv_report.get("standard_table") or {}).get("unit")
+                or "",
+                "type": bar.get("value_type")
+                or ("exact" if bar.get("value_read_verified") else "estimated"),
+                "source_type": "visual_frame_align",
+                "confidence": 0.85 if bar.get("value_read_verified") else 0.6,
+                "review_status": "machine",
+            }
+        )
+    if not rows:
+        return False
+    ensure_dir(path.parent)
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    return True
+
+
+def _write_state_intent(path: Path, clip_id: str, state_id: str, state: dict[str, Any]) -> None:
+    ensure_dir(path.parent)
+    write_json(
+        path,
+        {
+            "clip_id": clip_id,
+            "state_key": state_id,
+            "state_label": state_id,
+            "chart_type": "bar",
+            "is_static": True,
+            "static_description": (
+                f"柱状图稳定状态 {state_id}（几何检测：t="
+                f"{state.get('start')}-{state.get('end')}s）。"
+            ),
+            "source": "plateau_state_detection",
+        },
+    )
+
+
+def _build_plateau_state_renders(
+    clip_id: str,
+    candidate_clip: Path,
+    cfg: dict[str, Any],
+    cv_report: dict[str, Any],
+    entities: list[dict[str, Any]],
+    chart_data: dict[str, Any],
+    clip_root: Path,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], str | None]:
+    """Run geometry-based plateau state detection and, when multiple real
+    states exist, generate one independent data-driven SVG per state.
+
+    Runs for every bar clip regardless of whether the recovered table was
+    reconciled (a clip with only estimated values still needs state
+    detection).  The VLM's state/year labels are never used.
+    """
+    plateau_states: list[dict[str, Any]] = []
+    error: str | None = None
+    try:
+        plateau_states = detect_bar_states(
+            candidate_clip,
+            cfg,
+            expected_bar_count=(cv_report or {}).get("detected_bar_count") or 0,
+            out_dir=clip_root,
+        )
+    except Exception as exc:
+        error = str(exc)
+    state_renders: list[dict[str, Any]] = []
+    if len(plateau_states) >= 2:
+        base_metadata = chart_data.get("metadata") or {}
+        for state in plateau_states:
+            state_id = str(state.get("state_id") or "state")
+            rep = Path(str(state.get("representative_path") or ""))
+            if not rep.exists():
+                continue
+            try:
+                state_report = run_cv_align(
+                    clip_id,
+                    rep,
+                    entities,
+                    ensure_dir(clip_root / "state_align" / state_id),
+                    client=None,
+                    cfg=cfg,
+                )
+            except Exception as exc:
+                state_renders.append(
+                    {
+                        "state_key": state_id,
+                        "state_dir": str(clip_root / "semantic_states" / state_id),
+                        "success": False,
+                        "failure_reason": f"{state_id}: {exc}",
+                    }
+                )
+                continue
+            state_dir = ensure_dir(clip_root / "semantic_states" / state_id)
+            state_md = _metadata_from_cv_report(state_report, base_metadata)
+            if state_md is not None:
+                render = render_data_driven(clip_id, state_md, state_dir)
+            else:
+                render = {"success": False, "failure_reason": "no_recoverable_entities"}
+            _write_state_csv(state_dir / "data_table.csv", state_report, clip_id)
+            _write_state_intent(state_dir / "intent.json", clip_id, state_id, state)
+            state_renders.append(
+                {
+                    "state_key": state_id,
+                    "state_dir": str(state_dir),
+                    "start": state.get("start"),
+                    "end": state.get("end"),
+                    **render,
+                }
+            )
+    return plateau_states, state_renders, error
+
+
+def _cv_geometry(cv_report: dict[str, Any] | None) -> list[dict[str, Any]]:
+    """Convert a CV align report's bars into renderer geometry boxes."""
+    bars = (cv_report or {}).get("bars") or []
+    out = []
+    for b in bars:
+        if b.get("x") is None or b.get("w") is None:
+            continue
+        out.append(
+            {
+                "entity_id": b.get("entity_id"),
+                "label": b.get("label"),
+                "x": b.get("x"),
+                "y": b.get("y"),
+                "w": b.get("w"),
+                "h": b.get("h"),
+            }
+        )
+    return out
 
 
 def _copy_if_exists(src: Path, dst: Path, written: dict[str, str], dst_name: str) -> None:
@@ -448,14 +627,27 @@ def build_dataset_folder(
             dynamic = json.loads(dynamic_path.read_text(encoding="utf-8"))
         except Exception:
             dynamic = None
-    groups = [
-        (key, label, rows)
-        for key, label, rows in _state_groups(dynamic)
-        if any(
-            str(row.get("source_type") or "") in {"visual", "visual_frame_align"}
-            for row in rows
-        )
-    ]
+    # Geometry-based plateau states (bar clips) are authoritative when the
+    # state scan ran; the VLM's state/year labels are never used for them.
+    plateau_states: list[dict[str, Any]] = []
+    plateau_path = clip_root / "state_scan_report.json"
+    plateau_mode = plateau_path.exists()
+    if plateau_mode:
+        try:
+            plateau_states = (json.loads(plateau_path.read_text(encoding="utf-8")) or {}).get("states") or []
+        except Exception:
+            plateau_states = []
+    if plateau_mode:
+        groups = [(str(state.get("state_id") or "state"), str(state.get("state_id") or "state"), []) for state in plateau_states]
+    else:
+        groups = [
+            (key, label, rows)
+            for key, label, rows in _state_groups(dynamic)
+            if any(
+                str(row.get("source_type") or "") in {"visual", "visual_frame_align"}
+                for row in rows
+            )
+        ]
     dynamic_packaging = len(groups) >= 2
 
     intent = None
@@ -522,30 +714,36 @@ def build_dataset_folder(
             safe = _safe_state_key(state_key)
             state_out = ensure_dir(out / "states" / safe)
             state_files: dict[str, str] = {}
-            render_dir = _find_state_render_dir(clip_root, state_key, rows)
+            # Each state is an independent data-driven SVG generation; the
+            # per-state folder only packages the SVG and its data table
+            # (manual adjustment is expected).  No per-state keyframe or
+            # VLM semantic-component files are produced anymore.
+            if plateau_mode:
+                render_dir = clip_root / "semantic_states" / state_key
+            else:
+                render_dir = _find_state_render_dir(clip_root, state_key, rows)
             if render_dir is not None:
                 _copy_if_exists(render_dir / "semantic.svg", state_out / "semantic.svg", state_files, "semantic.svg")
-                _copy_if_exists(render_dir / "semantic_components.svg", state_out / "semantic_components.svg", state_files, "semantic_components.svg")
-                _copy_if_exists(render_dir / "semantic_scene.json", state_out / "semantic_scene.json", state_files, "semantic_scene.json")
-                _copy_if_exists(render_dir / "semantic_components.json", state_out / "semantic_components.json", state_files, "semantic_components.json")
-            keyframe = _find_state_keyframe(clip_root, state_key)
-            if keyframe is not None and keyframe.exists():
-                shutil.copy2(keyframe, state_out / "keyframe.png")
-                state_files["keyframe.png"] = str(state_out / "keyframe.png")
-            if _write_state_table(clip_root, rows, state_out / "data_table.csv"):
-                state_files["data_table.csv"] = str(state_out / "data_table.csv")
-            metric = str(rows[0].get("metric") or "指标") if rows else "指标"
-            static_intent = {
-                "clip_id": clip_id,
-                "state_key": state_key,
-                "state_label": state_label,
-                "chart_type": chart_type,
-                "is_static": True,
-                "static_description": f"渲染{state_label}年的{metric}图表（静态状态快照）。",
-                "source": "static_state_snapshot",
-            }
-            write_json(state_out / "intent.json", static_intent)
-            state_files["intent.json"] = str(state_out / "intent.json")
+            if plateau_mode:
+                # Plateau states carry their own data table + intent written
+                # by the pipeline (vision-verified per-state values).
+                _copy_if_exists(render_dir / "data_table.csv", state_out / "data_table.csv", state_files, "data_table.csv")
+                _copy_if_exists(render_dir / "intent.json", state_out / "intent.json", state_files, "intent.json")
+            else:
+                if _write_state_table(clip_root, rows, state_out / "data_table.csv"):
+                    state_files["data_table.csv"] = str(state_out / "data_table.csv")
+                metric = str(rows[0].get("metric") or "指标") if rows else "指标"
+                static_intent = {
+                    "clip_id": clip_id,
+                    "state_key": state_key,
+                    "state_label": state_label,
+                    "chart_type": chart_type,
+                    "is_static": True,
+                    "static_description": f"渲染{state_label}年的{metric}图表（静态状态快照）。",
+                    "source": "static_state_snapshot",
+                }
+                write_json(state_out / "intent.json", static_intent)
+                state_files["intent.json"] = str(state_out / "intent.json")
             state_entries.append(
                 {
                     "state_key": state_key,
@@ -753,10 +951,16 @@ def run_pipeline(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
                     if not isinstance(state_row, dict):
                         continue
                     eid = str(state_row.get("entity_id") or "")
+                    label = str(state_row.get("entity") or eid)
                     if eid in ("", "unknown") or eid in seen:
                         continue
+                    if _looks_like_value_label(label):
+                        # A recovered entity that is really an axis tick /
+                        # printed value (e.g. "$3,000") is a hallucination and
+                        # must never become a bar label.
+                        continue
                     seen.add(eid)
-                    entities.append({"id": eid, "label": str(state_row.get("entity") or eid)})
+                    entities.append({"id": eid, "label": label})
                 # Bar/combined clips may have an empty recovered table when
                 # the VLM failed (OOM / broken JSON) even though the frame
                 # clearly shows a chart with axis tick marks. Run CV alignment
@@ -773,6 +977,24 @@ def run_pipeline(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
                         cfg=cfg,
                     )
                     semantic["cv_align"] = cv_report
+                    # Plan B rendering: CV-detected bar boxes give the real
+                    # geometry; the vision model supplies the visual style
+                    # spec; values still come from the data table.
+                    chart_style: dict[str, Any] = {}
+                    if selected_keyframe is not None:
+                        try:
+                            chart_style = match_chart_style(selected_keyframe, cfg)
+                        except Exception:
+                            chart_style = {}
+                    cv_geometry = _cv_geometry(cv_report)
+                    if cv_geometry:
+                        semantic = render_data_driven(
+                            _clip_id(row),
+                            chart_data.get("metadata") or {},
+                            clip_root,
+                            geometry=cv_geometry,
+                            style=chart_style,
+                        )
                     implausible = cv_report.get("implausible_bars") or []
                     reconciled = None
                     if not implausible:
@@ -813,27 +1035,31 @@ def run_pipeline(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
                                 # vision model to read the frame title.
                                 if (
                                     frame_title_status(final_title, visible_text) == "none"
-                                    and selected_keyframe is not None
                                 ):
-                                    try:
-                                        frame_title = read_frame_title(selected_keyframe, cfg)
-                                        if frame_title:
-                                            final_title = frame_title
-                                    except Exception:
-                                        pass
+                                    # The standard-table read already has the
+                                    # in-frame title; only fall back to a
+                                    # dedicated title read when it is empty.
+                                    frame_title = (cv_report.get("standard_table") or {}).get("title") or ""
+                                    if not frame_title and selected_keyframe is not None:
+                                        try:
+                                            frame_title = read_frame_title(selected_keyframe, cfg)
+                                        except Exception:
+                                            frame_title = ""
+                                    if frame_title:
+                                        final_title = frame_title
                                 corrected_metadata["title"] = final_title
                             cv_orientation = (cv_report or {}).get("orientation")
                             if cv_orientation:
                                 corrected_metadata["orientation"] = cv_orientation
                             write_json(clip_root / "chart_metadata.json", corrected_metadata)
                             chart_data = {**chart_data, "metadata": corrected_metadata}
-                            semantic = render_data_driven(_clip_id(row), corrected_metadata, clip_root)
-                        semantic["state_renders"] = render_dynamic_states(
-                            _clip_id(row),
-                            dynamic,
-                            clip_root,
-                            visible_text=(chart_data.get("metadata") or {}).get("visible_text"),
-                        )
+                            semantic = render_data_driven(
+                                _clip_id(row),
+                                corrected_metadata,
+                                clip_root,
+                                geometry=cv_geometry,
+                                style=chart_style,
+                            )
                         semantic["cv_align"] = cv_report
                         semantic["reconciled"] = {
                             "updated_bar_count": reconciled["updated_bar_count"],
@@ -841,14 +1067,29 @@ def run_pipeline(cfg: dict[str, Any], force: bool = False) -> dict[str, Any]:
                             "state_key": reconciled["state_key"],
                             "state_id": reconciled["state_id"],
                         }
+                    # Geometry-based state detection runs for every bar clip
+                    # (independent of whether the recovered table merged).
+                    plateau_states, state_renders, state_error = _build_plateau_state_renders(
+                        _clip_id(row),
+                        candidate_clip,
+                        cfg,
+                        cv_report,
+                        entities,
+                        chart_data,
+                        clip_root,
+                    )
+                    semantic["plateau_states"] = plateau_states
+                    semantic["state_renders"] = state_renders
+                    if state_error:
+                        semantic["state_detection_error"] = state_error
             animation = reconcile_intent_with_data(animation, dynamic)
             write_json(clip_root / "animation_detection.json", animation)
-            semantic_state_svgs = build_semantic_state_svgs(
-                chart_data.get("semantic_state_inputs"),
-                clip_root,
-                cfg,
-                force=asset_force,
-            )
+            # Multi-state "changes" are emitted as one data-driven SVG per
+            # state (semantic["state_renders"]) instead of running a second
+            # VLM semantic-component pass per state.  Per-state outputs are
+            # small and manually adjustable, so the heavy automated pass is
+            # intentionally dropped.
+            semantic_state_svgs: dict[str, Any] = {}
 
             clip_report = _write_candidate_report(
                 clip_root,

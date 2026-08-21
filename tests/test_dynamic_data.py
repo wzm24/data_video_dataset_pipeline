@@ -506,7 +506,7 @@ def test_static_grouped_bar_marks_from_one_frame_do_not_create_state_keyframes()
     plan = plan_dynamic_state_keyframes(result)
 
     assert plan["should_save"] is False
-    assert plan["reason"] == "static_chart_points_from_single_visual_frame"
+    assert plan["reason"] == "no_explicit_state_labels"
 
 
 def test_static_grouped_bar_metrics_are_kept_in_final_table_and_events():
