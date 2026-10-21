@@ -1,0 +1,142 @@
+{
+ "clip_id": "bar_112",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series household share)"
+   ],
+   "assertion": {
+    "mark": "Top 10% (Dewi's Family) @ 195.0",
+    "extreme": "max",
+    "expected": 0.625,
+    "compared_set": "household share",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bar for Top 10% (Dewi's Family) is the tallest and clearly identified as the top group."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Top 10% (Dewi's Family) @ 195.0",
+    "mark:Income group 2 (descending) @ 305.0",
+    "mark:Income group 6 (descending) @ 745.0",
+    "mark:Bottom 10% (Putri's Family) @ 1185.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Top 10% (Dewi's Family) @ 195.0",
+      "value": 0.625
+     },
+     {
+      "mark": "Income group 2 (descending) @ 305.0",
+      "value": 0.2188
+     },
+     {
+      "mark": "Income group 6 (descending) @ 745.0",
+      "value": 0.0625
+     },
+     {
+      "mark": "Bottom 10% (Putri's Family) @ 1185.0",
+      "value": 0.0375
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bars are ordered left-to-right and show a descending staircase from the Top 10% to the Bottom 10%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Bottom 40% group 7 @ 855.0",
+    "mark:Bottom 40% group 8 @ 965.0"
+   ],
+   "assertion": {
+    "greater": "Bottom 40% group 7 @ 855.0",
+    "lesser": "Bottom 40% group 8 @ 965.0",
+    "expected_ratio": 1.25,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bars for g7, g8, g9, and g10 are all among the shortest, clustered at the low end."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Bottom 10% (Putri's Family) @ 1185.0"
+   ],
+   "assertion": {
+    "mark": "Bottom 10% (Putri's Family) @ 1185.0",
+    "field": "value",
+    "expected": 0.0375,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bar for Bottom 10% (Putri's Family) is at the lowest level, labelled or identified."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Top 10% (Dewi's Family) @ 195.0",
+    "mark:Bottom 10% (Putri's Family) @ 1185.0"
+   ],
+   "assertion": {
+    "greater": "Top 10% (Dewi's Family) @ 195.0",
+    "lesser": "Bottom 10% (Putri's Family) @ 1185.0",
+    "expected_ratio": 16.6667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The height difference between the tallest and shortest bars is shown or annotated as a large ratio."
+  }
+ ]
+}

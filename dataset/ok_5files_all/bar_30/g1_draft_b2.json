@@ -1,0 +1,269 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_30",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the monthly price of the hepatitis C drug Sovaldi is higher in the United States than in other countries.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data and video concern the monthly price of the hepatitis C drug Sovaldi by country.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "country",
+     "field": "value",
+     "value": 29883.0,
+     "note": "U.S. row is part of the Sovaldi country price comparison; drug/disease identity comes from intent/narration."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "This is a comparison of Sovaldi monthly prices across countries.",
+    "The chart shows monthly hepatitis C drug Sovaldi prices in different countries.",
+    "The subject is the cost of Sovaldi for hepatitis C by country."
+   ],
+   "visual_evidence_rule": "The video must identify Sovaldi or the hepatitis C drug context; country values alone without drug context would be insufficient.",
+   "temporal_anchor": "the 'Sevaldi, for hepatitis C' clause",
+   "reviewer_question": "Must the clip name Sovaldi/hepatitis C, or can it just compare country prices?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The United States has the highest Sovaldi monthly price among the six listed countries.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "country",
+     "field": "value",
+     "value": 29883.0,
+     "note": "Highest of the six table values."
+    },
+    {
+     "entity": "Germany",
+     "x": "country",
+     "field": "value",
+     "value": 17073.0,
+     "note": "Next-highest table value, lower than U.S."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The U.S. is the highest-priced country shown.",
+    "Sovaldi costs more in the United States than in any other listed country.",
+    "No other listed country's monthly price exceeds the U.S. value.",
+    "The United States tops the six-country price comparison."
+   ],
+   "visual_evidence_rule": "The chart must make the U.S. value visibly greater than all five other country values.",
+   "temporal_anchor": "the 'cost more in the U.S.' clause",
+   "reviewer_question": "Must the U.S. be established as the maximum, not merely higher than one country?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The U.S. monthly price endpoint is 29,883, the maximum value in the table.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "country",
+     "field": "value",
+     "value": 29883.0,
+     "note": "Maximum endpoint in table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The U.S. value is 29,883.",
+    "The United States endpoint is about 29,900 on the table's scale.",
+    "The highest value shown is 29,883 for the U.S."
+   ],
+   "visual_evidence_rule": "The U.S. value label or number 29,883 must be visible or stated; a purely qualitative highest label is insufficient.",
+   "temporal_anchor": "the 'cost more in the U.S.' clause, if exact value is included",
+   "reviewer_question": "Must the exact U.S. value 29,883 be shown, or is the qualitative maximum sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "All five non-U.S. countries have lower monthly prices than the United States; their values range from 13,805 (Norway) to 17,073 (Germany).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Norway",
+     "x": "country",
+     "field": "value",
+     "value": 13805.0,
+     "note": "Lowest non-U.S. value."
+    },
+    {
+     "entity": "Canada",
+     "x": "country",
+     "field": "value",
+     "value": 14859.0,
+     "note": "Non-U.S. value."
+    },
+    {
+     "entity": "France",
+     "x": "country",
+     "field": "value",
+     "value": 15228.0,
+     "note": "Non-U.S. value."
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "country",
+     "field": "value",
+     "value": 15966.0,
+     "note": "Non-U.S. value."
+    },
+    {
+     "entity": "Germany",
+     "x": "country",
+     "field": "value",
+     "value": 17073.0,
+     "note": "Highest non-U.S. value."
+    },
+    {
+     "entity": "United States",
+     "x": "country",
+     "field": "value",
+     "value": 29883.0,
+     "note": "U.S. value is above all non-U.S. values."
+    }
+   ],
+   "computation": "non-U.S. range = min(13805,14859,15228,15966,17073)=13805 to max(13805,14859,15228,15966,17073)=17073; all non-U.S. values < 29883",
+   "accepted_routes": [
+    "Every other listed country is below the U.S.",
+    "The non-U.S. prices run from 13,805 to 17,073.",
+    "Norway, Canada, France, the United Kingdom, and Germany all cost less than the U.S.",
+    "The U.S. value exceeds the entire non-U.S. range."
+   ],
+   "visual_evidence_rule": "The chart must show the five non-U.S. values as a lower group/range compared with the U.S.; at minimum, all five must be present or referenced.",
+   "temporal_anchor": "the implied 'than in other countries' comparison in the 'cost more in the U.S.' clause",
+   "reviewer_question": "Must the clip show that all five other countries are lower, or is a single contrast country enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The U.S. value is about 1.75 times the next-highest country, Germany (29,883 vs 17,073).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "country",
+     "field": "value",
+     "value": 29883.0,
+     "note": "U.S. numerator."
+    },
+    {
+     "entity": "Germany",
+     "x": "country",
+     "field": "value",
+     "value": 17073.0,
+     "note": "Next-highest non-U.S. value, denominator."
+    }
+   ],
+   "computation": "29883 / 17073 ≈ 1.75",
+   "accepted_routes": [
+    "The U.S. price is about 1.75 times Germany's.",
+    "Germany is the closest other country, but the U.S. is still much higher.",
+    "The U.S. is roughly 1.75 times the next-highest country, Germany.",
+    "The U.S. exceeds Germany by 12,810 (29,883 minus 17,073)."
+   ],
+   "visual_evidence_rule": "If the magnitude comparison is included, the chart or narration must relate the U.S. value to Germany as the closest non-U.S. value.",
+   "temporal_anchor": "supporting beat after the 'cost more in the U.S.' clause",
+   "reviewer_question": "Is the magnitude of the U.S. advantage over the next-highest country required, or is only the direction of difference required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Full six-country ordering by value: Norway < Canada < France < United Kingdom < Germany < United States.",
+  "The U.S. value is more than twice Norway's (29,883 vs 13,805; ratio about 2.16).",
+  "The U.S. value is roughly 1.87 times the United Kingdom's (29,883 vs 15,966).",
+  "Norway is the lowest-priced country at 13,805."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why U.S. prices are higher (e.g., healthcare system, patents).",
+  "Extrapolating to other drugs, other months, or countries not in the table.",
+  "Treating relative_value 0.6803 as 68% or any percentage/share.",
+  "Claiming the U.S. is twice as expensive as every other country (not true for Germany, the UK, or France).",
+  "Using currency symbols or dollar amounts if the table's unit column is blank.",
+  "Comparing against countries that are not in the table."
+ ],
+ "notes": "The core required contrast is U.S. vs all five other countries; exact values and magnitude are defensible optional additions. Numbers are table values; no currency symbol is asserted because the table's unit column is blank.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 67.3,
+  "usage": {
+   "prompt_tokens": 1130,
+   "completion_tokens": 15854,
+   "total_tokens": 16984,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13723
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 618
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

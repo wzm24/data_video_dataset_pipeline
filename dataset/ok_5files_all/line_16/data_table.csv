@@ -1,0 +1,28 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+line_16,47%,47,120.0,,,0.8512,relative,#232332,relative_only,NO
+line_16,47%,47,303.3,,,0.7878,relative,#232332,relative_only,NO
+line_16,47%,47,486.7,,,0.8693,relative,#232332,relative_only,NO
+line_16,47%,47,670.0,,,0.7697,relative,#232332,relative_only,NO
+line_16,47%,47,853.3,,,0.8240,relative,#232332,relative_only,NO
+line_16,47%,47,1036.7,,,0.7878,relative,#232332,relative_only,NO
+line_16,47%,47,1220.0,,,0.8150,relative,#232332,relative_only,NO
+line_16,37%,37,120.0,,,0.4256,relative,#2b6c96,relative_only,YES
+line_16,37%,37,303.3,,,0.4799,relative,#2b6c96,relative_only,YES
+line_16,37%,37,486.7,,,0.4890,relative,#2b6c96,relative_only,YES
+line_16,37%,37,670.0,,,0.5161,relative,#2b6c96,relative_only,YES
+line_16,37%,37,853.3,,,0.4618,relative,#2b6c96,relative_only,YES
+line_16,37%,37,1036.7,,,0.4799,relative,#2b6c96,relative_only,YES
+line_16,37%,37,1220.0,,,0.5071,relative,#2b6c96,relative_only,YES
+line_16,14%,14,120.0,,,0.1087,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,14%,14,303.3,,,0.1358,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,14%,14,486.7,,,0.0815,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,14%,14,670.0,,,0.0634,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,14%,14,853.3,,,0.0906,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,14%,14,1036.7,,,0.1177,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,14%,14,1220.0,,,0.1177,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,Aug 2014,aug-2014,520.0,,,1.0000,relative,#232332,relative_only,NO
+line_16,Aug 2014,aug-2014,600.0,,,1.0000,relative,#232332,relative_only,NO
+line_16,NO,no,520.0,,,0.9370,relative,#2b6c96,relative_only,YES
+line_16,NO,no,600.0,,,0.9370,relative,#2b6c96,relative_only,YES
+line_16,YES,yes,520.0,,,0.8740,relative,#ffffff,relative_only,DON&#x27;T KNOW
+line_16,YES,yes,600.0,,,0.8740,relative,#ffffff,relative_only,DON&#x27;T KNOW

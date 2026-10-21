@@ -1,0 +1,255 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_124",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the value of a metric in 1952 within the context of its historical trend from the 1950s to 2010.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 1952, the metric reached nearly $455 billion in today's dollars.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "$455 billion",
+     "x": "1137.8",
+     "field": "entity",
+     "value": 455.0,
+     "note": "Parsed from entity label '$455 billion' (billion USD)."
+    },
+    {
+     "entity": "1952",
+     "x": "1120.8",
+     "field": "entity",
+     "value": 1952.0,
+     "note": "Year entity tied to the $455 billion label."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1952, the metric reached nearly $455 billion in today's dollars.",
+    "The 1952 value was approximately $455 billion (adjusted for inflation).",
+    "By 1952, the metric had climbed to about $455 billion (today's dollars).",
+    "The chart highlights 1952 with a value of $455 billion."
+   ],
+   "visual_evidence_rule": "The 1952 data point must be annotated with a value of approximately $455 billion.",
+   "temporal_anchor": "In 1952, it reached nearly $455 billion in today's dollars.",
+   "reviewer_question": "Should the video be required to state the exact 1952 value of $455 billion?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The chart presents a historical trend spanning from 1950 to 2010.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1950",
+     "x": "158.5",
+     "field": "entity",
+     "value": 1950.0,
+     "note": "Start year in table."
+    },
+    {
+     "entity": "2010",
+     "x": "1154.6",
+     "field": "entity",
+     "value": 2010.0,
+     "note": "End year in table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The animation covers the period from 1950 to 2010.",
+    "The historical trend spans 1950 through 2010.",
+    "The time series runs from the 1950s to 2010.",
+    "The chart shows data from 1950 to 2010."
+   ],
+   "visual_evidence_rule": "The x-axis or timeline must show labels from 1950 to 2010.",
+   "temporal_anchor": "None explicitly; visual timeline must carry it.",
+   "reviewer_question": "Is showing the full 1950–2010 range required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 1952 value is situated within the broader historical trend from 1950 to 2010.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1952",
+     "x": "1120.8",
+     "field": "entity",
+     "value": 1952.0,
+     "note": "Year within range."
+    },
+    {
+     "entity": "1950",
+     "x": "158.5",
+     "field": "entity",
+     "value": 1950.0,
+     "note": "Lower bound."
+    },
+    {
+     "entity": "2010",
+     "x": "1154.6",
+     "field": "entity",
+     "value": 2010.0,
+     "note": "Upper bound."
+    }
+   ],
+   "computation": "1950 < 1952 < 2010",
+   "accepted_routes": [
+    "1952 is shown as a point within the 1950–2010 timeline.",
+    "The 1952 value is situated in the broader historical context from 1950 to 2010.",
+    "The trend includes 1952 along with earlier and later years.",
+    "The 1952 data point is part of the full series from 1950 to 2010."
+   ],
+   "visual_evidence_rule": "The 1952 point must appear within the 1950–2010 axis range.",
+   "temporal_anchor": "In 1952, it reached nearly $455 billion in today's dollars.",
+   "reviewer_question": "Must the video explicitly place 1952 within the 1950–2010 timeline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The series includes a value of $800 billion at some point in the historical trend.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "$800 billion",
+     "x": "529.8",
+     "field": "entity",
+     "value": 800.0,
+     "note": "Parsed from entity label '$800 billion' (billion USD)."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series includes a value of $800 billion at some point.",
+    "A data point in the trend is labeled $800 billion.",
+    "The metric reaches $800 billion in the historical series.",
+    "The chart displays an $800 billion value label."
+   ],
+   "visual_evidence_rule": "A data label or annotation reading '$800 billion' must be visible.",
+   "temporal_anchor": "None; not in narration.",
+   "reviewer_question": "Should the $800 billion value be included as context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 1952 value ($455 billion) is lower than the $800 billion value shown elsewhere in the series.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "$455 billion",
+     "x": "1137.8",
+     "field": "entity",
+     "value": 455.0,
+     "note": "1952 value label."
+    },
+    {
+     "entity": "$800 billion",
+     "x": "529.8",
+     "field": "entity",
+     "value": 800.0,
+     "note": "Other value label."
+    }
+   ],
+   "computation": "800 > 455, so $800B is higher than $455B.",
+   "accepted_routes": [
+    "The 1952 value ($455 billion) is lower than the $800 billion value in the series.",
+    "The metric is $455 billion in 1952, compared to $800 billion at another point.",
+    "The trend shows a higher value of $800 billion relative to the 1952 value of $455 billion.",
+    "The 1952 figure is less than the $800 billion figure shown elsewhere."
+   ],
+   "visual_evidence_rule": "Both the $455 billion and $800 billion labels must be visible, or the relative heights must show 455 < 800.",
+   "temporal_anchor": "None; not in narration.",
+   "reviewer_question": "Should the comparison between $455 billion and $800 billion be required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the $800 billion value as a peak or key point in the trend.",
+  "Including other year labels like 1955, 1960, 1965, etc. as part of the series."
+ ],
+ "unsupported_to_avoid": [
+  "Causal explanations for the 1952 value.",
+  "Extrapolating beyond 2010.",
+  "Using the 'value' column (e.g., 691.800) as the dollar amount for 1952.",
+  "Assuming $800 billion corresponds to 2010.",
+  "Identifying the metric as GDP, debt, etc., without table evidence.",
+  "Claiming a specific rate of change between $455B and $800B without a time anchor."
+ ],
+ "notes": "The table's 'value' column appears to be coordinate data rather than metric values; only entity labels like '$455 billion' and '$800 billion' are treated as dollar amounts. The 1952 value is taken from the paired annotation labels.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 60.2,
+  "usage": {
+   "prompt_tokens": 2982,
+   "completion_tokens": 15739,
+   "total_tokens": 18721,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13882
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 2726
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

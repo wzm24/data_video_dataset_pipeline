@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#6a2cdd"/>
+<text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#ffffff">Republicans are more likely than</text>
+<text x="640" y="81" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#ffffff">Democrats to have a great deal of</text>
+<text x="640" y="114" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#ffffff">confidence in the police</text>
+<text x="452.0" y="248.0" text-anchor="end" font-family="Arial" font-size="18" fill="#ffffff">Rep/Lean Rep</text>
+<rect x="470.0" y="223.0" width="596.4" height="36" fill="#eaeaea"/>
+<text x="1076.4" y="247.0" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">42%</text>
+<text x="452.0" y="348.0" text-anchor="end" font-family="Arial" font-size="18" fill="#ffffff">Dem/Lean Dem</text>
+<rect x="470.0" y="323.0" width="184.6" height="36" fill="#111111"/>
+<text x="664.6" y="347.0" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">13%</text>
+</svg>

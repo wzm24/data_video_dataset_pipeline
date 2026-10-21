@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_117,Black adults,black-adults,285.1,,,0.5972,relative,#3b3b3b,relative_only
+bar_117,Hispanic adults,hispanic-adults,555.0,,,0.2522,relative,#d3d3d3,relative_only
+bar_117,Asian adults*,asian-adults,825.0,,,0.2124,relative,#d3d3d3,relative_only
+bar_117,White adults,white-adults,1095.0,,,0.1194,relative,#d3d3d3,relative_only

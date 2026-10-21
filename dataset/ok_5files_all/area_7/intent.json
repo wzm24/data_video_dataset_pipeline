@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_7",
+ "intent_en": "To illustrate the significant changes in a country's population demographics and age structure from 1972 to 2019.",
+ "previous_intent": "To illustrate the shift in population age structure from a young, broad-based demographic in 1972 to an aging, narrower-based demographic in 2019, highlighting the resulting demographic and economic transformations.",
+ "narration_support": "This also changed the country's demographics",
+ "chart_support": "Side-by-side population distribution charts labeled 'Population in 1972' and 'Population in 2019' showing a shift in the age distribution curve (from a shape with a broader base to a taller, narrower peak, indicating demographic aging).",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": true,
+ "contains_answer_values": false,
+ "confidence": 0.75,
+ "evidence_note": "The narration is fragmented and mentions demographic changes and children, while the chart visually compares population structures in 1972 and 2019. The narration mentions 1995 and 2019, while the chart uses 1972 and 2019, but both support the theme of demographic evolution.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": true
+}

@@ -1,0 +1,142 @@
+{
+ "clip_id": "bar_149",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 4,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four organization labels are visible as separate estimate sources; no total or stacked composition is shown."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Tax Foundation @ Tax Foundation",
+    "mark:Penn Wharton @ Penn Wharton",
+    "mark:Tax Policy Center @ Tax Policy Center",
+    "mark:Americans for Tax Fairness @ Americans for Tax Fairness"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Tax Foundation @ Tax Foundation",
+      "value": 0.2829
+     },
+     {
+      "mark": "Penn Wharton @ Penn Wharton",
+      "value": 0.3984
+     },
+     {
+      "mark": "Tax Policy Center @ Tax Policy Center",
+      "value": 0.4994
+     },
+     {
+      "mark": "Americans for Tax Fairness @ Americans for Tax Fairness",
+      "value": 0.5312
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The four bars must be visibly ordered by their relative values, with no rank reversals."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Tax Foundation @ Tax Foundation",
+    "extreme": "min",
+    "expected": 0.2829,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The lowest and highest bars must be labeled with their organizations and relative values."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Tax Foundation @ Tax Foundation",
+    "mark:Americans for Tax Fairness @ Americans for Tax Fairness"
+   ],
+   "assertion": {
+    "low": "Tax Foundation @ Tax Foundation",
+    "low_value": 0.2829,
+    "high": "Americans for Tax Fairness @ Americans for Tax Fairness",
+    "high_value": 0.5312,
+    "delta": 0.2483,
+    "ratio": 1.8777,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The difference or ratio between the lowest and highest bars must be visibly annotated or otherwise derivable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Americans for Tax Fairness @ Americans for Tax Fairness",
+    "mark:Tax Policy Center @ Tax Policy Center"
+   ],
+   "assertion": {
+    "greater": "Americans for Tax Fairness @ Americans for Tax Fairness",
+    "lesser": "Tax Policy Center @ Tax Policy Center",
+    "expected_ratio": 1.0637,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two highest bars should be shown close together, with their relative values or difference readable."
+  }
+ ]
+}

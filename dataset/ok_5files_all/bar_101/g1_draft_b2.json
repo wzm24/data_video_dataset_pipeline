@@ -1,0 +1,256 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_101",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that Israel has a sufficient working-age population to support its dependents and benefits from immigration.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The working-age population (ages 15-64) is larger than the combined dependent population (ages 0-14 and 65+).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Working-age (15-64)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 12.56,
+     "note": "sum of male and female values for age groups 15-19 through 60-64"
+    },
+    {
+     "entity": "Dependents (0-14 and 65+)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 8.512,
+     "note": "sum of male and female values for 0-4 through 10-14 plus 65-69 through 95-99"
+    }
+   ],
+   "computation": "12.56 vs 8.512; ratio 12.56 / 8.512 ≈ 1.48",
+   "accepted_routes": [
+    "Working-age group (15–64) is about 1.5 times the dependent group (0–14 and 65+).",
+    "There are more working-age people than dependents, with roughly 1.48 working-age people per dependent.",
+    "The 15–64 population total (12.56) exceeds the combined 0–14 and 65+ total (8.51)."
+   ],
+   "visual_evidence_rule": "Chart must show or allow comparison of the combined 15–64 segment against the combined 0–14 plus 65+ segment.",
+   "temporal_anchor": "Narration clause 'has enough people to care for the old and young'.",
+   "reviewer_question": "Must the video explicitly compare working-age total to combined dependents, or is it enough to show the age pyramid?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The working-age population (15-64) is more than twice the young dependent population (0-14).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Working-age (15-64)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 12.56,
+     "note": "sum of male and female values for age groups 15-19 through 60-64"
+    },
+    {
+     "entity": "Young dependents (0-14)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 5.76,
+     "note": "sum of male and female values for 0-4, 5-9, and 10-14"
+    }
+   ],
+   "computation": "12.56 / 5.76 ≈ 2.18",
+   "accepted_routes": [
+    "Working-age total is more than double the 0–14 total.",
+    "There are about 2.2 working-age people for each child aged 0–14.",
+    "15–64 sum (12.56) is roughly twice the 0–14 sum (5.76)."
+   ],
+   "visual_evidence_rule": "Chart must show or allow comparison of the 15–64 combined segment against the 0–14 combined segment.",
+   "temporal_anchor": "Narration clause 'with plenty left over' (after caring for the young).",
+   "reviewer_question": "Is the working-age-to-young ratio a required takeaway or optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The working-age population (15-64) is much larger than the older dependent population (65+).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Working-age (15-64)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 12.56,
+     "note": "sum of male and female values for age groups 15-19 through 60-64"
+    },
+    {
+     "entity": "Older dependents (65+)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 2.752,
+     "note": "sum of male and female values for 65-69 through 95-99"
+    }
+   ],
+   "computation": "12.56 / 2.752 ≈ 4.56",
+   "accepted_routes": [
+    "Working-age total is over four times the 65+ total.",
+    "There are about 4.6 working-age people for each person aged 65+.",
+    "15–64 sum (12.56) far exceeds the 65+ sum (2.75)."
+   ],
+   "visual_evidence_rule": "Chart must show or allow comparison of the 15–64 combined segment against the 65+ combined segment.",
+   "temporal_anchor": "Narration clause 'care for the old' (or 'old and young').",
+   "reviewer_question": "Is the working-age-to-older ratio a required takeaway or optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The young dependent population (0-14) is larger than the older dependent population (65+).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Young dependents (0-14)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 5.76,
+     "note": "sum of male and female values for 0-4, 5-9, and 10-14"
+    },
+    {
+     "entity": "Older dependents (65+)",
+     "x": "aggregate",
+     "field": "value",
+     "value": 2.752,
+     "note": "sum of male and female values for 65-69 through 95-99"
+    }
+   ],
+   "computation": "5.76 / 2.752 ≈ 2.09",
+   "accepted_routes": [
+    "The 0–14 group is about twice the 65+ group.",
+    "Young dependents outnumber older dependents roughly 2 to 1.",
+    "0–14 sum (5.76) exceeds 65+ sum (2.75)."
+   ],
+   "visual_evidence_rule": "Chart must show or allow comparison of the 0–14 combined segment against the 65+ combined segment.",
+   "temporal_anchor": "Narration clause 'old and young' (when distinguishing the two dependent groups).",
+   "reviewer_question": "Should the video highlight that youth dependency is larger than old-age dependency?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The youngest age groups (0-4 and 5-9) are the largest individual age groups in the table, and values generally decline with age toward the oldest groups (95-99).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "0-4-left",
+     "field": "value",
+     "value": 1.0,
+     "note": "male value; female also 1.0"
+    },
+    {
+     "entity": "5-9",
+     "x": "5-9-left",
+     "field": "value",
+     "value": 1.0,
+     "note": "male value; female also 1.0"
+    },
+    {
+     "entity": "95-99",
+     "x": "95-99-left",
+     "field": "value",
+     "value": 0.016,
+     "note": "male value; female 0.080"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The pyramid has a broad base at ages 0–4 and 5–9 (values 1.000) and narrows to the oldest ages (95–99: male 0.016, female 0.080).",
+    "Individual values are highest for 0–4 and 5–9 and lowest for 95–99.",
+    "Age-group values generally decrease as age increases from youngest to oldest."
+   ],
+   "visual_evidence_rule": "Chart must visibly show the 0–4 and 5–9 groups as the longest bars and the 95–99 groups as the shortest.",
+   "temporal_anchor": "Opening or background narration describing the age pyramid.",
+   "reviewer_question": "Is the overall age-pyramid shape (broad base, narrow top) required context or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 15–19 age group has equal male and female values (0.800 each).",
+  "Females outnumber males in all age groups 65 and older (e.g., 65–69: female 0.496 vs male 0.376).",
+  "The prime working ages 20–49 sum to 8.168, more than half of the 15–64 total (12.560)."
+ ],
+ "unsupported_to_avoid": [
+  "Any statement about immigration adding workers or being a source of extra help, because the table contains no immigration entity or values.",
+  "Absolute counts such as millions of people, because the unit column is blank.",
+  "Causal claims that the age structure causes or guarantees support for dependents.",
+  "Percentages unless the table's own unit column is '%'."
+ ],
+ "notes": "All units are derived from age-group values; no immigration data exists in the table, so immigration is placed in unsupported_to_avoid. Percentages are avoided because the unit column is blank.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 55.0,
+  "usage": {
+   "prompt_tokens": 2735,
+   "completion_tokens": 14661,
+   "total_tokens": 17396,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12458
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2223
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,235 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_65",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the global decline in smallpox cases that led to the disease's official eradication in 1980.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data series represents reported smallpox cases over time, intended as the global/aggregate case series rather than a single-country or non-case measure.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "all rows",
+     "field": "value",
+     "value": 400000.0,
+     "note": "The entity column is 'reported cases'; first value shown as example."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart tracks reported smallpox cases over time.",
+    "The series is the global reported-cases count.",
+    "The measured quantity is smallpox case reports, not vaccinations or deaths."
+   ],
+   "visual_evidence_rule": "The series must be identifiable as reported cases from its labels or accompanying text.",
+   "temporal_anchor": "the clause introducing the smallpox eradication outcome",
+   "reviewer_question": "Must the video explicitly identify the series as global reported smallpox cases?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Reported cases decline overall from 400,000 at the first point to 20,000 at the final point, a net drop of 380,000.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "first row",
+     "field": "value",
+     "value": 400000.0,
+     "note": "First value in the series."
+    },
+    {
+     "entity": "reported cases",
+     "x": "final row",
+     "field": "value",
+     "value": 20000.0,
+     "note": "Last value in the series."
+    }
+   ],
+   "computation": "400000 - 20000 = 380000",
+   "accepted_routes": [
+    "The reported-cases series falls from 400,000 to 20,000 overall.",
+    "Reported cases end at 20,000, down from 400,000.",
+    "There is a net decline of 380,000 reported cases from first to last point."
+   ],
+   "visual_evidence_rule": "The final plotted value must be visibly much lower than the first plotted value, and the overall trend must read as downward.",
+   "temporal_anchor": "the clause about the campaign working around the world and leading to eradication",
+   "reviewer_question": "Is the endpoint-to-endpoint net decline obligatory, or is showing the full shape sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The final reported-cases value is 20,000, the lowest level in the series, tied at the final two points.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "final row",
+     "field": "value",
+     "value": 20000.0,
+     "note": "Final value."
+    },
+    {
+     "entity": "reported cases",
+     "x": "penultimate row",
+     "field": "value",
+     "value": 20000.0,
+     "note": "Same lowest value immediately before final."
+    }
+   ],
+   "computation": "min(value) = 20000",
+   "accepted_routes": [
+    "The series ends at 20,000 reported cases.",
+    "The final value is 20,000, the lowest in the data.",
+    "Reported cases bottom out at 20,000 at the end."
+   ],
+   "visual_evidence_rule": "The last point, or last two points, must be visibly at the lowest level of the series.",
+   "temporal_anchor": "the clause declaring smallpox eradicated",
+   "reviewer_question": "Must the video explicitly state the final 20,000 level, or is the downward shape enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Reported cases reach a maximum of 620,000 in the middle of the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "middle row",
+     "field": "value",
+     "value": 620000.0,
+     "note": "Highest value in the series."
+    }
+   ],
+   "computation": "max(value) = 620000",
+   "accepted_routes": [
+    "The series peaks at 620,000 reported cases.",
+    "The highest reported-cases value is 620,000.",
+    "A mid-series maximum reaches 620,000."
+   ],
+   "visual_evidence_rule": "The highest point of the plotted series must be visible and correspond to 620,000.",
+   "temporal_anchor": "the setup clause before the final decline",
+   "reviewer_question": "Is the mid-series peak required to show the decline's shape, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The mid-series peak of 620,000 is about 31 times the final reported-cases value of 20,000.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "middle row",
+     "field": "value",
+     "value": 620000.0,
+     "note": "Peak value."
+    },
+    {
+     "entity": "reported cases",
+     "x": "final row",
+     "field": "value",
+     "value": 20000.0,
+     "note": "Final value."
+    }
+   ],
+   "computation": "620000 / 20000 = 31",
+   "accepted_routes": [
+    "The peak was about 31 times the final level.",
+    "Reported cases dropped from a 620,000 peak to 20,000, a roughly 31-fold reduction.",
+    "The final level is about one thirty-first of the peak."
+   ],
+   "visual_evidence_rule": "Both the peak and the final level must be identifiable so their heights can be compared.",
+   "temporal_anchor": "the contrast between the earlier peak and the eradication outcome",
+   "reviewer_question": "Must the video quantify the peak-to-final ratio, or is a visual contrast enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series is not monotonic; it includes intermediate rises and falls before the final decline.",
+  "The first data point is 400,000 reported cases.",
+  "There is a late rise to 210,000 reported cases before the final drop to 20,000."
+ ],
+ "unsupported_to_avoid": [
+  "Smallpox cases fell to zero by the eradication declaration.",
+  "Vaccination caused the entire decline.",
+  "The data show every country's elimination or global coverage.",
+  "The peak occurred in a specific year, or that x_px is a date unless explicitly mapped."
+ ],
+ "notes": "The table gives one reported-cases series with absolute case counts; the required units focus on the overall decline and final low endpoint, while peak and peak-to-final ratio are optional context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 67.6,
+  "usage": {
+   "prompt_tokens": 1978,
+   "completion_tokens": 15248,
+   "total_tokens": 17226,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13602
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1466
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

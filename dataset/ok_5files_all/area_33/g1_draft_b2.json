@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_33",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the projected rapid expansion of coal power capacity in China relative to the United States, reflecting the surge in global energy consumption.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "China's capacity rises steeply from its 2000 level to its 2040 level, adding about 1,600 600-MW power plant equivalents over the period.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CHINA",
+     "x": "2000",
+     "field": "value",
+     "value": 434.8,
+     "note": "China 2000 start value"
+    },
+    {
+     "entity": "CHINA",
+     "x": "2040",
+     "field": "value",
+     "value": 2034.8,
+     "note": "China 2040 end value"
+    }
+   ],
+   "computation": "2034.8 - 434.8 = 1600.0",
+   "accepted_routes": [
+    "China rises from about 435 to about 2,035 600-MW plant equivalents between 2000 and 2040.",
+    "China adds roughly 1,600 plant equivalents over the period.",
+    "China's capacity more than quadruples from 2000 to 2040."
+   ],
+   "visual_evidence_rule": "The China series must show a large upward change from its 2000 value to its 2040 value, or the 1,600-equivalent net increase must be derivable.",
+   "temporal_anchor": "China alone will add...",
+   "reviewer_question": "Must the video quantify China's full 2000-2040 increase, or is a shorter endpoint comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The United States remains comparatively stable, with only a small net increase from 2000 to 2040.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "2000",
+     "field": "value",
+     "value": 434.8,
+     "note": "USA 2000 start value"
+    },
+    {
+     "entity": "USA",
+     "x": "2040",
+     "field": "value",
+     "value": 534.8,
+     "note": "USA 2040 end value"
+    }
+   ],
+   "computation": "534.8 - 434.8 = 100.0",
+   "accepted_routes": [
+    "USA stays nearly flat, edging from about 435 to about 535 plant equivalents by 2040.",
+    "USA adds only about 100 plant equivalents over the whole 2000-2040 period.",
+    "The US series is comparatively stable while China expands."
+   ],
+   "visual_evidence_rule": "The USA series must be visible alongside China and show only a small net change from 2000 to 2040.",
+   "temporal_anchor": "China alone will add...",
+   "reviewer_question": "Should the USA's near-flat trajectory be required to make the relative expansion clear?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "China overtakes the United States just after 2005: the two are equal in 2005, and China is higher in 2006.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "CHINA",
+     "x": "2005",
+     "field": "value",
+     "value": 434.8,
+     "note": "China 2005 equals USA"
+    },
+    {
+     "entity": "USA",
+     "x": "2005",
+     "field": "value",
+     "value": 434.8,
+     "note": "USA 2005 equals China"
+    },
+    {
+     "entity": "CHINA",
+     "x": "2006",
+     "field": "value",
+     "value": 491.7,
+     "note": "China 2006 value"
+    },
+    {
+     "entity": "USA",
+     "x": "2006",
+     "field": "value",
+     "value": 431.7,
+     "note": "USA 2006 value"
+    }
+   ],
+   "computation": "China 2005 = USA 2005 = 434.8; China 2006 = 491.7 > USA 2006 = 431.7",
+   "accepted_routes": [
+    "China overtakes the USA in 2006.",
+    "After equal levels in 2005, China is above the USA in 2006.",
+    "The China series crosses above the US series just after 2005."
+   ],
+   "visual_evidence_rule": "Both series must be visible around 2005-2006 so the crossing from equal to China-above-USA can be seen.",
+   "temporal_anchor": "China alone will add...",
+   "reviewer_question": "Is the 2006 overtake year required, or optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "By 2040 China's total capacity is about 3.8 times the US total.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CHINA",
+     "x": "2040",
+     "field": "value",
+     "value": 2034.8,
+     "note": "China 2040 value"
+    },
+    {
+     "entity": "USA",
+     "x": "2040",
+     "field": "value",
+     "value": 534.8,
+     "note": "USA 2040 value"
+    }
+   ],
+   "computation": "2034.8 / 534.8 ≈ 3.8",
+   "accepted_routes": [
+    "By 2040 China's total is about 3.8 times the US total.",
+    "China ends at roughly 2,035 plant equivalents versus about 535 for the USA.",
+    "The final China-to-US ratio is about 3.8:1."
+   ],
+   "visual_evidence_rule": "Both 2040 endpoint values, or a final ratio, must be visible so the ~3.8x comparison can be made.",
+   "temporal_anchor": "China alone will add...",
+   "reviewer_question": "Is the final China/US ratio required, or is showing both endpoint values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "China's 2025-2035 projected increase is about 350 plant equivalents over 10 years, equivalent to roughly one new 600-MW plant equivalent every 10 days.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CHINA",
+     "x": "2025",
+     "field": "value",
+     "value": 1614.8,
+     "note": "China 2025 value"
+    },
+    {
+     "entity": "CHINA",
+     "x": "2035",
+     "field": "value",
+     "value": 1964.8,
+     "note": "China 2035 value"
+    }
+   ],
+   "computation": "1964.8 - 1614.8 = 350.0 over 10 years; 350.0 / 10 = 35.0 per year; 365.25 / 35.0 ≈ 10.4 days per plant equivalent",
+   "accepted_routes": [
+    "China adds about 350 plant equivalents from 2025 to 2035, or one every 10-11 days.",
+    "The 2025-2035 China increase is 35 per year, equal to one new 600-MW plant equivalent about every 10 days.",
+    "China's projected 10-year addition matches the narration's every-10-days pace."
+   ],
+   "visual_evidence_rule": "China's 2025 and 2035 values must be visible so the 350-equivalent 10-year increase can be derived.",
+   "temporal_anchor": "China alone will add the equivalent of a new 600 megawatt coal plant every 10 days for the next 10 years.",
+   "reviewer_question": "Must the video convey the every-10-days rate from the narration using the 2025-2035 table window?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "USA's slight dip from 434.8 in 2000 to 414.8 in 2015 before rising to 534.8 in 2040 (net change from 2015: +120.0).",
+  "China's capacity reaching 720.0 in 2010 and 1334.8 in 2020, showing continued growth.",
+  "China's 2018 year-over-year increase of 64.4 plant equivalents (1207.0 - 1142.6) as an example of peak annual additions."
+ ],
+ "unsupported_to_avoid": [
+  "The narration's 80 to 240 gigatons value; it is not in the table.",
+  "Any percentage, share, or pie-slice claim; the table has no % unit and no populated relative_value fields.",
+  "Causal claim that China's coal expansion causes the rise in global energy consumption.",
+  "Values after 2040 or before 2000.",
+  "Global energy consumption totals not present in the table."
+ ],
+ "notes": "All table values are cumulative 600-MW power plant equivalents; no relative_value cells are populated. The 10-day rate is an arithmetic derivation from China's 2025-2035 increment, not a direct table value.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 45.0,
+  "usage": {
+   "prompt_tokens": 3076,
+   "completion_tokens": 10978,
+   "total_tokens": 14054,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8929
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2564
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

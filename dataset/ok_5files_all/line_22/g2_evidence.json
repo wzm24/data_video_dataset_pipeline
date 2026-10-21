@@ -1,0 +1,141 @@
+{
+ "clip_id": "line_22",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must include a line or series identified as F, with data points spanning the years 1961 to 2006."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:F @ 1961"
+   ],
+   "assertion": {
+    "mark": "F @ 1961",
+    "field": "value",
+    "expected": 0.15,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must display a data point for F at 1961 with relative value 0.15 and a data point at 2006 with relative value 0.10."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:F @ 1961",
+    "mark:F @ 1997",
+    "mark:F @ 2006",
+    "mark:F @ intermediate (between 1961 and 1997)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "F @ 1961",
+      "value": 0.15
+     },
+     {
+      "mark": "F @ 1997",
+      "value": 0.1
+     },
+     {
+      "mark": "F @ 2006",
+      "value": 0.1
+     },
+     {
+      "mark": "F @ intermediate (between 1961 and 1997)",
+      "value": 0.05
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a downward trend from 1961 to a low point of 0.05, followed by an upward trend to 0.10 and a flat segment from 1997 to 2006."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:F @ 1961",
+    "mark:F @ 2006"
+   ],
+   "assertion": {
+    "low": "F @ 2006",
+    "low_value": 0.1,
+    "high": "F @ 1961",
+    "high_value": 0.15,
+    "delta": 0.05,
+    "ratio": 1.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow comparison of the 1961 and 2006 relative values, showing a drop of 0.05."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:F @ 1961",
+    "mark:F @ 2006"
+   ],
+   "assertion": {
+    "greater": "F @ 1961",
+    "lesser": "F @ 2006",
+    "expected_ratio": 1.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must show both endpoint values so the viewer can compare them."
+  }
+ ]
+}

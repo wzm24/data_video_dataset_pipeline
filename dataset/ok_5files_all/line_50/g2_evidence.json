@@ -1,0 +1,131 @@
+{
+ "clip_id": "line_50",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A single continuous series is visible across the ordered points, connecting the opening and closing values."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1908 @ first ordered point",
+    "mark:1908 @ last ordered point"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1908 @ first ordered point",
+      "value": 0.8934
+     },
+     {
+      "mark": "1908 @ last ordered point",
+      "value": 0.0202
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The opening end of the series is visibly higher than the closing end, with an overall downward direction."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "1908 @ first ordered point",
+    "extreme": "max",
+    "expected": 0.8934,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The first point is clearly the highest point in the series."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "1908 @ last ordered point",
+    "extreme": "min",
+    "expected": 0.0202,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final point is clearly the lowest point in the series."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1908 @ first ordered point",
+    "mark:1908 @ last ordered point"
+   ],
+   "assertion": {
+    "low": "1908 @ last ordered point",
+    "low_value": 0.0202,
+    "high": "1908 @ first ordered point",
+    "high_value": 0.8934,
+    "delta": 0.8732,
+    "ratio": 44.2277,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The difference between the opening and closing values is visible or annotated."
+  }
+ ]
+}

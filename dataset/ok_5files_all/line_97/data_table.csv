@@ -1,0 +1,15 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_97,More than 10 years,long,,1995,33,0.33,%,,printed
+line_97,More than 10 years,long,,2000,35,0.35,%,,printed
+line_97,More than 10 years,long,,2005,38,0.38,%,,printed
+line_97,More than 10 years,long,,2007,41,0.41,%,,estimated
+line_97,More than 10 years,long,,2010,50,0.5,%,,printed
+line_97,More than 10 years,long,,2012,56,0.56,%,,estimated
+line_97,More than 10 years,long,,2017,66,0.66,%,,printed
+line_97,5 years or less,short,,1995,36,0.36,%,,printed
+line_97,5 years or less,short,,2000,38,0.38,%,,printed
+line_97,5 years or less,short,,2005,36,0.36,%,,printed
+line_97,5 years or less,short,,2007,30,0.3,%,,estimated
+line_97,5 years or less,short,,2010,23,0.23,%,,printed
+line_97,5 years or less,short,,2013,22,0.22,%,,estimated
+line_97,5 years or less,short,,2017,20,0.2,%,,printed

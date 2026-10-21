@@ -1,0 +1,186 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_29",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To establish the historical baseline of the vegan population's share in the US in 2008.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 2008, the vegan population made up 0.5% of the U.S. population.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2008): 0.5%",
+     "x": "0",
+     "field": "value",
+     "value": 0.5,
+     "note": "Table value is 0.5 in percent units."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "0.5%",
+    "about 0.5 percent",
+    "half a percent",
+    "0.5% of the U.S. population"
+   ],
+   "visual_evidence_rule": "Donut or central label/annotation shows 0.5% with vegan and U.S. population context.",
+   "temporal_anchor": "Back in 2008, vegans only accounted for around 0.5%...",
+   "reviewer_question": "Must the video explicitly show 0.5% as the 2008 baseline share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The baseline value is anchored to the year 2008, not to a current or generic period.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2008): 0.5%",
+     "x": "0",
+     "field": "entity_label",
+     "value": 2008,
+     "note": "Year 2008 appears in the entity label; no separate year column."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "in 2008",
+    "back in 2008",
+    "as of 2008",
+    "for 2008"
+   ],
+   "visual_evidence_rule": "Year 2008 must be visible as a label or title near the value.",
+   "temporal_anchor": "Back in 2008",
+   "reviewer_question": "Must the video explicitly anchor the value to 2008 rather than a generic or current baseline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The metric is the vegan population's share of the U.S. population, not an absolute headcount.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2008): 0.5%",
+     "x": "0",
+     "field": "value",
+     "value": 0.5,
+     "note": "Entity label says 'IN US' and unit is percent, indicating a share of the U.S. population."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "vegan share of the U.S. population",
+    "percentage of Americans who were vegan",
+    "proportion of the U.S. population that was vegan"
+   ],
+   "visual_evidence_rule": "Denominator/entity label must indicate U.S. population or 'of U.S. population'; a donut/share visual is appropriate.",
+   "temporal_anchor": "of the US population",
+   "reviewer_question": "Must the video make clear the 0.5% is a share of the U.S. population, not an absolute count?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "0.5% is equivalent to 0.0050 as a proportion.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2008): 0.5%",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.005,
+     "note": "Table relative_value is 0.0050, equivalent to 0.5%."
+    }
+   ],
+   "computation": "0.5 / 100 = 0.0050",
+   "accepted_routes": [
+    "0.0050",
+    "0.005",
+    "0.5% as a proportion",
+    "0.0050 relative share"
+   ],
+   "visual_evidence_rule": "Only if using decimal notation, display 0.0050 or 0.005; percentage route may satisfy without it.",
+   "temporal_anchor": "0.5% clause, as equivalent decimal",
+   "reviewer_question": "Should the decimal proportion 0.0050 be required or only optional/ignored?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Complementary non-vegan share 99.5% (100 - 0.5) only if the donut explicitly shows the remainder; optional and derived.",
+  "The value is an estimate (source_type = estimated); optional qualifier.",
+  "Rounding language such as 'around' or 'about' for 0.5%."
+ ],
+ "unsupported_to_avoid": [
+  "About 1 million people, unless an external U.S. population denominator is provided; not in this table.",
+  "Any trend or change from 2008 to another year.",
+  "Comparison or ranking with other diets or countries.",
+  "Causal explanation for why the share was 0.5%.",
+  "Current vegan share or extrapolation beyond 2008."
+ ],
+ "notes": "This is a single-row 2008 baseline, so directly supported numbers are 0.5% and 0.0050. The narration's 'about 1 million people' is not supported by the table because the U.S. population denominator is absent.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.72
+ },
+ "draft_cost": {
+  "sec": 30.8,
+  "usage": {
+   "prompt_tokens": 617,
+   "completion_tokens": 7328,
+   "total_tokens": 7945,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6025
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 361
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

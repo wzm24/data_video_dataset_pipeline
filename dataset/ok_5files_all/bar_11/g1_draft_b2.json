@@ -1,0 +1,254 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_11",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that cycling is a relatively safe mode of transport, with a fatality risk comparable to walking when measured by distance.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Cyclists' fatality risk is 0.33 on the relative-risk scale (33% of the motorcyclist reference).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Cyclists",
+     "x": "720.0",
+     "field": "value",
+     "value": 0.33,
+     "note": "Table value for cyclists; relative_value is also 0.3300."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cyclists have a relative fatality risk of 0.33.",
+    "Cycling's risk value is about one-third the motorcyclist reference.",
+    "The cyclists bar is at 0.33.",
+    "Cyclist fatality risk is roughly 33% of motorcyclists'."
+   ],
+   "visual_evidence_rule": "The Cyclists bar must be visible and either labeled 0.33 or clearly aligned to 0.33 on the y-axis.",
+   "temporal_anchor": "the 'it's' clause in 'In fact, it's about as safe as walking' (the entity being described).",
+   "reviewer_question": "Must the video give cyclists' numeric value, or is the qualitative 'about as safe as walking' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Walkers' fatality risk is 0.40 on the same relative-risk scale (40% of the motorcyclist reference).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Walkers",
+     "x": "480.0",
+     "field": "value",
+     "value": 0.4,
+     "note": "Table value for walkers; relative_value is also 0.4000."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Walkers have relative risk 0.40.",
+    "Walking's risk value is 0.40.",
+    "The walkers bar is at 0.40.",
+    "Walker fatality risk is roughly 40% of motorcyclists'."
+   ],
+   "visual_evidence_rule": "The Walkers bar must be visible and either labeled 0.40 or clearly aligned to 0.40 on the y-axis.",
+   "temporal_anchor": "the word 'walking' in 'about as safe as walking'.",
+   "reviewer_question": "Must walkers' 0.40 value be shown to anchor the comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Cyclists' risk (0.33) is comparable to, and slightly lower than, walkers' risk (0.40); the gap is 0.07, and cyclists are 82.5% of walkers' risk.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Cyclists",
+     "x": "720.0",
+     "field": "value",
+     "value": 0.33,
+     "note": "Cyclist value."
+    },
+    {
+     "entity": "Walkers",
+     "x": "480.0",
+     "field": "value",
+     "value": 0.4,
+     "note": "Walker value."
+    }
+   ],
+   "computation": "0.400 - 0.330 = 0.070; 0.330 / 0.400 = 0.825; (0.400 - 0.330) / 0.400 = 0.175, i.e. 17.5% lower.",
+   "accepted_routes": [
+    "Cycling is about as safe as walking.",
+    "Cyclists and walkers have comparable fatality risk (0.33 vs 0.40).",
+    "Cyclist risk is slightly lower than walker risk, 0.33 compared with 0.40.",
+    "Cyclists' risk is roughly 83% of walkers' risk."
+   ],
+   "visual_evidence_rule": "Cyclists and Walkers bars must be shown together or in direct comparison, with values 0.33 and 0.40 visible or derivable from the axis.",
+   "temporal_anchor": "the clause 'about as safe as walking'.",
+   "reviewer_question": "Is the explicit cyclist-vs-walker comparison required, or can it be inferred from both bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Cyclists' risk is about one-third of motorcyclists' risk (0.33 vs 1.00), supporting that cycling is relatively safe compared with motorcycling.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Cyclists",
+     "x": "720.0",
+     "field": "value",
+     "value": 0.33,
+     "note": "Cyclist value."
+    },
+    {
+     "entity": "Motorcyclists",
+     "x": "240.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Motorcyclist reference value."
+    }
+   ],
+   "computation": "0.330 / 1.000 = 0.330; 1.000 - 0.330 = 0.670.",
+   "accepted_routes": [
+    "Cyclists' risk is about one-third of motorcyclists' risk.",
+    "Cyclists are much safer than motorcyclists (0.33 vs 1.00).",
+    "The cyclists bar is 0.33 against the motorcyclist reference of 1.00.",
+    "Motorcyclist risk is 1.00, compared with cyclists' 0.33."
+   ],
+   "visual_evidence_rule": "Motorcyclists bar and Cyclists bar must both be visible with values or axis alignment.",
+   "temporal_anchor": "not directly narrated; optional visual comparison if the motorcyclist reference is shown.",
+   "reviewer_question": "Should the video include the motorcyclist reference to interpret 0.33, or only the walking comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The four modes rank from highest to lowest fatality risk as motorcyclists (1.00), walkers (0.40), cyclists (0.33), and car drivers (0.05).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Motorcyclists",
+     "x": "240.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Highest value."
+    },
+    {
+     "entity": "Walkers",
+     "x": "480.0",
+     "field": "value",
+     "value": 0.4,
+     "note": "Second-highest value."
+    },
+    {
+     "entity": "Cyclists",
+     "x": "720.0",
+     "field": "value",
+     "value": 0.33,
+     "note": "Third-highest value."
+    },
+    {
+     "entity": "Car drivers",
+     "x": "960.0",
+     "field": "value",
+     "value": 0.05,
+     "note": "Lowest value."
+    }
+   ],
+   "computation": "Ordering by table values: 1.000 > 0.400 > 0.330 > 0.050.",
+   "accepted_routes": [
+    "Motorcyclists are highest-risk, car drivers lowest-risk.",
+    "Risk descends from motorcyclists to walkers to cyclists to car drivers.",
+    "Cyclists rank third of four on this chart.",
+    "Car drivers have the lowest value at 0.05."
+   ],
+   "visual_evidence_rule": "All four bars must be present in correct vertical order with values.",
+   "temporal_anchor": "none directly in the narration; optional full-chart context.",
+   "reviewer_question": "Must the video show and correctly order all four transport modes, or is a two-bar cyclist/walker comparison sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Cyclists' risk relative to car drivers is valid if the full chart is shown: 0.33 vs 0.05, so cyclists are 6.6 times car drivers' risk by the table values (0.330 / 0.050 = 6.6), and car drivers are 15.2% of cyclists' risk (0.050 / 0.330 = 0.1515).",
+  "Labeling the metric as relative fatality risk indexed to motorcyclists = 1.00 is valid metadata if the chart uses that normalization."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as cycling being safe because of helmets, bike lanes, or infrastructure.",
+  "Extrapolating to absolute fatality rates, all countries, or all years not represented in the table.",
+  "Saying cyclists are 0.33% of fatalities or 33% of all traffic deaths; the table gives relative risk, not a share of deaths.",
+  "Claiming cycling is safer than walking in general; the table supports comparable or slightly lower relative risk only on this metric.",
+  "Using a different denominator without labeling, or specifying per mile vs per kilometer when the table unit is blank."
+ ],
+ "notes": "The central required units are the cyclist value, walker value, and their comparable/slightly-lower comparison. Full four-mode ranking and motorcyclist reference are valid but optional unless the video chooses to show all bars.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 41.1,
+  "usage": {
+   "prompt_tokens": 689,
+   "completion_tokens": 9931,
+   "total_tokens": 10620,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7738
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 433
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

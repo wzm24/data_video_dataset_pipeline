@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_5,Federal,federal,0,,6,0.0600,%,,printed
+pie_5,Fares,fares,1,,26,0.2600,%,,printed
+pie_5,Local government,local-government,2,,36,0.3600,%,,printed
+pie_5,State,state,3,,21,0.2100,%,,printed

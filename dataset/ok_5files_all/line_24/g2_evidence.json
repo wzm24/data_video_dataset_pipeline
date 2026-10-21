@@ -1,0 +1,164 @@
+{
+ "clip_id": "line_24",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:car drivers @ 120.0",
+    "mark:car drivers @ 120.0",
+    "mark:car drivers @ 1220.0",
+    "mark:car drivers @ 1220.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "car drivers @ 120.0",
+      "value": 85.0087
+     },
+     {
+      "mark": "car drivers @ 120.0",
+      "value": 0.5313
+     },
+     {
+      "mark": "car drivers @ 1220.0",
+      "value": 109.9826
+     },
+     {
+      "mark": "car drivers @ 1220.0",
+      "value": 0.6874
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The car drivers line must be visible rising from its first to last point."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:cyclists @ 120.0",
+    "mark:cyclists @ 120.0",
+    "mark:cyclists @ 1220.0",
+    "mark:cyclists @ 1220.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "cyclists @ 120.0",
+      "value": 142.9913
+     },
+     {
+      "mark": "cyclists @ 120.0",
+      "value": 0.8937
+     },
+     {
+      "mark": "cyclists @ 1220.0",
+      "value": 61.0087
+     },
+     {
+      "mark": "cyclists @ 1220.0",
+      "value": 0.3813
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The cyclists line must be visible falling from its first to last point."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:cyclists @ 120.0",
+    "mark:car drivers @ 120.0"
+   ],
+   "assertion": {
+    "greater": "cyclists @ 120.0",
+    "lesser": "car drivers @ 120.0",
+    "expected_ratio": 1.6821,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the leftmost data point, the cyclists line must be above the car drivers line."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:car drivers @ 1220.0",
+    "mark:cyclists @ 1220.0"
+   ],
+   "assertion": {
+    "greater": "car drivers @ 1220.0",
+    "lesser": "cyclists @ 1220.0",
+    "expected_ratio": 1.8027,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the rightmost data point, the car drivers line must be above the cyclists line."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:cyclists @ 486.7",
+    "mark:car drivers @ 486.7"
+   ],
+   "assertion": {
+    "at": "486.7",
+    "above": "cyclists",
+    "above_value": 106.9913,
+    "below": "car drivers",
+    "below_value": 105.0087,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the cyclists line crossing from above to below the car drivers line between these two x positions."
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "clip_id": "line_44",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Base Rate Bank of England)"
+   ],
+   "assertion": {
+    "mark": "Base Rate Bank of England @ 1991",
+    "extreme": "max",
+    "expected": 13.87,
+    "compared_set": "Base Rate Bank of England",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Bank Rate line must show an early high at 13.87% and a final low at 0.25%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Base Rate Bank of England @ unspecified crisis-period start",
+    "mark:Base Rate Bank of England @ unspecified crisis-period end"
+   ],
+   "assertion": {
+    "low": "Base Rate Bank of England @ unspecified crisis-period end",
+    "low_value": 0.5,
+    "high": "Base Rate Bank of England @ unspecified crisis-period start",
+    "high_value": 5.0,
+    "delta": 4.5,
+    "ratio": 10.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A steep downward segment from 5.00% to 0.50% must be visible on the Bank Rate line."
+  }
+ ]
+}

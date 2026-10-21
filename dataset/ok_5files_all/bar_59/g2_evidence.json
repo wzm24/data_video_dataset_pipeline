@@ -1,0 +1,151 @@
+{
+ "clip_id": "bar_59",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 9,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All nine city labels or bars are visible, or the chart explicitly states that nine cities are included."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Oakland @ 411.6",
+    "mark:Atlanta @ 411.6"
+   ],
+   "assertion": {
+    "greater": "Oakland @ 411.6",
+    "lesser": "Atlanta @ 411.6",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "City labels include at least one northern/other city, one southern city, and one western city; optional region grouping or color makes the regional spread explicit."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Oakland @ 411.6",
+    "mark:Cleveland @ 411.6"
+   ],
+   "assertion": {
+    "greater": "Oakland @ 411.6",
+    "lesser": "Cleveland @ 411.6",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At least seven city bars beyond Detroit and Chicago are visible, with values or labels for New Orleans through the 0.154 tie."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Oakland @ 411.6",
+    "mark:Cleveland @ 411.6",
+    "mark:Atlanta @ 411.6",
+    "mark:New Orleans @ 596.5",
+    "mark:Chicago @ 718.5",
+    "mark:Detroit @ 750.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Oakland @ 411.6",
+      "value": 0.154
+     },
+     {
+      "mark": "Cleveland @ 411.6",
+      "value": 0.154
+     },
+     {
+      "mark": "Atlanta @ 411.6",
+      "value": 0.154
+     },
+     {
+      "mark": "New Orleans @ 596.5",
+      "value": 0.616
+     },
+     {
+      "mark": "Chicago @ 718.5",
+      "value": 0.921
+     },
+     {
+      "mark": "Detroit @ 750.0",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars are ordered by value or labeled so Detroit 1.000, Chicago 0.921, New Orleans 0.616, and the 0.154 tie are identifiable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Oakland @ 411.6",
+    "mark:Cleveland @ 411.6"
+   ],
+   "assertion": {
+    "greater": "Oakland @ 411.6",
+    "lesser": "Cleveland @ 411.6",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If relative_value is visualized, labels or encoding show Detroit 0.6250 and Chicago 0.5758 above New Orleans 0.3852, with the 0.0963 tie visible if discussed."
+  }
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_33",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the historical trend of wealth inequality in the United States, highlighting that the top wealth holders possess a large portion of national wealth in 2010 following a mid-century decline.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series follows a U-shaped historical trend: it starts from a high early level, declines to a low trough, and then rebounds by the final point.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "early high",
+     "field": "value",
+     "value": 46.0025,
+     "note": "highest value in series"
+    },
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "trough",
+     "field": "value",
+     "value": 23.9975,
+     "note": "lowest value in series"
+    },
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "final",
+     "field": "value",
+     "value": 40.0023,
+     "note": "final value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart shows a high early level, a mid-century decline, and a late rebound.",
+    "The top wealth share falls from an early high to a low and then rises again.",
+    "The trend is U-shaped over the period."
+   ],
+   "visual_evidence_rule": "The series must visibly decline from an early high to a low and then rise to a higher final value.",
+   "temporal_anchor": "historical trend / mid-century decline framing",
+   "reviewer_question": "Must the video show the full U-shape, or is the final 40% sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The early maximum of the series is about 46.0% (46.0025), the highest share shown.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "early peak",
+     "field": "value",
+     "value": 46.0025,
+     "note": "maximum value in series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The highest share is about 46%.",
+    "The series peaks at roughly 46.0%.",
+    "The early maximum is just over 46%."
+   ],
+   "visual_evidence_rule": "The highest data point on the series must be approximately 46.0%.",
+   "temporal_anchor": "historical trend framing / before the mid-century decline",
+   "reviewer_question": "Is the early peak value required, or is it enough to show a high before the decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series reaches its lowest value, a trough of about 24.0% (23.9975), after the mid-century decline.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "trough",
+     "field": "value",
+     "value": 23.9975,
+     "note": "minimum value in series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lowest share is about 24%.",
+    "The trough is just under 24.0%.",
+    "The series bottoms out near 24%."
+   ],
+   "visual_evidence_rule": "The lowest data point on the series must be approximately 24.0%.",
+   "temporal_anchor": "mid-century decline clause",
+   "reviewer_question": "Must the video explicitly identify the trough value, or only show a decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the final point, the share is about 40.0% (40.0023), meaning the top group again holds a large portion of national wealth.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "final",
+     "field": "value",
+     "value": 40.0023,
+     "note": "final value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top 1% hold close to 40% of national wealth.",
+    "The final share is about 40%.",
+    "By the end, the top wealth share is roughly two-fifths."
+   ],
+   "visual_evidence_rule": "The final data point must be near 40.0%.",
+   "temporal_anchor": "The top 1% hold closer to 40% of the national wealth.",
+   "reviewer_question": "Is the final 40% the single most important required value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "From the trough to the final point, the share rises by about 16 percentage points (40.0023 - 23.9975 = 16.0048).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "trough",
+     "field": "value",
+     "value": 23.9975,
+     "note": "start of rebound"
+    },
+    {
+     "entity": "Share of top percentage in total wealth",
+     "x": "final",
+     "field": "value",
+     "value": 40.0023,
+     "note": "end of rebound"
+    }
+   ],
+   "computation": "40.0023 - 23.9975 = 16.0048",
+   "accepted_routes": [
+    "The post-trough rebound is about 16 percentage points.",
+    "The share increases from roughly 24% to about 40%.",
+    "It gains about 16 points after the low."
+   ],
+   "visual_evidence_rule": "The series must show an increase of roughly 16 percentage points from its trough to its final value.",
+   "temporal_anchor": "following a mid-century decline / final clause",
+   "reviewer_question": "Must the video quantify the rebound, or is the final level enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The final value is about 2 percentage points below the initial value (41.9980 - 40.0023 = 1.9957).",
+  "The early peak is about 6 percentage points above the final value (46.0025 - 40.0023 = 6.0002).",
+  "The decline from early peak to trough is about 22 percentage points (46.0025 - 23.9975 = 22.0050).",
+  "The Top 1% wealth share backfill rows show 28.9998% and 27.5175% at two mid-century points."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state a specific year such as 2010; no year column is present in the table.",
+  "Do not claim the top 1% share is 40% of income; the table is about wealth share.",
+  "Do not infer causes such as tax policy or policy changes.",
+  "Do not extrapolate beyond the final point.",
+  "Do not use relative_value as a percentage; the table has an explicit % unit for these values, so % is allowed for the main series, but relative_value is a 0-1 normalization and should not be presented as the percentage."
+ ],
+ "notes": "The main series is 'Share of top percentage in total wealth' with explicit % values; the top 1% backfill rows align with the same series label. The required core is the U-shaped trend, the trough near 24%, and the final roughly 40% share.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 56.8,
+  "usage": {
+   "prompt_tokens": 3314,
+   "completion_tokens": 13562,
+   "total_tokens": 16876,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11782
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2802
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

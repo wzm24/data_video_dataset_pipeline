@@ -1,0 +1,216 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_24",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To highlight France's significant total nuclear power generation output and its status as a major nuclear energy producer.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "France's nuclear energy accounts for 75% of its electricity (a 0.75 share of the mix).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "value",
+     "value": 75.0,
+     "note": "Table value is 75 in percent."
+    },
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "Relative value is 0.7500, equivalent to 75%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "France gets 75% of its electricity from nuclear power.",
+    "Nuclear accounts for three-quarters (75%) of France's electricity.",
+    "75% of French electricity comes from nuclear.",
+    "France's nuclear share is 0.75 of its electricity mix."
+   ],
+   "visual_evidence_rule": "A donut segment or label must show 75% (or 0.75) as the nuclear/energy share, with percent/share unit visible.",
+   "temporal_anchor": "The narration clause about 'over 75% of their electricity coming from nuclear power plants' (but render as 75%, not over 75%).",
+   "reviewer_question": "Should 75% be exact, or is 'around 75%' acceptable? Is 'over 75%' forbidden because the table value is exactly 75?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complementary non-nuclear share is 25% of electricity.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "value",
+     "value": 75.0,
+     "note": "Table value is 75 in percent."
+    },
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "Relative value 0.7500."
+    }
+   ],
+   "computation": "100% - 75% = 25%; or 1 - 0.75 = 0.25.",
+   "accepted_routes": [
+    "The remaining 25% of electricity comes from non-nuclear sources.",
+    "Nuclear is 75%, while other sources are 25%.",
+    "Non-nuclear sources supply one-quarter of France's electricity.",
+    "The donut's remainder is 25%."
+   ],
+   "visual_evidence_rule": "Either the complement/other segment is shown, or the total 100% is visible so the 25% remainder can be inferred.",
+   "temporal_anchor": "The same narration clause as the 75% share.",
+   "reviewer_question": "Is the 25% complement required or optional context for this clip?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Nuclear's 75% share is three times the 25% non-nuclear share, so nuclear outweighs all other electricity sources combined.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "value",
+     "value": 75.0,
+     "note": "Table value is 75 in percent."
+    },
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "Relative value 0.7500."
+    }
+   ],
+   "computation": "75 / (100 - 75) = 3; or 0.75 / (1 - 0.75) = 3.",
+   "accepted_routes": [
+    "Nuclear's 75% share is three times the 25% non-nuclear share.",
+    "75% nuclear versus 25% other: nuclear outweighs all other sources combined.",
+    "Nuclear is 3x the non-nuclear remainder.",
+    "The nuclear segment is much larger than the remainder (75% vs 25%)."
+   ],
+   "visual_evidence_rule": "Both the 75% nuclear segment and the 25% remainder (or a 75/25 comparison label) must be visible.",
+   "temporal_anchor": "The clause about nuclear's large share, or the 75% electricity clause.",
+   "reviewer_question": "Should the video explicitly compare nuclear to non-nuclear, or is the 75% share alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 75 value is a percentage/share of electricity, not an absolute total nuclear generation output.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "value",
+     "value": 75.0,
+     "note": "Value is 75 with unit percent."
+    },
+    {
+     "entity": "energy",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "Relative value 0.7500 supports a proportion/share interpretation."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 75 is a percent share of electricity, not a total generation amount.",
+    "The metric is the proportion of electricity from nuclear (75%), not a billion-kWh output.",
+    "The chart uses a percent unit and a 0.75 relative value.",
+    "The value represents nuclear's share of the electricity mix."
+   ],
+   "visual_evidence_rule": "A percent or share label/unit must be visible; total-output units like billion kWh should not be attached to the 75 value.",
+   "temporal_anchor": "The narration clause 'over 75% of their electricity coming from nuclear power plants' (the share clause, not the later total-output clause).",
+   "reviewer_question": "Must the video disambiguate that 75% is a share of electricity rather than France's total nuclear output?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Nuclear is the dominant/major electricity source in France, based on the 75% share.",
+  "The donut chart displays a single 75% segment for nuclear/energy.",
+  "France is a major nuclear energy producer, as an interpretation of the 75% share."
+ ],
+ "unsupported_to_avoid": [
+  "France is the world's largest net exporter of electricity.",
+  "France ranks second in total nuclear power generation.",
+  "France generates 419 billion kilowatt-hours from nuclear.",
+  "The United States leads at 798 billion kilowatt-hours.",
+  "Any absolute total nuclear generation output, rank, or country comparison not in the table.",
+  "Describing the value as 'over 75%' if the table value is exactly 75."
+ ],
+ "notes": "The table supports only a 75% share (relative value 0.75) for the entity 'energy'; it does not support the narration's rank, export, or total-output figures. Treat 25% and the 3x comparison as arithmetic derivations from 100 - 75, not as table-stated values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.84
+ },
+ "draft_cost": {
+  "sec": 39.7,
+  "usage": {
+   "prompt_tokens": 651,
+   "completion_tokens": 9378,
+   "total_tokens": 10029,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7765
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 395
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

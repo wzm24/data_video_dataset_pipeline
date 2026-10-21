@@ -1,0 +1,244 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_46",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the distribution of income taxes across different individuals as a baseline for comparing the total tax burden when corporate and property taxes are included.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip re-presents the baseline chart of income tax only for 11 people/income groups, ordered from POOREST through RICHEST; corporate and property taxes are not yet included.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "all bar_46 rows",
+     "x": "clip_id=bar_46",
+     "field": "count",
+     "value": 11.0,
+     "note": "count of 11 entity rows for clip bar_46; used as 11 people/groups"
+    }
+   ],
+   "computation": "count of entity rows = 11",
+   "accepted_routes": [
+    "This is the income tax only for 11 people",
+    "a baseline of income tax across 11 groups",
+    "11-person income-tax chart before corporate and property taxes"
+   ],
+   "visual_evidence_rule": "Chart labeled or narrated as income tax; 11 bars/entities visible; no corporate or property tax bars in this frame.",
+   "temporal_anchor": "Let's go back to our first chart with these 11 people / Remember, this is just the income tax.",
+   "reviewer_question": "Must the video explicitly frame this as the income-tax-only baseline for 11 people before introducing corporate/property taxes?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The POOREST person/group has an income tax value of 0.000, the bottom endpoint of the baseline distribution.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "198.7",
+     "field": "value",
+     "value": 0.0,
+     "note": "leftmost bar"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The poorest pays 0 income tax",
+    "income tax starts at zero for the poorest",
+    "the bottom group has a zero income-tax value"
+   ],
+   "visual_evidence_rule": "Leftmost POOREST bar is at zero/empty on the income-tax axis.",
+   "temporal_anchor": "While showing the first chart with these 11 people.",
+   "reviewer_question": "Must the zero income tax for the poorest be shown or stated?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Income tax rises across the baseline from POOREST to Group 10, peaking at 18.000 for Group 10.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "198.7",
+     "field": "value",
+     "value": 0.0,
+     "note": "start of trend"
+    },
+    {
+     "entity": "Group 10",
+     "x": "1074.1",
+     "field": "value",
+     "value": 18.0,
+     "note": "peak of trend"
+    }
+   ],
+   "computation": "increase = 18.0 - 0.0 = 18.0",
+   "accepted_routes": [
+    "Income tax climbs from 0 to 18 across the first ten groups",
+    "the baseline reaches its peak at 18 for Group 10",
+    "upward income-tax distribution from poorest to Group 10"
+   ],
+   "visual_evidence_rule": "Bars generally increase from POOREST through Group 10; Group 10 is the tallest bar at 18.",
+   "temporal_anchor": "While re-displaying the income-tax baseline.",
+   "reviewer_question": "Must the video convey the upward trend and the 18 peak at Group 10?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The RICHEST person/group has an income tax value of 10.000, which is 8.000 lower than Group 10's 18.000 (about 44.4% lower), so the richest is not the maximum.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "rightmost bar"
+    },
+    {
+     "entity": "Group 10",
+     "x": "1074.1",
+     "field": "value",
+     "value": 18.0,
+     "note": "comparison bar"
+    }
+   ],
+   "computation": "difference = 18.0 - 10.0 = 8.0; percent lower = 8.0 / 18.0 = 0.444",
+   "accepted_routes": [
+    "The richest has 10, which is less than Group 10's 18",
+    "Group 10 pays 8 more than the richest",
+    "the richest's income tax is about 44% lower than Group 10's",
+    "the richest is not the highest income-tax bar"
+   ],
+   "visual_evidence_rule": "RICHEST bar at 10 is visibly shorter than Group 10 bar at 18.",
+   "temporal_anchor": "When the rightmost bars are compared in the baseline chart.",
+   "reviewer_question": "Must the video highlight that the richest is lower than Group 10, not the maximum?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Among the top baseline values, Group 9 is second at 12.000, while Group 8 and RICHEST are tied at 10.000.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Group 9",
+     "x": "976.9",
+     "field": "value",
+     "value": 12.0,
+     "note": "second-highest value"
+    },
+    {
+     "entity": "Group 8",
+     "x": "879.5",
+     "field": "value",
+     "value": 10.0,
+     "note": "tied value"
+    },
+    {
+     "entity": "RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "tied value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Group 9 is second at 12",
+    "Group 8 and RICHEST tie at 10",
+    "top ranking: Group 10=18, Group 9=12, then Group 8 and RICHEST=10"
+   ],
+   "visual_evidence_rule": "Group 9 bar is taller than Group 8 and RICHEST; Group 8 and RICHEST bars are equal height at 10.",
+   "temporal_anchor": "Optional, during the baseline chart display.",
+   "reviewer_question": "Should the video call out the tie at 10 between Group 8 and RICHEST and Group 9's second-place 12?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Group-by-group values for all 11 entities (POOREST=0, Group 2=1, Group 3=3, Group 4=4, Group 5=6, Group 6=7, Group 7=8, Group 8=10, Group 9=12, Group 10=18, RICHEST=10) may be shown as labels or tooltips.",
+  "The normalized relative_value field (e.g., Group 10=0.6000, Group 9=0.4000, RICHEST=0.3333) may be used for bar-height scaling.",
+  "The first nonzero value may be noted as Group 2=1.000 if labels are shown."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state or imply that corporate or property taxes are already included in this baseline chart.",
+  "Do not claim the RICHEST has the highest income tax; the table shows Group 10 at 18 vs RICHEST at 10.",
+  "Do not call the values tax rates or percentages unless the unit is explicitly known; the unit column is blank.",
+  "Do not infer total tax burden, effective tax rates, causes, or future values not present in the table.",
+  "Do not extrapolate to people/income groups beyond the 11 listed."
+ ],
+ "notes": "The table has 11 rows for clip bar_46 and no corporate/property columns, so the baseline is income tax only. The most error-prone points are the non-monotonic top (Group 10 > RICHEST) and the 0-to-18 trend through Group 10.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 55.6,
+  "usage": {
+   "prompt_tokens": 1135,
+   "completion_tokens": 13166,
+   "total_tokens": 14301,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11178
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 751
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,266 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_67",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain how the yield curve functions as an economic indicator and why an inversion signals a potential economic slowdown.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart compares two yield-curve states—normal and inverted—with maturity increasing from short-term on the left to long-term on the right.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Yield curve normal",
+     "x": "left/short-term",
+     "field": "x_px",
+     "value": 240.0,
+     "note": "left-side anchor for the short end"
+    },
+    {
+     "entity": "Yield curve normal",
+     "x": "right/long-term",
+     "field": "x_px",
+     "value": 1080.0,
+     "note": "right-side anchor for the long end"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Two curves are shown: normal and inverted, from short-term on the left to long-term on the right.",
+    "The yield curve runs from shorter maturities on the left to longer maturities on the right, with normal and inverted states.",
+    "Left side = short-term; right side = long-term; the two lines are normal and inverted."
+   ],
+   "visual_evidence_rule": "Both normal and inverted curves must be identifiable, and the x-direction from short-term (left) to long-term (right) must be visible or labeled.",
+   "temporal_anchor": "The clause introducing the line and short-term-to-long-term maturity axis.",
+   "reviewer_question": "Must the video explicitly identify both curve states and the short-to-long maturity axis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In the normal curve, longer-term yield is higher than short-term yield, producing an upward slope from left to right.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Yield curve normal",
+     "x": "left/short-term",
+     "field": "relative_value",
+     "value": 0.2667,
+     "note": "normal short-term endpoint"
+    },
+    {
+     "entity": "Yield curve normal",
+     "x": "right/long-term",
+     "field": "relative_value",
+     "value": 0.8444,
+     "note": "normal long-term endpoint"
+    }
+   ],
+   "computation": "0.8444 - 0.2667 = 0.5777 if the normal spread is shown",
+   "accepted_routes": [
+    "Normally, long-term yields are higher than short-term yields (0.8444 vs 0.2667).",
+    "The normal curve slopes upward from left to right.",
+    "The normal long-term yield exceeds the short-term yield by 0.5777 relative units."
+   ],
+   "visual_evidence_rule": "The normal curve must visibly rise from the left endpoint to the right endpoint; if labeled, left value 0.2667 and right value 0.8444.",
+   "temporal_anchor": "The clause 'Usually, the longer the time frame, the higher the interest rate...'",
+   "reviewer_question": "Must the video show the normal curve as upward-sloping and/or state the normal positive spread?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In the inverted curve, short-term yield is higher than long-term yield, producing a downward slope from left to right.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Yield curve inverted",
+     "x": "left/short-term",
+     "field": "relative_value",
+     "value": 0.6444,
+     "note": "inverted short-term endpoint"
+    },
+    {
+     "entity": "Yield curve inverted",
+     "x": "right/long-term",
+     "field": "relative_value",
+     "value": 0.1778,
+     "note": "inverted long-term endpoint"
+    }
+   ],
+   "computation": "0.6444 - 0.1778 = 0.4666 if the inversion gap is shown",
+   "accepted_routes": [
+    "The inverted curve slopes downward from left to right.",
+    "Short-term yields are above long-term yields when the curve inverts (0.6444 vs 0.1778).",
+    "The inverted curve has an inversion gap of 0.4666 relative units."
+   ],
+   "visual_evidence_rule": "The inverted curve must visibly fall from the left endpoint to the right endpoint; if labeled, left value 0.6444 and right value 0.1778.",
+   "temporal_anchor": "The clause 'long-term rates can drop below short-term rates, the curve inverts.'",
+   "reviewer_question": "Must the video explicitly state that inversion means short-term yield > long-term yield and show the red curve descending?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the long end, the normal curve is higher than the inverted curve, consistent with long-term yields falling when the curve inverts.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Yield curve normal",
+     "x": "right/long-term",
+     "field": "relative_value",
+     "value": 0.8444,
+     "note": "normal long-term endpoint"
+    },
+    {
+     "entity": "Yield curve inverted",
+     "x": "right/long-term",
+     "field": "relative_value",
+     "value": 0.1778,
+     "note": "inverted long-term endpoint"
+    }
+   ],
+   "computation": "0.8444 - 0.1778 = 0.6666",
+   "accepted_routes": [
+    "The long-term yield is lower in the inverted curve than in the normal curve (0.1778 vs 0.8444).",
+    "The inverted curve's long-term endpoint is below the normal curve's long-term endpoint.",
+    "From normal to inverted, the long-term endpoint falls by 0.6666 relative units."
+   ],
+   "visual_evidence_rule": "At the right side of the chart, the normal curve must sit above the inverted curve.",
+   "temporal_anchor": "The clause about long-term rates dropping below short-term rates.",
+   "reviewer_question": "Is the cross-curve long-end drop required or optional supporting context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The inverted curve is the warning/signal state: short-term yield above long-term yield, opposite of the normal upward-sloping curve.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Yield curve inverted",
+     "x": "left/short-term",
+     "field": "relative_value",
+     "value": 0.6444,
+     "note": "inverted short-term endpoint"
+    },
+    {
+     "entity": "Yield curve inverted",
+     "x": "right/long-term",
+     "field": "relative_value",
+     "value": 0.1778,
+     "note": "inverted long-term endpoint"
+    },
+    {
+     "entity": "Yield curve normal",
+     "x": "left/short-term",
+     "field": "relative_value",
+     "value": 0.2667,
+     "note": "normal short-term endpoint"
+    },
+    {
+     "entity": "Yield curve normal",
+     "x": "right/long-term",
+     "field": "relative_value",
+     "value": 0.8444,
+     "note": "normal long-term endpoint"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "An inversion occurs when short-term yields exceed long-term yields, making it a potential slowdown signal.",
+    "The inverted red curve is the opposite of the normal white curve; this inversion is watched as an economic warning.",
+    "When the curve slopes downward instead of upward, it signals a possible slowdown."
+   ],
+   "visual_evidence_rule": "The inverted curve must be highlighted or contrasted with the normal curve as the inversion/signal state.",
+   "temporal_anchor": "The clause connecting inversion to fears of slowing and potential economic slowdown.",
+   "reviewer_question": "Must the video explicitly connect the inverted curve to the potential-slowdown signal interpretation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "At the short end, the inverted curve is higher than the normal curve (0.6444 vs 0.2667; difference 0.3777 = 0.6444 - 0.2667).",
+  "The normal spread is +0.5777 and the inverted gap is 0.4666; these are optional quantitative encodings.",
+  "Color coding white for normal and red for inverted is optional if the two curves are otherwise distinguishable.",
+  "The exact short-term rise from normal to inverted (0.3777) and long-term drop (0.6666) are optional derived values."
+ ],
+ "unsupported_to_avoid": [
+  "Saying the curve inverted in March or giving a specific date, since the table has no date.",
+  "Reporting actual bond yields or percentages, such as 84.44% or 17.78%; the table values are relative-only.",
+  "Claiming inversion causes a recession or guarantees a slowdown; the intent allows only that it signals potential slowdown.",
+  "Extrapolating beyond the two plotted maturity points or claiming intermediate values not in the table.",
+  "Using inverted long-term 0.1778 as a share/percentage of normal long-term 0.8444 without a stated denominator.",
+  "Comparing normal short-term 0.2667 to inverted long-term 0.1778 as if they represent the same maturity."
+ ],
+ "notes": "The core required contrast is normal upward slope (0.2667→0.8444) versus inverted downward slope (0.6444→0.1778). Optional derived spreads are arithmetic from table values only.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 46.7,
+  "usage": {
+   "prompt_tokens": 809,
+   "completion_tokens": 11265,
+   "total_tokens": 12074,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9033
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 553
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

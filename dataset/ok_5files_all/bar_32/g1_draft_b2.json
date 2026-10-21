@@ -1,0 +1,336 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_32",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the monthly price of the cholesterol drug Crestor is higher in the United States than in other countries.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The US monthly price is the highest shown, at $230.946 per month.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "monthly price",
+     "field": "value",
+     "value": 230.946,
+     "note": "US monthly price in $"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The US price is $230.946 per month.",
+    "The US monthly price is about $231.",
+    "United States: $230.95/month, the highest in the chart."
+   ],
+   "visual_evidence_rule": "US bar must be visibly tallest and labeled or annotated with ~$230.946 (or rounded $231).",
+   "temporal_anchor": "During or around the 'More expensive in the US' clause.",
+   "reviewer_question": "Must the video state the exact US value, or is 'US is highest' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The US price exceeds every other listed country; against the next-highest country, Germany, the gap is $193.1568.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "monthly price",
+     "field": "value",
+     "value": 230.946,
+     "note": "US monthly price in $"
+    },
+    {
+     "entity": "Germany",
+     "x": "monthly price",
+     "field": "value",
+     "value": 37.7892,
+     "note": "Highest non-US country in the table"
+    }
+   ],
+   "computation": "230.946 - 37.7892 = 193.1568",
+   "accepted_routes": [
+    "US costs more than all other countries shown.",
+    "US is higher than Germany, Canada, UK, France, Norway, and Australia.",
+    "US is $193.16 more than Germany, the next-highest country."
+   ],
+   "visual_evidence_rule": "All non-US bars must be shorter than the US bar; if the gap is claimed, Germany should be highlighted as next highest or a gap annotation should be visible.",
+   "temporal_anchor": "During the 'More expensive in the US' comparison.",
+   "reviewer_question": "Must the video explicitly compare US to all other countries, or is comparison to Germany enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "US price is a multiple of each other country: 6.11x Germany, 7.13x Canada, 8.81x UK, 11.52x France, 11.52x Norway, and 29.95x Australia.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "monthly price",
+     "field": "value",
+     "value": 230.946,
+     "note": "US monthly price in $"
+    },
+    {
+     "entity": "Germany",
+     "x": "monthly price",
+     "field": "value",
+     "value": 37.7892,
+     "note": "Used for US/Germany ratio"
+    },
+    {
+     "entity": "Canada",
+     "x": "monthly price",
+     "field": "value",
+     "value": 32.3907,
+     "note": "Used for US/Canada ratio"
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "monthly price",
+     "field": "value",
+     "value": 26.2211,
+     "note": "Used for US/UK ratio"
+    },
+    {
+     "entity": "France",
+     "x": "monthly price",
+     "field": "value",
+     "value": 20.0514,
+     "note": "Used for US/France ratio"
+    },
+    {
+     "entity": "Norway",
+     "x": "monthly price",
+     "field": "value",
+     "value": 20.0514,
+     "note": "Used for US/Norway ratio"
+    },
+    {
+     "entity": "Australia",
+     "x": "monthly price",
+     "field": "value",
+     "value": 7.71208,
+     "note": "Used for US/Australia ratio"
+    }
+   ],
+   "computation": "230.946/37.7892=6.11; 230.946/32.3907=7.13; 230.946/26.2211=8.81; 230.946/20.0514=11.52; 230.946/7.71208=29.95",
+   "accepted_routes": [
+    "US is about 6.1 times Germany.",
+    "US is over 7 times Canada and nearly 30 times Australia.",
+    "The US price is 11.5 times France and Norway."
+   ],
+   "visual_evidence_rule": "Ratio annotations or on-screen text must tie to specific country bars; at least the largest contrast, such as US vs Australia or Germany, should be visible if this unit is included.",
+   "temporal_anchor": "During the US-abroad comparison after 'More expensive in the US'.",
+   "reviewer_question": "Are ratio multiples required evidence or optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among non-US countries, the order is Germany ($37.7892) > Canada ($32.3907) > United Kingdom ($26.2211) > France/Norway tied ($20.0514 each) > Australia ($7.71208).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Germany",
+     "x": "monthly price",
+     "field": "value",
+     "value": 37.7892,
+     "note": "Highest non-US country"
+    },
+    {
+     "entity": "Canada",
+     "x": "monthly price",
+     "field": "value",
+     "value": 32.3907,
+     "note": "Second-highest non-US country"
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "monthly price",
+     "field": "value",
+     "value": 26.2211,
+     "note": "Third-highest non-US country"
+    },
+    {
+     "entity": "France",
+     "x": "monthly price",
+     "field": "value",
+     "value": 20.0514,
+     "note": "Tied with Norway"
+    },
+    {
+     "entity": "Norway",
+     "x": "monthly price",
+     "field": "value",
+     "value": 20.0514,
+     "note": "Tied with France"
+    },
+    {
+     "entity": "Australia",
+     "x": "monthly price",
+     "field": "value",
+     "value": 7.71208,
+     "note": "Lowest non-US country"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Germany is the most expensive non-US country, followed by Canada and the UK.",
+    "France and Norway are tied at $20.05, and Australia is lowest at $7.71.",
+    "The non-US ranking runs Germany, Canada, UK, France/Norway, Australia."
+   ],
+   "visual_evidence_rule": "Non-US bars should be sorted descending or annotated so the ranking is readable.",
+   "temporal_anchor": "Optional supporting detail during or after the 'More expensive in the US' clause.",
+   "reviewer_question": "Is non-US ranking required, or acceptable to show only US-vs-all?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Other countries' prices are small shares of the US price: Germany 16.36%, Canada 14.03%, UK 11.35%, France/Norway 8.68%, Australia 3.34%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Germany",
+     "x": "monthly price",
+     "field": "relative_value",
+     "value": 0.1636,
+     "note": "Fraction of US price"
+    },
+    {
+     "entity": "Canada",
+     "x": "monthly price",
+     "field": "relative_value",
+     "value": 0.1403,
+     "note": "Fraction of US price"
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "monthly price",
+     "field": "relative_value",
+     "value": 0.1135,
+     "note": "Fraction of US price"
+    },
+    {
+     "entity": "France",
+     "x": "monthly price",
+     "field": "relative_value",
+     "value": 0.0868,
+     "note": "Fraction of US price"
+    },
+    {
+     "entity": "Norway",
+     "x": "monthly price",
+     "field": "relative_value",
+     "value": 0.0868,
+     "note": "Fraction of US price"
+    },
+    {
+     "entity": "Australia",
+     "x": "monthly price",
+     "field": "relative_value",
+     "value": 0.0334,
+     "note": "Fraction of US price"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Germany pays about 16.4% of the US price.",
+    "Canada is about 14% of US price.",
+    "Australia is only about 3.3% of the US price.",
+    "Non-US prices range from 3.34% to 16.36% of the US price."
+   ],
+   "visual_evidence_rule": "Percent-of-US labels or proportional bar scale must make the small shares visible; Germany and Australia should be directly comparable to the US.",
+   "temporal_anchor": "During the comparison to the US, after 'More expensive in the US'.",
+   "reviewer_question": "Are percent-of-US shares required or optional supporting detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Exact values for all seven countries can be displayed as labels.",
+  "US can be visually highlighted by color to emphasize its highest price.",
+  "Rounding the US price to $231 or other country values to two decimals is acceptable.",
+  "Relative values can be shown as percentages of US price rather than as raw dollars."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim why the US price is higher, such as insurance, patents, or regulation, from this table.",
+  "Do not generalize to all cholesterol drugs or to countries not listed.",
+  "Do not call relative_value 'market share' or use population-adjusted prices; no such data.",
+  "Do not infer a time trend or future change; the table is a single monthly price comparison.",
+  "Do not use an unlisted average as the benchmark unless explicitly labeled as a simple average of the listed countries."
+ ],
+ "notes": "Core required units are the US endpoint and US-vs-others comparison; ranking, ratios, and percent-of-US shares are defensible optional additions. Avoid causal or generalization claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 44.8,
+  "usage": {
+   "prompt_tokens": 887,
+   "completion_tokens": 10946,
+   "total_tokens": 11833,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8382
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 503
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

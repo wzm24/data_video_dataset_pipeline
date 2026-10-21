@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#FDF8F5"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Median SAT score by family income</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="373.0" y1="140" x2="373.0" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="373.0" y1="600" x2="1220" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="373.0" y1="600" x2="373.0" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="373.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">400</text>
+<line data-role="gridline" x1="554.5" y1="140" x2="554.5" y2="600" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="554.5" y1="600" x2="554.5" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="554.5" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">600</text>
+<line data-role="gridline" x1="736.0" y1="140" x2="736.0" y2="600" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="736.0" y1="600" x2="736.0" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="736.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">800</text>
+<line data-role="gridline" x1="917.5" y1="140" x2="917.5" y2="600" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="917.5" y1="600" x2="917.5" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="917.5" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">1000</text>
+<line data-role="gridline" x1="1099.0" y1="140" x2="1099.0" y2="600" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="1099.0" y1="600" x2="1099.0" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="1099.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">1200</text>
+<g id="entity-less-than-20-000-median-sat-score" data-role="entity" data-entity-id="less-than-20-000" data-label="Less than $20,000">
+<rect id="less-than-20-000-median-sat-score-bar" data-role="bar" data-entity-id="less-than-20-000" data-value="890" x="373.0" y="273.4" width="444.7" height="27.6" fill="#4A96D6" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="less-than-20-000-value-label" data-role="value-label" data-entity-id="less-than-20-000" x="595.3" y="295.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">890</text>
+<text id="less-than-20-000-median-sat-score-label" data-role="category-label" data-entity-id="less-than-20-000" x="359.0" y="279.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">Less than $20,000</text>
+</g>
+<g id="entity-40-000-median-sat-score" data-role="entity" data-entity-id="40-000" data-label="$40,000">
+<rect id="40-000-median-sat-score-bar" data-role="bar" data-entity-id="40-000" data-value="946" x="373.0" y="310.2" width="495.5" height="27.6" fill="#4A96D6" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="40-000-value-label" data-role="value-label" data-entity-id="40-000" x="620.7" y="332.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">946</text>
+<text id="40-000-median-sat-score-label" data-role="category-label" data-entity-id="40-000" x="359.0" y="316.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">$40,000</text>
+</g>
+<g id="entity-60-000-median-sat-score" data-role="entity" data-entity-id="60-000" data-label="$60,000">
+<rect id="60-000-median-sat-score-bar" data-role="bar" data-entity-id="60-000" data-value="994" x="373.0" y="347.0" width="539.1" height="27.6" fill="#4A96D6" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="60-000-value-label" data-role="value-label" data-entity-id="60-000" x="642.5" y="368.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">994</text>
+<text id="60-000-median-sat-score-label" data-role="category-label" data-entity-id="60-000" x="359.0" y="352.8" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">$60,000</text>
+</g>
+<g id="entity-80-000-median-sat-score" data-role="entity" data-entity-id="80-000" data-label="$80,000">
+<rect id="80-000-median-sat-score-bar" data-role="bar" data-entity-id="80-000" data-value="1006" x="373.0" y="383.8" width="549.9" height="27.6" fill="#4A96D6" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="80-000-value-label" data-role="value-label" data-entity-id="80-000" x="648.0" y="405.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">1006</text>
+<text id="80-000-median-sat-score-label" data-role="category-label" data-entity-id="80-000" x="359.0" y="389.6" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">$80,000</text>
+</g>
+<g id="entity-100-000-median-sat-score" data-role="entity" data-entity-id="100-000" data-label="$100,000">
+<rect id="100-000-median-sat-score-bar" data-role="bar" data-entity-id="100-000" data-value="1054" x="373.0" y="420.6" width="593.5" height="27.6" fill="#4A96D6" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="100-000-value-label" data-role="value-label" data-entity-id="100-000" x="669.8" y="442.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">1054</text>
+<text id="100-000-median-sat-score-label" data-role="category-label" data-entity-id="100-000" x="359.0" y="426.4" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">$100,000</text>
+</g>
+<g id="entity-140-000-median-sat-score" data-role="entity" data-entity-id="140-000" data-label="$140,000">
+<rect id="140-000-median-sat-score-bar" data-role="bar" data-entity-id="140-000" data-value="1103" x="373.0" y="457.4" width="638.0" height="27.6" fill="#4A96D6" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="140-000-value-label" data-role="value-label" data-entity-id="140-000" x="692.0" y="479.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">1103</text>
+<text id="140-000-median-sat-score-label" data-role="category-label" data-entity-id="140-000" x="359.0" y="463.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">$140,000</text>
+</g>
+<g id="entity-more-than-200-000-median-sat-score" data-role="entity" data-entity-id="more-than-200-000" data-label="More than $200,000">
+<rect id="more-than-200-000-median-sat-score-bar" data-role="bar" data-entity-id="more-than-200-000" data-value="1150" x="373.0" y="494.2" width="680.6" height="27.6" fill="#4A96D6" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="more-than-200-000-value-label" data-role="value-label" data-entity-id="more-than-200-000" x="713.3" y="516.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">1150</text>
+<text id="more-than-200-000-median-sat-score-label" data-role="category-label" data-entity-id="more-than-200-000" x="359.0" y="500.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">More than $200,000</text>
+</g>
+</g>
+</svg>

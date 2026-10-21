@@ -1,0 +1,239 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "donut_2",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the dominance of physical media sales over digital sales in Japan and the regulatory factors driving this trend.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Physical media sales are the largest share of the Japanese market at 77.1%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Physical",
+     "x": "0",
+     "field": "value",
+     "value": 77.1,
+     "note": "Physical ring segment value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Physical accounts for 77.1% of Japanese sales.",
+    "About 77% of sales were physical.",
+    "Physical is the largest segment at roughly three-quarters of sales."
+   ],
+   "visual_evidence_rule": "The Physical ring segment must be visible and labeled or directly text-labeled with 77.1% or a rounded equivalent such as 77%.",
+   "temporal_anchor": "the 'In Japan' / physical-sales clause",
+   "reviewer_question": "Must the video state the Physical share as 77.1% or a rounded equivalent, rather than only implying it from ring size?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Digital sales are 12.5% of Japanese sales, much smaller than physical.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "1",
+     "field": "value",
+     "value": 12.5,
+     "note": "Digital ring segment value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Digital accounts for 12.5% of Japanese sales.",
+    "About 13% of sales were digital.",
+    "Digital is the smaller labeled segment at only 12.5%.",
+    "Digital represents roughly one-eighth of sales."
+   ],
+   "visual_evidence_rule": "The Digital ring segment must be visible and labeled or directly text-labeled with 12.5% or a rounded equivalent such as 13%.",
+   "temporal_anchor": "the 'only ... were digital' clause",
+   "reviewer_question": "Must the video use the table's 12.5% Digital value rather than the narration's conflicting 18%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Physical share is much larger than Digital share: 64.6 percentage points higher and about 6.2 times Digital.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Physical",
+     "x": "0",
+     "field": "value",
+     "value": 77.1,
+     "note": "Physical share for comparison"
+    },
+    {
+     "entity": "Digital",
+     "x": "1",
+     "field": "value",
+     "value": 12.5,
+     "note": "Digital share for comparison"
+    }
+   ],
+   "computation": "77.1 - 12.5 = 64.6 percentage points; 77.1 / 12.5 = 6.168",
+   "accepted_routes": [
+    "Physical exceeds Digital by 64.6 percentage points.",
+    "Physical share is 77.1% versus Digital's 12.5%.",
+    "Physical is about 6.2 times Digital.",
+    "Physical is more than six times Digital."
+   ],
+   "visual_evidence_rule": "Both Physical and Digital segments or values must be visible in the same chart so the gap or ratio can be compared.",
+   "temporal_anchor": "the 'nearly the opposite' / physical-and-digital contrast clause",
+   "reviewer_question": "Should the required comparison be expressed as a percentage-point gap, a ratio, or either?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Physical sales are more than half of the Japanese market, reinforcing its dominance.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Physical",
+     "x": "0",
+     "field": "value",
+     "value": 77.1,
+     "note": "Physical share supports majority claim"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Physical is more than half of sales.",
+    "Physical is a majority of Japanese sales.",
+    "Physical's 77.1% share makes it the dominant majority."
+   ],
+   "visual_evidence_rule": "The Physical segment must appear larger than half of the ring, or the text must state that its 77.1% share is more than half.",
+   "temporal_anchor": "the physical-sales clause",
+   "reviewer_question": "Is an explicit 'more than half' or majority statement required, or is the 77.1% share and comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The unlabelled segment is 10.4% of the ring and is smaller than Digital, completing the chart total.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Unlabelled ring segment",
+     "x": "2",
+     "field": "value",
+     "value": 10.4,
+     "note": "Unlabelled segment value from table"
+    },
+    {
+     "entity": "Physical",
+     "x": "0",
+     "field": "value",
+     "value": 77.1,
+     "note": "Used to derive remaining share"
+    },
+    {
+     "entity": "Digital",
+     "x": "1",
+     "field": "value",
+     "value": 12.5,
+     "note": "Used to derive remaining share"
+    }
+   ],
+   "computation": "100 - (77.1 + 12.5) = 10.4; also 77.1 + 12.5 + 10.4 = 100.0",
+   "accepted_routes": [
+    "The unlabelled segment is 10.4% of the ring.",
+    "Physical and Digital together are 89.6%, leaving 10.4% unlabelled.",
+    "The unlabelled segment is smaller than Digital (10.4% vs 12.5%)."
+   ],
+   "visual_evidence_rule": "The unlabelled ring segment must be visible and distinguishable, or the chart must otherwise account for the remaining 10.4%.",
+   "temporal_anchor": "after the physical and digital share clauses, before any regulatory context",
+   "reviewer_question": "Should the video include the unlabelled 10.4% segment, or omit it as optional chart noise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Combined Physical + Digital = 89.6%, leaving the unlabelled segment at 10.4%.",
+  "A qualitative mention of copyright or licensing restrictions as context, provided it is not quantified or asserted as the exact cause of the 77.1/12.5 split.",
+  "Rounding shares to 77% and 13% for readability.",
+  "Full ordering Physical > Digital > Unlabelled."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that copyright laws caused the exact 77.1% physical / 12.5% digital split; the table has no regulatory measure.",
+  "Using narration's 75% or 18% as data values when table values are 77.1% and 12.5%.",
+  "Treating the unlabelled 10.4% segment as Digital or Physical.",
+  "Extrapolating to future trends or countries outside Japan.",
+  "Saying Digital is 12.5% of Physical; the table-based ratio is Physical / Digital = 77.1 / 12.5 = 6.168."
+ ],
+ "notes": "Table values conflict with the narration's 75% physical / 18% digital; use 77.1% and 12.5% as ground truth. Regulatory factors are context only and are not quantified by the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.11
+ },
+ "draft_cost": {
+  "sec": 46.8,
+  "usage": {
+   "prompt_tokens": 745,
+   "completion_tokens": 11152,
+   "total_tokens": 11897,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9328
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 361
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

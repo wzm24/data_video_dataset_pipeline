@@ -1,0 +1,165 @@
+{
+ "clip_id": "bar_32",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series monthly price)"
+   ],
+   "assertion": {
+    "mark": "United States @ monthly price",
+    "extreme": "max",
+    "expected": 230.946,
+    "compared_set": "monthly price",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "US bar must be visibly tallest and labeled or annotated with ~$230.946 (or rounded $231)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:United States @ monthly price",
+    "mark:Germany @ monthly price"
+   ],
+   "assertion": {
+    "greater": "United States @ monthly price",
+    "lesser": "Germany @ monthly price",
+    "expected_ratio": 6.1114,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "All non-US bars must be shorter than the US bar; if the gap is claimed, Germany should be highlighted as next highest or a gap annotation should be visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:United States @ monthly price",
+    "mark:Germany @ monthly price",
+    "mark:Canada @ monthly price",
+    "mark:United Kingdom @ monthly price",
+    "mark:France @ monthly price",
+    "mark:Norway @ monthly price",
+    "mark:Australia @ monthly price"
+   ],
+   "assertion": {
+    "low": "Australia @ monthly price",
+    "low_value": 7.71208,
+    "high": "United States @ monthly price",
+    "high_value": 230.946,
+    "delta": 223.2339,
+    "ratio": 29.946,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Ratio annotations or on-screen text must tie to specific country bars; at least the largest contrast, such as US vs Australia or Germany, should be visible if this unit is included."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Germany @ monthly price",
+    "mark:Canada @ monthly price",
+    "mark:United Kingdom @ monthly price",
+    "mark:France @ monthly price",
+    "mark:Norway @ monthly price",
+    "mark:Australia @ monthly price"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Germany @ monthly price",
+      "value": 37.7892
+     },
+     {
+      "mark": "Canada @ monthly price",
+      "value": 32.3907
+     },
+     {
+      "mark": "United Kingdom @ monthly price",
+      "value": 26.2211
+     },
+     {
+      "mark": "France @ monthly price",
+      "value": 20.0514
+     },
+     {
+      "mark": "Norway @ monthly price",
+      "value": 20.0514
+     },
+     {
+      "mark": "Australia @ monthly price",
+      "value": 7.71208
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Non-US bars should be sorted descending or annotated so the ranking is readable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Germany @ monthly price",
+    "segment:Canada @ monthly price",
+    "segment:United Kingdom @ monthly price",
+    "segment:France @ monthly price",
+    "segment:Norway @ monthly price",
+    "segment:Australia @ monthly price"
+   ],
+   "assertion": {
+    "segment": "Germany @ monthly price",
+    "expected_share": 0.0004,
+    "total_of": "$",
+    "total": 375.16188,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Percent-of-US labels or proportional bar scale must make the small shares visible; Germany and Australia should be directly comparable to the US."
+  }
+ ]
+}

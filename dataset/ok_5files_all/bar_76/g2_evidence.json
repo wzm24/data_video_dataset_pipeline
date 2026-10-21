@@ -1,0 +1,154 @@
+{
+ "clip_id": "bar_76",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Jupiter @ 505.6",
+    "extreme": "max",
+    "expected": 70.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar/segment or label for Jupiter must visibly show 70, or the tallest bar must reach the 70 mark on the value axis."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Terrestrial Planets @ 164.8",
+    "segment:Jupiter @ 505.6",
+    "segment:Neptune 5% @ 937.6",
+    "segment:Neptune 5% @ 1052.8",
+    "segment:Neptune 5% @ 1096.0"
+   ],
+   "assertion": {
+    "segment": "Terrestrial Planets @ 164.8",
+    "expected_share": 0.0132,
+    "total_of": "unknown",
+    "total": 76.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A cumulative or part-to-whole view must show Jupiter as 70% and the other listed categories as the remaining 30%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Terrestrial Planets @ 164.8",
+    "segment:Neptune 5% @ 937.6",
+    "segment:Neptune 5% @ 1052.8",
+    "segment:Neptune 5% @ 1096.0"
+   ],
+   "assertion": {
+    "segment": "Terrestrial Planets @ 164.8",
+    "expected_share": 0.0132,
+    "total_of": "unknown",
+    "total": 76.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must aggregate or visibly sum the non-Jupiter categories to 30, or show the remainder as 30."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Jupiter @ 505.6",
+    "mark:Terrestrial Planets @ 164.8"
+   ],
+   "assertion": {
+    "greater": "Jupiter @ 505.6",
+    "lesser": "Terrestrial Planets @ 164.8",
+    "expected_ratio": 70.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A side-by-side, ratio annotation, or combined-remainder mark must show Jupiter's 70 against the 30-unit total for all other listed planets."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Terrestrial Planets @ 164.8",
+    "mark:Jupiter @ 505.6",
+    "mark:Neptune 5% @ 937.6",
+    "mark:Neptune 5% @ 1052.8",
+    "mark:Neptune 5% @ 1096.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Terrestrial Planets @ 164.8",
+      "value": 1.0
+     },
+     {
+      "mark": "Jupiter @ 505.6",
+      "value": 70.0
+     },
+     {
+      "mark": "Neptune 5% @ 937.6",
+      "value": 20.0
+     },
+     {
+      "mark": "Neptune 5% @ 1052.8",
+      "value": 4.0
+     },
+     {
+      "mark": "Neptune 5% @ 1096.0",
+      "value": 5.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart's bars/segments must be ordered or labeled so the 70, 20, 5, 4, and 1 values appear in descending order."
+  }
+ ]
+}

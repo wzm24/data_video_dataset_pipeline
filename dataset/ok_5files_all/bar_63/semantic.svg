@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#fdf0d5"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="200.0" y1="560.0" x2="1120.0" y2="560.0" stroke="#888888" stroke-width="3"/>
+<g id="entity-medical" data-role="entity" data-entity-id="medical" data-label="Medical">
+<rect id="medical-bar" data-role="bar" data-entity-id="medical" data-value="55" x="350.0" y="202.5" width="180.0" height="357.5" fill="#7fae3b" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="medical-value-label" data-role="value-label" data-entity-id="medical" x="440.0" y="190.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">55 tons</text>
+<text id="medical-label" data-role="category-label" data-entity-id="medical" x="440.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#333333">Medical</text>
+</g>
+<g id="entity-dispensary" data-role="entity" data-entity-id="dispensary" data-label="Dispensary">
+<rect id="dispensary-bar" data-role="bar" data-entity-id="dispensary" data-value="18.4" x="650.0" y="440.4" width="180.0" height="119.6" fill="#b8d97a" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="dispensary-value-label" data-role="value-label" data-entity-id="dispensary" x="740.0" y="428.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">18.4 tons</text>
+<text id="dispensary-label" data-role="category-label" data-entity-id="dispensary" x="740.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#333333">Dispensary</text>
+</g>
+</g>
+</svg>

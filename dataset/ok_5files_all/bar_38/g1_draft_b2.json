@@ -1,0 +1,234 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_38",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the projected global population for the year 2100.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The projected global population total for 2100 is 3.6 billion.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "= 10 Million",
+     "x": "2100",
+     "field": "value",
+     "value": 3.6,
+     "note": "value column is 3.600; entity_original labels it '3.6 Billion'"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2100 global population total is 3.6 billion",
+    "Projected global population reaches 3.6 billion by 2100",
+    "The total for 2100 is 3.6 billion people"
+   ],
+   "visual_evidence_rule": "A visible label or value callout showing 3.6 billion associated with the 2100 total.",
+   "temporal_anchor": "the clause stating '3.6 billion in total' (or the 2100 total)",
+   "reviewer_question": "Must the clip explicitly state the 3.6 billion total as the 2100 projection?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The projection includes a reduction or gap of 0.4 billion people, i.e., 400 million fewer people.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Track20",
+     "x": "2100",
+     "field": "value",
+     "value": 0.4,
+     "note": "value column is 0.400; entity_original labels it '0.4 Billion'"
+    }
+   ],
+   "computation": "0.400 × 1000 = 400 (million), since 1 billion = 1000 million.",
+   "accepted_routes": [
+    "The gap means 0.4 billion fewer people",
+    "A reduction of 400 million people",
+    "0.4 billion people fewer in 2100"
+   ],
+   "visual_evidence_rule": "A visible label or value callout showing 0.4 billion or 400 million as the reduction/gap.",
+   "temporal_anchor": "the clause stating '400 million fewer people in 2100'",
+   "reviewer_question": "Must the clip explicitly state the 0.4 billion / 400 million reduction?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 0.4 billion reduction is tiny relative to the 3.6 billion total: it is roughly one-ninth of the total.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Track20",
+     "x": "2100",
+     "field": "value",
+     "value": 0.4,
+     "note": "reduction value"
+    },
+    {
+     "entity": "= 10 Million",
+     "x": "2100",
+     "field": "value",
+     "value": 3.6,
+     "note": "total value"
+    }
+   ],
+   "computation": "0.400 / 3.600 = 0.1111..., about one-ninth.",
+   "accepted_routes": [
+    "The 0.4 billion gap is about one-ninth of the 3.6 billion total",
+    "0.4 billion is a small fraction of 3.6 billion",
+    "The reduction is roughly a tenth of the total"
+   ],
+   "visual_evidence_rule": "The 0.4 billion value and 3.6 billion total must be visually compared in a way that shows the 0.4 is a small fraction of the 3.6, not an absolute percentage unless the table unit allows it.",
+   "temporal_anchor": "the 'tiny gap' clause",
+   "reviewer_question": "Must the video convey the relative smallness of the 0.4 billion reduction against the 3.6 billion total?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 3.6 billion total is nine times the 0.4 billion reduction.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "= 10 Million",
+     "x": "2100",
+     "field": "value",
+     "value": 3.6,
+     "note": "total value"
+    },
+    {
+     "entity": "Track20",
+     "x": "2100",
+     "field": "value",
+     "value": 0.4,
+     "note": "reduction value"
+    }
+   ],
+   "computation": "3.600 / 0.400 = 9",
+   "accepted_routes": [
+    "The 3.6 billion total is nine times the 0.4 billion reduction",
+    "The reduction is one-ninth the size of the total",
+    "3.6 billion is about 9 times 0.4 billion"
+   ],
+   "visual_evidence_rule": "A visible comparison or annotation indicating the 3.6 billion total is nine times the 0.4 billion reduction.",
+   "temporal_anchor": "the 'tiny gap' clause",
+   "reviewer_question": "Is it necessary to state the nine-times ratio, or is the one-ninth share enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 0.4 billion value is the reduction or gap, while 3.6 billion is the total population, not two separate population totals.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Track20",
+     "x": "2100",
+     "field": "value",
+     "value": 0.4,
+     "note": "reduction/gap value"
+    },
+    {
+     "entity": "= 10 Million",
+     "x": "2100",
+     "field": "value",
+     "value": 3.6,
+     "note": "total population value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 0.4 billion is the number fewer, not the total; the total is 3.6 billion",
+    "The gap is 0.4 billion, and the resulting total is 3.6 billion",
+    "400 million fewer people brings the total to 3.6 billion"
+   ],
+   "visual_evidence_rule": "The chart must clearly distinguish the 0.4 billion as a reduction/gap and the 3.6 billion as the total, rather than presenting both as separate population totals.",
+   "temporal_anchor": "the clause contrasting '400 million fewer people' with '3.6 billion in total'",
+   "reviewer_question": "Must the clip make clear that 0.4 billion is a reduction and 3.6 billion is the total?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Expressing the 3.6 billion total as 3,600 million people (3.600 × 1000 = 3,600).",
+  "Showing that both table rows share the same relative_value 0.0778, but this should not override the absolute values."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that the gap directly causes 400 million fewer people without a baseline in the table.",
+  "Comparing 3.6 billion to 4.0 billion, because 4.0 is not in the table.",
+  "Stating 0.4 billion as 11% of the total, because the table unit is not a percentage and the value is not a pie/donut share.",
+  "Using positions, colors, axis ticks, or chart type as semantic units."
+ ],
+ "notes": "The table provides two absolute values (3.600 and 0.400) with entity_original labels '3.6 Billion' and '0.4 Billion'; the narration treats 0.4 as a reduction and 3.6 as the total. The most important derived comparison is 0.4/3.6 ≈ 1/9, which should be shown without converting to a percentage.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 57.3,
+  "usage": {
+   "prompt_tokens": 951,
+   "completion_tokens": 14374,
+   "total_tokens": 15325,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12521
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 439
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

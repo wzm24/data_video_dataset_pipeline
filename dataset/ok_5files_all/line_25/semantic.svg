@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#111111"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="554.9" x2="1220" y2="554.9" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="509.8" x2="1220" y2="509.8" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="464.7" x2="1220" y2="464.7" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="419.6" x2="1220" y2="419.6" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="374.5" x2="1220" y2="374.5" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="329.4" x2="1220" y2="329.4" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="284.3" x2="1220" y2="284.3" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="239.2" x2="1220" y2="239.2" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="194.1" x2="1220" y2="194.1" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="149.0" x2="1220" y2="149.0" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="tick" x1="112" y1="554.9" x2="120" y2="554.9" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="560.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">1</text>
+<line data-role="tick" x1="112" y1="509.8" x2="120" y2="509.8" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="515.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">2</text>
+<line data-role="tick" x1="112" y1="464.7" x2="120" y2="464.7" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="470.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">3</text>
+<line data-role="tick" x1="112" y1="419.6" x2="120" y2="419.6" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="425.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">4</text>
+<line data-role="tick" x1="112" y1="374.5" x2="120" y2="374.5" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="380.5" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">5</text>
+<line data-role="tick" x1="112" y1="329.4" x2="120" y2="329.4" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="335.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">6</text>
+<line data-role="tick" x1="112" y1="284.3" x2="120" y2="284.3" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="290.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">7</text>
+<line data-role="tick" x1="112" y1="239.2" x2="120" y2="239.2" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="245.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">8</text>
+<line data-role="tick" x1="112" y1="194.1" x2="120" y2="194.1" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="200.1" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">9</text>
+<line data-role="tick" x1="112" y1="149.0" x2="120" y2="149.0" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="155.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">10%</text>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,140.0 128.8,284.3 142.0,329.4 164.0,365.5 186.0,370.0 208.0,297.8 230.0,306.9 252.0,338.4 274.0,275.3 296.0,261.8 318.0,266.3 340.0,370.0 362.0,329.4 384.0,329.4 406.0,415.1 428.0,419.6 450.0,437.6 472.0,383.5 494.0,383.5 516.0,338.4 538.0,338.4 560.0,329.4 582.0,338.4 604.0,320.4 626.0,419.6 648.0,437.6 670.0,383.5 692.0,383.5 714.0,338.4 736.0,338.4 758.0,329.4 780.0,338.4 802.0,320.4 824.0,329.4 846.0,338.4 912.0,338.4 978.0,329.4 1000.0,329.4 1008.8,577.5 1022.0,577.5 1066.0,577.5 1154.0,577.5 1220.0,582.0" fill="none" stroke="#ffffff" stroke-width="2" data-animation-property="points"/>
+</g>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<path id="item-path" data-role="line" data-entity-id="item" d="M 186.0 171.6 C 189.7 179.1, 200.7 206.9, 208.0 216.7 C 215.3 226.4, 222.7 224.9, 230.0 230.2 C 237.3 235.5, 244.7 247.5, 252.0 248.2 C 259.3 249.0, 266.7 232.5, 274.0 234.7 C 281.3 237.0, 288.7 255.0, 296.0 261.8 C 303.3 268.5, 310.7 271.5, 318.0 275.3 C 325.3 279.1, 332.7 279.1, 340.0 284.3 C 347.3 289.6, 354.7 299.3, 362.0 306.9 C 369.3 314.4, 376.7 321.9, 384.0 329.4 C 391.3 336.9, 398.7 350.5, 406.0 352.0 C 413.3 353.5, 420.7 336.2, 428.0 338.4 C 435.3 340.7, 442.7 355.7, 450.0 365.5 C 457.3 375.3, 464.7 389.5, 472.0 397.1 C 479.3 404.6, 486.7 412.8, 494.0 410.6 C 501.3 408.3, 508.7 385.8, 516.0 383.5 C 523.3 381.3, 530.7 398.6, 538.0 397.1 C 545.3 395.6, 552.7 376.8, 560.0 374.5 C 567.3 372.3, 574.7 385.0, 582.0 383.5 C 589.3 382.0, 596.7 367.0, 604.0 365.5 C 611.3 364.0, 618.7 376.8, 626.0 374.5 C 633.3 372.3, 640.7 353.5, 648.0 352.0 C 655.3 350.5, 662.7 367.7, 670.0 365.5 C 677.3 363.2, 684.7 340.7, 692.0 338.4 C 699.3 336.2, 706.7 347.5, 714.0 352.0 C 721.3 356.5, 728.7 361.7, 736.0 365.5 C 743.3 369.2, 750.7 371.5, 758.0 374.5 C 765.3 377.5, 772.7 385.0, 780.0 383.5 C 787.3 382.0, 794.7 367.0, 802.0 365.5 C 809.3 364.0, 816.7 369.2, 824.0 374.5 C 831.3 379.8, 838.7 391.0, 846.0 397.1 C 853.3 403.1, 860.7 406.8, 868.0 410.6 C 875.3 414.3, 882.7 416.6, 890.0 419.6 C 897.3 422.6, 904.7 430.1, 912.0 428.6 C 919.3 427.1, 926.7 412.1, 934.0 410.6 C 941.3 409.1, 948.7 416.6, 956.0 419.6 C 963.3 422.6, 970.7 424.9, 978.0 428.6 C 985.3 432.4, 992.7 437.6, 1000.0 442.2 C 1007.3 446.7, 1014.7 451.9, 1022.0 455.7 C 1029.3 459.4, 1033.0 461.7, 1044.0 464.7 C 1055.0 467.7, 1073.3 470.0, 1088.0 473.7 C 1102.7 477.5, 1117.3 483.5, 1132.0 487.3 C 1146.7 491.0, 1161.3 494.0, 1176.0 496.3 C 1190.7 498.5, 1212.7 500.0, 1220.0 500.8" fill="none" stroke="#d9534f" stroke-width="2"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#d4a056">1991</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#d4a056">2016</text>
+</g>
+</svg>

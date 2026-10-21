@@ -1,0 +1,277 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_132",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the historical expansion and subsequent long-term stability of the number of countries possessing nuclear weapons.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the end of the series, in 2015, there are 9 countries with nuclear weapons.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 9.0,
+     "note": "Final table row shows value 9 countries."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2015, nine countries have nuclear weapons.",
+    "The series ends at 9 countries.",
+    "By the final year shown, the count is 9."
+   ],
+   "visual_evidence_rule": "The 2015 data value must be readable as 9 countries at the end of the series.",
+   "temporal_anchor": "Today, there are nine countries who have nuclear weapons.",
+   "reviewer_question": "Must the final 2015 value be explicitly stated as 9, or is the flat ending sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The number of nuclear-armed countries expanded from 1 in 1945 to 10 by 1990, an increase of 9 countries over that period.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1945",
+     "x": "1945",
+     "field": "value",
+     "value": 1.0,
+     "note": "Start value."
+    },
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "value",
+     "value": 10.0,
+     "note": "Peak value."
+    }
+   ],
+   "computation": "1990 value - 1945 value = 10 - 1 = 9 additional countries.",
+   "accepted_routes": [
+    "The count grows from 1 to 10 over 1945-1990.",
+    "Nine more countries acquire nuclear weapons between 1945 and 1990.",
+    "The series expands from a single country in 1945 to ten in 1990."
+   ],
+   "visual_evidence_rule": "The series must show a clear rise from the 1945 value of 1 to the 1990 value of 10.",
+   "temporal_anchor": "Historical build-up before the 'Today...' payoff (not present in the reference narration).",
+   "reviewer_question": "Is the full 1-to-10 expansion required, or is it enough to show only the final 9-country plateau?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The maximum number in the series is 10 countries in 1990; no later table year exceeds that value.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "value",
+     "value": 10.0,
+     "note": "Highest value in the table."
+    },
+    {
+     "entity": "1995",
+     "x": "1995",
+     "field": "value",
+     "value": 9.0,
+     "note": "First post-peak value."
+    }
+   ],
+   "computation": "max(value) = 10 at x=1990; 1995 value = 9 < 10.",
+   "accepted_routes": [
+    "The count peaks at 10 countries in 1990.",
+    "1990 is the highest point at ten countries.",
+    "The maximum is ten, reached in 1990."
+   ],
+   "visual_evidence_rule": "The 1990 value must be visibly the highest point and readable as 10 countries.",
+   "temporal_anchor": "Historical build-up / peak moment before 'This number has not increased for decades.'",
+   "reviewer_question": "Must the video explicitly identify 1990 as the peak, or can the peak be left implicit in the line shape?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After the 1990 peak, the count falls to 9 by 1995 and stays at 9 for every later table year through 2015: a 20-year stable plateau with no increase.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "value",
+     "value": 10.0,
+     "note": "Pre-plateau peak."
+    },
+    {
+     "entity": "1995",
+     "x": "1995",
+     "field": "value",
+     "value": 9.0,
+     "note": "Start of 9-country plateau."
+    },
+    {
+     "entity": "2000",
+     "x": "2000",
+     "field": "value",
+     "value": 9.0,
+     "note": "Plateau."
+    },
+    {
+     "entity": "2005",
+     "x": "2005",
+     "field": "value",
+     "value": 9.0,
+     "note": "Plateau."
+    },
+    {
+     "entity": "2010",
+     "x": "2010",
+     "field": "value",
+     "value": 9.0,
+     "note": "Plateau."
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 9.0,
+     "note": "Plateau endpoint."
+    }
+   ],
+   "computation": "constant 1995-2015 value = 9; span = 2015 - 1995 = 20 years; 1995-2015 values are all <= 1990 value of 10.",
+   "accepted_routes": [
+    "From 1995 through 2015, the number remains at 9 countries.",
+    "The count drops from 10 to 9 after 1990 and then stays flat for 20 years.",
+    "There is no increase in the number of nuclear-armed countries after 1990, with 9 countries from 1995 onward."
+   ],
+   "visual_evidence_rule": "The 1995-2015 span must be visibly flat at 9 countries after the 1990 peak.",
+   "temporal_anchor": "This number has not increased for decades.",
+   "reviewer_question": "Should the stability claim be anchored to 1995 (start of 9-country plateau) or to 1990 (last peak)?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "South Africa is listed among the 10 countries in 1990 but is absent from the 9-country list from 1995 onward; this is the only listed country difference across the 1990-to-1995 drop.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "value",
+     "value": 10.0,
+     "note": "countries column includes South Africa."
+    },
+    {
+     "entity": "1995",
+     "x": "1995",
+     "field": "value",
+     "value": 9.0,
+     "note": "countries column excludes South Africa."
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 9.0,
+     "note": "countries column still excludes South Africa."
+    }
+   ],
+   "computation": "1990 countries list minus 1995 countries list = {South Africa}; 1990 value 10 - 1995 value 9 = 1 country difference.",
+   "accepted_routes": [
+    "South Africa appears in the 1990 list but not from 1995 onward.",
+    "The drop from 10 to 9 countries matches South Africa leaving the listed set.",
+    "South Africa is the country omitted between the 1990 and 1995 lists."
+   ],
+   "visual_evidence_rule": "If country names are shown, South Africa must appear for 1990 and be absent for 1995-2015.",
+   "temporal_anchor": "Optional explanatory beat at the 1990-to-1995 transition (not in the reference narration).",
+   "reviewer_question": "Is naming South Africa as the 1990-to-1995 difference required, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 1955-1960 plateau at 3 countries and the 1970-1975 plateau at 6 countries.",
+  "Pakistan and North Korea first appear in the 1990 countries list.",
+  "The 1990 list contains 10 named countries: USA, Russia, UK, France, China, Israel, India, South Africa, Pakistan, and North Korea."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming the count increases after 2015 or that 9 is still the count in any later year not in the table.",
+  "Claiming South Africa's removal caused the decline (causal language beyond the table's list change).",
+  "Using percentages or shares when the table's unit is countries.",
+  "Claiming all nine countries have equal nuclear arsenals or that only the named countries have ever possessed nuclear weapons outside the table."
+ ],
+ "notes": "The key required shape is expansion to a 1990 peak of 10 countries followed by a 1995-2015 plateau at 9; the endpoint 9 and no-increase stability are both obligatory, while the South Africa identity explanation is useful but optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 41.3,
+  "usage": {
+   "prompt_tokens": 1429,
+   "completion_tokens": 10070,
+   "total_tokens": 11499,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7882
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 917
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

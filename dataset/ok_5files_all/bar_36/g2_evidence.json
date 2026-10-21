@@ -1,0 +1,143 @@
+{
+ "clip_id": "bar_36",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Some college @ Some college",
+    "extreme": "max",
+    "expected": 27.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Some college mark must be visually identifiable as the largest/tallest/longest among the four categories."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Some college @ Some college",
+    "mark:College graduate @ College graduate",
+    "mark:High school graduate @ High school graduate",
+    "mark:Less than high school @ Less than high school"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Some college @ Some college",
+      "value": 27.0
+     },
+     {
+      "mark": "College graduate @ College graduate",
+      "value": 20.0
+     },
+     {
+      "mark": "High school graduate @ High school graduate",
+      "value": 9.0
+     },
+     {
+      "mark": "Less than high school @ Less than high school",
+      "value": 3.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative heights/lengths of all four categories must make the full rank order visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Some college @ Some college",
+    "mark:College graduate @ College graduate"
+   ],
+   "assertion": {
+    "greater": "Some college @ Some college",
+    "lesser": "College graduate @ College graduate",
+    "expected_ratio": 1.35,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Some college bar must be visibly taller/longer than the College graduate bar."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Some college @ Some college",
+    "mark:High school graduate @ High school graduate"
+   ],
+   "assertion": {
+    "greater": "Some college @ Some college",
+    "lesser": "High school graduate @ High school graduate",
+    "expected_ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The High school graduate and Less than high school bars must be visibly much shorter than the Some college bar."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Less than high school @ Less than high school",
+    "extreme": "min",
+    "expected": 3.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Less than high school mark must be visually identifiable as the smallest/shortest among the four categories."
+  }
+ ]
+}

@@ -1,0 +1,292 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_119",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To introduce the specific police reform proposals and demonstrate the high level of support for them among Democrats, distinguishing between strong and somewhat favorable views.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip introduces the specific police reform proposals listed, including training, federal investigative power, criminalizing misconduct, and officer residency.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.4594,
+     "note": "proposal entity"
+    },
+    {
+     "entity": "Create a federal government",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.4211,
+     "note": "proposal entity"
+    },
+    {
+     "entity": "power to investigate and",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3391,
+     "note": "proposal entity"
+    },
+    {
+     "entity": "Make it a crime for police to",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3664,
+     "note": "proposal entity"
+    },
+    {
+     "entity": "Require officers to live in",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.2352,
+     "note": "proposal entity"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Names the reform proposals from the table",
+    "Lists specific police reform measures",
+    "Introduces proposals such as training and federal investigative power"
+   ],
+   "visual_evidence_rule": "Proposal names or labels are visible for the listed reform measures.",
+   "temporal_anchor": "These are all proposals that have come up.",
+   "reviewer_question": "Should the video explicitly name all listed reform proposals?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The clip distinguishes two favorability levels: Strongly and Somewhat.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.4594,
+     "note": "series Strongly"
+    },
+    {
+     "entity": "84",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.0547,
+     "note": "series Somewhat"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Shows Strongly and Somewhat as separate favorability categories",
+    "Uses two series labeled Strongly and Somewhat",
+    "Separates strong and somewhat favorable views"
+   ],
+   "visual_evidence_rule": "Both series labels 'Strongly' and 'Somewhat' are visible.",
+   "temporal_anchor": "While there are demographic differences, such that...",
+   "reviewer_question": "Must the video label both Strongly and Somewhat series?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Every Strongly favorable relative value is larger than every Somewhat favorable relative value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Require officers to live in",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.2352,
+     "note": "lowest Strongly value"
+    },
+    {
+     "entity": "43",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.2078,
+     "note": "highest Somewhat value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Strongly support exceeds Somewhat support across all listed proposals",
+    "Strongly values are consistently higher than Somewhat values",
+    "The lowest Strongly value still exceeds the highest Somewhat value"
+   ],
+   "visual_evidence_rule": "Strongly and Somewhat values are visible, with Strongly consistently higher.",
+   "temporal_anchor": "Democrats are more likely to support these things.",
+   "reviewer_question": "Should the video state that Strongly exceeds Somewhat for all proposals?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The highest relative support is for requiring police to be trained, at about 0.46.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.4594,
+     "note": "highest overall relative value"
+    },
+    {
+     "entity": "Create a federal government",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.4211,
+     "note": "next highest overall relative value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Requiring police training has the top relative value (0.4594)",
+    "Top support goes to police training, ahead of federal government (0.4211)",
+    "The largest relative value is 0.4594 for require police to be trained"
+   ],
+   "visual_evidence_rule": "The 'Require police to be trained' label and its top relative value are visible.",
+   "temporal_anchor": "Democrats are more likely to support these things.",
+   "reviewer_question": "Must the video identify the top-supported proposal?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The Strongly support values rank from requiring police training (0.4594) down to requiring officers to live in (0.2352).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.4594,
+     "note": "rank 1"
+    },
+    {
+     "entity": "Create a federal government",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.4211,
+     "note": "rank 2"
+    },
+    {
+     "entity": "Make it a crime for police to",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3664,
+     "note": "rank 3"
+    },
+    {
+     "entity": "power to investigate and",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3391,
+     "note": "rank 4"
+    },
+    {
+     "entity": "Require officers to live in",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.2352,
+     "note": "rank 5"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Strongly support order: training, federal government, crime, investigate, live-in",
+    "Training highest, live-in lowest among Strongly values",
+    "Strongly values descend from 0.4594 to 0.2352"
+   ],
+   "visual_evidence_rule": "Strongly proposal labels are ordered by their relative values.",
+   "temporal_anchor": "These are all proposals that have come up.",
+   "reviewer_question": "Should the video show the full ranking of Strongly support?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the Somewhat support ranking by relative value",
+  "Showing the range of Strongly relative values",
+  "Highlighting that relative values remain below 0.5"
+ ],
+ "unsupported_to_avoid": [
+  "Absolute percentages or counts from the narration",
+  "Causal claims about why Democrats support reforms",
+  "Demographic breakdowns by race or party beyond table",
+  "Extrapolating to all Americans",
+  "Exact party support not in table"
+ ],
+ "notes": "All cited values are relative 0-1 from the table, not percentages. The table pairs Strongly and Somewhat series, but Somewhat entity labels are numeric strings.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.02
+ },
+ "draft_cost": {
+  "sec": 43.0,
+  "usage": {
+   "prompt_tokens": 1240,
+   "completion_tokens": 10124,
+   "total_tokens": 11364,
+   "prompt_tokens_details": {
+    "cached_tokens": 1024
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8355
+   },
+   "prompt_cache_hit_tokens": 1024,
+   "prompt_cache_miss_tokens": 216
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

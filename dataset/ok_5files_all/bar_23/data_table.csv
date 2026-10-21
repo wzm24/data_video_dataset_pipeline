@@ -1,0 +1,151 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,entity_original,entity_source
+bar_23,Alabama,alabama-clinton,68.5,,34,0.3400,,#3B6FB6,printed,Clinton,Alabama,semantic_svg_series_backfill
+bar_23,Alabama,alabama-other,68.5,,4,0.0400,,#C9C9C9,printed,Other,bar-2,semantic_svg_series_backfill
+bar_23,Alabama,alabama-trump,68.5,,62,0.6200,,#B23A2E,printed,Trump,bar-3,semantic_svg_series_backfill
+bar_23,Alaska,alaska-clinton,90.5,,37,0.3700,,#3B6FB6,printed,Clinton,Alaska,semantic_svg_series_backfill
+bar_23,Alaska,alaska-other,90.5,,12,0.1200,,#C9C9C9,printed,Other,bar-5,semantic_svg_series_backfill
+bar_23,Alaska,alaska-trump,90.5,,51,0.5100,,#B23A2E,printed,Trump,bar-6,semantic_svg_series_backfill
+bar_23,Arizona,arizona-clinton,112.5,,45,0.4500,,#3B6FB6,printed,Clinton,Arizona,semantic_svg_series_backfill
+bar_23,Arizona,arizona-other,112.5,,6,0.0600,,#C9C9C9,printed,Other,bar-8,semantic_svg_series_backfill
+bar_23,Arizona,arizona-trump,112.5,,49,0.4900,,#B23A2E,printed,Trump,bar-9,semantic_svg_series_backfill
+bar_23,Arkansas,arkansas-clinton,134.5,,34,0.3400,,#3B6FB6,printed,Clinton,Arkansas,semantic_svg_series_backfill
+bar_23,Arkansas,arkansas-other,134.5,,6,0.0600,,#C9C9C9,printed,Other,bar-11,semantic_svg_series_backfill
+bar_23,Arkansas,arkansas-trump,134.5,,60,0.6000,,#B23A2E,printed,Trump,bar-12,semantic_svg_series_backfill
+bar_23,California,california-clinton,156.5,,62,0.6200,,#3B6FB6,printed,Clinton,California,semantic_svg_series_backfill
+bar_23,California,california-other,156.5,,6,0.0600,,#C9C9C9,printed,Other,bar-14,semantic_svg_series_backfill
+bar_23,California,california-trump,156.5,,32,0.3200,,#B23A2E,printed,Trump,bar-15,semantic_svg_series_backfill
+bar_23,Colorado,colorado-clinton,178.5,,48,0.4800,,#3B6FB6,printed,Clinton,Colorado,semantic_svg_series_backfill
+bar_23,Colorado,colorado-other,178.5,,9,0.0900,,#C9C9C9,printed,Other,bar-17,semantic_svg_series_backfill
+bar_23,Colorado,colorado-trump,178.5,,43,0.4300,,#B23A2E,printed,Trump,bar-18,semantic_svg_series_backfill
+bar_23,Connecticut,connecticut-clinton,200.5,,54,0.5400,,#3B6FB6,printed,Clinton,Connecticut,semantic_svg_series_backfill
+bar_23,Connecticut,connecticut-other,200.5,,5,0.0500,,#C9C9C9,printed,Other,bar-20,semantic_svg_series_backfill
+bar_23,Connecticut,connecticut-trump,200.5,,41,0.4100,,#B23A2E,printed,Trump,bar-21,semantic_svg_series_backfill
+bar_23,Delaware,delaware-clinton,222.5,,53,0.5300,,#3B6FB6,printed,Clinton,Delaware,semantic_svg_series_backfill
+bar_23,Delaware,delaware-other,222.5,,5,0.0500,,#C9C9C9,printed,Other,bar-23,semantic_svg_series_backfill
+bar_23,Delaware,delaware-trump,222.5,,42,0.4200,,#B23A2E,printed,Trump,bar-24,semantic_svg_series_backfill
+bar_23,Florida,florida-clinton,244.5,,47,0.4700,,#3B6FB6,printed,Clinton,Florida,semantic_svg_series_backfill
+bar_23,Florida,florida-other,244.5,,4,0.0400,,#C9C9C9,printed,Other,bar-26,semantic_svg_series_backfill
+bar_23,Florida,florida-trump,244.5,,49,0.4900,,#B23A2E,printed,Trump,bar-27,semantic_svg_series_backfill
+bar_23,Georgia,georgia-clinton,266.5,,46,0.4600,,#3B6FB6,printed,Clinton,Georgia,semantic_svg_series_backfill
+bar_23,Georgia,georgia-other,266.5,,3,0.0300,,#C9C9C9,printed,Other,bar-29,semantic_svg_series_backfill
+bar_23,Georgia,georgia-trump,266.5,,51,0.5100,,#B23A2E,printed,Trump,bar-30,semantic_svg_series_backfill
+bar_23,Hawaii,hawaii-clinton,288.5,,62,0.6200,,#3B6FB6,printed,Clinton,Hawaii,semantic_svg_series_backfill
+bar_23,Hawaii,hawaii-other,288.5,,8,0.0800,,#C9C9C9,printed,Other,bar-32,semantic_svg_series_backfill
+bar_23,Hawaii,hawaii-trump,288.5,,30,0.3000,,#B23A2E,printed,Trump,bar-33,semantic_svg_series_backfill
+bar_23,Idaho,idaho-clinton,310.5,,27,0.2700,,#3B6FB6,printed,Clinton,Idaho,semantic_svg_series_backfill
+bar_23,Idaho,idaho-other,310.5,,14,0.1400,,#C9C9C9,printed,Other,bar-35,semantic_svg_series_backfill
+bar_23,Idaho,idaho-trump,310.5,,59,0.5900,,#B23A2E,printed,Trump,bar-36,semantic_svg_series_backfill
+bar_23,Illinois,illinois-clinton,332.5,,56,0.5600,,#3B6FB6,printed,Clinton,Illinois,semantic_svg_series_backfill
+bar_23,Illinois,illinois-other,332.5,,5,0.0500,,#C9C9C9,printed,Other,bar-38,semantic_svg_series_backfill
+bar_23,Illinois,illinois-trump,332.5,,39,0.3900,,#B23A2E,printed,Trump,bar-39,semantic_svg_series_backfill
+bar_23,Indiana,indiana-clinton,354.5,,38,0.3800,,#3B6FB6,printed,Clinton,Indiana,semantic_svg_series_backfill
+bar_23,Indiana,indiana-other,354.5,,5,0.0500,,#C9C9C9,printed,Other,bar-41,semantic_svg_series_backfill
+bar_23,Indiana,indiana-trump,354.5,,57,0.5700,,#B23A2E,printed,Trump,bar-42,semantic_svg_series_backfill
+bar_23,Iowa,iowa-clinton,376.5,,42,0.4200,,#3B6FB6,printed,Clinton,Iowa,semantic_svg_series_backfill
+bar_23,Iowa,iowa-other,376.5,,7,0.0700,,#C9C9C9,printed,Other,bar-44,semantic_svg_series_backfill
+bar_23,Iowa,iowa-trump,376.5,,51,0.5100,,#B23A2E,printed,Trump,bar-45,semantic_svg_series_backfill
+bar_23,Kansas,kansas-clinton,398.5,,36,0.3600,,#3B6FB6,printed,Clinton,Kansas,semantic_svg_series_backfill
+bar_23,Kansas,kansas-other,398.5,,7,0.0700,,#C9C9C9,printed,Other,bar-47,semantic_svg_series_backfill
+bar_23,Kansas,kansas-trump,398.5,,57,0.5700,,#B23A2E,printed,Trump,bar-48,semantic_svg_series_backfill
+bar_23,Kentucky,kentucky-clinton,420.5,,33,0.3300,,#3B6FB6,printed,Clinton,Kentucky,semantic_svg_series_backfill
+bar_23,Kentucky,kentucky-other,420.5,,4,0.0400,,#C9C9C9,printed,Other,bar-50,semantic_svg_series_backfill
+bar_23,Kentucky,kentucky-trump,420.5,,63,0.6300,,#B23A2E,printed,Trump,bar-51,semantic_svg_series_backfill
+bar_23,Louisiana,louisiana-clinton,442.5,,38,0.3800,,#3B6FB6,printed,Clinton,Louisiana,semantic_svg_series_backfill
+bar_23,Louisiana,louisiana-other,442.5,,4,0.0400,,#C9C9C9,printed,Other,bar-53,semantic_svg_series_backfill
+bar_23,Louisiana,louisiana-trump,442.5,,58,0.5800,,#B23A2E,printed,Trump,bar-54,semantic_svg_series_backfill
+bar_23,Maine,maine-clinton,464.5,,48,0.4800,,#3B6FB6,printed,Clinton,Maine,semantic_svg_series_backfill
+bar_23,Maine,maine-other,464.5,,7,0.0700,,#C9C9C9,printed,Other,bar-56,semantic_svg_series_backfill
+bar_23,Maine,maine-trump,464.5,,45,0.4500,,#B23A2E,printed,Trump,bar-57,semantic_svg_series_backfill
+bar_23,Maryland,maryland-clinton,486.5,,60,0.6000,,#3B6FB6,printed,Clinton,Maryland,semantic_svg_series_backfill
+bar_23,Maryland,maryland-other,486.5,,6,0.0600,,#C9C9C9,printed,Other,bar-59,semantic_svg_series_backfill
+bar_23,Maryland,maryland-trump,486.5,,34,0.3400,,#B23A2E,printed,Trump,bar-60,semantic_svg_series_backfill
+bar_23,Massachusetts,massachusetts-clinton,508.5,,60,0.6000,,#3B6FB6,printed,Clinton,Massachusetts,semantic_svg_series_backfill
+bar_23,Massachusetts,massachusetts-other,508.5,,7,0.0700,,#C9C9C9,printed,Other,bar-62,semantic_svg_series_backfill
+bar_23,Massachusetts,massachusetts-trump,508.5,,33,0.3300,,#B23A2E,printed,Trump,bar-63,semantic_svg_series_backfill
+bar_23,Michigan,michigan-clinton,530.5,,47,0.4700,,#3B6FB6,printed,Clinton,Michigan,semantic_svg_series_backfill
+bar_23,Michigan,michigan-other,530.5,,6,0.0600,,#C9C9C9,printed,Other,bar-65,semantic_svg_series_backfill
+bar_23,Michigan,michigan-trump,530.5,,47,0.4700,,#B23A2E,printed,Trump,bar-66,semantic_svg_series_backfill
+bar_23,Minnesota,minnesota-clinton,552.5,,47,0.4700,,#3B6FB6,printed,Clinton,Minnesota,semantic_svg_series_backfill
+bar_23,Minnesota,minnesota-other,552.5,,8,0.0800,,#C9C9C9,printed,Other,bar-68,semantic_svg_series_backfill
+bar_23,Minnesota,minnesota-trump,552.5,,45,0.4500,,#B23A2E,printed,Trump,bar-69,semantic_svg_series_backfill
+bar_23,Mississippi,mississippi-clinton,574.5,,40,0.4000,,#3B6FB6,printed,Clinton,Mississippi,semantic_svg_series_backfill
+bar_23,Mississippi,mississippi-other,574.5,,2,0.0200,,#C9C9C9,printed,Other,bar-71,semantic_svg_series_backfill
+bar_23,Mississippi,mississippi-trump,574.5,,58,0.5800,,#B23A2E,printed,Trump,bar-72,semantic_svg_series_backfill
+bar_23,Missouri,missouri-clinton,596.5,,38,0.3800,,#3B6FB6,printed,Clinton,Missouri,semantic_svg_series_backfill
+bar_23,Missouri,missouri-other,596.5,,5,0.0500,,#C9C9C9,printed,Other,bar-74,semantic_svg_series_backfill
+bar_23,Missouri,missouri-trump,596.5,,57,0.5700,,#B23A2E,printed,Trump,bar-75,semantic_svg_series_backfill
+bar_23,Montana,montana-clinton,618.5,,36,0.3600,,#3B6FB6,printed,Clinton,Montana,semantic_svg_series_backfill
+bar_23,Montana,montana-other,618.5,,8,0.0800,,#C9C9C9,printed,Other,bar-77,semantic_svg_series_backfill
+bar_23,Montana,montana-trump,618.5,,56,0.5600,,#B23A2E,printed,Trump,bar-78,semantic_svg_series_backfill
+bar_23,Nebraska,nebraska-clinton,640.5,,34,0.3400,,#3B6FB6,printed,Clinton,Nebraska,semantic_svg_series_backfill
+bar_23,Nebraska,nebraska-other,640.5,,7,0.0700,,#C9C9C9,printed,Other,bar-80,semantic_svg_series_backfill
+bar_23,Nebraska,nebraska-trump,640.5,,59,0.5900,,#B23A2E,printed,Trump,bar-81,semantic_svg_series_backfill
+bar_23,Nevada,nevada-clinton,662.5,,48,0.4800,,#3B6FB6,printed,Clinton,Nevada,semantic_svg_series_backfill
+bar_23,Nevada,nevada-other,662.5,,6,0.0600,,#C9C9C9,printed,Other,bar-83,semantic_svg_series_backfill
+bar_23,Nevada,nevada-trump,662.5,,46,0.4600,,#B23A2E,printed,Trump,bar-84,semantic_svg_series_backfill
+bar_23,New Hampshire,new-hampshire-clinton,684.5,,47,0.4700,,#3B6FB6,printed,Clinton,New Hampshire,semantic_svg_series_backfill
+bar_23,New Hampshire,new-hampshire-other,684.5,,6,0.0600,,#C9C9C9,printed,Other,bar-86,semantic_svg_series_backfill
+bar_23,New Hampshire,new-hampshire-trump,684.5,,47,0.4700,,#B23A2E,printed,Trump,bar-87,semantic_svg_series_backfill
+bar_23,New Jersey,new-jersey-clinton,706.5,,55,0.5500,,#3B6FB6,printed,Clinton,New Jersey,semantic_svg_series_backfill
+bar_23,New Jersey,new-jersey-other,706.5,,4,0.0400,,#C9C9C9,printed,Other,bar-89,semantic_svg_series_backfill
+bar_23,New Jersey,new-jersey-trump,706.5,,41,0.4100,,#B23A2E,printed,Trump,bar-90,semantic_svg_series_backfill
+bar_23,New Mexico,new-mexico-clinton,728.5,,48,0.4800,,#3B6FB6,printed,Clinton,New Mexico,semantic_svg_series_backfill
+bar_23,New Mexico,new-mexico-other,728.5,,12,0.1200,,#C9C9C9,printed,Other,bar-92,semantic_svg_series_backfill
+bar_23,New Mexico,new-mexico-trump,728.5,,40,0.4000,,#B23A2E,printed,Trump,bar-93,semantic_svg_series_backfill
+bar_23,New York,new-york-clinton,750.5,,59,0.5900,,#3B6FB6,printed,Clinton,New York,semantic_svg_series_backfill
+bar_23,New York,new-york-other,750.5,,4,0.0400,,#C9C9C9,printed,Other,bar-95,semantic_svg_series_backfill
+bar_23,New York,new-york-trump,750.5,,37,0.3700,,#B23A2E,printed,Trump,bar-96,semantic_svg_series_backfill
+bar_23,North Carolina,north-carolina-clinton,772.5,,46,0.4600,,#3B6FB6,printed,Clinton,North Carolina,semantic_svg_series_backfill
+bar_23,North Carolina,north-carolina-other,772.5,,4,0.0400,,#C9C9C9,printed,Other,bar-98,semantic_svg_series_backfill
+bar_23,North Carolina,north-carolina-trump,772.5,,50,0.5000,,#B23A2E,printed,Trump,bar-99,semantic_svg_series_backfill
+bar_23,North Dakota,north-dakota-clinton,794.5,,27,0.2700,,#3B6FB6,printed,Clinton,North Dakota,semantic_svg_series_backfill
+bar_23,North Dakota,north-dakota-other,794.5,,10,0.1000,,#C9C9C9,printed,Other,bar-101,semantic_svg_series_backfill
+bar_23,North Dakota,north-dakota-trump,794.5,,63,0.6300,,#B23A2E,printed,Trump,bar-102,semantic_svg_series_backfill
+bar_23,Ohio,ohio-clinton,816.5,,43,0.4300,,#3B6FB6,printed,Clinton,Ohio,semantic_svg_series_backfill
+bar_23,Ohio,ohio-other,816.5,,5,0.0500,,#C9C9C9,printed,Other,bar-104,semantic_svg_series_backfill
+bar_23,Ohio,ohio-trump,816.5,,52,0.5200,,#B23A2E,printed,Trump,bar-105,semantic_svg_series_backfill
+bar_23,Oklahoma,oklahoma-clinton,838.5,,29,0.2900,,#3B6FB6,printed,Clinton,Oklahoma,semantic_svg_series_backfill
+bar_23,Oklahoma,oklahoma-other,838.5,,6,0.0600,,#C9C9C9,printed,Other,bar-107,semantic_svg_series_backfill
+bar_23,Oklahoma,oklahoma-trump,838.5,,65,0.6500,,#B23A2E,printed,Trump,bar-108,semantic_svg_series_backfill
+bar_23,Oregon,oregon-clinton,860.5,,50,0.5000,,#3B6FB6,printed,Clinton,Oregon,semantic_svg_series_backfill
+bar_23,Oregon,oregon-other,860.5,,11,0.1100,,#C9C9C9,printed,Other,bar-110,semantic_svg_series_backfill
+bar_23,Oregon,oregon-trump,860.5,,39,0.3900,,#B23A2E,printed,Trump,bar-111,semantic_svg_series_backfill
+bar_23,Pennsylvania,pennsylvania-clinton,882.5,,47,0.4700,,#3B6FB6,printed,Clinton,Pennsylvania,semantic_svg_series_backfill
+bar_23,Pennsylvania,pennsylvania-other,882.5,,5,0.0500,,#C9C9C9,printed,Other,bar-113,semantic_svg_series_backfill
+bar_23,Pennsylvania,pennsylvania-trump,882.5,,48,0.4800,,#B23A2E,printed,Trump,bar-114,semantic_svg_series_backfill
+bar_23,Rhode Island,rhode-island-clinton,904.5,,55,0.5500,,#3B6FB6,printed,Clinton,Rhode Island,semantic_svg_series_backfill
+bar_23,Rhode Island,rhode-island-other,904.5,,6,0.0600,,#C9C9C9,printed,Other,bar-116,semantic_svg_series_backfill
+bar_23,Rhode Island,rhode-island-trump,904.5,,39,0.3900,,#B23A2E,printed,Trump,bar-117,semantic_svg_series_backfill
+bar_23,South Carolina,south-carolina-clinton,926.5,,41,0.4100,,#3B6FB6,printed,Clinton,South Carolina,semantic_svg_series_backfill
+bar_23,South Carolina,south-carolina-other,926.5,,4,0.0400,,#C9C9C9,printed,Other,bar-119,semantic_svg_series_backfill
+bar_23,South Carolina,south-carolina-trump,926.5,,55,0.5500,,#B23A2E,printed,Trump,bar-120,semantic_svg_series_backfill
+bar_23,South Dakota,south-dakota-clinton,948.5,,32,0.3200,,#3B6FB6,printed,Clinton,South Dakota,semantic_svg_series_backfill
+bar_23,South Dakota,south-dakota-other,948.5,,6,0.0600,,#C9C9C9,printed,Other,bar-122,semantic_svg_series_backfill
+bar_23,South Dakota,south-dakota-trump,948.5,,62,0.6200,,#B23A2E,printed,Trump,bar-123,semantic_svg_series_backfill
+bar_23,Tennessee,tennessee-clinton,970.5,,35,0.3500,,#3B6FB6,printed,Clinton,Tennessee,semantic_svg_series_backfill
+bar_23,Tennessee,tennessee-other,970.5,,4,0.0400,,#C9C9C9,printed,Other,bar-125,semantic_svg_series_backfill
+bar_23,Tennessee,tennessee-trump,970.5,,61,0.6100,,#B23A2E,printed,Trump,bar-126,semantic_svg_series_backfill
+bar_23,Texas,texas-clinton,992.5,,43,0.4300,,#3B6FB6,printed,Clinton,Texas,semantic_svg_series_backfill
+bar_23,Texas,texas-other,992.5,,5,0.0500,,#C9C9C9,printed,Other,bar-128,semantic_svg_series_backfill
+bar_23,Texas,texas-trump,992.5,,52,0.5200,,#B23A2E,printed,Trump,bar-129,semantic_svg_series_backfill
+bar_23,Utah,utah-clinton,1014.5,,28,0.2800,,#3B6FB6,printed,Clinton,Utah,semantic_svg_series_backfill
+bar_23,Utah,utah-other,1014.5,,26,0.2600,,#C9C9C9,printed,Other,bar-131,semantic_svg_series_backfill
+bar_23,Utah,utah-trump,1014.5,,46,0.4600,,#B23A2E,printed,Trump,bar-132,semantic_svg_series_backfill
+bar_23,Vermont,vermont-clinton,1036.5,,61,0.6100,,#3B6FB6,printed,Clinton,Vermont,semantic_svg_series_backfill
+bar_23,Vermont,vermont-other,1036.5,,9,0.0900,,#C9C9C9,printed,Other,bar-134,semantic_svg_series_backfill
+bar_23,Vermont,vermont-trump,1036.5,,30,0.3000,,#B23A2E,printed,Trump,bar-135,semantic_svg_series_backfill
+bar_23,Virginia,virginia-clinton,1058.5,,50,0.5000,,#3B6FB6,printed,Clinton,Virginia,semantic_svg_series_backfill
+bar_23,Virginia,virginia-other,1058.5,,6,0.0600,,#C9C9C9,printed,Other,bar-137,semantic_svg_series_backfill
+bar_23,Virginia,virginia-trump,1058.5,,44,0.4400,,#B23A2E,printed,Trump,bar-138,semantic_svg_series_backfill
+bar_23,Washington,washington-clinton,1080.5,,54,0.5400,,#3B6FB6,printed,Clinton,Washington,semantic_svg_series_backfill
+bar_23,Washington,washington-other,1080.5,,8,0.0800,,#C9C9C9,printed,Other,bar-140,semantic_svg_series_backfill
+bar_23,Washington,washington-trump,1080.5,,38,0.3800,,#B23A2E,printed,Trump,bar-141,semantic_svg_series_backfill
+bar_23,West Virginia,west-virginia-clinton,1102.5,,26,0.2600,,#3B6FB6,printed,Clinton,West Virginia,semantic_svg_series_backfill
+bar_23,West Virginia,west-virginia-other,1102.5,,5,0.0500,,#C9C9C9,printed,Other,bar-143,semantic_svg_series_backfill
+bar_23,West Virginia,west-virginia-trump,1102.5,,69,0.6900,,#B23A2E,printed,Trump,bar-144,semantic_svg_series_backfill
+bar_23,Wisconsin,wisconsin-clinton,1124.5,,47,0.4700,,#3B6FB6,printed,Clinton,Wisconsin,semantic_svg_series_backfill
+bar_23,Wisconsin,wisconsin-other,1124.5,,6,0.0600,,#C9C9C9,printed,Other,bar-146,semantic_svg_series_backfill
+bar_23,Wisconsin,wisconsin-trump,1124.5,,47,0.4700,,#B23A2E,printed,Trump,bar-147,semantic_svg_series_backfill
+bar_23,Wyoming,wyoming-clinton,1146.5,,22,0.2200,,#3B6FB6,printed,Clinton,Wyoming,semantic_svg_series_backfill
+bar_23,Wyoming,wyoming-other,1146.5,,10,0.1000,,#C9C9C9,printed,Other,bar-149,semantic_svg_series_backfill
+bar_23,Wyoming,wyoming-trump,1146.5,,68,0.6800,,#B23A2E,printed,Trump,bar-150,semantic_svg_series_backfill

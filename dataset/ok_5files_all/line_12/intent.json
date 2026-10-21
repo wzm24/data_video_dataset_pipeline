@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_12",
+ "intent_en": "To demonstrate Subway's rapid expansion and success as a franchise model between 2006 and 2011.",
+ "previous_intent": "To illustrate the significant growth in the number of Subway franchise locations between 2006 and 2011, establishing the brand as a highly successful franchise model during a severe economic recession.",
+ "narration_support": "It's THE poster child for franchising, growing 22 % during the worst recession in 75 years.",
+ "chart_support": "Line chart on a calendar graphic showing an upward trend in Subway locations from 2006 to 2011.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly calls Subway a 'poster child for franchising' and mentions growth during the recession, while the chart visualizes this growth with a line graph rising from 2006 to 2011. The narration's mention of 'what can go terribly wrong' is not supported by this specific chart, which only shows the positive growth phase.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

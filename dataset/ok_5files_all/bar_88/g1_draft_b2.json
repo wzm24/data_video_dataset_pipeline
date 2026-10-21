@@ -1,0 +1,282 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_88",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate Japan's demographic imbalance, specifically an aging population with a shrinking youth base, which the narration suggests creates economic vulnerability.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data represents Japan's population by five-year age groups from 0-4 through 95-99, split into male and female series.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.495,
+     "note": "male 0-4; female 0-4 is 0.526; age groups run 0-4 through 95-99"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Japan's population is broken into five-year age bands from 0-4 to 95-99, with male and female series",
+    "The chart shows age groups 0-4, 5-9, ..., 95-99, split by sex"
+   ],
+   "visual_evidence_rule": "Age-group labels from 0-4 to 95-99 are visible; male and female series are distinguishable.",
+   "temporal_anchor": "The narration clause introducing Japan's population shape or age structure.",
+   "reviewer_question": "Must the video state that the data is age-by-sex, or is that just chart setup?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The youngest age groups are much smaller than the middle-aged peak; the 0-4 cohort is about half the size of the 45-49 cohort.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.495,
+     "note": "male 0-4"
+    },
+    {
+     "entity": "0-4",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.526,
+     "note": "female 0-4"
+    },
+    {
+     "entity": "45-49",
+     "x": "45-49",
+     "field": "value",
+     "value": 0.958,
+     "note": "male 45-49"
+    },
+    {
+     "entity": "45-49",
+     "x": "45-49",
+     "field": "value",
+     "value": 1.0,
+     "note": "female 45-49, largest single bar"
+    }
+   ],
+   "computation": "0-4 total = 0.495 + 0.526 = 1.021; 45-49 total = 0.958 + 1.000 = 1.958; ratio = 1.021 / 1.958 = 0.521",
+   "accepted_routes": [
+    "The 0-4 age group is roughly half the size of the 45-49 peak",
+    "Youngest cohort is about half the largest middle-aged cohort",
+    "The base of the pyramid is much narrower than the middle bulge"
+   ],
+   "visual_evidence_rule": "The 0-4 bars are visibly much shorter than the 45-49 bars.",
+   "temporal_anchor": "The narration clause about 'not enough young'.",
+   "reviewer_question": "Must the video explicitly compare the youngest cohort to the peak, or is a general shrinking-youth statement enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Older cohorts are not small; the 70-74 age group is larger than the 0-4 age group.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "70-74",
+     "x": "70-74",
+     "field": "value",
+     "value": 0.821,
+     "note": "male 70-74"
+    },
+    {
+     "entity": "70-74",
+     "x": "70-74",
+     "field": "value",
+     "value": 0.863,
+     "note": "female 70-74"
+    },
+    {
+     "entity": "0-4",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.495,
+     "note": "male 0-4"
+    },
+    {
+     "entity": "0-4",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.526,
+     "note": "female 0-4"
+    }
+   ],
+   "computation": "70-74 total = 0.821 + 0.863 = 1.684; 0-4 total = 0.495 + 0.526 = 1.021; ratio = 1.684 / 1.021 = 1.65",
+   "accepted_routes": [
+    "The 70-74 age group is about 1.65 times the size of the 0-4 group",
+    "Older cohorts are larger than the youngest cohort",
+    "The 70-74 bar is taller than the 0-4 bar"
+   ],
+   "visual_evidence_rule": "The 70-74 and 0-4 age-group bars must be comparable, showing 70-74 is taller than 0-4.",
+   "temporal_anchor": "The narration clause about 'far too many old people'.",
+   "reviewer_question": "Must the video explicitly contrast a specific older cohort with the youngest cohort, or is a general aging statement enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The largest single cohort is 45-49, especially female 45-49 at 1.000; male 45-49 is 0.958.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "45-49",
+     "x": "45-49",
+     "field": "value",
+     "value": 1.0,
+     "note": "female 45-49, global maximum"
+    },
+    {
+     "entity": "45-49",
+     "x": "45-49",
+     "field": "value",
+     "value": 0.958,
+     "note": "male 45-49, second highest single bar"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The peak of the chart is the 45-49 age group, with female 45-49 the single largest bar",
+    "The largest cohort is 45-49, and the female bar (1.000) is slightly larger than the male bar (0.958)"
+   ],
+   "visual_evidence_rule": "The 45-49 age group bars are visibly the tallest, with female 45-49 as the highest single bar.",
+   "temporal_anchor": "The narration clause describing the 'unfortunate shape'.",
+   "reviewer_question": "Is identifying the exact peak cohort required, or only the general top-heavy shape?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At older ages, female values exceed male values, e.g., 70-74 female 0.863 vs male 0.821, and 85-89 female 0.305 vs male 0.263.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "70-74",
+     "x": "70-74",
+     "field": "value",
+     "value": 0.863,
+     "note": "female 70-74"
+    },
+    {
+     "entity": "70-74",
+     "x": "70-74",
+     "field": "value",
+     "value": 0.821,
+     "note": "male 70-74"
+    },
+    {
+     "entity": "85-89",
+     "x": "85-89",
+     "field": "value",
+     "value": 0.305,
+     "note": "female 85-89"
+    },
+    {
+     "entity": "85-89",
+     "x": "85-89",
+     "field": "value",
+     "value": 0.263,
+     "note": "male 85-89"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Females outnumber males in older age groups, e.g., 70-74 female 0.863 vs male 0.821",
+    "The female bars are taller than male bars at older ages such as 85-89 (0.305 vs 0.263)"
+   ],
+   "visual_evidence_rule": "For older age groups, female bars are visibly taller than male bars.",
+   "temporal_anchor": "Optional; could accompany the aging-population clause if the video shows sex split.",
+   "reviewer_question": "Should the video call out the female-male gap at older ages, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The oldest 95-99 group is the smallest cohort (male 0.042, female 0.074).",
+  "The 0-4, 5-9, and 10-14 groups are all smaller than most older groups.",
+  "The 45-49 cohort is followed by a dip in the 55-59 and 60-64 groups before another rise at 70-74."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that aging causes economic decline or vulnerability",
+  "Extrapolation that Japan's population will shrink or that Africa will grow",
+  "Absolute counts like millions or percentages because the unit column is blank",
+  "Claim that Japan's total population is large (not given in the table)",
+  "Specific economic multiplier or undoing language from the narration"
+ ],
+ "notes": "The table provides value and relative_value, but the unit column is blank, so units are described as table values without absolute units. The core required story is the age-by-sex structure, the small young base, the large older cohorts, and the middle-aged peak.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 46.0,
+  "usage": {
+   "prompt_tokens": 2786,
+   "completion_tokens": 12403,
+   "total_tokens": 15189,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10122
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2274
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

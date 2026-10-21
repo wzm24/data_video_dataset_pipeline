@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#E0E0E0"/>
+<text id="chart-title" data-role="title" x="70" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222222">Deaths / million miles</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1120" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="180" x2="120" y2="600" stroke="#666666" stroke-width="3"/>
+<g id="entity-motorcyclists" data-role="entity" data-entity-id="motorcyclists" data-label="Motorcyclists">
+<rect id="motorcyclists-bar" data-role="bar" data-entity-id="motorcyclists" data-value="1.0" x="175" y="180" width="130" height="420" fill="#9E9E9E"/>
+<text id="motorcyclists-label" data-role="category-label" data-entity-id="motorcyclists" x="240" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#555555">Motorcyclists</text>
+</g>
+<g id="entity-walkers" data-role="entity" data-entity-id="walkers" data-label="Walkers">
+<rect id="walkers-bar" data-role="bar" data-entity-id="walkers" data-value="0.4" x="415" y="432" width="130" height="168" fill="#1F4E9C"/>
+<text id="walkers-label" data-role="category-label" data-entity-id="walkers" x="480" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">Walkers</text>
+</g>
+<g id="entity-cyclists" data-role="entity" data-entity-id="cyclists" data-label="Cyclists">
+<rect id="cyclists-bar" data-role="bar" data-entity-id="cyclists" data-value="0.33" x="655" y="461.4" width="130" height="138.6" fill="#E45756"/>
+<text id="cyclists-label" data-role="category-label" data-entity-id="cyclists" x="720" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">Cyclists</text>
+</g>
+<g id="entity-car-drivers" data-role="entity" data-entity-id="car-drivers" data-label="Car drivers">
+<rect id="car-drivers-bar" data-role="bar" data-entity-id="car-drivers" data-value="0.05" x="895" y="579" width="130" height="21" fill="#C9C9C9"/>
+<text id="car-drivers-label" data-role="category-label" data-entity-id="car-drivers" x="960" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#555555">Car drivers</text>
+</g>
+</g>
+</svg>

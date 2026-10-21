@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#fdfdfb"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Katy Freeway travel times</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="160.0" y1="600.0" x2="1220.0" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="160.0" y1="150.0" x2="160.0" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="160.0" y1="600.0" x2="160.0" y2="608.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="160.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#444444">0</text>
+<line data-role="tick" x1="323.1" y1="600.0" x2="323.1" y2="608.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="323.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#444444">10</text>
+<line data-role="tick" x1="486.2" y1="600.0" x2="486.2" y2="608.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="486.2" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#444444">20</text>
+<line data-role="tick" x1="649.2" y1="600.0" x2="649.2" y2="608.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="649.2" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#444444">30</text>
+<line data-role="tick" x1="812.3" y1="600.0" x2="812.3" y2="608.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="812.3" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#444444">40</text>
+<line data-role="tick" x1="975.4" y1="600.0" x2="975.4" y2="608.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="975.4" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#444444">50</text>
+<line data-role="tick" x1="1138.5" y1="600.0" x2="1138.5" y2="608.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="1138.5" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#444444">60</text>
+<text data-role="axis-label" x="690.0" y="658.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">Minutes</text>
+<text data-role="category-label" x="144.0" y="213.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">2011</text>
+<g id="entity-2011-am" data-role="entity" data-entity-id="2011-am" data-label="2011 AM">
+<rect id="2011-am-bar" data-role="bar" data-entity-id="2011-am" data-value="47" x="160.0" y="169.2" width="766.5" height="34.0" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2011-am-value-label" data-role="value-label" data-entity-id="2011-am" x="936.5" y="194.2" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">47</text>
+</g>
+<g id="entity-2011-pm" data-role="entity" data-entity-id="2011-pm" data-label="2011 PM">
+<rect id="2011-pm-bar" data-role="bar" data-entity-id="2011-pm" data-value="42" x="160.0" y="209.2" width="684.9" height="34.0" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2011-pm-value-label" data-role="value-label" data-entity-id="2011-pm" x="854.9" y="234.2" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">42</text>
+</g>
+<text data-role="category-label" x="144.0" y="325.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">2012</text>
+<g id="entity-2012-am" data-role="entity" data-entity-id="2012-am" data-label="2012 AM">
+<rect id="2012-am-bar" data-role="bar" data-entity-id="2012-am" data-value="54" x="160.0" y="281.8" width="880.6" height="34.0" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2012-am-value-label" data-role="value-label" data-entity-id="2012-am" x="1050.6" y="306.8" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">54</text>
+</g>
+<g id="entity-2012-pm" data-role="entity" data-entity-id="2012-pm" data-label="2012 PM">
+<rect id="2012-pm-bar" data-role="bar" data-entity-id="2012-pm" data-value="52" x="160.0" y="321.8" width="848.0" height="34.0" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2012-pm-value-label" data-role="value-label" data-entity-id="2012-pm" x="1018.0" y="346.8" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">52</text>
+</g>
+<text data-role="category-label" x="144.0" y="438.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">2013</text>
+<g id="entity-2013-am" data-role="entity" data-entity-id="2013-am" data-label="2013 AM">
+<rect id="2013-am-bar" data-role="bar" data-entity-id="2013-am" data-value="58" x="160.0" y="394.2" width="945.8" height="34.0" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2013-am-value-label" data-role="value-label" data-entity-id="2013-am" x="1115.8" y="419.2" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">58</text>
+</g>
+<g id="entity-2013-pm" data-role="entity" data-entity-id="2013-pm" data-label="2013 PM">
+<rect id="2013-pm-bar" data-role="bar" data-entity-id="2013-pm" data-value="61" x="160.0" y="434.2" width="994.8" height="34.0" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2013-pm-value-label" data-role="value-label" data-entity-id="2013-pm" x="1164.8" y="459.2" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">61</text>
+</g>
+<text data-role="category-label" x="144.0" y="550.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">2014</text>
+<g id="entity-2014-am" data-role="entity" data-entity-id="2014-am" data-label="2014 AM">
+<rect id="2014-am-bar" data-role="bar" data-entity-id="2014-am" data-value="61" x="160.0" y="506.8" width="994.8" height="34.0" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2014-am-value-label" data-role="value-label" data-entity-id="2014-am" x="1164.8" y="531.8" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">61</text>
+</g>
+<g id="entity-2014-pm" data-role="entity" data-entity-id="2014-pm" data-label="2014 PM">
+<rect id="2014-pm-bar" data-role="bar" data-entity-id="2014-pm" data-value="64" x="160.0" y="546.8" width="1043.7" height="34.0" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="2014-pm-value-label" data-role="value-label" data-entity-id="2014-pm" x="1213.7" y="571.8" text-anchor="start" font-family="Arial, sans-serif" font-size="18" fill="#333333">64</text>
+</g>
+<line x1="1040" y1="92" x2="1076" y2="92" stroke="#E45756" stroke-width="8"/>
+<text x="1084" y="100" font-family="Arial, sans-serif" font-size="20" fill="#333333">AM</text>
+<line x1="1040" y1="122" x2="1076" y2="122" stroke="#4C78A8" stroke-width="8"/>
+<text x="1084" y="130" font-family="Arial, sans-serif" font-size="20" fill="#333333">PM</text>
+</g>
+</svg>

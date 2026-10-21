@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,note
+bar_39,$2 billion estate,estate-2b,590.0,2000000000,2000000000,1.0000,usd,#b8b8b8,svg_geometry,wealth tax on a $2 billion estate,single bar spanning the axis
+bar_39,First $50M of wealth,bracket-0-50m,,0-50000000,0,0.0,percent,,svg_label,marginal tax rate,no tax on the first $50M
+bar_39,$50M to $500M,bracket-50m-500m,,50000000-500000000,2,0.02,percent,,svg_label,marginal tax rate,2% per the chart; narration uses the same 2%
+bar_39,Above $500M,bracket-above-500m,,500000000+,3,0.03,percent,,svg_label,marginal tax rate,3% per the chart annotation
+bar_39,$2 billion estate,tax-due-2b,,2000000000,49000000,,usd,,narration_printed,tax due,narration: about $49 million

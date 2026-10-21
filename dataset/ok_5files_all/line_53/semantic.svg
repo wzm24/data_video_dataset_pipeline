@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#f7f4ee"/>
+<text x="60" y="66" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1d1d1d">ProPublica Analysis of IRS Data</text>
+<line x1="200.0" y1="560.0" x2="950.0" y2="560.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="275.0" y1="521.0" x2="800.0" y2="255.8" stroke="#000000" stroke-width="3"/>
+<line x1="350.0" y1="560.0" x2="350.0" y2="567.0" stroke="#1d1d1d" stroke-width="1.5"/>
+<text x="350.0" y="592.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">1</text>
+<circle cx="350.0" cy="483.1" r="7" fill="#d9534f"/>
+<text x="338.0" y="419.1142857142857" text-anchor="end" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#1d1d1d">$44.7 billion</text>
+<text x="338.0" y="445.1142857142857" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#1d1d1d">increase in</text>
+<text x="338.0" y="469.1142857142857" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#1d1d1d">lost taxes</text>
+<line x1="500.0" y1="560.0" x2="500.0" y2="567.0" stroke="#1d1d1d" stroke-width="1.5"/>
+<text x="500.0" y="592.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">2</text>
+<circle cx="500.0" cy="407.3" r="7" fill="#d9534f"/>
+<text x="490.0" y="391.34285714285716" text-anchor="end" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#1d1d1d">$90.5B</text>
+<line x1="650.0" y1="560.0" x2="650.0" y2="567.0" stroke="#1d1d1d" stroke-width="1.5"/>
+<text x="650.0" y="592.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">3</text>
+<circle cx="650.0" cy="331.6" r="7" fill="#d9534f"/>
+<text x="640.0" y="315.57142857142856" text-anchor="end" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#1d1d1d">$137.5B</text>
+<line x1="800.0" y1="560.0" x2="800.0" y2="567.0" stroke="#1d1d1d" stroke-width="1.5"/>
+<text x="800.0" y="592.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">4</text>
+<circle cx="800.0" cy="255.8" r="7" fill="#d9534f"/>
+<text x="790.0" y="239.8" text-anchor="end" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#1d1d1d">$185.7B</text>
+<text x="575" y="638.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#1d1d1d">PERCENTAGE POINT INCREASE IN CHEATING</text>
+</svg>

@@ -1,0 +1,110 @@
+{
+ "clip_id": "bar_7",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Contraceptive use 76% @ x_px=532.0"
+   ],
+   "assertion": {
+    "mark": "Contraceptive use 76% @ x_px=532.0",
+    "field": "value",
+    "expected": 76.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar/segment or endpoint label for contraceptive use must show 76% (or 76 with percent context)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Contraceptive use 76% @ x_px=532.0",
+    "segment:Remaining 24% @ x_px=982.0"
+   ],
+   "assertion": {
+    "segment": "Contraceptive use 76% @ x_px=532.0",
+    "expected_share": 0.76,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 76% contraceptive-use segment and the 24% remaining segment must be visible or labeled as parts of one whole."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Contraceptive use 76% @ x_px=532.0",
+    "mark:Remaining 24% @ x_px=982.0"
+   ],
+   "assertion": {
+    "greater": "Contraceptive use 76% @ x_px=532.0",
+    "lesser": "Remaining 24% @ x_px=982.0",
+    "expected_ratio": 3.1667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual must allow the 76% and 24% values to be compared through labels, aligned bars, or proportional areas."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Contraceptive use 76% @ x_px=532.0",
+    "mark:Remaining 24% @ x_px=982.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Contraceptive use 76% @ x_px=532.0",
+      "value": 76.0
+     },
+     {
+      "mark": "Remaining 24% @ x_px=982.0",
+      "value": 24.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The 76% contraceptive-use category must be visually ordered, emphasized, or sized as larger than the 24% remaining category."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_81",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the sharp increase in daily oxygen demand in early 2021 as the pandemic worsened.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip presents a single monthly oxygen-need series for the entity oxygen need spanning Mar 2020 to Mar 2021.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2020",
+     "field": "value",
+     "value": 200751.011,
+     "note": "first month in series"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2021",
+     "field": "value",
+     "value": 10501155.4015,
+     "note": "last month in series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Monthly oxygen need from March 2020 through March 2021",
+    "A single oxygen-need timeline covering the months Mar 2020 to Mar 2021",
+    "One series for oxygen need across the monthly points"
+   ],
+   "visual_evidence_rule": "One oxygen-need series is shown across the month range Mar 2020 to Mar 2021.",
+   "temporal_anchor": "the need for oxygen clause",
+   "reviewer_question": "Should the video be required to establish the monthly Mar 2020–Mar 2021 time span and single entity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "March 2021 is the maximum oxygen-need value in the series, far above the Jan–Feb 2021 level.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2021",
+     "field": "value",
+     "value": 10501155.4015,
+     "note": "maximum in table"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Jan 2021",
+     "field": "value",
+     "value": 1500577.7008,
+     "note": "same as Feb 2021"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Feb 2021",
+     "field": "value",
+     "value": 1500577.7008,
+     "note": "pre-spike level"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "March 2021 is the peak of oxygen need",
+    "Oxygen need reaches its highest monthly value in March 2021",
+    "The final month, March 2021, is the maximum point"
+   ],
+   "visual_evidence_rule": "The March 2021 mark must be visibly the highest point in the oxygen-need series.",
+   "temporal_anchor": "went up again clause",
+   "reviewer_question": "Is identifying March 2021 as the maximum required, or can the clip only show a sharp upward move?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Oxygen need increases sharply from Feb 2021 to Mar 2021, by about 9,000,577.70 oxygen-need value, or roughly sevenfold.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Feb 2021",
+     "field": "value",
+     "value": 1500577.7008,
+     "note": "starting level"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2021",
+     "field": "value",
+     "value": 10501155.4015,
+     "note": "ending level"
+    }
+   ],
+   "computation": "10,501,155.4015 - 1,500,577.7008 = 9,000,577.7007; 10,501,155.4015 / 1,500,577.7008 ≈ 7.0",
+   "accepted_routes": [
+    "Oxygen need jumps roughly sevenfold from February to March 2021",
+    "The March 2021 value is about 7× the February 2021 value",
+    "A sharp month-over-month increase of about 9.0 million oxygen-need value from Feb to Mar 2021"
+   ],
+   "visual_evidence_rule": "The Feb 2021 and Mar 2021 marks must show a steep upward jump.",
+   "temporal_anchor": "went up again clause",
+   "reviewer_question": "Should the exact month-over-month multiplier or only the qualitative sharp jump be required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Before the March 2021 spike, oxygen need had an earlier peak in Sep 2020 and then fell to a lower Jan–Feb 2021 level.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Sep 2020",
+     "field": "value",
+     "value": 4501733.1023,
+     "note": "earlier local maximum"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Jan 2021",
+     "field": "value",
+     "value": 1500577.7008,
+     "note": "lower pre-spike level"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Feb 2021",
+     "field": "value",
+     "value": 1500577.7008,
+     "note": "same lower pre-spike level"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "After a September 2020 high, oxygen need falls to a lower plateau by Jan–Feb 2021",
+    "The March 2021 spike follows a decline from the previous Sep 2020 peak",
+    "Oxygen need had already peaked earlier in Sep 2020 and then declined before rising again"
+   ],
+   "visual_evidence_rule": "The series must visibly show an earlier high around Sep 2020 followed by lower Jan–Feb 2021 values.",
+   "temporal_anchor": "went up again clause (the 'again')",
+   "reviewer_question": "Is the earlier Sep 2020 peak and subsequent decline required context, or optional background?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The March 2021 maximum is about 2.33 times the previous Sep 2020 peak, an increase of about 5,999,422.30 oxygen-need value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Sep 2020",
+     "field": "value",
+     "value": 4501733.1023,
+     "note": "previous peak"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2021",
+     "field": "value",
+     "value": 10501155.4015,
+     "note": "new peak"
+    }
+   ],
+   "computation": "10,501,155.4015 / 4,501,733.1023 ≈ 2.33; 10,501,155.4015 - 4,501,733.1023 = 5,999,422.2992",
+   "accepted_routes": [
+    "March 2021 oxygen need is more than twice the September 2020 peak",
+    "The March 2021 level is about 2.3× the earlier Sep 2020 maximum",
+    "The final spike exceeds the previous peak by about 6.0 million oxygen-need value"
+   ],
+   "visual_evidence_rule": "The March 2021 mark must be visibly about twice as high as the Sep 2020 mark.",
+   "temporal_anchor": "went up again clause",
+   "reviewer_question": "Should the clip explicitly compare the March 2021 spike to the previous Sep 2020 peak?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The initial rise from Mar 2020 to Sep 2020",
+  "The exact Jan–Feb 2021 plateau at 1,500,577.7008",
+  "All individual monthly oxygen-need values",
+  "The Oct–Dec 2020 decline from the Sep 2020 peak"
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that COVID cases or pandemic worsening caused the oxygen-need increase, since no COVID/pandemic variable is in the table",
+  "Extrapolating beyond March 2021",
+  "Using relative_value as a percentage or treating it as a 0–1 share",
+  "Calling the oxygen-need values dollars, percentages, counts, or a daily rate unless the table supplies that unit"
+ ],
+ "notes": "The table has a value column, so absolute comparisons are based on it; relative_value is not used as a percentage. The table has only one entity, so cross-entity comparison is not available.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 32.4,
+  "usage": {
+   "prompt_tokens": 1360,
+   "completion_tokens": 8206,
+   "total_tokens": 9566,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6158
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 848
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,113 @@
+{
+ "clip_id": "area_37",
+ "family": "area",
+ "chart_form": "area/bubble",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:student debt @ bachelor's degree completion"
+   ],
+   "assertion": {
+    "mark": "student debt @ bachelor's degree completion",
+    "field": "value",
+    "expected": 30000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A prominent $30,000 figure must be visible and linked to an individual graduate or bachelor's-completion context."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "student debt @ bachelor's degree completion",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show one individual or average borrower; do not show a sum across all borrowers."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A dollar sign or USD label should accompany the numeric amount."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a normalized scale appears, it has only one bar or segment; no second entity or category is implied."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:student debt @ bachelor's degree completion"
+   ],
+   "assertion": {
+    "mark": "student debt @ bachelor's degree completion",
+    "field": "value",
+    "expected": 30000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A graduation or bachelor's-completion marker should anchor the $30,000 figure, not an annual or monthly timeline."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_102",
+ "intent_en": "To highlight WeWork's status among top global startups and the controversy regarding its valuation.",
+ "previous_intent": "To illustrate the relative valuations of top startups including WeWork, Uber, and DiDi, highlighting WeWork's high market position and the controversy surrounding its overvaluation.",
+ "narration_support": "WeWork is the fourth highest valued startup in the world, just behind Uber and its Chinese competitor. Many have called it massively overvalued, even the most overvalued.",
+ "chart_support": "Horizontal bar chart titled 'Top Startup Valuations' comparing the relative valuations of Toutiao, Uber, DiDi, and WeWork.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "Narration explicitly states WeWork's high rank and overvaluation criticism. Chart visualizes the top 4 valuations with WeWork as the lowest of the group, supporting the ranking claim.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

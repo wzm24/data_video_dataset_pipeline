@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_77,In-N-Out,in-n-out,270.8,,1.000,0.0250,,#f2921f,printed
+bar_77,Whataburger,whataburger,281.5,,2.000,0.0500,,#f5a623,printed
+bar_77,Five Guys,five-guys,303.0,,4.000,0.1000,,#a50e2d,printed
+bar_77,McDonald&#x27;s,mcdonald-x27-s,690.0,,40.000,1.0000,,#a50e2d,printed

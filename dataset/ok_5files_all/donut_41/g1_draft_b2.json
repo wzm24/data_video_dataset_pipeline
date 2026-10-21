@@ -1,0 +1,215 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_41",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers about the proportion of people who consider themselves 'cat people'.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The reported value for cat people is exactly 11.5%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "cat people",
+     "x": "value",
+     "field": "value",
+     "value": 11.5,
+     "note": "Table value is 11.5; unit is percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "11.5%",
+    "11.5 percent",
+    "exactly 11.5% of people"
+   ],
+   "visual_evidence_rule": "The numeric label for the cat-people data point must read 11.5% or 11.5 percent.",
+   "temporal_anchor": "The single narration clause stating 'Only 11.5% of people consider themselves cat people.'",
+   "reviewer_question": "Must the video display the exact numeric value 11.5%, or is an unlabeled segment insufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Cat people make up 11.5% of the whole measured population.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "cat people",
+     "x": "value",
+     "field": "value",
+     "value": 11.5,
+     "note": "Percent unit indicates a part-to-whole share."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cat people are 11.5% of the total",
+    "The cat-people share is 11.5%",
+    "11.5% of people consider themselves cat people"
+   ],
+   "visual_evidence_rule": "A donut or part-to-whole chart must show cat people as a slice/sector labeled 11.5% of the whole.",
+   "temporal_anchor": "The same narration clause, especially the phrase 'of people'.",
+   "reviewer_question": "Is the part-to-whole share, not just the raw number, required to be conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The category is people who consider themselves cat people, not cat owners or cats.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "cat people",
+     "x": "entity_id",
+     "field": "entity_label",
+     "value": "cat people",
+     "note": "Only category in the table is 'cat people'; x_px is 0."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "cat people",
+    "people who consider themselves cat people",
+    "self-identified cat people"
+   ],
+   "visual_evidence_rule": "The legend or segment label must identify 'cat people' or 'people who consider themselves cat people'.",
+   "temporal_anchor": "The subject phrase in the narration: '...consider themselves cat people'.",
+   "reviewer_question": "Must the video name the category precisely as self-identified cat people rather than cat owners?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The same share can be expressed as 0.1150 or 0.115 of the total.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "cat people",
+     "x": "relative_value",
+     "field": "relative_value",
+     "value": 0.115,
+     "note": "Table relative_value is 0.1150, the decimal form of 11.5%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "0.1150",
+    "0.115",
+    "11.5% as a decimal proportion"
+   ],
+   "visual_evidence_rule": "If displayed, the decimal label must read 0.1150 or 0.115, not 1.15 or 115.",
+   "temporal_anchor": "The same narration clause, if a decimal equivalent is shown.",
+   "reviewer_question": "Is showing the decimal equivalent optional, or should it be required alongside the percentage?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The complement of cat people is 88.5% of the whole.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "cat people",
+     "x": "value",
+     "field": "value",
+     "value": 11.5,
+     "note": "Used to compute the complement: 100 - 11.5 = 88.5."
+    }
+   ],
+   "computation": "100 - 11.5 = 88.5",
+   "accepted_routes": [
+    "88.5% are not cat people",
+    "the remaining share is 88.5%",
+    "the non-cat-people share is 0.885"
+   ],
+   "visual_evidence_rule": "If shown, the remaining donut area or complement label must read 88.5% or 0.885.",
+   "temporal_anchor": "The same narration clause or a follow-up clause if the complement is included.",
+   "reviewer_question": "Is the 88.5% non-cat-people complement optional, or should it be included as context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Using the word 'only' as emphasis for the 11.5% share.",
+  "Showing the donut chart's remaining area as unlabeled context.",
+  "Using a donut chart to convey part-to-whole composition."
+ ],
+ "unsupported_to_avoid": [
+  "88.5% are dog people; the complement is not cat people, not necessarily dog people.",
+  "Cat ownership rates or numbers of cats.",
+  "Causal claims about why 11.5% consider themselves cat people.",
+  "Extrapolating to a different population or future time.",
+  "Comparing to dog people without another table row."
+ ],
+ "notes": "Only one table row supports the cat-people share: 11.5% (relative 0.1150). The main risk is treating the complement as dog people or confusing self-identified cat people with cat owners.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.01
+ },
+ "draft_cost": {
+  "sec": 36.7,
+  "usage": {
+   "prompt_tokens": 585,
+   "completion_tokens": 8263,
+   "total_tokens": 8848,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6805
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 329
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

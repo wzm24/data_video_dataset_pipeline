@@ -1,0 +1,129 @@
+{
+ "clip_id": "donut_3",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:state 3s @ 3"
+   ],
+   "assertion": {
+    "mark": "state 3s @ 3",
+    "field": "value",
+    "expected": 90.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart label, donut segment, or annotation for state 3s must show 90% (or 0.90)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:state 8s @ 8"
+   ],
+   "assertion": {
+    "mark": "state 8s @ 8",
+    "field": "value",
+    "expected": 60.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart label, donut segment, or annotation for state 8s must show 60% (or 0.60)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:state 3s @ 3",
+    "mark:state 8s @ 8"
+   ],
+   "assertion": {
+    "low": "state 8s @ 8",
+    "low_value": 60.0,
+    "high": "state 3s @ 3",
+    "high_value": 90.0,
+    "delta": 30.0,
+    "ratio": 1.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 90% and 60% states must be visible, or an explicit annotation/arrow must show the 30-point or one-third decrease."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:state 3s @ 3",
+    "mark:state 8s @ 8"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "state 3s @ 3",
+      "value": 90.0
+     },
+     {
+      "mark": "state 8s @ 8",
+      "value": 60.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Both values must be visible with state 3s larger than state 8s, or a downward arrow/order must indicate the decrease."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If shown, state last must be marked as rating/illustrative and must not be drawn as a numeric percent segment."
+  }
+ ]
+}

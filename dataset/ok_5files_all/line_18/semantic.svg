@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#b5b2a8"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Taco Inc.</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<g id="entity-taco-inc" data-role="entity" data-entity-id="taco-inc" data-label="Taco Inc." data-series="true">
+<polyline id="taco-inc-polyline" data-role="polyline" data-entity-id="taco-inc" points="120.0,485.0 162.3,471.2 204.6,485.0 246.9,287.2 289.2,278.0 331.5,287.2 373.8,264.2 416.2,278.0 458.5,241.2 500.8,218.2 543.1,209.0 585.4,195.2 627.7,209.0 670.0,186.0 712.3,195.2 754.6,172.2 796.9,163.0 839.2,163.0 881.5,176.8 923.8,485.0 966.2,471.2 1008.5,485.0 1050.8,498.8 1093.1,508.0 1135.4,544.8 1177.7,600.0 1220.0,600.0" fill="none" stroke="#ffffff" stroke-width="2" data-animation-property="points"/>
+</g>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#ffffff" stroke-width="2"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Taco Inc.</text>
+</g>
+</svg>

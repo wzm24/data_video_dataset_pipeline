@@ -1,0 +1,278 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_105",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that individuals who do not attend college are concentrated in lower income brackets, supporting the argument that post-secondary training is economically necessary and student debt cancellation is irrelevant for this group.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The DIDN'T ATTEND COLLEGE series is highest in the lowest income bracket and decreases monotonically across the income brackets, reaching its lowest value in the highest income bracket.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Less than $23,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "highest non-college relative_value; lowest income bracket"
+    },
+    {
+     "entity": "More than $176,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "lowest non-college relative_value; highest income bracket"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Non-college attendance peaks in the lowest income bracket and falls as income rises.",
+    "The DIDN'T ATTEND COLLEGE segment is most concentrated at the bottom of the income distribution and least at the top.",
+    "The non-college series slopes downward from the lowest bracket to the highest bracket."
+   ],
+   "visual_evidence_rule": "The values for DIDN'T ATTEND COLLEGE must be shown descending from the lowest-income category to the highest-income category.",
+   "temporal_anchor": "the narration clause identifying the non-college group as the 'them' affected by the income argument",
+   "reviewer_question": "Must the clip show the full downward trend, or is a single high-low endpoint contrast sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In the lowest two income brackets, the DIDN'T ATTEND COLLEGE relative value is larger than the ATTENDED COLLEGE relative value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Less than $23,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "non-college value in lowest bracket"
+    },
+    {
+     "entity": "Less than $23,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.25,
+     "note": "college-attended value in lowest bracket"
+    },
+    {
+     "entity": "$23,000 to $42,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "non-college value in second-lowest bracket"
+    },
+    {
+     "entity": "$23,000 to $42,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.35,
+     "note": "college-attended value in second-lowest bracket"
+    }
+   ],
+   "computation": "0.75 / 0.25 = 3",
+   "accepted_routes": [
+    "The non-college group is the larger group in the bottom two income brackets.",
+    "At the low end, DIDN'T ATTEND COLLEGE exceeds ATTENDED COLLEGE.",
+    "The non-college value is about three times the college-attended value in the lowest bracket."
+   ],
+   "visual_evidence_rule": "In the lowest two income categories, the DIDN'T ATTEND COLLEGE value must appear greater than the ATTENDED COLLEGE value.",
+   "temporal_anchor": "the narration clause about people who did not attend college being concentrated in lower income brackets",
+   "reviewer_question": "Is the low-end group comparison required, or is the overall non-college downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the middle income bracket, the ATTENDED COLLEGE and DIDN'T ATTEND COLLEGE relative values are equal at 0.50.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "$42,000 to $68,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.5,
+     "note": "non-college value at middle bracket"
+    },
+    {
+     "entity": "$42,000 to $68,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.5,
+     "note": "college-attended value at middle bracket"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The two groups meet in the middle income bracket.",
+    "At the middle bracket, ATTENDED COLLEGE and DIDN'T ATTEND COLLEGE are equal.",
+    "Neither group leads at the middle income bracket."
+   ],
+   "visual_evidence_rule": "At the middle income category, the two series must have equal values.",
+   "temporal_anchor": "optional; best paired with the transition between low-income and high-income clauses, if the narration includes one",
+   "reviewer_question": "Should the equality/crossover at the middle bracket be shown explicitly, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "In the highest income bracket, the ATTENDED COLLEGE relative value is much larger than the DIDN'T ATTEND COLLEGE relative value; the gap is 0.55 minus 0.05.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "More than $176,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.55,
+     "note": "college-attended value in highest bracket"
+    },
+    {
+     "entity": "More than $176,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "non-college value in highest bracket"
+    }
+   ],
+   "computation": "0.55 - 0.05 = 0.50",
+   "accepted_routes": [
+    "At the top income bracket, the college-attended group is far larger than the non-college group.",
+    "The non-college segment is smallest at the top, far below the college-attended segment.",
+    "The widest top-end gap between the two groups is in the highest income bracket."
+   ],
+   "visual_evidence_rule": "In the highest income category, the ATTENDED COLLEGE value must appear much greater than the DIDN'T ATTEND COLLEGE value.",
+   "temporal_anchor": "the narration clause contrasting the non-college group with the post-high-school training message",
+   "reviewer_question": "Is the top-end gap required to reinforce that non-college individuals are not concentrated in high brackets?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The ATTENDED COLLEGE series generally rises from the lowest income bracket to the upper-middle brackets, then plateaus in the top brackets.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Less than $23,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.25,
+     "note": "lowest college-attended value"
+    },
+    {
+     "entity": "$68,000 to $111,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "highest college-attended value"
+    },
+    {
+     "entity": "$111,000 to $176,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.55,
+     "note": "top-bracket value"
+    },
+    {
+     "entity": "More than $176,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.55,
+     "note": "top-bracket value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "College attendance is lowest in the bottom bracket and highest in the upper brackets.",
+    "The ATTENDED COLLEGE series rises across income and levels off near the top.",
+    "The college-attended group becomes more prominent as income rises."
+   ],
+   "visual_evidence_rule": "The ATTENDED COLLEGE values must be shown rising from the lowest-income category and staying high in the top categories.",
+   "temporal_anchor": "optional; supports the post-high-school training clause",
+   "reviewer_question": "Should the chart include the parallel rise of the college-attended series, or focus only on the non-college series?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The middle-bracket equality at 0.50 can be omitted if the clip focuses only on the low-end concentration and top-end gap.",
+  "The plateau of ATTENDED COLLEGE in the top two brackets is optional detail.",
+  "The exact ordering of the ATTENDED COLLEGE values between the upper-middle and top brackets can be simplified if the main contrast is preserved."
+ ],
+ "unsupported_to_avoid": [
+  "Claims that student debt cancellation is irrelevant or that post-secondary training is economically necessary as a causal effect.",
+  "Any percentages, counts, or monetary amounts as data values not present in the table.",
+  "Treating relative_value as a percentage instead of a 0-1 relative share/normalization.",
+  "Causal claims that income bracket determines college attendance or vice versa.",
+  "Extrapolation beyond the six income brackets shown."
+ ],
+ "notes": "Use relative_value only; the table has no absolute value column. The core visible contrast is the DIDN'T ATTEND COLLEGE series falling from the lowest to highest income brackets while the ATTENDED COLLEGE series rises and plateaus.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 52.0,
+  "usage": {
+   "prompt_tokens": 1592,
+   "completion_tokens": 12185,
+   "total_tokens": 13777,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10006
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 952
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

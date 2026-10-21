@@ -1,0 +1,234 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "pie_6",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that oil contributes a negligible portion to Dubai's GDP today.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Oil accounts for 0.3% of Dubai's GDP today.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Oil",
+     "x": "0",
+     "field": "value",
+     "value": 0.3,
+     "note": "Table value is 0.3 in % units; relative_value 0.003 confirms 0.3%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Oil is 0.3% of Dubai's GDP.",
+    "Oil's share of GDP is about 0.3%.",
+    "Oil contributes roughly one-third of one percent of GDP.",
+    "Oil is specifically 0.3%, not 0%."
+   ],
+   "visual_evidence_rule": "The oil slice/segment or an on-screen label must display 0.3% (or an equivalent rounded statement such as about 0.3%).",
+   "temporal_anchor": "today it only accounts for ... of its GDP",
+   "reviewer_question": "Must the video state the exact 0.3% oil share, or is the <1% threshold sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Oil's share is below the 1% threshold: less than 1% of Dubai's GDP.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Oil",
+     "x": "0",
+     "field": "value",
+     "value": 0.3,
+     "note": "0.3 is below the table note/narration threshold of less than 1%."
+    }
+   ],
+   "computation": "0.3 < 1 (threshold from table note/narration)",
+   "accepted_routes": [
+    "Oil accounts for less than 1% of GDP.",
+    "Oil is under 1% of GDP.",
+    "Oil's GDP share is below one percent.",
+    "Not even 1% of Dubai's GDP comes from oil."
+   ],
+   "visual_evidence_rule": "A visible annotation or label must state 'less than 1%' or show a 1% reference line/benchmark with the oil value below it.",
+   "temporal_anchor": "today it only accounts for less than 1% of its GDP",
+   "reviewer_question": "Is the qualitative '<1%' threshold required independently of the exact 0.3% value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The non-oil / rest-of-GDP share is 99.7%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Rest of GDP (non-oil)",
+     "x": "1",
+     "field": "value",
+     "value": 99.7,
+     "note": "Table value is 99.7 in % units; relative_value 0.997 confirms 99.7%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Non-oil / rest of GDP is 99.7%.",
+    "The rest of Dubai's GDP accounts for 99.7%.",
+    "Almost all GDP (99.7%) is non-oil.",
+    "Non-oil share is about 99.7%."
+   ],
+   "visual_evidence_rule": "The non-oil slice or complement label must display 99.7%, or the chart must clearly show the rest of the pie making up nearly all GDP.",
+   "temporal_anchor": "its GDP / today",
+   "reviewer_question": "Must the video explicitly give the non-oil complement value, or is showing only oil's tiny share enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Non-oil GDP share vastly exceeds oil's share: the gap is 99.4 percentage points, or non-oil is about 332 times oil's share.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Oil",
+     "x": "0",
+     "field": "value",
+     "value": 0.3,
+     "note": "Oil share in % units."
+    },
+    {
+     "entity": "Rest of GDP (non-oil)",
+     "x": "1",
+     "field": "value",
+     "value": 99.7,
+     "note": "Non-oil share in % units."
+    }
+   ],
+   "computation": "99.7 - 0.3 = 99.4 percentage points; 99.7 / 0.3 = 332.33",
+   "accepted_routes": [
+    "Non-oil's share is about 332 times oil's share.",
+    "Oil's share is roughly 1/332 of non-oil's share.",
+    "Oil is 99.4 percentage points below non-oil.",
+    "The gap between non-oil and oil is 99.4 percentage points."
+   ],
+   "visual_evidence_rule": "If used, the chart or annotation must compare the two shares directly, e.g., 0.3% vs 99.7%, a 99.4-point gap, or a ~332x ratio. It should not imply 0.3% of non-oil GDP.",
+   "temporal_anchor": "today it only accounts for less than 1% of its GDP",
+   "reviewer_question": "Is a direct oil-vs-non-oil ratio/difference annotation required, or is showing the two shares side by side sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Oil and non-oil shares are complementary and sum to 100% of Dubai's GDP.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Oil",
+     "x": "0",
+     "field": "value",
+     "value": 0.3,
+     "note": "Oil share in % units."
+    },
+    {
+     "entity": "Rest of GDP (non-oil)",
+     "x": "1",
+     "field": "value",
+     "value": 99.7,
+     "note": "Non-oil complement in % units."
+    }
+   ],
+   "computation": "0.3 + 99.7 = 100.0",
+   "accepted_routes": [
+    "Oil plus non-oil equals 100% of GDP.",
+    "The two shares together sum to 100%.",
+    "0.3% + 99.7% = 100%.",
+    "The pie covers all of Dubai's GDP with no missing slice."
+   ],
+   "visual_evidence_rule": "The pie/bar must have exactly the two complementary categories Oil and Rest of GDP (non-oil), with no unexplained remainder; a sum-to-100 annotation can appear.",
+   "temporal_anchor": "its GDP clause",
+   "reviewer_question": "Must the video explicitly state that the shares sum to 100%, or is this implicit in the pie/complement chart?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Dubai does have oil, but it is a tiny GDP category; this identity statement is valid only if it is not confused with oil being a large share.",
+  "A visual 1% benchmark line is optional if the text already clearly says oil is less than 1%."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about economic diversification or oil causing non-oil growth.",
+  "Historical trends, future projections, or dates not in the table.",
+  "Dollar GDP amounts, total GDP figures, or other sector breakdowns.",
+  "Saying oil is 0% of GDP or that Dubai has no oil.",
+  "Comparing oil to non-oil GDP using the wrong denominator, e.g., 0.3% of non-oil GDP.",
+  "Claiming oil is exactly 1% of GDP."
+ ],
+ "notes": "The table gives only two shares, so all numeric claims should stay within 0.3%, 99.7%, and derived <1%, 99.4 pp, ~332x, or 100% sum. Do not add years, GDP dollar amounts, other sectors, or causal claims about diversification.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 37.2,
+  "usage": {
+   "prompt_tokens": 705,
+   "completion_tokens": 8837,
+   "total_tokens": 9542,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6950
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 321
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

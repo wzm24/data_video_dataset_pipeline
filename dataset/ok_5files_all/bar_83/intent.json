@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_83",
+ "intent_en": "To explain the financial motivation behind the alcohol industry's opposition to marijuana by contrasting the current market revenues of alcohol and marijuana.",
+ "previous_intent": "To illustrate the economic threat marijuana poses to the alcohol industry, explaining the financial motivations behind the alcohol sector's opposition.",
+ "narration_support": "marijuana is a serious threat to alcohol sales",
+ "chart_support": "Bar chart comparing revenue (indicated by $$$ and bar height) showing a large disparity where alcohol (beer mug) has significantly higher revenue than marijuana (leaf)",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly states the alcohol industry opposes marijuana due to sales threats. The chart visualizes this by showing alcohol revenue (tall bar, beer mug) vastly exceeding marijuana revenue (short bar, leaf), illustrating the high financial stakes for the alcohol industry.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

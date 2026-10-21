@@ -1,0 +1,144 @@
+{
+ "clip_id": "area_44",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must identify the series as BRK-A price in USD and cover the 1965–2020 time span."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "BRK-A price @ 2020.97",
+    "extreme": "max",
+    "expected": 429825.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final/maximum point must be visibly marked or labeled as 429,825 USD (or about 430k USD), with relative_value 1.0."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:BRK-A price @ 1982.89",
+    "mark:BRK-A price @ 2020.97"
+   ],
+   "assertion": {
+    "low": "BRK-A price @ 1982.89",
+    "low_value": 307.0,
+    "high": "BRK-A price @ 2020.97",
+    "high_value": 429825.0,
+    "delta": 429518.0,
+    "ratio": 1400.0814,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must support a comparison between the first nonzero value 307 USD (1982.89) and the final value 429,825 USD (2020.97), or show the resulting ~1,400x growth."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:BRK-A price @ 2015.01",
+    "mark:BRK-A price @ 2020.97"
+   ],
+   "assertion": {
+    "low": "BRK-A price @ 2015.01",
+    "low_value": 185175.0,
+    "high": "BRK-A price @ 2020.97",
+    "high_value": 429825.0,
+    "delta": 244650.0,
+    "ratio": 2.3212,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the late-period steepness visible by showing the 2015 value 185,175 USD and the 2020 value 429,825 USD, or annotating the 244,650 USD gain."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:BRK-A price @ 2000.41",
+    "mark:BRK-A price @ 2000.53",
+    "mark:BRK-A price @ 2010.39",
+    "mark:BRK-A price @ 2010.51",
+    "mark:BRK-A price @ 2017.44",
+    "mark:BRK-A price @ 2017.57",
+    "mark:BRK-A price @ 2020.61",
+    "mark:BRK-A price @ 2020.73"
+   ],
+   "assertion": {
+    "series": "BRK-A price",
+    "values": [
+     94298.0,
+     104167.0,
+     186228.0,
+     205702.0,
+     297193.0,
+     303246.0,
+     398553.0,
+     419561.0
+    ],
+    "threshold_between": [
+     94298.0,
+     419561.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the curve passing the 100k, 200k, 300k, and 400k USD levels, or annotate those crossings."
+  }
+ ]
+}

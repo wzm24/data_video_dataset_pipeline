@@ -1,0 +1,28 @@
+{
+ "clip_id": "pie_19",
+ "intent_en": "To explain how the weighting of standardized test scores in the U.S. News college ranking formula allows universities to manipulate their rankings.",
+ "previous_intent": "To illustrate how universities can manipulate U.S. News college rankings by strategically managing standardized test score submissions and average scores to exploit the formula's weighting and discount rules.",
+ "narration_support": "leaves plenty of room for schools to game the system",
+ "chart_support": "Pie chart and list of universities (Stanford, Dartmouth, Yale) visualizing the proportion of SAT/ACT scores in the U.S. News ranking formula",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly discusses how the formula allows schools to 'game the system' by manipulating submission rates or scores. The chart visualizes the 7.75% weight of SAT/ACT scores and lists top universities, supporting the context of the ranking formula discussion.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

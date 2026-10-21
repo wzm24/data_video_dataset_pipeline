@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F0F0F0"/>
+<rect id="chart-title-box" data-role="title-box" x="60" y="28" width="240" height="52" rx="6" fill="#B9A58C"/>
+<text id="chart-title" data-role="title" x="180" y="64" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">MERCURY</text>
+<g id="chart-plot" data-role="plot">
+<path id="arc-red" data-role="bar" data-entity-id="max-temperature" data-label="Max temperature" d="M 640 580 A 190 190 0 0 0 774.4 255.6" fill="none" stroke="#C0563F" stroke-width="56"/>
+<path id="arc-blue" data-role="bar" data-entity-id="min-temperature" data-label="Min temperature" d="M 640 580 A 190 190 0 0 1 505.6 524.4" fill="none" stroke="#3B82F6" stroke-width="56"/>
+<text id="hot-label" data-role="value-label" data-entity-id="max-temperature" x="800" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#C0563F">437 °C</text>
+<text id="cold-label" data-role="value-label" data-entity-id="min-temperature" x="470" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#3B82F6">-173 °C</text>
+<rect id="zero-box" x="596" y="590" width="88" height="34" rx="6" fill="#666666"/>
+<text id="zero-label" data-role="value-label" x="640" y="614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">0 °C</text>
+</g>
+</svg>

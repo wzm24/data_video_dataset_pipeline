@@ -1,0 +1,149 @@
+{
+ "clip_id": "bar_147",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "High income",
+    "extreme": "max",
+    "expected": 0.5353,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative magnitude for High income must be visibly greater than every other listed entity."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:High income",
+    "mark:Covax"
+   ],
+   "assertion": {
+    "greater": "High income",
+    "lesser": "Covax",
+    "expected_ratio": 4.2721,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the relative magnitude of High income and Covax directly comparable so the roughly fourfold gap is visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:High income",
+    "mark:Upper middle income"
+   ],
+   "assertion": {
+    "greater": "High income",
+    "lesser": "Upper middle income",
+    "expected_ratio": 3.9159,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow High income to be compared against the combined remainder of the other four entities."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:High income",
+    "mark:Upper middle income",
+    "mark:Covax",
+    "mark:Lower middle income",
+    "mark:Lower income"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "High income",
+      "value": 0.5353
+     },
+     {
+      "mark": "Upper middle income",
+      "value": 0.1367
+     },
+     {
+      "mark": "Covax",
+      "value": 0.1253
+     },
+     {
+      "mark": "Lower middle income",
+      "value": 0.0535
+     },
+     {
+      "mark": "Lower income",
+      "value": 0.0353
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative ordering of all five entities must be visually discernible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:High income",
+    "mark:Lower income"
+   ],
+   "assertion": {
+    "greater": "High income",
+    "lesser": "Lower income",
+    "expected_ratio": 15.1643,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the relative magnitudes of High income and Lower income comparable enough to show the roughly fifteenfold gap."
+  }
+ ]
+}

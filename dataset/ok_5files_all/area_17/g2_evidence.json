@@ -1,0 +1,129 @@
+{
+ "clip_id": "area_17",
+ "family": "area",
+ "chart_form": "area/overlay_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Bedrock @ 513.0",
+    "mark:Bedrock @ 180.0"
+   ],
+   "assertion": {
+    "greater": "Bedrock @ 513.0",
+    "lesser": "Bedrock @ 180.0",
+    "expected_ratio": -0.7471,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bedrock data encoding must show negative values in the West Antarctic section and positive values in the central/East Antarctic section."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Ice surface @ 180.0",
+    "mark:Bedrock @ 180.0"
+   ],
+   "assertion": {
+    "at": "180.0",
+    "above": "Ice surface",
+    "above_value": 0.462,
+    "below": "Bedrock",
+    "below_value": -2.127,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the West Antarctic ice surface above sea level and the corresponding bedrock below sea level at the same location."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Ice surface @ 756.0",
+    "mark:Bedrock @ 756.0"
+   ],
+   "assertion": {
+    "greater": "Ice surface @ 756.0",
+    "lesser": "Bedrock @ 756.0",
+    "expected_ratio": 3.6427,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show positive bedrock elevation under the central/East Antarctic ice surface."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Ice surface @ 180.0",
+    "extreme": "min",
+    "expected": 0.462,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The ice surface data encoding must show a high interior value and a much lower value at the West Antarctic end."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Ice surface @ 180.0",
+    "mark:Bedrock @ 180.0"
+   ],
+   "assertion": {
+    "greater": "Ice surface @ 180.0",
+    "lesser": "Bedrock @ 180.0",
+    "expected_ratio": -0.2172,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow comparison of ice thickness (surface minus bedrock) between the West and central/East sections, or otherwise show that both are roughly 2.6–2.8 km thick."
+  }
+ ]
+}

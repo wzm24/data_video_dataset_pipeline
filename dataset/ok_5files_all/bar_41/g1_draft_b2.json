@@ -1,0 +1,348 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_41",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that traffic congestion on the Katy Freeway has worsened over time, with travel times increasing for both morning and afternoon commutes.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Morning commute travel time increases from 47 minutes in 2011 to 61 minutes in 2014.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "AM",
+     "x": "2011",
+     "field": "value",
+     "value": 47,
+     "note": "Morning 2011 travel time in minutes"
+    },
+    {
+     "entity": "AM",
+     "x": "2014",
+     "field": "value",
+     "value": 61,
+     "note": "Morning 2014 travel time in minutes"
+    }
+   ],
+   "computation": "61 - 47 = 14",
+   "accepted_routes": [
+    "The morning commute rises from 47 minutes in 2011 to 61 minutes in 2014.",
+    "AM travel time increases by 14 minutes over the period.",
+    "The morning commute is 14 minutes longer by 2014 than in 2011."
+   ],
+   "visual_evidence_rule": "The 2011 and 2014 AM values, or their difference, must be readable from the chart.",
+   "temporal_anchor": "got worse in ... morning commutes",
+   "reviewer_question": "Is the morning-commute increase from 47 to 61 minutes required, or is a general both-series increase enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Afternoon commute travel time increases from 42 minutes in 2011 to 64 minutes in 2014.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "PM",
+     "x": "2011",
+     "field": "value",
+     "value": 42,
+     "note": "Afternoon 2011 travel time in minutes"
+    },
+    {
+     "entity": "PM",
+     "x": "2014",
+     "field": "value",
+     "value": 64,
+     "note": "Afternoon 2014 travel time in minutes"
+    }
+   ],
+   "computation": "64 - 42 = 22",
+   "accepted_routes": [
+    "The afternoon commute rises from 42 minutes in 2011 to 64 minutes in 2014.",
+    "PM travel time increases by 22 minutes over the period.",
+    "The afternoon commute is 22 minutes longer by 2014 than in 2011."
+   ],
+   "visual_evidence_rule": "The 2011 and 2014 PM values, or their difference, must be readable from the chart.",
+   "temporal_anchor": "got worse in ... afternoon commutes",
+   "reviewer_question": "Is the afternoon-commute increase from 42 to 64 minutes required, or is a general both-series increase enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Both morning and afternoon travel times rise in each year from 2011 to 2014 without any yearly decline.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "AM",
+     "x": "2011",
+     "field": "value",
+     "value": 47,
+     "note": "AM 2011"
+    },
+    {
+     "entity": "AM",
+     "x": "2012",
+     "field": "value",
+     "value": 54,
+     "note": "AM 2012"
+    },
+    {
+     "entity": "AM",
+     "x": "2013",
+     "field": "value",
+     "value": 58,
+     "note": "AM 2013"
+    },
+    {
+     "entity": "AM",
+     "x": "2014",
+     "field": "value",
+     "value": 61,
+     "note": "AM 2014"
+    },
+    {
+     "entity": "PM",
+     "x": "2011",
+     "field": "value",
+     "value": 42,
+     "note": "PM 2011"
+    },
+    {
+     "entity": "PM",
+     "x": "2012",
+     "field": "value",
+     "value": 52,
+     "note": "PM 2012"
+    },
+    {
+     "entity": "PM",
+     "x": "2013",
+     "field": "value",
+     "value": 61,
+     "note": "PM 2013"
+    },
+    {
+     "entity": "PM",
+     "x": "2014",
+     "field": "value",
+     "value": 64,
+     "note": "PM 2014"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Both AM and PM travel times are higher in each successive year from 2011 to 2014.",
+    "Neither series declines in any year; both increase monotonically.",
+    "AM rises 47 to 54 to 58 to 61, and PM rises 42 to 52 to 61 to 64."
+   ],
+   "visual_evidence_rule": "The year-by-year ordering for both AM and PM must be visible so that every step from 2011 to 2014 is upward.",
+   "temporal_anchor": "got worse in both the morning and afternoon commutes",
+   "reviewer_question": "Must the video show year-by-year monotonic increase, or only the 2011-to-2014 endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Afternoon travel time overtakes morning travel time: AM is longer in 2011 and 2012, but PM is longer in 2013 and 2014.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "AM",
+     "x": "2011",
+     "field": "value",
+     "value": 47,
+     "note": "AM 2011"
+    },
+    {
+     "entity": "PM",
+     "x": "2011",
+     "field": "value",
+     "value": 42,
+     "note": "PM 2011"
+    },
+    {
+     "entity": "AM",
+     "x": "2012",
+     "field": "value",
+     "value": 54,
+     "note": "AM 2012"
+    },
+    {
+     "entity": "PM",
+     "x": "2012",
+     "field": "value",
+     "value": 52,
+     "note": "PM 2012"
+    },
+    {
+     "entity": "AM",
+     "x": "2013",
+     "field": "value",
+     "value": 58,
+     "note": "AM 2013"
+    },
+    {
+     "entity": "PM",
+     "x": "2013",
+     "field": "value",
+     "value": 61,
+     "note": "PM 2013"
+    },
+    {
+     "entity": "AM",
+     "x": "2014",
+     "field": "value",
+     "value": 61,
+     "note": "AM 2014"
+    },
+    {
+     "entity": "PM",
+     "x": "2014",
+     "field": "value",
+     "value": 64,
+     "note": "PM 2014"
+    }
+   ],
+   "computation": "AM - PM differences: 2011 +5, 2012 +2, 2013 -3, 2014 -3",
+   "accepted_routes": [
+    "PM overtakes AM: AM is longer in 2011 and 2012, but PM is longer in 2013 and 2014.",
+    "The afternoon commute becomes the slower one by 2013.",
+    "AM is 5 minutes longer than PM in 2011, but PM is 3 minutes longer than AM in 2013 and 2014."
+   ],
+   "visual_evidence_rule": "Both AM and PM values for 2011 and at least 2013 must be visible to show the crossover.",
+   "temporal_anchor": "both the morning and afternoon commutes",
+   "reviewer_question": "Should the PM overtaking AM be included as a required insight or treated as optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The afternoon commute has a larger total increase than the morning commute over 2011–2014: PM rises by 22 minutes while AM rises by 14 minutes, a difference of 8 minutes.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "AM",
+     "x": "2011",
+     "field": "value",
+     "value": 47,
+     "note": "AM 2011"
+    },
+    {
+     "entity": "AM",
+     "x": "2014",
+     "field": "value",
+     "value": 61,
+     "note": "AM 2014"
+    },
+    {
+     "entity": "PM",
+     "x": "2011",
+     "field": "value",
+     "value": 42,
+     "note": "PM 2011"
+    },
+    {
+     "entity": "PM",
+     "x": "2014",
+     "field": "value",
+     "value": 64,
+     "note": "PM 2014"
+    }
+   ],
+   "computation": "(64 - 42) - (61 - 47) = 8",
+   "accepted_routes": [
+    "The afternoon commute increased more than the morning: +22 minutes vs +14 minutes.",
+    "PM rise exceeds AM rise by 8 minutes over 2011–2014.",
+    "Both worsen, but PM’s total increase is 8 minutes larger than AM’s."
+   ],
+   "visual_evidence_rule": "The endpoint values or total changes for both AM and PM must be visible so their increases can be compared.",
+   "temporal_anchor": "got worse in both the morning and afternoon commutes",
+   "reviewer_question": "Should the larger PM increase be required, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "PM 2014 is the maximum travel time in the table at 64 minutes.",
+  "The PM–AM gap in 2014 is 3 minutes (64 - 61).",
+  "The combined AM + PM travel time rises from 89 minutes in 2011 to 125 minutes in 2014."
+ ],
+ "unsupported_to_avoid": [
+  "Causal explanations such as population growth, construction, or policy causing worse traffic.",
+  "Extrapolating beyond 2014 or predicting future travel times.",
+  "Claiming PM was always worse than AM; the table shows AM was longer in 2011 and 2012.",
+  "Values or units not in the table, such as average speed, number of vehicles, percent congestion, cost, or CO2.",
+  "Claiming the table represents all Katy Freeway traffic; it only contains AM and PM travel times for 2011–2014."
+ ],
+ "notes": "The table provides absolute minutes for AM and PM by year, so endpoint and change units can cite minutes. Required units cover the core worsening of both commutes; optional units cover the PM crossover and larger PM increase.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 29.1,
+  "usage": {
+   "prompt_tokens": 1158,
+   "completion_tokens": 7065,
+   "total_tokens": 8223,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4729
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 646
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,202 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_18",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the proportion of taxes owed by Americans that remained unpaid between 2008 and 2010.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The share of taxes owed that remained unpaid was 18.3%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "NOT PAID",
+     "x": "0",
+     "field": "value",
+     "value": 18.3,
+     "note": "Table value=18.3, unit=%, relative_value=0.1830, entity_id=slice-1."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "18.3% of taxes owed were not paid",
+    "Unpaid taxes made up 18.3% of the total owed",
+    "About 18% remained unpaid",
+    "The NOT PAID slice is 18.3%"
+   ],
+   "visual_evidence_rule": "A NOT PAID slice/segment labeled 18.3% (or rounded 18%) must be visible and should appear as less than half of the whole.",
+   "temporal_anchor": "the clause about taxes really owed; if narration adds an unpaid clause, it should carry this value.",
+   "reviewer_question": "Must the video explicitly state the 18.3% unpaid share, or can it rely on the implied complement to the paid share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The share of taxes owed that was paid was 81.7%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "TAXES PAID",
+     "x": "1",
+     "field": "value",
+     "value": 81.7,
+     "note": "Table value=81.7, unit=%, relative_value=0.8170, entity_id=slice-2."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Americans paid 81.7% of taxes owed",
+    "Taxes paid were 81.7% of the total owed",
+    "Paid share was about 82%",
+    "The TAXES PAID slice is 81.7%"
+   ],
+   "visual_evidence_rule": "A TAXES PAID slice/segment labeled 81.7% (or rounded 82%) must be visible and should appear as the majority of the whole.",
+   "temporal_anchor": "the 'Americans paid only 81.7%' clause.",
+   "reviewer_question": "Should the paid share be required context or only optional support for the unpaid proportion?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The paid and unpaid shares are complementary parts of the same whole and sum to 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "NOT PAID",
+     "x": "0",
+     "field": "value",
+     "value": 18.3,
+     "note": "Table value=18.3, unit=%, relative_value=0.1830, entity_id=slice-1."
+    },
+    {
+     "entity": "TAXES PAID",
+     "x": "1",
+     "field": "value",
+     "value": 81.7,
+     "note": "Table value=81.7, unit=%, relative_value=0.8170, entity_id=slice-2."
+    }
+   ],
+   "computation": "18.3 + 81.7 = 100",
+   "accepted_routes": [
+    "The two shares sum to 100%: 81.7% paid + 18.3% unpaid",
+    "Paid and unpaid account for all taxes owed",
+    "The pie is split into 81.7% paid and 18.3% not paid",
+    "Together the categories make the full whole"
+   ],
+   "visual_evidence_rule": "Both slices must be shown as parts of one pie/whole representing all taxes owed; the whole should read as 100%.",
+   "temporal_anchor": "the full paid-vs-owed statement; the unpaid share is the remainder.",
+   "reviewer_question": "Must the video explicitly show that the two slices account for 100% of taxes owed, or is the pie's whole implicit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The paid share was much larger than the unpaid share; 81.7% is about 4.46 times 18.3%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "TAXES PAID",
+     "x": "1",
+     "field": "value",
+     "value": 81.7,
+     "note": "Table value=81.7, unit=%, relative_value=0.8170, entity_id=slice-2."
+    },
+    {
+     "entity": "NOT PAID",
+     "x": "0",
+     "field": "value",
+     "value": 18.3,
+     "note": "Table value=18.3, unit=%, relative_value=0.1830, entity_id=slice-1."
+    }
+   ],
+   "computation": "81.7 / 18.3 = 4.46; equivalently 18.3 / 81.7 = 0.224",
+   "accepted_routes": [
+    "Paid share was about 4.5 times the unpaid share",
+    "Paid was more than four times unpaid",
+    "Unpaid was about 22% of the paid share",
+    "The paid slice dominated the unpaid slice by a factor of roughly 4.5"
+   ],
+   "visual_evidence_rule": "The TAXES PAID slice must be visibly much larger than NOT PAID; if ratio text is used, it should be derived from the two shares, not presented as a table cell.",
+   "temporal_anchor": "the 'only 81.7%' clause contrasted with the remaining unpaid share.",
+   "reviewer_question": "Should the video include an explicit paid-vs-unpaid comparison/ratio, or is showing the two slices enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Show a legend/color key for NOT PAID and TAXES PAID.",
+  "Round 81.7% to 82% and 18.3% to 18% for readability.",
+  "Animate the unpaid slice as the remainder after the paid slice.",
+  "Use a pie chart total of 100% of taxes owed."
+ ],
+ "unsupported_to_avoid": [
+  "Dollar amounts of taxes owed or unpaid (not in the table).",
+  "Causal claims that IRS enforcement, policy, or economic conditions caused the unpaid share.",
+  "Extrapolating to years outside the clip or trends across years; the table has only one pie.",
+  "Saying unpaid was 18.3% of paid (wrong denominator; if derived, it is 18.3/81.7 ≈ 22.4% of paid).",
+  "Treating 18.3% and 81.7% as counts or dollar values rather than shares of taxes owed."
+ ],
+ "notes": "Intent focuses on unpaid 18.3%; narration leads with paid 81.7%, so the paid complement is marked optional unless the reviewer requires full pie composition. The period context is in the intent/narration but not the table, so it is not used as a numeric basis unit.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.91
+ },
+ "draft_cost": {
+  "sec": 47.9,
+  "usage": {
+   "prompt_tokens": 651,
+   "completion_tokens": 10985,
+   "total_tokens": 11636,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9297
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 395
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

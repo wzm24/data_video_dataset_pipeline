@@ -1,0 +1,151 @@
+{
+ "clip_id": "line_95",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:unauthorized immigrants @ 2017"
+   ],
+   "assertion": {
+    "mark": "unauthorized immigrants @ 2017",
+    "field": "value",
+    "expected": 10.5,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2017 endpoint must be labeled or clearly indicated as the final point on the line."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "unauthorized immigrants @ 2007",
+    "extreme": "max",
+    "expected": 12.2,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2007 point must be visibly the highest point or annotated as the peak."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:unauthorized immigrants @ 2007",
+    "mark:unauthorized immigrants @ 2017"
+   ],
+   "assertion": {
+    "low": "unauthorized immigrants @ 2017",
+    "low_value": 10.5,
+    "high": "unauthorized immigrants @ 2007",
+    "high_value": 12.2,
+    "delta": 1.7,
+    "ratio": 1.1619,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart should support comparison between the 2007 and 2017 values or annotate the 1.7 million gap."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:unauthorized immigrants @ 2007",
+    "mark:unauthorized immigrants @ 2017"
+   ],
+   "assertion": {
+    "low": "unauthorized immigrants @ 2017",
+    "low_value": 10.5,
+    "high": "unauthorized immigrants @ 2007",
+    "high_value": 12.2,
+    "delta": 1.7,
+    "ratio": 1.1619,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a percentage is shown, it must use the 2007 peak as the denominator, not the 2017 value."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:unauthorized immigrants @ 2007",
+    "mark:unauthorized immigrants @ 2010",
+    "mark:unauthorized immigrants @ 2014",
+    "mark:unauthorized immigrants @ 2015",
+    "mark:unauthorized immigrants @ 2017"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "unauthorized immigrants @ 2007",
+      "value": 12.2
+     },
+     {
+      "mark": "unauthorized immigrants @ 2010",
+      "value": 11.4
+     },
+     {
+      "mark": "unauthorized immigrants @ 2014",
+      "value": 11.1
+     },
+     {
+      "mark": "unauthorized immigrants @ 2015",
+      "value": 11.0
+     },
+     {
+      "mark": "unauthorized immigrants @ 2017",
+      "value": 10.5
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must visibly decline after the 2007 peak, and post-2007 points should not be higher than 12.2 million."
+  }
+ ]
+}

@@ -1,0 +1,292 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_2",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that transportation is the primary source of greenhouse gas emissions in the United States.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Transportation is the largest source, accounting for 30.8% of U.S. greenhouse gas emissions.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Transportation 28%",
+     "x": "0",
+     "field": "value",
+     "value": 30.8,
+     "note": "Use the value field 30.8%; the entity label's 28% is not the intended share for this unit."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Transportation is the largest source at 30.8%.",
+    "Transportation leads with about 31% of U.S. greenhouse gas emissions.",
+    "The biggest slice is Transportation, at 30.8%."
+   ],
+   "visual_evidence_rule": "Transportation must be visibly the largest wedge/bar and be labeled with its 30.8% share or an equivalent rounded 31% label.",
+   "temporal_anchor": "The clause 'transportation is the single biggest way...'",
+   "reviewer_question": "Is it required to state both the top ranking and the 30.8% share, or is showing Transportation as the largest slice sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Transportation exceeds Electricity, the next-largest listed sector, by 6.8 percentage points: 30.8% vs 24.0%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Transportation 28%",
+     "x": "0",
+     "field": "value",
+     "value": 30.8,
+     "note": "Transportation share."
+    },
+    {
+     "entity": "Electricity 23%",
+     "x": "1",
+     "field": "value",
+     "value": 24.0,
+     "note": "Electricity share."
+    }
+   ],
+   "computation": "30.8 - 24.0 = 6.8 percentage points",
+   "accepted_routes": [
+    "Transportation is 6.8 percentage points above Electricity.",
+    "Transportation (30.8%) exceeds Electricity (24.0%) by about 7 points.",
+    "The gap between the top two sources is 6.8 percentage points."
+   ],
+   "visual_evidence_rule": "Both Transportation and Electricity must be visible with their values or a delta annotation must show the 6.8-point lead.",
+   "temporal_anchor": "The clause 'transportation is the single biggest way...'",
+   "reviewer_question": "Should the video explicitly show the margin over second-place Electricity, or is 'largest' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The full listed ranking is Transportation 30.8%, Electricity 24.0%, Industry 21.2%, Commercial and residential 13.2%, Agriculture 10.9%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Transportation 28%",
+     "x": "0",
+     "field": "value",
+     "value": 30.8,
+     "note": "Top-ranked sector."
+    },
+    {
+     "entity": "Electricity 23%",
+     "x": "1",
+     "field": "value",
+     "value": 24.0,
+     "note": "Second-ranked sector."
+    },
+    {
+     "entity": "Industry 22%",
+     "x": "2",
+     "field": "value",
+     "value": 21.2,
+     "note": "Third-ranked sector."
+    },
+    {
+     "entity": "Commercial and residential 12%",
+     "x": "3",
+     "field": "value",
+     "value": 13.2,
+     "note": "Fourth-ranked sector."
+    },
+    {
+     "entity": "Agriculture 10%",
+     "x": "4",
+     "field": "value",
+     "value": 10.9,
+     "note": "Fifth-ranked sector."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Order: Transportation 30.8%, Electricity 24.0%, Industry 21.2%, Commercial and residential 13.2%, Agriculture 10.9%.",
+    "Transportation first, then Electricity, Industry, Commercial and residential, Agriculture.",
+    "Descending ranking is Transportation > Electricity > Industry > Commercial and residential > Agriculture."
+   ],
+   "visual_evidence_rule": "All five sector labels must be visible, with slices or bars arranged/readable in descending order or otherwise clearly comparable.",
+   "temporal_anchor": "The 'single biggest' clause for the top position; remaining order may be carried by chart labels/legend only.",
+   "reviewer_question": "Should the full sector order be treated as required, or only Transportation's top position?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The top three sectors combined—Transportation, Electricity, and Industry—account for 76.0% of U.S. greenhouse gas emissions.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Transportation 28%",
+     "x": "0",
+     "field": "value",
+     "value": 30.8,
+     "note": "Transportation share."
+    },
+    {
+     "entity": "Electricity 23%",
+     "x": "1",
+     "field": "value",
+     "value": 24.0,
+     "note": "Electricity share."
+    },
+    {
+     "entity": "Industry 22%",
+     "x": "2",
+     "field": "value",
+     "value": 21.2,
+     "note": "Industry share."
+    }
+   ],
+   "computation": "30.8 + 24.0 + 21.2 = 76.0%",
+   "accepted_routes": [
+    "The top three sectors sum to 76.0%.",
+    "Transportation, Electricity, and Industry together make up about 76%.",
+    "The three largest sources account for 76.0% of emissions."
+   ],
+   "visual_evidence_rule": "The top three wedges/bars must be identifiable, or a combined annotation must show the three-sector total of 76.0%.",
+   "temporal_anchor": "No narration clause carries this; it would be a chart annotation or optional added voiceover.",
+   "reviewer_question": "Should the top-three combined share be included, or is it optional context beyond the primary-source claim?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The five listed sectors together sum to 100.1%, i.e., essentially a rounded 100% breakdown of the emissions mix.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Transportation 28%",
+     "x": "0",
+     "field": "value",
+     "value": 30.8,
+     "note": "Transportation share."
+    },
+    {
+     "entity": "Electricity 23%",
+     "x": "1",
+     "field": "value",
+     "value": 24.0,
+     "note": "Electricity share."
+    },
+    {
+     "entity": "Industry 22%",
+     "x": "2",
+     "field": "value",
+     "value": 21.2,
+     "note": "Industry share."
+    },
+    {
+     "entity": "Commercial and residential 12%",
+     "x": "3",
+     "field": "value",
+     "value": 13.2,
+     "note": "Commercial/residential share."
+    },
+    {
+     "entity": "Agriculture 10%",
+     "x": "4",
+     "field": "value",
+     "value": 10.9,
+     "note": "Agriculture share."
+    }
+   ],
+   "computation": "30.8 + 24.0 + 21.2 + 13.2 + 10.9 = 100.1%",
+   "accepted_routes": [
+    "The five sectors sum to 100.1%, essentially 100% with rounding.",
+    "The listed shares add to about 100%.",
+    "Together these categories make up the full emissions mix, rounded to 100.1%."
+   ],
+   "visual_evidence_rule": "The pie/whole-chart structure must imply a complete breakdown, or a total annotation may show the rounded 100% sum.",
+   "temporal_anchor": "No narration clause carries this; it is a visual/legend implication only.",
+   "reviewer_question": "Should the video state or imply that these sectors form a complete 100% breakdown, or is that optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "All non-transportation sectors combined are 69.3% (24.0 + 21.2 + 13.2 + 10.9 = 69.3), so Transportation is the largest single source but not a majority.",
+  "Other sector labels may be rounded in the animation: Electricity about 24%, Industry about 21%, Commercial and residential about 13%, Agriculture about 11%.",
+  "The chart may show all five individual shares as context for Transportation's top rank."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim Transportation is a majority (>50%) of U.S. greenhouse gas emissions; its table share is 30.8%.",
+  "Do not say driving alone causes the 30.8% share; the table contains no driving or causal data.",
+  "Do not use the 28% embedded in the entity label 'Transportation 28%' as the displayed Transportation share; the value field is 30.8%.",
+  "Do not claim a trend over time, a global rank, or an absolute emissions amount; the table is a single estimated U.S. composition.",
+  "Do not claim an exact 100.0% total without noting rounding; the table values sum to 100.1%."
+ ],
+ "notes": "The core required signal is Transportation's top position and share; the other units make rank, margin, and composition trade-offs explicit. Values use the table's value field, and all arithmetic totals are derived from those percentages.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 47.5,
+  "usage": {
+   "prompt_tokens": 715,
+   "completion_tokens": 10609,
+   "total_tokens": 11324,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8275
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 459
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

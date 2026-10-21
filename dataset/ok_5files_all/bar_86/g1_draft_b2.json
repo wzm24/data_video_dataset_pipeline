@@ -1,0 +1,269 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_86",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate public opinion poll results regarding the preferred direction of house prices in Britain.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Rise option is the least chosen answer, with only 7% saying rising prices would be good for Britain.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Rise",
+     "x": "rise",
+     "field": "value",
+     "value": 7.0,
+     "note": "Table value for Rise; the minimum among the four options."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Only 7% say rising house prices would be good for Britain",
+    "Just 7% choose the Rise option",
+    "Rise is the smallest group at 7%",
+    "7% favour prices continuing to rise"
+   ],
+   "visual_evidence_rule": "The Rise bar must be visible with its 7% value label and must read as the shortest/lowest option.",
+   "temporal_anchor": "the clause 'With polls now showing only 7 % think it'd be good for Britain if prices keep rising'",
+   "reviewer_question": "Must the video explicitly state the 7% Rise figure, or is a clearly shortest Rise bar sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Fall is the most common answer, at 42%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Fall",
+     "x": "fall",
+     "field": "value",
+     "value": 42.0,
+     "note": "Table value for Fall; the maximum among the four options."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Fall leads the poll at 42%",
+    "42% prefer falling house prices",
+    "The largest group, 42%, says prices should fall",
+    "Fall is the top answer with 42%"
+   ],
+   "visual_evidence_rule": "The Fall bar must be visible, labelled 42%, and must read as the tallest/highest option.",
+   "temporal_anchor": "the poll-results reveal around 'polls now showing ...' (the main result clause)",
+   "reviewer_question": "Must the video identify Fall as the most chosen answer at 42%, even though the provided narration only cites Rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The full rank order from most to least chosen is Fall (42%), Stay (29%), Unsure (22%), Rise (7%).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Fall",
+     "x": "fall",
+     "field": "value",
+     "value": 42.0,
+     "note": "Largest value."
+    },
+    {
+     "entity": "Stay",
+     "x": "stay",
+     "field": "value",
+     "value": 29.0,
+     "note": "Second-largest value."
+    },
+    {
+     "entity": "Unsure",
+     "x": "unsure",
+     "field": "value",
+     "value": 22.0,
+     "note": "Third-largest value."
+    },
+    {
+     "entity": "Rise",
+     "x": "rise",
+     "field": "value",
+     "value": 7.0,
+     "note": "Smallest value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Order from most to least: Fall, Stay, Unsure, Rise",
+    "Fall > Stay > Unsure > Rise",
+    "The ranking is Fall (42%), Stay (29%), Unsure (22%), Rise (7%)",
+    "Fall first, then Stay, then Unsure, then Rise"
+   ],
+   "visual_evidence_rule": "All four category bars/labels must be visible in a way that lets the viewer infer the descending order Fall, Stay, Unsure, Rise.",
+   "temporal_anchor": "the poll-results clause 'polls now showing ...'",
+   "reviewer_question": "Must the video show all four categories in rank order, or can it omit the middle categories?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Fall is far larger than Rise: 42% versus 7%, a gap of 35 percentage points, or six times as large.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Fall",
+     "x": "fall",
+     "field": "value",
+     "value": 42.0,
+     "note": "Higher value in the comparison."
+    },
+    {
+     "entity": "Rise",
+     "x": "rise",
+     "field": "value",
+     "value": 7.0,
+     "note": "Lower value in the comparison."
+    }
+   ],
+   "computation": "42 - 7 = 35; 42 / 7 = 6",
+   "accepted_routes": [
+    "Fall is 35 points above Rise (42% vs 7%)",
+    "Fall is six times as common as Rise",
+    "Rise is only one-sixth the size of Fall",
+    "The Fall-vs-Rise gap is 35 percentage points"
+   ],
+   "visual_evidence_rule": "Both Fall (42%) and Rise (7%) bars/labels must be visible together so the gap or ratio can be computed.",
+   "temporal_anchor": "the 'polls now showing only 7 %...' clause, if extended into a direct Fall-vs-Rise comparison",
+   "reviewer_question": "Should the video include the derived Fall-vs-Rise gap/ratio, or is that optional enrichment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The poll responses form a 42% Fall, 29% Stay, 22% Unsure, 7% Rise split, totaling 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Fall",
+     "x": "fall",
+     "field": "value",
+     "value": 42.0,
+     "note": "Share for Fall."
+    },
+    {
+     "entity": "Stay",
+     "x": "stay",
+     "field": "value",
+     "value": 29.0,
+     "note": "Share for Stay."
+    },
+    {
+     "entity": "Unsure",
+     "x": "unsure",
+     "field": "value",
+     "value": 22.0,
+     "note": "Share for Unsure."
+    },
+    {
+     "entity": "Rise",
+     "x": "rise",
+     "field": "value",
+     "value": 7.0,
+     "note": "Share for Rise."
+    }
+   ],
+   "computation": "42 + 29 + 22 + 7 = 100",
+   "accepted_routes": [
+    "The poll splits 42% Fall, 29% Stay, 22% Unsure, 7% Rise",
+    "The four answers total 100%",
+    "Responses are 42/29/22/7 shares of the poll",
+    "Together the categories account for 100%"
+   ],
+   "visual_evidence_rule": "All four category labels and values must be visible, with a total or 100% indicator/callout showing they make up the whole poll.",
+   "temporal_anchor": "the poll-results clause 'polls now showing ...'",
+   "reviewer_question": "Must the video communicate that the four percentages sum to 100% of the poll, rather than just showing separate bar values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A separate Stay callout at 29% as the second-most common answer.",
+  "A separate Unsure callout at 22% as the third-most common answer.",
+  "A combined Fall+Stay majority of 71% (42 + 29 = 71)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal explanations for why only 7% think rising prices are good.",
+  "Extrapolating future house-price direction or predicting what will happen.",
+  "Claiming the percentages are shares of the whole British adult population rather than poll respondents.",
+  "Values not in the table, such as 50%, 61%, or 43%.",
+  "Comparisons to previous polls without additional data."
+ ],
+ "notes": "All cited percentages come from the bar_86 value column; derived totals use 42+29+22+7=100 and 42-7=35 / 42/7=6. The table does not supply a sample size, so the video should not invent one.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 39.7,
+  "usage": {
+   "prompt_tokens": 773,
+   "completion_tokens": 9456,
+   "total_tokens": 10229,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7477
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 389
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

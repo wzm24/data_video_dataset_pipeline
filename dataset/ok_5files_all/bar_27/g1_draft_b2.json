@@ -1,0 +1,285 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_27",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the positive relationship between family income levels and SAT scores, illustrating that students from wealthier families achieve higher scores.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart shows average SAT score by family-income bracket across the ordered income categories from less than $20,000 to more than $200,000.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Less than $20,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 890.0,
+     "note": "first/leftmost income bracket"
+    },
+    {
+     "entity": "More than $200,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1150.0,
+     "note": "last/rightmost income bracket"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Average SAT score by family income bracket",
+    "SAT averages for income groups from under $20,000 to over $200,000",
+    "Income-vs-SAT bar chart with ordered income categories"
+   ],
+   "visual_evidence_rule": "The chart must visibly encode family-income brackets on one axis and SAT-score values on the other, with bars for the income categories.",
+   "temporal_anchor": "Opening clause: 'Here's a chart of the average SAT scores by family income.'",
+   "reviewer_question": "Should the video identify the full income-bracket series, or is a generic income-vs-SAT chart enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Average SAT score rises at every step as the family-income bracket increases: 890, 946, 994, 1006, 1054, 1103, 1150.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Less than $20,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 890.0,
+     "note": "first bracket in upward sequence"
+    },
+    {
+     "entity": "$40,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 946.0,
+     "note": "second bracket"
+    },
+    {
+     "entity": "$60,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 994.0,
+     "note": "third bracket"
+    },
+    {
+     "entity": "$80,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1006.0,
+     "note": "fourth bracket"
+    },
+    {
+     "entity": "$100,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1054.0,
+     "note": "fifth bracket"
+    },
+    {
+     "entity": "$140,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1103.0,
+     "note": "sixth bracket"
+    },
+    {
+     "entity": "More than $200,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1150.0,
+     "note": "seventh/highest bracket"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "As income bracket rises, average SAT score rises",
+    "Scores increase step by step from 890 to 1150",
+    "No income bracket breaks the upward pattern"
+   ],
+   "visual_evidence_rule": "Bars must be ordered by income and must not decrease from left to right; a trend line or sequential highlight can reinforce the monotonic increase.",
+   "temporal_anchor": "Narration clause: 'as we move up the income brackets, students score higher and higher.'",
+   "reviewer_question": "Is strict monotonic increase required, or is a general upward trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The highest-income bracket, more than $200,000, has a higher average SAT score than the lowest-income bracket, less than $20,000: 1150 vs 890.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "More than $200,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1150.0,
+     "note": "highest bracket"
+    },
+    {
+     "entity": "Less than $20,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 890.0,
+     "note": "lowest bracket"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Wealthiest families' students score higher than lowest-income students, 1150 vs 890",
+    "Top income bracket outranks bottom income bracket in SAT average",
+    "The >$200,000 group scores above the <$20,000 group"
+   ],
+   "visual_evidence_rule": "Both the lowest and highest income bars must be visible or highlighted so their relative heights can be compared.",
+   "temporal_anchor": "Endpoint clauses: 'less than $20,000 score around $890' and 'more than $200,000 score an average of $1150.'",
+   "reviewer_question": "Must the video explicitly compare the highest and lowest brackets, or is the overall trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The difference between the highest and lowest income brackets is 260 SAT points: 1150 − 890 = 260.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "More than $200,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1150.0,
+     "note": "highest value"
+    },
+    {
+     "entity": "Less than $20,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 890.0,
+     "note": "lowest value"
+    }
+   ],
+   "computation": "1150 - 890 = 260",
+   "accepted_routes": [
+    "The gap is 260 SAT points",
+    "The top bracket is about 260 points above the bottom bracket",
+    "The difference between 1150 and 890 is 260"
+   ],
+   "visual_evidence_rule": "If included, the animation should annotate or visually bracket the 260-point difference between the lowest and highest income bars.",
+   "temporal_anchor": "Optional summary or conclusion; not explicitly narrated.",
+   "reviewer_question": "Is the exact 260-point gap required, or is it optional enrichment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The $80,000 income bracket is the first bracket shown with an average SAT score above 1000: $60,000 = 994 and $80,000 = 1006, with 1000 = (994 + 1006) / 2.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "$60,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 994.0,
+     "note": "last bracket below the 1000 threshold"
+    },
+    {
+     "entity": "$80,000",
+     "x": "income bracket",
+     "field": "value",
+     "value": 1006.0,
+     "note": "first bracket above the 1000 threshold"
+    }
+   ],
+   "computation": "threshold 1000 = (994 + 1006) / 2; 994 < 1000 < 1006",
+   "accepted_routes": [
+    "The $80,000 bracket is the first to cross 1000",
+    "At $60,000 the score is 994; at $80,000 it is 1006, passing 1000",
+    "The first bracket above 1000 is $80,000"
+   ],
+   "visual_evidence_rule": "If included, show the $60,000 and $80,000 bars with a reference line or annotation at 1000 to mark the crossing.",
+   "temporal_anchor": "Optional mid-sequence clause while moving through income brackets; not explicitly narrated.",
+   "reviewer_question": "Should the optional 1000-point crossing at $80,000 be included as an intermediate detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The $140,000 bracket averages 1103, between the $100,000 bracket's 1054 and the >$200,000 bracket's 1150.",
+  "The smallest adjacent gain is 12 points: $60,000 = 994 to $80,000 = 1006.",
+  "The largest adjacent gain is 56 points: <$20,000 = 890 to $40,000 = 946."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that higher family income causes higher SAT scores.",
+  "Extrapolating to income levels or score values not in the table.",
+  "Interpreting relative_value as a share, percentile, or percentage without a defined denominator.",
+  "Claiming the score is below a national average; the table has no national-average row.",
+  "Assuming the increase is uniform across every bracket or every dollar of income."
+ ],
+ "notes": "Core required candidate is the monotonic upward relationship; exact endpoint values and the 260-point gap are likely reviewer decisions. Optional threshold crossing uses a derived midpoint threshold, not a separate table value.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 62.3,
+  "usage": {
+   "prompt_tokens": 878,
+   "completion_tokens": 14068,
+   "total_tokens": 14946,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11870
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 238
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

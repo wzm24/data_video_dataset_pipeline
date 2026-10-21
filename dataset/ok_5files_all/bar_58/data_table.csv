@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_58,Eyewitness misinterpretation,eyewitness-misinterpretation,310.0,,72.000,0.7200,,#F05040,printed
+bar_58,Improper forensics,improper-forensics,530.0,,47.000,0.4700,,#4668A3,printed
+bar_58,False confessions,false-confessions,750.0,,27.000,0.2700,,#4668A3,printed
+bar_58,Informant,informant,970.0,,15.000,0.1500,,#4668A3,printed

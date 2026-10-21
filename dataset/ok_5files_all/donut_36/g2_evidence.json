@@ -1,0 +1,96 @@
+{
+ "clip_id": "donut_36",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:franchised @ franchised"
+   ],
+   "assertion": {
+    "segment": "franchised @ franchised",
+    "expected_share": 0.01,
+    "total_of": "percent",
+    "total": 20.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A donut slice, bar, or label must show 'franchised' at 20% of the whole."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:franchised @ franchised"
+   ],
+   "assertion": {
+    "segment": "franchised @ franchised",
+    "expected_share": 0.01,
+    "total_of": "percent",
+    "total": 20.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A complementary slice or bar must show non-franchised at 80%, or the chart must clearly partition 20% versus 80%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "An icon or label must link the company to ownership of buildings/land, even for franchised restaurants."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "franchised @ franchised",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 20% and 80% marks must be visible together so their relative size is clear."
+  }
+ ]
+}

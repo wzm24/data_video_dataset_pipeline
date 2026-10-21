@@ -1,0 +1,321 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_22",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the extreme concentration of wealth at the top of the economic spectrum to justify a wealth tax as a funding mechanism for social programs.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Accountant has the highest wealth value shown, 110,000, far above every other listed occupation.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Accountant",
+     "x": "N/A",
+     "field": "value",
+     "value": 110000.0,
+     "note": "top value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Accountant tops the chart at $110,000.",
+    "The largest bar is Accountant, with 110,000 in value.",
+    "Accountant is the maximum shown: $110k.",
+    "The top occupation is Accountant at 110,000."
+   ],
+   "visual_evidence_rule": "Accountant bar must be visibly the longest and labeled 110,000.",
+   "temporal_anchor": "the 'huge amount of wealth stuck here at the very, very top' clause",
+   "reviewer_question": "Should the video explicitly label the top value as $110,000, or is a longest-bar reveal enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The single top occupation, Accountant at 110,000, is about 1.93 times the combined value of all other listed occupations, which sum to 57,000.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Accountant",
+     "x": "N/A",
+     "field": "value",
+     "value": 110000.0,
+     "note": "numerator top value"
+    },
+    {
+     "entity": "Cashier",
+     "x": "N/A",
+     "field": "value",
+     "value": -4000.0,
+     "note": "addend in other-sum"
+    },
+    {
+     "entity": "Working mom",
+     "x": "N/A",
+     "field": "value",
+     "value": 1000.0,
+     "note": "addend in other-sum"
+    },
+    {
+     "entity": "Office clerk",
+     "x": "N/A",
+     "field": "value",
+     "value": 2000.0,
+     "note": "addend in other-sum"
+    },
+    {
+     "entity": "Nurse",
+     "x": "N/A",
+     "field": "value",
+     "value": 26000.0,
+     "note": "addend in other-sum"
+    },
+    {
+     "entity": "Teacher",
+     "x": "N/A",
+     "field": "value",
+     "value": 32000.0,
+     "note": "addend in other-sum"
+    }
+   ],
+   "computation": "sum(-4000, 1000, 2000, 26000, 32000) = 57000; 110000 / 57000 = 1.9298",
+   "accepted_routes": [
+    "Accountant's $110,000 exceeds the combined $57,000 of all other listed occupations.",
+    "One occupation is almost twice the wealth of everyone else combined.",
+    "Accountant alone is about 1.93 times the sum of the other five bars.",
+    "The top bar is greater than all other bars combined."
+   ],
+   "visual_evidence_rule": "Show a comparison between Accountant and the sum or stacked total of the other five bars, totaling 57,000.",
+   "temporal_anchor": "the 'huge amount of wealth stuck here at the very, very top' clause",
+   "reviewer_question": "Does the intent require the top-vs-all-others-combined comparison, or is it beyond what must be shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Accountant's relative_value is 0.5093, about 50.9%, while Teacher's is 0.1482 and Nurse's is 0.1204, showing a top-heavy composition.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Accountant",
+     "x": "N/A",
+     "field": "relative_value",
+     "value": 0.5093,
+     "note": "top relative share"
+    },
+    {
+     "entity": "Teacher",
+     "x": "N/A",
+     "field": "relative_value",
+     "value": 0.1482,
+     "note": "second-highest relative share"
+    },
+    {
+     "entity": "Nurse",
+     "x": "N/A",
+     "field": "relative_value",
+     "value": 0.1204,
+     "note": "third-highest relative share"
+    }
+   ],
+   "computation": "0.5093 * 100 = 50.93%; 0.1482 * 100 = 14.82%; 0.1204 * 100 = 12.04%",
+   "accepted_routes": [
+    "Accountant accounts for about 51% of the relative share, 0.5093.",
+    "The top occupation's relative_value is 0.5093, while Teacher's is 0.1482 and Nurse's is 0.1204.",
+    "Wealth is top-heavy: Accountant is about 50.9%, Teacher about 14.8%, and Nurse about 12.0%.",
+    "The top share is over half the relative total."
+   ],
+   "visual_evidence_rule": "Show Accountant's relative share label as 0.5093 or 50.9%, with Teacher/Nurse shares for contrast.",
+   "temporal_anchor": "the 'very, very top with the ultra-rich' clause",
+   "reviewer_question": "Is the relative_value/share number required, or can concentration be shown by bar heights alone?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Accountant is about 3.44 times Teacher, the next-highest value, and about 4.23 times Nurse.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Accountant",
+     "x": "N/A",
+     "field": "value",
+     "value": 110000.0,
+     "note": "ratio numerator"
+    },
+    {
+     "entity": "Teacher",
+     "x": "N/A",
+     "field": "value",
+     "value": 32000.0,
+     "note": "denominator for 3.44x comparison"
+    },
+    {
+     "entity": "Nurse",
+     "x": "N/A",
+     "field": "value",
+     "value": 26000.0,
+     "note": "denominator for 4.23x comparison"
+    }
+   ],
+   "computation": "110000 / 32000 = 3.4375; 110000 / 26000 = 4.2308",
+   "accepted_routes": [
+    "Accountant is about 3.44 times Teacher, $110k versus $32k.",
+    "The top bar is more than 3 times the second-highest bar.",
+    "Accountant is about 4.23 times Nurse, $110k versus $26k.",
+    "Teacher and Nurse are only about 29% and 24% of Accountant."
+   ],
+   "visual_evidence_rule": "Show Accountant and Teacher/Nurse bars with a ratio or multiplier callout.",
+   "temporal_anchor": "the 'at the very, very top' clause",
+   "reviewer_question": "Should the animation quantify the gap to the next-highest occupations, or is that optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The ordering from highest to lowest is Accountant 110,000 > Teacher 32,000 > Nurse 26,000 > Office clerk 2,000 > Working mom 1,000 > Cashier -4,000; Cashier is the only negative value.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Accountant",
+     "x": "N/A",
+     "field": "value",
+     "value": 110000.0,
+     "note": "highest"
+    },
+    {
+     "entity": "Teacher",
+     "x": "N/A",
+     "field": "value",
+     "value": 32000.0,
+     "note": "second-highest"
+    },
+    {
+     "entity": "Nurse",
+     "x": "N/A",
+     "field": "value",
+     "value": 26000.0,
+     "note": "third-highest"
+    },
+    {
+     "entity": "Office clerk",
+     "x": "N/A",
+     "field": "value",
+     "value": 2000.0,
+     "note": "fourth-highest"
+    },
+    {
+     "entity": "Working mom",
+     "x": "N/A",
+     "field": "value",
+     "value": 1000.0,
+     "note": "fifth-highest"
+    },
+    {
+     "entity": "Cashier",
+     "x": "N/A",
+     "field": "value",
+     "value": -4000.0,
+     "note": "negative endpoint and lowest"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The bars rank from Accountant down to Cashier: 110k, 32k, 26k, 2k, 1k, -4k.",
+    "Teacher is second-highest at $32,000 and Nurse third at $26,000.",
+    "Cashier is the only negative value, at -$4,000.",
+    "The order is Accountant > Teacher > Nurse > Office clerk > Working mom > Cashier."
+   ],
+   "visual_evidence_rule": "All six bars must be ordered, and Cashier's bar must extend below zero or show -4,000.",
+   "temporal_anchor": "the chart reveal after 'very, very top' and before 'A wealth tax hones in'",
+   "reviewer_question": "Must the video preserve the full ranking and negative Cashier endpoint, or only the top concentration?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Teacher is second-highest at 32,000.",
+  "Nurse is third-highest at 26,000.",
+  "Office clerk at 2,000 and Working mom at 1,000 are small positive values.",
+  "Cashier's -4,000 makes it the only negative net worth in the table.",
+  "Accountant's relative_value 0.5093 is larger than Teacher's 0.1482 and Nurse's 0.1204."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that a wealth tax will fund social programs; the table only shows wealth values.",
+  "Calling Accountant 'ultra-rich' or 'billionaire' beyond the 110,000 table value.",
+  "Using a total-wealth denominator such as 216,000, which is not in the table.",
+  "Claiming the six relative_values sum to 100%; they sum to 0.8112 as listed.",
+  "Extrapolating concentration to the whole economy or to people not in the table.",
+  "Assuming Cashier's relative_value sign matches its negative value; the table shows 0.0194 for value -4,000."
+ ],
+ "notes": "The strongest G1 anchors are U1-U3: top value, top-vs-all-others-combined, and relative share. U4-U5 are valid but optional because the intent emphasizes top concentration rather than full ranking or every ratio.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 52.1,
+  "usage": {
+   "prompt_tokens": 805,
+   "completion_tokens": 12501,
+   "total_tokens": 13306,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9855
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 549
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

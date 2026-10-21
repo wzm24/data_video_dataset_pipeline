@@ -1,0 +1,128 @@
+{
+ "clip_id": "pie_15",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Carbon dioxide @ slice-1"
+   ],
+   "assertion": {
+    "segment": "Carbon dioxide @ slice-1",
+    "expected_share": 0.76,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The carbon dioxide pie slice must be labeled with 76% and must be visually the largest slice."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Carbon dioxide @ slice-1",
+    "mark:Methane @ slice-2"
+   ],
+   "assertion": {
+    "greater": "Carbon dioxide @ slice-1",
+    "lesser": "Methane @ slice-2",
+    "expected_ratio": 4.75,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show CO2 as the largest slice and should label at least methane at 16%; ideally all four slices are labeled so the ranking is visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Carbon dioxide @ slice-1"
+   ],
+   "assertion": {
+    "series": "Carbon dioxide",
+    "values": [
+     76.0
+    ],
+    "threshold_between": [
+     76.0,
+     76.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The CO2 slice must visibly occupy more than half of the pie; a 50% reference line or explicit word 'majority' can support this."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Methane @ slice-2",
+    "segment:Nitrous oxide @ slice-3",
+    "segment:Other @ slice-4",
+    "segment:Carbon dioxide @ slice-1"
+   ],
+   "assertion": {
+    "segment": "Methane @ slice-2",
+    "expected_share": 0.16,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The three non-CO2 slices should be visible and their labels should allow the viewer to see they sum to 24%, or an explicit combined callout should show 24%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Closing text, callout, or icon should connect the dominant CO2 slice (76%) to the action of stopping CO2 release; no extra numeric claim is required."
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "clip_id": "line_27",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Share spent on buybacks @ first observation"
+   ],
+   "assertion": {
+    "mark": "Share spent on buybacks @ first observation",
+    "field": "value",
+    "expected": 0.02,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The first marked value must be visibly low compared with the later rise and peak."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Share spent on buybacks @ first observation",
+    "mark:Share spent on buybacks @ last observation"
+   ],
+   "assertion": {
+    "low": "Share spent on buybacks @ first observation",
+    "low_value": 0.02,
+    "high": "Share spent on buybacks @ last observation",
+    "high_value": 0.72,
+    "delta": 0.7,
+    "ratio": 36.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A viewer must be able to compare the first and last relative values and see a large net upward change."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Share spent on buybacks @ late observation",
+    "extreme": "max",
+    "expected": 0.96,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The peak at 0.96 must be visible as the highest point of the series."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Share spent on buybacks @ late observation",
+    "mark:Share spent on buybacks @ last observation"
+   ],
+   "assertion": {
+    "greater": "Share spent on buybacks @ late observation",
+    "lesser": "Share spent on buybacks @ last observation",
+    "expected_ratio": 1.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final point must be visibly lower than the peak while still high relative to the early values."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Share spent on buybacks @ mid-series observation"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Share spent on buybacks @ mid-series observation",
+      "value": 0.1
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The series must visibly show fluctuations, including the dip to 0.10, rather than only a straight upward trend."
+  }
+ ]
+}

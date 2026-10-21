@@ -1,0 +1,166 @@
+{
+ "clip_id": "bar_54",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Poorest @ Poorest",
+    "mark:5th @ 5th",
+    "mark:10th @ 10th",
+    "mark:Richest @ Richest"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Poorest @ Poorest",
+      "value": 24.104
+     },
+     {
+      "mark": "5th @ 5th",
+      "value": 25.597
+     },
+     {
+      "mark": "10th @ 10th",
+      "value": 31.507
+     },
+     {
+      "mark": "Richest @ Richest",
+      "value": 23.7
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The total combined tax burden for each income group must be visually comparable across the distribution, at least for Poorest, 5th, 10th, and Richest."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Poorest @ Poorest",
+    "mark:Richest @ Richest"
+   ],
+   "assertion": {
+    "greater": "Poorest @ Poorest",
+    "lesser": "Richest @ Richest",
+    "expected_ratio": 1.017,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The total-tax values for Richest, Poorest, and 10th must be visually comparable so the Richest-lower-than-Poorest and Richest-lower-than-10th relationships can be read."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:2nd @ 2nd",
+    "mark:5th @ 5th",
+    "mark:10th @ 10th",
+    "mark:Richest @ Richest"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "2nd @ 2nd",
+      "value": 1.003
+     },
+     {
+      "mark": "5th @ 5th",
+      "value": 5.997
+     },
+     {
+      "mark": "10th @ 10th",
+      "value": 17.998
+     },
+     {
+      "mark": "Richest @ Richest",
+      "value": 10.003
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The income-tax component must be visible or separable enough to show the rise from lower/middle groups to the 10th group and the drop at Richest."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Poorest @ Poorest",
+    "segment:Poorest @ Poorest",
+    "segment:Richest @ Richest",
+    "segment:Richest @ Richest",
+    "segment:Richest @ Richest",
+    "segment:Richest @ Richest"
+   ],
+   "assertion": {
+    "segment": "Poorest @ Poorest",
+    "expected_share": 0.0215,
+    "total_of": "the same category's stacked series",
+    "total": 24.104,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The tax-type composition for at least Poorest and Richest must be visible so their different shares of the tax mix can be compared."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Poorest @ Poorest",
+    "mark:5th @ 5th"
+   ],
+   "assertion": {
+    "greater": "Poorest @ Poorest",
+    "lesser": "5th @ 5th",
+    "expected_ratio": 1.3277,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Payroll and consumption tax values for Poorest, 5th, and Richest must be available or combinable so the large lower-income versus Richest contrast can be seen."
+  }
+ ]
+}

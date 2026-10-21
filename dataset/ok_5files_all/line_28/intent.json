@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_28",
+ "intent_en": "To illustrate the significant widening of the pay gap between American CEOs and workers over time.",
+ "previous_intent": "To illustrate the dramatic widening of the pay gap between American CEOs and workers from 1965 to 2018.",
+ "narration_support": "The pay gap between American CEOs and their workers has grown from 15 to 1 to 220 to 1 in less than a single lifetime.",
+ "chart_support": "Line chart showing the ratio of CEO pay to worker pay increasing significantly from 1965 to 2018.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the growth of the pay gap over a lifetime, which is visually corroborated by the line chart showing a sharp rise in the ratio from 1965 to 2018.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

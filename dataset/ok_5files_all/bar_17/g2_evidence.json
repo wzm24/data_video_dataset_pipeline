@@ -1,0 +1,158 @@
+{
+ "clip_id": "bar_17",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Housing @ Housing",
+    "mark:Transportation @ Transportation",
+    "mark:Food @ Food",
+    "mark:Personal insurance @ Personal insurance",
+    "mark:Health care @ Health care",
+    "mark:Clothes @ Clothes"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Housing @ Housing",
+      "value": 33.0
+     },
+     {
+      "mark": "Transportation @ Transportation",
+      "value": 17.0
+     },
+     {
+      "mark": "Food @ Food",
+      "value": 12.0
+     },
+     {
+      "mark": "Personal insurance @ Personal insurance",
+      "value": 11.0
+     },
+     {
+      "mark": "Health care @ Health care",
+      "value": 9.0
+     },
+     {
+      "mark": "Clothes @ Clothes",
+      "value": 3.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The category labels and values/order for Housing, Transportation, and the lower categories must be visible or directly inferable so the second-place ranking is clear."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Housing @ Housing",
+    "extreme": "max",
+    "expected": 33.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Housing's category label and value 33 (or relative_value 1.0) must be visible as the top-ranked category."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Housing @ Housing",
+    "mark:Transportation @ Transportation"
+   ],
+   "assertion": {
+    "greater": "Housing @ Housing",
+    "lesser": "Transportation @ Transportation",
+    "expected_ratio": 1.9412,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Transportation and Housing must both be visible with their values 17 and 33 (or relative_values 0.5155 and 1.0) so the half-size comparison can be made."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Transportation @ Transportation",
+    "mark:Food @ Food"
+   ],
+   "assertion": {
+    "greater": "Transportation @ Transportation",
+    "lesser": "Food @ Food",
+    "expected_ratio": 1.4167,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Transportation's value 17 and the lower values 12, 11, 9, and 3 must be visible or directly inferable for the dominance over non-Housing categories."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Housing @ Housing",
+    "segment:Transportation @ Transportation",
+    "segment:Food @ Food",
+    "segment:Personal insurance @ Personal insurance",
+    "segment:Health care @ Health care",
+    "segment:Clothes @ Clothes"
+   ],
+   "assertion": {
+    "segment": "Housing @ Housing",
+    "expected_share": 0.3882,
+    "total_of": "unknown",
+    "total": 85.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The six listed values must be visible or directly inferable, and the total or Transportation's share of it must be derivable."
+  }
+ ]
+}

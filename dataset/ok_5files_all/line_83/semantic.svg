@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#111">Daily confirmed Covid-19 cases in Taiwan</text>
+<line x1="160.0" y1="600.0" x2="1150.0" y2="600.0" stroke="#111" stroke-width="2"/>
+<line x1="160.0" y1="600.0" x2="1150.0" y2="600.0" stroke="#e0e0e0" stroke-dasharray="4 4"/>
+<text x="148.0" y="605.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#333">0</text>
+<line x1="160.0" y1="516.0" x2="1150.0" y2="516.0" stroke="#e0e0e0" stroke-dasharray="4 4"/>
+<text x="148.0" y="521.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#333">100</text>
+<line x1="160.0" y1="432.0" x2="1150.0" y2="432.0" stroke="#e0e0e0" stroke-dasharray="4 4"/>
+<text x="148.0" y="437.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#333">200</text>
+<line x1="160.0" y1="348.0" x2="1150.0" y2="348.0" stroke="#e0e0e0" stroke-dasharray="4 4"/>
+<text x="148.0" y="353.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#333">300</text>
+<line x1="160.0" y1="264.0" x2="1150.0" y2="264.0" stroke="#e0e0e0" stroke-dasharray="4 4"/>
+<text x="148.0" y="269.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#333">400</text>
+<line x1="160.0" y1="180.0" x2="1150.0" y2="180.0" stroke="#e0e0e0" stroke-dasharray="4 4"/>
+<text x="148.0" y="185.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#333">500</text>
+<text x="160" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Jan 2020</text>
+<text x="358" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Apr 2020</text>
+<text x="556" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Aug 2020</text>
+<text x="754" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Nov 2020</text>
+<text x="952" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Feb 2021</text>
+<text x="1150" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Jun 2021</text>
+<polyline points="160.0,600.0 334.7,590.8 392.9,578.6 451.2,593.9 509.4,597.7 567.6,599.2 742.4,599.2 917.1,598.5 1033.5,597.7 1091.8,593.9 1150.0,577.1 1179.1,508.4 1202.4,294.5 1208.2,187.6" fill="none" stroke="#0f766e" stroke-width="3"/>
+</svg>

@@ -1,0 +1,190 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_32",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To present key statistics regarding the vegan population, highlighting growth trends in the United States and identifying the country with the highest concentration.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Israel has the highest concentration of vegans among countries.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%)",
+     "x": "0",
+     "field": "value",
+     "value": 5.0,
+     "note": "Table row labels this as the highest concentration and identifies Israel; value is 5.0 percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Israel has the highest vegan population share",
+    "Israel ranks first for vegan concentration",
+    "The top country for vegan share is Israel"
+   ],
+   "visual_evidence_rule": "Israel must be labeled or highlighted as the highest-concentration country, not merely show a 5% donut slice.",
+   "temporal_anchor": "the highest concentration of vegans being in Israel",
+   "reviewer_question": "Must the video explicitly identify Israel as the highest-concentration country?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest concentration is about 5% of Israel's population.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%)",
+     "x": "0",
+     "field": "value",
+     "value": 5.0,
+     "note": "5.0 percent."
+    },
+    {
+     "entity": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%)",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "0.0500 relative share equals 5%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "about 5% of Israel's population is vegan",
+    "Israel's vegan share is 5%",
+    "5% of Israelis are vegan"
+   ],
+   "visual_evidence_rule": "A 5% / 0.05 value must be visible and tied to Israel's population share.",
+   "temporal_anchor": "at only around 5% of their population",
+   "reviewer_question": "Must the 5% population share be numerically shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 5% figure applies specifically to Israel, not to the U.S. or the global population.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%)",
+     "x": "0",
+     "field": "value",
+     "value": 5.0,
+     "note": "The entity string pairs Israel with 5%; no U.S./global value is present."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In Israel, about 5% are vegan",
+    "The 5% is Israel's share",
+    "Israel's population is the denominator for the 5%"
+   ],
+   "visual_evidence_rule": "The label 'Israel' must appear next to the 5% value; the value must not be labeled as U.S. or global.",
+   "temporal_anchor": "being in Israel at only around 5% of their population",
+   "reviewer_question": "Must the video make clear that 5% is Israel's share, not a U.S. or global share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Even the highest concentration is only around 5%, so vegans are a small share in Israel.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%)",
+     "x": "0",
+     "field": "value",
+     "value": 5.0,
+     "note": "5.0 percent is the maximum concentration in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "only about 5% even in the top country",
+    "the highest vegan share is just 5%",
+    "vegans remain a small minority in Israel"
+   ],
+   "visual_evidence_rule": "The 5% slice/portion should be visually small, and/or the text should say 'only' or 'just' with the 5%.",
+   "temporal_anchor": "at only around 5% of their population",
+   "reviewer_question": "Should the video emphasize that 5% is a low/small share, rather than presenting it neutrally?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 5% figure is estimated, per the source_type column.",
+  "The chart is a donut-style visual, implied by clip_id donut_32, if visual form counts as content."
+ ],
+ "unsupported_to_avoid": [
+  "U.S. vegan population growth trend or any U.S. share/change values",
+  "Absolute numbers of vegans or non-vegans in Israel or worldwide",
+  "Global vegan vs non-vegan proportions",
+  "Other countries' vegan shares or a full ranking beyond Israel being highest",
+  "Causal explanations for vegan growth",
+  "Year-over-year change or growth rate, which is not in the table"
+ ],
+ "notes": "Only one row is supported: Israel's estimated 5% vegan share as the highest concentration. The intent's U.S. growth trend is not supported by this table and should not be treated as required content.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.81
+ },
+ "draft_cost": {
+  "sec": 33.6,
+  "usage": {
+   "prompt_tokens": 614,
+   "completion_tokens": 7535,
+   "total_tokens": 8149,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6235
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 614
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

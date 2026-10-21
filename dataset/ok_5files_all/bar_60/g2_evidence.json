@@ -1,0 +1,166 @@
+{
+ "clip_id": "bar_60",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Dubai @ value",
+    "extreme": "max",
+    "expected": 1.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Dubai's bar must be visibly tallest or ranked first and labeled with 1.000."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Dubai @ value",
+    "mark:London @ value",
+    "mark:New York @ value",
+    "mark:Singapore @ value",
+    "mark:Bangkok @ value",
+    "mark:Paris @ value",
+    "mark:Tokyo @ value"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Dubai @ value",
+      "value": 1.0
+     },
+     {
+      "mark": "London @ value",
+      "value": 0.628
+     },
+     {
+      "mark": "New York @ value",
+      "value": 0.581
+     },
+     {
+      "mark": "Singapore @ value",
+      "value": 0.549
+     },
+     {
+      "mark": "Bangkok @ value",
+      "value": 0.502
+     },
+     {
+      "mark": "Paris @ value",
+      "value": 0.437
+     },
+     {
+      "mark": "Tokyo @ value",
+      "value": 0.39
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars must be sorted or labeled in the descending order shown in the table."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Dubai @ value",
+    "mark:London @ value"
+   ],
+   "assertion": {
+    "low": "London @ value",
+    "low_value": 0.628,
+    "high": "Dubai @ value",
+    "high_value": 1.0,
+    "delta": 0.372,
+    "ratio": 1.5924,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible annotation or callout linking Dubai and London bars with the 59% gap."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Dubai @ value",
+    "mark:New York @ value"
+   ],
+   "assertion": {
+    "low": "New York @ value",
+    "low_value": 0.581,
+    "high": "Dubai @ value",
+    "high_value": 1.0,
+    "delta": 0.419,
+    "ratio": 1.7212,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible annotation or callout linking Dubai and New York bars with the 72% gap."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Dubai @ value",
+    "mark:London @ value",
+    "mark:New York @ value"
+   ],
+   "assertion": {
+    "low": "New York @ value",
+    "low_value": 0.581,
+    "high": "Dubai @ value",
+    "high_value": 1.0,
+    "delta": 0.419,
+    "ratio": 1.7212,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible London/New York average benchmark or annotation showing Dubai is about 65% above it."
+  }
+ ]
+}

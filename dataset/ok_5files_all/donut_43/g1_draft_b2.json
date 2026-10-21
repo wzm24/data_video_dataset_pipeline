@@ -1,0 +1,230 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_43",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers about the positive correlation between owning a cat and holding a graduate degree.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Cat owners have a 17% higher likelihood of holding a graduate degree than the baseline/comparison group.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to have a graduate degree",
+     "x": "0",
+     "field": "value",
+     "value": 17.0,
+     "note": "unit=percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cat owners are 17% more likely to have a graduate degree",
+    "The likelihood of holding a graduate degree is 17% higher for cat owners",
+    "There is a 17% higher likelihood of a graduate degree among cat owners",
+    "Cat ownership is associated with a 17% increase in graduate-degree likelihood"
+   ],
+   "visual_evidence_rule": "The chart or annotation must show 17% (or 0.17) and connect it to cat owners and graduate degree, not merely display a number.",
+   "temporal_anchor": "Cat owners are 17 % more likely to have a graduate degree.",
+   "reviewer_question": "Must the exact 17% magnitude and the cat-owner vs baseline comparison be visible, or is the positive direction enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The association is positive: cat owners are more likely, not less likely, to hold a graduate degree.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to have a graduate degree",
+     "x": "0",
+     "field": "value",
+     "value": 17.0,
+     "note": "entity phrasing encodes positive direction"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cat owners are more likely to have a graduate degree",
+    "The relationship is positive",
+    "The likelihood is higher for cat owners",
+    "There is a positive association between cat ownership and graduate degree"
+   ],
+   "visual_evidence_rule": "The wording, arrow, or position must indicate 'more likely' or 'higher', not 'less likely'.",
+   "temporal_anchor": "more likely to have a graduate degree",
+   "reviewer_question": "Is the positive direction required to be explicit, or is it implied by the 17% value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The outcome being compared is holding a graduate degree.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to have a graduate degree",
+     "x": "0",
+     "field": "value",
+     "value": 17.0,
+     "note": "entity names the outcome as graduate degree"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "graduate degree",
+    "holding a graduate degree",
+    "having a graduate degree",
+    "completed graduate education"
+   ],
+   "visual_evidence_rule": "The chart or label must mention graduate degree, not another education level or unrelated outcome.",
+   "temporal_anchor": "graduate degree",
+   "reviewer_question": "Must the exact educational outcome be stated, or can it be visually implied?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 17% is a relative likelihood difference, not an absolute percentage-point gap or a share of cat owners.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to have a graduate degree",
+     "x": "0",
+     "field": "value",
+     "value": 17.0,
+     "note": "unit=percent"
+    },
+    {
+     "entity": "more likely to have a graduate degree",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.17,
+     "note": "same 17% expressed as proportion"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "17% more likely",
+    "17% higher likelihood",
+    "relative likelihood increase of 17%",
+    "0.17 relative increase"
+   ],
+   "visual_evidence_rule": "The label must use 'more likely' or 'higher likelihood' and avoid '17 percentage points' or '17% of cat owners'.",
+   "temporal_anchor": "17 % more likely",
+   "reviewer_question": "Must the video explicitly disambiguate relative likelihood from share/percentage points?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 17% higher likelihood is relative to a comparison group, such as non-cat owners or a baseline.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "more likely to have a graduate degree",
+     "x": "0",
+     "field": "value",
+     "value": 17.0,
+     "note": "'more likely' implies a comparator, but the table does not name the baseline"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "than non-cat owners",
+    "than people without cats",
+    "compared with the baseline group",
+    "relative to those who do not own cats"
+   ],
+   "visual_evidence_rule": "If shown, the chart should identify or label the comparison group; otherwise the wording must imply a baseline.",
+   "temporal_anchor": "Cat owners are 17 % more likely...",
+   "reviewer_question": "Must the baseline/non-cat-owner group be explicit, or is 'more likely' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A donut chart may highlight a 17% arc/slice (relative_value 0.1700) as a visual metaphor for the statistic, provided it is not read as a share of cat owners.",
+  "The 17% may be shown as a single highlighted callout or endpoint rather than as a time trend.",
+  "A positive/upward visual cue may reinforce 'more likely'.",
+  "The phrase 'positive correlation' may be used if framed as an association rather than a cause."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that owning a cat causes a graduate degree.",
+  "Percentage-point framing (e.g., '17 percentage points') because the table unit is percent for a relative likelihood.",
+  "Share framing such as '17% of cat owners have a graduate degree' or '17% of graduate degree holders own cats'.",
+  "Invented baseline rates or counts (non-cat-owner graduate-degree rate) not present in the table.",
+  "Reversing the direction (graduate degree holders are 17% more likely to own cats).",
+  "The unrelated Disneyland sentence from the original narration.",
+  "Extrapolation to other pets, other education levels, or time trends."
+ ],
+ "notes": "Only one numeric datum (17%, relative_value 0.1700) is available; the main ambiguities are whether 17% is a relative likelihood rather than a share and whether the non-cat-owner baseline must be explicit. Keep the visual and narration focused on the cat-owner/graduate-degree comparison.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 40.3,
+  "usage": {
+   "prompt_tokens": 615,
+   "completion_tokens": 9650,
+   "total_tokens": 10265,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7996
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 359
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

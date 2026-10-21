@@ -1,0 +1,229 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_104",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that high-income earners face a higher effective tax rate than the ultra-wealthy, and that the ultra-wealthy's tax burden has decreased since 2001.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 2008, the $100k-$200k income group's effective tax rate (25%) was higher than the 400 richest' rate (18.1%), a gap of 6.9 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "$100k-$200k earners tax rate",
+     "x": "2008",
+     "field": "value",
+     "value": 25.0,
+     "note": "effective tax rate for the middle income group"
+    },
+    {
+     "entity": "400 richest tax rate",
+     "x": "2008",
+     "field": "value",
+     "value": 18.1,
+     "note": "effective tax rate for top 400 richest tax returns"
+    }
+   ],
+   "computation": "25 - 18.1 = 6.9 percentage points",
+   "accepted_routes": [
+    "25% vs 18.1%; $100k-$200k earners paid a higher effective rate than the 400 richest in 2008",
+    "The 400 richest paid 18.1%, lower than the 25% paid by $100k-$200k earners",
+    "Middle/high-income earners faced a 6.9 percentage-point higher effective tax rate than the ultra-wealthy in 2008"
+   ],
+   "visual_evidence_rule": "Two 2008 values must be visible/labeled: $100k-$200k (or middle) at 25% and 400 richest at 18.1%, on a comparable scale or with explicit comparison labels.",
+   "temporal_anchor": "The first clause giving 25% and the clause saying the 400 richest paid just 18.1% in 2008.",
+   "reviewer_question": "Must the video explicitly compare the 25% high-income rate against the 18.1% ultra-wealthy rate in 2008?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 400 richest' effective tax rate declined from 23% in 2001 to 18.1% in 2008, a drop of 4.9 percentage points (about 21.3% lower relative to 2001).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "400 richest tax rate",
+     "x": "2001",
+     "field": "value",
+     "value": 23.0,
+     "note": "2001 effective tax rate for top 400 richest tax returns"
+    },
+    {
+     "entity": "400 richest tax rate",
+     "x": "2008",
+     "field": "value",
+     "value": 18.1,
+     "note": "2008 effective tax rate for top 400 richest tax returns"
+    }
+   ],
+   "computation": "23 - 18.1 = 4.9 percentage points; (23 - 18.1)/23 = 0.2130 = 21.3% relative decline",
+   "accepted_routes": [
+    "The 400 richest' effective tax rate fell from 23% in 2001 to 18.1% in 2008",
+    "The ultra-wealthy's rate declined by 4.9 percentage points since 2001",
+    "The top 400 rate was about 21% lower in 2008 than in 2001"
+   ],
+   "visual_evidence_rule": "Both top-400 values must be visible on a timeline or paired bars: 23% for 2001 and 18.1% for 2008, with a downward direction or change label.",
+   "temporal_anchor": "The 2001 clause saying the rate was 23% and the 2008 clause saying it was 18.1%.",
+   "reviewer_question": "Must the video show the 2001-to-2008 decline in the 400 richest' effective tax rate?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The $100k-$200k earners' effective tax rate in 2008 was 25%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "$100k-$200k earners tax rate",
+     "x": "2008",
+     "field": "value",
+     "value": 25.0,
+     "note": "effective tax rate for the $100k-$200k income group"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "$100k-$200k earners faced a 25% effective tax rate in 2008",
+    "The $100k-$200k or middle-income group is shown at 25%",
+    "High-income earners: 25% effective tax rate"
+   ],
+   "visual_evidence_rule": "A bar/label for $100k-$200k or middle/high-income earners at 25% must be visible.",
+   "temporal_anchor": "The first narration clause: 'If you earn between $100,000 and $200,000... up to 25% effective tax rate.'",
+   "reviewer_question": "Is the 25% high-income effective tax rate required as a standalone visible value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 400 richest' effective tax rate in 2008 was 18.1%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "400 richest tax rate",
+     "x": "2008",
+     "field": "value",
+     "value": 18.1,
+     "note": "2008 effective tax rate for top 400 richest tax returns"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 400 richest paid 18.1% in 2008",
+    "Top 400 effective tax rate: 18.1% in 2008",
+    "Just 18.1% for the 400 richest tax returns in 2008"
+   ],
+   "visual_evidence_rule": "The 2008 top-400 value must be labeled at 18.1% if shown as a standalone endpoint.",
+   "temporal_anchor": "The clause: 'The 400 richest tax returns surveyed by the IRS paid just 18.1% in 2008.'",
+   "reviewer_question": "Is a standalone 18.1% endpoint needed, or is it sufficiently covered by the 2008 comparison and 2001-to-2008 change units?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 400 richest' effective tax rate in 2001 was 23%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "400 richest tax rate",
+     "x": "2001",
+     "field": "value",
+     "value": 23.0,
+     "note": "2001 effective tax rate for top 400 richest tax returns"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2001, the 400 richest' effective tax rate was 23%",
+    "Top 400 rate in 2001: 23%",
+    "The 2001 baseline for the ultra-wealthy was 23%"
+   ],
+   "visual_evidence_rule": "The 2001 top-400 value must be labeled at 23% if shown as a standalone endpoint.",
+   "temporal_anchor": "The clause: 'In 2001... that rate was 23%.'",
+   "reviewer_question": "Is the 2001 baseline needed as a separate visible endpoint, or is it covered by the decline unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Highlight the 6.9 percentage-point gap between 25% and 18.1% as a derived comparison.",
+  "Show the 23% to 18.1% drop as an approximately 21.3% relative decline.",
+  "Frame the 400 richest' 18.1% as the lowest rate among the displayed groups in 2008."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that George W. Bush or any tax policy caused the decline.",
+  "Any 99% vs 1% wealth-share or tax-share figure, which is not in the table.",
+  "Payroll tax amounts or effects, which are not in the table.",
+  "Values for years or income groups other than 2001/2008 and the listed $100k-$200k and 400 richest groups.",
+  "Treating the 25% value as an exact rate for every $100k-$200k taxpayer if 'up to' qualifier is intended."
+ ],
+ "notes": "All cited numbers are table values or arithmetic combinations of them. The core required story is the 2008 comparison (25% > 18.1%) and the 400 richest' decline from 23% in 2001 to 18.1% in 2008.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 35.2,
+  "usage": {
+   "prompt_tokens": 722,
+   "completion_tokens": 9311,
+   "total_tokens": 10033,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7251
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 466
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

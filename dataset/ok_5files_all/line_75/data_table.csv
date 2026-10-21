@@ -1,0 +1,201 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_75,Early retirement of worst emitters,early-retirement-of-worst-emitters,150.0,,1.1905,0.0000,%,#2b6578,axis_calibrated
+line_75,Early retirement of worst emitters,early-retirement-of-worst-emitters,150.0,,1.1905,0.3500,%,#2b6578,axis_calibrated
+line_75,Early retirement of worst emitters,early-retirement-of-worst-emitters,920.0,,101.1905,1.0000,%,#2b6578,axis_calibrated
+line_75,100% replacement at end of life,100-replacement-at-end-of-life,150.0,,1.1905,0.0000,%,#467a96,axis_calibrated
+line_75,100% replacement at end of life,100-replacement-at-end-of-life,573.5,,101.1905,1.0000,%,#467a96,axis_calibrated
+line_75,100% replacement at end of life,100-replacement-at-end-of-life,920.0,,101.1905,1.0000,%,#467a96,axis_calibrated
+line_75,Production ramp,production-ramp,781.4,,101.1905,1.0000,%,#7da3b5,axis_calibrated
+line_75,Production ramp,production-ramp,920.0,,101.1905,1.0000,%,#7da3b5,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,150.0,,1.1905,0.0000,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,162.8,,1.2619,0.0007,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,188.5,,1.7857,0.0060,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,201.3,,2.2381,0.0105,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,214.2,,2.8095,0.0162,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,239.8,,4.2857,0.0310,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,252.7,,5.1667,0.0398,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,265.5,,6.1667,0.0498,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,278.3,,7.2619,0.0607,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,304.0,,9.7143,0.0852,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,316.8,,11.0714,0.0988,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,329.7,,12.5000,0.1131,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,342.5,,14.0000,0.1281,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,368.2,,17.2143,0.1602,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,381.0,,18.9048,0.1771,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,393.8,,20.6429,0.1945,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,419.5,,24.2857,0.2310,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,432.3,,26.1905,0.2500,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,445.2,,28.0952,0.2690,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,458.0,,30.0476,0.2886,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,483.7,,34.0476,0.3286,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,496.5,,36.0714,0.3488,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,509.3,,38.0952,0.3690,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,522.2,,40.1429,0.3895,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,547.8,,44.2381,0.4305,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,560.7,,46.2857,0.4510,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,573.5,,48.3095,0.4712,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,586.3,,50.3333,0.4914,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,612.0,,54.3333,0.5314,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,624.8,,56.2857,0.5510,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,637.7,,58.1905,0.5700,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,663.3,,61.9286,0.6074,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,676.2,,63.7381,0.6255,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,689.0,,65.4762,0.6429,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,701.8,,67.1667,0.6598,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,727.5,,70.3810,0.6919,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,740.3,,71.8810,0.7069,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,753.2,,73.3095,0.7212,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,766.0,,74.6667,0.7348,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,791.7,,77.1190,0.7593,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,804.5,,78.2143,0.7702,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,817.3,,79.2143,0.7802,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,843.0,,80.9048,0.7971,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,855.8,,81.5714,0.8038,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,868.7,,82.1429,0.8095,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,881.5,,82.5952,0.8140,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,907.2,,83.1190,0.8193,%,#fcd116,axis_calibrated
+line_75,High carbon tax,high-carbon-tax,920.0,,83.1905,0.8200,%,#fcd116,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,150.0,,1.1905,0.0000,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,162.8,,1.2381,0.0005,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,188.5,,1.7143,0.0052,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,201.3,,2.1190,0.0093,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,214.2,,2.6190,0.0143,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,239.8,,3.9048,0.0271,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,252.7,,4.6905,0.0350,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,265.5,,5.5714,0.0438,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,278.3,,6.5238,0.0533,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,304.0,,8.6667,0.0748,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,316.8,,9.8571,0.0867,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,329.7,,11.1190,0.0993,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,342.5,,12.4286,0.1124,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,368.2,,15.2619,0.1407,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,381.0,,16.7381,0.1555,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,393.8,,18.2857,0.1710,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,419.5,,21.4762,0.2029,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,432.3,,23.1429,0.2195,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,445.2,,24.8095,0.2362,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,458.0,,26.5238,0.2533,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,483.7,,30.0238,0.2883,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,496.5,,31.8095,0.3062,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,509.3,,33.5952,0.3240,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,522.2,,35.3810,0.3419,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,547.8,,39.0000,0.3781,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,560.7,,40.7857,0.3960,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,573.5,,42.5714,0.4138,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,599.2,,46.0952,0.4490,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,612.0,,47.8571,0.4667,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,624.8,,49.5714,0.4838,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,637.7,,51.2381,0.5005,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,663.3,,54.5238,0.5333,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,676.2,,56.0952,0.5490,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,689.0,,57.6429,0.5645,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,701.8,,59.1190,0.5793,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,727.5,,61.9286,0.6074,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,740.3,,63.2619,0.6207,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,753.2,,64.5238,0.6333,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,778.8,,66.8095,0.6562,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,791.7,,67.8571,0.6667,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,804.5,,68.8095,0.6762,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,817.3,,69.6905,0.6850,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,843.0,,71.1667,0.6998,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,855.8,,71.7619,0.7057,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,868.7,,72.2619,0.7107,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,881.5,,72.6667,0.7148,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,907.2,,73.1429,0.7195,%,#f0b870,axis_calibrated
+line_75,Low market subsidy,low-market-subsidy,920.0,,73.1905,0.7200,%,#f0b870,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,150.0,,1.1905,0.0000,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,162.8,,1.2381,0.0005,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,188.5,,1.6190,0.0043,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,201.3,,1.9524,0.0076,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,214.2,,2.3810,0.0119,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,239.8,,3.4524,0.0226,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,252.7,,4.0952,0.0290,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,265.5,,4.8333,0.0364,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,278.3,,5.6429,0.0445,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,304.0,,7.4286,0.0624,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,316.8,,8.4286,0.0724,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,329.7,,9.4762,0.0829,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,342.5,,10.5714,0.0938,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,368.2,,12.9048,0.1171,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,381.0,,14.1429,0.1295,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,393.8,,15.4286,0.1424,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,419.5,,18.0952,0.1690,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,432.3,,19.4762,0.1829,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,445.2,,20.8810,0.1969,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,458.0,,22.3095,0.2112,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,483.7,,25.2143,0.2402,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,496.5,,26.7143,0.2552,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,509.3,,28.1905,0.2700,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,522.2,,29.6905,0.2850,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,547.8,,32.6905,0.3150,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,560.7,,34.1905,0.3300,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,573.5,,35.6667,0.3448,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,599.2,,38.6190,0.3743,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,612.0,,40.0714,0.3888,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,624.8,,41.5000,0.4031,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,637.7,,42.9048,0.4171,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,663.3,,45.6429,0.4445,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,676.2,,46.9524,0.4576,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,689.0,,48.2381,0.4705,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,701.8,,49.4762,0.4829,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,727.5,,51.8095,0.5062,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,740.3,,52.9048,0.5171,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,753.2,,53.9524,0.5276,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,778.8,,55.8810,0.5469,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,791.7,,56.7381,0.5555,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,804.5,,57.5476,0.5636,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,817.3,,58.2857,0.5710,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,843.0,,59.5000,0.5831,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,855.8,,60.0000,0.5881,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,868.7,,60.4286,0.5924,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,881.5,,60.7619,0.5957,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,907.2,,61.1429,0.5995,%,#d66d45,axis_calibrated
+line_75,Low carbon tax,low-carbon-tax,920.0,,61.1905,0.6000,%,#d66d45,axis_calibrated
+line_75,Free market,free-market,150.0,,1.1905,0.0000,%,#c44040,axis_calibrated
+line_75,Free market,free-market,175.7,,1.3810,0.0019,%,#c44040,axis_calibrated
+line_75,Free market,free-market,188.5,,1.5952,0.0040,%,#c44040,axis_calibrated
+line_75,Free market,free-market,201.3,,1.8810,0.0069,%,#c44040,axis_calibrated
+line_75,Free market,free-market,214.2,,2.2619,0.0107,%,#c44040,axis_calibrated
+line_75,Free market,free-market,239.8,,3.2619,0.0207,%,#c44040,axis_calibrated
+line_75,Free market,free-market,252.7,,3.8571,0.0267,%,#c44040,axis_calibrated
+line_75,Free market,free-market,265.5,,4.5238,0.0333,%,#c44040,axis_calibrated
+line_75,Free market,free-market,278.3,,5.2619,0.0407,%,#c44040,axis_calibrated
+line_75,Free market,free-market,304.0,,6.9048,0.0571,%,#c44040,axis_calibrated
+line_75,Free market,free-market,316.8,,7.8095,0.0662,%,#c44040,axis_calibrated
+line_75,Free market,free-market,329.7,,8.7857,0.0760,%,#c44040,axis_calibrated
+line_75,Free market,free-market,355.3,,10.8333,0.0964,%,#c44040,axis_calibrated
+line_75,Free market,free-market,368.2,,11.9286,0.1074,%,#c44040,axis_calibrated
+line_75,Free market,free-market,381.0,,13.0714,0.1188,%,#c44040,axis_calibrated
+line_75,Free market,free-market,393.8,,14.2381,0.1305,%,#c44040,axis_calibrated
+line_75,Free market,free-market,419.5,,16.6905,0.1550,%,#c44040,axis_calibrated
+line_75,Free market,free-market,432.3,,17.9524,0.1676,%,#c44040,axis_calibrated
+line_75,Free market,free-market,445.2,,19.2381,0.1805,%,#c44040,axis_calibrated
+line_75,Free market,free-market,458.0,,20.5476,0.1936,%,#c44040,axis_calibrated
+line_75,Free market,free-market,483.7,,23.2143,0.2202,%,#c44040,axis_calibrated
+line_75,Free market,free-market,496.5,,24.5714,0.2338,%,#c44040,axis_calibrated
+line_75,Free market,free-market,509.3,,25.9524,0.2476,%,#c44040,axis_calibrated
+line_75,Free market,free-market,522.2,,27.3095,0.2612,%,#c44040,axis_calibrated
+line_75,Free market,free-market,547.8,,30.0714,0.2888,%,#c44040,axis_calibrated
+line_75,Free market,free-market,560.7,,31.4286,0.3024,%,#c44040,axis_calibrated
+line_75,Free market,free-market,573.5,,32.8095,0.3162,%,#c44040,axis_calibrated
+line_75,Free market,free-market,599.2,,35.5000,0.3431,%,#c44040,axis_calibrated
+line_75,Free market,free-market,612.0,,36.8333,0.3564,%,#c44040,axis_calibrated
+line_75,Free market,free-market,624.8,,38.1429,0.3695,%,#c44040,axis_calibrated
+line_75,Free market,free-market,637.7,,39.4286,0.3824,%,#c44040,axis_calibrated
+line_75,Free market,free-market,663.3,,41.9286,0.4074,%,#c44040,axis_calibrated
+line_75,Free market,free-market,676.2,,43.1429,0.4195,%,#c44040,axis_calibrated
+line_75,Free market,free-market,689.0,,44.3095,0.4312,%,#c44040,axis_calibrated
+line_75,Free market,free-market,701.8,,45.4524,0.4426,%,#c44040,axis_calibrated
+line_75,Free market,free-market,727.5,,47.5952,0.4640,%,#c44040,axis_calibrated
+line_75,Free market,free-market,740.3,,48.5952,0.4740,%,#c44040,axis_calibrated
+line_75,Free market,free-market,753.2,,49.5714,0.4838,%,#c44040,axis_calibrated
+line_75,Free market,free-market,778.8,,51.3333,0.5014,%,#c44040,axis_calibrated
+line_75,Free market,free-market,791.7,,52.1190,0.5093,%,#c44040,axis_calibrated
+line_75,Free market,free-market,804.5,,52.8571,0.5167,%,#c44040,axis_calibrated
+line_75,Free market,free-market,817.3,,53.5238,0.5233,%,#c44040,axis_calibrated
+line_75,Free market,free-market,843.0,,54.6429,0.5345,%,#c44040,axis_calibrated
+line_75,Free market,free-market,855.8,,55.1190,0.5393,%,#c44040,axis_calibrated
+line_75,Free market,free-market,868.7,,55.5000,0.5431,%,#c44040,axis_calibrated
+line_75,Free market,free-market,881.5,,55.7857,0.5460,%,#c44040,axis_calibrated
+line_75,Free market,free-market,907.2,,56.1429,0.5495,%,#c44040,axis_calibrated
+line_75,Free market,free-market,920.0,,56.1905,0.5500,%,#c44040,axis_calibrated

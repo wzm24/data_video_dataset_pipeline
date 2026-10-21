@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f9f9f9"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#333333">Support for replacing the Electoral College</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">50%</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">100%</text>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,554.0 162.3,462.0 183.5,462.0 204.6,324.0 310.4,416.0 395.0,462.0 796.9,508.0 881.5,498.8 1008.5,498.8 1135.4,590.8 1177.7,554.0 1198.8,535.6 1220.0,498.8" fill="none" stroke="#4a4a4a" stroke-width="3" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="204.6" cy="324.0" r="6" fill="#4a4a4a" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="498.8" r="6" fill="#4a4a4a" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="204.6" y="306.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333"><tspan x="204.6" dy="0">80%</tspan></text>
+<text data-role="point-label" x="1220.0" y="480.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333"><tspan x="1220.0" dy="0">61%</tspan></text>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1965</text>
+<text data-role="x-axis-label" x="289.2" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1975</text>
+<text data-role="x-axis-label" x="500.8" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1985</text>
+<text data-role="x-axis-label" x="712.3" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1995</text>
+<text data-role="x-axis-label" x="923.8" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">2005</text>
+<text data-role="x-axis-label" x="1135.4" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">2015</text>
+</g>
+</svg>

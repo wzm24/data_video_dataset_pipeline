@@ -1,0 +1,141 @@
+{
+ "clip_id": "bar_11",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Cyclists @ 720.0"
+   ],
+   "assertion": {
+    "mark": "Cyclists @ 720.0",
+    "field": "value",
+    "expected": 0.33,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Cyclists bar must be visible and either labeled 0.33 or clearly aligned to 0.33 on the y-axis."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Walkers @ 480.0"
+   ],
+   "assertion": {
+    "mark": "Walkers @ 480.0",
+    "field": "value",
+    "expected": 0.4,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Walkers bar must be visible and either labeled 0.40 or clearly aligned to 0.40 on the y-axis."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Walkers @ 480.0",
+    "mark:Cyclists @ 720.0"
+   ],
+   "assertion": {
+    "greater": "Walkers @ 480.0",
+    "lesser": "Cyclists @ 720.0",
+    "expected_ratio": 1.2121,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Cyclists and Walkers bars must be shown together or in direct comparison, with values 0.33 and 0.40 visible or derivable from the axis."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Motorcyclists @ 240.0",
+    "mark:Cyclists @ 720.0"
+   ],
+   "assertion": {
+    "greater": "Motorcyclists @ 240.0",
+    "lesser": "Cyclists @ 720.0",
+    "expected_ratio": 3.0303,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Motorcyclists bar and Cyclists bar must both be visible with values or axis alignment."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Motorcyclists @ 240.0",
+    "mark:Walkers @ 480.0",
+    "mark:Cyclists @ 720.0",
+    "mark:Car drivers @ 960.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Motorcyclists @ 240.0",
+      "value": 1.0
+     },
+     {
+      "mark": "Walkers @ 480.0",
+      "value": 0.4
+     },
+     {
+      "mark": "Cyclists @ 720.0",
+      "value": 0.33
+     },
+     {
+      "mark": "Car drivers @ 960.0",
+      "value": 0.05
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four bars must be present in correct vertical order with values."
+  }
+ ]
+}

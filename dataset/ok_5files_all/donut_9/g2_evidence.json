@@ -1,0 +1,105 @@
+{
+ "clip_id": "donut_9",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:profit margin @ 0"
+   ],
+   "assertion": {
+    "mark": "profit margin @ 0",
+    "field": "value",
+    "expected": 3.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A label, legend, or annotation must show the profit margin as 3% (or 3 percent)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:profit margin @ 0",
+    "segment:remainder of the ring @ 1"
+   ],
+   "assertion": {
+    "segment": "profit margin @ 0",
+    "expected_share": 0.03,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The donut/ring must visibly include a 97% remainder segment, or the remaining area must be labeled/legend-ed as 97%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:profit margin @ 0",
+    "mark:remainder of the ring @ 1"
+   ],
+   "assertion": {
+    "low": "profit margin @ 0",
+    "low_value": 3.0,
+    "high": "remainder of the ring @ 1",
+    "high_value": 97.0,
+    "delta": 94.0,
+    "ratio": 32.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A viewer must be able to see the large remainder vs tiny margin contrast; an annotation or label should communicate the ~32× ratio if this unit is required."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:remainder of the ring @ 1",
+    "mark:profit margin @ 0"
+   ],
+   "assertion": {
+    "greater": "remainder of the ring @ 1",
+    "lesser": "profit margin @ 0",
+    "expected_ratio": 32.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart annotation or label should show the 97% vs 3% contrast and/or the 94 percentage-point gap."
+  }
+ ]
+}

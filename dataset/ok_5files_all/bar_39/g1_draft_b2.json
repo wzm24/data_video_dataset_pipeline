@@ -1,0 +1,228 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_39",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate how a progressive wealth tax is calculated across different asset levels, illustrating that moderate wealth incurs no cost while extreme wealth is taxed at marginal rates.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Wealth in the first bracket up to $50M is not taxed; the marginal rate is 0%.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "First $50M of wealth",
+     "x": "0-50000000",
+     "field": "value",
+     "value": 0.0,
+     "note": "marginal rate 0% in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "wealth up to $50M is untaxed",
+    "the first $50M bracket has a 0% rate",
+    "no tax on the first $50M"
+   ],
+   "visual_evidence_rule": "The chart must make the 0% rate for the first $50M bracket visible.",
+   "temporal_anchor": "the narration clause saying you'd pay nothing on your first fifty million",
+   "reviewer_question": "Should the clip be required to state that the first $50M is untaxed, or is that only optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The $50M to $500M bracket has a 2% marginal tax rate.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "$50M to $500M",
+     "x": "50000000-500000000",
+     "field": "value",
+     "value": 2.0,
+     "note": "2% marginal rate in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the $50M–$500M bracket is taxed at 2%",
+    "a 2% marginal rate applies from $50M to $500M",
+    "the middle bracket rate is 2%"
+   ],
+   "visual_evidence_rule": "The chart must visibly associate the 2% marginal rate with the $50M–$500M bracket.",
+   "temporal_anchor": "the narration clause introducing the 2% rate on the amount after the first $50M",
+   "reviewer_question": "Should the 2% middle-bracket rate be a required semantic unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The bracket above $500M has a 3% marginal tax rate.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Above $500M",
+     "x": "500000000+",
+     "field": "value",
+     "value": 3.0,
+     "note": "3% marginal rate in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "wealth above $500M is taxed at 3%",
+    "the top bracket rate is 3%",
+    "a 3% marginal rate applies above $500M"
+   ],
+   "visual_evidence_rule": "The chart must visibly associate the 3% marginal rate with the above-$500M bracket.",
+   "temporal_anchor": "the narration's $2B tax-due clause, with the 3% rate supplied by the chart annotation for above $500M",
+   "reviewer_question": "Should the 3% top-bracket rate be required even though the narration does not verbally state it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The marginal tax rates progress upward across wealth brackets: 0%, then 2%, then 3%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "First $50M of wealth",
+     "x": "0-50000000",
+     "field": "value",
+     "value": 0.0,
+     "note": "0% bracket rate"
+    },
+    {
+     "entity": "$50M to $500M",
+     "x": "50000000-500000000",
+     "field": "value",
+     "value": 2.0,
+     "note": "2% bracket rate"
+    },
+    {
+     "entity": "Above $500M",
+     "x": "500000000+",
+     "field": "value",
+     "value": 3.0,
+     "note": "3% bracket rate"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "marginal rates rise from 0% to 2% to 3%",
+    "the brackets are progressive with rates 0%, 2%, 3%",
+    "higher wealth brackets have higher marginal rates"
+   ],
+   "visual_evidence_rule": "The chart must make the three bracket rates visible in an ordered progression from 0% to 2% to 3%.",
+   "temporal_anchor": "the sequence of clauses moving from no tax to the middle rate to the $2B tax result",
+   "reviewer_question": "Should the progressive ordering be required as a separate unit, or is it sufficiently covered by the individual bracket-rate units?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The tax due on a $2 billion estate is about $49 million.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "$2 billion estate",
+     "x": "2000000000",
+     "field": "value",
+     "value": 49000000.0,
+     "note": "tax due from narration_printed row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the $2B estate owes about $49M",
+    "tax due on the $2B estate is roughly $49M",
+    "$49M is the tax due for the $2B estate"
+   ],
+   "visual_evidence_rule": "The $49M tax-due figure must be visible in association with the $2B estate.",
+   "temporal_anchor": "the narration clause saying if you have two billion dollars, you'd pay about forty nine million dollars",
+   "reviewer_question": "Should the $49M tax due on the $2B estate be required as the endpoint result?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The $2B estate amount (2,000,000,000 USD) as the asset level being taxed.",
+  "The first bracket starting at $0.",
+  "The association of the $49M tax due specifically with the $2B estate rather than with a bracket rate."
+ ],
+ "unsupported_to_avoid": [
+  "Narration-only numbers such as $40M, $60M, $10M, and $200k are not in the table and should not be required as data values.",
+  "Deriving a tax-due value from bracket rates that conflicts with the table's $49M tax-due row.",
+  "Applying the 3% rate to the entire $2B estate or treating marginal rates as total effective rates.",
+  "Causal claims about wealth-tax policy outcomes or extrapolating tax due to asset levels not in the table."
+ ],
+ "notes": "The table's bracket rates and tax-due row are not fully arithmetically consistent, so the tax-due unit is direct from the table/narration_printed row rather than derived. Units focus on bracket rates, progression, and the $49M endpoint.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 37.8,
+  "usage": {
+   "prompt_tokens": 1148,
+   "completion_tokens": 9151,
+   "total_tokens": 10299,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7455
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 636
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

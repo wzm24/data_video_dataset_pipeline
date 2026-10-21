@@ -1,0 +1,134 @@
+{
+ "clip_id": "area_33",
+ "family": "area",
+ "chart_form": "area/overlay_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:CHINA @ 2000",
+    "mark:CHINA @ 2040"
+   ],
+   "assertion": {
+    "low": "CHINA @ 2000",
+    "low_value": 434.8,
+    "high": "CHINA @ 2040",
+    "high_value": 2034.8,
+    "delta": 1600.0,
+    "ratio": 4.6799,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The China series must show a large upward change from its 2000 value to its 2040 value, or the 1,600-equivalent net increase must be derivable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:USA @ 2040",
+    "mark:USA @ 2000"
+   ],
+   "assertion": {
+    "greater": "USA @ 2040",
+    "lesser": "USA @ 2000",
+    "expected_ratio": 1.23,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The USA series must be visible alongside China and show only a small net change from 2000 to 2040."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:CHINA @ 2005",
+    "mark:USA @ 2005"
+   ],
+   "assertion": {
+    "at": "2005",
+    "above": "CHINA",
+    "above_value": 434.8,
+    "below": "USA",
+    "below_value": 434.8,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series must be visible around 2005-2006 so the crossing from equal to China-above-USA can be seen."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:CHINA @ 2040",
+    "mark:USA @ 2040"
+   ],
+   "assertion": {
+    "greater": "CHINA @ 2040",
+    "lesser": "USA @ 2040",
+    "expected_ratio": 3.8048,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 2040 endpoint values, or a final ratio, must be visible so the ~3.8x comparison can be made."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:CHINA @ 2025",
+    "mark:CHINA @ 2035"
+   ],
+   "assertion": {
+    "low": "CHINA @ 2025",
+    "low_value": 1614.8,
+    "high": "CHINA @ 2035",
+    "high_value": 1964.8,
+    "delta": 350.0,
+    "ratio": 1.2167,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "China's 2025 and 2035 values must be visible so the 350-equivalent 10-year increase can be derived."
+  }
+ ]
+}

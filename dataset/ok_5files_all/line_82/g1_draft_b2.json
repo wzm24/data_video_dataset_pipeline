@@ -1,0 +1,245 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_82",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the severe shortage of medical oxygen caused by a massive surge in daily demand during the pandemic, which forced industries to redirect supplies.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Oxygen need rises steeply from March 2020 to September 2020, reaching a first peak.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2020",
+     "field": "value",
+     "value": 200751.011,
+     "note": "starting value"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Sep 2020",
+     "field": "value",
+     "value": 4501733.1023,
+     "note": "first peak value"
+    }
+   ],
+   "computation": "ratio = 4501733.1023 / 200751.0110 ≈ 22.4; increase ≈ 4300982.0913",
+   "accepted_routes": [
+    "Oxygen need climbs sharply from March to September 2020.",
+    "By September 2020, need is roughly 22 times the March 2020 level.",
+    "The series shows a steep first wave from Mar 2020 to Sep 2020."
+   ],
+   "visual_evidence_rule": "The series must visibly rise from the Mar 2020 start to the Sep 2020 point, with both values identifiable.",
+   "temporal_anchor": "rising demand for medical oxygen",
+   "reviewer_question": "Should the initial Mar–Sep 2020 climb be mandatory, or is only the final Mar 2021 spike required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "After the September 2020 peak, oxygen need falls through February 2021 to about one-third of that peak.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Sep 2020",
+     "field": "value",
+     "value": 4501733.1023,
+     "note": "first peak value"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Feb 2021",
+     "field": "value",
+     "value": 1500577.7008,
+     "note": "post-peak low before final spike"
+    }
+   ],
+   "computation": "ratio = 4501733.1023 / 1500577.7008 = 3.0; Feb value is about one-third of Sep peak",
+   "accepted_routes": [
+    "Oxygen need declines from the Sep 2020 peak to Feb 2021.",
+    "By Feb 2021, need is about one-third of the Sep 2020 high.",
+    "The series falls after September 2020 and levels off before the final spike."
+   ],
+   "visual_evidence_rule": "The series must show a downward segment from Sep 2020 to Feb 2021, with the Sep peak and Feb value distinguishable.",
+   "temporal_anchor": "rising demand for medical oxygen",
+   "reviewer_question": "Should the Sep 2020–Feb 2021 decline be shown, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "March 2021 has the highest oxygen need in the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2021",
+     "field": "value",
+     "value": 10501155.4015,
+     "note": "highest value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "March 2021 reaches the highest oxygen need in the series.",
+    "The overall maximum is 10,501,155.4015 in Mar 2021.",
+    "Oxygen need peaks at about 10.5 million in March 2021."
+   ],
+   "visual_evidence_rule": "The Mar 2021 value must be shown as the maximum of the series.",
+   "temporal_anchor": "rising demand for medical oxygen",
+   "reviewer_question": "Must the Mar 2021 maximum be explicitly marked as the overall highest value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The March 2021 spike is about seven times the February 2021 level.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Feb 2021",
+     "field": "value",
+     "value": 1500577.7008,
+     "note": "prior month"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2021",
+     "field": "value",
+     "value": 10501155.4015,
+     "note": "spike month"
+    }
+   ],
+   "computation": "ratio = 10501155.4015 / 1500577.7008 ≈ 6.998 ≈ 7.0",
+   "accepted_routes": [
+    "March 2021 need is about seven times February 2021 need.",
+    "A roughly sevenfold jump occurs from Feb 2021 to Mar 2021.",
+    "The final month shows a massive month-over-month surge compared with February."
+   ],
+   "visual_evidence_rule": "The Mar 2021 value must be visibly much larger than the Feb 2021 value, with the ratio or both values identifiable.",
+   "temporal_anchor": "rising demand for medical oxygen",
+   "reviewer_question": "Should the Feb-to-Mar 2021 month-over-month jump be mandatory?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The March 2021 peak is more than twice the September 2020 peak.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oxygen need",
+     "x": "Sep 2020",
+     "field": "value",
+     "value": 4501733.1023,
+     "note": "first peak"
+    },
+    {
+     "entity": "oxygen need",
+     "x": "Mar 2021",
+     "field": "value",
+     "value": 10501155.4015,
+     "note": "later peak"
+    }
+   ],
+   "computation": "ratio = 10501155.4015 / 4501733.1023 ≈ 2.33",
+   "accepted_routes": [
+    "March 2021 need is more than double the September 2020 peak.",
+    "The final spike is over twice as high as the earlier Sep 2020 peak.",
+    "Mar 2021 dwarfs Sep 2020 by a factor of about 2.3."
+   ],
+   "visual_evidence_rule": "The Mar 2021 maximum must be shown as more than twice the Sep 2020 value.",
+   "temporal_anchor": "rising demand for medical oxygen",
+   "reviewer_question": "Should comparing the two peaks (Sep 2020 vs Mar 2021) be required, or is only the final maximum enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The Mar 2020 value (200,751.011) is the lowest in the series.",
+  "The Jan 2021 and Feb 2021 values are identical at 1,500,577.7008.",
+  "The Oct 2020 value (2,999,711.1496) is lower than Sep 2020 but higher than Nov 2020 (2,800,404.3905).",
+  "The Aug 2020 value (3,502,310.803) is between the Jul 2020 and Sep 2020 values."
+ ],
+ "unsupported_to_avoid": [
+  "Any claim that industries redirected supplies, because the table only contains oxygen-need values and no industry supply or redirection data.",
+  "Any claim that deaths were caused by oxygen shortage, because the table has no mortality data.",
+  "The narration detail '7-8 days', because it is not present in the table.",
+  "Absolute units such as litres, cylinders, or tonnes, because the unit column is blank.",
+  "Treating relative_value as a percentage or as the absolute oxygen need.",
+  "Calling the values daily demand when the table's x_value is monthly."
+ ],
+ "notes": "The table only supports monthly oxygen-need values; it contains no supply, redirection, death, or unit data. Required units center on the two peaks and the final Mar 2021 spike, while the Sep 2020–Feb 2021 decline is flagged optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 39.3,
+  "usage": {
+   "prompt_tokens": 1397,
+   "completion_tokens": 9990,
+   "total_tokens": 11387,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8046
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 885
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

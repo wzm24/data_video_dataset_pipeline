@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<text x="640" y="84" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#555555">IRS study of tax data from 2008 to 2010</text>
+<path d="M 640 360 L 640.0 90.0 A 270.0 270.0 0 0 1 889.4 256.7 Z" fill="#2b2b2b" stroke="#ffffff" stroke-width="2"/>
+<text x="733" y="233" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">18.3%</text>
+<line x1="772" y1="162" x2="813" y2="120" stroke="#9a9a9a" stroke-width="2"/>
+<text x="825" y="129" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">NOT PAID</text>
+<path d="M 640 360 L 889.4 256.7 A 270.0 270.0 0 1 1 640.0 90.0 Z" fill="#318fa6" stroke="#ffffff" stroke-width="2"/>
+<text x="547" y="511" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">81.7%</text>
+<line x1="508" y1="558" x2="467" y2="619" stroke="#9a9a9a" stroke-width="2"/>
+<text x="455" y="628" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">TAXES PAID</text>
+<line x1="772" y1="162" x2="813" y2="120" stroke="#9a9a9a" stroke-width="2"/>
+<text x="825" y="129" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">NOT PAID</text>
+<line x1="508" y1="558" x2="467" y2="619" stroke="#9a9a9a" stroke-width="2"/>
+<text x="455" y="628" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">TAXES PAID</text>
+</svg>

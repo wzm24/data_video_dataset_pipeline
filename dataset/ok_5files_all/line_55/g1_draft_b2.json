@@ -1,0 +1,336 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_55",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that while vaccine protection against infection decreases over time, protection against hospitalization remains strong.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Protection against infection declines over time, from 85% at the first timepoint to 47% at the final timepoint, a drop of 38 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=160.0",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "0.8500*100 = 85%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=1000.0",
+     "field": "relative_value",
+     "value": 0.47,
+     "note": "0.4700*100 = 47%"
+    }
+   ],
+   "computation": "(0.4700 - 0.8500) * 100 = -38 percentage points",
+   "accepted_routes": [
+    "Infection protection falls from 85% to 47% over the clip.",
+    "Protection against infection drops by 38 percentage points.",
+    "Infection effectiveness declines from about 85% to under 50%."
+   ],
+   "visual_evidence_rule": "The infection line must start near 85% and end near 47% on the y-axis.",
+   "temporal_anchor": "the clause stating protection against infection decreases over time",
+   "reviewer_question": "Must the video quantify the infection decline as 85% to 47%, or is a general downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Protection against hospitalization remains strong and high throughout, ranging from 85% to 92% and ending at 86%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=160.0",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "0.8500*100 = 85%, the minimum shown"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=664.0",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "0.9200*100 = 92%, the maximum shown"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=1000.0",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "0.8600*100 = 86%, the final value"
+    }
+   ],
+   "computation": "min=85%, max=92%, final=86% (relative_value*100); range = 92% - 85% = 7 percentage points",
+   "accepted_routes": [
+    "Hospitalization protection stays high at 85–92%, ending at 86%.",
+    "Protection against hospitalization never falls below 85% and peaks at 92%.",
+    "Hospitalization effectiveness remains around 85–92% throughout."
+   ],
+   "visual_evidence_rule": "The hospitalization line must stay in the upper range, visibly between 85% and 92%, with final point at 86%.",
+   "temporal_anchor": "the clause about protection from severe disease, hospitalization, and death remaining strong",
+   "reviewer_question": "Must the video specify the high hospitalization range or final value, or is a visibly high line sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the final timepoint, hospitalization protection is 86% versus 47% for infection, a 39-percentage-point gap.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=1000.0",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "0.8600*100 = 86%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=1000.0",
+     "field": "relative_value",
+     "value": 0.47,
+     "note": "0.4700*100 = 47%"
+    }
+   ],
+   "computation": "(0.8600 - 0.4700) * 100 = 39 percentage points",
+   "accepted_routes": [
+    "At the end, hospitalization protection is 86% while infection protection is 47%.",
+    "Final gap is 39 percentage points favoring hospitalization.",
+    "Hospitalization ends 39 points higher than infection."
+   ],
+   "visual_evidence_rule": "Both final points must be visible or annotated: hospitalization near 86%, infection near 47%.",
+   "temporal_anchor": "the closing contrast clause about severe cases or hospitalization versus infection",
+   "reviewer_question": "Is the final endpoint comparison obligatory, or can the video just show the two lines diverging?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After both series start at 85%, hospitalization protection is higher than infection protection at every later timepoint.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=160.0",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "0.8500*100 = 85%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=160.0",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "0.8500*100 = 85%"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=328.0",
+     "field": "relative_value",
+     "value": 0.88,
+     "note": "0.8800*100 = 88%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=328.0",
+     "field": "relative_value",
+     "value": 0.82,
+     "note": "0.8200*100 = 82%"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=496.0",
+     "field": "relative_value",
+     "value": 0.9,
+     "note": "0.9000*100 = 90%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=496.0",
+     "field": "relative_value",
+     "value": 0.76,
+     "note": "0.7600*100 = 76%"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=664.0",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "0.9200*100 = 92%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=664.0",
+     "field": "relative_value",
+     "value": 0.66,
+     "note": "0.6600*100 = 66%"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=832.0",
+     "field": "relative_value",
+     "value": 0.9,
+     "note": "0.9000*100 = 90%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=832.0",
+     "field": "relative_value",
+     "value": 0.7,
+     "note": "0.7000*100 = 70%"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=1000.0",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "0.8600*100 = 86%"
+    },
+    {
+     "entity": "effectiveness against infection",
+     "x": "x_px=1000.0",
+     "field": "relative_value",
+     "value": 0.47,
+     "note": "0.4700*100 = 47%"
+    }
+   ],
+   "computation": "Differences (hospitalization - infection) in percentage points: x=328: 6; x=496: 14; x=664: 26; x=832: 20; x=1000: 39; all >0 after x=160.",
+   "accepted_routes": [
+    "Hospitalization stays above infection after the shared 85% start.",
+    "The blue hospitalization line is above the red infection line at every later point.",
+    "The gap widens overall, reaching 39 points at the end."
+   ],
+   "visual_evidence_rule": "For every x after the first point, the hospitalization line must be visibly above the infection line.",
+   "temporal_anchor": "the contrast between infection decreasing and hospitalization remaining strong",
+   "reviewer_question": "Must the video show the cross-entity ranking at all timepoints, or only the final contrast?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Hospitalization protection is not flat: it peaks at 92% at x_px=664 and then declines to 86% by the final point, while remaining above 85%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=664.0",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "0.9200*100 = 92%, the peak"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=1000.0",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "0.8600*100 = 86%, the final value"
+    },
+    {
+     "entity": "effectiveness against hospitalization",
+     "x": "x_px=160.0",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "0.8500*100 = 85%, still the shown minimum"
+    }
+   ],
+   "computation": "Peak-to-final change = (0.8600 - 0.9200) * 100 = -6 percentage points; minimum remains 85%",
+   "accepted_routes": [
+    "Hospitalization protection peaks at 92% then eases to 86%.",
+    "There is a 6-point drop from the hospitalization peak to the final value.",
+    "The highest hospitalization protection is 92%, not the final 86%."
+   ],
+   "visual_evidence_rule": "The hospitalization line must show a maximum at x_px=664 near 92% and a lower final point near 86%.",
+   "temporal_anchor": "optional detail during the hospitalization-stays-strong segment",
+   "reviewer_question": "Should the video mention the mid-series peak and slight decline, or is that optional texture?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Both series start at the same 85% effectiveness at x_px=160.",
+  "Infection effectiveness has a small rebound from 66% at x_px=664 to 70% at x_px=832 before ending at 47%.",
+  "Infection protection falls below 50% only at the final timepoint (47%).",
+  "The hospitalization series reaches its maximum 92% at x_px=664."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that waning immunity or B-cell memory causes the patterns.",
+  "Extrapolating beyond the final timepoint, such as saying protection will keep dropping.",
+  "Claiming infection protection declines monotonically; it ticks up from 66% to 70% before the final drop.",
+  "Claiming hospitalization protection increases throughout; it peaks at 92% then declines to 86%.",
+  "Using the value column such as 86.2195 as the plotted percent instead of relative_value*100.",
+  "Referencing death protection; the table only has infection and hospitalization effectiveness."
+ ],
+ "notes": "Use relative_value*100 for plotted percentages; the value column is not used here. Required candidates focus on the infection decline, the high hospitalization range/final, and the final cross-entity contrast.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 45.5,
+  "usage": {
+   "prompt_tokens": 1117,
+   "completion_tokens": 11132,
+   "total_tokens": 12249,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8229
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 861
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

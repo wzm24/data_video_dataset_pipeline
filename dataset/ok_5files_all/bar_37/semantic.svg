@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Monthly price of Lantus, insulin</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="515.7" x2="1220" y2="515.7" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="515.7" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="515.7" x2="120" y2="515.7" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="521.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$0</text>
+<line data-role="gridline" x1="120" y1="480.2" x2="1220" y2="480.2" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="480.2" x2="120" y2="480.2" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="486.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$50</text>
+<line data-role="gridline" x1="120" y1="444.7" x2="1220" y2="444.7" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="444.7" x2="120" y2="444.7" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="450.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$100</text>
+<line data-role="gridline" x1="120" y1="409.3" x2="1220" y2="409.3" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="409.3" x2="120" y2="409.3" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="415.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$150</text>
+<line data-role="gridline" x1="120" y1="373.8" x2="1220" y2="373.8" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="373.8" x2="120" y2="373.8" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="379.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$200</text>
+<line data-role="gridline" x1="120" y1="338.4" x2="1220" y2="338.4" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="338.4" x2="120" y2="338.4" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="344.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$250</text>
+<line data-role="gridline" x1="120" y1="302.9" x2="1220" y2="302.9" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="302.9" x2="120" y2="302.9" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="308.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$300</text>
+<line data-role="gridline" x1="120" y1="267.4" x2="1220" y2="267.4" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="267.4" x2="120" y2="267.4" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="273.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$350</text>
+<g id="entity-united-states-price" data-role="entity" data-entity-id="united-states" data-label="United States">
+<rect id="united-states-price-bar" data-role="bar" data-entity-id="united-states" data-value="359.492" x="896.9" y="214.1" width="65.3" height="301.6" fill="#4a8bc2" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="united-states-price-label" data-role="category-label" data-entity-id="united-states" x="929.5" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333"><tspan x="929.5" dy="0.0">United</tspan><tspan x="929.5" dy="20.0">States</tspan></text>
+</g>
+<g id="entity-norway-price" data-role="entity" data-entity-id="norway" data-label="Norway">
+<rect id="norway-price-bar" data-role="bar" data-entity-id="norway" data-value="55.3899" x="416.5" y="479.2" width="62.7" height="36.4" fill="#46727c" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="norway-price-label" data-role="category-label" data-entity-id="norway" x="447.9" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Norway</text>
+</g>
+<g id="entity-france-price" data-role="entity" data-entity-id="france" data-label="France">
+<rect id="france-price-bar" data-role="bar" data-entity-id="france" data-value="58.1422" x="497.3" y="476.7" width="62.7" height="39.0" fill="#46727c" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="france-price-label" data-role="category-label" data-entity-id="france" x="528.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">France</text>
+</g>
+<g id="entity-australia-price" data-role="entity" data-entity-id="australia" data-label="Australia">
+<rect id="australia-price-bar" data-role="bar" data-entity-id="australia" data-value="63.6468" x="577.2" y="471.6" width="62.7" height="44.1" fill="#46727c" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="australia-price-label" data-role="category-label" data-entity-id="australia" x="608.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Australia</text>
+</g>
+<g id="entity-germany-price" data-role="entity" data-entity-id="germany" data-label="Germany">
+<rect id="germany-price-bar" data-role="bar" data-entity-id="germany" data-value="68.4633" x="658.0" y="467.1" width="62.7" height="48.6" fill="#46727c" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="germany-price-label" data-role="category-label" data-entity-id="germany" x="689.3" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Germany</text>
+</g>
+<g id="entity-united-kingdom-price" data-role="entity" data-entity-id="united-kingdom" data-label="United Kingdom">
+<rect id="united-kingdom-price-bar" data-role="bar" data-entity-id="united-kingdom" data-value="71.2156" x="737.9" y="464.6" width="62.7" height="51.1" fill="#46727c" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="united-kingdom-price-label" data-role="category-label" data-entity-id="united-kingdom" x="769.3" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333"><tspan x="769.3" dy="0.0">United</tspan><tspan x="769.3" dy="20.0">Kingdom</tspan></text>
+</g>
+<g id="entity-canada-price" data-role="entity" data-entity-id="canada" data-label="Canada">
+<rect id="canada-price-bar" data-role="bar" data-entity-id="canada" data-value="73.9679" x="817.8" y="462.0" width="62.7" height="53.7" fill="#46727c" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="canada-price-label" data-role="category-label" data-entity-id="canada" x="849.2" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Canada</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,216 @@
+{
+ "clip_id": "line_51",
+ "family": "line",
+ "chart_form": "line/multi_panel",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2011",
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2014",
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2015"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2011",
+      "value": 13.0
+     },
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2014",
+      "value": 11.0
+     },
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2015",
+      "value": 12.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The IRS budget values must make its 2011 start, 2014 low, and 2015 endpoint comparable, showing the 2014 low and the 2015 rebound."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:IRS REVENUE AGENTS @ 2011",
+    "mark:IRS REVENUE AGENTS @ 2015"
+   ],
+   "assertion": {
+    "low": "IRS REVENUE AGENTS @ 2015",
+    "low_value": 10.0,
+    "high": "IRS REVENUE AGENTS @ 2011",
+    "high_value": 13.5,
+    "delta": 3.5,
+    "ratio": 1.35,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The revenue-agents series must show its 2011 value at 13.5 and its 2015 value at 10, with the 2015 endpoint visibly lower."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:IRS AUDITS PER YEAR @ 2011",
+    "mark:IRS AUDITS PER YEAR @ 2015"
+   ],
+   "assertion": {
+    "low": "IRS AUDITS PER YEAR @ 2015",
+    "low_value": 1.2,
+    "high": "IRS AUDITS PER YEAR @ 2011",
+    "high_value": 1.7,
+    "delta": 0.5,
+    "ratio": 1.4167,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The audits series must show its 2011 value at 1.7 and its 2015 value at 1.2, with the 2015 endpoint visibly lower."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:IRS REVENUE AGENTS @ 2011",
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2011"
+   ],
+   "assertion": {
+    "greater": "IRS REVENUE AGENTS @ 2011",
+    "lesser": "IRS BUDGET (2018 DOLLARS) @ 2011",
+    "expected_ratio": 1.0385,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "For each of the three series, the 2015 endpoint must be visibly below the 2011 endpoint."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2011",
+    "mark:IRS REVENUE AGENTS @ 2011",
+    "mark:IRS AUDITS PER YEAR @ 2011",
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2012",
+    "mark:IRS REVENUE AGENTS @ 2012",
+    "mark:IRS AUDITS PER YEAR @ 2012",
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2013",
+    "mark:IRS REVENUE AGENTS @ 2013",
+    "mark:IRS AUDITS PER YEAR @ 2013",
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2014",
+    "mark:IRS REVENUE AGENTS @ 2014",
+    "mark:IRS AUDITS PER YEAR @ 2014",
+    "mark:IRS BUDGET (2018 DOLLARS) @ 2015",
+    "mark:IRS REVENUE AGENTS @ 2015",
+    "mark:IRS AUDITS PER YEAR @ 2015"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2011",
+      "value": 13.0
+     },
+     {
+      "mark": "IRS REVENUE AGENTS @ 2011",
+      "value": 13.5
+     },
+     {
+      "mark": "IRS AUDITS PER YEAR @ 2011",
+      "value": 1.7
+     },
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2012",
+      "value": 12.0
+     },
+     {
+      "mark": "IRS REVENUE AGENTS @ 2012",
+      "value": 12.5
+     },
+     {
+      "mark": "IRS AUDITS PER YEAR @ 2012",
+      "value": 1.6
+     },
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2013",
+      "value": 11.5
+     },
+     {
+      "mark": "IRS REVENUE AGENTS @ 2013",
+      "value": 12.0
+     },
+     {
+      "mark": "IRS AUDITS PER YEAR @ 2013",
+      "value": 1.5
+     },
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2014",
+      "value": 11.0
+     },
+     {
+      "mark": "IRS REVENUE AGENTS @ 2014",
+      "value": 11.0
+     },
+     {
+      "mark": "IRS AUDITS PER YEAR @ 2014",
+      "value": 1.3
+     },
+     {
+      "mark": "IRS BUDGET (2018 DOLLARS) @ 2015",
+      "value": 12.0
+     },
+     {
+      "mark": "IRS REVENUE AGENTS @ 2015",
+      "value": 10.0
+     },
+     {
+      "mark": "IRS AUDITS PER YEAR @ 2015",
+      "value": 1.2
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The yearly values must show agents and audits stepping down each year, while budget shows a rise from 2014 to 2015."
+  }
+ ]
+}

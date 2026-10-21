@@ -1,0 +1,138 @@
+{
+ "clip_id": "line_8",
+ "family": "line",
+ "chart_form": "line/multi_panel",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Higher Average Scores - TEST OPTIONAL @ 1994",
+    "mark:Higher Average Scores - TEST REQUIRED @ 1994"
+   ],
+   "assertion": {
+    "greater": "Higher Average Scores - TEST OPTIONAL @ 1994",
+    "lesser": "Higher Average Scores - TEST REQUIRED @ 1994",
+    "expected_ratio": 1.0214,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The TEST-OPTIONAL average-score series must be visibly above the TEST-REQUIRED average-score series at the 1994 and 2010 endpoints."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Higher Average Scores - TEST REQUIRED @ 486.7",
+    "mark:Higher Average Scores - TEST OPTIONAL @ 486.7"
+   ],
+   "assertion": {
+    "at": "486.7",
+    "above": "Higher Average Scores - TEST REQUIRED",
+    "above_value": 1078.3,
+    "below": "Higher Average Scores - TEST OPTIONAL",
+    "below_value": 1073.3,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two higher-average-score series must show a crossing or equality near the middle of the timeline, so the optional advantage is visibly non-uniform."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:More Applicants - TEST OPTIONAL @ 1994",
+    "mark:More Applicants - TEST REQUIRED @ 1994"
+   ],
+   "assertion": {
+    "greater": "More Applicants - TEST OPTIONAL @ 1994",
+    "lesser": "More Applicants - TEST REQUIRED @ 1994",
+    "expected_ratio": 1.0655,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The TEST-OPTIONAL applicant series must be visibly above the TEST-REQUIRED applicant series throughout the More Applicants timeline."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:More Applicants - TEST OPTIONAL @ 1994",
+    "mark:More Applicants - TEST REQUIRED @ 1994",
+    "mark:More Applicants - TEST OPTIONAL @ 2010",
+    "mark:More Applicants - TEST REQUIRED @ 2010"
+   ],
+   "assertion": {
+    "low": "More Applicants - TEST REQUIRED @ 1994",
+    "low_value": 1527.4,
+    "high": "More Applicants - TEST OPTIONAL @ 2010",
+    "high_value": 3627.4,
+    "delta": 2100.0,
+    "ratio": 2.3749,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both applicant series must visibly increase from 1994 to 2010, and the TEST-OPTIONAL series must show the larger end-to-end rise."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:More Applicants - TEST OPTIONAL @ 1994",
+    "mark:More Applicants - TEST REQUIRED @ 1994",
+    "mark:More Applicants - TEST OPTIONAL @ 2010",
+    "mark:More Applicants - TEST REQUIRED @ 2010"
+   ],
+   "assertion": {
+    "low": "More Applicants - TEST REQUIRED @ 1994",
+    "low_value": 1527.4,
+    "high": "More Applicants - TEST OPTIONAL @ 2010",
+    "high_value": 3627.4,
+    "delta": 2100.0,
+    "ratio": 2.3749,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The vertical distance between the optional and required applicant series must visibly increase from left to right."
+  }
+ ]
+}

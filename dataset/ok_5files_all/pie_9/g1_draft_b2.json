@@ -1,0 +1,237 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "pie_9",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate Dubai's economic transition from a near-total reliance on the pearl industry to a diversified economy following the discovery of oil, highlighting the lesson of not depending on a single resource.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Pearl industry is the dominant segment of the shown economic composition, at 91.7%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Pearl industry",
+     "x": "Pearl industry",
+     "field": "value",
+     "value": 91.7,
+     "note": "Table value for Pearl industry is 91.7%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Pearl industry makes up about 92% of the composition.",
+    "Pearl industry accounts for just over nine-tenths of the shown economy.",
+    "The Pearl industry is the overwhelming majority segment at 91.7%."
+   ],
+   "visual_evidence_rule": "The chart must show the Pearl industry as the large majority portion of the composition.",
+   "temporal_anchor": "The clause describing the pearl industry's historical share or reliance.",
+   "reviewer_question": "Must the video state Pearl industry's 91.7% share explicitly, or is showing it as the dominant segment sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The non-pearl/Other segment is small, at 8.3% of the composition.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Other",
+     "x": "Other",
+     "field": "value",
+     "value": 8.3,
+     "note": "Table value for Other is 8.3%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Other makes up about 8% of the composition.",
+    "The remaining non-pearl segment is only 8.3%.",
+    "All other activities combined are under one-tenth of the shown economy."
+   ],
+   "visual_evidence_rule": "The chart must show the Other segment as the small remainder of the composition.",
+   "temporal_anchor": "The clause about relying on a single resource or Dubai's only income.",
+   "reviewer_question": "Should the small Other share be explicitly stated to convey single-resource dependence?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Pearl industry's share is about 11 times the Other share, or exceeds it by about 83.4 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Pearl industry",
+     "x": "Pearl industry",
+     "field": "value",
+     "value": 91.7,
+     "note": "Numerator for ratio and minuend for gap."
+    },
+    {
+     "entity": "Other",
+     "x": "Other",
+     "field": "value",
+     "value": 8.3,
+     "note": "Denominator for ratio and subtrahend for gap."
+    }
+   ],
+   "computation": "(91.7 / 8.3) ≈ 11.05; or (91.7 - 8.3) = 83.4 percentage points",
+   "accepted_routes": [
+    "Pearl industry is roughly eleven times the size of Other.",
+    "Pearl industry exceeds Other by more than 80 percentage points.",
+    "The gap between Pearl and Other is about 83 percentage points."
+   ],
+   "visual_evidence_rule": "The chart must make the large magnitude gap between Pearl industry and Other apparent.",
+   "temporal_anchor": "The clause contrasting the dominant pearl industry with all other activity.",
+   "reviewer_question": "Should the video quantify the ratio or gap, or only visually show the large disparity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The two shown segments sum to the whole composition: Pearl industry 91.7% plus Other 8.3% equals 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Pearl industry",
+     "x": "Pearl industry",
+     "field": "value",
+     "value": 91.7,
+     "note": "First summand."
+    },
+    {
+     "entity": "Other",
+     "x": "Other",
+     "field": "value",
+     "value": 8.3,
+     "note": "Second summand."
+    }
+   ],
+   "computation": "91.7 + 8.3 = 100",
+   "accepted_routes": [
+    "The two segments total 100%.",
+    "Pearl industry and Other together make up the full composition.",
+    "The shares are 91.7% and 8.3%, summing to 100%."
+   ],
+   "visual_evidence_rule": "The chart must present Pearl industry and Other as the complete composition, with no missing or extra segment.",
+   "temporal_anchor": "The clause introducing the economic composition before the transition.",
+   "reviewer_question": "Does the whole-composition sum need to be stated, or is it implied by the two shares?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Pearl industry is ranked first and Other second: Pearl industry is the largest segment, and Other is the smaller one.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Pearl industry",
+     "x": "Pearl industry",
+     "field": "value",
+     "value": 91.7,
+     "note": "Higher value."
+    },
+    {
+     "entity": "Other",
+     "x": "Other",
+     "field": "value",
+     "value": 8.3,
+     "note": "Lower value."
+    }
+   ],
+   "computation": "91.7 > 8.3",
+   "accepted_routes": [
+    "Pearl industry is the largest segment; Other is the smaller segment.",
+    "Pearl industry ranks above Other in the composition.",
+    "The order is Pearl industry, then Other."
+   ],
+   "visual_evidence_rule": "The chart must allow viewers to identify Pearl industry as the larger segment and Other as the smaller segment.",
+   "temporal_anchor": "The clause summarizing the single-resource dependence.",
+   "reviewer_question": "Is stating the rank order necessary, or is it redundant with the share values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The historical oil discovery and subsequent diversification may be mentioned as narrative context, but the dataset only contains Pearl industry and Other shares.",
+  "The lesson 'never rely on just one resource' may be stated as a takeaway, but it is not quantified in the table.",
+  "The transition from pearl reliance to diversification can be framed as the story arc, not as a data value."
+ ],
+ "unsupported_to_avoid": [
+  "Stating that oil or diversification is 8.3% or any percentage from the table.",
+  "Using the narration's 95% for the Pearl industry share instead of the table's 91.7%.",
+  "Claiming the Japanese cultured-pearl development caused the decline as a data-backed fact.",
+  "Claiming that oil discovery in 1966 or road investment caused the diversification shown in the table.",
+  "Treating Other as specifically oil, roads, or post-oil diversification.",
+  "Any extrapolation beyond the two-segment composition."
+ ],
+ "notes": "The table is a two-segment percentage composition; all numeric claims must stay at 91.7%, 8.3%, or arithmetic combinations such as 100%, about 11x, and 83.4 percentage points. Oil and diversification can be narrative context only, not table-quantified data.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 33.5,
+  "usage": {
+   "prompt_tokens": 961,
+   "completion_tokens": 7642,
+   "total_tokens": 8603,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5901
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 449
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

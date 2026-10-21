@@ -1,0 +1,127 @@
+{
+ "clip_id": "line_6",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both named rate series must be visibly present and distinguishable as separate data series."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Base Rate Bank of England @ 1991",
+    "mark:Base Rate Bank of England @ 2016"
+   ],
+   "assertion": {
+    "low": "Base Rate Bank of England @ 2016",
+    "low_value": 0.2506,
+    "high": "Base Rate Bank of England @ 1991",
+    "high_value": 10.1996,
+    "delta": 9.949,
+    "ratio": 40.7007,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The base-rate series must show a clear fall from its 1991 starting value to its 2016 ending value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Mortgage rate (Example: 5 year fixed) @ 2016",
+    "mark:Mortgage rate (Example: 5 year fixed) @ earliest listed mortgage point"
+   ],
+   "assertion": {
+    "low": "Mortgage rate (Example: 5 year fixed) @ 2016",
+    "low_value": 2.1996,
+    "high": "Mortgage rate (Example: 5 year fixed) @ earliest listed mortgage point",
+    "high_value": 9.4989,
+    "delta": 7.2993,
+    "ratio": 4.3185,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The mortgage-rate series must show a visible downward movement from its first plotted value to its 2016 ending value."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Base Rate Bank of England)"
+   ],
+   "assertion": {
+    "mark": "Base Rate Bank of England @ 2016",
+    "extreme": "min",
+    "expected": 0.2506,
+    "compared_set": "Base Rate Bank of England",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2016 endpoint values for both named series must be visible as the lowest listed values in their respective series."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Mortgage rate (Example: 5 year fixed) @ 2016",
+    "mark:Base Rate Bank of England @ 2016"
+   ],
+   "assertion": {
+    "greater": "Mortgage rate (Example: 5 year fixed) @ 2016",
+    "lesser": "Base Rate Bank of England @ 2016",
+    "expected_ratio": 8.7773,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the 2016 endpoint, the mortgage-rate value must appear higher than the base-rate value."
+  }
+ ]
+}

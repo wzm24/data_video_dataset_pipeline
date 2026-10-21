@@ -1,0 +1,238 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "pie_20",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that a majority of Uber drivers earn less than minimum wage, while most also have other primary sources of income.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "A majority of drivers are in the below-minimum-wage category, 54.2%, compared with 45.8% at or above minimum wage.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "< minimum wage",
+     "x": "0",
+     "field": "value",
+     "value": 54.2,
+     "note": "table value; unit is %"
+    },
+    {
+     "entity": "at or above minimum wage",
+     "x": "1",
+     "field": "value",
+     "value": 45.8,
+     "note": "table value; unit is %"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "More than half—54.2%—earn below minimum wage, versus 45.8% at or above.",
+    "The below-minimum-wage group is the larger share at 54.2%, compared with 45.8% at or above minimum wage.",
+    "A majority (54.2%) fall below minimum wage."
+   ],
+   "visual_evidence_rule": "The labels/values for '< minimum wage' (54.2%) and 'at or above minimum wage' (45.8%) are visible, and the below-minimum category is visibly larger.",
+   "temporal_anchor": "the clause 'less than minimum wage for 54% of drivers'",
+   "reviewer_question": "Should the video be required to assert majority status, or is the 54.2% vs 45.8% comparison sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Most drivers, 60.4%, have another primary income.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Other income",
+     "x": "0",
+     "field": "value",
+     "value": 60.4,
+     "note": "table value; unit is %"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Most drivers—60.4%—have another primary income.",
+    "About 60% have another primary income, making it the majority response.",
+    "The Other income share is 60.4%."
+   ],
+   "visual_evidence_rule": "The value 60.4% for 'Other income' is visible and identifiable as the larger income-source category.",
+   "temporal_anchor": "the clause 'About 60% have another primary income'",
+   "reviewer_question": "Should the 60.4% other-primary-income majority be required, or only optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "A minority, 39.6%, have no other primary income.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "No other income",
+     "x": "1",
+     "field": "value",
+     "value": 39.6,
+     "note": "table value; unit is %"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "A minority—39.6%—have no other primary income.",
+    "About 40% report no other primary income.",
+    "No other income accounts for 39.6%, the smaller share."
+   ],
+   "visual_evidence_rule": "The value 39.6% for 'No other income' is visible as the smaller income-source category.",
+   "temporal_anchor": "the contrast to the clause 'About 60% have another primary income'",
+   "reviewer_question": "Should the no-other-income share be shown as required context or omitted as optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The below-minimum-wage share exceeds the at-or-above share by 8.4 percentage points (54.2 − 45.8).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "< minimum wage",
+     "x": "0",
+     "field": "value",
+     "value": 54.2,
+     "note": "table value; unit is %"
+    },
+    {
+     "entity": "at or above minimum wage",
+     "x": "1",
+     "field": "value",
+     "value": 45.8,
+     "note": "table value; unit is %"
+    }
+   ],
+   "computation": "54.2 - 45.8 = 8.4 percentage points",
+   "accepted_routes": [
+    "The below-minimum-wage share is 8.4 percentage points higher than the at-or-above share.",
+    "The gap is about 8 points: 54.2% versus 45.8%.",
+    "The below-minimum-wage majority is narrow, leading by 8.4 points."
+   ],
+   "visual_evidence_rule": "Both 54.2% and 45.8% are visible so the 8.4-point difference can be derived.",
+   "temporal_anchor": "the clause 'less than minimum wage for 54% of drivers'",
+   "reviewer_question": "Should the 8.4-point gap be treated as an optional derived comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The other-primary-income share exceeds the no-other-income share by 20.8 percentage points (60.4 − 39.6), or about 1.5 times as many.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Other income",
+     "x": "0",
+     "field": "value",
+     "value": 60.4,
+     "note": "table value; unit is %"
+    },
+    {
+     "entity": "No other income",
+     "x": "1",
+     "field": "value",
+     "value": 39.6,
+     "note": "table value; unit is %"
+    }
+   ],
+   "computation": "60.4 - 39.6 = 20.8 percentage points; 60.4 / 39.6 ≈ 1.52",
+   "accepted_routes": [
+    "Other-income share is 20.8 percentage points higher than no-other-income share.",
+    "The majority for other primary income is about 21 points.",
+    "There are about 1.5 times as many with other primary income as without."
+   ],
+   "visual_evidence_rule": "Both 60.4% and 39.6% are visible so the 20.8-point difference can be derived.",
+   "temporal_anchor": "the clause 'About 60% have another primary income'",
+   "reviewer_question": "Should the 20.8-point gap or 1.5x ratio be required, or is it optional derived context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing 45.8% at/above minimum wage as the complement to the 54.2% below-minimum share.",
+  "Showing 39.6% no other income as the complement to the 60.4% other-income share.",
+  "Derived gaps (8.4 points and 20.8 points) may be shown as context, not as primary claims."
+ ],
+ "unsupported_to_avoid": [
+  "$8.55 median hourly profit",
+  "8% losing money",
+  "taxi/LA black-socks requirement",
+  "driver freedom",
+  "causal explanations for low earnings",
+  "any absolute counts or dollar amounts not in the table",
+  "intersection/cross-tabulation such as '60.4% of below-minimum-wage drivers have other income'"
+ ],
+ "notes": "The table contains two separate percentage distributions, so the two shares should not be multiplied or treated as a cross-tab. Only values from the table or their direct differences/ratio are used.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 43.1,
+  "usage": {
+   "prompt_tokens": 1043,
+   "completion_tokens": 10476,
+   "total_tokens": 11519,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8657
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 531
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

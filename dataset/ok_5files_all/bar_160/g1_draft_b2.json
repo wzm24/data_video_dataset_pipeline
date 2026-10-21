@@ -1,0 +1,318 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_160",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that in comparable international contexts, teachers earn a pay ratio close to that of college graduates, contrasting with the lower ratio in the United States.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The comparison covers seven named countries (FIN, DEU, ISR, AUS, UK, NZL, USA) plus an OECD aggregate, all on the same relative teacher-to-college-graduate pay measure.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "FIN",
+     "x": "FIN",
+     "field": "relative_value",
+     "value": 0.6533,
+     "note": "relative-only value"
+    },
+    {
+     "entity": "DEU",
+     "x": "DEU",
+     "field": "relative_value",
+     "value": 0.6667,
+     "note": "relative-only value"
+    },
+    {
+     "entity": "ISR",
+     "x": "ISR",
+     "field": "relative_value",
+     "value": 0.64,
+     "note": "relative-only value"
+    },
+    {
+     "entity": "AUS",
+     "x": "AUS",
+     "field": "relative_value",
+     "value": 0.6267,
+     "note": "relative-only value"
+    },
+    {
+     "entity": "UK",
+     "x": "UK",
+     "field": "relative_value",
+     "value": 0.6133,
+     "note": "relative-only value"
+    },
+    {
+     "entity": "NZL",
+     "x": "NZL",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "relative-only value"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "relative-only value"
+    },
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "relative-only value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart compares Finland, Germany, Israel, Australia, the UK, New Zealand, the OECD aggregate, and the USA on one relative pay measure.",
+    "Seven countries plus OECD are shown on the same relative ratio scale.",
+    "The entities include the USA and several comparable international contexts plus OECD."
+   ],
+   "visual_evidence_rule": "Labels or identifiers for the compared entities must be visible, including USA and multiple non-US contexts/OECD.",
+   "temporal_anchor": "That's on par with the pay ratio between teachers and college graduates in similar countries.",
+   "reviewer_question": "Must the video identify all eight listed entities, or is a subset sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Germany has the highest relative value, 0.6667, and the United States has the lowest, 0.4333, among the eight listed entities.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "DEU",
+     "x": "DEU",
+     "field": "relative_value",
+     "value": 0.6667,
+     "note": "highest listed relative value"
+    },
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "lowest listed relative value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative ranking runs from Germany at 0.6667 down to the USA at 0.4333.",
+    "Germany is top and the USA is bottom.",
+    "The endpoints of the ordering are Germany 0.6667 and the USA 0.4333.",
+    "The USA anchors the bottom of the ranking, below all others."
+   ],
+   "visual_evidence_rule": "The ordering must visibly place DEU at or near the top and USA at the bottom.",
+   "temporal_anchor": "But Anna and other American middle school teachers only make about 65 cents for every dollar that their college-educated peers make.",
+   "reviewer_question": "Is the full top-to-bottom ranking required, or only the USA bottom position?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The United States relative value, 0.4333, is lower than every other listed entity and the OECD aggregate; the next-lowest values are New Zealand and OECD at 0.5867.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "lowest value"
+    },
+    {
+     "entity": "NZL",
+     "x": "NZL",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "tied next-lowest value"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "tied next-lowest value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "USA is below all non-US entities, including OECD and New Zealand at 0.5867.",
+    "Every other entity exceeds the USA relative value.",
+    "The USA is the sole bottom value; OECD and NZL are the closest above it at 0.5867.",
+    "No other listed entity is as low as the USA."
+   ],
+   "visual_evidence_rule": "The USA mark must be visibly lower than every other listed entity, including NZL and OECD.",
+   "temporal_anchor": "But Anna and other American middle school teachers only make about 65 cents for every dollar that their college-educated peers make.",
+   "reviewer_question": "Must the video show USA below every other entity, or only below the OECD aggregate?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The relative gap between the United States value, 0.4333, and the OECD aggregate value, 0.5867, is 0.1534.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "lower value in the difference"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "higher value in the difference"
+    }
+   ],
+   "computation": "0.5867 - 0.4333 = 0.1534",
+   "accepted_routes": [
+    "USA is about 0.15 lower than OECD.",
+    "OECD's relative value exceeds USA by 0.1534.",
+    "The USA-OECD difference is 0.1534 on the relative measure.",
+    "USA trails OECD by 0.1534."
+   ],
+   "visual_evidence_rule": "A comparison or gap annotation between USA and OECD must be visible, or the two values must be directly comparable.",
+   "temporal_anchor": "That's on par with the pay ratio between teachers and college graduates in similar countries. But Anna and other American middle school teachers only make about 65 cents for every dollar that their college-educated peers make.",
+   "reviewer_question": "Is the quantitative USA-OECD gap required, or just the qualitative lower-than-OECD comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The non-US entities and OECD form a higher cluster: their relative values range from 0.5867 for New Zealand and OECD to 0.6667 for Germany, all above the USA value of 0.4333.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "NZL",
+     "x": "NZL",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "lower end of non-US range"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "lower end of non-US range"
+    },
+    {
+     "entity": "DEU",
+     "x": "DEU",
+     "field": "relative_value",
+     "value": 0.6667,
+     "note": "upper end of non-US range"
+    },
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "below the non-US range"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "All non-US entities are above 0.5867 on the relative measure, while USA is 0.4333.",
+    "The non-US range is 0.5867 to 0.6667, with USA below at 0.4333.",
+    "NZL and OECD share the lowest non-US value at 0.5867; DEU is highest at 0.6667.",
+    "The comparable international contexts cluster higher than the USA."
+   ],
+   "visual_evidence_rule": "The non-US entities must visibly sit in a higher band above the USA.",
+   "temporal_anchor": "That's on par with the pay ratio between teachers and college graduates in similar countries.",
+   "reviewer_question": "Should the video explicitly summarize the non-US cluster or range, or is that implied by the ranking?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Highlight the tie between New Zealand and OECD at 0.5867.",
+  "Show Finland at 0.6533 and Germany at 0.6667 as the top two non-US values.",
+  "Show the full ordered list: DEU 0.6667, FIN 0.6533, ISR 0.6400, AUS 0.6267, UK 0.6133, NZL/OECD 0.5867, USA 0.4333.",
+  "Use the USA-OECD contrast as the main comparative frame."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute pay ratios such as 65 cents or 98 cents; the table has only relative_value.",
+  "Percentages, dollar amounts, teacher salaries, or spending per student.",
+  "Causal explanations for why the US ratio is lower.",
+  "Extrapolating to countries, years, or groups not in the table.",
+  "Using chart positions, colors, or arbitrary thresholds like 0.5 unless explicitly derived from the table."
+ ],
+ "notes": "The table is relative-only, so all units stay on relative_value, ordering, comparison, and derived gaps rather than absolute pay ratios. The key contrast is the USA at 0.4333 versus the higher non-US/OECD values, especially OECD at 0.5867.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 39.0,
+  "usage": {
+   "prompt_tokens": 1058,
+   "completion_tokens": 9265,
+   "total_tokens": 10323,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6905
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 674
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

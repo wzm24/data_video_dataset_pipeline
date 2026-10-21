@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_26",
+ "family": "bar",
+ "chart_form": "bar/stacked_100",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:1993 @ 1993"
+   ],
+   "assertion": {
+    "mark": "1993 @ 1993",
+    "field": "value",
+    "expected": 46.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1993 bar/point for the Considerable importance series must be visible and labeled or clearly encoded as 46%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2005 @ 2005"
+   ],
+   "assertion": {
+    "mark": "2005 @ 2005",
+    "field": "value",
+    "expected": 59.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2005 bar/point for the Considerable importance series must be visible and labeled or clearly encoded as 59%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1993 @ 1993",
+    "mark:2005 @ 2005"
+   ],
+   "assertion": {
+    "low": "1993 @ 1993",
+    "low_value": 46.0,
+    "high": "2005 @ 2005",
+    "high_value": 59.0,
+    "delta": 13.0,
+    "ratio": 1.2826,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 1993 and 2005 Considerable importance values must be visible, with a change annotation, connecting line/arrow, or paired bars showing the increase."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1993 @ 1993",
+    "mark:2005 @ 2005"
+   ],
+   "assertion": {
+    "low": "2005 @ 2005",
+    "low_value": 41.0,
+    "high": "1993 @ 1993",
+    "high_value": 54.0,
+    "delta": 13.0,
+    "ratio": 1.3171,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If the Not considerable importance series is shown, its 1993 and 2005 values must be visible and the decline annotated or encoded."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:1993 @ 1993",
+    "mark:1993 @ 1993"
+   ],
+   "assertion": {
+    "greater": "1993 @ 1993",
+    "lesser": "1993 @ 1993",
+    "expected_ratio": 1.1739,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Within-year paired bars must be visible and ordered so that 54 exceeds 46 in 1993 and 59 exceeds 41 in 2005, or labels must state the comparison."
+  }
+ ]
+}

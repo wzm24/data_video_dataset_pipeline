@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_34",
+ "intent_en": "To illustrate the purchasing power and lifestyle implications of the average computer programmer's salary in the United States, specifically regarding housing affordability ranging from luxury homes to small rentals in high-cost areas.",
+ "previous_intent": "To explain the purchasing power of the average computer programmer salary in America, highlighting the wide range of housing outcomes from luxury homes to cramped apartments in expensive markets like San Francisco.",
+ "narration_support": "the average salary of a computer programmer in America, average, meaning many can afford a big fancy house, or rent a closet in San Francisco.",
+ "chart_support": "A bell curve distribution labeled with an 'AVG' marker and a house icon with an arrow, visually linking the average income level to housing outcomes.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly discusses the average salary and what it can afford (house vs closet). The chart visualizes a distribution with an average and a house icon, supporting the theme of income and housing.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

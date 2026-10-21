@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect x="30" y="20" width="1220" height="690" fill="#ffffff" stroke="#000" stroke-width="3"/>
+<text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#111">Estimated New Teacher Supply</text>
+<text x="640" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#555">Learning Policy Institute</text>
+<text x="186.0" y="552.5" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#666">80,000</text>
+<text x="186.0" y="447.5" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#666">120,000</text>
+<text x="186.0" y="342.5" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#666">160,000</text>
+<text x="186.0" y="237.5" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#666">200,000</text>
+<text x="200" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#111">2005</text>
+<text x="507" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#111">2009</text>
+<text x="813" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#111">2013</text>
+<text x="1120" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#111">2017</text>
+<polyline points="200.0,298.1 430.0,245.6 506.7,271.9 813.3,468.8" fill="none" stroke="#9a9a9a" stroke-width="9"/>
+<polyline points="813.3,468.8 1120.0,521.2" fill="none" stroke="#9a9a9a" stroke-width="9" stroke-dasharray="2 8"/>
+<text x="967" y="416.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#333">PROJECTED</text>
+</svg>

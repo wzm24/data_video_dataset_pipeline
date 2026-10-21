@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_109",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:High-income countries @ Boosters",
+    "mark:Upper-middle income @ Boosters"
+   ],
+   "assertion": {
+    "greater": "High-income countries @ Boosters",
+    "lesser": "Upper-middle income @ Boosters",
+    "expected_ratio": 2.3338,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the booster relative values for High-income countries, Upper-middle income, Lower-middle income, and Low-income countries visible or labeled so the high-income concentration is apparent."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Upper-middle income @ Fully vaccinated",
+    "mark:Lower-middle income @ Fully vaccinated"
+   ],
+   "assertion": {
+    "greater": "Upper-middle income @ Fully vaccinated",
+    "lesser": "Lower-middle income @ Fully vaccinated",
+    "expected_ratio": 1.385,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the fully vaccinated relative values for Upper-middle income, Lower-middle income, and Low-income countries on a common scale so the low-income minimum and upper-middle maximum are apparent."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Low-income countries @ Not vaccinated",
+    "mark:Upper-middle income @ Not vaccinated"
+   ],
+   "assertion": {
+    "greater": "Low-income countries @ Not vaccinated",
+    "lesser": "Upper-middle income @ Not vaccinated",
+    "expected_ratio": 1.86,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the Not vaccinated relative values for Low-income countries and Upper-middle income so the low-income high value is apparent."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:High-income countries @ Boosters",
+    "mark:Low-income countries @ Fully vaccinated"
+   ],
+   "assertion": {
+    "greater": "High-income countries @ Boosters",
+    "lesser": "Low-income countries @ Fully vaccinated",
+    "expected_ratio": 13.9826,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show High-income countries' booster relative and Low-income countries' fully/partially vaccinated relative in a comparable way, so the high-income booster value visibly exceeds the low-income initial-dose values."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Low-income countries @ Not vaccinated",
+    "mark:Low-income countries @ Fully vaccinated"
+   ],
+   "assertion": {
+    "greater": "Low-income countries @ Not vaccinated",
+    "lesser": "Low-income countries @ Fully vaccinated",
+    "expected_ratio": 46.4348,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show Low-income countries' Not vaccinated, Fully vaccinated, Partially vaccinated, and Boosters relative values so the dominance of Not vaccinated is apparent."
+  }
+ ]
+}

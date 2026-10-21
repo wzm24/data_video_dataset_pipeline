@@ -1,0 +1,438 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_138",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the surge in imported COVID-19 cases in Taiwan during March 2020, which occurred while local community spread remained low, thereby explaining the need for new strategies.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Imported cases rose sharply across March, from low single digits to late-March peaks in the 20s.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "27 Feb 20",
+     "x": "27 Feb 20-Imported",
+     "field": "value",
+     "value": 2,
+     "note": "max imported in section"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Imported",
+     "field": "value",
+     "value": 8,
+     "note": "max imported in section"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Imported",
+     "field": "value",
+     "value": 27,
+     "note": "max imported in section"
+    },
+    {
+     "entity": "25 Mar 20",
+     "x": "25 Mar 20-Imported",
+     "field": "value",
+     "value": 29,
+     "note": "max imported in section"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Imported cases jumped from 2 in late Feb to 29 by late March.",
+    "March imported cases climbed from single digits to 20s.",
+    "Imported bar heights rise sharply across March 2020.",
+    "Imported cases surged to peaks of 27 and 29 in late March."
+   ],
+   "visual_evidence_rule": "Imported bars visibly grow from low early values to 27 and 29 in late March.",
+   "temporal_anchor": "the clause 'in March, cases coming into Taiwan began to rise'",
+   "reviewer_question": "Must the video show the rising imported trend across multiple March dates?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Local community cases remained low throughout, with the highest local bar only 8.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Local",
+     "field": "value",
+     "value": 1,
+     "note": "low local bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Local",
+     "field": "value",
+     "value": 3,
+     "note": "low local bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Local",
+     "field": "value",
+     "value": 2,
+     "note": "low local bar"
+    },
+    {
+     "entity": "25 Mar 20",
+     "x": "25 Mar 20-Local",
+     "field": "value",
+     "value": 8,
+     "note": "highest local bar"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Local cases stayed low, peaking at only 8.",
+    "Community spread remained low, with local bars mostly 1 to 3.",
+    "The tallest local bar reaches just 8.",
+    "Local case counts remain small while imported counts rise."
+   ],
+   "visual_evidence_rule": "Local bars stay low and never exceed height 8 on the chart.",
+   "temporal_anchor": "the clause 'Community spread among people in Taiwan was very, very low'",
+   "reviewer_question": "Must the video state or show that local cases remained low?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In the 25 Mar section, imported cases far outnumbered local cases: 72 imported vs 11 local.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "25 Mar 20",
+     "x": "25 Mar 20-Imported",
+     "field": "value",
+     "value": 19,
+     "note": "imported bar"
+    },
+    {
+     "entity": "25 Mar 20",
+     "x": "25 Mar 20-Imported",
+     "field": "value",
+     "value": 29,
+     "note": "imported bar"
+    },
+    {
+     "entity": "25 Mar 20",
+     "x": "25 Mar 20-Imported",
+     "field": "value",
+     "value": 24,
+     "note": "imported bar"
+    },
+    {
+     "entity": "25 Mar 20",
+     "x": "25 Mar 20-Local",
+     "field": "value",
+     "value": 8,
+     "note": "local bar"
+    },
+    {
+     "entity": "25 Mar 20",
+     "x": "25 Mar 20-Local",
+     "field": "value",
+     "value": 3,
+     "note": "local bar"
+    }
+   ],
+   "computation": "19+29+24=72; 8+3=11; 72/11≈6.5",
+   "accepted_routes": [
+    "In the 25 Mar section, imported cases were 72 vs 11 local.",
+    "Late-March imported cases outnumbered local about 6.5 to 1.",
+    "Imported bars dwarf local bars in the 25 Mar section.",
+    "25 Mar section shows 72 imported and 11 local cases."
+   ],
+   "visual_evidence_rule": "In the 25 Mar section, imported bars are much taller than the local bars.",
+   "temporal_anchor": "the contrast between imported rise and low local spread in March",
+   "reviewer_question": "Must the video directly compare imported and local counts in late March?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Imported cases made up almost all reported cases in the 17 Mar section: 106 of 109.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Imported",
+     "field": "value",
+     "value": 15,
+     "note": "imported bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Imported",
+     "field": "value",
+     "value": 17,
+     "note": "imported bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Imported",
+     "field": "value",
+     "value": 21,
+     "note": "imported bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Imported",
+     "field": "value",
+     "value": 27,
+     "note": "imported bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Imported",
+     "field": "value",
+     "value": 10,
+     "note": "imported bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Imported",
+     "field": "value",
+     "value": 16,
+     "note": "imported bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Local",
+     "field": "value",
+     "value": 2,
+     "note": "local bar"
+    },
+    {
+     "entity": "17 Mar 20",
+     "x": "17 Mar 20-Local",
+     "field": "value",
+     "value": 1,
+     "note": "local bar"
+    }
+   ],
+   "computation": "15+17+21+27+10+16=106; 2+1=3; 106/(106+3)=97.2%",
+   "accepted_routes": [
+    "In Mar 17-24, imported cases were 97% of all cases.",
+    "Imported share was about 106 of 109 cases.",
+    "Nearly all cases in that March section were imported.",
+    "Imported cases dominated composition: 97.2% versus 2.8% local."
+   ],
+   "visual_evidence_rule": "In the 17 Mar section, imported bars visually dominate and local bars are tiny.",
+   "temporal_anchor": "the clause 'cases coming into Taiwan began to rise'",
+   "reviewer_question": "Should the video quantify imported share rather than only compare heights?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Imported cases overtook local cases by the 09 Mar section: 27 imported vs 5 local.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "27 Feb 20",
+     "x": "27 Feb 20-Imported",
+     "field": "value",
+     "value": 2,
+     "note": "imported bar"
+    },
+    {
+     "entity": "27 Feb 20",
+     "x": "27 Feb 20-Imported",
+     "field": "value",
+     "value": 2,
+     "note": "imported bar"
+    },
+    {
+     "entity": "27 Feb 20",
+     "x": "27 Feb 20-Imported",
+     "field": "value",
+     "value": 1,
+     "note": "imported bar"
+    },
+    {
+     "entity": "27 Feb 20",
+     "x": "27 Feb 20-Local",
+     "field": "value",
+     "value": 1,
+     "note": "local bar"
+    },
+    {
+     "entity": "27 Feb 20",
+     "x": "27 Feb 20-Local",
+     "field": "value",
+     "value": 4,
+     "note": "local bar"
+    },
+    {
+     "entity": "27 Feb 20",
+     "x": "27 Feb 20-Local",
+     "field": "value",
+     "value": 1,
+     "note": "local bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Imported",
+     "field": "value",
+     "value": 1,
+     "note": "imported bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Imported",
+     "field": "value",
+     "value": 5,
+     "note": "imported bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Imported",
+     "field": "value",
+     "value": 5,
+     "note": "imported bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Imported",
+     "field": "value",
+     "value": 8,
+     "note": "imported bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Imported",
+     "field": "value",
+     "value": 3,
+     "note": "imported bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Imported",
+     "field": "value",
+     "value": 5,
+     "note": "imported bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Local",
+     "field": "value",
+     "value": 1,
+     "note": "local bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Local",
+     "field": "value",
+     "value": 1,
+     "note": "local bar"
+    },
+    {
+     "entity": "09 Mar 20",
+     "x": "09 Mar 20-Local",
+     "field": "value",
+     "value": 3,
+     "note": "local bar"
+    }
+   ],
+   "computation": "27 Feb: imported 2+2+1=5, local 1+4+1=6; 09 Mar: imported 1+5+5+8+3+5=27, local 1+1+3=5",
+   "accepted_routes": [
+    "Imported cases overtook local cases between late Feb and early March.",
+    "By 09 Mar, imported cases were 27 vs 5 local.",
+    "Imported cases crossed above local counts by the 09 Mar section.",
+    "Early March marks the point when imported cases exceeded local cases."
+   ],
+   "visual_evidence_rule": "By the 09 Mar section, imported bars clearly exceed local bars.",
+   "temporal_anchor": "the clause 'in March, cases coming into Taiwan began to rise'",
+   "reviewer_question": "Should the video mark the crossing point when imported cases overtook local?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Mention specific date labels such as 17 Mar 20 and 25 Mar 20.",
+  "Show the local peak of 8 on 25 Mar 20.",
+  "Highlight imported peak of 29 on 25 Mar 20.",
+  "Use color legend distinguishing Local from Imported."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that imported cases directly caused the new strategy.",
+  "Projecting case trends beyond March 2020.",
+  "Treating relative_value as a share of total cases.",
+  "Claiming local spread was zero or nonexistent.",
+  "Summing all March cases without stating the formula."
+ ],
+ "notes": "Focus on imported surge versus low local spread. Share and crossing units are optional but valid if quantified correctly.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 36.1,
+  "usage": {
+   "prompt_tokens": 2637,
+   "completion_tokens": 8831,
+   "total_tokens": 11468,
+   "prompt_tokens_details": {
+    "cached_tokens": 2432
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5982
+   },
+   "prompt_cache_hit_tokens": 2432,
+   "prompt_cache_miss_tokens": 205
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

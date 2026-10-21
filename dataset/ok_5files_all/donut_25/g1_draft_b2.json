@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_25",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that a specific entity (represented by the skull and crossbones) has profit margins surpassing those of Apple, highlighting its exceptional financial performance.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The left-share entity (the focal skull-and-crossbones subject implied by the intent) has a profit-margin value of 28%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "0",
+     "field": "value",
+     "value": 28,
+     "note": "percent; relative_value 0.2800"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "left share is 28%",
+    "the focal entity reaches about 28 percent",
+    "left-share margin is just under 30%"
+   ],
+   "visual_evidence_rule": "The left segment or label must show 28% or 0.28 (or an equivalent 28/100 representation) as its value.",
+   "temporal_anchor": "the 'with profit margins...' clause; use 28% from the table, not the narration's 'over 30%'",
+   "reviewer_question": "Should the focal entity's exact 28% value be required, or is the left>right comparison sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The right-share entity has a profit-margin value of 8%, providing the comparison baseline.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "right share",
+     "x": "1",
+     "field": "value",
+     "value": 8,
+     "note": "percent; relative_value 0.0800"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "right share is 8%",
+    "the comparison baseline is about 8 percent",
+    "right-share margin is less than 10%"
+   ],
+   "visual_evidence_rule": "The right segment or label must show 8% or 0.08 (or an equivalent 8/100 representation) as its value.",
+   "temporal_anchor": "the 'even Apple should be jealous' comparison clause, if right share is the Apple comparator",
+   "reviewer_question": "Must the right-share baseline (8%) be shown so the 'surpasses' claim is verifiable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The left-share value is greater than the right-share value (28% > 8%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "0",
+     "field": "value",
+     "value": 28,
+     "note": "percent"
+    },
+    {
+     "entity": "right share",
+     "x": "1",
+     "field": "value",
+     "value": 8,
+     "note": "percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "left share exceeds right share",
+    "28% beats 8%",
+    "left share is higher than right share"
+   ],
+   "visual_evidence_rule": "Both values must be visible or directly labeled so the viewer can see the left value is larger than the right.",
+   "temporal_anchor": "the 'even Apple should be jealous' clause, which carries the surpassing comparison",
+   "reviewer_question": "Is the left-share > right-share ranking required to fulfill the intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The left-share value exceeds the right-share value by 20 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "0",
+     "field": "value",
+     "value": 28,
+     "note": "percent"
+    },
+    {
+     "entity": "right share",
+     "x": "1",
+     "field": "value",
+     "value": 8,
+     "note": "percent"
+    }
+   ],
+   "computation": "28 - 8 = 20 percentage points",
+   "accepted_routes": [
+    "20 percentage points higher",
+    "a 20-point gap",
+    "left is 20 points above right"
+   ],
+   "visual_evidence_rule": "A gap annotation, difference label, or side-by-side values that make the 20-point difference inferable must be visible.",
+   "temporal_anchor": "an added comparison clause or the 'profit margins' clause, not explicitly present in the narration",
+   "reviewer_question": "Should the 20-percentage-point gap be required, or is the bare ranking enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The left-share value is 3.5 times the right-share value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "0",
+     "field": "value",
+     "value": 28,
+     "note": "percent"
+    },
+    {
+     "entity": "right share",
+     "x": "1",
+     "field": "value",
+     "value": 8,
+     "note": "percent"
+    }
+   ],
+   "computation": "28 / 8 = 3.5 times",
+   "accepted_routes": [
+    "left share is 3.5 times right share",
+    "left is more than triple right",
+    "right share is about 29% of left share (8/28)"
+   ],
+   "visual_evidence_rule": "A ratio annotation or both values visible and labeled so the 3.5x relationship can be inferred.",
+   "temporal_anchor": "the 'exceptional financial performance' implication in the jealousy clause",
+   "reviewer_question": "Should the 3.5x ratio be required as the expression of 'exceptional', or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Unit identity: both left share and right share values are percentages (unit=percent); if interpreted per intent, they are profit margins.",
+  "Relative values 0.2800 for left share and 0.0800 for right share, equivalent to 28% and 8%.",
+  "The left segment is positioned at x_px=0 and right at x_px=1, so left/right ordering is visible."
+ ],
+ "unsupported_to_avoid": [
+  "Narration's 'over 30%' or any value above 30% for left share, because the table says 28%.",
+  "Apple's specific profit margin or Apple as a labeled entity, unless an explicit mapping to right share is provided; the table has no Apple row.",
+  "Summing left and right shares to 100%.",
+  "Causal claim that Apple is or will be jealous, or that these margins cause exceptional performance.",
+  "Extrapolating growth or future margins from these two static values."
+ ],
+ "notes": "The table only supports left-share 28% and right-share 8%, so the narration's 'over 30%' and Apple reference are not directly supported. The derived 20-point gap and 3.5x ratio capture the surpassing intent while making optionality explicit.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 35.7,
+  "usage": {
+   "prompt_tokens": 624,
+   "completion_tokens": 8471,
+   "total_tokens": 9095,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6810
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 368
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

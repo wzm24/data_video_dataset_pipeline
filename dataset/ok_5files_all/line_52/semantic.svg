@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#f7f4ee"/>
+<text x="640" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#1d1d1d">AUDIT RATES BY INCOME GROUP</text>
+<line x1="130.0" y1="600.0" x2="980.0" y2="600.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="130.0" y1="170.0" x2="130.0" y2="600.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="130.0" y1="600.0" x2="980.0" y2="600.0" stroke="#d8d2c6" stroke-width="1"/>
+<line x1="130.0" y1="600.0" x2="136.0" y2="600.0" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="118.0" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#1d1d1d">0%</text>
+<line x1="130.0" y1="492.5" x2="980.0" y2="492.5" stroke="#d8d2c6" stroke-width="1"/>
+<line x1="130.0" y1="492.5" x2="136.0" y2="492.5" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="118.0" y="498.5" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#1d1d1d">2%</text>
+<line x1="130.0" y1="385.0" x2="980.0" y2="385.0" stroke="#d8d2c6" stroke-width="1"/>
+<line x1="130.0" y1="385.0" x2="136.0" y2="385.0" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="118.0" y="391.0" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#1d1d1d">4%</text>
+<line x1="130.0" y1="277.5" x2="980.0" y2="277.5" stroke="#d8d2c6" stroke-width="1"/>
+<line x1="130.0" y1="277.5" x2="136.0" y2="277.5" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="118.0" y="283.5" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#1d1d1d">6%</text>
+<line x1="130.0" y1="170.0" x2="980.0" y2="170.0" stroke="#d8d2c6" stroke-width="1"/>
+<line x1="130.0" y1="170.0" x2="136.0" y2="170.0" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="118.0" y="176.0" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#1d1d1d">8%</text>
+<line x1="130.0" y1="600.0" x2="130.0" y2="606.0" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="130.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">2011</text>
+<line x1="413.3" y1="600.0" x2="413.3" y2="606.0" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="413.3" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">2013</text>
+<line x1="696.7" y1="600.0" x2="696.7" y2="606.0" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="696.7" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">2015</text>
+<line x1="980.0" y1="600.0" x2="980.0" y2="606.0" stroke="#1d1d1d" stroke-width="1.4"/>
+<text x="980.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1d1d1d">2017</text>
+<polyline points="130.0,170.0 413.3,266.8 696.7,368.9 980.0,465.6" fill="none" stroke="#d9a514" stroke-width="3.4"/>
+<polyline points="130.0,460.2 413.3,492.5 696.7,530.1 980.0,562.4" fill="none" stroke="#2e8b57" stroke-width="3.4"/>
+<polyline points="130.0,535.5 413.3,540.9 696.7,551.6 980.0,557.0" fill="none" stroke="#c0392b" stroke-width="3.4"/>
+<polyline points="130.0,557.0 413.3,562.4 696.7,567.8 980.0,573.1" fill="none" stroke="#4682b4" stroke-width="3.4"/>
+<text x="985.0" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#d9a514">Audit rate for Americans</text>
+<text x="985.0" y="202" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#d9a514">with annual income ≥$500K</text>
+<text x="985.0" y="244" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2e8b57">$200K-500K</text>
+<text x="985.0" y="286" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#c0392b">&lt;$25K</text>
+<text x="985.0" y="328" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#4682b4">$25K-200K</text>
+</svg>

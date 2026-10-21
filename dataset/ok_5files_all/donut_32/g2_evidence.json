@@ -1,0 +1,99 @@
+{
+ "clip_id": "donut_32",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%) @ 0",
+    "extreme": "max",
+    "expected": 5.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Israel must be labeled or highlighted as the highest-concentration country, not merely show a 5% donut slice."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:HIGHEST CONCENTRATION OF VEGANS: Israel (5%) @ 0",
+    "segment:HIGHEST CONCENTRATION OF VEGANS: Israel (5%) @ 0"
+   ],
+   "assertion": {
+    "segment": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%) @ 0",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 5.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A 5% / 0.05 value must be visible and tied to Israel's population share."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The label 'Israel' must appear next to the 5% value; the value must not be labeled as U.S. or global."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:HIGHEST CONCENTRATION OF VEGANS: Israel (5%) @ 0"
+   ],
+   "assertion": {
+    "segment": "HIGHEST CONCENTRATION OF VEGANS: Israel (5%) @ 0",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 5.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The 5% slice/portion should be visually small, and/or the text should say 'only' or 'just' with the 5%."
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_7,Arable land,arable,0,,0.3,0.0030,%,#2E2E2E,estimated
+pie_7,Other land,other,1,,99.7,0.9970,%,#A9A9A9,estimated
+pie_7,Irrigated arable land,irrigated,0,,33.3,0.3330,%,#2E2E2E,estimated
+pie_7,Not irrigated,not-irrigated,1,,66.7,0.6670,%,#A9A9A9,estimated

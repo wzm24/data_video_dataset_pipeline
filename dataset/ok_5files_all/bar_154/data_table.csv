@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_154,1994,1994,152.4,,,0.1492,relative,#b0b0d0,relative_only
+bar_154,2008,2008,277.4,,,0.3450,relative,#9595c0,relative_only
+bar_154,2014,2014,402.4,,,0.4010,relative,#7575a0,relative_only
+bar_154,2016,2016,527.5,,,0.5129,relative,#454565,relative_only
+bar_154,1994,1994,712.5,,,0.1585,relative,#c88878,relative_only
+bar_154,2008,2008,837.5,,,0.2985,relative,#b57060,relative_only
+bar_154,2014,2014,962.5,,,0.4290,relative,#9d5040,relative_only
+bar_154,2016,2016,1087.5,,,0.5408,relative,#833525,relative_only

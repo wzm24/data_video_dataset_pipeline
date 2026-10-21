@@ -1,0 +1,150 @@
+{
+ "clip_id": "pie_16",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Labels or highlights must distinguish these four sectors from the Industrial sector."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Residential @ 0",
+    "segment:Commercial @ 1",
+    "segment:Transportation @ 3",
+    "segment:Electricity generation @ 4"
+   ],
+   "assertion": {
+    "segment": "Residential @ 0",
+    "expected_share": 0.1359,
+    "total_of": "%",
+    "total": 103.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A sum or combined annotation for the four target sectors must be visible or inferable from the highlighted slices."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Residential @ 0",
+    "mark:Commercial @ 1",
+    "mark:Industrial @ 2",
+    "mark:Transportation @ 3",
+    "mark:Electricity generation @ 4"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Residential @ 0",
+      "value": 14.0
+     },
+     {
+      "mark": "Commercial @ 1",
+      "value": 12.0
+     },
+     {
+      "mark": "Industrial @ 2",
+      "value": 21.0
+     },
+     {
+      "mark": "Transportation @ 3",
+      "value": 28.0
+     },
+     {
+      "mark": "Electricity generation @ 4",
+      "value": 28.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Slice sizes and labels must show the tie at 28% and the descending order to 12%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "Industrial @ 2",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Industrial slice must be labeled 21% and visually not highlighted as one of the four targets."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Transportation @ 3",
+    "mark:Electricity generation @ 4"
+   ],
+   "assertion": {
+    "series": "Transportation",
+    "values": [
+     28.0,
+     28.0
+    ],
+    "threshold_between": [
+     28.0,
+     28.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 28% slices or a combined annotation for them must be visible."
+  }
+ ]
+}

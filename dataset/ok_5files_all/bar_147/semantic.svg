@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#eaeaea"/>
+<text x="640" y="60" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#222">CONFIRMED PURCHASES OF VACCINE DOSES</text>
+<rect x="238.8" y="224.6" width="126.5" height="385.4" fill="#FADCD3"/>
+<text x="302.0" y="214.6" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#222">4.7B</text>
+<text x="302.0" y="640.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">High income</text>
+<rect x="442.8" y="511.6" width="126.5" height="98.4" fill="#F49D46"/>
+<text x="506.0" y="640.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">Upper middle income</text>
+<rect x="646.8" y="571.5" width="126.5" height="38.5" fill="#D96456"/>
+<text x="710.0" y="640.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">Lower middle income</text>
+<rect x="850.8" y="584.6" width="126.5" height="25.4" fill="#8B1E14"/>
+<text x="914.0" y="640.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">Lower income</text>
+<rect x="1054.8" y="519.8" width="126.5" height="90.2" fill="#5D8A8A"/>
+<text x="1118.0" y="509.8" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#222">1.1B</text>
+<text x="1118.0" y="640.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">Covax</text>
+<text x="640" y="690" text-anchor="middle" font-family="Arial" font-size="14" fill="#666">Source: Duke Global Health Innovation Center | April 2021</text>
+</svg>

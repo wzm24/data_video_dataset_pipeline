@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="stacked_bar_template_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f6f6f4"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120.0" y1="600.0" x2="1220.0" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line x1="860" y1="92" x2="896" y2="92" stroke="#333333" stroke-width="6"/>
+<text x="904" y="100" font-family="Arial, sans-serif" font-size="20" fill="#333333">Online Store</text>
+<line x1="860" y1="122" x2="896" y2="122" stroke="#6f9fd8" stroke-width="6"/>
+<text x="904" y="130" font-family="Arial, sans-serif" font-size="20" fill="#333333">3rd Party Retail</text>
+<line x1="860" y1="152" x2="896" y2="152" stroke="#e8b84b" stroke-width="6"/>
+<text x="904" y="160" font-family="Arial, sans-serif" font-size="20" fill="#333333">Subscriptions</text>
+<line x1="860" y1="182" x2="896" y2="182" stroke="#d64541" stroke-width="6"/>
+<text x="904" y="190" font-family="Arial, sans-serif" font-size="20" fill="#333333">AWS</text>
+<rect data-role="stack-segment" data-bar="2015" data-series="Online Store" x="158.5" y="424.5" width="198.0" height="175.5" fill="#333333"/>
+<rect data-role="stack-segment" data-bar="2015" data-series="3rd Party Retail" x="158.5" y="370.5" width="198.0" height="54.0" fill="#6f9fd8"/>
+<rect data-role="stack-segment" data-bar="2015" data-series="Subscriptions" x="158.5" y="357.0" width="198.0" height="13.5" fill="#e8b84b"/>
+<rect data-role="stack-segment" data-bar="2015" data-series="AWS" x="158.5" y="330.0" width="198.0" height="27.0" fill="#d64541"/>
+<rect data-role="stack-segment" data-bar="2016" data-series="Online Store" x="433.5" y="423.0" width="198.0" height="177.0" fill="#333333"/>
+<rect data-role="stack-segment" data-bar="2016" data-series="3rd Party Retail" x="433.5" y="329.9" width="198.0" height="93.1" fill="#6f9fd8"/>
+<rect data-role="stack-segment" data-bar="2016" data-series="Subscriptions" x="433.5" y="320.6" width="198.0" height="9.3" fill="#e8b84b"/>
+<rect data-role="stack-segment" data-bar="2016" data-series="AWS" x="433.5" y="289.5" width="198.0" height="31.1" fill="#d64541"/>
+<rect data-role="stack-segment" data-bar="2017" data-series="Online Store" x="708.5" y="386.7" width="198.0" height="213.3" fill="#333333"/>
+<rect data-role="stack-segment" data-bar="2017" data-series="3rd Party Retail" x="708.5" y="297.8" width="198.0" height="88.9" fill="#6f9fd8"/>
+<rect data-role="stack-segment" data-bar="2017" data-series="Subscriptions" x="708.5" y="280.1" width="198.0" height="17.8" fill="#e8b84b"/>
+<rect data-role="stack-segment" data-bar="2017" data-series="AWS" x="708.5" y="244.5" width="198.0" height="35.5" fill="#d64541"/>
+<rect data-role="stack-segment" data-bar="2018" data-series="Online Store" x="983.5" y="307.5" width="198.0" height="292.5" fill="#333333"/>
+<rect data-role="stack-segment" data-bar="2018" data-series="3rd Party Retail" x="983.5" y="217.5" width="198.0" height="90.0" fill="#6f9fd8"/>
+<rect data-role="stack-segment" data-bar="2018" data-series="Subscriptions" x="983.5" y="195.0" width="198.0" height="22.5" fill="#e8b84b"/>
+<rect data-role="stack-segment" data-bar="2018" data-series="AWS" x="983.5" y="150.0" width="198.0" height="45.0" fill="#d64541"/>
+<text x="257.5" y="632.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">2015</text>
+<text x="1082.5" y="632.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">2018</text>
+</g>
+</svg>

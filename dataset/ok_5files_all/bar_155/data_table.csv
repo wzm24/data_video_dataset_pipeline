@@ -1,0 +1,5 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_155,Reported Assets,reported-assets,708.5,,,0.2632,relative,#b2dfdb,relative_only,,
+bar_155,Reported Liabilities,reported-liabilities,764.5,,,0.3509,relative,#b2dfdb,relative_only,,
+bar_155,Actual Liabilities,actual-liabilities,708.5,,,0.2632,relative,#b2dfdb,relative_only,,
+bar_155,Reported Assets,bar-4,1036.0,,,0.2485,relative,#f43f5e,relative_only,bar-4,semantic_svg_order_backfill

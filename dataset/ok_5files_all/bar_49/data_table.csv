@@ -1,0 +1,14 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,entity_original,entity_source,entity_label_printed,group_total,value_derivation
+bar_49,Poorest,poorest,170.0,,1.400,0.0295,%,#23527c,axis_calibrated,Corporate and property taxes,Poorest,positional_ordinal_naming,yes,1.4,printed
+bar_49,2nd,bar-2,270.0,,1.700,0.0384,%,#23527c,axis_calibrated,Corporate and property taxes,bar-2,positional_ordinal_naming,no,1.7,printed
+bar_49,3rd,bar-3,370.0,,1.900,0.0443,%,#23527c,axis_calibrated,Corporate and property taxes,bar-3,positional_ordinal_naming,no,1.9,printed
+bar_49,4th,bar-4,470.0,,2.400,0.0591,%,#23527c,axis_calibrated,Corporate and property taxes,bar-4,positional_ordinal_naming,no,2.4,printed
+bar_49,5th,bar-5,570.0,,2.600,0.0650,%,#23527c,axis_calibrated,Corporate and property taxes,bar-5,positional_ordinal_naming,no,2.6,printed
+bar_49,6th,bar-6,670.0,,3.000,0.0768,%,#23527c,axis_calibrated,Corporate and property taxes,bar-6,positional_ordinal_naming,no,3,printed
+bar_49,7th,bar-7,770.0,,3.400,0.0886,%,#23527c,axis_calibrated,Corporate and property taxes,bar-7,positional_ordinal_naming,no,3.4,printed
+bar_49,8th,bar-8,870.0,,3.600,0.0945,%,#23527c,axis_calibrated,Corporate and property taxes,bar-8,positional_ordinal_naming,no,3.6,printed
+bar_49,9th,bar-9,970.0,,4.100,0.1093,%,#23527c,axis_calibrated,Corporate and property taxes,bar-9,positional_ordinal_naming,no,4.1,printed
+bar_49,10th,bar-10,1070.0,,9.600,0.2717,%,#23527c,axis_calibrated,Corporate and property taxes,bar-10,positional_ordinal_naming,no,9.9,printed
+bar_49,10th,bar-11,1070.0,,0.3,0.0030,%,#7da0c4,derived_from_stack_total,Estate taxes,bar-11,positional_ordinal_naming,no,9.9,stack_total_minus_other_segments
+bar_49,Richest,richest,1170.0,,10.900,0.3100,%,#23527c,axis_calibrated,Corporate and property taxes,Richest,positional_ordinal_naming,yes,11.7,printed
+bar_49,Richest,bar-13,1170.0,,0.8,0.0080,%,#7da0c4,derived_from_stack_total,Estate taxes,bar-13,positional_ordinal_naming,yes,11.7,stack_total_minus_other_segments

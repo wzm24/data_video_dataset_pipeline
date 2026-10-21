@@ -1,0 +1,292 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_40",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the potential effectiveness of gun licensing systems in reducing firearm-related deaths by contrasting a state that implemented a license with one that repealed it.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Connecticut's firearm homicide rate fell over the decade after its 1995 licensing implementation, from 3.08 to 1.78 per 100,000 (a drop of 1.30 per 100,000).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Connecticut HOMICIDES",
+     "x": "1995",
+     "field": "value",
+     "value": 3.08,
+     "note": "Table row for Connecticut HOMICIDES with x_value=1995."
+    },
+    {
+     "entity": "Connecticut HOMICIDES",
+     "x": "2005",
+     "field": "value",
+     "value": 1.78,
+     "note": "Table row for Connecticut HOMICIDES with x_value=2005."
+    }
+   ],
+   "computation": "1.78 - 3.08 = -1.30 per 100,000; also 1.78 < 3.08.",
+   "accepted_routes": [
+    "Connecticut gun homicides dropped from about 3.1 to about 1.8 per 100,000 over the decade after licensing.",
+    "Connecticut's firearm homicide rate declined by about 1.3 per 100,000 between 1995 and 2005.",
+    "Connecticut had a lower gun homicide rate in 2005 than in 1995."
+   ],
+   "visual_evidence_rule": "The Connecticut HOMICIDES data must show the 1995 value 3.08 and the 2005 value 1.78, with the later value visibly lower.",
+   "temporal_anchor": "In 1995, Connecticut implemented a licensing system... drop in gun homicides.",
+   "reviewer_question": "Is the Connecticut homicide decline after 1995 required separately, or only as part of a combined firearm-death decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Connecticut's firearm suicide rate also fell over the decade after 1995, from 4.58 to 2.88 per 100,000 (a drop of 1.70 per 100,000).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Connecticut SUICIDES",
+     "x": "1995",
+     "field": "value",
+     "value": 4.58,
+     "note": "Table row for Connecticut SUICIDES with x_value=1995."
+    },
+    {
+     "entity": "Connecticut SUICIDES",
+     "x": "2005",
+     "field": "value",
+     "value": 2.88,
+     "note": "Table row for Connecticut SUICIDES with x_value=2005."
+    }
+   ],
+   "computation": "2.88 - 4.58 = -1.70 per 100,000; also 2.88 < 4.58.",
+   "accepted_routes": [
+    "Connecticut gun suicides dropped from about 4.6 to about 2.9 per 100,000 over the decade after licensing.",
+    "Connecticut's firearm suicide rate declined by about 1.7 per 100,000 between 1995 and 2005.",
+    "Connecticut had a lower gun suicide rate in 2005 than in 1995."
+   ],
+   "visual_evidence_rule": "The Connecticut SUICIDES data must show the 1995 value 4.58 and the 2005 value 2.88, with the later value visibly lower.",
+   "temporal_anchor": "In 1995, Connecticut implemented a licensing system... drop in gun suicides.",
+   "reviewer_question": "Is the Connecticut suicide decline after 1995 required separately, or only as part of a combined firearm-death decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Missouri's firearm homicide rate rose over the decade after its 2007 repeal, from 4.61 to 9.9 per 100,000 (an increase of 5.29 per 100,000; more than double).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Missouri HOMICIDES",
+     "x": "2007 (derived from x_px 608.9)",
+     "field": "value",
+     "value": 4.61,
+     "note": "2007 derived from x_px: 1999 + (608.9-120)/(1220-120)*(2017-1999); value is table row at x_px 608.9."
+    },
+    {
+     "entity": "Missouri HOMICIDES",
+     "x": "2017",
+     "field": "value",
+     "value": 9.9,
+     "note": "Table row for Missouri HOMICIDES with x_value=2017."
+    }
+   ],
+   "computation": "9.9 - 4.61 = +5.29 per 100,000; ratio 9.9 / 4.61 is about 2.15.",
+   "accepted_routes": [
+    "Missouri gun homicides more than doubled from about 4.6 to about 9.9 per 100,000 after the 2007 repeal.",
+    "Missouri's homicide rate increased by about 5.3 per 100,000 over the post-repeal decade.",
+    "Missouri's firearm homicide rate was much higher in 2017 than in 2007."
+   ],
+   "visual_evidence_rule": "The Missouri HOMICIDES data must show the 2007 value 4.61 and the 2017 value 9.9, with the later value visibly higher and more than double.",
+   "temporal_anchor": "Compare that to Missouri, which once had a licensing system, but got rid of it in 2007... spike in gun homicides.",
+   "reviewer_question": "Should the contrast use the 2007 value as the pre-repeal baseline, or is the 1999 starting value also acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Missouri's firearm suicide rate rose over the same post-2007 decade, from 5.6 to 8.1 per 100,000 (an increase of 2.5 per 100,000).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Missouri SUICIDES",
+     "x": "2007 (derived from x_px 608.9)",
+     "field": "value",
+     "value": 5.6,
+     "note": "2007 derived from x_px: 1999 + (608.9-120)/(1220-120)*(2017-1999); value is table row at x_px 608.9."
+    },
+    {
+     "entity": "Missouri SUICIDES",
+     "x": "2017",
+     "field": "value",
+     "value": 8.1,
+     "note": "Table row for Missouri SUICIDES with x_value=2017."
+    }
+   ],
+   "computation": "8.1 - 5.6 = +2.5 per 100,000; ratio 8.1 / 5.6 is about 1.45.",
+   "accepted_routes": [
+    "Missouri gun suicides rose from about 5.6 to about 8.1 per 100,000 after 2007.",
+    "Missouri's suicide rate increased by about 2.5 per 100,000 over the post-repeal decade.",
+    "Missouri's firearm suicide rate was higher in 2017 than in 2007."
+   ],
+   "visual_evidence_rule": "The Missouri SUICIDES data must show the 2007 value 5.6 and the 2017 value 8.1, with the later value visibly higher.",
+   "temporal_anchor": "Compare that to Missouri... got rid of it in 2007... spike in gun suicides.",
+   "reviewer_question": "Is the Missouri suicide increase required separately, or only as part of a combined firearm-death spike?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The policy contrast: Connecticut's firearm homicide and suicide rates both decreased in the decade after 1995, while Missouri's both increased in the decade after 2007.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Connecticut HOMICIDES",
+     "x": "1995",
+     "field": "value",
+     "value": 3.08,
+     "note": "Connecticut homicide baseline at 1995."
+    },
+    {
+     "entity": "Connecticut HOMICIDES",
+     "x": "2005",
+     "field": "value",
+     "value": 1.78,
+     "note": "Connecticut homicide endpoint at 2005."
+    },
+    {
+     "entity": "Connecticut SUICIDES",
+     "x": "1995",
+     "field": "value",
+     "value": 4.58,
+     "note": "Connecticut suicide baseline at 1995."
+    },
+    {
+     "entity": "Connecticut SUICIDES",
+     "x": "2005",
+     "field": "value",
+     "value": 2.88,
+     "note": "Connecticut suicide endpoint at 2005."
+    },
+    {
+     "entity": "Missouri HOMICIDES",
+     "x": "2007 (derived from x_px 608.9)",
+     "field": "value",
+     "value": 4.61,
+     "note": "Missouri homicide baseline at 2007."
+    },
+    {
+     "entity": "Missouri HOMICIDES",
+     "x": "2017",
+     "field": "value",
+     "value": 9.9,
+     "note": "Missouri homicide endpoint at 2017."
+    },
+    {
+     "entity": "Missouri SUICIDES",
+     "x": "2007 (derived from x_px 608.9)",
+     "field": "value",
+     "value": 5.6,
+     "note": "Missouri suicide baseline at 2007."
+    },
+    {
+     "entity": "Missouri SUICIDES",
+     "x": "2017",
+     "field": "value",
+     "value": 8.1,
+     "note": "Missouri suicide endpoint at 2017."
+    }
+   ],
+   "computation": "CT homicide change = 1.78-3.08 = -1.30; CT suicide change = 2.88-4.58 = -1.70; MO homicide change = 9.9-4.61 = +5.29; MO suicide change = 8.1-5.6 = +2.5.",
+   "accepted_routes": [
+    "Connecticut's gun homicide and suicide rates fell after licensing, while Missouri's gun homicide and suicide rates rose after repeal.",
+    "Connecticut's two firearm-death measures moved down after 1995; Missouri's two moved up after 2007.",
+    "Opposite 10-year trends: Connecticut down by 1.3 and 1.7 per 100,000; Missouri up by 5.3 and 2.5 per 100,000."
+   ],
+   "visual_evidence_rule": "All four series endpoints for the two policy decades must be visible enough to show Connecticut decreasing and Missouri increasing.",
+   "temporal_anchor": "In 1995... Over the next 10 years... Compare that to Missouri... Over the next decade...",
+   "reviewer_question": "Is the combined opposite-direction contrast across both homicide and suicide required, or can the clip show the state/outcome changes separately?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Missouri's 1999 starting rates (homicide 4.61, suicide 5.81) as pre-repeal context.",
+  "Connecticut's 1985 starting rates (homicide 1.98, suicide 3.88) as pre-licensing context.",
+  "The crossover in Missouri: suicide was higher than homicide in 2007 (5.6 vs 4.61), but homicide was higher than suicide in 2017 (9.9 vs 8.1)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that licensing directly caused Connecticut's drop or that repeal directly caused Missouri's spike; the table shows temporal changes only.",
+  "Extrapolating Connecticut beyond 2005 or Missouri beyond 2017.",
+  "Comparing Connecticut and Missouri at 2017 when Connecticut has no 2017 data point in the table.",
+  "Stating that licensing is popular; no popularity data is in the table.",
+  "Treating firearm-related deaths as one combined total without preserving the table's HOMICIDES and SUICIDES separation."
+ ],
+ "notes": "All values are per-100,000 rates from the table; 2007 is derived from x_px interpolation because only 1999 and 2017 are labeled for Missouri. Units describe temporal changes and contrast, not causal effects.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 58.8,
+  "usage": {
+   "prompt_tokens": 6504,
+   "completion_tokens": 14597,
+   "total_tokens": 21101,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11604
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 5992
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

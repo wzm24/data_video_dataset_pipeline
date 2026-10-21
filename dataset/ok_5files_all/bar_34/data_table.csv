@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series,name_source
+bar_34,United Kingdom,united-kingdom,346.9,,2.137,0.0325,,#466d78,printed,United Kingdom,semantic_svg_backfill,,vlm_axis
+bar_34,Germany,germany,446.9,,3.155,0.0481,,#466d78,printed,Germany,semantic_svg_backfill,,vlm_axis
+bar_34,France,france,547.6,,4.173,0.0653,,#466d78,printed,France,semantic_svg_backfill,,vlm_axis
+bar_34,Australia,australia,647.7,,6.107,0.0978,,#466d78,printed,Australia,semantic_svg_backfill,,vlm_axis
+bar_34,Switzerland,switzerland,748.2,,9.059,0.1476,,#466d78,printed,Switzerland,semantic_svg_backfill,,vlm_axis
+bar_34,Canada,canada,848.8,,10.076,0.1648,,#466d78,printed,Canada,semantic_svg_backfill,,vlm_axis
+bar_34,Insured United States,insured-united-states,948.9,,20.051,0.3366,,#4b8cc5,printed,Insured United States,semantic_svg_backfill,,vlm_axis
+bar_34,Uninsured United States,uninsured-united-states,1049.0,,33.453,0.5616,,#4b8cc5,printed,Uninsured United States,semantic_svg_backfill,,vlm_axis

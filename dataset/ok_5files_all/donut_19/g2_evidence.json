@@ -1,0 +1,115 @@
+{
+ "clip_id": "donut_19",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:share @ 0"
+   ],
+   "assertion": {
+    "mark": "share @ 0",
+    "field": "value",
+    "expected": 99.86,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled 99.86% value must appear on or for the Sun's mass-share mark."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a normalized whole is used, the Sun segment must either be labeled 0.9986 or visually fill 99.86% of the whole."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:share @ 0"
+   ],
+   "assertion": {
+    "segment": "share @ 0",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 99.86,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or annotation must show a tiny non-Sun remainder labeled 0.14% or explicitly identify it as all remaining objects."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "share @ 0",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A Sun segment must be visibly contrasted against a much smaller non-Sun segment, not just shown as a standalone 99.86% label."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "share @ 0",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, a comparison annotation or scale must display the ~713x ratio; otherwise this unit is optional and should not be required."
+  }
+ ]
+}

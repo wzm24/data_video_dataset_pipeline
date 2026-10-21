@@ -1,0 +1,168 @@
+{
+ "clip_id": "bar_151",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:rising series @ Jan '19",
+    "mark:rising series @ Nov '20"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "rising series @ Jan '19",
+      "value": 0.0976
+     },
+     {
+      "mark": "rising series @ Nov '20",
+      "value": 0.1425
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The rising series must appear higher in Nov '20 than in Jan '19."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:declining series @ Jan '19",
+    "mark:declining series @ Nov '20"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "declining series @ Jan '19",
+      "value": 0.0844
+     },
+     {
+      "mark": "declining series @ Nov '20",
+      "value": 0.0686
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The declining series must appear lower in Nov '20 than in Jan '19."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:flat series @ Jan '19",
+    "mark:flat series @ Nov '20"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "flat series @ Jan '19",
+      "value": 0.1478
+     },
+     {
+      "mark": "flat series @ Nov '20",
+      "value": 0.1451
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The flat series must have similar relative height in Jan '19 and Nov '20."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:gap Jan '19 @ Jan '19",
+    "mark:gap Nov '20 @ Nov '20"
+   ],
+   "assertion": {
+    "low": "gap Jan '19 @ Jan '19",
+    "low_value": 0.0132,
+    "high": "gap Nov '20 @ Nov '20",
+    "high_value": 0.0739,
+    "delta": 0.0607,
+    "ratio": 5.5985,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The separation between the rising and declining series must be larger in Nov '20 than Jan '19."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:rising group first series @ Jan '19",
+    "mark:rising group second series @ Jan '19",
+    "mark:rising group first series @ Nov '20",
+    "mark:rising group second series @ Nov '20"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "rising group first series @ Jan '19",
+      "value": 0.0976
+     },
+     {
+      "mark": "rising group second series @ Jan '19",
+      "value": 0.1319
+     },
+     {
+      "mark": "rising group first series @ Nov '20",
+      "value": 0.1425
+     },
+     {
+      "mark": "rising group second series @ Nov '20",
+      "value": 0.095
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "In Jan '19 the second series is higher; in Nov '20 the first series is higher."
+  }
+ ]
+}

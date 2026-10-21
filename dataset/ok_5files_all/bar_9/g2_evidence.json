@@ -1,0 +1,137 @@
+{
+ "clip_id": "bar_9",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:USA @ x_px=320.0"
+   ],
+   "assertion": {
+    "mark": "USA @ x_px=320.0",
+    "field": "value",
+    "expected": 16500.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A USA bar is visible and labeled or annotated with 16,500 or 16.5k."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:South Korea @ x_px=640.0"
+   ],
+   "assertion": {
+    "mark": "South Korea @ x_px=640.0",
+    "field": "value",
+    "expected": 1500.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A South Korea bar is visible and labeled or annotated with 1,500 or 1.5k."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Bangladesh @ x_px=960.0"
+   ],
+   "assertion": {
+    "mark": "Bangladesh @ x_px=960.0",
+    "field": "value",
+    "expected": 750.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A Bangladesh bar is visible and labeled or annotated with 750 or 0.75k."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:USA @ x_px=320.0",
+    "mark:South Korea @ x_px=640.0",
+    "mark:Bangladesh @ x_px=960.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "USA @ x_px=320.0",
+      "value": 16500.0
+     },
+     {
+      "mark": "South Korea @ x_px=640.0",
+      "value": 1500.0
+     },
+     {
+      "mark": "Bangladesh @ x_px=960.0",
+      "value": 750.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All three bars must be visible with USA clearly tallest and Bangladesh clearly shortest, or an explicit order/ranking annotation must show USA > South Korea > Bangladesh."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:USA @ x_px=320.0",
+    "mark:South Korea @ x_px=640.0",
+    "mark:Bangladesh @ x_px=960.0"
+   ],
+   "assertion": {
+    "low": "Bangladesh @ x_px=960.0",
+    "low_value": 750.0,
+    "high": "USA @ x_px=320.0",
+    "high_value": 16500.0,
+    "delta": 15750.0,
+    "ratio": 22.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Either a ratio annotation/text such as 11x, 22x, or 2x is shown, or labeled bars with all three values are visible so the ratios can be read or computed."
+  }
+ ]
+}

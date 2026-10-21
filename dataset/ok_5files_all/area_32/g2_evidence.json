@@ -1,0 +1,137 @@
+{
+ "clip_id": "area_32",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A single labeled series or continuous mark for 'scale of the universe' is visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:scale of the universe @ start",
+    "mark:scale of the universe @ end"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "scale of the universe @ start",
+      "value": 0.0
+     },
+     {
+      "mark": "scale of the universe @ end",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The plotted series moves upward overall from its first value to its last value without a downward reversal."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:scale of the universe @ mid",
+    "mark:scale of the universe @ later"
+   ],
+   "assertion": {
+    "series": "scale of the universe",
+    "values": [
+     0.5025,
+     1.0
+    ],
+    "threshold_between": [
+     0.5025,
+     1.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series is visibly above the halfway level of its relative range before it reaches the top of the range."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:scale of the universe @ 150",
+    "mark:scale of the universe @ 630",
+    "mark:scale of the universe @ 891"
+   ],
+   "assertion": {
+    "low": "scale of the universe @ 150",
+    "low_value": 0.0,
+    "high": "scale of the universe @ 891",
+    "high_value": 1.0,
+    "delta": 1.0,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series is visibly steeper after it passes about 0.5025 than it was before that point."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:scale of the universe @ 891"
+   ],
+   "assertion": {
+    "mark": "scale of the universe @ 891",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series reaches the top of the relative range and then flattens at that level through the end."
+  }
+ ]
+}

@@ -1,0 +1,248 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_126",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the historical trend of U.S. defense spending and the substantial increase in costs during the Bush administration, peaking in 2010.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "U.S. defense spending rose substantially over the historical period, from 150.9 in 1950 to 823.5 in 2010, an increase of 672.6 (about 5.5 times the 1950 level).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1950",
+     "x": "158.5",
+     "field": "value",
+     "value": 150.9,
+     "note": "first series value"
+    },
+    {
+     "entity": "2010",
+     "x": "1171.5",
+     "field": "value",
+     "value": 823.5,
+     "note": "last series value"
+    }
+   ],
+   "computation": "823.5 - 150.9 = 672.6; 823.5 / 150.9 = 5.46x",
+   "accepted_routes": [
+    "Spending climbed from about $151B in 1950 to over $823B in 2010.",
+    "The series increased more than fivefold between 1950 and 2010.",
+    "From 150.9 to 823.5, a gain of 672.6."
+   ],
+   "visual_evidence_rule": "First bar/point (1950) is near 151 and last bar/point (2010) is near 824, with a clear overall rise.",
+   "temporal_anchor": "the overall historical trend clause / the clip span from 1950 to 2010",
+   "reviewer_question": "Must the video explicitly convey the 1950-to-2010 overall increase, or is showing the shape enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "2010 is the peak year, with the maximum value 823.5.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2010",
+     "x": "1171.5",
+     "field": "value",
+     "value": 823.5,
+     "note": "maximum value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The highest point is 823.5 in 2010.",
+    "Spending peaks at about $824B at the 2010 endpoint.",
+    "The maximum is 823.5, labeled 2010."
+   ],
+   "visual_evidence_rule": "The final 2010 bar/point is the tallest and labeled with 823.5 (or rounded to 824).",
+   "temporal_anchor": "the final clause about reaching a combined total in 2010",
+   "reviewer_question": "Is the 2010 maximum (823.5) required as an explicit endpoint value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "During the Bush administration period (2000 to 2010), defense spending rose from 456.0 to 823.5, an increase of 367.5 (about 80.6% or 1.81x).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2000",
+     "x": "1019.5",
+     "field": "value",
+     "value": 456.0,
+     "note": "2000 row"
+    },
+    {
+     "entity": "2010",
+     "x": "1171.5",
+     "field": "value",
+     "value": 823.5,
+     "note": "2010 row"
+    }
+   ],
+   "computation": "823.5 - 456.0 = 367.5; 367.5 / 456.0 = 0.806; 823.5 / 456.0 = 1.81x",
+   "accepted_routes": [
+    "From 2000 to 2010, spending increased by 367.5, or about 81%.",
+    "The 2010 level is roughly 1.8 times the 2000 level.",
+    "A Bush-era rise of about $368B from 456.0 to 823.5."
+   ],
+   "visual_evidence_rule": "A visible steep rise between the 2000 bar (~456) and the 2010 bar (~824).",
+   "temporal_anchor": "the clause about the Bush administration's ballooning costs",
+   "reviewer_question": "Must the video quantify the Bush-era increase (367.5 or ~81%), or just show the rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 2010 peak is not an isolated single bar: both 823.5 and 800.6 in 2010 exceed the previous maximum of 742.2.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2010",
+     "x": "1171.5",
+     "field": "value",
+     "value": 823.5,
+     "note": "max"
+    },
+    {
+     "entity": "2010",
+     "x": "1154.6",
+     "field": "value",
+     "value": 800.6,
+     "note": "second high in 2010"
+    },
+    {
+     "entity": "$824 billion",
+     "x": "1137.8",
+     "field": "value",
+     "value": 742.2,
+     "note": "previous max before 2010"
+    }
+   ],
+   "computation": "800.6 > 742.2; 823.5 > 742.2",
+   "accepted_routes": [
+    "Both 2010 values (823.5 and 800.6) top the earlier high of 742.2.",
+    "The last two bars are above every earlier bar, whose highest is 742.2.",
+    "2010 contains the two highest values, 823.5 and 800.6."
+   ],
+   "visual_evidence_rule": "The final two bars/points (2010) are both taller than all previous bars; prior maximum is 742.2.",
+   "temporal_anchor": "the 2010 peak / combined budget clause",
+   "reviewer_question": "Is it important to show that 2010 has multiple values exceeding all prior years, or is the single maximum enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Before the Bush-era rise, spending in 2000 (456.0) was lower than the 1985 level (656.1), showing a prior dip that makes the later increase more substantial.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2000",
+     "x": "1019.5",
+     "field": "value",
+     "value": 456.0,
+     "note": "2000 value"
+    },
+    {
+     "entity": "1985",
+     "x": "766.2",
+     "field": "value",
+     "value": 656.1,
+     "note": "1985 max"
+    }
+   ],
+   "computation": "456.0 is 200.1 less than 656.1; 456.0/656.1 = 0.695",
+   "accepted_routes": [
+    "The 2000 level (~456) is about 30% below the 1985 high (~656).",
+    "A dip around 2000 sits below the mid-1980s peak of 656.1.",
+    "2000 spending (456.0) is lower than 1985 spending (656.1)."
+   ],
+   "visual_evidence_rule": "The bar/point around 2000 is visibly shorter than the 1985 bar/point (656.1).",
+   "temporal_anchor": "the historical trend before the Bush administration clause",
+   "reviewer_question": "Should the video explicitly contrast the pre-Bush dip with 1985, or just show the general trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing fluctuations across the 1970s–1990s, such as the 1985 high of 656.1 and the 2000 dip of 456.0.",
+  "Mentioning that 2010 contains the second-highest value, 800.6, in addition to the maximum 823.5."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim a 2010 combined value of $747 billion; the table's closest 2010 values are 800.6 and 823.5, and 742.2 appears at x=1137.8.",
+  "Do not assert a causal link between Bush administration policies and the spending increase.",
+  "Do not state a baseline vs supplemental breakdown; the table has no such labels.",
+  "Do not extrapolate beyond 2010."
+ ],
+ "notes": "The table's year labels are messy, so comparisons anchor to specific x_px positions and their entity labels. The 2010 peak and Bush-era rise are the core required quantitative claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 42.5,
+  "usage": {
+   "prompt_tokens": 3000,
+   "completion_tokens": 11366,
+   "total_tokens": 14366,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9300
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 2616
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

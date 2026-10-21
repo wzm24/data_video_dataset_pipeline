@@ -1,0 +1,272 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_31",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that wealth concentration among the top Americans has returned to levels seen in the 1920s, paralleling the current rise in stock buybacks.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The top 0.1% wealth share ends at 18.5%, matching the table's 1920s peak reference level of 18.5%, so the series returns to that benchmark by the final point.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "endpoint",
+     "field": "value",
+     "value": 18.5,
+     "note": "final table value for the top 0.1% series"
+    },
+    {
+     "entity": "1920s peak level (reference line)",
+     "x": "1920s peak level",
+     "field": "value",
+     "value": 18.5,
+     "note": "reference line value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top 0.1% wealth share ends at 18.5%, exactly the 1920s peak reference level.",
+    "The final point of the series is 18.5%, matching the 1920s benchmark of 18.5%.",
+    "By the end, wealth concentration is back at the 18.5% reference line."
+   ],
+   "visual_evidence_rule": "Both the final point of the top 0.1% share line and the 1920s reference line must be visible at the same 18.5% level.",
+   "temporal_anchor": "Today, buybacks are back, and the American economy looks a lot like it did in the 1920s.",
+   "reviewer_question": "Is the equality between the final 18.5% and the 1920s reference line a required takeaway, or is the recent 20.0% peak more important?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The top 0.1% wealth share falls to its lowest table value of 6.0% in the mid-century period between 1960 and 1990.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "mid-century trough (between 1960 and 1990)",
+     "field": "value",
+     "value": 6.0,
+     "note": "lowest value in the table for this series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The share reaches its lowest point at 6.0% in the mid-century period.",
+    "The series bottoms out at about 6% before rising again.",
+    "The lowest displayed top 0.1% share is 6.0%, occurring between 1960 and 1990."
+   ],
+   "visual_evidence_rule": "The line must have a visible minimum near 6.0% in the middle portion of the timeline.",
+   "temporal_anchor": "they have a long history",
+   "reviewer_question": "Must the video explicitly show the mid-century trough of 6.0%, or is it enough to show the overall U-shape?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "After 1990, the top 0.1% wealth share roughly doubles from 10.0% in 1990 to 20.0% near the end, before finishing at 18.5%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "1990",
+     "field": "value",
+     "value": 10.0,
+     "note": "labelled 1990 value"
+    },
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "near end",
+     "field": "value",
+     "value": 20.0,
+     "note": "recent peak before final point"
+    },
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "endpoint",
+     "field": "value",
+     "value": 18.5,
+     "note": "final value after peak"
+    }
+   ],
+   "computation": "20.0 / 10.0 = 2.0x; 20.0 - 10.0 = 10.0 percentage points",
+   "accepted_routes": [
+    "From 1990 to the recent peak, the share doubles from 10% to 20%.",
+    "The recent rise adds about 10 percentage points, from 10% in 1990 to 20% near the end.",
+    "After 1990 the share roughly doubles before settling at 18.5%."
+   ],
+   "visual_evidence_rule": "The line must show a clear rise from the 1990 point at 10.0% to a near-end value of 20.0%, then a slight dip to 18.5%.",
+   "temporal_anchor": "Today, buybacks are back",
+   "reviewer_question": "Is the recent doubling from 10.0% to 20.0% a required takeaway, or is the final 18.5% endpoint sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The highest table value is 24.0% in 1930 for the top 0.1% wealth share, which is above the 18.5% 1920s reference line.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "1930",
+     "field": "value",
+     "value": 24.0,
+     "note": "highest value in the table"
+    },
+    {
+     "entity": "1920s peak level (reference line)",
+     "x": "1920s peak level",
+     "field": "value",
+     "value": 18.5,
+     "note": "reference line value for comparison"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top 0.1% share peaks at 24.0% in 1930, above the 18.5% 1920s reference.",
+    "The highest value is 24%, nearly a quarter, in 1930.",
+    "The early maximum is 24.0%, exceeding the 1920s benchmark."
+   ],
+   "visual_evidence_rule": "The line must have a visible spike to 24.0% at the 1930 label, clearly above the 18.5% reference line.",
+   "temporal_anchor": "Buybacks began in an era when less than 1% of America's population held nearly a quarter of its wealth.",
+   "reviewer_question": "Should the 1930 peak of 24.0% be treated as required early-era context, or is the 18.5% 1920s reference line the main benchmark?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The top 0.1% share is above the 18.5% 1920s reference in the early period, falls below it by 1960 and the mid-century trough, and returns to 18.5% at the end.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "1930",
+     "field": "value",
+     "value": 24.0,
+     "note": "early value above the 18.5% reference"
+    },
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "1960",
+     "field": "value",
+     "value": 8.5,
+     "note": "later value below the reference"
+    },
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "mid-century trough",
+     "field": "value",
+     "value": 6.0,
+     "note": "lowest value, far below the reference"
+    },
+    {
+     "entity": "Top 0.1% wealth share in the United States",
+     "x": "endpoint",
+     "field": "value",
+     "value": 18.5,
+     "note": "returns to the reference"
+    },
+    {
+     "entity": "1920s peak level (reference line)",
+     "x": "1920s peak level",
+     "field": "value",
+     "value": 18.5,
+     "note": "reference line"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The share starts above the 1920s reference, drops below it by 1960, and later returns to 18.5%.",
+    "Wealth concentration crosses below the 1920s benchmark and then comes back up to it.",
+    "The series falls under the 18.5% reference line for much of the middle period before returning to it."
+   ],
+   "visual_evidence_rule": "The line must cross the 18.5% reference line downward after the early period and then touch or cross it again at the final point.",
+   "temporal_anchor": "they have a long history and Today, buybacks are back",
+   "reviewer_question": "Must the video show the crossing below the 1920s reference line, or is the final equality enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series starts at 21.0%, which is above the 18.5% 1920s reference.",
+  "The 1960 value is 8.5%, below the 18.5% reference.",
+  "The final 18.5% is slightly below the recent peak of 20.0%."
+ ],
+ "unsupported_to_avoid": [
+  "Buybacks caused the wealth share to rise.",
+  "The top 1% held 24% (the table is for the top 0.1%).",
+  "The 1920s peak was 24% (the table's 1920s reference is 18.5%; 24% is the 1930 value).",
+  "Extrapolating the trend beyond the final point.",
+  "Any absolute count or dollar amount of wealth or buybacks not present in the table.",
+  "Claims that the economy will stay like the 1920s."
+ ],
+ "notes": "The table supplies a % value for top 0.1% wealth share and an 18.5% 1920s reference line; all units use those table cells. The main trade-off is whether the 1930 24.0% peak or the 18.5% reference/endpoint is the central early-era benchmark.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 59.2,
+  "usage": {
+   "prompt_tokens": 2853,
+   "completion_tokens": 14983,
+   "total_tokens": 17836,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12504
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 2213
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

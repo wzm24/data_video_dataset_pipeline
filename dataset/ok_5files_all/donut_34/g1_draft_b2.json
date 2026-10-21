@@ -1,0 +1,233 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_34",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To justify the proposal for taxing capital gains by demonstrating that a large majority of Americans believe wealthy individuals are not paying their fair share of taxes.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "80% of Americans are bothered that wealthy people do not pay their fair share, the central majority statistic.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "80%",
+     "x": "0",
+     "field": "value",
+     "value": 80,
+     "note": "Main donut_34 slice value; intent/narration maps it to the fair-share belief."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "80% believe wealthy people don't pay their fair share",
+    "About 80% are bothered by wealthy people not paying their fair share",
+    "Four in five Americans hold this view",
+    "A large majority (80%) say wealthy people don't pay their fair share"
+   ],
+   "visual_evidence_rule": "The donut chart must have a dominant 80% slice clearly labeled and tied to the fair-share belief.",
+   "temporal_anchor": "Most Americans are bothered that wealthy people don't pay their fair share",
+   "reviewer_question": "Must the video show 80% as the primary statistic for the fair-share belief?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complement or remainder of the donut is 20%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "remainder",
+     "x": "1",
+     "field": "value",
+     "value": 20,
+     "note": "Remainder slice value in donut_34."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "20% is the remaining share",
+    "The rest of the donut is 20%",
+    "A 20% remainder complements the 80% slice",
+    "One in five is outside the majority category"
+   ],
+   "visual_evidence_rule": "The 20% remainder slice is visible and labeled if the full donut composition is shown.",
+   "temporal_anchor": "No separate narration clause; can appear as chart context during the fair-share sentence.",
+   "reviewer_question": "Is showing or labeling the 20% remainder required, or is it optional chart completeness?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 80% share should be framed as a large majority or as exceeding the majority threshold.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "80%",
+     "x": "0",
+     "field": "value",
+     "value": 80,
+     "note": "Majority framing comes from intent/narration; the table supplies the 80% share."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "80% is a large majority",
+    "The majority view is 80%",
+    "80% is well above a simple majority",
+    "Most Americans—80%—hold this view"
+   ],
+   "visual_evidence_rule": "Annotation or narration must explicitly call the 80% slice a majority or large majority, not just present a bare number.",
+   "temporal_anchor": "Most Americans are bothered that wealthy people don't pay their fair share",
+   "reviewer_question": "Should the video explicitly mark 80% as a large majority threshold, rather than leaving the inference to the viewer?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The donut's two segments compose the whole at 80% plus 20% equals 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "80%",
+     "x": "0",
+     "field": "value",
+     "value": 80,
+     "note": "Main slice."
+    },
+    {
+     "entity": "remainder",
+     "x": "1",
+     "field": "value",
+     "value": 20,
+     "note": "Remainder slice."
+    }
+   ],
+   "computation": "80 + 20 = 100",
+   "accepted_routes": [
+    "The chart splits into 80% and 20%",
+    "80% plus a 20% remainder make the full donut",
+    "The composition is 80% versus 20% of the total",
+    "The two shares sum to 100% (80% + 20%)"
+   ],
+   "visual_evidence_rule": "Both slices are shown with their labels so the donut visually sums to a complete whole.",
+   "temporal_anchor": "Can accompany the fair-share sentence as chart composition.",
+   "reviewer_question": "Must the video show the complete 80/20 composition, or is the 80% slice alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 80% share is four times the 20% remainder.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "80%",
+     "x": "0",
+     "field": "value",
+     "value": 80,
+     "note": "Main slice."
+    },
+    {
+     "entity": "remainder",
+     "x": "1",
+     "field": "value",
+     "value": 20,
+     "note": "Remainder slice."
+    }
+   ],
+   "computation": "80 / 20 = 4",
+   "accepted_routes": [
+    "80% is four times 20%",
+    "The majority share is 4x the remainder",
+    "For every 20% remainder, there is 80% main share",
+    "80% versus 20% is a 4-to-1 split"
+   ],
+   "visual_evidence_rule": "Either slice sizes or an annotation should make the 4-to-1 ratio visible.",
+   "temporal_anchor": "The fair-share sentence, as a supporting comparison.",
+   "reviewer_question": "Should the video quantify the 80/20 gap as 4-to-1, or only show the slices?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Use color emphasis to distinguish the 80% majority slice from the 20% remainder.",
+  "A 20% remainder label can be shown without labeling what that group believes."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that capital gains taxes would fix unfairness or be an easy solution",
+  "Claim that 80% support capital gains tax specifically",
+  "Claim that the 20% remainder opposes capital gains taxes",
+  "Claim about wealthy individuals' actual tax rates or dollars paid",
+  "Extrapolation beyond the two table values 80 and 20"
+ ],
+ "notes": "Core required content is the 80% fair-share majority; 20%, composition, and the 4x ratio are defensible optional support. Avoid attaching unsupported policy causality to the donut.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 31.1,
+  "usage": {
+   "prompt_tokens": 651,
+   "completion_tokens": 6542,
+   "total_tokens": 7193,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4944
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 395
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

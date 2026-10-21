@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f6f6f4"/>
+<g id="chart-plot" data-role="plot">
+<g id="entity-terrestrial-planets" data-role="entity" data-entity-id="terrestrial-planets" data-label="Terrestrial Planets">
+<rect id="terrestrial-planets-bar" data-role="bar" data-entity-id="terrestrial-planets" data-value="1" x="160.0" y="360.0" width="9.6" height="90.0" fill="#8a2f2f" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="value-label" x="219.8" y="348.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#333333">Terrestrial 1%</text>
+<g id="entity-jupiter" data-role="entity" data-entity-id="jupiter" data-label="Jupiter">
+<rect id="jupiter-bar" data-role="bar" data-entity-id="jupiter" data-value="70" x="169.6" y="360.0" width="672.0" height="90.0" fill="#e8a13c" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="value-label" x="505.6" y="413.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#333333">Jupiter 70%</text>
+<g id="entity-saturn" data-role="entity" data-entity-id="saturn" data-label="Saturn">
+<rect id="saturn-bar" data-role="bar" data-entity-id="saturn" data-value="20" x="841.6" y="360.0" width="192.0" height="90.0" fill="#9db54b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="value-label" x="937.6" y="413.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">Saturn 20%</text>
+<g id="entity-uranus" data-role="entity" data-entity-id="uranus" data-label="Uranus">
+<rect id="uranus-bar" data-role="bar" data-entity-id="uranus" data-value="4" x="1033.6" y="360.0" width="38.4" height="90.0" fill="#3d5a8c" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="value-label" x="1052.8" y="348.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#333333">Uranus 4%</text>
+<g id="entity-neptune" data-role="entity" data-entity-id="neptune" data-label="Neptune">
+<rect id="neptune-bar" data-role="bar" data-entity-id="neptune" data-value="5" x="1072.0" y="360.0" width="48.0" height="90.0" fill="#7da0c4" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="value-label" x="1096.0" y="476.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#333333">Neptune 5%</text>
+</g>
+</svg>

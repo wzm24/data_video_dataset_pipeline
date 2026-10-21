@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">CONGOLESE KILLED 1885-1908</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600.0" stroke="#666666" stroke-width="3"/>
+<g id="entity-congolese-deaths" data-role="entity" data-entity-id="congolese-deaths" data-label="CONGOLESE DEATHS">
+<rect id="congolese-deaths-bar" data-role="bar" data-entity-id="congolese-deaths" data-value="1" x="252.0" y="140.0" width="286.0" height="460.0" fill="#E07A2F" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="congolese-deaths-label" data-role="category-label" data-entity-id="congolese-deaths" x="395.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">CONGOLESE DEATHS</text>
+</g>
+<g id="entity-belgian-population-1890" data-role="entity" data-entity-id="belgian-population-1890" data-label="BELGIAN POPULATION 1890">
+<rect id="belgian-population-1890-bar" data-role="bar" data-entity-id="belgian-population-1890" data-value="0.74" x="802.0" y="259.6" width="286.0" height="340.4" fill="#8B5AA6" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="belgian-population-1890-label" data-role="category-label" data-entity-id="belgian-population-1890" x="945.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">BELGIAN POPULATION 1890</text>
+</g>
+</g>
+</svg>

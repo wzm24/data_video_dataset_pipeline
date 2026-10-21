@@ -1,0 +1,17 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_96,Mexico,mexico,,1990,2,0.2857,million,,printed
+line_96,Mexico,mexico,,1995,2.9,0.4143,million,,printed
+line_96,Mexico,mexico,,2000,4.5,0.6429,million,,printed
+line_96,Mexico,mexico,,2005,6.3,0.9,million,,printed
+line_96,Mexico,mexico,,2007,6.9,0.9857,million,,printed
+line_96,Mexico,mexico,,2010,6.2,0.8857,million,,printed
+line_96,Mexico,mexico,,2015,5.6,0.8,million,,printed
+line_96,Mexico,mexico,,2017,4.9,0.7,million,,printed
+line_96,Other countries,other,,1990,1.5,0.2143,million,,printed
+line_96,Other countries,other,,1995,2.8,0.4,million,,printed
+line_96,Other countries,other,,2000,4.1,0.5857,million,,printed
+line_96,Other countries,other,,2005,4.8,0.6857,million,,printed
+line_96,Other countries,other,,2007,5.3,0.7571,million,,printed
+line_96,Other countries,other,,2010,5.2,0.7429,million,,printed
+line_96,Other countries,other,,2015,5.4,0.7714,million,,printed
+line_96,Other countries,other,,2017,5.5,0.7857,million,,printed

@@ -1,0 +1,169 @@
+{
+ "clip_id": "line_101",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:public school enrollment @ 1990"
+   ],
+   "assertion": {
+    "mark": "public school enrollment @ 1990",
+    "field": "value",
+    "expected": 41.5,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The enrollment series must make the 1990 and 2020 endpoints identifiable and associate them with 41.5 and 53.5 million."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:public school enrollment @ 1990",
+    "mark:public school enrollment @ 2020"
+   ],
+   "assertion": {
+    "low": "public school enrollment @ 1990",
+    "low_value": 41.5,
+    "high": "public school enrollment @ 2020",
+    "high_value": 53.5,
+    "delta": 12.0,
+    "ratio": 1.2892,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A net-change annotation or visual comparison must show the full 1990-to-2020 rise corresponding to 12.0 million total, or about 0.4 million per year on average."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:public school enrollment @ 1990",
+    "mark:public school enrollment @ 1993",
+    "mark:public school enrollment @ 1996",
+    "mark:public school enrollment @ 2000",
+    "mark:public school enrollment @ 2005",
+    "mark:public school enrollment @ 2010",
+    "mark:public school enrollment @ 2015",
+    "mark:public school enrollment @ 2020"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "public school enrollment @ 1990",
+      "value": 41.5
+     },
+     {
+      "mark": "public school enrollment @ 1993",
+      "value": 43.5
+     },
+     {
+      "mark": "public school enrollment @ 1996",
+      "value": 46.0
+     },
+     {
+      "mark": "public school enrollment @ 2000",
+      "value": 48.5
+     },
+     {
+      "mark": "public school enrollment @ 2005",
+      "value": 49.8
+     },
+     {
+      "mark": "public school enrollment @ 2010",
+      "value": 50.5
+     },
+     {
+      "mark": "public school enrollment @ 2015",
+      "value": 52.0
+     },
+     {
+      "mark": "public school enrollment @ 2020",
+      "value": 53.5
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The enrollment series must visibly rise across the listed years without any downward segment; labels or annotations must make the monotonic order evident."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:public school enrollment @ 1993",
+    "mark:public school enrollment @ 1990"
+   ],
+   "assertion": {
+    "greater": "public school enrollment @ 1993",
+    "lesser": "public school enrollment @ 1990",
+    "expected_ratio": 1.0482,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The intervals 1993–1996/1996–2000 and 2005–2010 must be distinguishable as the largest and smallest listed increases."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:public school enrollment @ 1990",
+    "mark:public school enrollment @ 2000",
+    "mark:public school enrollment @ 2010",
+    "mark:public school enrollment @ 2020"
+   ],
+   "assertion": {
+    "low": "public school enrollment @ 1990",
+    "low_value": 41.5,
+    "high": "public school enrollment @ 2020",
+    "high_value": 53.5,
+    "delta": 12.0,
+    "ratio": 1.2892,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The video should make the decade-level differences in growth visible, not just a single overall rise."
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "clip_id": "line_28",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:CEO-worker pay gap @ start",
+    "mark:CEO-worker pay gap @ final",
+    "mark:CEO-worker pay gap @ peak"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "CEO-worker pay gap @ start",
+      "value": 0.12
+     },
+     {
+      "mark": "CEO-worker pay gap @ final",
+      "value": 0.65
+     },
+     {
+      "mark": "CEO-worker pay gap @ peak",
+      "value": 0.95
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A clear upward movement from early low values to much higher later values must be visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:CEO-worker pay gap @ early segment",
+    "mark:CEO-worker pay gap @ early segment",
+    "mark:CEO-worker pay gap @ 1990 mark"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "CEO-worker pay gap @ early segment",
+      "value": 0.11
+     },
+     {
+      "mark": "CEO-worker pay gap @ early segment",
+      "value": 0.15
+     },
+     {
+      "mark": "CEO-worker pay gap @ 1990 mark",
+      "value": 0.18
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The early portion must appear low and comparatively flat before the later rise."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:CEO-worker pay gap @ 1990 mark",
+    "mark:CEO-worker pay gap @ post-1990 step",
+    "mark:CEO-worker pay gap @ post-1990 step",
+    "mark:CEO-worker pay gap @ post-1990 step",
+    "mark:CEO-worker pay gap @ post-1990 step",
+    "mark:CEO-worker pay gap @ peak"
+   ],
+   "assertion": {
+    "low": "CEO-worker pay gap @ 1990 mark",
+    "low_value": 0.18,
+    "high": "CEO-worker pay gap @ peak",
+    "high_value": 0.95,
+    "delta": 0.77,
+    "ratio": 5.2778,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The steepest upward section must be visible after the 1990 marker and before the maximum."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "CEO-worker pay gap @ peak",
+    "extreme": "max",
+    "expected": 0.95,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A distinct maximum near 0.95 must be visible, much higher than the early baseline."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:CEO-worker pay gap @ peak",
+    "mark:CEO-worker pay gap @ post-peak low",
+    "mark:CEO-worker pay gap @ final",
+    "mark:CEO-worker pay gap @ start"
+   ],
+   "assertion": {
+    "low": "CEO-worker pay gap @ start",
+    "low_value": 0.12,
+    "high": "CEO-worker pay gap @ peak",
+    "high_value": 0.95,
+    "delta": 0.83,
+    "ratio": 7.9167,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "After the maximum, the visual must show a decline to about 0.55-0.65 and an ending near 0.65."
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_87",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To highlight the significant disparity between the prevalence of overweight cats and the low awareness of this issue among their owners.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "55% of all household cats are overweight.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "55% of all household cats are overweight",
+     "x": "640.0",
+     "field": "entity",
+     "value": "55%",
+     "note": "The table entity label carries the 55% prevalence; the table value=1.000 is a normalized bar value, not the percentage."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "55% of household cats are overweight",
+    "Overweight prevalence among household cats is 55%",
+    "55 percent of all household cats are overweight",
+    "The cat overweight rate is 55%"
+   ],
+   "visual_evidence_rule": "A value label or bar/segment for overweight-cat prevalence must read 55%.",
+   "temporal_anchor": "The first narration clause, introducing the 55% prevalence.",
+   "reviewer_question": "Must the video state 55% as the overweight prevalence among household cats?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Only 9% of the cats' owners know that.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "9% of their owners know that",
+     "x": "640.0",
+     "field": "entity",
+     "value": "9%",
+     "note": "The table entity label carries the 9% owner-awareness value; the table value=1.000 is a normalized bar value, not the percentage."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Only 9% of owners know",
+    "9% of their owners are aware",
+    "Owner awareness is 9%",
+    "Just 9% of cat owners know"
+   ],
+   "visual_evidence_rule": "A value label or bar/segment for owner awareness must read 9%.",
+   "temporal_anchor": "The second narration clause, introduced by the contrast 'but only 9%...'.",
+   "reviewer_question": "Must the video state 9% as the owner-awareness value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The disparity between overweight prevalence and owner awareness is 46 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "55% of all household cats are overweight",
+     "x": "640.0",
+     "field": "entity",
+     "value": "55%",
+     "note": "First value used in the subtraction."
+    },
+    {
+     "entity": "9% of their owners know that",
+     "x": "640.0",
+     "field": "entity",
+     "value": "9%",
+     "note": "Second value used in the subtraction."
+    }
+   ],
+   "computation": "55 - 9 = 46 percentage points",
+   "accepted_routes": [
+    "There is a 46-point gap between overweight prevalence and owner awareness",
+    "55% and 9% differ by 46 percentage points",
+    "Prevalence is 46 points higher than awareness",
+    "Only 9% aware versus 55% overweight — a 46-point disparity"
+   ],
+   "visual_evidence_rule": "Both 55% and 9% must be visible and comparable; the disparity should be shown as a gap/difference, not only as two isolated labels.",
+   "temporal_anchor": "The pivot/contrast between the two narration clauses, or a subsequent comparison beat.",
+   "reviewer_question": "Is the 46-percentage-point gap required to satisfy the intent, or can 55% and 9% alone suffice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Overweight prevalence is about 6.1 times owner awareness.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "55% of all household cats are overweight",
+     "x": "640.0",
+     "field": "entity",
+     "value": "55%",
+     "note": "Numerator for the ratio."
+    },
+    {
+     "entity": "9% of their owners know that",
+     "x": "640.0",
+     "field": "entity",
+     "value": "9%",
+     "note": "Denominator for the ratio."
+    }
+   ],
+   "computation": "55 / 9 ≈ 6.1",
+   "accepted_routes": [
+    "Overweight prevalence is about 6.1 times owner awareness",
+    "55% is roughly six times 9%",
+    "A 6.1x disparity",
+    "Prevalence is over sixfold the awareness rate"
+   ],
+   "visual_evidence_rule": "If included, a ratio or multiplier annotation, or a side-by-side comparison, must make the roughly 6.1x relation visible.",
+   "temporal_anchor": "Optional comparison beat after both 55% and 9% are established.",
+   "reviewer_question": "Should the optional 6.1x ratio be included, or is the percentage-point gap enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "55% represents a majority of household cats.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "55% of all household cats are overweight",
+     "x": "640.0",
+     "field": "entity",
+     "value": "55%",
+     "note": "The 55% prevalence is above half, supporting a majority framing."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "55% is a majority of household cats",
+    "More than half of household cats are overweight",
+    "Most household cats — 55% — are overweight",
+    "Over half, 55%, are overweight"
+   ],
+   "visual_evidence_rule": "A majority or over-half cue/label should accompany or frame the 55% mark if this framing is used.",
+   "temporal_anchor": "The first narration clause, especially if 55% is introduced as a majority.",
+   "reviewer_question": "Is the majority/more-than-half framing required, or is it only optional color?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Framing the 55% value as a majority or more than half of household cats.",
+  "Expressing the disparity as a ratio of about 6.1x instead of only a 46-point gap.",
+  "Stating the U.S. context from the original narration, provided it is not presented as table-derived.",
+  "Showing both values in the same color because both table rows share color #C0392B."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as owners not noticing because cats hide weight gain.",
+  "Extrapolating to all pets or to cats outside household cats.",
+  "Using 91% of owners do not know unless an explicit 100% denominator is added; it is not directly tabled.",
+  "Treating 9% as a share of cats rather than a share of owners.",
+  "Treating value=1.000 or relative_value=0.8125 as the 55% or 9% prevalence.",
+  "Claiming a change over time or trend; the table has no time variable."
+ ],
+ "notes": "The table stores identical value=1.000 and relative_value=0.8125 for both rows, so the 55% and 9% semantics are taken from the entity labels. The derived 46-point gap and 6.1x ratio are arithmetic from those two label values; do not visualize the normalized cells as the prevalence or awareness.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 38.2,
+  "usage": {
+   "prompt_tokens": 712,
+   "completion_tokens": 8633,
+   "total_tokens": 9345,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6856
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 328
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

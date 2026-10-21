@@ -1,0 +1,135 @@
+{
+ "clip_id": "bar_90",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": 20,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Age-group labels and a visible male/female series distinction must be identifiable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:0-4 @ Female",
+    "mark:95-99 @ Male",
+    "mark:95-99 @ Female"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "0-4 @ Female",
+      "value": 0.7438
+     },
+     {
+      "mark": "95-99 @ Male",
+      "value": 0.0084
+     },
+     {
+      "mark": "95-99 @ Female",
+      "value": 0.0087
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bars must visibly decrease from the youngest age group toward the oldest age group."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Female)"
+   ],
+   "assertion": {
+    "mark": "0-4 @ Female",
+    "extreme": "min",
+    "expected": 0.7438,
+    "compared_set": "Female",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The largest and smallest listed cohorts must be visually distinguishable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:5-9 @ Female",
+    "mark:5-9 @ Male"
+   ],
+   "assertion": {
+    "greater": "5-9 @ Female",
+    "lesser": "5-9 @ Male",
+    "expected_ratio": 1.0312,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Male and female series must be visually comparable across age groups."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:0-4 @ Female",
+    "mark:95-99 @ Male"
+   ],
+   "assertion": {
+    "greater": "0-4 @ Female",
+    "lesser": "95-99 @ Male",
+    "expected_ratio": 88.5476,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The youngest and oldest listed cohorts must be visible enough to compare their relative sizes."
+  }
+ ]
+}

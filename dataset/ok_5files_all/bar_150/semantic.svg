@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<text x="640.0" y="44" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">About four-in-ten Americans have a</text>
+<text x="640.0" y="80" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">great deal of confidence in scientists</text>
+<text x="640.0" y="116" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">and medical scientists</text>
+<rect x="950" y="158" width="18" height="12" fill="#7e389f"/>
+<text x="974" y="169" font-family="Arial" font-size="14" fill="#222">A great deal</text>
+<rect x="1130" y="158" width="18" height="12" fill="#b598c9"/>
+<text x="1154" y="169" font-family="Arial" font-size="14" fill="#222">A fair amount</text>
+<rect x="950" y="180" width="18" height="12" fill="#555555"/>
+<text x="974" y="191" font-family="Arial" font-size="14" fill="#222">A great deal</text>
+<rect x="1130" y="180" width="18" height="12" fill="#a9a9a9"/>
+<text x="1154" y="191" font-family="Arial" font-size="14" fill="#222">A fair amount</text>
+<text x="482.0" y="236.9" text-anchor="end" font-family="Arial" font-size="15" fill="#222">Medical scientists</text>
+<rect x="500.0" y="217.9" width="280.0" height="38" fill="#7e389f"/>
+<text x="772.0" y="242.9" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#ffffff">40</text>
+<rect x="780.0" y="217.9" width="315.0" height="38" fill="#b598c9"/>
+<text x="1105.0" y="242.9" font-family="Arial" font-size="20" font-weight="700" fill="#222">85</text>
+<text x="482.0" y="298.6" text-anchor="end" font-family="Arial" font-size="15" fill="#222">Scientists</text>
+<rect x="500.0" y="279.6" width="273.0" height="38" fill="#7e389f"/>
+<text x="765.0" y="304.6" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#ffffff">39</text>
+<rect x="773.0" y="279.6" width="315.0" height="38" fill="#b598c9"/>
+<text x="1098.0" y="304.6" font-family="Arial" font-size="20" font-weight="700" fill="#222">84</text>
+<text x="482.0" y="360.4" text-anchor="end" font-family="Arial" font-size="15" fill="#222">The military</text>
+<rect x="500.0" y="341.4" width="273.0" height="38" fill="#555555"/>
+<text x="765.0" y="366.4" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#ffffff">39</text>
+<rect x="773.0" y="341.4" width="308.0" height="38" fill="#a9a9a9"/>
+<text x="1091.0" y="366.4" font-family="Arial" font-size="20" font-weight="700" fill="#222">83</text>
+<text x="482.0" y="422.1" text-anchor="end" font-family="Arial" font-size="15" fill="#222">K-12 public school principals</text>
+<rect x="500.0" y="403.1" width="147.0" height="38" fill="#555555"/>
+<text x="639.0" y="428.1" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#ffffff">21</text>
+<rect x="647.0" y="403.1" width="378.0" height="38" fill="#a9a9a9"/>
+<text x="1035.0" y="428.1" font-family="Arial" font-size="20" font-weight="700" fill="#222">75</text>
+<text x="482.0" y="483.9" text-anchor="end" font-family="Arial" font-size="15" fill="#222">Religious leaders</text>
+<rect x="500.0" y="464.9" width="105.0" height="38" fill="#555555"/>
+<text x="597.0" y="489.9" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#ffffff">15</text>
+<rect x="605.0" y="464.9" width="308.0" height="38" fill="#a9a9a9"/>
+<text x="923.0" y="489.9" font-family="Arial" font-size="20" font-weight="700" fill="#222">59</text>
+<text x="482.0" y="545.6" text-anchor="end" font-family="Arial" font-size="15" fill="#222">Business leaders</text>
+<rect x="500.0" y="526.6" width="35.0" height="38" fill="#555555"/>
+<text x="517.5" y="535.6" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#222">5</text>
+<rect x="535.0" y="526.6" width="287.0" height="38" fill="#a9a9a9"/>
+<text x="832.0" y="551.6" font-family="Arial" font-size="20" font-weight="700" fill="#222">46</text>
+<text x="482.0" y="607.4" text-anchor="end" font-family="Arial" font-size="15" fill="#222">Journalists</text>
+<rect x="500.0" y="588.4" width="63.0" height="38" fill="#555555"/>
+<text x="555.0" y="613.4" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#ffffff">9</text>
+<rect x="563.0" y="588.4" width="252.0" height="38" fill="#a9a9a9"/>
+<text x="825.0" y="613.4" font-family="Arial" font-size="20" font-weight="700" fill="#222">45</text>
+<text x="482.0" y="669.1" text-anchor="end" font-family="Arial" font-size="15" fill="#222">Elected officials</text>
+<rect x="500.0" y="650.1" width="28.0" height="38" fill="#555555"/>
+<text x="514.0" y="659.1" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#222">4</text>
+<rect x="528.0" y="650.1" width="231.0" height="38" fill="#a9a9a9"/>
+<text x="769.0" y="675.1" font-family="Arial" font-size="20" font-weight="700" fill="#222">37</text>
+</svg>

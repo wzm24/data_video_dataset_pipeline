@@ -1,0 +1,16 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_46,CEO pay,ceo-pay,184.0,,0.8220,0.1551,$,#1e2f4d,printed
+line_46,CEO pay,ceo-pay,232.0,,0.9500,0.1792,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,280.0,1970,0.8500,0.1605,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,352.0,,1.1000,0.2075,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,400.0,,1.0000,0.1887,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,472.0,,1.2000,0.2264,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,520.0,1980,1.3000,0.2452,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,688.0,,1.8000,0.3397,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,760.0,1990,2.3000,0.4339,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,832.0,,1.9500,0.3679,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,928.0,,3.1000,0.5849,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,976.0,,4.2000,0.7923,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,1000.0,2000,5.3000,1.0000,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,1048.0,,4.3000,0.8113,$,#1e2f4d,estimated
+line_46,CEO pay,ceo-pay,1120.0,,5.1000,0.9623,$,#1e2f4d,estimated

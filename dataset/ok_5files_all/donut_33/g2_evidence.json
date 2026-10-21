@@ -1,0 +1,106 @@
+{
+ "clip_id": "donut_33",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Top 1% @ 0"
+   ],
+   "assertion": {
+    "mark": "Top 1% @ 0",
+    "field": "value",
+    "expected": 69.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled Top 1% slice or bar showing 69% must be visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Top 1% @ 0",
+    "segment:everyone else @ 1"
+   ],
+   "assertion": {
+    "segment": "Top 1% @ 0",
+    "expected_share": 0.69,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The complement slice/bar labeled everyone else with 31% and the full composition summing to 100% must be visible if a donut or stacked chart is used."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Top 1% @ 0"
+   ],
+   "assertion": {
+    "series": "Top 1%",
+    "values": [
+     69.0
+    ],
+    "threshold_between": [
+     69.0,
+     69.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make clear that the Top 1% slice is larger than half, e.g. highlight or annotation on the 69% slice."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Top 1% @ 0",
+    "mark:everyone else @ 1"
+   ],
+   "assertion": {
+    "greater": "Top 1% @ 0",
+    "lesser": "everyone else @ 1",
+    "expected_ratio": 2.2258,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 69% and 31% labels must be visible together, or a side-by-side bar/contrast must show the 69-vs-31 gap."
+  }
+ ]
+}

@@ -1,0 +1,320 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_88",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the growing partisan polarization in views of the national economy, highlighting the shift from relative agreement in the 1990s to sharp divergence in recent years.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data compare two entity series (entity 74 and entity 37) over the same time points, rather than a single group's trend.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "74",
+     "x": "1994",
+     "field": "value",
+     "value": 26.1628,
+     "note": "first labeled 1994 point for entity 74"
+    },
+    {
+     "entity": "37",
+     "x": "1994",
+     "field": "value",
+     "value": 15.1628,
+     "note": "first labeled 1994 point for entity 37"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart tracks two groups/entities over time, entity 74 and entity 37.",
+    "There are two comparable series, one for each partisan group if the chart labels them as Republicans and Democrats.",
+    "The video compares entity 74 and entity 37 at the same time points."
+   ],
+   "visual_evidence_rule": "Both entity series must be present and readable at shared time points so a comparison can be made.",
+   "temporal_anchor": "Differences between Republicans and Democrats now extend to ... views of the national economy.",
+   "reviewer_question": "Should the video be required to establish that two entity series are being compared before any polarization claim?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In the 1990s the two series are relatively close; the gap narrows from about 11 value units in 1994 to about 3 in 1998.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "74",
+     "x": "1994",
+     "field": "value",
+     "value": 26.1628,
+     "note": "entity 74 1994 value"
+    },
+    {
+     "entity": "37",
+     "x": "1994",
+     "field": "value",
+     "value": 15.1628,
+     "note": "entity 37 1994 value"
+    },
+    {
+     "entity": "74",
+     "x": "1996",
+     "field": "value",
+     "value": 36.1628,
+     "note": "entity 74 1996 value"
+    },
+    {
+     "entity": "37",
+     "x": "1996",
+     "field": "value",
+     "value": 31.1628,
+     "note": "entity 37 1996 value"
+    },
+    {
+     "entity": "74",
+     "x": "1998",
+     "field": "value",
+     "value": 46.1628,
+     "note": "entity 74 1998 value"
+    },
+    {
+     "entity": "37",
+     "x": "1998",
+     "field": "value",
+     "value": 43.1628,
+     "note": "entity 37 1998 value"
+    }
+   ],
+   "computation": "1994 gap = 26.1628 - 15.1628 = 11.0; 1996 gap = 36.1628 - 31.1628 = 5.0; 1998 gap = 46.1628 - 43.1628 = 3.0",
+   "accepted_routes": [
+    "Throughout the 1990s the two groups were close, with differences of about 3 to 11 value units.",
+    "By 1998 the two series nearly converge: about 46.2 versus about 43.2.",
+    "The early gap was small and narrowed from about 11 to about 3."
+   ],
+   "visual_evidence_rule": "The chart must show both series at 1994, 1996, and 1998 so their small separation can be read.",
+   "temporal_anchor": "Throughout the 1990s, there wasn't much difference ...",
+   "reviewer_question": "Should the 1990s closeness be a required early baseline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Both series share a broad rise to a peak around 2000 and a fall to a low around 2008, providing background before the recent divergence.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "74",
+     "x": "2000",
+     "field": "value",
+     "value": 78.1628,
+     "note": "entity 74 2000 peak in table"
+    },
+    {
+     "entity": "37",
+     "x": "2000",
+     "field": "value",
+     "value": 71.1628,
+     "note": "entity 37 2000 peak in table"
+    },
+    {
+     "entity": "74",
+     "x": "2008",
+     "field": "value",
+     "value": 11.1628,
+     "note": "entity 74 2008 low"
+    },
+    {
+     "entity": "37",
+     "x": "2008",
+     "field": "value",
+     "value": 11.1628,
+     "note": "entity 37 2008 low"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Both series are highest around 2000 (about 78 and about 71) and lowest in 2008 (about 11 each).",
+    "The two lines rise into 2000 and then fall to a shared low around 2008.",
+    "A shared boom-to-bust shape occurs before the later separation."
+   ],
+   "visual_evidence_rule": "The chart must show the 2000 high and 2008 low for both series, or make that shared rise-and-fall traceable.",
+   "temporal_anchor": "since the early 2000s, and especially today",
+   "reviewer_question": "Is the shared 2000 peak / 2008 trough required context, or optional background?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the final time point, entity 74 is much higher than entity 37: about 75 versus about 38, a gap of about 37 value units, the largest absolute separation in the table.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "74",
+     "x": "x_px=1119.4",
+     "field": "value",
+     "value": 75.1628,
+     "note": "final point for entity 74"
+    },
+    {
+     "entity": "37",
+     "x": "x_px=1119.4",
+     "field": "value",
+     "value": 38.1628,
+     "note": "final point for entity 37"
+    }
+   ],
+   "computation": "final gap = 75.1628 - 38.1628 = 37.0; largest absolute gap across the two series",
+   "accepted_routes": [
+    "At the last point, entity 74 is about 75 and entity 37 about 38, leaving a gap of about 37 value units.",
+    "The final separation is the biggest between the two series.",
+    "The series end far apart, with entity 74 roughly twice entity 37."
+   ],
+   "visual_evidence_rule": "The final point for both series must be visible or labeled so the large gap can be read.",
+   "temporal_anchor": "especially today, the economy is viewed through a partisan lens",
+   "reviewer_question": "Should the final large gap be required as the main endpoint evidence of polarization?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The ordering between the series reverses across the recent period: in 2012 and 2016 entity 37 is higher than entity 74, but at the final point entity 74 is far higher.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "74",
+     "x": "2012",
+     "field": "value",
+     "value": 16.1628,
+     "note": "entity 74 in 2012"
+    },
+    {
+     "entity": "37",
+     "x": "2012",
+     "field": "value",
+     "value": 23.1628,
+     "note": "entity 37 in 2012"
+    },
+    {
+     "entity": "74",
+     "x": "2016",
+     "field": "value",
+     "value": 31.1628,
+     "note": "entity 74 in 2016"
+    },
+    {
+     "entity": "37",
+     "x": "2016",
+     "field": "value",
+     "value": 37.1628,
+     "note": "entity 37 in 2016"
+    },
+    {
+     "entity": "74",
+     "x": "x_px=1119.4",
+     "field": "value",
+     "value": 75.1628,
+     "note": "final entity 74"
+    },
+    {
+     "entity": "37",
+     "x": "x_px=1119.4",
+     "field": "value",
+     "value": 38.1628,
+     "note": "final entity 37"
+    }
+   ],
+   "computation": "2012 gap = 16.1628 - 23.1628 = -7.0; 2016 gap = 31.1628 - 37.1628 = -6.0; final gap = 75.1628 - 38.1628 = +37.0",
+   "accepted_routes": [
+    "In 2012 and 2016 entity 37 is above entity 74, then at the last point entity 74 is far above entity 37.",
+    "The series cross or reverse, so the recent divergence is not a straight widening from the 1990s.",
+    "The final reversal makes the recent separation especially sharp."
+   ],
+   "visual_evidence_rule": "The chart must show the 2012 and 2016 values for both series and the final point so the sign of the gap can be read.",
+   "temporal_anchor": "since the early 2000s, and especially today",
+   "reviewer_question": "Should the mid-2010s reversal/crossing be included as optional nuance, or is it required to avoid a misleading simple-widening story?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the exact 2000 peak values (78.1628 for entity 74 and 71.1628 for entity 37) as context.",
+  "Showing the 2008 trough values (11.1628 for both series) as context.",
+  "Showing intermediate points such as 2004 or 2006 to illustrate the non-monotonic path."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim the 1990s gap was zero; the table shows nonzero gaps such as 11.0 in 1994, 5.0 in 1996, and 3.0 in 1998.",
+  "Do not claim a monotonic widening; the series reverse ordering in 2012-2016 before the final large gap.",
+  "Do not convert table values to percentages, dollars, or counts because the table's unit field is blank.",
+  "Do not claim causality (media, policy, elections) or extrapolate beyond the final table point.",
+  "Do not identify entities by color alone unless the chart also labels them."
+ ],
+ "notes": "The table provides absolute values, so numeric gaps are stated as table value differences, not percentages. The required core is the 1990s closeness and the final large gap, with the shared 2000/2008 trend and mid-2010s reversal as valid context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 52.5,
+  "usage": {
+   "prompt_tokens": 2564,
+   "completion_tokens": 13614,
+   "total_tokens": 16178,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11272
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2052
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

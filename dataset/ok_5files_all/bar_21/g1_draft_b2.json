@@ -1,0 +1,278 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_21",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the substantial social benefits and purchasing power that could be achieved with a hypothetical government revenue source.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart compares three named plan/benefit series with values: Sanders plan = 1.0, Like food stamps = 1.5, and Bennet-Brown plan = 4.5.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sanders plan",
+     "x": "sanders-plan",
+     "field": "value",
+     "value": 1.0,
+     "note": "Sanders plan value from table"
+    },
+    {
+     "entity": "Like food stamps",
+     "x": "like-food-stamps",
+     "field": "value",
+     "value": 1.5,
+     "note": "Like food stamps value from table"
+    },
+    {
+     "entity": "Bennet-Brown plan",
+     "x": "bennet-brown-plan",
+     "field": "value",
+     "value": 4.5,
+     "note": "Bennet-Brown plan value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The three plans are Sanders plan at 1.0, Like food stamps at 1.5, and Bennet-Brown plan at 4.5.",
+    "Values shown: Sanders 1.0, food stamps 1.5, Bennet-Brown 4.5.",
+    "Bennet-Brown 4.5, Like food stamps 1.5, Sanders plan 1.0."
+   ],
+   "visual_evidence_rule": "All three named bars/labels must be visible with their numeric values or value labels; no fourth category should replace them.",
+   "temporal_anchor": "when the chart introduces the three plan/benefit categories",
+   "reviewer_question": "Must the video display all three named series and their values, or can it omit one of the three?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The order from largest to smallest is Bennet-Brown plan > Like food stamps > Sanders plan.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bennet-Brown plan",
+     "x": "bennet-brown-plan",
+     "field": "value",
+     "value": 4.5,
+     "note": "largest table value"
+    },
+    {
+     "entity": "Like food stamps",
+     "x": "like-food-stamps",
+     "field": "value",
+     "value": 1.5,
+     "note": "middle table value"
+    },
+    {
+     "entity": "Sanders plan",
+     "x": "sanders-plan",
+     "field": "value",
+     "value": 1.0,
+     "note": "smallest table value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Bennet-Brown is largest, Like food stamps is second, and Sanders plan is smallest.",
+    "The ranking is Bennet-Brown > Like food stamps > Sanders plan.",
+    "Sanders plan is the lowest, Like food stamps is in the middle, and Bennet-Brown plan is highest."
+   ],
+   "visual_evidence_rule": "The bars must be visually ordered by length so Bennet-Brown is longest, Like food stamps is middle, and Sanders plan is shortest.",
+   "temporal_anchor": "when the chart is first shown and the three bars are compared",
+   "reviewer_question": "Must the video explicitly establish the full ranking, not just the maximum value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Bennet-Brown plan is 4.5 times Sanders plan and 3 times Like food stamps.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bennet-Brown plan",
+     "x": "bennet-brown-plan",
+     "field": "value",
+     "value": 4.5,
+     "note": "numerator for both multipliers"
+    },
+    {
+     "entity": "Sanders plan",
+     "x": "sanders-plan",
+     "field": "value",
+     "value": 1.0,
+     "note": "denominator for 4.5x"
+    },
+    {
+     "entity": "Like food stamps",
+     "x": "like-food-stamps",
+     "field": "value",
+     "value": 1.5,
+     "note": "denominator for 3x"
+    }
+   ],
+   "computation": "Bennet-Brown 4.5 ÷ Sanders 1.0 = 4.5; Bennet-Brown 4.5 ÷ Like food stamps 1.5 = 3.0",
+   "accepted_routes": [
+    "Bennet-Brown is 4.5x Sanders and 3x Like food stamps.",
+    "Bennet-Brown is 450% of Sanders plan and 300% of Like food stamps.",
+    "Sanders is under one-quarter of Bennet-Brown, while Like food stamps is one-third of Bennet-Brown."
+   ],
+   "visual_evidence_rule": "The chart must make Bennet-Brown visibly the reference for comparison, with ratios or enough bar-length difference to infer 4.5x and 3x.",
+   "temporal_anchor": "when the narration stresses the largest purchasing-power comparison",
+   "reviewer_question": "Must the video state both multiplier relationships involving Bennet-Brown, or is the ranking sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Like food stamps is 1.5 times Sanders plan, i.e., 50% larger.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Like food stamps",
+     "x": "like-food-stamps",
+     "field": "value",
+     "value": 1.5,
+     "note": "numerator"
+    },
+    {
+     "entity": "Sanders plan",
+     "x": "sanders-plan",
+     "field": "value",
+     "value": 1.0,
+     "note": "denominator"
+    }
+   ],
+   "computation": "Like food stamps 1.5 ÷ Sanders 1.0 = 1.5, or 50% larger",
+   "accepted_routes": [
+    "Like food stamps is 1.5x Sanders plan.",
+    "Like food stamps is 50% larger than Sanders plan.",
+    "Sanders plan is two-thirds of Like food stamps."
+   ],
+   "visual_evidence_rule": "The Like food stamps and Sanders bars must be visible with lengths or labels that support a 1.5-to-1 comparison.",
+   "temporal_anchor": "when the narration compares food assistance with the smaller plan",
+   "reviewer_question": "Is the 1.5x relationship between Like food stamps and Sanders plan optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Relative to Bennet-Brown plan, Sanders plan is 22.26% and Like food stamps is 33.33%; Bennet-Brown is the 100% reference.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Sanders plan",
+     "x": "sanders-plan",
+     "field": "relative_value",
+     "value": 0.2226,
+     "note": "table relative_value vs Bennet-Brown"
+    },
+    {
+     "entity": "Like food stamps",
+     "x": "like-food-stamps",
+     "field": "relative_value",
+     "value": 0.3333,
+     "note": "table relative_value vs Bennet-Brown"
+    },
+    {
+     "entity": "Bennet-Brown plan",
+     "x": "bennet-brown-plan",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "reference value"
+    }
+   ],
+   "computation": "none; uses table relative_value",
+   "accepted_routes": [
+    "Sanders is about 22% as large as Bennet-Brown; Like food stamps is about 33%.",
+    "Relative to Bennet-Brown = 100%, Sanders is 22.26% and food stamps is 33.33%.",
+    "Bennet-Brown is the full reference, with food stamps one-third and Sanders a little over one-fifth."
+   ],
+   "visual_evidence_rule": "If shown, relative labels or percentage annotations must appear, with Bennet-Brown clearly marked as the 100% reference.",
+   "temporal_anchor": "when the chart shifts to relative scale or percentage comparison",
+   "reviewer_question": "Are the relative-to-Bennet-Brown percentages required, or are they optional supporting detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Bennet-Brown plan accounts for 64.3% of the combined value of the three bars: 4.5 / (1.0 + 1.5 + 4.5) = 4.5/7.0.",
+  "Like food stamps accounts for 21.4% of the combined value: 1.5/7.0; Sanders plan accounts for 14.3%: 1.0/7.0.",
+  "The table values are unitless, so any dollar or outcome-unit interpretation must come from video context, not be asserted as table units."
+ ],
+ "unsupported_to_avoid": [
+  "Assigning dollars, billions, or trillions to the table values because the unit column is blank.",
+  "Saying the government raised about $200 billion from the revenue source, since that number is not in the table.",
+  "Treating public college tuition free three times over, food stamps two times over, or child poverty cut by 60% as chart values, since those narration figures are not in the table.",
+  "Using the sum of the three values as the denominator for the table's relative_value field; relative_value is relative to Bennet-Brown.",
+  "Causal claims that Bennet-Brown plan causes child poverty reduction or that the revenue source pays for the plans."
+ ],
+ "notes": "The table’s values are unitless, and relative_value uses Bennet-Brown as the reference. Narration’s dollar and outcome figures cannot be cited as chart values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 45.1,
+  "usage": {
+   "prompt_tokens": 716,
+   "completion_tokens": 10544,
+   "total_tokens": 11260,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8207
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 460
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

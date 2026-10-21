@@ -1,0 +1,140 @@
+{
+ "clip_id": "bar_143",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:7 @ 769.5"
+   ],
+   "assertion": {
+    "mark": "7 @ 769.5",
+    "field": "value",
+    "expected": 84.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show entity 7's two approval levels and the 7-point gap."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:49 @ 976.5"
+   ],
+   "assertion": {
+    "mark": "49 @ 976.5",
+    "field": "value",
+    "expected": 88.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show entity 49's two approval levels and the 49-point gap."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:7 @ 769.5",
+    "mark:7 @ 769.5",
+    "mark:49 @ 976.5",
+    "mark:49 @ 976.5"
+   ],
+   "assertion": {
+    "low": "49 @ 976.5",
+    "low_value": 0.39,
+    "high": "49 @ 976.5",
+    "high_value": 88.0,
+    "delta": 87.61,
+    "ratio": 225.641,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both endpoint gaps and their 42-point difference are visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:40 @ 855.0",
+    "mark:40 @ 855.0",
+    "mark:44 @ 927.0",
+    "mark:44 @ 927.0",
+    "mark:49 @ 976.5",
+    "mark:49 @ 976.5"
+   ],
+   "assertion": {
+    "series": "40",
+    "values": [
+     70.0,
+     0.3,
+     82.0,
+     0.38,
+     88.0,
+     0.39
+    ],
+    "threshold_between": [
+     0.3,
+     88.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars for entities 44, 40, 49 show gaps at or above 40."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "7 @ 769.5",
+    "extreme": "min",
+    "expected": 84.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All bars show a visible separation between approval levels."
+  }
+ ]
+}

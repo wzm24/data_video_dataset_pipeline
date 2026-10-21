@@ -1,0 +1,127 @@
+{
+ "clip_id": "line_90",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:US troops @ start of series"
+   ],
+   "assertion": {
+    "mark": "US troops @ start of series",
+    "field": "value",
+    "expected": 2380.9524,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The first US-troops value shown must be at the minimum level."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:US troops @ 2005",
+    "mark:US troops @ early high plateau"
+   ],
+   "assertion": {
+    "low": "US troops @ 2005",
+    "low_value": 140380.9524,
+    "high": "US troops @ early high plateau",
+    "high_value": 152380.9524,
+    "delta": 12000.0,
+    "ratio": 1.0855,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The US-troops series must visibly rise steeply from the first minimum to a high plateau near 152,381."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "US troops @ pre-surge trough",
+    "extreme": "min",
+    "expected": 117380.9524,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The US-troops series must show a local trough around 117,381 before the maximum."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "US troops @ surge peak",
+    "extreme": "max",
+    "expected": 174380.9524,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest point of the US-troops series must be at about 174,381, visibly above earlier levels."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:US troops @ end of series"
+   ],
+   "assertion": {
+    "low": "US troops @ end of series",
+    "low_value": 2380.9524,
+    "high": "US troops @ end of series",
+    "high_value": 2380.9524,
+    "delta": null,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The US-troops series must end at the same low level as the start, after a decline from the maximum."
+  }
+ ]
+}

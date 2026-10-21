@@ -1,0 +1,285 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_110",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant income disparity between high-income and low-income households.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Among the household income groups, Dewi's Family (richest) has the highest relative_value in the table.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dewi's Family (richest)",
+     "x": "bar_110-g1",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "highest relative_value among the nine household groups"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Dewi's Family has the highest relative value",
+    "the richest named household group is the top group",
+    "the top group is Dewi's Family with relative_value 0.5972"
+   ],
+   "visual_evidence_rule": "The chart must show Dewi's Family as the maximum relative_value among the household groups.",
+   "temporal_anchor": "the clause stating Dewi's family is rich",
+   "reviewer_question": "Is it required to convey that Dewi's Family is the highest relative-value group?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Among the household income groups, Putri's Family (poorest) has the lowest relative_value in the table.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Putri's Family (poorest)",
+     "x": "bar_110-g9",
+     "field": "relative_value",
+     "value": 0.0896,
+     "note": "lowest relative_value among the nine household groups"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Putri's Family has the lowest relative value",
+    "the poorest named household group is the bottom group",
+    "the bottom group is Putri's Family with relative_value 0.0896"
+   ],
+   "visual_evidence_rule": "The chart must show Putri's Family as the minimum relative_value among the household groups.",
+   "temporal_anchor": "the clause stating Putri's family is not as fortunate",
+   "reviewer_question": "Is it required to convey that Putri's Family is the lowest relative-value group?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The relative_value of Dewi's Family (richest) is about 6.7 times the relative_value of Putri's Family (poorest).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dewi's Family (richest)",
+     "x": "bar_110-g1",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "highest relative_value"
+    },
+    {
+     "entity": "Putri's Family (poorest)",
+     "x": "bar_110-g9",
+     "field": "relative_value",
+     "value": 0.0896,
+     "note": "lowest relative_value"
+    }
+   ],
+   "computation": "0.5972 / 0.0896 = 6.67 (approx)",
+   "accepted_routes": [
+    "about 6.7 times as high",
+    "nearly seven times as high",
+    "the ratio is roughly 6.7 to 1"
+   ],
+   "visual_evidence_rule": "The chart must make the ratio between the highest and lowest relative values apparent or directly labeled.",
+   "temporal_anchor": "the contrast between the rich-family clause and the not-as-fortunate clause",
+   "reviewer_question": "Must the video quantify the disparity as a ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The difference between the highest and lowest relative_value is 0.5076 (0.5972 - 0.0896).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Dewi's Family (richest)",
+     "x": "bar_110-g1",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "highest relative_value"
+    },
+    {
+     "entity": "Putri's Family (poorest)",
+     "x": "bar_110-g9",
+     "field": "relative_value",
+     "value": 0.0896,
+     "note": "lowest relative_value"
+    }
+   ],
+   "computation": "0.5972 - 0.0896 = 0.5076",
+   "accepted_routes": [
+    "gap of about 0.51 relative-value points",
+    "richest exceeds poorest by about 0.51 on the relative-value scale",
+    "difference of just over half a relative-value unit"
+   ],
+   "visual_evidence_rule": "The chart must make the gap between the highest and lowest relative values visible or labeled.",
+   "temporal_anchor": "the same rich-versus-poor contrast clause",
+   "reviewer_question": "Should the video state the absolute gap on the relative-value scale, or is the ratio sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The nine household income groups are ordered from highest to lowest relative_value, declining monotonically from Dewi's Family (0.5972) to Putri's Family (0.0896).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dewi's Family (richest)",
+     "x": "bar_110-g1",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "first group in descending order"
+    },
+    {
+     "entity": "2nd",
+     "x": "bar_110-g2",
+     "field": "relative_value",
+     "value": 0.4778,
+     "note": "second group in descending order"
+    },
+    {
+     "entity": "3rd",
+     "x": "bar_110-g3",
+     "field": "relative_value",
+     "value": 0.3882,
+     "note": "third group in descending order"
+    },
+    {
+     "entity": "4th",
+     "x": "bar_110-g4",
+     "field": "relative_value",
+     "value": 0.3285,
+     "note": "fourth group in descending order"
+    },
+    {
+     "entity": "5th",
+     "x": "bar_110-g5",
+     "field": "relative_value",
+     "value": 0.2986,
+     "note": "fifth group in descending order"
+    },
+    {
+     "entity": "6th",
+     "x": "bar_110-g6",
+     "field": "relative_value",
+     "value": 0.2389,
+     "note": "sixth group in descending order"
+    },
+    {
+     "entity": "7th",
+     "x": "bar_110-g7",
+     "field": "relative_value",
+     "value": 0.209,
+     "note": "seventh group in descending order"
+    },
+    {
+     "entity": "8th",
+     "x": "bar_110-g8",
+     "field": "relative_value",
+     "value": 0.1493,
+     "note": "eighth group in descending order"
+    },
+    {
+     "entity": "Putri's Family (poorest)",
+     "x": "bar_110-g9",
+     "field": "relative_value",
+     "value": 0.0896,
+     "note": "ninth group in descending order"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "values decrease from group 1 to group 9",
+    "the groups are ranked from richest to poorest",
+    "each successive income group has a lower relative_value"
+   ],
+   "visual_evidence_rule": "The chart must show the nine household groups in descending relative_value order with no reversal.",
+   "temporal_anchor": "the overall rich-to-poor progression across the household groups",
+   "reviewer_question": "Is it required to show the full descending order of all nine income groups, or only the high/low endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Exact relative_value labels for intermediate groups, such as 0.4778, 0.3882, 0.3285, 0.2986, 0.2389, 0.2090, and 0.1493.",
+  "The largest one-step drop is from Dewi's Family to the second group: 0.5972 - 0.4778 = 0.1194.",
+  "The second-highest group is still far above the bottom group: 0.4778 / 0.0896 = 5.33 (approx)."
+ ],
+ "unsupported_to_avoid": [
+  "Actual dollar income or income percentages for either group.",
+  "Using the narration's top/bottom 10% labels as quantitative values in the chart.",
+  "Causal claims about why the income disparity exists.",
+  "Extrapolating the disparity into the future.",
+  "Treating the relative_values as shares of a total that sum to 1, since they do not."
+ ],
+ "notes": "All numeric values are relative_value on a 0-1 scale because the table has no absolute value column. The narration's top/bottom 10% labels should not be turned into numeric percentages in the chart.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 41.3,
+  "usage": {
+   "prompt_tokens": 1271,
+   "completion_tokens": 10539,
+   "total_tokens": 11810,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8381
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 887
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

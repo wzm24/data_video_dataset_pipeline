@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#fdfdfd"/>
+<text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">Republicans are more likely than Democrats to say that the</text>
+<text x="640" y="82" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">U.S. economic system is generally fair</text>
+<rect x="940" y="108" width="22" height="14" fill="#b6dcb6"/>
+<text x="968" y="121" font-family="Arial" font-size="14" fill="#222">Is generally</text>
+<text x="968" y="139" font-family="Arial" font-size="14" fill="#222">fair to most Americans</text>
+<rect x="940" y="154" width="22" height="14" fill="#4f8f4f"/>
+<text x="968" y="167" font-family="Arial" font-size="14" fill="#222">Unfairly favors</text>
+<text x="968" y="185" font-family="Arial" font-size="14" fill="#222">the powerful interests</text>
+<text x="625" y="226.0" text-anchor="end" font-family="Arial" font-size="18" font-weight="700" fill="#222">All adults</text>
+<rect x="506.6" y="234.0" width="133.4" height="32" fill="#b6dcb6"/>
+<text x="496.6" y="256.0" text-anchor="end" font-family="Arial" font-size="20" font-weight="700" fill="#222">29</text>
+<rect x="640.0" y="234.0" width="322.0" height="32" fill="#4f8f4f"/>
+<text x="972.0" y="256.0" font-family="Arial" font-size="20" font-weight="700" fill="#222">70</text>
+<text x="625" y="356.0" text-anchor="end" font-family="Arial" font-size="18" font-weight="700" fill="#222">Republican/Lean Rep</text>
+<rect x="410.0" y="364.0" width="230.0" height="32" fill="#b6dcb6"/>
+<text x="400.0" y="386.0" text-anchor="end" font-family="Arial" font-size="20" font-weight="700" fill="#222">50</text>
+<rect x="640.0" y="364.0" width="230.0" height="32" fill="#4f8f4f"/>
+<text x="880.0" y="386.0" font-family="Arial" font-size="20" font-weight="700" fill="#222">50</text>
+<text x="625" y="486.0" text-anchor="end" font-family="Arial" font-size="18" font-weight="700" fill="#222">Democrat/Lean Dem</text>
+<rect x="584.8" y="494.0" width="55.2" height="32" fill="#b6dcb6"/>
+<text x="574.8" y="516.0" text-anchor="end" font-family="Arial" font-size="20" font-weight="700" fill="#222">12</text>
+<rect x="640.0" y="494.0" width="395.6" height="32" fill="#4f8f4f"/>
+<text x="1045.6" y="516.0" font-family="Arial" font-size="20" font-weight="700" fill="#222">86</text>
+<text x="640" y="700" text-anchor="middle" font-family="Arial" font-size="14" fill="#777">Source: Survey of U.S. adults conducted Sept. 3-15, 2019. PEW RESEARCH CENTER</text>
+</svg>

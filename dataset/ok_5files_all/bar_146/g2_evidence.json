@@ -1,0 +1,135 @@
+{
+ "clip_id": "bar_146",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 7,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Seven bars with relative_value labels must be visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "8.7 @ 867.1",
+    "extreme": "max",
+    "expected": 0.4486,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Top bar labeled 8.7 reaches 0.4486 relative_value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:8.7 @ 867.1",
+    "mark:7.3 @ 820.9"
+   ],
+   "assertion": {
+    "greater": "8.7 @ 867.1",
+    "lesser": "7.3 @ 820.9",
+    "expected_ratio": 1.1918,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Top and second bars visible with gap."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:4.0 @ 712.0",
+    "mark:8.7 @ 867.1"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "4.0 @ 712.0",
+      "value": 0.2062
+     },
+     {
+      "mark": "8.7 @ 867.1",
+      "value": 0.4486
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Bars ordered by descending relative_value heights."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:7.3 @ 820.9",
+    "mark:8.7 @ 867.1"
+   ],
+   "assertion": {
+    "series": "7.3",
+    "values": [
+     0.3764,
+     0.4486
+    ],
+    "threshold_between": [
+     0.3764,
+     0.4486
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "0.4 reference line or threshold cue visible."
+  }
+ ]
+}

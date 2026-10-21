@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_43",
+ "intent_en": "To demonstrate the United States' significant historical contribution to global carbon dioxide emissions, thereby justifying its responsibility to lead decarbonization efforts.",
+ "previous_intent": "To demonstrate the United States' significant historical contribution to global carbon dioxide emissions and justify its critical role in decarbonization efforts.",
+ "narration_support": "The U.S. doesn't currently emit the most carbon dioxide of any country, but as one of the oldest industrial powers, it's emitted more carbon dioxide in total than any other country or region. So America has a big role to play in decarbonizing.",
+ "chart_support": "Stacked area chart showing global carbon dioxide emissions from 1750 to 2000, illustrating the United States' substantial historical emission volume relative to other regions.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the US has emitted more CO2 in total and has a big role to play in decarbonizing. The chart visualizes this historical accumulation (1750-2000) with the US band showing significant volume, supporting the claim of historical responsibility.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

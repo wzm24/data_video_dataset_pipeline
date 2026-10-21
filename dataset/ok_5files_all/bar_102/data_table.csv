@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_102,Toutiao,toutiao,700.0,,1.000,0.5938,,#E74C3C,printed
+bar_102,Uber,uber,681.0,,0.950,0.5641,,#333333,printed
+bar_102,Didi,didi,589.8,,0.710,0.4216,,#F39C12,printed
+bar_102,WeWork,wework,532.8,,0.560,0.3325,,#333333,printed

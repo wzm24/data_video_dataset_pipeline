@@ -1,0 +1,238 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_4",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that bail is unaffordable for the majority of defendants at their initial hearing.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Only 14% of people given bail were able to pay at their initial hearing.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "able to pay bail",
+     "x": "bail",
+     "field": "value",
+     "value": 14.0,
+     "note": "Table value is 14 in percent units; relative_value is 0.14."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Only 14% of people given bail could pay at the initial hearing.",
+    "14% were able to pay bail at the initial hearing.",
+    "The able-to-pay share was just 14%."
+   ],
+   "visual_evidence_rule": "A chart label or annotation must show 14% for the able-to-pay bail category.",
+   "temporal_anchor": "The narration clause 'only 14% of people given bail were able to pay at their initial hearing'.",
+   "reviewer_question": "Must the video explicitly state the 14% able-to-pay share, or is the 86% unable share alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "86% of people given bail were unable to pay at their initial hearing, making nonpayment the majority outcome.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "unable to pay bail",
+     "x": "other",
+     "field": "value",
+     "value": 86.0,
+     "note": "Table value is 86 in percent units; relative_value is 0.86."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "86% of people given bail were unable to pay at the initial hearing.",
+    "The unable-to-pay share was 86%.",
+    "A majority—86%—could not pay bail at the initial hearing."
+   ],
+   "visual_evidence_rule": "A chart label or annotation must show 86% for the unable-to-pay bail category.",
+   "temporal_anchor": "The final 'initial hearing' clause, following or paired with the 14% able-to-pay statement.",
+   "reviewer_question": "Is the 86% unable-to-pay majority required to be explicitly shown, or can it be left as the complement of 14%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The unable-to-pay share is 72 percentage points higher than the able-to-pay share (86% vs 14%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "unable to pay bail",
+     "x": "other",
+     "field": "value",
+     "value": 86.0,
+     "note": "Used as minuend."
+    },
+    {
+     "entity": "able to pay bail",
+     "x": "bail",
+     "field": "value",
+     "value": 14.0,
+     "note": "Used as subtrahend."
+    }
+   ],
+   "computation": "86 - 14 = 72 percentage points",
+   "accepted_routes": [
+    "The unable-to-pay share exceeds the able-to-pay share by 72 percentage points.",
+    "The gap is 72 points: 86% unable versus 14% able.",
+    "86% is 72 points higher than 14%."
+   ],
+   "visual_evidence_rule": "Either both 86% and 14% labels must be visible, or a difference annotation must show 72 percentage points.",
+   "temporal_anchor": "After the narration's 14% clause, when contrasting inability with ability.",
+   "reviewer_question": "Should the 72-percentage-point gap be required, or is showing the two shares side by side enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The unable-to-pay group is about 6.1 times as common as the able-to-pay group (86% / 14%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "unable to pay bail",
+     "x": "other",
+     "field": "value",
+     "value": 86.0,
+     "note": "Numerator for ratio."
+    },
+    {
+     "entity": "able to pay bail",
+     "x": "bail",
+     "field": "value",
+     "value": 14.0,
+     "note": "Denominator for ratio."
+    }
+   ],
+   "computation": "86 / 14 = 6.142857..., about 6.1x",
+   "accepted_routes": [
+    "Unable-to-pay is about 6.1 times as common as able-to-pay.",
+    "There were roughly 6 times as many unable-to-pay cases as able-to-pay cases.",
+    "The 86% unable group is more than six times the 14% able group."
+   ],
+   "visual_evidence_rule": "A ratio annotation or both percentage labels must be visible so the 86:14 comparison can be read.",
+   "temporal_anchor": "Optional emphasis after the 14% and 86% shares are established.",
+   "reviewer_question": "Is the about-6x ratio worth requiring as a derived comparison, or is it optional enrichment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The able-to-pay and unable-to-pay shares sum to 100% of people given bail (14% + 86%).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "able to pay bail",
+     "x": "bail",
+     "field": "value",
+     "value": 14.0,
+     "note": "First share."
+    },
+    {
+     "entity": "unable to pay bail",
+     "x": "other",
+     "field": "value",
+     "value": 86.0,
+     "note": "Second share."
+    }
+   ],
+   "computation": "14 + 86 = 100%",
+   "accepted_routes": [
+    "Together, 14% able and 86% unable account for 100% of people given bail.",
+    "The two bail outcomes sum to the full 100%: 14% plus 86%.",
+    "The composition is complete: 14% able, 86% unable."
+   ],
+   "visual_evidence_rule": "The chart must show both shares as parts of a whole, such as a donut or 100% stacked bar.",
+   "temporal_anchor": "When the donut composition is displayed, after both share labels appear.",
+   "reviewer_question": "Must the video make the 100% whole or complete partition explicit, or is that only a chart-design convention?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Describe the chart as a donut composition of people given bail at the initial hearing.",
+  "State that the denominator is people given bail, not all defendants or all Americans.",
+  "Use the complement relationship: 86% unable is the remainder after 14% able."
+ ],
+ "unsupported_to_avoid": [
+  "the narration's dollar bail amount (not in table)",
+  "the narration's analysis year (not in table)",
+  "New York City Jails setting (not in table)",
+  "felony defendants label (not in table)",
+  "national or demographic extrapolation beyond the table",
+  "causal claims that bail causes poverty or missed hearings",
+  "exact counts of defendants"
+ ],
+ "notes": "Core required content is the 14% able and 86% unable shares; derived gap, ratio, and 100% sum are optional but valid. Avoid the narration's untabled numeric and geographic details.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 32.8,
+  "usage": {
+   "prompt_tokens": 644,
+   "completion_tokens": 8004,
+   "total_tokens": 8648,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6210
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 388
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,123 @@
+{
+ "clip_id": "bar_88",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": 20,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Age-group labels from 0-4 to 95-99 are visible; male and female series are distinguishable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:0-4 @ 0-4",
+    "mark:0-4 @ 0-4"
+   ],
+   "assertion": {
+    "greater": "0-4 @ 0-4",
+    "lesser": "0-4 @ 0-4",
+    "expected_ratio": 1.0626,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 0-4 bars are visibly much shorter than the 45-49 bars."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:70-74 @ 70-74",
+    "mark:70-74 @ 70-74"
+   ],
+   "assertion": {
+    "greater": "70-74 @ 70-74",
+    "lesser": "70-74 @ 70-74",
+    "expected_ratio": 1.0512,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 70-74 and 0-4 age-group bars must be comparable, showing 70-74 is taller than 0-4."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Male)"
+   ],
+   "assertion": {
+    "mark": "45-49 @ 45-49",
+    "extreme": "min",
+    "expected": 1.0,
+    "compared_set": "Male",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 45-49 age group bars are visibly the tallest, with female 45-49 as the highest single bar."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:70-74 @ 70-74",
+    "mark:70-74 @ 70-74"
+   ],
+   "assertion": {
+    "greater": "70-74 @ 70-74",
+    "lesser": "70-74 @ 70-74",
+    "expected_ratio": 1.0512,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "For older age groups, female bars are visibly taller than male bars."
+  }
+ ]
+}

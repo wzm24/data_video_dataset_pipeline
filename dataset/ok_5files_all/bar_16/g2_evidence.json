@@ -1,0 +1,104 @@
+{
+ "clip_id": "bar_16",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1"
+   ],
+   "assertion": {
+    "low": "1",
+    "low_value": 4.0,
+    "high": "1",
+    "high_value": 4.0,
+    "delta": null,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A label or annotation stating 4×/quadrupled, or a visual factor comparison between the two population bars."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:4"
+   ],
+   "assertion": {
+    "mark": "4",
+    "field": "value",
+    "expected": 7.7,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The ending bar or endpoint must be labeled or visibly scaled to 7.700."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:4"
+   ],
+   "assertion": {
+    "mark": "4",
+    "field": "value",
+    "expected": 7.7,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A starting bar or endpoint must be shown or labeled near 1.925, or the derivation must be stated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:4",
+    "mark:1"
+   ],
+   "assertion": {
+    "low": "1",
+    "low_value": 4.0,
+    "high": "4",
+    "high_value": 7.7,
+    "delta": 3.7,
+    "ratio": 1.925,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A difference arrow, bracket, or annotation showing the gap between the starting and ending values."
+  }
+ ]
+}

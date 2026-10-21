@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_52",
+ "intent_en": "To demonstrate that tax audit rates have declined disproportionately for high-income earners compared to low-income earners between 2011 and 2017.",
+ "previous_intent": "To illustrate the disparity in tax audit enforcement between income groups from 2011 to 2017, demonstrating that audits for high-income earners dropped significantly while rates for low-income Americans remained stable.",
+ "narration_support": "Audits of the rich have dropped dramatically, but audits of the poorest Americans have stayed almost the same.",
+ "chart_support": "Line chart displaying audit rates for different income groups from 2011 to 2017, showing a steep downward trend for the highest income bracket and a flat trend for the lowest income brackets.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly contrasts the dramatic drop in audits for the rich with the stability for the poorest. The chart visualizes this divergence, with the top income line falling significantly while the bottom income lines remain near the baseline.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

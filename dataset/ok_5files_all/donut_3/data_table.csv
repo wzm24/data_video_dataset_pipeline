@@ -1,0 +1,4 @@
+clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type
+donut_3,state 3s,state3,3,90,0.90,percent,printed
+donut_3,state 8s,state8,8,60,0.60,percent,printed
+donut_3,state last,statelast,12,,,rating,illustrative

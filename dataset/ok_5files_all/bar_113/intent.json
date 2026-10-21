@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_113",
+ "intent_en": "To demonstrate that a majority of U.S. adults expressed at least some confidence in police officers to act in the public's best interests in late 2020.",
+ "previous_intent": "To demonstrate that most Americans have at least some confidence in police officers to act in the public's best interests, highlighting the distribution between those with a great deal and a fair amount of confidence.",
+ "narration_support": "most said they have at least some confidence",
+ "chart_support": "Horizontal bar chart showing the distribution of confidence levels in police officers, with the majority of respondents falling into positive confidence categories ('a great deal' and 'a fair amount'), supporting the headline 'Most Americans are confident in the police'.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly states that 'most said they have at least some confidence' regarding police, which aligns with the chart's title 'Most Americans are confident in the police' and the visual representation of the combined 'great deal' and 'fair amount' segments making up the majority of the bar.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

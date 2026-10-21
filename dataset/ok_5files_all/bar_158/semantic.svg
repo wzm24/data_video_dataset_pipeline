@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f4f5f7"/>
+<text x="640" y="56" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#222">US-Russia Nuclear Treaties</text>
+<text x="664.0" y="167.0" text-anchor="end" font-family="Arial" font-size="14" fill="#333">ANTI-BALLISTIC MISSILE TREATY</text>
+<rect x="700.4" y="148.0" width="305.9" height="24" fill="#5b8fa8"/>
+<text x="664.0" y="255.0" text-anchor="end" font-family="Arial" font-size="14" fill="#333">INTERMEDIATE-RANGE NUCLEAR FORCES TREATY</text>
+<rect x="853.3" y="236.0" width="326.3" height="24" fill="#5b8fa8"/>
+<text x="664.0" y="343.0" text-anchor="end" font-family="Arial" font-size="14" fill="#333">START I</text>
+<rect x="894.1" y="324.0" width="183.5" height="24" fill="#5b8fa8"/>
+<text x="664.0" y="431.0" text-anchor="end" font-family="Arial" font-size="14" fill="#333">SORT</text>
+<rect x="1006.3" y="412.0" width="102.0" height="24" fill="#5b8fa8"/>
+<text x="664.0" y="519.0" text-anchor="end" font-family="Arial" font-size="14" fill="#333">NEW START</text>
+<rect x="1087.8" y="500.0" width="112.2" height="24" fill="#5b8fa8"/>
+<line x1="680" y1="590.0" x2="680" y2="596.0" stroke="#333"/>
+<text x="680" y="614.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">1970</text>
+<line x1="782" y1="590.0" x2="782" y2="596.0" stroke="#333"/>
+<text x="782" y="614.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">1980</text>
+<line x1="884" y1="590.0" x2="884" y2="596.0" stroke="#333"/>
+<text x="884" y="614.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">1990</text>
+<line x1="986" y1="590.0" x2="986" y2="596.0" stroke="#333"/>
+<text x="986" y="614.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">2000</text>
+<line x1="1088" y1="590.0" x2="1088" y2="596.0" stroke="#333"/>
+<text x="1088" y="614.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">2010</text>
+<line x1="1190" y1="590.0" x2="1190" y2="596.0" stroke="#333"/>
+<text x="1190" y="614.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">2020</text>
+<line x1="680" y1="590" x2="1200" y2="590" stroke="#333"/>
+</svg>

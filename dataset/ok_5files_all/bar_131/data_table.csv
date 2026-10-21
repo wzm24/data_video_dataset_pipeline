@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series
+bar_131,"7,100",bar-1,393.1,,,0.1111,relative,#2b7de0,relative_only,bar-1,semantic_svg_order_backfill,
+bar_131,"7,800",bar-2,756.4,,,0.1111,relative,#d92525,relative_only,bar-2,semantic_svg_order_backfill,
+bar_131,2015,bar-3,953.8,,,0.1111,relative,#0055a4,relative_only,bar-3,semantic_svg_order_backfill,North Korea 7
+bar_131,France 300,bar-4,967.5,,,0.1111,relative,#ee1c25,relative_only,bar-4,semantic_svg_order_backfill,North Korea 7
+bar_131,China 260,bar-5,979.0,,,0.1111,relative,#012169,relative_only,bar-5,semantic_svg_order_backfill,North Korea 7
+bar_131,United Kingdom 215,bar-6,987.2,,,0.1111,relative,#01411c,relative_only,bar-6,semantic_svg_order_backfill,North Korea 7
+bar_131,Pakistan 120,bar-7,993.0,,,0.1111,relative,#ff9933,relative_only,bar-7,semantic_svg_order_backfill,North Korea 7
+bar_131,India 115,bar-8,997.8,,,0.1111,relative,#0038b8,relative_only,bar-8,semantic_svg_order_backfill,North Korea 7

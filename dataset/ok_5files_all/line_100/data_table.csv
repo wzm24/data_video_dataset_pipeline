@@ -1,0 +1,7 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_100,new teacher supply,teachers,,2005,175000,,count,,estimated
+line_100,new teacher supply,teachers,,2008,195000,,count,,estimated
+line_100,new teacher supply,teachers,,2009,185000,,count,,estimated
+line_100,new teacher supply,teachers,,2013,110000,,count,,estimated
+line_100,new teacher supply,teachers,,,110000,,count,,estimated
+line_100,new teacher supply,teachers,,2017,90000,,count,,projected

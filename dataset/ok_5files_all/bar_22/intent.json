@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_22",
+ "intent_en": "To demonstrate the extreme concentration of wealth at the top of the economic spectrum to justify a wealth tax as a funding mechanism for social programs.",
+ "previous_intent": "To demonstrate the extreme wealth inequality between ordinary workers and the ultra-rich, highlighting how a wealth tax could target the massive wealth concentrated at the top to fund social programs.",
+ "narration_support": "huge amount of wealth stuck here at the very, very top with the ultra -rich. A wealth tax hones in on that.",
+ "chart_support": "A wealth distribution chart showing net worth for average professions (Cashier, Nurse, Teacher) is near zero, contrasting with a massive vertical spike at the far right representing extreme wealth concentration.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly links a wealth tax to targeting ultra-rich wealth to fund programs, and the chart visualizes this disparity by showing near-zero net worth for average workers and a massive upward curve at the far right.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

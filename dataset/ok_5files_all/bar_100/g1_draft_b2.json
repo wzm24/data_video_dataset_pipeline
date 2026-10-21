@@ -1,0 +1,268 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_100",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the changing trends in civil war resolutions, highlighting a shift from military victory to diplomatic negotiation over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Military victory as a share of civil-war endings declined from 44.4% until 1989 to 15.6% currently.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "UNTIL 1989",
+     "x": "military victory series (#E67E22)",
+     "field": "relative_value",
+     "value": 0.4444,
+     "note": "row bar_100 until-1989, value=1.000, relative_value=0.4444; color #E67E22 inferred as victory from narration"
+    },
+    {
+     "entity": "CURRENTLY",
+     "x": "military victory series (#A0522D)",
+     "field": "relative_value",
+     "value": 0.1556,
+     "note": "row bar_100 currently, value=0.350, relative_value=0.1556; color #A0522D inferred as victory"
+    }
+   ],
+   "computation": "0.1556 - 0.4444 = -0.2888 (-28.9 percentage points); relative change ((0.1556-0.4444)/0.4444) = -0.650 = -65%",
+   "accepted_routes": [
+    "Military victory fell from 44.4% to 15.6%.",
+    "Victory share dropped by about 29 percentage points, from 44% to 16%.",
+    "Military victory became much rarer, falling by roughly 65% relative to its 1989 share.",
+    "Victories declined from about 44% of endings to about 16%."
+   ],
+   "visual_evidence_rule": "Victory-series bars for both periods must be visible, with labels or axis positions showing 44.4% and 15.6% (or heights proportional).",
+   "temporal_anchor": "Victory for one side in a civil war was common, while nowadays, victories are much rarer.",
+   "reviewer_question": "Should the video be required to state the military-victory decline from 44.4% to 15.6%, or is showing the downward trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Negotiated endings as a share of civil-war endings increased from 11.1% until 1989 to 44.4% currently.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "UNTIL 1989",
+     "x": "negotiated series (#1F3A5F)",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "row bar_100 until-1989, value=0.250, relative_value=0.1111; color #1F3A5F inferred as negotiated from narration"
+    },
+    {
+     "entity": "CURRENTLY",
+     "x": "negotiated series (#5B9BD5)",
+     "field": "relative_value",
+     "value": 0.4444,
+     "note": "row bar_100 currently, value=1.000, relative_value=0.4444; color #5B9BD5 inferred as negotiated"
+    }
+   ],
+   "computation": "0.4444 - 0.1111 = 0.3333 (+33.3 percentage points); relative change ((0.4444-0.1111)/0.1111) = 3.0 = 300%, i.e. roughly quadrupled",
+   "accepted_routes": [
+    "Negotiated endings rose from 11.1% to 44.4%.",
+    "Negotiated settlements jumped by about 33 percentage points, from 11% to 44%.",
+    "Negotiated endings roughly quadrupled, from about one-tenth to over two-fifths of endings.",
+    "Diplomatic negotiation grew from 11.1% until 1989 to 44.4% currently."
+   ],
+   "visual_evidence_rule": "Negotiation-series bars for both periods must be visible, with labels or axis positions showing 11.1% and 44.4%.",
+   "temporal_anchor": "At the same time, negotiated endings have jumped...",
+   "reviewer_question": "Should the negotiated-ending increase from 11.1% to 44.4% be required as a separate unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The leading resolution type reversed: until 1989 military victory exceeded negotiated endings (44.4% vs 11.1%), but currently negotiated endings exceed military victory (44.4% vs 15.6%).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "UNTIL 1989",
+     "x": "military victory series (#E67E22)",
+     "field": "relative_value",
+     "value": 0.4444,
+     "note": "row bar_100 until-1989, relative_value=0.4444; inferred as victory"
+    },
+    {
+     "entity": "UNTIL 1989",
+     "x": "negotiated series (#1F3A5F)",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "row bar_100 until-1989, relative_value=0.1111; inferred as negotiated"
+    },
+    {
+     "entity": "CURRENTLY",
+     "x": "military victory series (#A0522D)",
+     "field": "relative_value",
+     "value": 0.1556,
+     "note": "row bar_100 currently, relative_value=0.1556; inferred as victory"
+    },
+    {
+     "entity": "CURRENTLY",
+     "x": "negotiated series (#5B9BD5)",
+     "field": "relative_value",
+     "value": 0.4444,
+     "note": "row bar_100 currently, relative_value=0.4444; inferred as negotiated"
+    }
+   ],
+   "computation": "Order check: 0.4444 > 0.1111 until 1989; 0.4444 > 0.1556 currently.",
+   "accepted_routes": [
+    "Victory led negotiation 44.4% to 11.1% until 1989, but negotiation led victory 44.4% to 15.6% currently.",
+    "Military victory was ahead in the earlier period; negotiated endings are ahead now.",
+    "There was a crossover from victory-dominant to negotiation-dominant endings.",
+    "Negotiated endings overtook military victories as the larger share."
+   ],
+   "visual_evidence_rule": "Both resolution series across both periods must be visible together so the viewer can see the order reversal/crossover; labels or legend must distinguish victory from negotiation.",
+   "temporal_anchor": "The contrast between 'Victory... was common' and 'At the same time, negotiated endings have jumped...'",
+   "reviewer_question": "Is the crossover/order reversal required, or are the two separate trend statements sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Currently, negotiated endings are the largest shown resolution share at 44.4%, versus military victory at 15.6%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "CURRENTLY",
+     "x": "negotiated series (#5B9BD5)",
+     "field": "relative_value",
+     "value": 0.4444,
+     "note": "row bar_100 currently, relative_value=0.4444; inferred as negotiated"
+    },
+    {
+     "entity": "CURRENTLY",
+     "x": "military victory series (#A0522D)",
+     "field": "relative_value",
+     "value": 0.1556,
+     "note": "row bar_100 currently, relative_value=0.1556; inferred as victory"
+    }
+   ],
+   "computation": "0.4444 / 0.1556 = 2.856, so negotiation is about 2.9 times victory; difference 0.4444 - 0.1556 = 0.2888 (28.9 pp).",
+   "accepted_routes": [
+    "Currently, negotiated endings are the largest shown outcome at 44.4%, versus 15.6% for military victory.",
+    "Today negotiation leads the categories shown, at 44.4%, nearly three times the 15.6% victory share.",
+    "In the current period, negotiated endings are more common than military victories by a 44.4% to 15.6% margin."
+   ],
+   "visual_evidence_rule": "Current-period negotiation bar must be visibly taller than the current-period victory bar, with numeric labels or axis positions for 44.4% and 15.6%.",
+   "temporal_anchor": "nowadays / CURRENTLY",
+   "reviewer_question": "Should the current negotiation-leading value be required beyond the reversal unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Until 1989, military victory was the largest shown resolution share at 44.4%, about four times negotiated endings at 11.1%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "UNTIL 1989",
+     "x": "military victory series (#E67E22)",
+     "field": "relative_value",
+     "value": 0.4444,
+     "note": "row bar_100 until-1989, relative_value=0.4444; inferred as victory"
+    },
+    {
+     "entity": "UNTIL 1989",
+     "x": "negotiated series (#1F3A5F)",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "row bar_100 until-1989, relative_value=0.1111; inferred as negotiated"
+    }
+   ],
+   "computation": "0.4444 / 0.1111 = 4.0; difference 0.4444 - 0.1111 = 0.3333 (33.3 pp).",
+   "accepted_routes": [
+    "Until 1989, military victory was the largest shown outcome at 44.4%, four times the 11.1% negotiated share.",
+    "In the earlier period, victories outnumbered negotiated endings 44.4% to 11.1%.",
+    "Before 1989, victory was roughly four times as common as negotiation."
+   ],
+   "visual_evidence_rule": "Until-1989 victory bar must be visibly taller than the until-1989 negotiation bar, with numeric labels or axis positions for 44.4% and 11.1%.",
+   "temporal_anchor": "Victory for one side in a civil war was common",
+   "reviewer_question": "Should the earlier victory-leading value be required beyond the reversal unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Mention that the current negotiated share is about 44% (rounded from 44.4%) rather than the narration's 'almost 40%'.",
+  "Mention the relative decline of military victory by about 65% using (0.1556-0.4444)/0.4444.",
+  "Use color/legend to distinguish military victory from negotiated endings.",
+  "Show both periods on a common axis for comparison."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that diplomacy caused the decline in military victories.",
+  "Extrapolating the trend beyond the UNTIL 1989 and CURRENTLY periods.",
+  "Claiming the two shown categories sum to 100% of all civil-war endings.",
+  "Using the narration's 10% or 'almost 40%' as exact values when the table gives 11.1% and 44.4%.",
+  "Inventing values for other resolution types or other years."
+ ],
+ "notes": "Values cited use relative_value; colors are used only to link table rows to the victory/negotiation series inferred from the narration. The core required content is the two directional changes plus the reversal/crossover.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 39.2,
+  "usage": {
+   "prompt_tokens": 717,
+   "completion_tokens": 10441,
+   "total_tokens": 11158,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7686
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 461
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

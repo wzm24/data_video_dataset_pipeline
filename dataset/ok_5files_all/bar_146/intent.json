@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_146",
+ "intent_en": "To compare the number of vaccine doses procured per person across different countries, highlighting that Canada secured a significantly higher amount relative to its population than the United States as of March 2021.",
+ "previous_intent": "To compare the number of vaccine doses procured per person across various countries and regions, highlighting Canada's leading position and the United States' lower allocation.",
+ "narration_support": "As of March 2021, Canada had secured over [amount] doses... And the deals the U .S. made were enough to cover its population at least twice",
+ "chart_support": "Horizontal bar chart showing the number of doses procured per person for various countries, with Canada having the highest value and the United States having the lowest",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration discusses procurement levels for Canada and the US in March 2021, while the chart visualizes the per-person dose counts for a broader group of countries, confirming Canada is highest and US is lowest.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

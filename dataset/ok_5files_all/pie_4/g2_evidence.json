@@ -1,0 +1,146 @@
+{
+ "clip_id": "pie_4",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Public transportation @ mode share"
+   ],
+   "assertion": {
+    "mark": "Public transportation @ mode share",
+    "field": "value",
+    "expected": 5.2,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Public transportation slice must be labeled or directly annotated with 5.2% (or clearly rounded to 5%)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Drive alone @ mode share",
+    "extreme": "max",
+    "expected": 76.3,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Drive-alone slice must be visually dominant and labeled/annotated with 76.3% (or clearly rounded to 76%)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Drive alone @ mode share",
+    "mark:Public transportation @ mode share"
+   ],
+   "assertion": {
+    "greater": "Drive alone @ mode share",
+    "lesser": "Public transportation @ mode share",
+    "expected_ratio": 14.6731,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A direct comparison or callout must relate the 76.3% drive-alone slice to the 5.2% public-transit slice; exact ratio may be shown or stated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Public transportation @ mode share",
+    "segment:Taxi, motorcycle, or other @ mode share",
+    "segment:Work at home @ mode share",
+    "segment:Walk @ mode share",
+    "segment:Carpool @ mode share",
+    "segment:Bicycle @ mode share"
+   ],
+   "assertion": {
+    "segment": "Public transportation @ mode share",
+    "expected_share": 0.0529,
+    "total_of": "%",
+    "total": 98.3,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the non-drive-alone slices as a group or a callout stating their combined 23.7% share."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Drive alone @ mode share",
+    "mark:Carpool @ mode share",
+    "mark:Public transportation @ mode share",
+    "mark:Work at home @ mode share"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Drive alone @ mode share",
+      "value": 76.3
+     },
+     {
+      "mark": "Carpool @ mode share",
+      "value": 8.2
+     },
+     {
+      "mark": "Public transportation @ mode share",
+      "value": 5.2
+     },
+     {
+      "mark": "Work at home @ mode share",
+      "value": 5.1
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or labels must make the ranking among the top modes visible, especially public transit vs carpool and work at home."
+  }
+ ]
+}

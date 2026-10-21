@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#13c2c2"/>
+<text x="524.0" y="252.0" text-anchor="end" font-family="Arial" font-size="24" font-weight="700" fill="#222">Reported Assets</text>
+<rect x="540.0" y="230.0" width="336.9" height="48" fill="#b2dfdb"/>
+<text x="862.9" y="262.0" text-anchor="end" font-family="Arial" font-size="26" font-weight="700" fill="#222">$3.6tr</text>
+<text x="524.0" y="402.0" text-anchor="end" font-family="Arial" font-size="24" font-weight="700" fill="#222">Reported Liabilities</text>
+<rect x="540.0" y="380.0" width="449.1" height="48" fill="#b2dfdb"/>
+<text x="975.1" y="412.0" text-anchor="end" font-family="Arial" font-size="26" font-weight="700" fill="#222">$4.8tr</text>
+<text x="524.0" y="552.0" text-anchor="end" font-family="Arial" font-size="24" font-weight="700" fill="#222">Actual Liabilities</text>
+<rect x="540.0" y="530.0" width="336.9" height="48" fill="#b2dfdb"/>
+<rect x="876.9" y="530.0" width="318.1" height="48" fill="#f43f5e"/>
+<text x="1035.9" y="562.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#fff">$3.4 TRILLION</text>
+<text x="1181.0" y="562.0" text-anchor="end" font-family="Arial" font-size="26" font-weight="700" fill="#222">$7.0tr</text>
+</svg>

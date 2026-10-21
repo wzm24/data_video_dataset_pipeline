@@ -1,0 +1,14 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+line_38,Historical trend,line-1-d96c6c,120.0,,,0.9200,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,211.7,,,0.8000,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,303.3,,,0.6800,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,395.0,,,0.5000,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,486.7,1970,,0.3100,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,578.3,,,0.3100,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,670.0,,,0.3100,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,761.7,,,0.2800,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,853.3,,,0.2600,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,945.0,,,0.3300,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,1036.7,,,0.4100,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,1128.3,,,0.4600,relative,#d96c6c,relative_only,line-1,intent_based_backfill
+line_38,Historical trend,line-1-d96c6c,1220.0,2010,,0.5100,relative,#d96c6c,relative_only,line-1,intent_based_backfill

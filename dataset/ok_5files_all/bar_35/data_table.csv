@@ -1,0 +1,4 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_35,Released Pretrial,released-pretrial,844.1,,94.000,0.9321,,#FFD700,printed
+bar_35,Returned for Every Court Date,returned-for-every-court-date,823.1,,88.000,0.8726,,#3cb44b,printed
+bar_35,Not Arrested Pretrial,not-arrested-pretrial,816.1,,86.000,0.8527,,#4363d8,printed

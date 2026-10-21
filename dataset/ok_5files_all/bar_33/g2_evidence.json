@@ -1,0 +1,123 @@
+{
+ "clip_id": "bar_33",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "United States @ United States",
+    "extreme": "max",
+    "expected": 1012.85,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The United States' magnitude must be visibly greater than every other entity's magnitude in the chart."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:United States @ United States",
+    "mark:Switzerland @ Switzerland"
+   ],
+   "assertion": {
+    "greater": "United States @ United States",
+    "lesser": "Switzerland @ Switzerland",
+    "expected_ratio": 1.3037,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gap between the United States and Switzerland must be visible enough to read the US as substantially above the runner-up."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Switzerland @ Switzerland",
+    "extreme": "min",
+    "expected": 776.923,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Switzerland must be visibly the second-highest magnitude, below only the United States."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Sweden @ Sweden",
+    "extreme": "min",
+    "expected": 347.938,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Sweden must be visibly the smallest magnitude among all entities, with Norway next smallest."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:United States @ United States"
+   ],
+   "assertion": {
+    "mark": "United States @ United States",
+    "field": "value",
+    "expected": 1012.85,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The United States' magnitude must be visibly at the maximum; if a value label is used, it should read 1012.85."
+  }
+ ]
+}

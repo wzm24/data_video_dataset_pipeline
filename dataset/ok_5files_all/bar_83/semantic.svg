@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#FCE8D0"/>
+
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600.0" stroke="#666666" stroke-width="3"/>
+<g id="entity-cannabis" data-role="entity" data-entity-id="cannabis" data-label="Cannabis">
+<rect id="cannabis-bar" data-role="bar" data-entity-id="cannabis" data-value="0.0485" x="252.0" y="577.7" width="286.0" height="22.3" fill="#C5C5A0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="cannabis-label" data-role="category-label" data-entity-id="cannabis" x="395.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Cannabis</text>
+</g>
+<g id="entity-beer" data-role="entity" data-entity-id="beer" data-label="Beer">
+<rect id="beer-bar" data-role="bar" data-entity-id="beer" data-value="1" x="802.0" y="140.0" width="286.0" height="460.0" fill="#E6C875" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="beer-label" data-role="category-label" data-entity-id="beer" x="945.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Beer</text>
+</g>
+</g>
+</svg>

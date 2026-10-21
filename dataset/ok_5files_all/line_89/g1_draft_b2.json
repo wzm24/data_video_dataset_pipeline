@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_89",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the proposed increase in the maximum capital gains tax rate in the context of its historical levels.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The pre-proposal historical endpoint is 20% in 2021.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "capital gains tax",
+     "x": "2021",
+     "field": "value",
+     "value": 20,
+     "note": "Historical series ends at 20% in 2021; source_type real."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2021 rate was 20%",
+    "Before the proposal, the maximum rate was 20% in 2021",
+    "The historical line ends at 20% in 2021",
+    "The pre-proposal baseline is 20%"
+   ],
+   "visual_evidence_rule": "Historical line must continue through x=2021 and its final point must be visibly at 20% on the y-axis.",
+   "temporal_anchor": "the 'from 20 percent' clause in 'increasing the maximum tax rate from 20 percent to 39.6 percent'",
+   "reviewer_question": "Should the video be required to establish 20% in 2021 as the actual pre-proposal baseline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The proposed 2022 maximum rate is 39.6%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "capital gains tax proposed",
+     "x": "2022",
+     "field": "value",
+     "value": 39.6,
+     "note": "Proposed/estimated value for 2022; source_type estimated."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The proposed 2022 rate is 39.6%",
+    "The proposal would raise the rate to 39.6% in 2022",
+    "A 39.6% proposed point appears for 2022",
+    "The 2022 estimate is 39.6%"
+   ],
+   "visual_evidence_rule": "A distinct proposed marker or dashed extension at x=2022, y=39.6 must be visible and distinguishable from the real historical line.",
+   "temporal_anchor": "the 'to 39.6 percent' clause",
+   "reviewer_question": "Should the 39.6% point be required to appear as proposed/estimated for 2022 rather than as an actual historical rate?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The proposal is an increase from 20% to 39.6%, equal to +19.6 percentage points or about a 98% relative rise (nearly double).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "capital gains tax",
+     "x": "2021",
+     "field": "value",
+     "value": 20,
+     "note": "Baseline rate before proposal."
+    },
+    {
+     "entity": "capital gains tax proposed",
+     "x": "2022",
+     "field": "value",
+     "value": 39.6,
+     "note": "Proposed rate."
+    }
+   ],
+   "computation": "39.6 - 20 = 19.6 percentage points; (39.6 - 20) / 20 = 0.98 = 98% relative increase; 39.6 / 20 = 1.98x.",
+   "accepted_routes": [
+    "Rises from 20% to 39.6%, a 19.6 percentage-point increase",
+    "The rate would nearly double, from 20% to about 40%",
+    "An increase of about 98% (20% to 39.6%)",
+    "The proposed rate is 1.98 times the 2021 rate"
+   ],
+   "visual_evidence_rule": "The chart or annotation must show both 20% and 39.6% and the transition/gap between them so the 19.6 pp or ~2x change can be inferred.",
+   "temporal_anchor": "the 'increasing the maximum tax rate from 20 percent to 39.6 percent' clause",
+   "reviewer_question": "Should the quantitative size of the increase (19.6 pp or ~2x) be required, or are the two endpoints sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The proposed 39.6% rate would exceed the prior historical maximum of 35% (held from 1972 to 1977) by 4.6 percentage points.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "capital gains tax proposed",
+     "x": "2022",
+     "field": "value",
+     "value": 39.6,
+     "note": "Proposed rate."
+    },
+    {
+     "entity": "capital gains tax",
+     "x": "1972",
+     "field": "value",
+     "value": 35,
+     "note": "Historical peak 35% also holds for 1973–1977."
+    }
+   ],
+   "computation": "39.6 - 35 = 4.6 percentage points above the prior historical peak.",
+   "accepted_routes": [
+    "The proposal would exceed the prior high of 35%",
+    "39.6% is 4.6 points above the 1972–1977 peak",
+    "The proposed rate would top every earlier value in the series",
+    "A new high above the mid-1970s 35% peak"
+   ],
+   "visual_evidence_rule": "The historical line's highest point at 35% in the 1972–1977 region and the 39.6% proposed point above it must both be visible.",
+   "temporal_anchor": "the 'to 39.6 percent' clause, with historical context shown before or around it",
+   "reviewer_question": "Should the video be required to compare 39.6% against the prior historical maximum of 35%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Optional historical trajectory: after the 35% peak in 1972–1977, the rate later fell to a 15% low in 2003–2012, then was 23.8% in 2013–2020 before 20% in 2021.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "capital gains tax",
+     "x": "1972",
+     "field": "value",
+     "value": 35,
+     "note": "Peak value; also 1973–1977."
+    },
+    {
+     "entity": "capital gains tax",
+     "x": "2003",
+     "field": "value",
+     "value": 15,
+     "note": "Low value; also 2004–2012."
+    },
+    {
+     "entity": "capital gains tax",
+     "x": "2013",
+     "field": "value",
+     "value": 23.8,
+     "note": "Also 2014–2020."
+    },
+    {
+     "entity": "capital gains tax",
+     "x": "2021",
+     "field": "value",
+     "value": 20,
+     "note": "Final historical year."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "After peaking at 35% in 1972–1977, the rate later fell to 15% in 2003–2012",
+    "The series includes a 15% low from 2003 to 2012",
+    "It was 23.8% from 2013 to 2020 before returning to 20% in 2021",
+    "Historical rate moves from a 35% peak down to a 15% low, then up to 23.8%"
+   ],
+   "visual_evidence_rule": "The historical line should visibly show the 35% high in the 1970s, the 15% low in 2003–2012, the 23.8% segment in 2013–2020, and 20% at 2021.",
+   "temporal_anchor": "optional historical-context segment before the 'from 20 percent' clause",
+   "reviewer_question": "Is the broader historical trajectory optional context, or required for 'historical levels'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The exact historical sequence (e.g., 25% in 1960–1967 and 28% in 1979–1981 and 1987–1996) may be shown but is not necessary.",
+  "A legend or visual distinction for the proposed/estimated 2022 point is valid optional reinforcement.",
+  "Labeling the y-axis in percent is valid but not a separate semantic unit."
+ ],
+ "unsupported_to_avoid": [
+  "Closing the stepped-up basis loophole (narration only, not in table).",
+  "The proposal only applies to people making more than $1 million (not in table).",
+  "Critics' claims that higher rates discourage investing or reduce stock sales (causal claims not in table).",
+  "Claims that the proposal would bring in more tax revenue (not in table).",
+  "Treating the 2022 proposed/estimated 39.6% as an actual enacted rate.",
+  "Extrapolating the rate beyond 2022 or inferring future values.",
+  "Stating that the rate increase caused or will cause revenue changes."
+ ],
+ "notes": "Core units are the 2021 baseline ending at 20%, the proposed 2022 endpoint at 39.6%, the derived increase (19.6 pp / ~98%), and the fact that 39.6% exceeds the prior 35% peak. The broader historical trajectory is useful but likely optional in a 15–20s clip.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 46.0,
+  "usage": {
+   "prompt_tokens": 2107,
+   "completion_tokens": 11634,
+   "total_tokens": 13741,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9372
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 1851
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

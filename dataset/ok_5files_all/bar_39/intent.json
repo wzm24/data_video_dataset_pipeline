@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_39",
+ "intent_en": "To demonstrate how a progressive wealth tax is calculated across different asset levels, illustrating that moderate wealth incurs no cost while extreme wealth is taxed at marginal rates.",
+ "previous_intent": "To demonstrate the progressive calculation of a wealth tax, illustrating how tax liability increases from zero for lower amounts to substantial sums for higher wealth based on tiered percentage rates.",
+ "narration_support": "So if you have forty million dollars, you'd pay nothing. If you have sixty million dollars, you'd pay nothing on your first fifty million, but two percent on the ten million after that... And if you have two billion dollars, you'd pay about forty nine million dollars.",
+ "chart_support": "Vertical bar chart illustrating tax rates (0%, 2%, 3%) and wealth thresholds ($40 million, $50 million) for a total value of $2 billion.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly walks through the tax calculation for $40M, $60M, and $2B, while the chart visualizes the $2B scenario with rate brackets and thresholds.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

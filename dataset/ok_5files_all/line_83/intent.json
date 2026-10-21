@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_83",
+ "intent_en": "To demonstrate the sudden and massive surge in daily COVID-19 cases in Taiwan after a prolonged period of low transmission.",
+ "previous_intent": "To illustrate the sudden and massive surge in daily confirmed COVID-19 cases in Taiwan following a prolonged period of very low infection rates.",
+ "narration_support": "After more than a year of normalcy, Taiwan faced its biggest COVID outbreak ever.",
+ "chart_support": "Line chart showing daily confirmed cases in Taiwan from Jan 2020 to Jun 2021, displaying a long period of near-zero cases followed by a sharp vertical spike.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

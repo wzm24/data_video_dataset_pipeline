@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F2B134"/>
+<g id="entity-cats" data-role="entity" data-entity-id="cats" data-label="Cats">
+<text id="cats-value-label" data-role="value-label" data-entity-id="cats" x="350" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">88 million</text>
+<rect id="cats-bar" data-role="bar" data-entity-id="cats" data-value="88" x="150" y="250" width="400" height="300" rx="18" fill="#E54B2D"/>
+</g>
+<g id="entity-dogs" data-role="entity" data-entity-id="dogs" data-label="Dogs">
+<rect id="dogs-bar" data-role="bar" data-entity-id="dogs" data-value="74" x="730" y="250" width="400" height="300" rx="18" fill="#B33020"/>
+<text id="dogs-value-label" data-role="value-label" data-entity-id="dogs" x="930" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">74 million</text>
+</g>
+</g>
+</svg>

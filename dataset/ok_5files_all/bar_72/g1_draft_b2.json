@@ -1,0 +1,255 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_72",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that books are often filled with unnecessary filler material like stories and repetition, leaving only a small portion as actual content.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Actual content is only a small share of the book: 28 out of 100, or 28%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Actual content",
+     "x": "share",
+     "field": "value",
+     "value": 28.0,
+     "note": "numerator for actual-content share"
+    },
+    {
+     "entity": "Filler",
+     "x": "share",
+     "field": "value",
+     "value": 72.0,
+     "note": "used with actual-content value to derive total 100"
+    }
+   ],
+   "computation": "28 / (28 + 72) = 0.28",
+   "accepted_routes": [
+    "Actual content makes up 28% of the book",
+    "Only 28 out of 100 parts are actual content",
+    "The actual-content share is about 28 percent",
+    "Actual content: 28 of the total 100"
+   ],
+   "visual_evidence_rule": "A labeled actual-content segment or bar with value 28 must be visible against a total that is visibly 100, or the 28 and 72 categories must jointly establish the denominator.",
+   "temporal_anchor": "The final contrast beat about only a small portion being actual content",
+   "reviewer_question": "Must the clip explicitly quantify actual content as 28% or 28 of 100, or is a qualitative small portion sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Filler is the dominant share of the book: 72 out of 100, or 72%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "share",
+     "field": "value",
+     "value": 72.0,
+     "note": "numerator for filler share"
+    },
+    {
+     "entity": "Actual content",
+     "x": "share",
+     "field": "value",
+     "value": 28.0,
+     "note": "used with filler value to derive total 100"
+    }
+   ],
+   "computation": "72 / (28 + 72) = 0.72",
+   "accepted_routes": [
+    "Filler makes up 72% of the book",
+    "72 out of 100 parts are filler",
+    "The filler share is 72 percent",
+    "Filler: 72 of the total 100"
+   ],
+   "visual_evidence_rule": "A labeled filler segment or bar with value 72 must be visible against the same total/denominator used for actual content.",
+   "temporal_anchor": "The clause about adding as much fluff or filler as possible",
+   "reviewer_question": "Must the clip explicitly quantify filler as 72% or 72 of 100?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Filler is larger than actual content; the filler share exceeds the actual-content share by 44 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "share",
+     "field": "value",
+     "value": 72.0,
+     "note": "larger category"
+    },
+    {
+     "entity": "Actual content",
+     "x": "share",
+     "field": "value",
+     "value": 28.0,
+     "note": "smaller category"
+    }
+   ],
+   "computation": "72 - 28 = 44 percentage points; 72 > 28",
+   "accepted_routes": [
+    "Filler (72) is larger than actual content (28)",
+    "The filler share exceeds the actual-content share by 44 percentage points",
+    "Filler is more than double actual content; 72 vs 28",
+    "Actual content (28) is less than filler (72)"
+   ],
+   "visual_evidence_rule": "Both labeled values 28 and 72 must be simultaneously visible, or the 44-point gap must be annotated.",
+   "temporal_anchor": "The contrast between fluff or filler and actual content",
+   "reviewer_question": "Must the clip state or visualize that filler exceeds actual content, or is showing both bars enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Filler is about 2.6 times the amount of actual content.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "share",
+     "field": "value",
+     "value": 72.0,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "Actual content",
+     "x": "share",
+     "field": "value",
+     "value": 28.0,
+     "note": "denominator for ratio"
+    }
+   ],
+   "computation": "72 / 28 ≈ 2.571",
+   "accepted_routes": [
+    "Filler is about 2.6 times actual content",
+    "Filler is roughly 2.57× the actual-content amount",
+    "For every 1 part actual content, there are about 2.6 parts filler",
+    "72 is about 2.6 times 28"
+   ],
+   "visual_evidence_rule": "Both labeled values 28 and 72 must be visible, or the multiplier of about 2.6× must be annotated.",
+   "temporal_anchor": "The same contrast beat, if the video uses a multiplier to dramatize the disproportion",
+   "reviewer_question": "Should the roughly 2.6× disproportion be treated as optional enrichment rather than required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Actual content plus filler sum to the whole book: 28 + 72 = 100.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Actual content",
+     "x": "share",
+     "field": "value",
+     "value": 28.0,
+     "note": "one complementary part"
+    },
+    {
+     "entity": "Filler",
+     "x": "share",
+     "field": "value",
+     "value": 72.0,
+     "note": "other complementary part"
+    }
+   ],
+   "computation": "28 + 72 = 100",
+   "accepted_routes": [
+    "Actual content plus filler sum to 100",
+    "The two categories account for the whole book",
+    "28 + 72 = 100",
+    "Together they form 100% of the book"
+   ],
+   "visual_evidence_rule": "Both labeled values 28 and 72 must appear as complementary parts of one whole or total.",
+   "temporal_anchor": "The setup or completion of the two-part breakdown, if the animation shows a whole book",
+   "reviewer_question": "Should the sum-to-100 complementarity be required, or is it implicit in the two labeled values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Describing actual content as less than one-third because 28 < 33.3",
+  "Describing filler as more than two-thirds because 72 > 66.7",
+  "Using a stacked bar or whole-book visual to imply the 100 total"
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that authors are pressured to write longer books",
+  "Claim that filler consists specifically of stories and repetition unless separately shown",
+  "Extrapolation that all books or most books have a 72/28 split",
+  "Sponsor or Blinkist performance claims",
+  "Values not in the table such as page counts, word counts, or time saved"
+ ],
+ "notes": "The table supports two complementary categories totaling 100: Actual content = 28 and Filler = 72. The key trade-off is whether the exact 28/72 shares, the 44-point gap, or the ~2.6× ratio must be explicitly conveyed.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 24.5,
+  "usage": {
+   "prompt_tokens": 745,
+   "completion_tokens": 5978,
+   "total_tokens": 6723,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4137
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 361
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

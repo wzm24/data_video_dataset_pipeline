@@ -1,0 +1,265 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_97",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that the unauthorized immigrant population in the United States is increasingly composed of long-term residents rather than recent arrivals.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The long-term (>10 years) share of unauthorized immigrants rose from 33% in 1995 to 66% in 2017, an increase of 33 percentage points and roughly a doubling.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "More than 10 years",
+     "x": "1995",
+     "field": "value",
+     "value": 33,
+     "note": "long-term share, 1995"
+    },
+    {
+     "entity": "More than 10 years",
+     "x": "2017",
+     "field": "value",
+     "value": 66,
+     "note": "long-term share, 2017"
+    }
+   ],
+   "computation": "66 - 33 = 33 percentage points; 66 / 33 = 2.0x",
+   "accepted_routes": [
+    "More than 10 years rose from 33% to 66% between 1995 and 2017.",
+    "Long-term residents increased by 33 percentage points over the period.",
+    "The long-term share roughly doubled, from one-third to about two-thirds."
+   ],
+   "visual_evidence_rule": "The chart must show the More than 10 years series at 1995 (33%) and 2017 (66%), or annotate the 33-point rise.",
+   "temporal_anchor": "those who are in the country are more and more likely to have lived in the U.S. for a long time",
+   "reviewer_question": "Should the video require the explicit 1995-to-2017 endpoint comparison, or is showing an upward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The recent-arrival (5 years or less) share fell from 36% in 1995 to 20% in 2017, a decline of 16 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "5 years or less",
+     "x": "1995",
+     "field": "value",
+     "value": 36,
+     "note": "recent-arrival share, 1995"
+    },
+    {
+     "entity": "5 years or less",
+     "x": "2017",
+     "field": "value",
+     "value": 20,
+     "note": "recent-arrival share, 2017"
+    }
+   ],
+   "computation": "20 - 36 = -16 percentage points (report as 16-point decline)",
+   "accepted_routes": [
+    "The share in the U.S. for 5 years or less dropped from 36% to 20%.",
+    "Recent arrivals fell by 16 percentage points from 1995 to 2017.",
+    "By 2017, only one-fifth were recent arrivals, down from over one-third in 1995."
+   ],
+   "visual_evidence_rule": "The chart must show the 5 years or less series at 1995 (36%) and 2017 (20%), or annotate the 16-point decline.",
+   "temporal_anchor": "With fewer new unauthorized immigrants",
+   "reviewer_question": "Should the recent-arrival decline be required alongside the long-term rise, or is the long-term rise sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In 2017, the long-term share was much larger than the recent-arrival share: 66% vs 20%, a gap of 46 percentage points; long-term was about 3.3 times the recent-arrival share.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "More than 10 years",
+     "x": "2017",
+     "field": "value",
+     "value": 66,
+     "note": "long-term share, 2017"
+    },
+    {
+     "entity": "5 years or less",
+     "x": "2017",
+     "field": "value",
+     "value": 20,
+     "note": "recent-arrival share, 2017"
+    }
+   ],
+   "computation": "66 - 20 = 46 percentage points; 66 / 20 = 3.3x",
+   "accepted_routes": [
+    "In 2017, 66% had lived in the U.S. more than 10 years versus 20% for 5 years or less.",
+    "Long-term residents outweighed recent arrivals by more than three to one in 2017.",
+    "The 2017 gap between long-term and recent-arrival shares was 46 percentage points."
+   ],
+   "visual_evidence_rule": "The chart must show both 2017 values (66% and 20%) together or annotate the 46-point gap.",
+   "temporal_anchor": "For example, we estimate that about two-thirds of adults have lived in the country for more than ten years",
+   "reviewer_question": "Is the final-year long-term-vs-recent comparison obligatory, or is the trend across years enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The ranking of the two tenure groups reversed: in 1995 recent arrivals were slightly more common than long-term residents (36% vs 33%), but by 2005 long-term residents had become more common (38% vs 36%).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "More than 10 years",
+     "x": "1995",
+     "field": "value",
+     "value": 33,
+     "note": "long-term share, 1995"
+    },
+    {
+     "entity": "5 years or less",
+     "x": "1995",
+     "field": "value",
+     "value": 36,
+     "note": "recent-arrival share, 1995"
+    },
+    {
+     "entity": "More than 10 years",
+     "x": "2005",
+     "field": "value",
+     "value": 38,
+     "note": "long-term share, 2005"
+    },
+    {
+     "entity": "5 years or less",
+     "x": "2005",
+     "field": "value",
+     "value": 36,
+     "note": "recent-arrival share, 2005"
+    }
+   ],
+   "computation": "1995 difference: 33 - 36 = -3 percentage points; 2005 difference: 38 - 36 = +2 percentage points; order reverses between 2000 and 2005",
+   "accepted_routes": [
+    "Recent arrivals were slightly more common in 1995, but long-term residents were more common by 2005.",
+    "The two series crossed between 2000 and 2005.",
+    "Long-term overtook recent arrivals by 2005 (38% vs 36%)."
+   ],
+   "visual_evidence_rule": "The chart must show both series across 1995-2005 such that the crossing/order reversal is visible, or annotate the 1995 and 2005 comparisons.",
+   "temporal_anchor": "With fewer new unauthorized immigrants",
+   "reviewer_question": "Should the crossover be explicitly shown, or is the endpoint contrast enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The long-term share reached 50% by 2010, up from 41% in 2007.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "More than 10 years",
+     "x": "2007",
+     "field": "value",
+     "value": 41,
+     "note": "long-term share, 2007"
+    },
+    {
+     "entity": "More than 10 years",
+     "x": "2010",
+     "field": "value",
+     "value": 50,
+     "note": "long-term share, 2010"
+    }
+   ],
+   "computation": "50 - 41 = 9 percentage points from 2007 to 2010",
+   "accepted_routes": [
+    "By 2010, half of the unauthorized immigrant population had lived in the U.S. more than 10 years.",
+    "The long-term share crossed the 50% mark by 2010.",
+    "It rose from 41% in 2007 to 50% in 2010."
+   ],
+   "visual_evidence_rule": "The chart must show or annotate the 2010 value at 50%, plus the 2007 value at 41% or a 50% reference line.",
+   "temporal_anchor": "more and more likely to have lived in the U.S. for a long time",
+   "reviewer_question": "Should the 50% milestone be marked as a threshold, or is it just an optional mid-period point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 50% milestone in 2010 (long-term = 50%).",
+  "The 2007-to-2010 rise of 9 percentage points (41% to 50%).",
+  "The 1995 baseline that recent arrivals were slightly more common than long-term residents (36% vs 33%).",
+  "Intermediate values such as 2000 (long = 35%, short = 38%) and 2012 (long = 56%)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that fewer new immigrants caused the long-term share to rise.",
+  "Actual counts or totals of unauthorized immigrants; the table gives percentages only.",
+  "Mexico-specific trends or country-of-origin claims.",
+  "Treating the two listed tenure groups as exhaustive; the residual 14% in 2017 is not labeled in the table.",
+  "Extrapolating beyond 2017 or before 1995."
+ ],
+ "notes": "The core required contrast is long-term share rising while recent-arrival share falls, with the 2017 gap as the clearest endpoint. Optional units add crossover and the 50% milestone to make the reversal explicit.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 40.8,
+  "usage": {
+   "prompt_tokens": 981,
+   "completion_tokens": 9969,
+   "total_tokens": 10950,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7774
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 725
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

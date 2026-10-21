@@ -1,0 +1,202 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_12",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the platform fee or commission rate that a developer pays to gain access to a massive user base.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The platform/commission share is 30% of the depicted split.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 30,
+     "note": "printed 30 percent share segment"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The platform fee/commission/share is 30%.",
+    "30% goes to the platform/share portion.",
+    "The share segment equals 30%.",
+    "A 30% commission rate is shown."
+   ],
+   "visual_evidence_rule": "A 30% slice/segment must be visibly labeled as the platform/commission/share portion.",
+   "temporal_anchor": "Not spoken; reveal/label the 30% during the 'relatively small price to pay' clause.",
+   "reviewer_question": "Should the 30% platform/commission share be required as an explicit labeled value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The remaining/developer-retained portion is 70% of the depicted split.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "remaining",
+     "x": "rest",
+     "field": "value",
+     "value": 70,
+     "note": "estimated 70 percent remaining segment"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The remaining/rest/developer portion is 70%.",
+    "70% remains outside the platform share.",
+    "The complement to the 30% share is 70%.",
+    "The other segment is 70%."
+   ],
+   "visual_evidence_rule": "The complementary 70% segment must be visible/labeled if the donut is shown as a complete composition.",
+   "temporal_anchor": "Not spoken; if included, show it during the same 'relatively small price to pay' clause as context.",
+   "reviewer_question": "Is the 70% remaining share required context or optional when the intent focuses on the fee?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The platform share is smaller than the remaining share and is less than half of the whole.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 30,
+     "note": "30 percent share"
+    },
+    {
+     "entity": "remaining",
+     "x": "rest",
+     "field": "value",
+     "value": 70,
+     "note": "70 percent remaining"
+    }
+   ],
+   "computation": "30% < 70%; 30% < 50% (50% = 100%/2)",
+   "accepted_routes": [
+    "30% is smaller than 70%.",
+    "The platform fee is less than half; the remaining share is larger.",
+    "The split is 30% versus 70%, so the fee is the smaller portion.",
+    "Less than half goes to the platform."
+   ],
+   "visual_evidence_rule": "The 30% segment must appear visibly smaller than the 70% segment, or a comparison label must state 30% < 70%/less than half.",
+   "temporal_anchor": "Sync to 'this may seem like a relatively small price to pay' — the 'small' claim should be backed by the 30% < 70% comparison.",
+   "reviewer_question": "Must the video explicitly convey that 30% is the smaller/less-than-half portion, or is showing the split enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 30% share and 70% remaining sum to a complete 100% composition.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 30,
+     "note": "30 percent share"
+    },
+    {
+     "entity": "remaining",
+     "x": "rest",
+     "field": "value",
+     "value": 70,
+     "note": "70 percent remaining"
+    }
+   ],
+   "computation": "30% + 70% = 100%",
+   "accepted_routes": [
+    "The two segments total 100%.",
+    "The composition is 30% plus 70% equals 100%.",
+    "Together they form the full whole/donut.",
+    "The split sums to 100%."
+   ],
+   "visual_evidence_rule": "If a donut/pie is used, the 30% and 70% segments must visibly fill the entire 100% circle.",
+   "temporal_anchor": "Not spoken; maintain the complete 100% composition during the price/fee visual.",
+   "reviewer_question": "Must the video show the split as a complete 100% composition, or can it show only the 30% platform slice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Source-type distinction: the 30% share is printed while the 70% remaining value is estimated.",
+  "The visual form is a donut/composition split rather than a time-series chart.",
+  "Qualitative framing that the platform offers access to a massive/large user base, without giving an unsupported count."
+ ],
+ "unsupported_to_avoid": [
+  "The user-count figure from the narration (not in the table).",
+  "Any absolute dollar amount for the fee, revenue, or developer payment.",
+  "Clash of Clans-specific revenue or payment claims.",
+  "Causal claim that paying the 30% fee causes access to the narration's user-count figure.",
+  "Inverting the split by calling 70% the platform fee or 30% the remaining/developer share.",
+  "Extrapolating platform revenue from the 30% share without a user/revenue base in the table."
+ ],
+ "notes": "The table only supports a 30/70 percent split; the narration's user-count figure is not in the table and should not be treated as G1 evidence. The main review trade-off is whether the 70% remaining share and full 100% composition are required context or optional when the intent focuses on the platform fee.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.91
+ },
+ "draft_cost": {
+  "sec": 34.7,
+  "usage": {
+   "prompt_tokens": 621,
+   "completion_tokens": 7889,
+   "total_tokens": 8510,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6427
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 365
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

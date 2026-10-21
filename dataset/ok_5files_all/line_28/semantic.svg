@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#111111">Pay gap between American CEOs and workers</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#cccccc" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#cccccc" stroke-width="3"/>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,544.8 178.9,544.8 277.1,544.8 336.1,549.4 434.3,540.2 473.6,535.6 571.8,531.0 670.0,517.2 709.3,485.0 768.2,416.0 807.5,324.0 827.1,255.0 866.4,163.0 886.1,232.0 905.7,278.0 945.0,255.0 1003.9,301.0 1043.2,347.0 1082.5,314.8 1121.8,324.0 1161.1,310.2 1220.0,301.0" fill="none" stroke="#466882" stroke-width="2" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="178.9" cy="544.8" r="6" fill="#466882" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="301.0" r="6" fill="#466882" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="178.9" y="508.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#999999"><tspan x="178.9" dy="0">15:1</tspan><tspan x="178.9" dy="18">1965</tspan></text>
+<text data-role="point-label" x="1220.0" y="265.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#999999"><tspan x="1220.0" dy="0">220:1</tspan><tspan x="1220.0" dy="18">2018</tspan></text>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1960</text>
+<text data-role="x-axis-label" x="277.1" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1970</text>
+<text data-role="x-axis-label" x="473.6" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1980</text>
+<text data-role="x-axis-label" x="670.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1990</text>
+<text data-role="x-axis-label" x="866.4" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2000</text>
+<text data-role="x-axis-label" x="1062.9" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2010</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2020</text>
+</g>
+</svg>

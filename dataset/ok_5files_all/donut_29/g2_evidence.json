@@ -1,0 +1,94 @@
+{
+ "clip_id": "donut_29",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:VEGAN POPULATION IN US (2008): 0.5% @ 0"
+   ],
+   "assertion": {
+    "segment": "VEGAN POPULATION IN US (2008): 0.5% @ 0",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 0.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Donut or central label/annotation shows 0.5% with vegan and U.S. population context."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Year 2008 must be visible as a label or title near the value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Denominator/entity label must indicate U.S. population or 'of U.S. population'; a donut/share visual is appropriate."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:VEGAN POPULATION IN US (2008): 0.5% @ 0"
+   ],
+   "assertion": {
+    "mark": "VEGAN POPULATION IN US (2008): 0.5% @ 0",
+    "field": "value",
+    "expected": 0.005,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Only if using decimal notation, display 0.0050 or 0.005; percentage route may satisfy without it."
+  }
+ ]
+}

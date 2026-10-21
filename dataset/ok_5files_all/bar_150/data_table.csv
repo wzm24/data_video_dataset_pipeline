@@ -1,0 +1,17 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+bar_150,Medical scientists,medical-scientists,640.0,,,0.2188,relative,#7e389f,relative_only,A great deal
+bar_150,40,40,937.5,,,0.2461,relative,#b598c9,relative_only,A fair amount
+bar_150,Scientists,scientists,636.5,,,0.2133,relative,#7e389f,relative_only,A great deal
+bar_150,39,39,930.5,,,0.2461,relative,#b598c9,relative_only,A fair amount
+bar_150,The military,the-military,636.5,,,0.2133,relative,#555555,relative_only,A great deal
+bar_150,39,39,927.0,,,0.2406,relative,#a9a9a9,relative_only,A fair amount
+bar_150,K-12 public school principals,k-12-public-school-principals,573.5,,,0.1148,relative,#555555,relative_only,A great deal
+bar_150,21,21,836.0,,,0.2953,relative,#a9a9a9,relative_only,A fair amount
+bar_150,Religious leaders,religious-leaders,552.5,,,0.0820,relative,#555555,relative_only,A great deal
+bar_150,15,15,759.0,,,0.2406,relative,#a9a9a9,relative_only,A fair amount
+bar_150,Business leaders,business-leaders,517.5,,,0.0273,relative,#555555,relative_only,A great deal
+bar_150,46,46,678.5,,,0.2242,relative,#a9a9a9,relative_only,A fair amount
+bar_150,Journalists,journalists,531.5,,,0.0492,relative,#555555,relative_only,A great deal
+bar_150,9,9,689.0,,,0.1969,relative,#a9a9a9,relative_only,A fair amount
+bar_150,Elected officials,elected-officials,514.0,,,0.0219,relative,#555555,relative_only,A great deal
+bar_150,37,37,643.5,,,0.1805,relative,#a9a9a9,relative_only,A fair amount

@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_44",
+ "intent_en": "To illustrate how central banks have significantly lowered interest rates to stimulate the economy, particularly highlighting the sharp decline following the 2008 financial crisis and subsequent further reductions.",
+ "previous_intent": "To explain how central banks have utilized interest rate cuts to stimulate economic growth, highlighting the sharp decline after the 2008 financial crisis and the continued push toward lower rates.",
+ "narration_support": "lowering interest rates is a big way central banks try to get the economy moving. It's why they dropped so sharply in 2008. So incredibly they've managed to drop even further.",
+ "chart_support": "Line chart showing interest rates declining over time from 1991 to 2016, with a sharp drop annotated at the 2008 Financial crisis.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly links rate lowering to economic stimulation and mentions the 2008 drop. The chart visualizes this with a downward trend and a specific annotation for 2008, supporting the narrative of aggressive rate cuts.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

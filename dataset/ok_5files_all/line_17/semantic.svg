@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#000000"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Who chooses Private Schooling in Britain and Why? 2017</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">0</text>
+<line data-role="tick" x1="112" y1="451.6" x2="120" y2="451.6" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="457.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">.2</text>
+<line data-role="tick" x1="112" y1="303.2" x2="120" y2="303.2" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="309.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">.4</text>
+<line data-role="tick" x1="112" y1="154.8" x2="120" y2="154.8" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="160.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">.6</text>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,585.2 145.6,581.5 171.2,585.2 196.7,577.7 222.3,585.2 247.9,581.5 273.5,585.2 299.1,581.5 324.7,585.2 350.2,577.7 375.8,585.2 401.4,581.5 427.0,585.2 452.6,577.7 478.1,585.2 503.7,581.5 529.3,585.2 554.9,577.7 580.5,585.2 606.0,581.5 631.6,577.7 657.2,585.2 682.8,577.7 708.4,581.5 734.0,585.2 759.5,577.7 785.1,581.5 810.7,585.2 836.3,577.7 861.9,581.5 887.4,577.7 913.0,574.0 938.6,577.7 964.2,570.3 989.8,574.0 1015.3,570.3 1040.9,566.6 1066.5,570.3 1092.1,562.9 1117.7,525.8 1130.5,540.6 1143.3,555.5" fill="none" stroke="#E85D46" stroke-width="3" data-animation-property="points"/>
+</g>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="1143.3,555.5 1156.0,511.0 1168.8,466.5 1181.6,436.8 1194.4,340.3 1207.2,191.9 1220.0,140.0" fill="none" stroke="#FCE100" stroke-width="3" data-animation-property="points"/>
+<text data-role="point-label" x="1143.3" y="537.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Richest 10%</text>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">10</text>
+<text data-role="x-axis-label" x="247.9" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">20</text>
+<text data-role="x-axis-label" x="375.8" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">30</text>
+<text data-role="x-axis-label" x="503.7" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">40</text>
+<text data-role="x-axis-label" x="631.6" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">50</text>
+<text data-role="x-axis-label" x="759.5" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">60</text>
+<text data-role="x-axis-label" x="887.4" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">70</text>
+<text data-role="x-axis-label" x="1015.3" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">80</text>
+<text data-role="x-axis-label" x="1143.3" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">90</text>
+<text data-role="x-axis-name" x="640.0" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Income percentiles</text>
+<text data-role="y-axis-name" transform="translate(34, 370.0) rotate(-90)" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Participation rate</text>
+</g>
+</svg>

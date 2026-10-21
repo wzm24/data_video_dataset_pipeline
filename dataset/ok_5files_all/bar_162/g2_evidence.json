@@ -1,0 +1,135 @@
+{
+ "clip_id": "bar_162",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2009 @ 2009"
+   ],
+   "assertion": {
+    "mark": "2009 @ 2009",
+    "field": "value",
+    "expected": 14.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2009 value 14% must be visible or labeled."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2013 @ 2013"
+   ],
+   "assertion": {
+    "mark": "2013 @ 2013",
+    "field": "value",
+    "expected": 31.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2013 value 31% must be visible or labeled."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:2009 @ 2009",
+    "mark:2013 @ 2013"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "2009 @ 2009",
+      "value": 14.0
+     },
+     {
+      "mark": "2013 @ 2013",
+      "value": 31.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The visual encoding must make clear that the 2013 value exceeds the 2009 value."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2009 @ 2009",
+    "mark:2013 @ 2013"
+   ],
+   "assertion": {
+    "low": "2009 @ 2009",
+    "low_value": 14.0,
+    "high": "2013 @ 2013",
+    "high_value": 31.0,
+    "delta": 17.0,
+    "ratio": 2.2143,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow the 31% and 14% values to be compared so that a 17-point difference is derivable or labeled."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2009 @ 2009",
+    "mark:2013 @ 2013"
+   ],
+   "assertion": {
+    "low": "2009 @ 2009",
+    "low_value": 14.0,
+    "high": "2013 @ 2013",
+    "high_value": 31.0,
+    "delta": 17.0,
+    "ratio": 2.2143,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both 14% and 31% so the ratio or more-than-doubling is derivable or explicitly annotated."
+  }
+ ]
+}

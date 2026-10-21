@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_38",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the high attrition rate of family businesses across generations and introduce a specific chain that has successfully maintained its legacy.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The blue-labeled share accounts for 38% of the total donut.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 38,
+     "note": "table cell: blue-share value = 38 percent"
+    },
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "relative_value",
+     "value": 0.38,
+     "note": "table cell: blue-share relative_value = 0.38"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Blue segment is 38%.",
+    "Blue share is about 38 percent.",
+    "The blue slice represents roughly 38%.",
+    "Blue accounts for approximately 38%."
+   ],
+   "visual_evidence_rule": "The blue slice/segment must be labeled or visually annotated with 38% (or 0.38 share).",
+   "temporal_anchor": "the narration clause introducing the survival/attrition share represented by the blue segment",
+   "reviewer_question": "Is the blue 38% value required as its own takeaway, or is it only supporting context for the larger attrition story?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The grey-labeled share accounts for 62% of the total donut.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "grey share",
+     "x": "0",
+     "field": "value",
+     "value": 62,
+     "note": "table cell: grey-share value = 62 percent"
+    },
+    {
+     "entity": "grey share",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.62,
+     "note": "table cell: grey-share relative_value = 0.62"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Grey segment is 62%.",
+    "Grey share is about 62 percent.",
+    "The grey slice represents roughly 62%.",
+    "Grey accounts for approximately 62%."
+   ],
+   "visual_evidence_rule": "The grey slice/segment must be labeled or visually annotated with 62% (or 0.62 share).",
+   "temporal_anchor": "the narration clause describing the remaining/non-surviving share represented by the grey segment",
+   "reviewer_question": "Must the 62% grey share be explicitly stated, or is it enough that it is the complement of 38%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The grey share is 24 percentage points larger than the blue share.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "grey share",
+     "x": "0",
+     "field": "value",
+     "value": 62,
+     "note": "table cell: grey-share value = 62 percent"
+    },
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 38,
+     "note": "table cell: blue-share value = 38 percent"
+    }
+   ],
+   "computation": "62 - 38 = 24 percentage points",
+   "accepted_routes": [
+    "Grey is 24 percentage points higher than blue.",
+    "The gap between the grey and blue shares is 24 pp.",
+    "Grey exceeds blue by about 24 percentage points.",
+    "The difference between the two shares is roughly 24 points."
+   ],
+   "visual_evidence_rule": "Both 62% and 38% labels must be visible, or an annotation must show the difference/size contrast.",
+   "temporal_anchor": "the narration moment comparing the two shares or highlighting the size of attrition",
+   "reviewer_question": "Should the video explicitly quantify the 24-point gap, or is the 62-versus-38 contrast sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Blue is the minority share and grey is the majority share: blue is below half while grey is above half.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "grey share",
+     "x": "0",
+     "field": "value",
+     "value": 62,
+     "note": "table cell: grey-share value = 62 percent"
+    },
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 38,
+     "note": "table cell: blue-share value = 38 percent"
+    }
+   ],
+   "computation": "(62 + 38) / 2 = 50; blue 38 < 50; grey 62 > 50",
+   "accepted_routes": [
+    "Grey is the majority slice; blue is the minority slice.",
+    "More than half is grey and less than half is blue.",
+    "Blue is below the 50% half line; grey is above it.",
+    "The donut is split into a larger grey majority (62%) and smaller blue minority (38%)."
+   ],
+   "visual_evidence_rule": "A half-line or clear size distinction must show grey above 50% and blue below 50%.",
+   "temporal_anchor": "the narration clause about high attrition/survival proportions",
+   "reviewer_question": "Must the video explicitly mark the majority/minority or 50% threshold, or are the two numeric labels sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The two shares are complementary and sum to the whole donut: 62% + 38% = 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "grey share",
+     "x": "0",
+     "field": "value",
+     "value": 62,
+     "note": "table cell: grey-share value = 62 percent"
+    },
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 38,
+     "note": "table cell: blue-share value = 38 percent"
+    }
+   ],
+   "computation": "62 + 38 = 100",
+   "accepted_routes": [
+    "Grey and blue together make 100% of the donut.",
+    "The donut is fully partitioned into 62% and 38%.",
+    "The two shares sum to the whole; no unlabeled remainder is shown.",
+    "The chart contains only the 62% grey and 38% blue segments."
+   ],
+   "visual_evidence_rule": "The donut must show only two segments filling the full circle, with no unexplained gap or extra category.",
+   "temporal_anchor": "the donut setup or closing summary clause for the split",
+   "reviewer_question": "Should the video explicitly state that the two segments sum to 100%, or is that implicit in the donut?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The blue share can be described as roughly one-third only if the narration's 'about a third' is being mapped to the 38% blue segment.",
+  "The clip may introduce In-N-Out as a specific legacy chain that stayed true to its beginnings, but this has no numeric basis in the table.",
+  "The grey-to-blue ratio is approximately 1.63:1 (62 divided by 38).",
+  "The grey share is more than one and a half times the blue share (62 > 1.5 x 38 = 57)."
+ ],
+ "unsupported_to_avoid": [
+  "Any claim that 50% of family businesses do not last until the third generation; 50% is not in the table.",
+  "Any numeric claim that only one-third (33.3%) survive the second generation; the table gives 38% for the blue share.",
+  "Any combined or third-generation survival rate computed by combining the table with the narration's 50% figure.",
+  "Causal explanations for why family businesses fail or why In-N-Out succeeded.",
+  "Extrapolating the 62%/38% split to all family businesses, all generations, or all chains.",
+  "In-N-Out specific dates, histories, or reasons for success not present in the table."
+ ],
+ "notes": "Only the two donut shares (38%, 62%) are numerically supported; generation-specific percentages from the narration must be excluded from numeric G1 units. The main trade-off is whether to treat the 24-point gap and majority/minority threshold as required or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 49.8,
+  "usage": {
+   "prompt_tokens": 651,
+   "completion_tokens": 10991,
+   "total_tokens": 11642,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8984
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 395
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

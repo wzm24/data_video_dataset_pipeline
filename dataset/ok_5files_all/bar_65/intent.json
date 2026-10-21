@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_65",
+ "intent_en": "To illustrate that CEO compensation at American companies like General Motors is uniquely high compared to international counterparts and to link this disparity to profit distribution.",
+ "previous_intent": "To illustrate the uniquely high compensation of American CEOs compared to their international counterparts and suggest that profit sharing is a contributing factor to this gap.",
+ "narration_support": "You can see what a uniquely American phenomenon this is when you compare the compensation for General Motors CEO with her counterparts at Volkswagen in Germany and Toyota in Japan. And you can see part of the reason for this gap when you look at how much of their profits these people have earned.",
+ "chart_support": "Bar chart displaying CEO compensation for General Motors in 2018.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": true,
+ "confidence": 0.85,
+ "evidence_note": "The narration describes a comparison between US, German, and Japanese CEO compensation and links pay to profits. The provided chart keyframe only displays the compensation value for General Motors (supporting the topic of US CEO pay), but the full comparison and profit data mentioned in the narration are not visible in this single frame.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": true
+ },
+ "needs_video_escalation": false
+}

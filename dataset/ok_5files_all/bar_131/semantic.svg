@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#111111"/>
+<rect x="220.0" y="260.0" width="346.2" height="80" fill="#2b7de0"/>
+<text x="393.1" y="308.0" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#fff">7,100</text>
+<rect x="566.2" y="260.0" width="380.3" height="80" fill="#d92525"/>
+<text x="756.4" y="308.0" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#fff">7,800</text>
+<rect x="946.5" y="260.0" width="14.6" height="80" fill="#0055a4"/>
+<rect x="961.1" y="260.0" width="12.7" height="80" fill="#ee1c25"/>
+<rect x="973.8" y="260.0" width="10.5" height="80" fill="#012169"/>
+<rect x="984.3" y="260.0" width="5.9" height="80" fill="#01411c"/>
+<rect x="990.2" y="260.0" width="5.6" height="80" fill="#ff9933"/>
+<rect x="995.8" y="260.0" width="3.9" height="80" fill="#0038b8"/>
+<rect x="999.7" y="260.0" width="0.3" height="80" fill="#cd0000"/>
+<text x="220.0" y="430" font-family="Arial" font-size="20" fill="#eee">2015</text>
+<rect x="1040" y="90" width="26" height="16" fill="#0055a4"/>
+<text x="1074" y="103" font-family="Arial" font-size="15" fill="#eee">France 300</text>
+<rect x="1040" y="124" width="26" height="16" fill="#ee1c25"/>
+<text x="1074" y="137" font-family="Arial" font-size="15" fill="#eee">China 260</text>
+<rect x="1040" y="158" width="26" height="16" fill="#012169"/>
+<text x="1074" y="171" font-family="Arial" font-size="15" fill="#eee">United Kingdom 215</text>
+<rect x="1040" y="192" width="26" height="16" fill="#01411c"/>
+<text x="1074" y="205" font-family="Arial" font-size="15" fill="#eee">Pakistan 120</text>
+<rect x="1040" y="226" width="26" height="16" fill="#ff9933"/>
+<text x="1074" y="239" font-family="Arial" font-size="15" fill="#eee">India 115</text>
+<rect x="1040" y="260" width="26" height="16" fill="#0038b8"/>
+<text x="1074" y="273" font-family="Arial" font-size="15" fill="#eee">Israel 80</text>
+<rect x="1040" y="294" width="26" height="16" fill="#cd0000"/>
+<text x="1074" y="307" font-family="Arial" font-size="15" fill="#eee">North Korea 7</text>
+</svg>

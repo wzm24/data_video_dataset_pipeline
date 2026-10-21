@@ -1,0 +1,139 @@
+{
+ "clip_id": "bar_14",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Sub-S. Africa",
+    "extreme": "max",
+    "expected": 4.7,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Sub-Saharan Africa's encoded value must be visibly the largest among the four regions."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Sub-S. Africa",
+    "mark:East Asia"
+   ],
+   "assertion": {
+    "greater": "Sub-S. Africa",
+    "lesser": "East Asia",
+    "expected_ratio": 2.6111,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Sub-Saharan Africa's encoded value must be visibly more than twice as large as each of the other three values."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Sub-S. Africa",
+    "mark:East Asia"
+   ],
+   "assertion": {
+    "greater": "Sub-S. Africa",
+    "lesser": "East Asia",
+    "expected_ratio": 2.6111,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gaps between Sub-Saharan Africa and each other region must be visible or labeled."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:East Asia",
+    "mark:North America",
+    "mark:European Union"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "East Asia",
+      "value": 1.8
+     },
+     {
+      "mark": "North America",
+      "value": 1.7
+     },
+     {
+      "mark": "European Union",
+      "value": 1.6
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The three non-Sub-Saharan values must be visibly ordered East Asia highest, North America next, European Union lowest."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:East Asia",
+    "mark:North America"
+   ],
+   "assertion": {
+    "greater": "East Asia",
+    "lesser": "North America",
+    "expected_ratio": 1.0588,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The three non-Sub-Saharan encoded values must appear close together compared with the much larger Sub-Saharan Africa value."
+  }
+ ]
+}

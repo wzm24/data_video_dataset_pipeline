@@ -1,0 +1,131 @@
+{
+ "clip_id": "pie_20",
+ "family": "pie",
+ "chart_form": "pie/multi_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:< minimum wage @ 0",
+    "mark:at or above minimum wage @ 1"
+   ],
+   "assertion": {
+    "series": "< minimum wage",
+    "values": [
+     54.2,
+     45.8
+    ],
+    "threshold_between": [
+     45.8,
+     54.2
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The labels/values for '< minimum wage' (54.2%) and 'at or above minimum wage' (45.8%) are visible, and the below-minimum category is visibly larger."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Other income @ 0"
+   ],
+   "assertion": {
+    "segment": "Other income @ 0",
+    "expected_share": 0.302,
+    "total_of": "%",
+    "total": 200.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The value 60.4% for 'Other income' is visible and identifiable as the larger income-source category."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:No other income @ 1"
+   ],
+   "assertion": {
+    "segment": "No other income @ 1",
+    "expected_share": 0.198,
+    "total_of": "%",
+    "total": 200.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The value 39.6% for 'No other income' is visible as the smaller income-source category."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:< minimum wage @ 0",
+    "mark:at or above minimum wage @ 1"
+   ],
+   "assertion": {
+    "greater": "< minimum wage @ 0",
+    "lesser": "at or above minimum wage @ 1",
+    "expected_ratio": 1.1834,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 54.2% and 45.8% are visible so the 8.4-point difference can be derived."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Other income @ 0",
+    "mark:No other income @ 1"
+   ],
+   "assertion": {
+    "greater": "Other income @ 0",
+    "lesser": "No other income @ 1",
+    "expected_ratio": 1.5253,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 60.4% and 39.6% are visible so the 20.8-point difference can be derived."
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_42",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that UK government subsidies for fossil fuels are substantial and exceed those for renewable energy sources in 2016.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 2016, UK government fossil fuel subsidies are 10.5, the larger of the two shown subsidy totals.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "fossil fuels",
+     "x": "450.0",
+     "field": "value",
+     "value": 10.5,
+     "note": "Table value for fossil fuels; no unit specified."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Fossil fuel subsidies are 10.5 in 2016.",
+    "Fossil fuels receive 10.5 in subsidies.",
+    "The fossil fuel bar is labeled 10.5."
+   ],
+   "visual_evidence_rule": "A bar/point labeled 'fossil fuels' must be visible with its value 10.5 (or a clearly equivalent label).",
+   "temporal_anchor": "The 'For example...' clause, anchored to the chart's 2016 frame.",
+   "reviewer_question": "Must the video state the fossil fuel value 10.5, or is showing that it is the largest bar sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In 2016, UK government renewable energy subsidies are 7.3.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "renewables",
+     "x": "830.0",
+     "field": "value",
+     "value": 7.3,
+     "note": "Table value for renewables; no unit specified."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Renewable energy subsidies are 7.3 in 2016.",
+    "Renewables receive 7.3 in subsidies.",
+    "The renewables bar is labeled 7.3."
+   ],
+   "visual_evidence_rule": "A bar/point labeled 'renewables' must be visible with its value 7.3 (or a clearly equivalent label).",
+   "temporal_anchor": "The comparison clause within the 2016 frame.",
+   "reviewer_question": "Must the video state the renewable value 7.3 to support the comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Fossil fuel subsidies exceed renewable energy subsidies in 2016.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "fossil fuels",
+     "x": "450.0",
+     "field": "value",
+     "value": 10.5,
+     "note": "Fossil fuel value."
+    },
+    {
+     "entity": "renewables",
+     "x": "830.0",
+     "field": "value",
+     "value": 7.3,
+     "note": "Renewable value."
+    }
+   ],
+   "computation": "10.500 > 7.300",
+   "accepted_routes": [
+    "Fossil fuel subsidies are higher than renewable subsidies.",
+    "Fossil fuels outrank renewables for subsidies.",
+    "The fossil fuel bar is taller than the renewables bar."
+   ],
+   "visual_evidence_rule": "Fossil fuels and renewables must be shown in the same chart/scale, with fossil fuels visibly higher.",
+   "temporal_anchor": "The core comparison implied by the example clause in 2016.",
+   "reviewer_question": "Must the ranking/exceedance be explicitly stated, or is a taller fossil fuel bar enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The fossil fuel subsidy total is 3.2 greater than the renewable subsidy total.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "fossil fuels",
+     "x": "450.0",
+     "field": "value",
+     "value": 10.5,
+     "note": "Fossil fuel value."
+    },
+    {
+     "entity": "renewables",
+     "x": "830.0",
+     "field": "value",
+     "value": 7.3,
+     "note": "Renewable value."
+    }
+   ],
+   "computation": "10.500 - 7.300 = 3.200",
+   "accepted_routes": [
+    "Fossil fuels receive 3.2 more than renewables.",
+    "The subsidy gap is 3.2.",
+    "Fossil fuel subsidies are 3.2 units higher."
+   ],
+   "visual_evidence_rule": "If quantified, the chart must show/annotate the two values or a gap/difference of 3.2.",
+   "temporal_anchor": "The exceedance clause; use only if the clip adds a gap annotation.",
+   "reviewer_question": "Should the video quantify the absolute gap, or is the ordering sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Fossil fuel subsidies are about 44% higher than renewable subsidies, or about 1.44 times as large.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "fossil fuels",
+     "x": "450.0",
+     "field": "value",
+     "value": 10.5,
+     "note": "Fossil fuel value."
+    },
+    {
+     "entity": "renewables",
+     "x": "830.0",
+     "field": "value",
+     "value": 7.3,
+     "note": "Renewable value."
+    }
+   ],
+   "computation": "(10.500 - 7.300) / 7.300 = 0.4384 = 43.8%; 10.500 / 7.300 = 1.438",
+   "accepted_routes": [
+    "Fossil fuel subsidies are roughly 44% higher than renewables.",
+    "Fossil fuel subsidies are about 1.44 times renewable subsidies.",
+    "There is an approximately 44% gap relative to renewables."
+   ],
+   "visual_evidence_rule": "If shown, the chart must make the two values available so the ratio/percentage can be derived or annotate the ~44% / 1.44× comparison.",
+   "temporal_anchor": "The exceedance/comparison clause; optional added rate statement.",
+   "reviewer_question": "Is the percentage/ratio comparison required, or is it optional enrichment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Optional share of combined two-category total: fossil fuels = 10.5 / (10.5 + 7.3) ≈ 59%, renewables = 7.3 / (10.5 + 7.3) ≈ 41%.",
+  "Optional relative-value ordering from the table: fossil fuels 0.3208 vs renewables 0.2231, if the chart displays relative_value."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as fossil fuel subsidies caused increased emissions or climate change.",
+  "Trends over multiple years, because the table and intent only cover 2016.",
+  "Denominators or shares not derivable from the two table rows.",
+  "Specific monetary units such as billion pounds, because the table unit is blank.",
+  "Claims that renewables exceed or equal fossil fuel subsidies.",
+  "Claims about all UK government subsidies outside these two categories."
+ ],
+ "notes": "Values are unitless in the table; use 'subsidy units' or chart labels. The difference and ratio are arithmetic combinations of the two printed values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 29.7,
+  "usage": {
+   "prompt_tokens": 703,
+   "completion_tokens": 6976,
+   "total_tokens": 7679,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5571
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 319
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

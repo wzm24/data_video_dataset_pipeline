@@ -1,0 +1,17 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+bar_71,2015,2015-Online Store,158.5,,,0.65,,#333333,svg_geometry_relative_only,Online Store
+bar_71,2015,2015-3rd Party Retail,158.5,,,0.2,,#6f9fd8,svg_geometry_relative_only,3rd Party Retail
+bar_71,2015,2015-Subscriptions,158.5,,,0.05,,#e8b84b,svg_geometry_relative_only,Subscriptions
+bar_71,2015,2015-AWS,158.5,,,0.1,,#d64541,svg_geometry_relative_only,AWS
+bar_71,2016,2016-Online Store,433.5,,,0.57,,#333333,svg_geometry_relative_only,Online Store
+bar_71,2016,2016-3rd Party Retail,433.5,,,0.2998,,#6f9fd8,svg_geometry_relative_only,3rd Party Retail
+bar_71,2016,2016-Subscriptions,433.5,,,0.03,,#e8b84b,svg_geometry_relative_only,Subscriptions
+bar_71,2016,2016-AWS,433.5,,,0.1002,,#d64541,svg_geometry_relative_only,AWS
+bar_71,2017,2017-Online Store,708.5,,,0.6,,#333333,svg_geometry_relative_only,Online Store
+bar_71,2017,2017-3rd Party Retail,708.5,,,0.2501,,#6f9fd8,svg_geometry_relative_only,3rd Party Retail
+bar_71,2017,2017-Subscriptions,708.5,,,0.0501,,#e8b84b,svg_geometry_relative_only,Subscriptions
+bar_71,2017,2017-AWS,708.5,,,0.0999,,#d64541,svg_geometry_relative_only,AWS
+bar_71,2018,2018-Online Store,983.5,,,0.65,,#333333,svg_geometry_relative_only,Online Store
+bar_71,2018,2018-3rd Party Retail,983.5,,,0.2,,#6f9fd8,svg_geometry_relative_only,3rd Party Retail
+bar_71,2018,2018-Subscriptions,983.5,,,0.05,,#e8b84b,svg_geometry_relative_only,Subscriptions
+bar_71,2018,2018-AWS,983.5,,,0.1,,#d64541,svg_geometry_relative_only,AWS

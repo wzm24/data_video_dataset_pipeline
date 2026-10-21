@@ -1,0 +1,313 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_51",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that payroll taxes are capped, resulting in lower- and middle-income earners paying a larger portion of their income in taxes than the wealthiest individuals.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The poorest income group pays 10.6 (table value) toward payroll taxes, while the richest pays only 0.4, so the poorest rate is 10.2 points higher and about 26.5 times the richest rate.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "x_px=198.7",
+     "field": "value",
+     "value": 10.6,
+     "note": "Table value for the poorest group."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "x_px=1171.4",
+     "field": "value",
+     "value": 0.4,
+     "note": "Table value for the richest group."
+    }
+   ],
+   "computation": "difference = 10.6 - 0.4 = 10.2; ratio = 10.6 / 0.4 = 26.5",
+   "accepted_routes": [
+    "The poorest group pays 10.6 versus 0.4 for the richest, a 10.2-point gap.",
+    "The richest pay 0.4, while the poorest pay 10.6, about 26.5 times more.",
+    "Poorest payroll tax portion is 10.6; richest is only 0.4."
+   ],
+   "visual_evidence_rule": "Bars or labels for POOREST at 10.6 and RICHEST at 0.4 must be visible, with an optional gap/ratio annotation showing 10.2 points or 26.5x.",
+   "temporal_anchor": "narration clause contrasting the rich with poor people paying way more",
+   "reviewer_question": "Must the clip explicitly state the poorest-vs-richest gap as a difference or ratio, or is either route sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Middle-income groups also pay around 10, ranging from 10.4 for Groups 4 through 8 to 10.9 for Groups 2 and 3, far above the richest group's 0.4.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Group 2",
+     "x": "x_px=295.9",
+     "field": "value",
+     "value": 10.9,
+     "note": "Highest middle-group value."
+    },
+    {
+     "entity": "Group 3",
+     "x": "x_px=393.1",
+     "field": "value",
+     "value": 10.9,
+     "note": "Highest middle-group value."
+    },
+    {
+     "entity": "Group 4",
+     "x": "x_px=490.4",
+     "field": "value",
+     "value": 10.4,
+     "note": "Representative 10.4 middle-group value."
+    },
+    {
+     "entity": "Group 5",
+     "x": "x_px=587.8",
+     "field": "value",
+     "value": 10.4,
+     "note": "Same 10.4 value as Groups 4, 6, 7, and 8."
+    },
+    {
+     "entity": "Group 6",
+     "x": "x_px=684.9",
+     "field": "value",
+     "value": 10.4,
+     "note": "Same 10.4 value as Groups 4, 5, 7, and 8."
+    },
+    {
+     "entity": "Group 7",
+     "x": "x_px=782.2",
+     "field": "value",
+     "value": 10.4,
+     "note": "Same 10.4 value as Groups 4, 5, 6, and 8."
+    },
+    {
+     "entity": "Group 8",
+     "x": "x_px=879.5",
+     "field": "value",
+     "value": 10.4,
+     "note": "Same 10.4 value as Groups 4 through 7."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "x_px=1171.4",
+     "field": "value",
+     "value": 0.4,
+     "note": "Richest comparison value."
+    }
+   ],
+   "computation": "middle range = 10.9 - 10.4 = 0.5; middle values remain far above RICHEST 0.4",
+   "accepted_routes": [
+    "Middle-income groups pay roughly 10 to 11, not the richest group's 0.4.",
+    "Groups 2 through 8 range from 10.4 to 10.9, far above the richest 0.4.",
+    "Groups 2 and 3 are at 10.9, Groups 4 through 8 at 10.4, while the richest is 0.4."
+   ],
+   "visual_evidence_rule": "Middle bars Group 2 through Group 8 must be visibly clustered near 10 to 11, with the RICHEST bar clearly at 0.4.",
+   "temporal_anchor": "narration clause saying poor people in the middle class pay way more",
+   "reviewer_question": "Must the video explicitly cover middle-income groups, or is the poorest-vs-richest contrast enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Group 2 and Group 3 have the highest payroll tax values at 10.9, and the richest has the lowest at 0.4.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Group 2",
+     "x": "x_px=295.9",
+     "field": "value",
+     "value": 10.9,
+     "note": "Tied maximum value."
+    },
+    {
+     "entity": "Group 3",
+     "x": "x_px=393.1",
+     "field": "value",
+     "value": 10.9,
+     "note": "Tied maximum value."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "x_px=1171.4",
+     "field": "value",
+     "value": 0.4,
+     "note": "Minimum value."
+    }
+   ],
+   "computation": "max = 10.9; min = 0.4; range = 10.9 - 0.4 = 10.5",
+   "accepted_routes": [
+    "The peak value is 10.9 for Groups 2 and 3; the minimum is 0.4 for the richest.",
+    "Highest: Group 2 and Group 3 at 10.9; lowest: RICHEST at 0.4.",
+    "The full range runs from 0.4 to 10.9."
+   ],
+   "visual_evidence_rule": "The highest bars for Group 2 and Group 3 and the lowest bar for RICHEST should be identifiable.",
+   "temporal_anchor": "any narration clause giving an overview of highest and lowest groups",
+   "reviewer_question": "Is naming the highest and lowest groups required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After Group 9's 9.8, the top two groups collapse to 1.0 for Group 10 and 0.4 for the richest, an 8.8-point drop between Group 9 and Group 10.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Group 9",
+     "x": "x_px=976.9",
+     "field": "value",
+     "value": 9.8,
+     "note": "Last high-value group before the top-end drop."
+    },
+    {
+     "entity": "Group 10",
+     "x": "x_px=1074.1",
+     "field": "value",
+     "value": 1.0,
+     "note": "First sharply low top group."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "x_px=1171.4",
+     "field": "value",
+     "value": 0.4,
+     "note": "Lowest top group."
+    }
+   ],
+   "computation": "Group 9 to Group 10 drop = 9.8 - 1.0 = 8.8; Group 9 to RICHEST drop = 9.8 - 0.4 = 9.4",
+   "accepted_routes": [
+    "The value falls sharply after Group 9: 9.8 to 1.0 to 0.4.",
+    "Top two groups drop to 1.0 and 0.4, after 9.8 for Group 9.",
+    "There is an 8.8-point drop from Group 9 to Group 10."
+   ],
+   "visual_evidence_rule": "Bars for Group 9, Group 10, and RICHEST must be visible in order, showing the steep top-end decline.",
+   "temporal_anchor": "narration clause saying It's capped or emphasizing the top-end drop",
+   "reviewer_question": "Must the clip show the steep top-end drop, or is the rich-vs-poor contrast sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Group 10 and RICHEST are the only groups below 2, at 1.0 and 0.4; all other groups, POOREST through Group 9, are at least 9.8.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Group 10",
+     "x": "x_px=1074.1",
+     "field": "value",
+     "value": 1.0,
+     "note": "Top group below 2."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "x_px=1171.4",
+     "field": "value",
+     "value": 0.4,
+     "note": "Top group below 2."
+    },
+    {
+     "entity": "Group 9",
+     "x": "x_px=976.9",
+     "field": "value",
+     "value": 9.8,
+     "note": "Minimum among all non-top-two groups."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Only the top two groups fall below 2: Group 10 at 1.0 and RICHEST at 0.4.",
+    "The sub-2 club is just Group 10 and the richest; everyone else is at 9.8 or higher.",
+    "Rates are 9.8+ for all groups except Group 10 at 1.0 and RICHEST at 0.4."
+   ],
+   "visual_evidence_rule": "A 2 threshold line or clear visual separation should show only Group 10 and RICHEST below it, with all other groups above.",
+   "temporal_anchor": "narration clause contrasting the capped rich with everyone else",
+   "reviewer_question": "Must the video explicitly mark the 2 threshold or say only the top two groups are below it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The narration's framing that payroll taxes are capped.",
+  "Showing exact labels for every middle group, though representative middle-group labels may be enough.",
+  "Using the 26.5x ratio as an alternative to the 10.2-point poorest-vs-richest gap."
+ ],
+ "unsupported_to_avoid": [
+  "Saying the cap causes the exact 0.4 or 1.0 values; the table only shows the rates, not the policy mechanism.",
+  "Claiming the richest pay the smallest dollar amount of payroll tax; the table shows a portion/rate, not dollars.",
+  "Claiming all middle-income groups pay exactly 10.9.",
+  "Treating relative_value like 0.3533 or 0.0133 as the income share; those are value/30 normalized bar lengths.",
+  "Extrapolating to income groups, years, or populations outside POOREST, Group 2 through Group 10, and RICHEST."
+ ],
+ "notes": "Core units emphasize the rich-vs-lower/middle contrast and the sharp top-end drop; the cap wording is context from narration, while the numeric evidence is the 1.0 and 0.4 top-group values. The reviewer should decide whether middle-group coverage and the 2-threshold are required or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 44.4,
+  "usage": {
+   "prompt_tokens": 1110,
+   "completion_tokens": 10549,
+   "total_tokens": 11659,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7806
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 726
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

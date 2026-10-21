@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#36393f"/>
+<g id="chart-plot">
+<rect x="150.3" y="267.5" width="102.7" height="352.5" fill="#dce0e3"/>
+<rect x="150.3" y="150.0" width="102.7" height="117.5" fill="#4a5347"/>
+<text x="201.7" y="650" text-anchor="end" transform="rotate(-30 201.7 650)" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">Less than $23,000</text>
+<rect x="333.7" y="314.5" width="102.7" height="305.5" fill="#dce0e3"/>
+<rect x="333.7" y="150.0" width="102.7" height="164.5" fill="#4a5347"/>
+<text x="385.0" y="650" text-anchor="end" transform="rotate(-30 385.0 650)" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">$23,000 to $42,000</text>
+<rect x="517.0" y="385.0" width="102.7" height="235.0" fill="#dce0e3"/>
+<rect x="517.0" y="150.0" width="102.7" height="235.0" fill="#4a5347"/>
+<text x="568.3" y="650" text-anchor="end" transform="rotate(-30 568.3 650)" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">$42,000 to $68,000</text>
+<rect x="700.3" y="455.5" width="102.7" height="164.5" fill="#dce0e3"/>
+<rect x="700.3" y="150.0" width="102.7" height="305.5" fill="#4a5347"/>
+<text x="751.7" y="650" text-anchor="end" transform="rotate(-30 751.7 650)" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">$68,000 to $111,000</text>
+<rect x="883.7" y="573.0" width="102.7" height="47.0" fill="#dce0e3"/>
+<rect x="883.7" y="314.5" width="102.7" height="258.5" fill="#4a5347"/>
+<text x="935.0" y="650" text-anchor="end" transform="rotate(-30 935.0 650)" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">$111,000 to $176,000</text>
+<rect x="1067.0" y="596.5" width="102.7" height="23.5" fill="#dce0e3"/>
+<rect x="1067.0" y="338.0" width="102.7" height="258.5" fill="#4a5347"/>
+<text x="1118.3" y="650" text-anchor="end" transform="rotate(-30 1118.3 650)" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">More than $176,000</text>
+<line x1="110.0" y1="620.0" x2="1210.0" y2="620.0" stroke="#8a8f94" stroke-width="2"/>
+<rect x="110.0" y="80" width="22" height="12" fill="#dce0e3"/>
+<text x="140.0" y="91" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">DIDN'T ATTEND COLLEGE</text>
+<rect x="110.0" y="106" width="22" height="12" fill="#4a5347"/>
+<text x="140.0" y="117" font-family="Arial, sans-serif" font-size="16" fill="#e8e8e8">ATTENDED COLLEGE</text>
+</g></svg>

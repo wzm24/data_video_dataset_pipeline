@@ -1,0 +1,148 @@
+{
+ "clip_id": "bar_100",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:UNTIL 1989 @ military victory series (#E67E22)",
+    "mark:CURRENTLY @ military victory series (#A0522D)"
+   ],
+   "assertion": {
+    "low": "CURRENTLY @ military victory series (#A0522D)",
+    "low_value": 0.1556,
+    "high": "UNTIL 1989 @ military victory series (#E67E22)",
+    "high_value": 0.4444,
+    "delta": 0.2888,
+    "ratio": 2.856,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Victory-series bars for both periods must be visible, with labels or axis positions showing 44.4% and 15.6% (or heights proportional)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:UNTIL 1989 @ negotiated series (#1F3A5F)",
+    "mark:CURRENTLY @ negotiated series (#5B9BD5)"
+   ],
+   "assertion": {
+    "low": "UNTIL 1989 @ negotiated series (#1F3A5F)",
+    "low_value": 0.1111,
+    "high": "CURRENTLY @ negotiated series (#5B9BD5)",
+    "high_value": 0.4444,
+    "delta": 0.3333,
+    "ratio": 4.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Negotiation-series bars for both periods must be visible, with labels or axis positions showing 11.1% and 44.4%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:UNTIL 1989 @ military victory series (#E67E22)",
+    "mark:UNTIL 1989 @ negotiated series (#1F3A5F)",
+    "mark:CURRENTLY @ military victory series (#A0522D)",
+    "mark:CURRENTLY @ negotiated series (#5B9BD5)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "UNTIL 1989 @ military victory series (#E67E22)",
+      "value": 0.4444
+     },
+     {
+      "mark": "UNTIL 1989 @ negotiated series (#1F3A5F)",
+      "value": 0.1111
+     },
+     {
+      "mark": "CURRENTLY @ military victory series (#A0522D)",
+      "value": 0.1556
+     },
+     {
+      "mark": "CURRENTLY @ negotiated series (#5B9BD5)",
+      "value": 0.4444
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both resolution series across both periods must be visible together so the viewer can see the order reversal/crossover; labels or legend must distinguish victory from negotiation."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "CURRENTLY @ negotiated series (#5B9BD5)",
+    "extreme": "min",
+    "expected": 0.4444,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Current-period negotiation bar must be visibly taller than the current-period victory bar, with numeric labels or axis positions for 44.4% and 15.6%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:UNTIL 1989 @ military victory series (#E67E22)",
+    "mark:UNTIL 1989 @ negotiated series (#1F3A5F)"
+   ],
+   "assertion": {
+    "greater": "UNTIL 1989 @ military victory series (#E67E22)",
+    "lesser": "UNTIL 1989 @ negotiated series (#1F3A5F)",
+    "expected_ratio": 4.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Until-1989 victory bar must be visibly taller than the until-1989 negotiation bar, with numeric labels or axis positions for 44.4% and 11.1%."
+  }
+ ]
+}

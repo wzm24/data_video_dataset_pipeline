@@ -1,0 +1,305 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_143",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that partisan polarization in presidential approval ratings has been a persistent and growing phenomenon in American politics long before the Trump presidency.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Entity 7's partisan approval gap is 7 points (84 minus 77).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "7",
+     "x": "769.5",
+     "field": "value",
+     "value": 84.0,
+     "note": "value=84"
+    },
+    {
+     "entity": "7",
+     "x": "769.5",
+     "field": "relative_value",
+     "value": 0.77,
+     "note": "0.77*100=77"
+    }
+   ],
+   "computation": "84 - (0.77*100) = 7",
+   "accepted_routes": [
+    "Entity 7 gap is 7 points",
+    "Approval gap for entity 7 is 84 minus 77 = 7",
+    "Entity 7 shows a 7-point partisan difference"
+   ],
+   "visual_evidence_rule": "Show entity 7's two approval levels and the 7-point gap.",
+   "temporal_anchor": "Clause about early or persistent polarization before Trump.",
+   "reviewer_question": "Must the video state entity 7's 7-point gap as a baseline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Entity 49's partisan approval gap reaches 49 points (88 minus 39).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "value",
+     "value": 88.0,
+     "note": "value=88"
+    },
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "relative_value",
+     "value": 0.39,
+     "note": "0.39*100=39"
+    }
+   ],
+   "computation": "88 - (0.39*100) = 49",
+   "accepted_routes": [
+    "Entity 49 gap is 49 points",
+    "Approval gap for entity 49 is 88 minus 39 = 49",
+    "The last entity 49 bar shows a 49-point difference"
+   ],
+   "visual_evidence_rule": "Show entity 49's two approval levels and the 49-point gap.",
+   "temporal_anchor": "Clause about high polarization or pre-Trump endpoint.",
+   "reviewer_question": "Must the video state entity 49's 49-point gap as the high endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The gap grows from 7 points at entity 7 to 49 points at entity 49.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "7",
+     "x": "769.5",
+     "field": "value",
+     "value": 84.0,
+     "note": "value=84"
+    },
+    {
+     "entity": "7",
+     "x": "769.5",
+     "field": "relative_value",
+     "value": 0.77,
+     "note": "0.77*100=77"
+    },
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "value",
+     "value": 88.0,
+     "note": "value=88"
+    },
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "relative_value",
+     "value": 0.39,
+     "note": "0.39*100=39"
+    }
+   ],
+   "computation": "(88 - 39) - (84 - 77) = 42",
+   "accepted_routes": [
+    "Gap widens by 42 points from entity 7 to entity 49",
+    "Entity 7 gap 7 rises to entity 49 gap 49",
+    "Partisan approval gap grows 42 points across shown span"
+   ],
+   "visual_evidence_rule": "Both endpoint gaps and their 42-point difference are visible.",
+   "temporal_anchor": "Main growth claim in the narration.",
+   "reviewer_question": "Must the video explicitly show the 42-point increase from entity 7 to 49?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Several later entities cross a 40-point approval gap: entity 44, 40, and 49.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "44",
+     "x": "927.0",
+     "field": "value",
+     "value": 82.0,
+     "note": "value=82"
+    },
+    {
+     "entity": "44",
+     "x": "927.0",
+     "field": "relative_value",
+     "value": 0.38,
+     "note": "0.38*100=38"
+    },
+    {
+     "entity": "40",
+     "x": "855.0",
+     "field": "value",
+     "value": 70.0,
+     "note": "value=70"
+    },
+    {
+     "entity": "40",
+     "x": "855.0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "0.30*100=30"
+    },
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "value",
+     "value": 88.0,
+     "note": "value=88"
+    },
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "relative_value",
+     "value": 0.39,
+     "note": "0.39*100=39"
+    }
+   ],
+   "computation": "44=82-38; 40=70-30; 49=88-39",
+   "accepted_routes": [
+    "Entity 44, entity 40, and entity 49 cross 40 points",
+    "Three late gaps are 40+ points",
+    "Gaps of 44, 40, and 49 appear in later data"
+   ],
+   "visual_evidence_rule": "Bars for entities 44, 40, 49 show gaps at or above 40.",
+   "temporal_anchor": "Clause about growing polarization before Trump.",
+   "reviewer_question": "Is crossing the 40-point threshold required or just optional support?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Every listed entity has a positive approval gap, ranging from 7 to 49 points.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "7",
+     "x": "769.5",
+     "field": "value",
+     "value": 84.0,
+     "note": "min gap uses 84"
+    },
+    {
+     "entity": "7",
+     "x": "769.5",
+     "field": "relative_value",
+     "value": 0.77,
+     "note": "min gap uses 0.77"
+    },
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "value",
+     "value": 88.0,
+     "note": "max gap uses 88"
+    },
+    {
+     "entity": "49",
+     "x": "976.5",
+     "field": "relative_value",
+     "value": 0.39,
+     "note": "max gap uses 0.39"
+    }
+   ],
+   "computation": "min = 84-77=7; max = 88-39=49",
+   "accepted_routes": [
+    "All shown gaps are positive, 7 to 49 points",
+    "Partisan approval gaps persist across entities",
+    "Every entity shows a gap of at least 7 points"
+   ],
+   "visual_evidence_rule": "All bars show a visible separation between approval levels.",
+   "temporal_anchor": "Clause about persistent polarization before Trump.",
+   "reviewer_question": "Must the video state that every shown entity has a positive gap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Entity 30 has the lowest value at 57.",
+  "Entity 7 has the highest relative_value at 0.77 (77).",
+  "Entity 44 gap is 44 points (82 minus 38)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that Trump caused the polarization",
+  "Extrapolating growth after the last shown entity",
+  "Treating the 49-point gap as 49% of total approval",
+  "Claiming values not in table, such as post-1999 data"
+ ],
+ "notes": "Derived gaps use value minus relative_value times 100. Entity labels are numeric; no year or president names are assumed.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 41.1,
+  "usage": {
+   "prompt_tokens": 1004,
+   "completion_tokens": 10162,
+   "total_tokens": 11166,
+   "prompt_tokens_details": {
+    "cached_tokens": 768
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8261
+   },
+   "prompt_cache_hit_tokens": 768,
+   "prompt_cache_miss_tokens": 236
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

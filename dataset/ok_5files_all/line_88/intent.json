@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_88",
+ "intent_en": "To demonstrate the growing partisan polarization in views of the national economy, highlighting the shift from relative agreement in the 1990s to sharp divergence in recent years.",
+ "previous_intent": "To demonstrate how the perception of the national economy has become increasingly polarized along partisan lines since the early 2000s, contrasting with the relative agreement seen in the 1990s.",
+ "narration_support": "Differences between Republicans and Democrats now extend to issues which you may not expect to be all that partisan, like views of the national economy.",
+ "chart_support": "Line chart tracking the percentage of Republicans and Democrats rating economic conditions as excellent or good from 1992 to 2018, showing a widening gap between the two parties, particularly after the early 2000s.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states that economic views are now viewed through a partisan lens, contrasting the 1990s with today. The chart visualizes this by plotting Republican and Democrat ratings of the economy over time, showing lines that are close in the 90s but diverge significantly later, especially at the end of the timeline.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

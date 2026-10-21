@@ -1,0 +1,126 @@
+{
+ "clip_id": "bar_81",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both entity labels and their table values or corresponding bar heights (1.000 and 0.740) must be visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:CONGOLESE DEATHS @ 395.0",
+    "mark:BELGIAN POPULATION 1890 @ 945.0"
+   ],
+   "assertion": {
+    "greater": "CONGOLESE DEATHS @ 395.0",
+    "lesser": "BELGIAN POPULATION 1890 @ 945.0",
+    "expected_ratio": 1.3514,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The CONGOLESE DEATHS bar must visibly be taller or higher than the BELGIAN POPULATION 1890 bar."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:CONGOLESE DEATHS @ 395.0",
+    "mark:BELGIAN POPULATION 1890 @ 945.0"
+   ],
+   "assertion": {
+    "low": "BELGIAN POPULATION 1890 @ 945.0",
+    "low_value": 0.74,
+    "high": "CONGOLESE DEATHS @ 395.0",
+    "high_value": 1.0,
+    "delta": 0.26,
+    "ratio": 1.3514,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio or percentage annotation, or equivalent visual scale, must communicate about 1.35× or about 35% higher."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:CONGOLESE DEATHS @ 395.0",
+    "segment:BELGIAN POPULATION 1890 @ 945.0"
+   ],
+   "assertion": {
+    "segment": "CONGOLESE DEATHS @ 395.0",
+    "expected_share": 0.5747,
+    "total_of": "unknown",
+    "total": 1.74,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If used, the chart must show or annotate the Belgian bar at 74% of the Congolese deaths bar."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:CONGOLESE DEATHS @ 395.0",
+    "mark:BELGIAN POPULATION 1890 @ 945.0"
+   ],
+   "assertion": {
+    "greater": "CONGOLESE DEATHS @ 395.0",
+    "lesser": "BELGIAN POPULATION 1890 @ 945.0",
+    "expected_ratio": 1.3514,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If used, the chart must show or annotate the absolute gap of 0.260 between the two bars."
+  }
+ ]
+}

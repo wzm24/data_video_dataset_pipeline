@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f7f7f5"/>
+<polygon id="title-banner" data-role="title-banner" points="80,60 420,60 470,110 420,160 80,160" fill="#555555"/>
+<text id="chart-title" data-role="title" x="120" y="122" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">MUSLIMS IN IRAQ</text>
+<g id="entity-sunni" data-role="entity" data-entity-id="sunni" data-label="SUNNI">
+<rect id="sunni-bar" data-role="bar" data-entity-id="sunni" data-value="20" x="220" y="160" width="840" height="80" fill="#2E8B57"/>
+<text id="sunni-value-label" data-role="value-label" data-entity-id="sunni" x="246" y="214" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff">SUNNI = 20%</text>
+</g>
+<g data-role="annotation"><line x1="360" y1="250" x2="360" y2="285" stroke="#2E8B57" stroke-width="7"/><polygon points="349,281 371,281 360,301" fill="#2E8B57"/><text x="360" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2E8B57">SUPPRESSED</text></g>
+<g data-role="annotation"><line x1="640" y1="250" x2="640" y2="285" stroke="#2E8B57" stroke-width="7"/><polygon points="629,281 651,281 640,301" fill="#2E8B57"/><text x="640" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2E8B57">SUPPRESSED</text></g>
+<g data-role="annotation"><line x1="920" y1="250" x2="920" y2="285" stroke="#2E8B57" stroke-width="7"/><polygon points="909,281 931,281 920,301" fill="#2E8B57"/><text x="920" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2E8B57">SUPPRESSED</text></g>
+<g id="entity-shia" data-role="entity" data-entity-id="shia" data-label="SHIA">
+<rect id="shia-bar" data-role="bar" data-entity-id="shia" data-value="63" x="220" y="340" width="840" height="280" fill="#C0392B"/>
+<text id="shia-value-label" data-role="value-label" data-entity-id="shia" x="246" y="495" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">SHIA = 63%</text>
+</g>
+<g id="entity-kurds" data-role="entity" data-entity-id="kurds-sunni" data-label="KURDS (SUNNI)">
+<rect id="kurds-bar" data-role="bar" data-entity-id="kurds-sunni" data-value="17" x="220" y="640" width="840" height="70" fill="#DED4C5"/>
+<text id="kurds-value-label" data-role="value-label" data-entity-id="kurds-sunni" x="246" y="690" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#3a3a3a">KURDS (SUNNI) = 17%</text>
+</g>
+</g>
+</svg>

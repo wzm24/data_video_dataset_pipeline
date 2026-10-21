@@ -1,0 +1,129 @@
+{
+ "clip_id": "bar_64",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Lactose Intolerant @ Lactose Intolerant"
+   ],
+   "assertion": {
+    "mark": "Lactose Intolerant @ Lactose Intolerant",
+    "field": "value",
+    "expected": 65.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the Lactose Intolerant category with a label, value, or mark at 65% (or the equivalent 0.65 share of the whole)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Lactose-Tolerant @ Lactose-Tolerant"
+   ],
+   "assertion": {
+    "mark": "Lactose-Tolerant @ Lactose-Tolerant",
+    "field": "value",
+    "expected": 35.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the Lactose-Tolerant category with a label, value, or mark at 35% (or the equivalent 0.35 share of the whole)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Lactose Intolerant @ Lactose Intolerant",
+    "mark:Lactose-Tolerant @ Lactose-Tolerant"
+   ],
+   "assertion": {
+    "greater": "Lactose Intolerant @ Lactose Intolerant",
+    "lesser": "Lactose-Tolerant @ Lactose-Tolerant",
+    "expected_ratio": 1.8571,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow comparing the two category sizes, e.g., bars with relative lengths or labels showing 65% and 35%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Lactose Intolerant @ Lactose Intolerant",
+    "mark:Lactose-Tolerant @ Lactose-Tolerant"
+   ],
+   "assertion": {
+    "series": "Lactose Intolerant",
+    "values": [
+     65.0,
+     35.0
+    ],
+    "threshold_between": [
+     35.0,
+     65.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 65% share visibly exceed half of the total, or the narration must state majority/minority."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Lactose Intolerant @ Lactose Intolerant",
+    "segment:Lactose-Tolerant @ Lactose-Tolerant"
+   ],
+   "assertion": {
+    "segment": "Lactose Intolerant @ Lactose Intolerant",
+    "expected_share": 0.65,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both categories as parts of one whole, or otherwise make their complementary relationship explicit."
+  }
+ ]
+}

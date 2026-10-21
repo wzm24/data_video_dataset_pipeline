@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_35",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain how company reputation and performance influence share value and investor backing, illustrating that successful entities attract investment while struggling ones lose value.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "YouTube has the highest share value in the comparison, at 120 euro.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "entity",
+     "field": "value",
+     "value": 120,
+     "note": "YouTube's share value is 120 euro, the larger of the two table values."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "YouTube is the top entity at 120 euro.",
+    "YouTube's value is the larger one: 120 euro.",
+    "YouTube leads the comparison with 120 euro."
+   ],
+   "visual_evidence_rule": "The chart must visibly represent YouTube's value as the larger 120-euro data point among the two entities.",
+   "temporal_anchor": "The clause about a company with good reputation / investors backing it.",
+   "reviewer_question": "Must the video explicitly state YouTube's 120-euro value as the highest, or is showing it as the larger data point enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "TV has the lower share value in the comparison, at 32 euro.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "TV",
+     "x": "entity",
+     "field": "value",
+     "value": 32,
+     "note": "TV's share value is 32 euro, the smaller of the two table values."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "TV's value is 32 euro.",
+    "TV is the lower entity at 32 euro.",
+    "TV has the smaller value: 32 euro."
+   ],
+   "visual_evidence_rule": "The chart must visibly represent TV's value as the smaller 32-euro data point among the two entities.",
+   "temporal_anchor": "The clause about poor reputation or poor performance / difficulty selling shares.",
+   "reviewer_question": "Must the video explicitly state TV's 32-euro value as the lower one, or is showing it as the smaller data point enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "YouTube's value is 88 euro higher than TV's.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "entity",
+     "field": "value",
+     "value": 120,
+     "note": "YouTube value used in the subtraction."
+    },
+    {
+     "entity": "TV",
+     "x": "entity",
+     "field": "value",
+     "value": 32,
+     "note": "TV value used in the subtraction."
+    }
+   ],
+   "computation": "120 - 32 = 88",
+   "accepted_routes": [
+    "YouTube exceeds TV by 88 euro.",
+    "The gap between YouTube and TV is 88 euro.",
+    "TV is 88 euro below YouTube."
+   ],
+   "visual_evidence_rule": "The chart must make the gap between the 120-euro and 32-euro values visually discernible or directly annotate the difference.",
+   "temporal_anchor": "The contrast clause between well-backed companies and struggling companies.",
+   "reviewer_question": "Must the 88-euro gap be explicitly conveyed, or is the relative difference enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "YouTube's value is about 3.75 times TV's value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "entity",
+     "field": "value",
+     "value": 120,
+     "note": "YouTube value used as numerator."
+    },
+    {
+     "entity": "TV",
+     "x": "entity",
+     "field": "value",
+     "value": 32,
+     "note": "TV value used as denominator."
+    }
+   ],
+   "computation": "120 / 32 = 3.75",
+   "accepted_routes": [
+    "YouTube is roughly 3.75 times TV.",
+    "YouTube's value is almost four times TV's.",
+    "TV is about a quarter of YouTube's value."
+   ],
+   "visual_evidence_rule": "The chart must support comparing the magnitudes so that YouTube appears roughly 3.75 times larger than TV.",
+   "temporal_anchor": "The clause contrasting investor backing for good reputation versus difficulty for poor reputation.",
+   "reviewer_question": "Must the video express the ratio or multiplier, or is the absolute gap sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "On the normalized relative scale, YouTube is 1.0 and TV is 0.3, so YouTube is the largest and TV is about three-tenths of that level.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "YouTube's relative_value is 1.0, the maximum."
+    },
+    {
+     "entity": "TV",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "TV's relative_value is 0.3, about three-tenths of YouTube's level."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "YouTube is indexed at 1.0 and TV at 0.3.",
+    "TV is about three-tenths of YouTube on the relative scale.",
+    "YouTube is the maximum relative_value; TV is 0.3 of that scale."
+   ],
+   "visual_evidence_rule": "If a normalized comparison is shown, it must preserve YouTube as the 1.0 maximum and TV as the 0.3 lower value.",
+   "temporal_anchor": "The narration clause about good versus poor reputation/performance.",
+   "reviewer_question": "Is the normalized relative-value scale needed, or are the absolute euro values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The two compared entities are YouTube and TV.",
+  "The comparison can be framed as YouTube being the successful/backed entity and TV being the struggling entity, but only as an interpretation of the value gap.",
+  "The 120-euro and 32-euro values can be shown as the two endpoints of the comparison."
+ ],
+ "unsupported_to_avoid": [
+  "Any claim that good reputation or performance caused the 120 versus 32 euro values.",
+  "Investor backing amounts, number of investors, share counts, or market share not present in the table.",
+  "Percentages, dollars, or other units not in the table; values are euro and relative_value is a 0-1 normalization.",
+  "Extrapolating future share value or performance.",
+  "Treating relative_value 0.3 as 30% of a whole or as 30 euro."
+ ],
+ "notes": "The table has only two entities with euro values and a 0-1 relative_value scale; the intent's reputation/performance language is narrative, not data. The safest required content is the YouTube-versus-TV value comparison, including the 120 and 32 euro endpoints, the 88 euro gap, and the 3.75x ratio.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 31.9,
+  "usage": {
+   "prompt_tokens": 926,
+   "completion_tokens": 7468,
+   "total_tokens": 8394,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5776
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 286
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

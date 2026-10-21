@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_123",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the historical trend of U.S. military spending since World War II.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip presents a single U.S. military spending series in constant 2014 dollars spanning 1950 through 2013.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "1950",
+     "field": "value",
+     "value": 85.0,
+     "note": "First year in the table; value in billion 2014 USD."
+    },
+    {
+     "entity": "military spending",
+     "x": "2013",
+     "field": "value",
+     "value": 580.0,
+     "note": "Last year in the table; value in billion 2014 USD."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "U.S. military spending in constant 2014 dollars is tracked from 1950 to 2013.",
+    "The chart shows a single defense budget series in billion 2014 USD for 1950–2013.",
+    "Military spending is plotted annually from 1950 through 2013, in 2014 dollars."
+   ],
+   "visual_evidence_rule": "A single line or bar series must be visible with x-axis years spanning 1950–2013 and units marked as billion 2014 USD.",
+   "temporal_anchor": "the 'defense budget since World War II in today's dollars' clause",
+   "reviewer_question": "Should the 1950–2013 span and constant-2014-dollar unit be treated as required context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Over the full period, U.S. military spending rose substantially: from 85 billion in 1950 to 580 billion in 2013, an increase of 495 billion or about 582%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "1950",
+     "field": "value",
+     "value": 85.0,
+     "note": "Start value in billion 2014 USD."
+    },
+    {
+     "entity": "military spending",
+     "x": "2013",
+     "field": "value",
+     "value": 580.0,
+     "note": "End value in billion 2014 USD."
+    }
+   ],
+   "computation": "(580 - 85) = 495; 580 / 85 ≈ 6.82; (495 / 85) × 100 ≈ 582%.",
+   "accepted_routes": [
+    "From 1950 to 2013, spending rose from 85 to 580 billion 2014 USD, +495 billion.",
+    "Over the full period, military spending increased by about 582%, or about 6.8× its 1950 level.",
+    "The 2013 endpoint is 580 billion, 495 billion above the 1950 value of 85 billion."
+   ],
+   "visual_evidence_rule": "The 1950 and 2013 endpoints must be identifiable, labeled, or annotated on the same series.",
+   "temporal_anchor": "the 'trend ... is clear' clause",
+   "reviewer_question": "Must the video state or label the full-period net increase from 85 to 580, or is an unlabeled rising line enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series reaches its maximum at 720 billion 2014 USD in 2009.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "2009",
+     "field": "value",
+     "value": 720.0,
+     "note": "Highest value in the 1950–2013 table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The highest value in the series is 720 billion in 2009.",
+    "Spending peaks at 720 billion 2014 USD in 2009.",
+    "The maximum occurs in 2009 at 720 billion."
+   ],
+   "visual_evidence_rule": "The 2009 data point must be marked or annotated as the maximum.",
+   "temporal_anchor": "the 'trend ... is clear' clause",
+   "reviewer_question": "Must the 2009 maximum of 720 be explicitly marked, or may the peak be inferred visually?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After the 2009 peak, spending fell by 140 billion to 580 billion in 2013, a decline of about 19% from the peak.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "2009",
+     "field": "value",
+     "value": 720.0,
+     "note": "Peak value in billion 2014 USD."
+    },
+    {
+     "entity": "military spending",
+     "x": "2013",
+     "field": "value",
+     "value": 580.0,
+     "note": "End value in billion 2014 USD."
+    }
+   ],
+   "computation": "(720 - 580) = 140; (140 / 720) × 100 ≈ 19.4%; 580 / 720 ≈ 0.806.",
+   "accepted_routes": [
+    "After peaking at 720 in 2009, spending fell to 580 by 2013, down 140 billion.",
+    "From 2009 to 2013, military spending declined by about 19%, or to about 81% of its peak.",
+    "The 2013 endpoint is 140 billion below the 2009 peak."
+   ],
+   "visual_evidence_rule": "The 2009 peak and 2013 endpoint must both be visible and linked by a descending segment or annotation.",
+   "temporal_anchor": "the 'trend ... is clear' clause",
+   "reviewer_question": "Is the post-2009 decline to 580 required, or can the video end on the peak/overall rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The early series has a sharp Korean War-era spike: spending rises from 85 in 1950 to 430 in 1952, then falls to 230 by 1954.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "1950",
+     "field": "value",
+     "value": 85.0,
+     "note": "Start value in billion 2014 USD."
+    },
+    {
+     "entity": "military spending",
+     "x": "1952",
+     "field": "value",
+     "value": 430.0,
+     "note": "Early spike value in billion 2014 USD."
+    },
+    {
+     "entity": "military spending",
+     "x": "1954",
+     "field": "value",
+     "value": 230.0,
+     "note": "Post-spike decline value in billion 2014 USD."
+    }
+   ],
+   "computation": "(430 - 85) = 345; 430 / 85 ≈ 5.06; (430 - 230) = 200; (200 / 430) × 100 ≈ 46.5%.",
+   "accepted_routes": [
+    "A sharp early spike pushed spending from 85 in 1950 to 430 in 1952, then it fell to 230 by 1954.",
+    "The series has a Korean War-era surge: 1952 is about 5.1× the 1950 level, before dropping about 46.5% by 1954.",
+    "The early trend is volatile: 85 in 1950, 430 in 1952, and 230 in 1954."
+   ],
+   "visual_evidence_rule": "The early points 1950, 1952, and 1954 must be visible as a spike-and-fall segment.",
+   "temporal_anchor": "the 'since World War II' / early-history portion of the narration",
+   "reviewer_question": "Should the early 1952 spike be required, or is it optional historical detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Threshold crossings: spending first exceeds 500 billion in 1984 (530) and first exceeds 700 billion in 2009 (720).",
+  "Post-Cold War decline: from 530 in 1984 to 350 in 1995, a fall of 180 billion, or about 34%.",
+  "The series is not monotonic; it has multiple declines, e.g., 1952–1954, 1984–1995, and 2009–2013."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as 'because of the Korean War' or 'due to 9/11' because the table does not provide causes.",
+  "Data before 1950 or after 2013, including actual World War II spending values.",
+  "Saying military spending is a share of GDP, the federal budget, or total government spending.",
+  "Using relative_value as a percentage or share without a defined denominator.",
+  "Ranking the U.S. against other countries or comparing military branches."
+ ],
+ "notes": "The table starts at 1950, so 'since WWII' must be represented as 1950–2013 unless the clip explicitly notes missing years. Core required candidates are series span, full-period increase, 2009 peak, and post-2009 decline; the early 1952 spike is proposed as optional-but-valid.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 37.2,
+  "usage": {
+   "prompt_tokens": 2340,
+   "completion_tokens": 8730,
+   "total_tokens": 11070,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6520
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 2084
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

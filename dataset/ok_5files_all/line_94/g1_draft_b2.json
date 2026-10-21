@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_94",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant and widening partisan divide in COVID-19 vaccination rates, demonstrating that Democrats are much more likely than Republicans to have received a vaccine.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the latest observed point, Democrats are much more likely than Republicans to have received a COVID-19 vaccine: 86% vs 60%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 86,
+     "note": "printed"
+    },
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 60,
+     "note": "printed"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Democrats 86% vs Republicans 60%",
+    "86% of Democrats vs 60% of Republicans",
+    "Democrats are 26 percentage points more likely than Republicans at the latest point",
+    "Democrats' latest vaccination rate is much higher than Republicans'"
+   ],
+   "visual_evidence_rule": "Both latest endpoints must be labeled or visually encoded: Dem at 86%, Rep at 60%.",
+   "temporal_anchor": "Democrats are significantly more likely than Republicans to say they've received a vaccine for COVID-19",
+   "reviewer_question": "Must the final endpoint comparison be conveyed, or is the final gap alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The latest Democratic-Republican vaccination gap is 26 percentage points (86% minus 60%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 86,
+     "note": "printed"
+    },
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 60,
+     "note": "printed"
+    }
+   ],
+   "computation": "86 - 60 = 26 percentage points",
+   "accepted_routes": [
+    "the gap is 26 percentage points",
+    "Democrats lead Republicans by 26 points",
+    "86% vs 60%, a 26-point gap",
+    "Democrats are 26 points ahead"
+   ],
+   "visual_evidence_rule": "The chart must make the 26-point difference at the latest point visible, e.g. by paired endpoints or a difference annotation.",
+   "temporal_anchor": "significantly more likely ... this gap is as big or wider",
+   "reviewer_question": "Is the exact final gap required, or does a qualitative large-gap statement suffice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The partisan vaccination gap widens across the observed rows: 7 points, then 25 points, then 26 points.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "earliest row (row 1)",
+     "field": "value",
+     "value": 23,
+     "note": "printed"
+    },
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "earliest row (row 1)",
+     "field": "value",
+     "value": 16,
+     "note": "printed; gap 23 - 16 = 7"
+    },
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "middle row (row 2)",
+     "field": "value",
+     "value": 75,
+     "note": "estimated"
+    },
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "middle row (row 2)",
+     "field": "value",
+     "value": 50,
+     "note": "estimated; gap 75 - 50 = 25"
+    },
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 86,
+     "note": "printed"
+    },
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 60,
+     "note": "printed; gap 86 - 60 = 26"
+    }
+   ],
+   "computation": "(23 - 16) = 7; (75 - 50) = 25; (86 - 60) = 26 percentage points; sequence 7 < 25 < 26",
+   "accepted_routes": [
+    "the gap widened from 7 to 26 percentage points",
+    "partisan divide grew from 7 points to 26 points",
+    "gaps of 7, 25, and 26 points across successive rows",
+    "the divide is wider than earlier in the series"
+   ],
+   "visual_evidence_rule": "Both party series must be shown across the row-order sequence and the gap increase must be visible, not only the final values.",
+   "temporal_anchor": "this gap is as big or wider than at any point during the course of the outbreak",
+   "reviewer_question": "Must the video communicate the widening trend, or only that the final gap is large?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Both groups' vaccination rates rise across the observed rows: Democrats 23% to 86%, Republicans 16% to 60%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "earliest row (row 1)",
+     "field": "value",
+     "value": 23,
+     "note": "printed"
+    },
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 86,
+     "note": "printed"
+    },
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "earliest row (row 1)",
+     "field": "value",
+     "value": 16,
+     "note": "printed"
+    },
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "latest row (row 3)",
+     "field": "value",
+     "value": 60,
+     "note": "printed"
+    }
+   ],
+   "computation": "Dem change: 86 - 23 = 63 percentage points; Rep change: 60 - 16 = 44 percentage points",
+   "accepted_routes": [
+    "Both groups increased; Democrats from 23% to 86%, Republicans from 16% to 60%",
+    "Democrats rose 63 points and Republicans rose 44 points",
+    "vaccination rates climbed for both partisan groups",
+    "Democrats stayed ahead while both rates rose"
+   ],
+   "visual_evidence_rule": "If included, chart must show at least earliest and latest values for both groups.",
+   "temporal_anchor": "change revolve over the course of the outbreak",
+   "reviewer_question": "Should both groups' own increases be shown, or is only the partisan gap required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The groups are labeled Dem/Lean Dem and Rep/Lean Rep.",
+  "The earliest observed gap is already 7 percentage points (23% vs 16%).",
+  "The middle observed gap is 25 percentage points (75% vs 50%)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why Democrats or Republicans differ.",
+  "Extrapolating the widening trend beyond the three observed rows.",
+  "Saying the final gap is 26% rather than 26 percentage points.",
+  "Claiming the gap is the widest ever without data covering all earlier points.",
+  "Using all adults, vaccinated people, or another denominator not in the table."
+ ],
+ "notes": "The table lacks explicit x labels, so row order is treated as the series order implied by the narration; the reviewer should decide whether that temporal ordering is required. The 75% and 50% middle values are estimated, while 86% and 60% latest values are printed.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.0
+ },
+ "draft_cost": {
+  "sec": 41.5,
+  "usage": {
+   "prompt_tokens": 768,
+   "completion_tokens": 9275,
+   "total_tokens": 10043,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7395
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 512
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

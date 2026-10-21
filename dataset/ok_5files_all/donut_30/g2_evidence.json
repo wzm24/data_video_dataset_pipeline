@@ -1,0 +1,123 @@
+{
+ "clip_id": "donut_30",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:VEGAN POPULATION IN US (2014): 2.5% @ donut_value"
+   ],
+   "assertion": {
+    "mark": "VEGAN POPULATION IN US (2014): 2.5% @ donut_value",
+    "field": "value",
+    "expected": 2.5,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart, label, or annotation must show 2.5% (or 2.5 percent) tied to the US and 2014."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:VEGAN POPULATION IN US (2014): 2.5% @ donut_value",
+    "segment:VEGAN POPULATION IN US (2014): 2.5% @ donut_value"
+   ],
+   "assertion": {
+    "segment": "VEGAN POPULATION IN US (2014): 2.5% @ donut_value",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 2.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If a donut, pie, or progress arc is used, the highlighted portion must be 2.5% of the whole, not 25% or 0.25 of the whole."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:VEGAN POPULATION IN US (2014): 2.5% @ donut_value"
+   ],
+   "assertion": {
+    "segment": "VEGAN POPULATION IN US (2014): 2.5% @ donut_value",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 2.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The label or chart title must include '%' and reference the US population denominator; do not display 2.5 as a raw count."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a source or qualifier is shown, include 'estimated' or 'roughly' near the 2.5% label; do not present it as exact."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:VEGAN POPULATION IN US (2014): 2.5% @ donut_value"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "VEGAN POPULATION IN US (2014): 2.5% @ donut_value",
+      "value": 2.5
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If a timeline is shown, it must not fabricate an earlier starting value or a slope; any earlier period can only be indicated as missing or unsupported unless additional data is supplied."
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "clip_id": "line_93",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:White @ first listed/early",
+    "mark:Black @ first listed/early"
+   ],
+   "assertion": {
+    "greater": "White @ first listed/early",
+    "lesser": "Black @ first listed/early",
+    "expected_ratio": 1.4,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "First/early time point must show Black below White and Hispanic, with 15%, 21%, and 16% visible or readable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Black @ first listed/early",
+    "mark:Black @ third listed/final"
+   ],
+   "assertion": {
+    "low": "Black @ first listed/early",
+    "low_value": 15.0,
+    "high": "Black @ third listed/final",
+    "high_value": 70.0,
+    "delta": 55.0,
+    "ratio": 4.6667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Black series must start near 15% and end near 70%; if quantified, annotation/label should show +55 pts."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:White @ third listed/final",
+    "mark:Black @ third listed/final"
+   ],
+   "assertion": {
+    "at": "third listed/final",
+    "above": "White",
+    "above_value": 72.0,
+    "below": "Black",
+    "below_value": 70.0,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Final time point must show Black, White, and Hispanic close together and at or above 70%, with labels 70, 72, and 76 or equivalent."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:White @ first listed/early",
+    "mark:Black @ first listed/early",
+    "mark:White @ third listed/final",
+    "mark:Black @ third listed/final"
+   ],
+   "assertion": {
+    "low": "Black @ first listed/early",
+    "low_value": 15.0,
+    "high": "White @ third listed/final",
+    "high_value": 72.0,
+    "delta": 57.0,
+    "ratio": 4.8,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must allow comparing Black and White at early and final periods, e.g., two lines/bars showing 21 vs 15 and 72 vs 70."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:White @ first listed/early",
+    "mark:White @ third listed/final",
+    "mark:Hispanic @ first listed/early",
+    "mark:Hispanic @ third listed/final"
+   ],
+   "assertion": {
+    "low": "Hispanic @ first listed/early",
+    "low_value": 16.0,
+    "high": "Hispanic @ third listed/final",
+    "high_value": 76.0,
+    "delta": 60.0,
+    "ratio": 4.75,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, White and Hispanic series must start at 21%/16% and end at 72%/76%."
+  }
+ ]
+}

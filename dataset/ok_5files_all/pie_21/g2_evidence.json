@@ -1,0 +1,128 @@
+{
+ "clip_id": "pie_21",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Too much @ slice-1",
+    "extreme": "max",
+    "expected": 61.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 'Too much' slice/bar must be visibly labeled 61% and be the largest substantive response slice."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Too much @ slice-1"
+   ],
+   "assertion": {
+    "series": "Too much",
+    "values": [
+     61.0
+    ],
+    "threshold_between": [
+     61.0,
+     61.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must frame 'Too much' as the majority/more-than-half response, not merely as one slice among three."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:The right amount @ slice-3"
+   ],
+   "assertion": {
+    "mark": "The right amount @ slice-3",
+    "field": "value",
+    "expected": 23.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 'The right amount' slice must show 23% and be labeled as about a quarter if the narration references it."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:The right amount @ slice-3",
+    "mark:Too little @ slice-4"
+   ],
+   "assertion": {
+    "greater": "The right amount @ slice-3",
+    "lesser": "Too little @ slice-4",
+    "expected_ratio": 1.7692,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 'Too little' 13% slice and the 'The right amount' 23% slice must be visible if this comparison is made."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Too much @ slice-1",
+    "mark:The right amount @ slice-3"
+   ],
+   "assertion": {
+    "greater": "Too much @ slice-1",
+    "lesser": "The right amount @ slice-3",
+    "expected_ratio": 2.6522,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or annotation must let viewers compare the 61% 'too much' slice against the combined 36% of the other substantive categories."
+  }
+ ]
+}

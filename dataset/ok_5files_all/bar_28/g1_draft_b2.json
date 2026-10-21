@@ -1,0 +1,235 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_28",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the tax structure and revenue potential of Senator Warren's proposed wealth tax.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The proposed wealth tax has two rate tiers: 2% and 3%.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2%",
+     "x": "2%",
+     "field": "value",
+     "value": 2.0,
+     "note": "table row for the 2% tier"
+    },
+    {
+     "entity": "3%",
+     "x": "3%",
+     "field": "value",
+     "value": 3.0,
+     "note": "table row for the 3% tier"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The tax has two rate tiers: 2% and 3%.",
+    "Warren's wealth tax includes a 2% and a 3% bracket.",
+    "Two rates are shown: 2% and 3%."
+   ],
+   "visual_evidence_rule": "Both rate labels '2%' and '3%' must be visible as separate bars or annotations.",
+   "temporal_anchor": "the clause introducing the tax structure",
+   "reviewer_question": "Must the video explicitly show both 2% and 3% as separate tax rates?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 3% rate has a higher relative value than the 2% rate (0.7668 vs 0.5111).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2%",
+     "x": "2%",
+     "field": "relative_value",
+     "value": 0.5111,
+     "note": "lower relative value"
+    },
+    {
+     "entity": "3%",
+     "x": "3%",
+     "field": "relative_value",
+     "value": 0.7668,
+     "note": "higher relative value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 3% bar is taller than the 2% bar.",
+    "The 3% rate's relative value exceeds the 2% rate's (0.7668 > 0.5111).",
+    "The 2% tier has a lower relative value than the 3% tier."
+   ],
+   "visual_evidence_rule": "Two bars must be visible with the 3% bar taller/higher than the 2% bar.",
+   "temporal_anchor": "the clause discussing the revenue potential of the rates",
+   "reviewer_question": "Is the ordering/comparison between the two rates required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 3% rate's relative value is about 1.5 times the 2% rate's relative value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2%",
+     "x": "2%",
+     "field": "relative_value",
+     "value": 0.5111,
+     "note": "denominator for the ratio"
+    },
+    {
+     "entity": "3%",
+     "x": "3%",
+     "field": "relative_value",
+     "value": 0.7668,
+     "note": "numerator for the ratio"
+    }
+   ],
+   "computation": "0.7668 / 0.5111 = 1.5003",
+   "accepted_routes": [
+    "The 3% rate is about 1.5× the 2% relative value.",
+    "The 3% bar is roughly 50% higher than the 2% bar.",
+    "Relative value increases by about 50% from the 2% to the 3% rate."
+   ],
+   "visual_evidence_rule": "The bar heights must show a roughly 3:2 ratio (or 1.5×).",
+   "temporal_anchor": "the clause comparing the two rates' effects",
+   "reviewer_question": "Should the 1.5× multiplier be required, or is the simple ordering enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 3% rate's relative value is 0.7668, the higher of the two values.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "3%",
+     "x": "3%",
+     "field": "relative_value",
+     "value": 0.7668,
+     "note": "maximum relative value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 3% rate reaches a relative value of 0.7668.",
+    "The highest relative value shown is 0.7668 at the 3% rate.",
+    "The 3% bar's relative value is 0.7668."
+   ],
+   "visual_evidence_rule": "The 3% bar must be labeled or annotated with 0.7668 (or its height must encode this value).",
+   "temporal_anchor": "the clause describing the revenue potential of the 3% rate",
+   "reviewer_question": "Is the exact 0.7668 value required, or is the comparison to the 2% rate sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 2% rate's relative value is 0.5111, the lower of the two values.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2%",
+     "x": "2%",
+     "field": "relative_value",
+     "value": 0.5111,
+     "note": "minimum relative value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2% rate has a relative value of 0.5111.",
+    "The lower bar reaches 0.5111 at the 2% rate.",
+    "The 2% tier's relative value is 0.5111."
+   ],
+   "visual_evidence_rule": "The 2% bar must be labeled or annotated with 0.5111 (or its height must encode this value).",
+   "temporal_anchor": "the clause describing the revenue potential of the 2% rate",
+   "reviewer_question": "Is the exact 0.5111 value required, or is the comparison to the 3% rate sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The difference between the two relative values is 0.2557 (0.7668 - 0.5111).",
+  "The 2% rate is the lower tax tier.",
+  "The 3% rate is the higher tax tier."
+ ],
+ "unsupported_to_avoid": [
+  "the narration's $200 billion 2016 revenue figure",
+  "the narration's 0.05% richest population share",
+  "causal claims about economic effects of the tax",
+  "extrapolating revenue beyond the table's relative values"
+ ],
+ "notes": "The table supplies two rate tiers and their relative values, not the narration's dollar amount or population share. Treat the 2% vs 3% comparison as core; exact values and the 1.5× ratio are reviewer-dependent.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 37.6,
+  "usage": {
+   "prompt_tokens": 715,
+   "completion_tokens": 9801,
+   "total_tokens": 10516,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8172
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 331
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

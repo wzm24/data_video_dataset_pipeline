@@ -1,0 +1,216 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_37",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the average student debt burden faced by individuals upon completing a bachelor's degree.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The average student debt owed by an individual with debt when they complete a bachelor's degree is about $30,000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "student debt",
+     "x": "bachelor's degree completion",
+     "field": "value",
+     "value": 30000,
+     "note": "Table value is 30000 usd; intent/narration anchor it to bachelor's completion."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "about $30,000",
+    "around thirty thousand dollars",
+    "an average debt of $30,000"
+   ],
+   "visual_evidence_rule": "A prominent $30,000 figure must be visible and linked to an individual graduate or bachelor's-completion context.",
+   "temporal_anchor": "when they get their bachelor's degree",
+   "reviewer_question": "Must the exact $30,000 amount be shown as the central value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The $30,000 is an average per person with debt, not the combined total of all U.S. student debt.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "student debt",
+     "x": "bachelor's degree completion",
+     "field": "value",
+     "value": 30000,
+     "note": "Single row; intent says average per individual, so there is no denominator for a national total."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "average person with debt owes about $30,000",
+    "$30,000 per person on average",
+    "not the total national student debt"
+   ],
+   "visual_evidence_rule": "Show one individual or average borrower; do not show a sum across all borrowers.",
+   "temporal_anchor": "average person with debt owes about $30,000",
+   "reviewer_question": "Must the clip explicitly distinguish per-person average from aggregate total debt?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The amount is denominated in U.S. dollars, using the table unit usd.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "student debt",
+     "x": "bachelor's degree completion",
+     "field": "value",
+     "value": 30000,
+     "note": "Table unit column is usd."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "$30,000",
+    "30,000 US dollars",
+    "thirty thousand USD"
+   ],
+   "visual_evidence_rule": "A dollar sign or USD label should accompany the numeric amount.",
+   "temporal_anchor": "average person with debt owes about $30,000",
+   "reviewer_question": "Is showing the currency denomination required or merely optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The dataset contains only one value, so the clip should not show a ranking or comparison among multiple debt categories or entities.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "student debt",
+     "x": "bachelor's degree completion",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Single row; relative_value 1.0 is a full normalized reference, not a percentage."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "single reference value",
+    "no other debt categories compared",
+    "only one series in the table"
+   ],
+   "visual_evidence_rule": "If a normalized scale appears, it has only one bar or segment; no second entity or category is implied.",
+   "temporal_anchor": "none / not in narration",
+   "reviewer_question": "Should the clip explicitly avoid multiple-category comparisons, or is that unnecessary?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The measurement point is bachelor's degree completion, not an annual rate or monthly payment.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "student debt",
+     "x": "bachelor's degree completion",
+     "field": "value",
+     "value": 30000,
+     "note": "Table x is blank; intent/narration place the value at bachelor's completion."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "when they get their bachelor's degree",
+    "at graduation with a bachelor's",
+    "upon completing a bachelor's degree"
+   ],
+   "visual_evidence_rule": "A graduation or bachelor's-completion marker should anchor the $30,000 figure, not an annual or monthly timeline.",
+   "temporal_anchor": "when they get their bachelor's degree",
+   "reviewer_question": "Must the clip anchor the $30,000 to bachelor's completion rather than a yearly amount?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing a large single $30,000 figure as the main on-screen value.",
+  "Using a dollar sign or USD label to reinforce the table unit.",
+  "Depicting a graduate or bachelor's completion symbol to contextualize the measurement point.",
+  "Framing the amount as a burden through visual weight, without adding unsupported numeric claims."
+ ],
+ "unsupported_to_avoid": [
+  "Do not show an annual per-year dollar amount as a data value; it is not in the table.",
+  "Do not show a combined total U.S. student debt dollar amount; the table only has a per-person average.",
+  "Do not imply an interest rate or interest calculation; the table has no interest data.",
+  "Do not treat relative_value 1.0 as 100% or as a percentage share.",
+  "Do not compare bachelor's debt to other degree levels, countries, or time periods; no such rows exist."
+ ],
+ "notes": "The table has one absolute USD value ($30,000), so most candidate units are framing and identity rather than trend or multi-entity comparison. The narration's yearly figure and combined-total framing are not supported by the table and should be avoided.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.95
+ },
+ "draft_cost": {
+  "sec": 36.3,
+  "usage": {
+   "prompt_tokens": 880,
+   "completion_tokens": 8204,
+   "total_tokens": 9084,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6753
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 368
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

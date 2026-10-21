@@ -1,0 +1,13 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series
+bar_105,"Less than $23,000",less-than-23-000-did not atte,150.3,,,0.7500,share,#dce0e3,svg_geometry,,svg_geometry,DIDN'T ATTEND COLLEGE
+bar_105,"Less than $23,000",less-than-23-000-attended col,150.3,,,0.2500,share,#4a5347,svg_geometry,,svg_geometry,ATTENDED COLLEGE
+bar_105,"$23,000 to $42,000",23-000-to-42-000-did not atte,333.7,,,0.6500,share,#dce0e3,svg_geometry,,svg_geometry,DIDN'T ATTEND COLLEGE
+bar_105,"$23,000 to $42,000",23-000-to-42-000-attended col,333.7,,,0.3500,share,#4a5347,svg_geometry,,svg_geometry,ATTENDED COLLEGE
+bar_105,"$42,000 to $68,000",42-000-to-68-000-did not atte,517.0,,,0.5000,share,#dce0e3,svg_geometry,,svg_geometry,DIDN'T ATTEND COLLEGE
+bar_105,"$42,000 to $68,000",42-000-to-68-000-attended col,517.0,,,0.5000,share,#4a5347,svg_geometry,,svg_geometry,ATTENDED COLLEGE
+bar_105,"$68,000 to $111,000",68-000-to-111-000-attended col,700.3,,,0.6500,share,#4a5347,svg_geometry,,svg_geometry,ATTENDED COLLEGE
+bar_105,"$68,000 to $111,000",68-000-to-111-000-did not atte,700.3,,,0.3500,share,#dce0e3,svg_geometry,,svg_geometry,DIDN'T ATTEND COLLEGE
+bar_105,"$111,000 to $176,000",111-000-to-176-000-attended col,883.7,,,0.5500,share,#4a5347,svg_geometry,,svg_geometry,ATTENDED COLLEGE
+bar_105,"$111,000 to $176,000",111-000-to-176-000-did not atte,883.7,,,0.1000,share,#dce0e3,svg_geometry,,svg_geometry,DIDN'T ATTEND COLLEGE
+bar_105,"More than $176,000",more-than-176-000-attended col,1067.0,,,0.5500,share,#4a5347,svg_geometry,,svg_geometry,ATTENDED COLLEGE
+bar_105,"More than $176,000",more-than-176-000-did not atte,1067.0,,,0.0500,share,#dce0e3,svg_geometry,,svg_geometry,DIDN'T ATTEND COLLEGE

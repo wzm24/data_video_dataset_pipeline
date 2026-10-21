@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_159,SGP,sgp,282.6,,,0.6667,relative,#7a7a7a,relative_only
+bar_159,JPN,jpn,407.6,,,0.6232,relative,#7a7a7a,relative_only
+bar_159,KOR,kor,532.5,,,0.6228,relative,#7a7a7a,relative_only
+bar_159,FIN,fin,657.5,,,0.6188,relative,#7a7a7a,relative_only
+bar_159,NZL,nzl,782.5,,,0.6024,relative,#7a7a7a,relative_only
+bar_159,UK,uk,907.5,,,0.5983,relative,#7a7a7a,relative_only
+bar_159,USA,usa,1032.5,,,0.5932,relative,#7a7a7a,relative_only
+bar_159,OECD,oecd,1157.5,,,0.5851,relative,#7a7a7a,relative_only

@@ -1,0 +1,283 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_102",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To highlight WeWork's status among top global startups and the controversy regarding its valuation.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Among the four listed startups, WeWork ranks fourth/lowest by value, behind Toutiao, Uber, and Didi.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Toutiao",
+     "x": "ranking",
+     "field": "value",
+     "value": 1.0,
+     "note": "highest listed value"
+    },
+    {
+     "entity": "Uber",
+     "x": "ranking",
+     "field": "value",
+     "value": 0.95,
+     "note": "second listed value"
+    },
+    {
+     "entity": "Didi",
+     "x": "ranking",
+     "field": "value",
+     "value": 0.71,
+     "note": "third listed value"
+    },
+    {
+     "entity": "WeWork",
+     "x": "ranking",
+     "field": "value",
+     "value": 0.56,
+     "note": "fourth/lowest listed value"
+    }
+   ],
+   "computation": "sort descending by value: 1.000 > 0.950 > 0.710 > 0.560",
+   "accepted_routes": [
+    "WeWork is the fourth highest-valued startup among the four shown",
+    "WeWork ranks last in this top-four startup set",
+    "Only Toutiao, Uber, and Didi rank above WeWork"
+   ],
+   "visual_evidence_rule": "Bars must be ordered descending, with WeWork shown as the fourth/lowest bar and labeled as WeWork.",
+   "temporal_anchor": "the narration clause 'WeWork is the fourth highest valued startup'",
+   "reviewer_question": "Must the video explicitly convey WeWork as fourth/last among these four, or is general top-startup context enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "WeWork's normalized value endpoint is 0.560 on the same scale where Toutiao is 1.000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "WeWork",
+     "x": "normalized valuation",
+     "field": "value",
+     "value": 0.56,
+     "note": "WeWork endpoint value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "WeWork's value is 0.560 on the normalized scale",
+    "WeWork is shown at 0.56 while the top bar is 1.000",
+    "WeWork's bar reaches 0.560"
+   ],
+   "visual_evidence_rule": "The WeWork bar endpoint or value label must show 0.560 (or 0.56).",
+   "temporal_anchor": "the 'fourth highest valued startup' clause or the WeWork value callout",
+   "reviewer_question": "Is WeWork's exact normalized value required, or is its rank/relative position sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "WeWork trails Didi by 0.150 in normalized value and trails Uber by 0.390.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Didi",
+     "x": "value gap vs WeWork",
+     "field": "value",
+     "value": 0.71,
+     "note": "Didi value"
+    },
+    {
+     "entity": "WeWork",
+     "x": "value gap vs Didi",
+     "field": "value",
+     "value": 0.56,
+     "note": "WeWork value"
+    },
+    {
+     "entity": "Uber",
+     "x": "value gap vs WeWork",
+     "field": "value",
+     "value": 0.95,
+     "note": "Uber value"
+    }
+   ],
+   "computation": "0.710 - 0.560 = 0.150; 0.950 - 0.560 = 0.390",
+   "accepted_routes": [
+    "WeWork is 0.150 behind Didi and 0.390 behind Uber",
+    "Didi's value is 0.150 higher than WeWork's; Uber's is 0.390 higher",
+    "WeWork sits below both Didi and Uber by those gaps"
+   ],
+   "visual_evidence_rule": "Didi and Uber bars must be visibly longer than WeWork; if gaps are labeled, show 0.150 and 0.390.",
+   "temporal_anchor": "the clause 'just behind Uber and its Chinese competitor'",
+   "reviewer_question": "Should the video compare WeWork to both Uber and Didi, or only to Didi (the Chinese competitor)?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "WeWork is the only listed startup below Didi's 0.710 value; Didi, Uber, and Toutiao are at or above 0.710.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "WeWork",
+     "x": "threshold comparison",
+     "field": "value",
+     "value": 0.56,
+     "note": "below 0.710"
+    },
+    {
+     "entity": "Didi",
+     "x": "threshold comparison",
+     "field": "value",
+     "value": 0.71,
+     "note": "threshold value"
+    },
+    {
+     "entity": "Uber",
+     "x": "threshold comparison",
+     "field": "value",
+     "value": 0.95,
+     "note": "above 0.710"
+    },
+    {
+     "entity": "Toutiao",
+     "x": "threshold comparison",
+     "field": "value",
+     "value": 1.0,
+     "note": "above 0.710"
+    }
+   ],
+   "computation": "threshold = Didi value 0.710; WeWork 0.560 < 0.710; Didi 0.710 = 0.710; Uber 0.950 > 0.710; Toutiao 1.000 > 0.710",
+   "accepted_routes": [
+    "WeWork is the only startup below Didi's 0.710 value",
+    "The other three listed startups are at or above 0.710",
+    "Didi's bar marks the cutoff that WeWork falls below"
+   ],
+   "visual_evidence_rule": "A reference line or annotation at Didi's 0.710 value should separate WeWork from the other bars.",
+   "temporal_anchor": "the overvaluation-controversy framing, if included",
+   "reviewer_question": "Is a threshold at Didi's value useful/required to emphasize WeWork's lower position, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "WeWork's value is 56.0% of Toutiao's top value and about 78.9% of Didi's value.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "WeWork",
+     "x": "ratio to top",
+     "field": "value",
+     "value": 0.56,
+     "note": "numerator"
+    },
+    {
+     "entity": "Toutiao",
+     "x": "ratio to top",
+     "field": "value",
+     "value": 1.0,
+     "note": "denominator for top ratio"
+    },
+    {
+     "entity": "Didi",
+     "x": "ratio to Didi",
+     "field": "value",
+     "value": 0.71,
+     "note": "denominator for Didi ratio"
+    }
+   ],
+   "computation": "0.560 / 1.000 = 0.560 = 56.0%; 0.560 / 0.710 ≈ 0.7887 = 78.9%",
+   "accepted_routes": [
+    "WeWork is at 56% of the top startup's value",
+    "WeWork is roughly 79% of Didi's value",
+    "WeWork's bar is a little under four-fifths of Didi's bar"
+   ],
+   "visual_evidence_rule": "Ratio annotation or comparative bar lengths must show WeWork at 56% of top and about 79% of Didi.",
+   "temporal_anchor": "the 'fourth highest valued startup' clause or the comparison to Didi",
+   "reviewer_question": "Should the video quantify WeWork as a fraction of the top/Didi, or keep the comparison qualitative?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A text or voiceover framing that WeWork was called massively/most overvalued, as in the intent and original narration; this is contextual controversy rather than a table-derived metric.",
+  "Highlighting WeWork's bar color/label differently to draw attention to its lower rank."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that WeWork's lower value proves it is overvalued.",
+  "Claims about startups outside the four listed or about current/actual world ranking beyond this table.",
+  "Using relative_value 0.3325 as a market share or share of total without a clear denominator.",
+  "Treating the 'just behind Uber' phrasing as implying a small Uber-WeWork gap; the table gap is 0.390."
+ ],
+ "notes": "The table supports a four-startup ranking and normalized value comparisons; overvaluation is only a framing/controversy, not a data column. Avoid arbitrary thresholds or denominators not present in the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 53.5,
+  "usage": {
+   "prompt_tokens": 689,
+   "completion_tokens": 13501,
+   "total_tokens": 14190,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11305
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 433
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

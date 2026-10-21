@@ -1,0 +1,126 @@
+{
+ "clip_id": "donut_4",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:able to pay bail @ bail"
+   ],
+   "assertion": {
+    "segment": "able to pay bail @ bail",
+    "expected_share": 0.14,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart label or annotation must show 14% for the able-to-pay bail category."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:unable to pay bail @ other"
+   ],
+   "assertion": {
+    "segment": "unable to pay bail @ other",
+    "expected_share": 0.86,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart label or annotation must show 86% for the unable-to-pay bail category."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:unable to pay bail @ other",
+    "mark:able to pay bail @ bail"
+   ],
+   "assertion": {
+    "greater": "unable to pay bail @ other",
+    "lesser": "able to pay bail @ bail",
+    "expected_ratio": 6.1429,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Either both 86% and 14% labels must be visible, or a difference annotation must show 72 percentage points."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:unable to pay bail @ other",
+    "mark:able to pay bail @ bail"
+   ],
+   "assertion": {
+    "greater": "unable to pay bail @ other",
+    "lesser": "able to pay bail @ bail",
+    "expected_ratio": 6.1429,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio annotation or both percentage labels must be visible so the 86:14 comparison can be read."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:able to pay bail @ bail",
+    "segment:unable to pay bail @ other"
+   ],
+   "assertion": {
+    "segment": "able to pay bail @ bail",
+    "expected_share": 0.14,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both shares as parts of a whole, such as a donut or 100% stacked bar."
+  }
+ ]
+}

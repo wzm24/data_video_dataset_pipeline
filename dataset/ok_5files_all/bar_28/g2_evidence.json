@@ -1,0 +1,123 @@
+{
+ "clip_id": "bar_28",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both rate labels '2%' and '3%' must be visible as separate bars or annotations."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:3% @ 3%",
+    "mark:2% @ 2%"
+   ],
+   "assertion": {
+    "greater": "3% @ 3%",
+    "lesser": "2% @ 2%",
+    "expected_ratio": 1.5003,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Two bars must be visible with the 3% bar taller/higher than the 2% bar."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2% @ 2%",
+    "mark:3% @ 3%"
+   ],
+   "assertion": {
+    "low": "2% @ 2%",
+    "low_value": 0.5111,
+    "high": "3% @ 3%",
+    "high_value": 0.7668,
+    "delta": 0.2557,
+    "ratio": 1.5003,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bar heights must show a roughly 3:2 ratio (or 1.5×)."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "3% @ 3%",
+    "extreme": "min",
+    "expected": 0.7668,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 3% bar must be labeled or annotated with 0.7668 (or its height must encode this value)."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2% @ 2%"
+   ],
+   "assertion": {
+    "mark": "2% @ 2%",
+    "field": "value",
+    "expected": 0.5111,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2% bar must be labeled or annotated with 0.5111 (or its height must encode this value)."
+  }
+ ]
+}

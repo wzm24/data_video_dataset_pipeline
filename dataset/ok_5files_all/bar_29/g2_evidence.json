@@ -1,0 +1,163 @@
+{
+ "clip_id": "bar_29",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "United States @ Advair monthly price",
+    "extreme": "max",
+    "expected": 318.863,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The U.S. bar must be visibly tallest and labeled or annotated with 318.863 or approximately 318.9; bars for other countries must be present for comparison."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:United States @ Advair monthly price",
+    "mark:Canada @ Advair monthly price"
+   ],
+   "assertion": {
+    "greater": "United States @ Advair monthly price",
+    "lesser": "Canada @ Advair monthly price",
+    "expected_ratio": 3.8779,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the U.S. and Canada bars must be visible, and the comparison or ratio to Canada must be shown or stated."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:United States @ Advair monthly price",
+    "mark:Other six countries (sum) @ Advair monthly price"
+   ],
+   "assertion": {
+    "low": "Other six countries (sum) @ Advair monthly price",
+    "low_value": 317.201,
+    "high": "United States @ Advair monthly price",
+    "high_value": 318.863,
+    "delta": 1.662,
+    "ratio": 1.0052,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The U.S. bar and either all six other bars or an average line labeled approximately 52.867 must be visible, with the approximately 6x comparison indicated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:United States @ Advair monthly price",
+    "mark:Canada @ Advair monthly price",
+    "mark:United Kingdom @ Advair monthly price",
+    "mark:Germany @ Advair monthly price",
+    "mark:France @ Advair monthly price",
+    "mark:Australia @ Advair monthly price",
+    "mark:Norway @ Advair monthly price"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "United States @ Advair monthly price",
+      "value": 318.863
+     },
+     {
+      "mark": "Canada @ Advair monthly price",
+      "value": 82.225
+     },
+     {
+      "mark": "United Kingdom @ Advair monthly price",
+      "value": 58.142
+     },
+     {
+      "mark": "Germany @ Advair monthly price",
+      "value": 49.885
+     },
+     {
+      "mark": "France @ Advair monthly price",
+      "value": 47.821
+     },
+     {
+      "mark": "Australia @ Advair monthly price",
+      "value": 42.316
+     },
+     {
+      "mark": "Norway @ Advair monthly price",
+      "value": 36.812
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars must be ordered or clearly labeled so the full descending ranking can be read."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:United States @ Advair monthly price",
+    "mark:Canada @ Advair monthly price"
+   ],
+   "assertion": {
+    "at": "Advair monthly price",
+    "above": "United States",
+    "above_value": 318.863,
+    "below": "Canada",
+    "below_value": 82.225,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The U.S. bar must cross a 300 reference line or be labeled 318.863; all other bars must remain below a 100 reference line or be labeled under 100."
+  }
+ ]
+}

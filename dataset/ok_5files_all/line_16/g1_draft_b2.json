@@ -1,0 +1,297 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_16",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that support for Scottish independence remains a minority view among the population based on polling data.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The YES/support series is consistently lower than the NO/oppose series at every shared poll point.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "NO",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.8512,
+     "note": "series NO; earliest point"
+    },
+    {
+     "entity": "YES",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.4256,
+     "note": "series YES; earliest point"
+    },
+    {
+     "entity": "NO",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.815,
+     "note": "series NO; latest point"
+    },
+    {
+     "entity": "YES",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.5071,
+     "note": "series YES; latest point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "NO is consistently above YES",
+    "YES never overtakes NO",
+    "NO leads YES at every poll",
+    "YES remains below NO throughout"
+   ],
+   "visual_evidence_rule": "Both series shown; NO marks stay above YES at every shared time point.",
+   "temporal_anchor": "Polls consistently show",
+   "reviewer_question": "Must the video show NO above YES at every poll point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest YES relative value remains below the lowest NO relative value, showing no overlap/crossing.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YES",
+     "x": "670.0",
+     "field": "relative_value",
+     "value": 0.5161,
+     "note": "series YES; highest"
+    },
+    {
+     "entity": "NO",
+     "x": "670.0",
+     "field": "relative_value",
+     "value": 0.7697,
+     "note": "series NO; lowest"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "YES peak stays below NO trough",
+    "NO never falls to YES level",
+    "No YES–NO crossing occurs",
+    "YES highest is still under NO lowest"
+   ],
+   "visual_evidence_rule": "YES peak and NO trough visible; YES stays below NO minimum.",
+   "temporal_anchor": "only a minority",
+   "reviewer_question": "Must the chart show YES never reaches NO's lowest level?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The DON'T KNOW series is the smallest relative series at every shared poll point.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "DON'T KNOW",
+     "x": "670.0",
+     "field": "relative_value",
+     "value": 0.0634,
+     "note": "series DON'T KNOW; lowest"
+    },
+    {
+     "entity": "DON'T KNOW",
+     "x": "303.3",
+     "field": "relative_value",
+     "value": 0.1358,
+     "note": "series DON'T KNOW; highest"
+    },
+    {
+     "entity": "YES",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.4256,
+     "note": "series YES; lowest YES"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "DON'T KNOW is below YES and NO",
+    "DON'T KNOW is the least chosen option",
+    "DON'T KNOW remains the bottom series"
+   ],
+   "visual_evidence_rule": "DON'T KNOW marks stay below both YES and NO series.",
+   "temporal_anchor": "Polls consistently show",
+   "reviewer_question": "Should the DON'T KNOW series be included as smallest option?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The YES/support series fluctuates but remains in a narrow relative band over the poll points.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YES",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.4256,
+     "note": "series YES; low"
+    },
+    {
+     "entity": "YES",
+     "x": "670.0",
+     "field": "relative_value",
+     "value": 0.5161,
+     "note": "series YES; high"
+    },
+    {
+     "entity": "YES",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.5071,
+     "note": "series YES; latest"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "YES never exceeds about 0.52",
+    "YES stays around 0.43 to 0.52",
+    "Support is stable at a low relative level",
+    "YES fluctuates in a narrow band"
+   ],
+   "visual_evidence_rule": "YES series stays within a narrow band across all poll points.",
+   "temporal_anchor": "Polls consistently show",
+   "reviewer_question": "Must the video show YES trend stability over multiple polls?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The NO–YES relative gap varies, widest at earliest point and narrowest mid-series.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "NO",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.8512,
+     "note": "series NO; earliest"
+    },
+    {
+     "entity": "YES",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.4256,
+     "note": "series YES; earliest"
+    },
+    {
+     "entity": "NO",
+     "x": "670.0",
+     "field": "relative_value",
+     "value": 0.7697,
+     "note": "series NO; mid-series"
+    },
+    {
+     "entity": "YES",
+     "x": "670.0",
+     "field": "relative_value",
+     "value": 0.5161,
+     "note": "series YES; mid-series"
+    }
+   ],
+   "computation": "0.8512 - 0.4256 = 0.4256; 0.7697 - 0.5161 = 0.2536",
+   "accepted_routes": [
+    "NO lead is largest at first poll",
+    "NO lead is smallest mid-series",
+    "Gap between NO and YES varies",
+    "NO advantage narrows then changes"
+   ],
+   "visual_evidence_rule": "Distance between NO and YES marks varies across poll points.",
+   "temporal_anchor": "Polls consistently show",
+   "reviewer_question": "Must the video show how the NO–YES gap changes over time?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "DON'T KNOW is the smallest option throughout",
+  "NO–YES gap widest at earliest point and narrowest mid-series",
+  "NO series remains the highest relative series at all poll points",
+  "YES series low around 0.4256 and high around 0.5161"
+ ],
+ "unsupported_to_avoid": [
+  "Absolute percentages, counts, or vote shares",
+  "Claims about Scottish population or referendum outcome",
+  "Causal reasons for support or opposition",
+  "Extrapolating beyond listed poll points",
+  "Treating relative_value as a percentage or majority threshold"
+ ],
+ "notes": "Table has only relative_value, so units use relative comparisons and trends. YES series stays below NO series throughout, supporting minority relative position.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 49.4,
+  "usage": {
+   "prompt_tokens": 1705,
+   "completion_tokens": 11323,
+   "total_tokens": 13028,
+   "prompt_tokens_details": {
+    "cached_tokens": 1536
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9586
+   },
+   "prompt_cache_hit_tokens": 1536,
+   "prompt_cache_miss_tokens": 169
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

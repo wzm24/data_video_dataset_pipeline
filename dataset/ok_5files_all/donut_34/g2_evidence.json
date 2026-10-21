@@ -1,0 +1,127 @@
+{
+ "clip_id": "donut_34",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:80% @ 0"
+   ],
+   "assertion": {
+    "mark": "80% @ 0",
+    "field": "value",
+    "expected": 80.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The donut chart must have a dominant 80% slice clearly labeled and tied to the fair-share belief."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:remainder @ 1"
+   ],
+   "assertion": {
+    "mark": "remainder @ 1",
+    "field": "value",
+    "expected": 20.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 20% remainder slice is visible and labeled if the full donut composition is shown."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:80% @ 0"
+   ],
+   "assertion": {
+    "series": "80%",
+    "values": [
+     80.0
+    ],
+    "threshold_between": [
+     80.0,
+     80.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Annotation or narration must explicitly call the 80% slice a majority or large majority, not just present a bare number."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:80% @ 0",
+    "segment:remainder @ 1"
+   ],
+   "assertion": {
+    "segment": "80% @ 0",
+    "expected_share": 0.8,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both slices are shown with their labels so the donut visually sums to a complete whole."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:80% @ 0",
+    "mark:remainder @ 1"
+   ],
+   "assertion": {
+    "greater": "80% @ 0",
+    "lesser": "remainder @ 1",
+    "expected_ratio": 4.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Either slice sizes or an annotation should make the 4-to-1 ratio visible."
+  }
+ ]
+}

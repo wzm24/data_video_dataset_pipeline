@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F0F0F0"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">2016 INTERNATIONAL VISITOR SPENDING</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="510.3" x2="1220" y2="510.3" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="510.3" stroke="#666666" stroke-width="3"/>
+<g id="entity-dubai-value" data-role="entity" data-entity-id="dubai" data-label="Dubai">
+<rect id="dubai-value-bar" data-role="bar" data-entity-id="dubai" data-value="1" x="395.0" y="235.7" width="41.8" height="274.6" fill="#6A9FDB" rx="10.0" ry="10.0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="dubai-value-label" data-role="category-label" data-entity-id="dubai" x="415.9" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Dubai</text>
+</g>
+<g id="entity-london-value" data-role="entity" data-entity-id="london" data-label="London">
+<rect id="london-value-bar" data-role="bar" data-entity-id="london" data-value="0.6281" x="490.7" y="338.3" width="41.8" height="172.5" fill="#6A9FDB" rx="10.0" ry="10.0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="london-value-label" data-role="category-label" data-entity-id="london" x="511.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">London</text>
+</g>
+<g id="entity-ny-value" data-role="entity" data-entity-id="ny" data-label="NY">
+<rect id="ny-value-bar" data-role="bar" data-entity-id="ny" data-value="0.5812" x="570.0" y="350.7" width="41.8" height="159.6" fill="#6A9FDB" rx="10.0" ry="10.0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="ny-value-label" data-role="category-label" data-entity-id="ny" x="590.9" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">NY</text>
+</g>
+<g id="entity-singapore-value" data-role="entity" data-entity-id="singapore" data-label="Singapore">
+<rect id="singapore-value-bar" data-role="bar" data-entity-id="singapore" data-value="0.5494" x="652.5" y="359.9" width="41.8" height="150.9" fill="#6A9FDB" rx="10.0" ry="10.0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="singapore-value-label" data-role="category-label" data-entity-id="singapore" x="673.4" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Singapore</text>
+</g>
+<g id="entity-bangkok-value" data-role="entity" data-entity-id="bangkok" data-label="Bangkok">
+<rect id="bangkok-value-bar" data-role="bar" data-entity-id="bangkok" data-value="0.5025" x="742.5" y="372.8" width="41.8" height="138.0" fill="#6A9FDB" rx="10.0" ry="10.0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="bangkok-value-label" data-role="category-label" data-entity-id="bangkok" x="763.4" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Bangkok</text>
+</g>
+<g id="entity-paris-value" data-role="entity" data-entity-id="paris" data-label="Paris">
+<rect id="paris-value-bar" data-role="bar" data-entity-id="paris" data-value="0.4372" x="828.5" y="390.2" width="41.8" height="120.1" fill="#6A9FDB" rx="10.0" ry="10.0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="paris-value-label" data-role="category-label" data-entity-id="paris" x="849.4" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Paris</text>
+</g>
+<g id="entity-tokyo-value" data-role="entity" data-entity-id="tokyo" data-label="Tokyo">
+<rect id="tokyo-value-bar" data-role="bar" data-entity-id="tokyo" data-value="0.3903" x="914.2" y="403.1" width="41.8" height="107.2" fill="#6A9FDB" rx="10.0" ry="10.0" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="tokyo-value-label" data-role="category-label" data-entity-id="tokyo" x="935.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Tokyo</text>
+</g>
+</g>
+</svg>

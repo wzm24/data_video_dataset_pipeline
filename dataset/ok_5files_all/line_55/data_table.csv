@@ -1,0 +1,13 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_55,effectiveness against hospitalization,effectiveness-against-hospitalization,160.0,,86.2195,0.8500,%,#557eb5,axis_calibrated
+line_55,effectiveness against hospitalization,effectiveness-against-hospitalization,328.0,,89.2195,0.8800,%,#557eb5,axis_calibrated
+line_55,effectiveness against hospitalization,effectiveness-against-hospitalization,496.0,,91.2195,0.9000,%,#557eb5,axis_calibrated
+line_55,effectiveness against hospitalization,effectiveness-against-hospitalization,664.0,,93.2195,0.9200,%,#557eb5,axis_calibrated
+line_55,effectiveness against hospitalization,effectiveness-against-hospitalization,832.0,,91.2195,0.9000,%,#557eb5,axis_calibrated
+line_55,effectiveness against hospitalization,effectiveness-against-hospitalization,1000.0,,87.2195,0.8600,%,#557eb5,axis_calibrated
+line_55,effectiveness against infection,effectiveness-against-infection,160.0,,86.2195,0.8500,%,#b34b40,axis_calibrated
+line_55,effectiveness against infection,effectiveness-against-infection,328.0,,83.2195,0.8200,%,#b34b40,axis_calibrated
+line_55,effectiveness against infection,effectiveness-against-infection,496.0,,77.2195,0.7600,%,#b34b40,axis_calibrated
+line_55,effectiveness against infection,effectiveness-against-infection,664.0,,67.2195,0.6600,%,#b34b40,axis_calibrated
+line_55,effectiveness against infection,effectiveness-against-infection,832.0,,71.2195,0.7000,%,#b34b40,axis_calibrated
+line_55,effectiveness against infection,effectiveness-against-infection,1000.0,,48.2195,0.4700,%,#b34b40,axis_calibrated

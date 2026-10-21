@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_133",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Russia @ 1990",
+    "mark:USA @ 1965"
+   ],
+   "assertion": {
+    "greater": "Russia @ 1990",
+    "lesser": "USA @ 1965",
+    "expected_ratio": 1.2196,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the 2015 values and the Cold War peak values for the compared series so the lower current values are visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Other)"
+   ],
+   "assertion": {
+    "mark": "Russia @ 1990",
+    "extreme": "min",
+    "expected": 0.4504,
+    "compared_set": "Other",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 1990 Russia value identifiable as the highest in the data."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Other)"
+   ],
+   "assertion": {
+    "mark": "USA @ 1965",
+    "extreme": "min",
+    "expected": 0.3693,
+    "compared_set": "Other",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the USA 1965 value as the USA series maximum."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Russia @ 1990",
+    "mark:Russia @ 2015"
+   ],
+   "assertion": {
+    "low": "Russia @ 2015",
+    "low_value": 0.0927,
+    "high": "Russia @ 1990",
+    "high_value": 0.4504,
+    "delta": 0.3577,
+    "ratio": 4.8587,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both the 2015 Russia value and the 1990 Russia value so their ratio is visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:USA @ 2015",
+    "mark:Russia @ 2015"
+   ],
+   "assertion": {
+    "greater": "USA @ 2015",
+    "lesser": "Russia @ 2015",
+    "expected_ratio": 1.041,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both 2015 values simultaneously so their closeness can be seen."
+  }
+ ]
+}

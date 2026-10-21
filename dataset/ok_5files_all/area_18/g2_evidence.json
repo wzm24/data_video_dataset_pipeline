@@ -1,0 +1,149 @@
+{
+ "clip_id": "area_18",
+ "family": "area",
+ "chart_form": "area/bubble",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:MOON @ 0"
+   ],
+   "assertion": {
+    "mark": "MOON @ 0",
+    "field": "value",
+    "expected": 3474.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Moon must be labeled or scaled to its 3,474 km diameter; if a size scale is used, the Moon's size encoding must correspond to 3,474 km."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:MARS @ 0",
+    "mark:MOON @ 0"
+   ],
+   "assertion": {
+    "greater": "MARS @ 0",
+    "lesser": "MOON @ 0",
+    "expected_ratio": 1.9514,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Moon's circle/bar must appear smaller than the corresponding shapes/bars for Mars, Earth, Neptune, and Jupiter."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:JUPITER @ 0",
+    "mark:NEPTUNE @ 0",
+    "mark:EARTH @ 0",
+    "mark:MARS @ 0",
+    "mark:MOON @ 0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "JUPITER @ 0",
+      "value": 142984.0
+     },
+     {
+      "mark": "NEPTUNE @ 0",
+      "value": 49528.0
+     },
+     {
+      "mark": "EARTH @ 0",
+      "value": 12742.0
+     },
+     {
+      "mark": "MARS @ 0",
+      "value": 6779.0
+     },
+     {
+      "mark": "MOON @ 0",
+      "value": 3474.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the five bodies in descending size order or a scale that preserves Jupiter > Neptune > Earth > Mars > Moon."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:MOON @ 0",
+    "segment:EARTH @ 0"
+   ],
+   "assertion": {
+    "segment": "MOON @ 0",
+    "expected_share": 0.0161,
+    "total_of": "km_diameter",
+    "total": 215507.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Earth and Moon must be shown side-by-side or otherwise visually compared, with a ratio/percent label or a scale showing Moon ≈ 27% of Earth's diameter."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:MOON @ 0",
+    "segment:JUPITER @ 0",
+    "segment:MOON @ 0"
+   ],
+   "assertion": {
+    "segment": "MOON @ 0",
+    "expected_share": 0.0161,
+    "total_of": "km_diameter",
+    "total": 215507.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Jupiter and Moon must be shown side-by-side or on a shared scale with a ratio/percent label or a scale showing Moon ≈ 2.4% of Jupiter's diameter."
+  }
+ ]
+}

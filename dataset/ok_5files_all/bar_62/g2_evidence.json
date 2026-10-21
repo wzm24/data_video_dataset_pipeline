@@ -1,0 +1,177 @@
+{
+ "clip_id": "bar_62",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:DAIRY · EMISSIONS @ emissions",
+    "mark:RICE @ emissions",
+    "mark:SOY @ emissions",
+    "mark:OAT @ emissions",
+    "mark:ALMOND @ emissions"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "DAIRY · EMISSIONS @ emissions",
+      "value": 1.0
+     },
+     {
+      "mark": "RICE @ emissions",
+      "value": 0.25
+     },
+     {
+      "mark": "SOY @ emissions",
+      "value": 0.25
+     },
+     {
+      "mark": "OAT @ emissions",
+      "value": 0.18
+     },
+     {
+      "mark": "ALMOND @ emissions",
+      "value": 0.18
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Emissions panel shows bars for dairy, rice, soy, oat, almond at 1.000, 0.250, 0.250, 0.180, 0.180 respectively."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:DAIRY · EMISSIONS @ emissions",
+    "mark:RICE @ emissions",
+    "mark:SOY @ emissions",
+    "mark:OAT @ emissions",
+    "mark:ALMOND @ emissions"
+   ],
+   "assertion": {
+    "low": "OAT @ emissions",
+    "low_value": 0.18,
+    "high": "DAIRY · EMISSIONS @ emissions",
+    "high_value": 1.0,
+    "delta": 0.82,
+    "ratio": 5.5556,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart or annotation shows percent reduction relative to dairy emissions, or the bars allow computing it with dairy baseline visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:RICE · LAND USE @ land use",
+    "mark:SOY · LAND USE @ land use",
+    "mark:OAT · LAND USE @ land use",
+    "mark:ALMOND · LAND USE @ land use"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "RICE · LAND USE @ land use",
+      "value": 0.05
+     },
+     {
+      "mark": "SOY · LAND USE @ land use",
+      "value": 0.05
+     },
+     {
+      "mark": "OAT · LAND USE @ land use",
+      "value": 0.2
+     },
+     {
+      "mark": "ALMOND · LAND USE @ land use",
+      "value": 0.2
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Land-use panel shows bars for rice, soy, oat, almond; rice/soy at 0.050 and oat/almond at 0.200."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:DAIRY · WATER USE @ water use",
+    "mark:SOY · WATER USE @ water use"
+   ],
+   "assertion": {
+    "greater": "DAIRY · WATER USE @ water use",
+    "lesser": "SOY · WATER USE @ water use",
+    "expected_ratio": 10.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Water-use panel shows bars for dairy, rice, soy, oat, almond at 1.000, 0.500, 0.100, 0.100, 0.670 respectively."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:DAIRY · WATER USE @ water use",
+    "mark:SOY · WATER USE @ water use",
+    "mark:OAT · WATER USE @ water use",
+    "mark:RICE · WATER USE @ water use",
+    "mark:ALMOND · WATER USE @ water use"
+   ],
+   "assertion": {
+    "low": "SOY · WATER USE @ water use",
+    "low_value": 0.1,
+    "high": "DAIRY · WATER USE @ water use",
+    "high_value": 1.0,
+    "delta": 0.9,
+    "ratio": 10.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart or annotation shows percent reductions relative to dairy water use, or the bars allow computing it with dairy baseline visible."
+  }
+ ]
+}

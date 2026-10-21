@@ -1,0 +1,139 @@
+{
+ "clip_id": "line_86",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:trust percentage @ historical peak (row 108)",
+    "mark:trust percentage @ latest/low endpoint (row 1)",
+    "mark:trust percentage @ oldest/high endpoint (row 109)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "trust percentage @ historical peak (row 108)",
+      "value": 77.0
+     },
+     {
+      "mark": "trust percentage @ latest/low endpoint (row 1)",
+      "value": 24.0
+     },
+     {
+      "mark": "trust percentage @ oldest/high endpoint (row 109)",
+      "value": 73.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A line chart must show a downward trend from the high end of the series to the low end, with the peak near 77% and the latest point near 24%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:trust percentage @ first row (latest/low endpoint)"
+   ],
+   "assertion": {
+    "mark": "trust percentage @ first row (latest/low endpoint)",
+    "field": "value",
+    "expected": 24.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The latest/current point on the time axis must be visible and marked or read at 24%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "trust percentage @ row 108 (peak)",
+    "extreme": "max",
+    "expected": 77.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest point on the line must be marked or read at 77%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:trust percentage @ rows 1-20 (recent cluster)"
+   ],
+   "assertion": {
+    "series": "trust percentage",
+    "values": [
+     29.0
+    ],
+    "threshold_between": [
+     29.0,
+     29.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The recent segment of the line must sit at or below 29%, without spikes above it."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "trust percentage @ row 16 (minimum)",
+    "extreme": "min",
+    "expected": 10.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The minimum point on the line must be marked or read at 10%."
+  }
+ ]
+}

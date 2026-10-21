@@ -1,0 +1,156 @@
+{
+ "clip_id": "bar_34",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Uninsured United States @ Uninsured United States",
+    "extreme": "min",
+    "expected": 0.5616,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual encoding must make the Uninsured United States value clearly the highest or top-ranked among all eight listed entities."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Insured United States @ Insured United States"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Insured United States @ Insured United States",
+      "value": 0.3366
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The visual encoding must show Insured United States as second in order and above every non-US listed entity."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Uninsured United States @ Uninsured United States",
+    "mark:Insured United States @ Insured United States"
+   ],
+   "assertion": {
+    "greater": "Uninsured United States @ Uninsured United States",
+    "lesser": "Insured United States @ Insured United States",
+    "expected_ratio": 1.6684,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual encoding must make the difference between the two US values apparent, not just their top-two ranks."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Insured United States @ Insured United States",
+    "mark:Canada @ Canada"
+   ],
+   "assertion": {
+    "greater": "Insured United States @ Insured United States",
+    "lesser": "Canada @ Canada",
+    "expected_ratio": 2.0425,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual encoding must clearly separate the two US values from the non-US country values, with Canada shown as the top non-US entity."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Canada @ Canada",
+    "mark:Switzerland @ Switzerland",
+    "mark:Australia @ Australia",
+    "mark:France @ France",
+    "mark:Germany @ Germany",
+    "mark:United Kingdom @ United Kingdom"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Canada @ Canada",
+      "value": 0.1648
+     },
+     {
+      "mark": "Switzerland @ Switzerland",
+      "value": 0.1476
+     },
+     {
+      "mark": "Australia @ Australia",
+      "value": 0.0978
+     },
+     {
+      "mark": "France @ France",
+      "value": 0.0653
+     },
+     {
+      "mark": "Germany @ Germany",
+      "value": 0.0481
+     },
+     {
+      "mark": "United Kingdom @ United Kingdom",
+      "value": 0.0325
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If all non-US countries are shown, the visual encoding should preserve the non-US ordering from Canada down to the United Kingdom."
+  }
+ ]
+}

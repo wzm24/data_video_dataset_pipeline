@@ -1,0 +1,241 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_63",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the decline and eventual eradication of global smallpox cases, setting up an explanation for how it was achieved.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The final reported smallpox case counts in the table were 20,000 in both 1977 and 1980, tied for the lowest values in the series.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "1977",
+     "field": "value",
+     "value": 20000,
+     "note": "reported smallpox cases in 1977"
+    },
+    {
+     "entity": "reported cases",
+     "x": "1980",
+     "field": "value",
+     "value": 20000,
+     "note": "reported smallpox cases in 1980"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "reported cases ended at 20,000 in 1980, also 20,000 in 1977",
+    "by 1977 and 1980 cases had fallen to 20,000, the lowest values in the table",
+    "the final data point is 20,000 reported cases in 1980"
+   ],
+   "visual_evidence_rule": "The final plotted point(s) for 1977 and 1980 must be visible at or labeled with 20,000 on the y-axis, with no plotted point below that.",
+   "temporal_anchor": "and then it was gone",
+   "reviewer_question": "Must the final 20,000 endpoint be explicitly stated or labeled, or is a visually low endpoint enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The initial reported smallpox case count in the table was 400,000 in 1920.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "1920",
+     "field": "value",
+     "value": 400000,
+     "note": "reported smallpox cases in 1920"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the series starts at 400,000 reported cases in 1920",
+    "in 1920 there were 400,000 reported cases",
+    "initial reported cases were 400,000"
+   ],
+   "visual_evidence_rule": "The first plotted point for 1920 must be visible at or labeled with 400,000 on a shared y-axis.",
+   "temporal_anchor": "We completely wiped it out of existence",
+   "reviewer_question": "Must the 1920 starting value of 400,000 be shown or stated as the baseline for the decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From 1920 to 1980, reported cases fell by 95%: 20,000 in 1980 is 5% of the 400,000 reported in 1920.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "1920",
+     "field": "value",
+     "value": 400000,
+     "note": "baseline value"
+    },
+    {
+     "entity": "reported cases",
+     "x": "1980",
+     "field": "value",
+     "value": 20000,
+     "note": "final value"
+    }
+   ],
+   "computation": "1 - (20000 / 400000) = 0.95 = 95%; 20000 / 400000 = 0.05 = 5%",
+   "accepted_routes": [
+    "cases fell 95% from 400,000 in 1920 to 20,000 in 1980",
+    "1980 reported cases were only 5% of the 1920 level",
+    "a 95% reduction between 1920 and 1980",
+    "a drop of 380,000 cases from 400,000 in 1920 to 20,000 in 1980"
+   ],
+   "visual_evidence_rule": "Both the 1920 value (400,000) and the 1980 value (20,000) must be readable, or an annotation must state the 95% / 5% relationship.",
+   "temporal_anchor": "We completely wiped it out of existence",
+   "reviewer_question": "Must the video quantify the 1920-to-1980 decline as 95% (or 5% of 1920), or is an unquantified downward trend acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The highest reported case count in the table was 620,000 in 1949.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "1949",
+     "field": "value",
+     "value": 620000,
+     "note": "maximum reported smallpox cases in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "cases peaked at 620,000 in 1949",
+    "the highest value in the table is 620,000 in 1949",
+    "1949 saw the largest reported case count, 620,000"
+   ],
+   "visual_evidence_rule": "A local maximum at 1949 must be visible and labeled or readable as 620,000.",
+   "temporal_anchor": "We completely wiped it out of existence",
+   "reviewer_question": "Is the 1949 peak required context for the decline, or can it be omitted in a 15-20s clip?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "From the 1949 peak of 620,000 to the 1980 value of 20,000, reported cases fell by about 96.8%; the 1980 value is about 3.2% of the 1949 peak.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "reported cases",
+     "x": "1949",
+     "field": "value",
+     "value": 620000,
+     "note": "peak value"
+    },
+    {
+     "entity": "reported cases",
+     "x": "1980",
+     "field": "value",
+     "value": 20000,
+     "note": "final value"
+    }
+   ],
+   "computation": "(620000 - 20000) / 620000 = 0.9677 = 96.8%; 20000 / 620000 = 0.0323 = 3.2%",
+   "accepted_routes": [
+    "from 620,000 in 1949 to 20,000 in 1980, a 96.8% decline",
+    "1980 cases were about 3.2% of the 1949 peak",
+    "a drop of 600,000 cases from 1949 to 1980"
+   ],
+   "visual_evidence_rule": "Both the 1949 peak (620,000) and the 1980 endpoint (20,000) must be readable, or an annotation must state the 96.8% / 3.2% relationship.",
+   "temporal_anchor": "We completely wiped it out of existence",
+   "reviewer_question": "If the 1949 peak is shown, must the video quantify the peak-to-1980 decline as 96.8% (or 3.2% of peak)?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The decline is not monotonic: cases rose from 100,000 in 1973 to 210,000 in 1975 before falling to 20,000 in 1977.",
+  "1951 has the second-highest reported case count in the table, 550,000.",
+  "1950 reported cases were 420,000, higher than the 1920 starting value of 400,000.",
+  "The only values below 100,000 are 80,000 in 1971 and 20,000 in 1977 and 1980.",
+  "1977 and 1980 are tied at 20,000, the lowest values in the table."
+ ],
+ "unsupported_to_avoid": [
+  "Zero cases in 1977 or 1980; the table lists 20,000 in both years.",
+  "Treating eradication as a table value; the table does not contain a zero.",
+  "Claiming a steady or monotonic decline; the table includes rebounds such as 100,000 in 1973 to 210,000 in 1975.",
+  "Causal claims about vaccination, WHO campaigns, or ring vaccination from this table alone.",
+  "Extrapolating before 1920 or after 1980.",
+  "Mixing up the 1920 value (400,000) with the 1949 peak (620,000).",
+  "Using percentages with a denominator other than a specific table cell or explicitly stated arithmetic combination."
+ ],
+ "notes": "The table's final values are 20,000, not zero, so 'eradication' is only supported as narrative framing unless external context is allowed. The strongest data-derived units are the 1920 and 1980 endpoints, the 95% 1920-to-1980 decline, and the optional 1949 peak-to-end decline.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 60.3,
+  "usage": {
+   "prompt_tokens": 1382,
+   "completion_tokens": 14516,
+   "total_tokens": 15898,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12451
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 1126
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

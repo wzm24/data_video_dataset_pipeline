@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#e9e9e9"/>
+<polygon points="56,38 56,150 560,150 500,94 560,38" fill="#2e0f38"/>
+<text x="556" y="112" text-anchor="end" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#ffd518">REALITY</text>
+<rect x="210" y="240" width="330" height="330" fill="#ec8a02"/>
+<polygon points="180,616 560,616 590,588 150,588" fill="#c96d00"/>
+<text x="372" y="606" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#4a2500">AVERAGE DEATH BY CAR</text>
+<text x="372" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#4a2500">ON ONE DAY IN 2014</text>
+<rect x="820" y="370" width="230" height="230" fill="#ee552b"/>
+<polygon points="790,616 1040,616 1060,588 770,588" fill="#c93a12"/>
+<text x="915" y="606" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#5c1200">DEATH BY PLANE</text>
+<text x="915" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#5c1200">ALL OF 2014</text>
+</svg>

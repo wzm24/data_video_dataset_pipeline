@@ -1,0 +1,276 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_156",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the financial risk of relying on high returns from reported assets to cover the gap between those assets and actual liabilities.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The video must identify Reported Assets and Actual Liabilities as the compared entities, including the backfilled Reported Assets (bar-3) entry.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "reported-assets row"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "actual-liabilities row"
+    },
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "backfilled bar-3 Reported Assets row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Reported Assets and Actual Liabilities are the entities being compared.",
+    "The chart shows reported assets versus actual liabilities.",
+    "The comparison includes a backfilled Reported Assets value.",
+    "Assets versus liabilities, with a secondary reported-assets entry."
+   ],
+   "visual_evidence_rule": "Both entity names must appear as data labels or annotations, and the backfilled Reported Assets entry must be distinguishable from the primary Reported Assets entry.",
+   "temporal_anchor": "the opening asset-versus-liability framing in the narration.",
+   "reviewer_question": "Must the video explicitly label both entities and the backfilled Reported Assets entry, or is a general asset-vs-liability comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Primary Reported Assets and Actual Liabilities have equal relative value, both 0.2632.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "reported-assets row"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "actual-liabilities row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Reported assets and actual liabilities are tied at about 0.263 on the relative scale.",
+    "The primary reported-assets value and actual-liabilities value are equal.",
+    "Both show the same relative magnitude, roughly 0.26.",
+    "No relative difference between the primary reported assets and actual liabilities."
+   ],
+   "visual_evidence_rule": "The chart must show or label the primary Reported Assets and Actual Liabilities values as equal at 0.2632.",
+   "temporal_anchor": "the clause comparing the assets with the unfunded liability or liability gap.",
+   "reviewer_question": "Should the equality of primary Reported Assets and Actual Liabilities be required, or is a general relative comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Actual Liabilities relative value (0.2632) exceeds the backfilled Reported Assets bar-3 relative value (0.2485) by 0.0147 relative units.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "actual-liabilities row"
+    },
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "backfilled bar-3 Reported Assets row"
+    }
+   ],
+   "computation": "0.2632 - 0.2485 = 0.0147",
+   "accepted_routes": [
+    "Actual liabilities are about 0.015 higher than the backfilled reported-assets value.",
+    "The bar-3 Reported Assets value is lower than Actual Liabilities by roughly 0.015 relative units.",
+    "Liabilities exceed the secondary reported-assets value.",
+    "The backfilled reported-assets entry falls short of liabilities by about 0.015."
+   ],
+   "visual_evidence_rule": "The chart must show Actual Liabilities as higher than the bar-3 Reported Assets value, or label the difference as 0.0147.",
+   "temporal_anchor": "the clause about the unfunded liability and the risk or gap it creates.",
+   "reviewer_question": "Should the video be required to convey that actual liabilities exceed the backfilled reported-assets value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Ranking: the highest relative value is 0.2632, tied by primary Reported Assets and Actual Liabilities; the lowest is 0.2485 for backfilled Reported Assets.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "reported-assets row"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "actual-liabilities row"
+    },
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "backfilled bar-3 Reported Assets row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Highest are tied at about 0.263, lowest is about 0.249.",
+    "The backfilled reported-assets value is at the bottom of the relative order.",
+    "Order from highest to lowest: primary reported assets = actual liabilities > backfilled reported assets.",
+    "The top relative values tie, while the bar-3 reported-assets value is lowest."
+   ],
+   "visual_evidence_rule": "The chart must make the tie at 0.2632 and the lower 0.2485 value apparent.",
+   "temporal_anchor": "the overall asset/liability comparison portion of the narration.",
+   "reviewer_question": "Is an explicit ranking or tie order required, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The spread between the highest relative value (0.2632) and the lowest relative value (0.2485) is 0.0147 relative units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "one of the highest values, reported-assets row"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "one of the highest values, actual-liabilities row"
+    },
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "lowest value, backfilled bar-3 Reported Assets row"
+    }
+   ],
+   "computation": "0.2632 - 0.2485 = 0.0147",
+   "accepted_routes": [
+    "All relative values are within about 0.015 of each other.",
+    "The maximum-to-minimum spread is roughly 0.015 relative units.",
+    "High and low differ by about 0.015.",
+    "The relative values are clustered within a 0.0147 range."
+   ],
+   "visual_evidence_rule": "The chart must show both the highest and lowest relative values, or label the spread as 0.0147.",
+   "temporal_anchor": "the overall risk or comparison summary.",
+   "reviewer_question": "Should the narrow spread be required context, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Show the backfilled Reported Assets (bar-3) entry as secondary or uncertain because source_type is semantic_svg_order_backfill.",
+  "Mention that the relative values cluster around 0.25-0.26.",
+  "Note the tie for highest relative value without an explicit rank order."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute dollar amount from the narration, including $3.6 trillion or $3.4 trillion.",
+  "Percentages or absolute quantities derived from relative_value, such as 26.3%.",
+  "Claims about high returns, profits, risky investments, or returns reducing liabilities.",
+  "Causal claims that asset returns will cover the unfunded liability.",
+  "Chart type, colors, axis ticks, positions, or other rendering details."
+ ],
+ "notes": "All numeric claims are relative_value-based because the table has no absolute value column. The backfilled Reported Assets row is treated as optional/uncertain due to source_type.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 51.1,
+  "usage": {
+   "prompt_tokens": 897,
+   "completion_tokens": 12865,
+   "total_tokens": 13762,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10881
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 513
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,284 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_1",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that driving alone is the dominant mode of commuting to work for Americans.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Drive alone is the largest commuting mode, accounting for 76.3% of the total—over three-quarters.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "Table value is 76.3%; relative_value is 0.7630."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Drive alone accounts for 76.3% of commuting mode share.",
+    "76.3% of commuters drive alone to work.",
+    "Driving alone is the biggest slice at 76.3%, over three-quarters.",
+    "Drive alone is 76.3%, the dominant mode."
+   ],
+   "visual_evidence_rule": "A chart mark for Drive alone must be labeled or directly readable as 76.3% and visually the largest slice/bar.",
+   "temporal_anchor": "overwhelming majority of Americans get to work by driving alone",
+   "reviewer_question": "Must the video explicitly show or state 76.3% for Drive alone, or is 'overwhelming majority' without the number acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "All other commuting modes combined total only 23.7%, so drive alone at 76.3% is a majority and more than three times all other modes combined.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "Table value is 76.3%."
+    },
+    {
+     "entity": "Public transportation",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.2,
+     "note": "Table value is 5.2%."
+    },
+    {
+     "entity": "Taxi, motorcycle, or other",
+     "x": "mode share",
+     "field": "value",
+     "value": 1.7,
+     "note": "Table value is 1.7%."
+    },
+    {
+     "entity": "Work at home",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.1,
+     "note": "Table value is 5.1%."
+    },
+    {
+     "entity": "Walk",
+     "x": "mode share",
+     "field": "value",
+     "value": 2.5,
+     "note": "Table value is 2.5%."
+    },
+    {
+     "entity": "Carpool",
+     "x": "mode share",
+     "field": "value",
+     "value": 8.2,
+     "note": "Table value is 8.2%."
+    },
+    {
+     "entity": "Bicycle",
+     "x": "mode share",
+     "field": "value",
+     "value": 1.0,
+     "note": "Table value is 1.0%."
+    }
+   ],
+   "computation": "Sum non-Drive-alone shares: 5.2 + 1.7 + 5.1 + 2.5 + 8.2 + 1.0 = 23.7; ratio 76.3 / 23.7 ≈ 3.22x.",
+   "accepted_routes": [
+    "All other modes combined total 23.7%.",
+    "Drive alone is 76.3%, while every other mode together is 23.7%.",
+    "Driving alone is more than three times all other modes combined, about 3.2x.",
+    "The remaining 23.7% is split across all other commuting modes."
+   ],
+   "visual_evidence_rule": "The chart must make the non-Drive-alone total readable or show all other slices/bars summing to about 23.7%, with Drive alone at 76.3%.",
+   "temporal_anchor": "overwhelming majority of Americans get to work by driving alone",
+   "reviewer_question": "Should the video be required to contrast Drive alone against all other modes combined, or is the 76.3% largest-slice fact enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Carpool is the second-largest commuting mode at 8.2%, far behind drive alone's 76.3%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Carpool",
+     "x": "mode share",
+     "field": "value",
+     "value": 8.2,
+     "note": "Table value is 8.2%."
+    },
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "Table value is 76.3%."
+    }
+   ],
+   "computation": "Ordering: 76.3 > 8.2 > 5.2 > 5.1 > 2.5 > 1.7 > 1.0.",
+   "accepted_routes": [
+    "Carpool is the next most common mode after driving alone, at 8.2%.",
+    "After Drive alone, carpooling is the second-largest mode with 8.2%.",
+    "Drive alone's nearest competitor is carpooling at 8.2%."
+   ],
+   "visual_evidence_rule": "Carpool must be visually or textually identifiable as the second-largest category, with 8.2% visible/readable.",
+   "temporal_anchor": "optional; if present, attach to the same 'driving alone' dominance clause",
+   "reviewer_question": "Is the second-place mode, carpool at 8.2%, required to convey dominance, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Drive alone is about 9.3 times as common as the next-largest mode, carpool, comparing 76.3% with 8.2%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "Table value is 76.3%."
+    },
+    {
+     "entity": "Carpool",
+     "x": "mode share",
+     "field": "value",
+     "value": 8.2,
+     "note": "Table value is 8.2%."
+    }
+   ],
+   "computation": "76.3 / 8.2 = 9.304878..., rounded to about 9.3x.",
+   "accepted_routes": [
+    "Drive alone is about 9.3 times as common as carpooling.",
+    "The drive-alone share is more than nine times the carpool share.",
+    "Carpooling is 8.2% compared with 76.3% for driving alone, a roughly 9.3x gap."
+   ],
+   "visual_evidence_rule": "Both Drive alone 76.3% and Carpool 8.2% must be visible/readable if this ratio is stated.",
+   "temporal_anchor": "optional; if used, immediately follow the 'overwhelming majority ... driving alone' clause",
+   "reviewer_question": "Should the video include the explicit ratio to the next-largest mode, or is that over-explaining the dominance?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Drive alone exceeds carpool by 68.1 percentage points, since 76.3% minus 8.2% equals 68.1 points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "Table value is 76.3%."
+    },
+    {
+     "entity": "Carpool",
+     "x": "mode share",
+     "field": "value",
+     "value": 8.2,
+     "note": "Table value is 8.2%."
+    }
+   ],
+   "computation": "76.3 - 8.2 = 68.1 percentage points.",
+   "accepted_routes": [
+    "Drive alone leads carpool by 68.1 percentage points.",
+    "The gap between drive alone and carpool is 68.1 percentage points.",
+    "Drive alone is 68.1 points above the second-place carpool."
+   ],
+   "visual_evidence_rule": "Drive alone 76.3% and Carpool 8.2% must both be visible/readable if this gap is stated.",
+   "temporal_anchor": "optional; if used, part of the dominance comparison clause",
+   "reviewer_question": "Is a percentage-point gap required, or is it redundant with the share and ranking facts?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Public transportation is 5.2% of commuting mode share.",
+  "Work at home is 5.1% of commuting mode share.",
+  "Walk is 2.5% of commuting mode share.",
+  "Bicycle is the smallest listed mode at 1.0%.",
+  "Taxi, motorcycle, or other is 1.7% of commuting mode share.",
+  "Public transportation, at 5.2%, is slightly above work at home, at 5.1%."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as driving alone is one reason for any outcome or why it is not ideal.",
+  "Extrapolating from the table to all Americans, all workers, or population counts not in the table.",
+  "Treating Drive alone 76.3% as a share of all Americans rather than of commuting mode share in this chart.",
+  "Claiming exact rankings without checking the table, such as public transportation being second.",
+  "Summing categories to something other than the table-consistent total or using the wrong denominator.",
+  "Separating Taxi or motorcycle as its own mode instead of the combined table category 'Taxi, motorcycle, or other'."
+ ],
+ "notes": "The strongest required core is Drive alone as the largest share at 76.3%; the all-other-combined contrast is the clearest way to show dominance but may be optional depending on reviewer standards. Optional ranking and ratio units are included as trade-offs, not obligations.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 38.4,
+  "usage": {
+   "prompt_tokens": 759,
+   "completion_tokens": 9752,
+   "total_tokens": 10511,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7333
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 503
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

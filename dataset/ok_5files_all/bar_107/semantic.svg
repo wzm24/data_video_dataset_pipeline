@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#f4f4f2"/>
+<g>
+<rect x="280.0" y="444.9" width="240.0" height="115.0" fill="#d4a017"/>
+<text x="400.0" y="430.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222222">$59B</text>
+<text x="400.0" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">DEPT. OF EDUCATION</text>
+<text x="400.0" y="636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">FY 2018 BUDGET</text>
+<rect x="760.0" y="197.9" width="240.0" height="362.1" fill="#c9302c"/>
+<text x="880.0" y="183.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222222">$185.7B</text>
+<text x="880.0" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">TAXES LOST WITH 4</text>
+<text x="880.0" y="636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">PERCENTAGE POINTS MORE CHEATING</text>
+<line x1="160.0" y1="560.0" x2="1120.0" y2="560.0" stroke="#999999" stroke-width="2"/>
+<text x="640" y="690" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#777777">Congressional Budget Office</text>
+</g></svg>

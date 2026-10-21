@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_14",
+ "intent_en": "To demonstrate that the birth rate in Sub-Saharan Africa remains significantly higher than in other global regions.",
+ "previous_intent": "To demonstrate that Sub-Saharan Africa's birth rate remains significantly higher than in East Asia, North America, and the European Union, highlighting a persistent demographic disparity despite slowing growth.",
+ "narration_support": "Although its growth rate has slowed down in the last few decades, it's still much higher than in the rest of the world.",
+ "chart_support": "Icon bar chart titled 'Births Per Woman in 2017' showing Sub-Saharan Africa has a much higher value than East Asia, North America, and the European Union.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration mentions a high rate compared to the rest of the world despite a slowdown, while the chart visualizes 'Births Per Woman in 2017' with Sub-Saharan Africa (4.7) being much higher than East Asia (1.8), North America (1.7), and the EU (1.6). Note: The narration refers to 'growth rate' while the chart shows 'births per woman' (fertility rate), which are closely related demographic indicators.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

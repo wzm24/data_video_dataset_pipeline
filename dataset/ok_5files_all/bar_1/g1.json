@@ -1,0 +1,109 @@
+{
+ "clip_id": "bar_1",
+ "version": "g1_r_u_v1",
+ "intent": "Compare the travel time to the Moon by car, Boeing 747, and spacecraft: report each duration and how the three compare.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "What is the travel time to the Moon for CAR, BOING 747, and SPACESHIP?",
+   "relation": "all_of",
+   "unit_ids": [
+    "U1",
+    "U2",
+    "U3"
+   ],
+   "scope": {
+    "entities": [
+     "CAR",
+     "BOING 747",
+     "SPACESHIP"
+    ],
+    "measure": "travel time",
+    "time": "one trip to the Moon"
+   }
+  },
+  {
+   "id": "R2",
+   "question": "How do the three travel times compare?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ],
+   "scope": {
+    "entities": [
+     "CAR",
+     "BOING 747",
+     "SPACESHIP"
+    ],
+    "measure": "travel time",
+    "time": "one trip to the Moon"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "CAR's travel time is the label 'a lot of time'.",
+   "accept": [
+    "Show or state 'a lot of time' for CAR"
+   ],
+   "reject": [
+    "Inventing a numeric number of days for CAR"
+   ],
+   "evidence": "The CAR row/label shows 'a lot of time'."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R1",
+   "claim": "BOING 747's travel time is 28 days.",
+   "accept": [
+    "28 days",
+    "twenty-eight days"
+   ],
+   "reject": [
+    "Any other value"
+   ],
+   "evidence": "The BOING 747 row/label shows 28 days."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R1",
+   "claim": "SPACESHIP's travel time is 2 days.",
+   "accept": [
+    "two full days",
+    "2 days"
+   ],
+   "reject": [
+    "Any other value"
+   ],
+   "evidence": "The SPACESHIP row/label shows 2 days."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R2",
+   "claim": "The ordering is CAR > BOING 747 > SPACESHIP.",
+   "accept": [
+    "Full ordering: CAR > BOING 747 > SPACESHIP",
+    "Pairwise covering the whole chain: CAR is much longer than BOING 747, and BOING 747 is 14x SPACESHIP (28 vs 2 days)",
+    "Relative bar lengths show the full order"
+   ],
+   "reject": [
+    "Listing values without comparing",
+    "Comparing only BOING 747 and SPACESHIP while omitting CAR",
+    "Saying CAR is the fastest"
+   ],
+   "evidence": "Bar lengths or a written comparison support the full order."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-20"
+}

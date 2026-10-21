@@ -1,0 +1,319 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_159",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that while U.S. students score above the OECD average on PISA exams, they are outperformed by students in countries like Finland and Japan, which achieve higher scores with significantly fewer teaching hours.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The U.S. has a slightly higher relative PISA score than the OECD average.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.5932,
+     "note": "U.S. relative score"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5851,
+     "note": "OECD average relative score"
+    }
+   ],
+   "computation": "USA.relative_value - OECD.relative_value = 0.5932 - 0.5851 = 0.0081 (relative-scale difference)",
+   "accepted_routes": [
+    "The U.S. is slightly above the OECD average.",
+    "USA edges out the OECD on the relative PISA score.",
+    "USA (0.5932) is just above OECD (0.5851)."
+   ],
+   "visual_evidence_rule": "USA and OECD are both identifiable and their encoded values are visibly ordered with USA higher than OECD.",
+   "temporal_anchor": "the clause 'Students in the U.S. score slightly above the OECD average'",
+   "reviewer_question": "Should the video explicitly state or show that the U.S. is above the OECD average?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The U.S. is outperformed by Finland and Japan in relative PISA score.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.5932,
+     "note": "U.S. relative score"
+    },
+    {
+     "entity": "FIN",
+     "x": "FIN",
+     "field": "relative_value",
+     "value": 0.6188,
+     "note": "Finland relative score"
+    },
+    {
+     "entity": "JPN",
+     "x": "JPN",
+     "field": "relative_value",
+     "value": 0.6232,
+     "note": "Japan relative score"
+    }
+   ],
+   "computation": "FIN.relative_value - USA.relative_value = 0.6188 - 0.5932 = 0.0256; JPN.relative_value - USA.relative_value = 0.6232 - 0.5932 = 0.0300 (relative-scale differences)",
+   "accepted_routes": [
+    "Finland and Japan score higher than the U.S.",
+    "The U.S. is below Finland and Japan.",
+    "Finland (0.6188) and Japan (0.6232) outperform USA (0.5932)."
+   ],
+   "visual_evidence_rule": "Finland, Japan, and USA are all identifiable and both Finland and Japan have encoded values above USA.",
+   "temporal_anchor": "the clause 'but they score lower than students in countries like Finland and Japan'",
+   "reviewer_question": "Must the video show both Finland and Japan as higher than the U.S.?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The U.S. is also outperformed by South Korea and Singapore.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.5932,
+     "note": "U.S. relative score"
+    },
+    {
+     "entity": "KOR",
+     "x": "KOR",
+     "field": "relative_value",
+     "value": 0.6228,
+     "note": "South Korea relative score"
+    },
+    {
+     "entity": "SGP",
+     "x": "SGP",
+     "field": "relative_value",
+     "value": 0.6667,
+     "note": "Singapore relative score"
+    }
+   ],
+   "computation": "KOR.relative_value - USA.relative_value = 0.6228 - 0.5932 = 0.0296; SGP.relative_value - USA.relative_value = 0.6667 - 0.5932 = 0.0735 (relative-scale differences)",
+   "accepted_routes": [
+    "South Korea and Singapore also score above the U.S.",
+    "The U.S. trails South Korea and Singapore as well.",
+    "Korea (0.6228) and Singapore (0.6667) are above USA (0.5932)."
+   ],
+   "visual_evidence_rule": "South Korea, Singapore, and USA are identifiable and both South Korea and Singapore have encoded values above USA.",
+   "temporal_anchor": "the broader clause 'countries like Finland, South Korea, Japan, and Singapore'",
+   "reviewer_question": "Is it optional to show South Korea and Singapore as additional outperformers beyond Finland and Japan?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among all eight listed entities, the ranking from highest to lowest is Singapore, Japan, South Korea, Finland, New Zealand, UK, USA, then OECD.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "SGP",
+     "x": "SGP",
+     "field": "relative_value",
+     "value": 0.6667,
+     "note": "highest listed relative value"
+    },
+    {
+     "entity": "JPN",
+     "x": "JPN",
+     "field": "relative_value",
+     "value": 0.6232,
+     "note": "second listed relative value"
+    },
+    {
+     "entity": "KOR",
+     "x": "KOR",
+     "field": "relative_value",
+     "value": 0.6228,
+     "note": "third listed relative value"
+    },
+    {
+     "entity": "FIN",
+     "x": "FIN",
+     "field": "relative_value",
+     "value": 0.6188,
+     "note": "fourth listed relative value"
+    },
+    {
+     "entity": "NZL",
+     "x": "NZL",
+     "field": "relative_value",
+     "value": 0.6024,
+     "note": "fifth listed relative value"
+    },
+    {
+     "entity": "UK",
+     "x": "UK",
+     "field": "relative_value",
+     "value": 0.5983,
+     "note": "sixth listed relative value"
+    },
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.5932,
+     "note": "seventh listed relative value"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5851,
+     "note": "lowest listed relative value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Singapore is highest, OECD is lowest; the full order is SGP > JPN > KOR > FIN > NZL > UK > USA > OECD.",
+    "The listed entities rank from Singapore at the top down to the OECD at the bottom.",
+    "USA is second-lowest, above only the OECD average."
+   ],
+   "visual_evidence_rule": "All eight listed entities are displayed with an ordering that matches SGP > JPN > KOR > FIN > NZL > UK > USA > OECD.",
+   "temporal_anchor": "the comparison clause covering the listed countries and the OECD average",
+   "reviewer_question": "Must the video preserve the full eight-entity ranking, or only the USA-vs-OECD and USA-vs-Finland/Japan comparisons?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The U.S. lead over the OECD is much smaller than the Finland/Japan lead over the U.S.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.5932,
+     "note": "U.S. relative score"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5851,
+     "note": "OECD relative score"
+    },
+    {
+     "entity": "FIN",
+     "x": "FIN",
+     "field": "relative_value",
+     "value": 0.6188,
+     "note": "Finland relative score"
+    },
+    {
+     "entity": "JPN",
+     "x": "JPN",
+     "field": "relative_value",
+     "value": 0.6232,
+     "note": "Japan relative score"
+    }
+   ],
+   "computation": "USA - OECD = +0.0081; FIN - USA = 0.0256; JPN - USA = 0.0300. Thus 0.0081 is smaller than 0.0256 and 0.0300.",
+   "accepted_routes": [
+    "The U.S. barely beats the OECD but trails Finland and Japan by larger margins.",
+    "USA's advantage over OECD is smaller than its deficit to Finland and Japan.",
+    "USA is +0.0081 vs OECD, while Finland is +0.0256 and Japan +0.0300 above USA."
+   ],
+   "visual_evidence_rule": "The gaps between USA-OECD, Finland-USA, and Japan-USA are visible; the USA-OECD gap appears smaller than the other two.",
+   "temporal_anchor": "the paired contrast between 'slightly above the OECD average' and 'score lower than ... Finland and Japan'",
+   "reviewer_question": "Should the video emphasize that the U.S.-OECD gap is small compared with the U.S.-Finland/Japan gaps?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "USA also trails UK and New Zealand in the listed relative scores.",
+  "Singapore has the highest relative value among the listed entities and the OECD has the lowest."
+ ],
+ "unsupported_to_avoid": [
+  "Teaching hours are lower in Finland, Japan, or Singapore than in the U.S. (no teaching-hours data in the table).",
+  "Fewer teaching hours cause higher PISA scores (causal claim).",
+  "Absolute PISA scores, percentages, counts, or dollar amounts (table is relative-only).",
+  "The U.S. is above average among all OECD countries (only the listed OECD average row is available).",
+  "Finland and Japan are the only countries that outperform the U.S. (the table also has SGP, KOR, NZL, and UK above USA)."
+ ],
+ "notes": "The table is relative-only, so all units are phrased as relative comparisons or order. The teaching-hours part of the narration is not supported by the table and is listed as unsupported.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 45.7,
+  "usage": {
+   "prompt_tokens": 1146,
+   "completion_tokens": 10891,
+   "total_tokens": 12037,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8546
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 634
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

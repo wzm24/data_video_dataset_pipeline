@@ -1,0 +1,285 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_44",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the exponential growth of Berkshire Hathaway's stock price since Warren Buffett took control of the company in 1965.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip is about one series: Berkshire Hathaway Class A stock price (BRK-A) measured in USD over the period from 1965 to 2020 in the table.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "BRK-A price",
+     "x": "2020.97",
+     "field": "value",
+     "value": 429825,
+     "note": "endpoint used to identify the BRK-A price series; unit is usd; time span is 1965–2020.97 in x_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The video tracks Berkshire Hathaway Class A stock price from 1965 through 2020.",
+    "It shows the BRK-A price series in USD from 1965 to 2020.",
+    "The subject is one stock-price series, BRK-A, over the 1965–2020 period."
+   ],
+   "visual_evidence_rule": "The chart must identify the series as BRK-A price in USD and cover the 1965–2020 time span.",
+   "temporal_anchor": "When Buffett took over the company in 1965 / Today",
+   "reviewer_question": "Must the video explicitly name BRK-A / Berkshire Hathaway Class A stock price, or is the stock-price series implied by the chart?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The series reaches its maximum at the end: 429,825 USD in 2020.97, with relative_value 1.0000, making the final point the highest and top-of-scale value.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "BRK-A price",
+     "x": "2020.97",
+     "field": "value",
+     "value": 429825,
+     "note": "final/maximum value in table"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2020.97",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "relative_value is 1.0000, the maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The price ends at $429,825 per BRK-A share in 2020.",
+    "The highest BRK-A price in the table is about $429,825 in 2020.",
+    "The final value is 429,825 USD, the maximum and top of the relative scale."
+   ],
+   "visual_evidence_rule": "The final/maximum point must be visibly marked or labeled as 429,825 USD (or about 430k USD), with relative_value 1.0.",
+   "temporal_anchor": "Today, it's worth nearly half a million dollars",
+   "reviewer_question": "Must the exact final value 429,825 USD be shown, or is 'about 430k USD' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The final price is roughly 1,400 times the first nonzero price shown in the table: 429,825 USD at 2020.97 divided by 307 USD at 1982.89.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "BRK-A price",
+     "x": "1982.89",
+     "field": "value",
+     "value": 307,
+     "note": "first nonzero value in table"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2020.97",
+     "field": "value",
+     "value": 429825,
+     "note": "final/maximum value"
+    }
+   ],
+   "computation": "429825 / 307 = 1400.08x",
+   "accepted_routes": [
+    "The price grew about 1,400-fold from the first nonzero table value of $307 in 1982 to $429,825 in 2020.",
+    "From 1982.89 to 2020.97, the value multiplied by roughly 1,400.",
+    "The final price is about 1,400 times the first recorded nonzero BRK-A price."
+   ],
+   "visual_evidence_rule": "The chart must support a comparison between the first nonzero value 307 USD (1982.89) and the final value 429,825 USD (2020.97), or show the resulting ~1,400x growth.",
+   "temporal_anchor": "the overall growth arc; not just the Today clause",
+   "reviewer_question": "Should the growth multiple be measured from the first nonzero table value (1982.89, 307 USD) or should the video avoid a multiple because the 1965 table value is 0 USD?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The largest absolute gains happen in the later years: from 2015.01 to 2020.97, the price rises from 185,175 USD to 429,825 USD, an increase of 244,650 USD (about 2.32x).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "BRK-A price",
+     "x": "2015.01",
+     "field": "value",
+     "value": 185175,
+     "note": "value at 2015.01"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2020.97",
+     "field": "value",
+     "value": 429825,
+     "note": "final value"
+    }
+   ],
+   "computation": "429825 - 185175 = 244650; 429825 / 185175 = 2.32x",
+   "accepted_routes": [
+    "From 2015 to 2020 the price increased by about $244,650, from $185,175 to $429,825.",
+    "The last five years contribute a gain of roughly 2.3 times the 2015 value.",
+    "The steepest late rise lifts the price from about $185k to about $430k."
+   ],
+   "visual_evidence_rule": "The chart must make the late-period steepness visible by showing the 2015 value 185,175 USD and the 2020 value 429,825 USD, or annotating the 244,650 USD gain.",
+   "temporal_anchor": "the final growth segment leading into the Today clause",
+   "reviewer_question": "Is the late-period acceleration (2015–2020 gain of 244,650 USD) required, or is the overall 1,400x growth enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The price crosses major six-figure thresholds: 100,000 USD around 2000.53, 200,000 USD around 2010.51, 300,000 USD around 2017.57, and 400,000 USD around 2020.73.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "BRK-A price",
+     "x": "2000.41",
+     "field": "value",
+     "value": 94298,
+     "note": "just below 100k"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2000.53",
+     "field": "value",
+     "value": 104167,
+     "note": "first above 100k"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2010.39",
+     "field": "value",
+     "value": 186228,
+     "note": "just below 200k"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2010.51",
+     "field": "value",
+     "value": 205702,
+     "note": "first above 200k"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2017.44",
+     "field": "value",
+     "value": 297193,
+     "note": "just below 300k"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2017.57",
+     "field": "value",
+     "value": 303246,
+     "note": "first above 300k"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2020.61",
+     "field": "value",
+     "value": 398553,
+     "note": "just below 400k"
+    },
+    {
+     "entity": "BRK-A price",
+     "x": "2020.73",
+     "field": "value",
+     "value": 419561,
+     "note": "first above 400k"
+    }
+   ],
+   "computation": "threshold crossings identified by consecutive table values around 100000, 200000, 300000, 400000",
+   "accepted_routes": [
+    "The price passes $100k near 2000, $200k near 2010, $300k near 2017, and $400k near 2020.",
+    "Major milestones are crossed in the 2000s, 2010s, and 2020.",
+    "The curve crosses 100k, 200k, 300k, and 400k USD at successive later dates."
+   ],
+   "visual_evidence_rule": "The chart must show the curve passing the 100k, 200k, 300k, and 400k USD levels, or annotate those crossings.",
+   "temporal_anchor": "growth arc between 1965 and Today",
+   "reviewer_question": "Should the video explicitly mark all four six-figure crossings, or only the final 400k approach?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The table records 0 USD for 1965–1982.77 and first nonzero 307 USD at 1982.89; this explains a visually flat early segment on the final scale.",
+  "The price crosses half of its final value (214,912.5 USD) around 2010.63, when it reaches 217,193 USD; formula: 429825 / 2 = 214912.5."
+ ],
+ "unsupported_to_avoid": [
+  "A share cost $19 in 1965.",
+  "Buffett owns nearly 240,000 shares.",
+  "The price is exactly half a million dollars.",
+  "Causal claims that Buffett's management caused the price growth.",
+  "Extrapolation after 2020.97.",
+  "Using relative_value as a percentage."
+ ],
+ "notes": "The table has 0 USD for 1965–1982.77 and first nonzero 307 USD at 1982.89, so growth from 1965 is not directly computable without treating 0 as a price. Narration references to $19 and 240,000 shares are not supported by this table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 54.6,
+  "usage": {
+   "prompt_tokens": 17355,
+   "completion_tokens": 13459,
+   "total_tokens": 30814,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10934
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 16715
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

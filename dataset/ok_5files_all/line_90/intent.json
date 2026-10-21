@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_90",
+ "intent_en": "To illustrate the timeline and key phases of the US military conflict in Iraq, from the 2003 invasion through the insurgency and surge to the withdrawal in 2010.",
+ "previous_intent": "To illustrate the timeline of US military involvement in Iraq, tracking key conflict phases from the 2003 invasion through the insurgency surge to the withdrawal in 2010.",
+ "narration_support": "The hammer blows of the American attack started what turned into a decade of insurgency.",
+ "chart_support": "Line chart spanning 2003 to 2010, marking key events: Invasion, Insurgency Grows, Surge Peaks, and US Forces Leave Cities.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration introduces the start of the conflict and the decade-long insurgency, while the chart visualizes this timeline (2003-2010) with specific labeled phases of military engagement and troop movements.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

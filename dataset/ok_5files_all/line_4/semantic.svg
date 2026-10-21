@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#111111"/>
+<text id="chart-title" data-role="title" x="640.0" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">&#x27;Net additions&#x27; in England</text>
+<g id="chart-plot" data-role="plot">
+<rect id="target-band" data-role="target-band" x="120" y="63.8" width="1100" height="69.9" fill="#ffe08a" fill-opacity="0.30" stroke="#ffd75e" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text id="target-band-label" data-role="target-band-label" x="132" y="94.8" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffd75e">300-345k target</text>
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="56" x2="120" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="522.3" x2="1220" y2="522.3" stroke="#aaaaaa" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="444.6" x2="1220" y2="444.6" stroke="#aaaaaa" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="366.9" x2="1220" y2="366.9" stroke="#aaaaaa" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="289.1" x2="1220" y2="289.1" stroke="#aaaaaa" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="211.4" x2="1220" y2="211.4" stroke="#aaaaaa" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="133.7" x2="1220" y2="133.7" stroke="#aaaaaa" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="56.0" x2="1220" y2="56.0" stroke="#aaaaaa" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="tick" x1="112" y1="522.3" x2="120" y2="522.3" stroke="#aaaaaa" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="528.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">50k</text>
+<line data-role="tick" x1="112" y1="444.6" x2="120" y2="444.6" stroke="#aaaaaa" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="450.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">100k</text>
+<line data-role="tick" x1="112" y1="366.9" x2="120" y2="366.9" stroke="#aaaaaa" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="372.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">150k</text>
+<line data-role="tick" x1="112" y1="289.1" x2="120" y2="289.1" stroke="#aaaaaa" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="295.1" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">200k</text>
+<line data-role="tick" x1="112" y1="211.4" x2="120" y2="211.4" stroke="#aaaaaa" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="217.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">250k</text>
+<line data-role="tick" x1="112" y1="133.7" x2="120" y2="133.7" stroke="#aaaaaa" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="139.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">300k</text>
+<line data-role="tick" x1="112" y1="56.0" x2="120" y2="56.0" stroke="#aaaaaa" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="62.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">350k</text>
+<g id="entity-series-1" data-role="entity" data-entity-id="series-1" data-label="series 1" data-series="true">
+<polyline id="series-1-polyline" data-role="polyline" data-entity-id="series-1" points="120.0,394.8 181.1,372.0 242.2,351.5 303.3,334.3 364.4,311.6 425.6,285.0 486.7,265.9 547.8,252.6 608.9,315.9 670.0,374.8 731.1,386.5 792.2,381.2 853.3,397.0 914.4,378.5 975.6,325.5 1036.7,296.1 1097.8,253.0 1158.9,245.4 1220.0,214.9" fill="none" stroke="#ffffff" stroke-width="2" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">2000-01</text>
+<text data-role="x-axis-label" x="731.1" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">2010-11</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#aaaaaa">2018-09</text>
+</g>
+</svg>

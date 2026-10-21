@@ -1,0 +1,239 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_21",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that a majority of Americans believe there is too much economic inequality in the United States.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The largest substantive survey response is 'Too much' economic inequality, selected by 61% of respondents.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Too much",
+     "x": "slice-1",
+     "field": "value",
+     "value": 61,
+     "note": "61% is the largest value among the three substantive response categories."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "61% said there is too much economic inequality.",
+    "The top response was 'too much' at 61%.",
+    "About 60% chose 'too much'.",
+    "61 percent selected the 'too much' response."
+   ],
+   "visual_evidence_rule": "The 'Too much' slice/bar must be visibly labeled 61% and be the largest substantive response slice.",
+   "temporal_anchor": "the clause 'most Americans said that there was too much economic inequality'",
+   "reviewer_question": "Must the video state 61% for 'too much,' or is showing the largest slice without the number sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 61% 'too much' share is a majority, i.e., more than half of respondents.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Too much",
+     "x": "slice-1",
+     "field": "value",
+     "value": 61,
+     "note": "61% is above one-half; the majority threshold is implicit in the intent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "A majority (61%) said there is too much economic inequality.",
+    "More than half chose 'too much.'",
+    "The majority response was 'too much' at 61%.",
+    "61% is above the halfway mark."
+   ],
+   "visual_evidence_rule": "The chart must frame 'Too much' as the majority/more-than-half response, not merely as one slice among three.",
+   "temporal_anchor": "the clause 'most Americans said that there was too much economic inequality'",
+   "reviewer_question": "Must the animation explicitly frame 61% as a majority or more-than-half, separate from just being the largest slice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "About a quarter of respondents, 23%, said there is the right amount of economic inequality.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "The right amount",
+     "x": "slice-3",
+     "field": "value",
+     "value": 23,
+     "note": "23% is the 'right amount' response."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "23% said the amount was about right.",
+    "About a quarter (23%) chose 'the right amount.'",
+    "The right amount was 23%.",
+    "Nearly one-quarter selected 'the right amount.'"
+   ],
+   "visual_evidence_rule": "The 'The right amount' slice must show 23% and be labeled as about a quarter if the narration references it.",
+   "temporal_anchor": "the clause 'We also had about a quarter of Americans saying there was the right amount...'",
+   "reviewer_question": "Must the video include the 'right amount' 23% category, or is it optional detail beyond the majority message?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 'too little' response is 13%, which is lower than the 23% 'right amount' response; the gap is 10 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Too little",
+     "x": "slice-4",
+     "field": "value",
+     "value": 13,
+     "note": "13% is the 'too little' response."
+    },
+    {
+     "entity": "The right amount",
+     "x": "slice-3",
+     "field": "value",
+     "value": 23,
+     "note": "23% is the 'right amount' response."
+    }
+   ],
+   "computation": "23 - 13 = 10 percentage points.",
+   "accepted_routes": [
+    "13% said too little, compared with 23% who said the right amount.",
+    "Too little (13%) was less common than the right amount (23%).",
+    "The gap between 'right amount' and 'too little' is 10 percentage points.",
+    "13 percent chose too little."
+   ],
+   "visual_evidence_rule": "Both the 'Too little' 13% slice and the 'The right amount' 23% slice must be visible if this comparison is made.",
+   "temporal_anchor": "no narration clause; if shown, place after the right-amount clause as optional comparison.",
+   "reviewer_question": "Should the 13% 'too little' category and its comparison with 23% be required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 'too much' share, 61%, is larger than the combined shares of the other substantive response categories: 'right amount' (23%) plus 'too little' (13%) equals 36%, a difference of 25 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Too much",
+     "x": "slice-1",
+     "field": "value",
+     "value": 61,
+     "note": "61% is the 'too much' response."
+    },
+    {
+     "entity": "The right amount",
+     "x": "slice-3",
+     "field": "value",
+     "value": 23,
+     "note": "23% is the 'right amount' response."
+    },
+    {
+     "entity": "Too little",
+     "x": "slice-4",
+     "field": "value",
+     "value": 13,
+     "note": "13% is the 'too little' response."
+    }
+   ],
+   "computation": "23 + 13 = 36; 61 - 36 = 25 percentage points.",
+   "accepted_routes": [
+    "Too much (61%) exceeded the right amount plus too little combined (23% + 13% = 36%).",
+    "61% is larger than the other substantive response categories combined (36%).",
+    "The 'too much' share was 25 percentage points above the combined other response shares (61% - 36%)."
+   ],
+   "visual_evidence_rule": "The chart or annotation must let viewers compare the 61% 'too much' slice against the combined 36% of the other substantive categories.",
+   "temporal_anchor": "the clause 'most Americans said that there was too much economic inequality' as supporting comparison",
+   "reviewer_question": "Must the video compare 'too much' against the combined other response categories, or is the majority framing alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Displaying the source annotation from the table: 'Survey of U.S. adults conducted Sept. 16-29, 2019.'",
+  "Showing the 'Too little' 13% slice as context even if the narration does not mention it.",
+  "Showing the 'The right amount' 23% slice as context for the 'about a quarter' narration clause."
+ ],
+ "unsupported_to_avoid": [
+  "Do not treat the 2.8% 'Source: Survey...' item as a substantive response category or as an 'other/don't know' response.",
+  "Do not claim the three printed response categories sum to 100% (61 + 23 + 13 = 97).",
+  "Do not explain causes of why people believe there is too much economic inequality.",
+  "Do not extrapolate beyond the survey source or claim all Americans without survey context."
+ ],
+ "notes": "The core required message is that 61% chose 'too much' and that this is a majority. The right-amount, too-little, and combined-category comparisons are valid optional context; the 2.8% source item should not be treated as a response category.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 41.9,
+  "usage": {
+   "prompt_tokens": 784,
+   "completion_tokens": 10041,
+   "total_tokens": 10825,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8136
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 400
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

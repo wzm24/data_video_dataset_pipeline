@@ -1,0 +1,142 @@
+{
+ "clip_id": "bar_10",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "USA @ 320.0",
+    "extreme": "max",
+    "expected": 71.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show three labeled bars and make Bangladesh's bar the shortest, with the 47-year value visible or annotated."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "USA @ 320.0",
+    "extreme": "max",
+    "expected": 71.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show USA's bar as the highest with 71 visible or annotated, and South Korea's bar or value at 52 visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:USA @ 320.0",
+    "mark:South Korea @ 640.0",
+    "mark:Bangladesh @ 960.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "USA @ 320.0",
+      "value": 71.0
+     },
+     {
+      "mark": "South Korea @ 640.0",
+      "value": 52.0
+     },
+     {
+      "mark": "Bangladesh @ 960.0",
+      "value": 47.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show all three bars in descending order USA > South Korea > Bangladesh, with values or clear ordering labels."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:USA @ 320.0",
+    "mark:South Korea @ 640.0",
+    "mark:Bangladesh @ 960.0"
+   ],
+   "assertion": {
+    "low": "Bangladesh @ 960.0",
+    "low_value": 47.0,
+    "high": "USA @ 320.0",
+    "high_value": 71.0,
+    "delta": 24.0,
+    "ratio": 1.5106,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show gap/difference annotations or a clear visual comparison between Bangladesh and USA (24 years) and between Bangladesh and South Korea (5 years)."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:USA @ 320.0",
+    "segment:South Korea @ 640.0",
+    "segment:Bangladesh @ 960.0"
+   ],
+   "assertion": {
+    "segment": "USA @ 320.0",
+    "expected_share": 0.4176,
+    "total_of": "unknown",
+    "total": 170.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Show ratio/percentage annotations comparing Bangladesh to USA (≈66%) and to South Korea (≈90%), or an equivalent relative bar-length comparison."
+  }
+ ]
+}

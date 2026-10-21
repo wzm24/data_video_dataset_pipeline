@@ -1,0 +1,137 @@
+{
+ "clip_id": "area_12",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:battle deaths @ 1950",
+    "mark:battle deaths @ 2014"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "battle deaths @ 1950",
+      "value": 194.9
+     },
+     {
+      "mark": "battle deaths @ 2014",
+      "value": 2.5
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show the series starting near 195 at 1950 and ending near 2.5 at 2014, with an overall downward envelope across the timeline."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:battle deaths @ 1950",
+    "mark:battle deaths @ 2014"
+   ],
+   "assertion": {
+    "low": "battle deaths @ 2014",
+    "low_value": 2.5,
+    "high": "battle deaths @ 1950",
+    "high_value": 194.9,
+    "delta": 192.4,
+    "ratio": 77.96,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "First and last values must be annotated or linked so the total drop and/or percentage reduction can be read."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "battle deaths @ 1950",
+    "extreme": "max",
+    "expected": 194.9,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1950 point must be visible as the highest point on the chart."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:battle deaths @ 1974"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "battle deaths @ 1974",
+      "value": 86.9
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If included, a local bump around 1974 must be visible on the chart."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "battle deaths @ 2012",
+    "extreme": "min",
+    "expected": 0.8,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The minimum point(s) around 2012–2013 must be visible or labeled if this unit is included."
+  }
+ ]
+}

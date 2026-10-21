@@ -1,0 +1,305 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_89",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the youthful demographic structure of an African nation (Ethiopia) that underpins the continent's emergence as a major consumer market.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The age structure is bottom-heavy: values are largest in the youngest cohorts and generally decline toward older ages.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "0-4-right",
+     "x": "0-4",
+     "field": "value",
+     "value": 1.05,
+     "note": "youngest female cohort value"
+    },
+    {
+     "entity": "95-99-right",
+     "x": "95-99",
+     "field": "value",
+     "value": 0.009,
+     "note": "oldest female cohort value"
+    },
+    {
+     "entity": "0-4-left",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.996,
+     "note": "youngest male cohort value"
+    },
+    {
+     "entity": "95-99-left",
+     "x": "95-99",
+     "field": "value",
+     "value": 0.008,
+     "note": "oldest male cohort value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The population pyramid is wide at the bottom and narrow at the top.",
+    "Values are highest for the youngest age groups and fall with age.",
+    "The chart shows a youthful, bottom-heavy age structure."
+   ],
+   "visual_evidence_rule": "Bars for the youngest age groups (0-4 and 5-9) are visibly longer than bars for older age groups, creating a bottom-heavy shape.",
+   "temporal_anchor": "the 'as Africa grows...' clause",
+   "reviewer_question": "Is the full declining-with-age shape required, or is it enough to show that the youngest cohorts are large?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 0-4 age group is the largest cohort in the table.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "0-4-right",
+     "x": "0-4",
+     "field": "value",
+     "value": 1.05,
+     "note": "highest value in the table"
+    },
+    {
+     "entity": "0-4-left",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.996,
+     "note": "highest male value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "0-4 is the largest age group.",
+    "The youngest cohort has the highest value.",
+    "The 0-4 bar is the longest in the chart."
+   ],
+   "visual_evidence_rule": "The 0-4 bars are the longest in the chart, or at least no other age group exceeds them.",
+   "temporal_anchor": "the 'as Africa grows...' clause",
+   "reviewer_question": "Must the video explicitly identify 0-4 as the largest cohort, or is a wide base enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The oldest age groups (95-99 and 90-95) are tiny relative to the youngest; the 95-99 value is about one-hundredth of the largest value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "95-99-right",
+     "x": "95-99",
+     "field": "value",
+     "value": 0.009,
+     "note": "oldest female value"
+    },
+    {
+     "entity": "0-4-right",
+     "x": "0-4",
+     "field": "value",
+     "value": 1.05,
+     "note": "largest value"
+    },
+    {
+     "entity": "95-99-left",
+     "x": "95-99",
+     "field": "value",
+     "value": 0.008,
+     "note": "oldest male value"
+    },
+    {
+     "entity": "0-4-left",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.996,
+     "note": "largest male value"
+    }
+   ],
+   "computation": "0.009 / 1.050 = 0.00857; 0.008 / 0.996 = 0.00803",
+   "accepted_routes": [
+    "The oldest cohorts are about 1/100 the size of the youngest.",
+    "95-99 is negligible compared with 0-4.",
+    "The oldest bars are barely visible next to the youngest bars."
+   ],
+   "visual_evidence_rule": "The 95-99 and 90-95 bars are extremely short compared with 0-4 and 5-9.",
+   "temporal_anchor": "the 'as Africa grows...' clause",
+   "reviewer_question": "Is the near-invisibility of the oldest cohorts a required contrast, or optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "In the youngest cohorts, female values are slightly higher than male values: 0-4 female 1.050 vs male 0.996; 5-9 female 1.007 vs male 0.955.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "0-4-right",
+     "x": "0-4",
+     "field": "value",
+     "value": 1.05,
+     "note": "female 0-4"
+    },
+    {
+     "entity": "0-4-left",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.996,
+     "note": "male 0-4"
+    },
+    {
+     "entity": "5-9-right",
+     "x": "5-9",
+     "field": "value",
+     "value": 1.007,
+     "note": "female 5-9"
+    },
+    {
+     "entity": "5-9-left",
+     "x": "5-9",
+     "field": "value",
+     "value": 0.955,
+     "note": "male 5-9"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Female values exceed male values in 0-4 and 5-9.",
+    "The female bars are slightly longer than the male bars for the youngest age groups.",
+    "There is a small female advantage in early childhood."
+   ],
+   "visual_evidence_rule": "For 0-4 and 5-9, the female-series bar is slightly longer than the male-series bar.",
+   "temporal_anchor": "optional, carried by the same narration clause if included",
+   "reviewer_question": "Is the sex difference in the youngest cohorts worth making explicit, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Teen and young-adult cohorts (15-19 and 20-24) remain large: values include 0.878 and 0.827 for 15-19, and 0.783 and 0.734 for 20-24.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "15-19-left",
+     "x": "15-19",
+     "field": "value",
+     "value": 0.878,
+     "note": "male 15-19"
+    },
+    {
+     "entity": "15-19-right",
+     "x": "15-19",
+     "field": "value",
+     "value": 0.827,
+     "note": "female 15-19"
+    },
+    {
+     "entity": "20-24-left",
+     "x": "20-24",
+     "field": "value",
+     "value": 0.783,
+     "note": "male 20-24"
+    },
+    {
+     "entity": "20-24-right",
+     "x": "20-24",
+     "field": "value",
+     "value": 0.734,
+     "note": "female 20-24"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 15-19 and 20-24 cohorts are still among the larger groups.",
+    "Teen and young-adult bars remain substantial.",
+    "The youth bulge extends into the 15-24 age range."
+   ],
+   "visual_evidence_rule": "The 15-19 and 20-24 bars are visibly longer than most older cohorts, though shorter than 0-4 and 5-9.",
+   "temporal_anchor": "the 'next major consumer market' phrase, if the video connects young adults to consumption",
+   "reviewer_question": "Should the video explicitly show that the youth bulge extends into teen/young-adult ages, or is the bottom-heavy shape enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may present the data as a population pyramid with male and female series on opposite sides, since the table provides both series.",
+  "The video may use the phrase 'consumer market' as context without claiming the age data alone proves future consumption."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute population counts such as millions or people, because the unit column is blank.",
+  "Percentages or shares of total unless computed from table cells with an explicit formula.",
+  "Causal claim that the youth bulge alone causes Ethiopia or Africa to become a major consumer market.",
+  "Future projections or extrapolation beyond the age cohorts shown in the table.",
+  "Using x_px pixel positions as data values or describing colors, layout, or axis rendering as semantic content."
+ ],
+ "notes": "The table's value column has no unit, so all numerical claims are framed as table values rather than counts or percentages. The duplicated or mislabeled 30-34 male row was not used in the core units.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 60.6,
+  "usage": {
+   "prompt_tokens": 2680,
+   "completion_tokens": 14604,
+   "total_tokens": 17284,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12478
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2168
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

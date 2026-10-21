@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_6",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant decline in the average number of births per woman in Bangladesh from 1960 to 2019.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 1960 the average number of births per woman in Bangladesh was 7.00, and by 2019 it was 2.00.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "births per woman",
+     "x": "1960",
+     "field": "value",
+     "value": 7.0,
+     "note": "table value for start year"
+    },
+    {
+     "entity": "births per woman",
+     "x": "2019",
+     "field": "value",
+     "value": 2.0,
+     "note": "table value for end year"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Bangladesh's average births per woman started at 7.00 in 1960 and ended at 2.00 in 2019.",
+    "Average births per woman fell from 7 to 2 between 1960 and 2019.",
+    "The 1960 value was 7.00 and the 2019 value was 2.00."
+   ],
+   "visual_evidence_rule": "The line chart must visibly mark or label the 1960 start point at 7.00 and the 2019 end point at 2.00.",
+   "temporal_anchor": "The 'In 1960' and 'in 2019' clauses.",
+   "reviewer_question": "Must the video explicitly show both endpoint values, or is one endpoint plus the overall slope enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The average number of births per woman declined by 5.00 over the period, from 7.00 in 1960 to 2.00 in 2019.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "births per woman",
+     "x": "1960",
+     "field": "value",
+     "value": 7.0,
+     "note": "start value"
+    },
+    {
+     "entity": "births per woman",
+     "x": "2019",
+     "field": "value",
+     "value": 2.0,
+     "note": "end value"
+    }
+   ],
+   "computation": "7.00 - 2.00 = 5.00 births per woman",
+   "accepted_routes": [
+    "A drop of 5 births per woman over the period.",
+    "Fertility decreased by 5.00 births per woman between 1960 and 2019.",
+    "The average fell by five births per woman from 1960 to 2019."
+   ],
+   "visual_evidence_rule": "The chart must make the total drop from 7.00 to 2.00 visible, e.g., a vertical span/annotation or a stated 5.00-point decrease.",
+   "temporal_anchor": "The overall 'from 1960 to 2019' timeframe clause.",
+   "reviewer_question": "Must the video state the absolute drop of 5.00, or is showing the downward line from 7 to 2 sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 2019 value is about 28.6% of the 1960 value, equivalent to a roughly 71% relative decline.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "births per woman",
+     "x": "1960",
+     "field": "value",
+     "value": 7.0,
+     "note": "baseline for relative decline"
+    },
+    {
+     "entity": "births per woman",
+     "x": "2019",
+     "field": "value",
+     "value": 2.0,
+     "note": "end value"
+    },
+    {
+     "entity": "births per woman",
+     "x": "2019",
+     "field": "relative_value",
+     "value": 0.2857,
+     "note": "table relative value to 1960"
+    }
+   ],
+   "computation": "(7.00 - 2.00) / 7.00 = 0.714285... ≈ 71.4%; 2.00 / 7.00 = 0.2857 = 28.6%",
+   "accepted_routes": [
+    "Fertility fell by about 71% between 1960 and 2019.",
+    "The 2019 average was about 29% of the 1960 level.",
+    "The relative decline was roughly 71%, or a drop to 28.6% of the starting value."
+   ],
+   "visual_evidence_rule": "A percent-change annotation or a normalized reference to 1960 must be visible if this is included; the chart alone at absolute scale does not automatically show 71%.",
+   "temporal_anchor": "The overall 1960-2019 decline clause or the 'in 2019' endpoint clause.",
+   "reviewer_question": "Should the video quantify the decline relatively (71% / 28.6% of 1960), or is the absolute change enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "In 1995 the average was 3.93 births per woman, down from 4.07 in 1994; this is the narration's midpoint of about four.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "births per woman",
+     "x": "1994",
+     "field": "value",
+     "value": 4.07,
+     "note": "value just above the rounded four threshold"
+    },
+    {
+     "entity": "births per woman",
+     "x": "1995",
+     "field": "value",
+     "value": 3.93,
+     "note": "value just below the rounded four threshold and narration checkpoint"
+    }
+   ],
+   "computation": "3.93 rounds to 4; comparison: 4.07 > 4 and 3.93 < 4 using the rounded whole-number threshold",
+   "accepted_routes": [
+    "In 1995, the average was about 4 births per woman (3.93), down from 4.07 in 1994.",
+    "The 1995 value was just under four, at 3.93.",
+    "The series falls to roughly four by 1995, specifically from 4.07 to 3.93."
+   ],
+   "visual_evidence_rule": "A marker or label at 1995 near 3.93/4 must be visible if this checkpoint is included, ideally showing the adjacent 1994 value of 4.07.",
+   "temporal_anchor": "The 'In 1995, four' narration clause.",
+   "reviewer_question": "Should the video include the 1995 midpoint checkpoint from the narration, even though the intent only names 1960 and 2019?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series was flat at 7.00 births per woman from 1960 through 1976 and then began declining in 1977.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "births per woman",
+     "x": "1960",
+     "field": "value",
+     "value": 7.0,
+     "note": "start of plateau"
+    },
+    {
+     "entity": "births per woman",
+     "x": "1976",
+     "field": "value",
+     "value": 7.0,
+     "note": "end of plateau"
+    },
+    {
+     "entity": "births per woman",
+     "x": "1977",
+     "field": "value",
+     "value": 6.93,
+     "note": "first lower value after plateau"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Fertility stayed at 7 births per woman until the mid-1970s, then started falling.",
+    "There was a plateau at 7.00 from 1960 to 1976 before the decline began in 1977.",
+    "The drop begins after 1976, when the value first falls to 6.93."
+   ],
+   "visual_evidence_rule": "The line should visibly remain flat at 7.00 through 1976 before showing a downward slope after 1977, rather than drawing a straight decline from 1960.",
+   "temporal_anchor": "The overall 'from 1960 to 2019' clause, especially the early part of the timeline.",
+   "reviewer_question": "Should the video show the initial 1960-1976 plateau and onset of decline, or only the 1960 and 2019 endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2018 and 2019 values are both 2.00, so the series flattens at the end.",
+  "Intermediate milestones such as 3.00 in 2003 and 2.50 in 2008 are valid if the animation labels them.",
+  "The narration's rounded 'four' in 1995 can be represented by the table value 3.93."
+ ],
+ "unsupported_to_avoid": [
+  "Causal explanations for why fertility declined (education, contraception, economy, etc.) unless separately sourced.",
+  "Extrapolation before 1960 or after 2019.",
+  "Claims that every woman had exactly 7 or 2 children; the metric is an average.",
+  "Comparisons to other countries or world averages because no such data is in the table.",
+  "Treating the narration's rounded 'four' in 1995 as an exact 4.00 table value rather than 3.93."
+ ],
+ "notes": "The core required content is the 1960-to-2019 endpoints and the 5.00-point absolute decline; the 1995 checkpoint and 1960-1976 plateau are valid optional context. Avoid turning rounded narration values into exact values unless the chart clearly labels them as rounded.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 48.7,
+  "usage": {
+   "prompt_tokens": 2687,
+   "completion_tokens": 11977,
+   "total_tokens": 14664,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9890
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 2431
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#FDF8F5"/>
+<text id="chart-title" data-role="title" x="640.0" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#222222">Students taking the SAT</text>
+<text id="chart-subtitle" data-role="subtitle" x="640.0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666666">Data from the College Board and Encyclopedia of Curriculum Studies</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#444444" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="180" x2="120" y2="600" stroke="#444444" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#444444" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#555555">0</text>
+<line data-role="tick" x1="112" y1="495.0" x2="120" y2="495.0" stroke="#444444" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="501.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#555555">500,000</text>
+<line data-role="tick" x1="112" y1="390.0" x2="120" y2="390.0" stroke="#444444" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="396.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#555555">1,000,000</text>
+<line data-role="tick" x1="112" y1="285.0" x2="120" y2="285.0" stroke="#444444" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="291.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#555555">1,500,000</text>
+<line data-role="tick" x1="112" y1="180.0" x2="120" y2="180.0" stroke="#444444" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="186.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#555555">2,000,000</text>
+<g id="entity-1941" data-role="entity" data-entity-id="1941" data-label="1941">
+<rect id="1941-bar" data-role="bar" data-entity-id="1941" data-value="10000" x="210" y="597.90" width="110" height="2.10" fill="#4296D6"/>
+<text data-role="category-label" x="265" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#333333">1941</text>
+</g>
+<g id="entity-1950" data-role="entity" data-entity-id="1950" data-label="1950">
+<rect id="1950-bar" data-role="bar" data-entity-id="1950" data-value="80000" x="455" y="583.2" width="110" height="16.8" fill="#4296D6"/>
+<text data-role="category-label" x="510" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#333333">1950</text>
+</g>
+<g id="entity-1960" data-role="entity" data-entity-id="1960" data-label="1960">
+<rect id="1960-bar" data-role="bar" data-entity-id="1960" data-value="800000" x="700" y="432" width="110" height="168" fill="#4296D6"/>
+<text data-role="category-label" x="755" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#333333">1960</text>
+</g>
+<g id="entity-1974" data-role="entity" data-entity-id="1974" data-label="1974">
+<rect id="1974-bar" data-role="bar" data-entity-id="1974" data-value="1000000" x="945" y="390" width="110" height="210" fill="#4296D6"/>
+<text data-role="category-label" x="1000" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#333333">1974</text>
+</g>
+<g id="entity-now" data-role="entity" data-entity-id="now" data-label="Now">
+<rect id="now-bar" data-role="bar" data-entity-id="now" data-value="2000000" x="1190" y="180" width="110" height="420" fill="#4296D6"/>
+<text data-role="category-label" x="1245" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#333333">Now</text>
+</g>
+</g>
+</svg>

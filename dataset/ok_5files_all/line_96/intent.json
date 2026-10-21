@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_96",
+ "intent_en": "To illustrate the decline in the number of unauthorized immigrants from Mexico since 2007 and the resulting demographic shift where immigrants from other countries have surpassed those from Mexico.",
+ "previous_intent": "To illustrate the decline in the number of unauthorized immigrants from Mexico since 2007 and the changing demographic composition where Mexicans are no longer the majority.",
+ "narration_support": "the number of Mexicans living in the US without authorization has been falling since 2007",
+ "chart_support": "Line chart comparing unauthorized immigrant populations from Mexico and other countries from 1990 to 2017, showing Mexico peaking in 2007 and declining while the 'Other countries' line rises and crosses it",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the decline since 2007, which matches the chart's Mexico line peaking at 2007 and dropping. The chart title 'Mexicans are no longer the majority' and the 2017 data points (Mexico 4.9, Other 5.5) support the shift in demographics mentioned in the intent, although the narration's claim that Mexicans 'still do' make up the largest share is contradicted by the final 2017 data point.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

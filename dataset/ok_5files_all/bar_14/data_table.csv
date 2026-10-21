@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,name_source,entity_original
+bar_14,Sub-S. Africa,sub-s-africa,795.0,,4.700,0.3672,,#4CAF50,printed,,svg_text,Sub-S. Africa
+bar_14,East Asia,east-asia,650.0,,1.800,0.1406,,#F5A623,printed,,svg_text,East Asia
+bar_14,North America,north-america,645.0,,1.700,0.1328,,#F5A623,printed,,svg_text,North America
+bar_14,European Union,european-union,640.0,,1.600,0.1250,,#F5A623,printed,,svg_text,European Union

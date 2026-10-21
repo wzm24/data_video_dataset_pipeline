@@ -1,0 +1,108 @@
+{
+ "clip_id": "pie_12",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Experienced @ 0"
+   ],
+   "assertion": {
+    "mark": "Experienced @ 0",
+    "field": "value",
+    "expected": 70.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 70% value and Experienced label must be visible; the British Muslims group and past-year timeframe must appear in title/caption/text or narration."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Experienced @ 0",
+    "segment:British Muslims @ 1"
+   ],
+   "assertion": {
+    "segment": "Experienced @ 0",
+    "expected_share": 0.7,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A second slice or label showing 30% (or 30.0%) must be visible if this unit is used."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Experienced @ 0",
+    "mark:British Muslims @ 1"
+   ],
+   "assertion": {
+    "greater": "Experienced @ 0",
+    "lesser": "British Muslims @ 1",
+    "expected_ratio": 2.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 70% and 30% must be visible, or one must be visible with an explicit comparison/ratio/gap annotation."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Experienced @ 0",
+    "mark:British Muslims @ 1"
+   ],
+   "assertion": {
+    "series": "Experienced",
+    "values": [
+     70.0,
+     30.0
+    ],
+    "threshold_between": [
+     30.0,
+     70.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 70% value must be visible alongside a majority/above-half/above-two-thirds annotation or narrative phrase if this unit is used."
+  }
+ ]
+}

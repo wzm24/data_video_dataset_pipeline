@@ -14,6 +14,7 @@ www.youtube.com_cookies.txt
 *cookies*.txt
 
 *.mp4
+!dataset/ok_5files_all/**/*.mp4
 *.wav
 *.mov
 *.avi

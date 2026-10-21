@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#26d0b0"/>
+<text x="524.0" y="280.0" text-anchor="end" font-family="Arial" font-size="26" font-weight="700" fill="#222">Reported Assets</text>
+<rect x="540.0" y="256.0" width="336.9" height="52" fill="#ffffff"/>
+<text x="862.9" y="292.0" text-anchor="end" font-family="Arial" font-size="28" font-weight="700" fill="#222">$3.6tr</text>
+<text x="524.0" y="480.0" text-anchor="end" font-family="Arial" font-size="26" font-weight="700" fill="#222">Actual Liabilities</text>
+<rect x="540.0" y="456.0" width="336.9" height="52" fill="#b2dfdb"/>
+<rect x="876.9" y="456.0" width="318.1" height="52" fill="#f43f5e"/>
+<text x="1035.9" y="492.0" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#fff">$3.4 TRILLION</text>
+<text x="1181.0" y="492.0" text-anchor="end" font-family="Arial" font-size="28" font-weight="700" fill="#222">$7.0tr</text>
+</svg>

@@ -1,0 +1,308 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_74",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain how major fast-food chains generate high revenue through a massive number of global locations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The video conveys the four chains' global location counts: KFC 20,000, Starbucks 30,000, McDonald's 37,000, and Subway 43,000.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "KFC",
+     "x": "global locations",
+     "field": "value",
+     "value": 20000.0,
+     "note": "table value"
+    },
+    {
+     "entity": "Starbucks",
+     "x": "global locations",
+     "field": "value",
+     "value": 30000.0,
+     "note": "table value"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "global locations",
+     "field": "value",
+     "value": 37000.0,
+     "note": "table value"
+    },
+    {
+     "entity": "Subway",
+     "x": "global locations",
+     "field": "value",
+     "value": 43000.0,
+     "note": "table value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "KFC 20,000; Starbucks 30,000; McDonald's 37,000; Subway 43,000 global locations",
+    "There are 20k KFCs, 30k Starbucks, 37k McDonald's, and 43k Subways worldwide",
+    "The four location counts shown are 20,000 / 30,000 / 37,000 / 43,000 for KFC / Starbucks / McDonald's / Subway"
+   ],
+   "visual_evidence_rule": "All four entities and their location counts must be visible as labels or value-annotated bars; a viewer should be able to read each count.",
+   "temporal_anchor": "The clause listing '20,000 KFCs, 30,000 Starbucks, 37,000 McDonald's, and ... 43,000 Subways'.",
+   "reviewer_question": "Must the video convey all four exact location counts, not just a subset or the leader?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The ranking by global location count is Subway (43,000) > McDonald's (37,000) > Starbucks (30,000) > KFC (20,000).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "KFC",
+     "x": "global locations",
+     "field": "value",
+     "value": 20000.0,
+     "note": "lowest among the four"
+    },
+    {
+     "entity": "Starbucks",
+     "x": "global locations",
+     "field": "value",
+     "value": 30000.0,
+     "note": "third among the four"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "global locations",
+     "field": "value",
+     "value": 37000.0,
+     "note": "second among the four"
+    },
+    {
+     "entity": "Subway",
+     "x": "global locations",
+     "field": "value",
+     "value": 43000.0,
+     "note": "highest among the four"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Subway is first with 43,000, then McDonald's with 37,000, Starbucks with 30,000, and KFC with 20,000",
+    "From most to fewest locations: Subway, McDonald's, Starbucks, KFC",
+    "Subway has the most locations and KFC the fewest among these four chains"
+   ],
+   "visual_evidence_rule": "The chart must make the full descending order clear, e.g., sorted bars or labels/annotations showing Subway > McDonald's > Starbucks > KFC.",
+   "temporal_anchor": "The full list and the phrase 'more than any other 43,000 Subways'.",
+   "reviewer_question": "Must the video explicitly establish the full ranking, or is it enough to show that Subway is largest?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The adjacent gaps in the ranking are 6,000 locations between Subway and McDonald's, 7,000 between McDonald's and Starbucks, and 10,000 between Starbucks and KFC.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Subway",
+     "x": "global locations",
+     "field": "value",
+     "value": 43000.0,
+     "note": "used in 43,000 - 37,000"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "global locations",
+     "field": "value",
+     "value": 37000.0,
+     "note": "used in 43,000 - 37,000 and 37,000 - 30,000"
+    },
+    {
+     "entity": "Starbucks",
+     "x": "global locations",
+     "field": "value",
+     "value": 30000.0,
+     "note": "used in 37,000 - 30,000 and 30,000 - 20,000"
+    },
+    {
+     "entity": "KFC",
+     "x": "global locations",
+     "field": "value",
+     "value": 20000.0,
+     "note": "used in 30,000 - 20,000"
+    }
+   ],
+   "computation": "43,000 - 37,000 = 6,000; 37,000 - 30,000 = 7,000; 30,000 - 20,000 = 10,000",
+   "accepted_routes": [
+    "Subway leads McDonald's by 6,000 locations; McDonald's leads Starbucks by 7,000; Starbucks leads KFC by 10,000",
+    "The gaps between adjacent ranked chains are 6k, 7k, and 10k",
+    "Subway is 6,000 ahead of McDonald's, which is 7,000 ahead of Starbucks, which is 10,000 ahead of KFC"
+   ],
+   "visual_evidence_rule": "If conveyed, the chart must show paired differences or stepwise annotations between adjacent bars; otherwise this unit is not present.",
+   "temporal_anchor": "After the full count list, once the viewer has the four values.",
+   "reviewer_question": "Should the video include the adjacent location-count gaps, or is the ranking alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Subway has 23,000 more locations than KFC and about 2.15 times KFC's location count.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Subway",
+     "x": "global locations",
+     "field": "value",
+     "value": 43000.0,
+     "note": "used in 43,000 - 20,000 and 43,000 / 20,000"
+    },
+    {
+     "entity": "KFC",
+     "x": "global locations",
+     "field": "value",
+     "value": 20000.0,
+     "note": "used in 43,000 - 20,000 and 43,000 / 20,000"
+    }
+   ],
+   "computation": "43,000 - 20,000 = 23,000; 43,000 / 20,000 = 2.15",
+   "accepted_routes": [
+    "Subway has 23,000 more locations than KFC",
+    "Subway's footprint is about 2.15 times KFC's",
+    "KFC has about 46.5% as many locations as Subway (20,000 / 43,000)"
+   ],
+   "visual_evidence_rule": "If conveyed, the chart must show both Subway and KFC values or an annotation with their difference/ratio.",
+   "temporal_anchor": "The KFC and Subway clauses in the global count list.",
+   "reviewer_question": "Is the Subway-versus-KFC difference or ratio required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Among these four chains, total locations equal 130,000; shares are Subway about 33.1%, McDonald's about 28.5%, Starbucks about 23.1%, and KFC about 15.4%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "KFC",
+     "x": "global locations",
+     "field": "value",
+     "value": 20000.0,
+     "note": "share formula 20,000 / 130,000"
+    },
+    {
+     "entity": "Starbucks",
+     "x": "global locations",
+     "field": "value",
+     "value": 30000.0,
+     "note": "share formula 30,000 / 130,000"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "global locations",
+     "field": "value",
+     "value": 37000.0,
+     "note": "share formula 37,000 / 130,000"
+    },
+    {
+     "entity": "Subway",
+     "x": "global locations",
+     "field": "value",
+     "value": 43000.0,
+     "note": "share formula 43,000 / 130,000"
+    }
+   ],
+   "computation": "Total = 20,000 + 30,000 + 37,000 + 43,000 = 130,000; shares: KFC 20,000/130,000 ≈ 15.4%, Starbucks 30,000/130,000 ≈ 23.1%, McDonald's 37,000/130,000 ≈ 28.5%, Subway 43,000/130,000 ≈ 33.1%",
+   "accepted_routes": [
+    "Together the four chains have 130,000 global locations",
+    "Subway accounts for about 33.1% of the four-chain total",
+    "KFC is the smallest share at about 15.4% of these four chains' combined locations"
+   ],
+   "visual_evidence_rule": "If conveyed, the chart must show the 130,000 total and either a stacked share bar or percentage labels for each chain.",
+   "temporal_anchor": "After all four counts have been stated, if the video adds an aggregate/share view.",
+   "reviewer_question": "Should the video convert the raw counts into shares of the four-chain total, or only show raw location counts?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A combined four-chain total of 130,000 locations (20,000 + 30,000 + 37,000 + 43,000), if the video chooses to aggregate.",
+  "Bar lengths proportional to the table values or relative_value, provided the scale is not mislabeled as revenue or global market share.",
+  "A note that Subway's 43,000 is the largest and KFC's 20,000 is the smallest among these four chains."
+ ],
+ "unsupported_to_avoid": [
+  "Revenue amounts, revenue growth, or 'billion dollar a year business' as a chart value.",
+  "Causal claims that more locations cause higher revenue.",
+  "Subway has more locations than the other three chains combined (43,000 < 20,000 + 30,000 + 37,000 = 87,000).",
+  "Global market share or ranking beyond the four listed chains.",
+  "Treating relative_value as market share or percentage without stating its denominator.",
+  "Values not in the table such as a 50,000 scale, revenue per location, or per-location revenue.",
+  "Extrapolation to future counts or trends."
+ ],
+ "notes": "Focus on the four location counts, their ranking, and derived gaps/shares; revenue framing is not supported by the table. Computed values are acceptable only when the formula is stated.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 43.9,
+  "usage": {
+   "prompt_tokens": 742,
+   "completion_tokens": 10303,
+   "total_tokens": 11045,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7690
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 486
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

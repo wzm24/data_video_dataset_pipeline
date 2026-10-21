@@ -1,0 +1,124 @@
+{
+ "clip_id": "line_1",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plotted series is identified as inflation-adjusted chair price and the time span includes 1990 and 2015."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Inflation-adjusted chair price @ 1990"
+   ],
+   "assertion": {
+    "mark": "Inflation-adjusted chair price @ 1990",
+    "field": "value",
+    "expected": 294.9891,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1990 endpoint is visible at approximately $294.99."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Inflation-adjusted chair price @ 2015"
+   ],
+   "assertion": {
+    "mark": "Inflation-adjusted chair price @ 2015",
+    "field": "value",
+    "expected": 25.0326,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2015 endpoint is visible near $25 and is lower than all earlier points."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Inflation-adjusted chair price @ 1990",
+    "mark:Inflation-adjusted chair price @ 2015"
+   ],
+   "assertion": {
+    "low": "Inflation-adjusted chair price @ 2015",
+    "low_value": 25.0326,
+    "high": "Inflation-adjusted chair price @ 1990",
+    "high_value": 294.9891,
+    "delta": 269.9565,
+    "ratio": 11.7842,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A viewer can compare the 1990 and 2015 endpoints and see the substantial downward change."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Inflation-adjusted chair price @ between 1990 and 2015"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Inflation-adjusted chair price @ between 1990 and 2015",
+      "value": 335.0109
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The plotted line shows an intermediate high around $335 before the later descent."
+  }
+ ]
+}

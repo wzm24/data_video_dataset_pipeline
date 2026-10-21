@@ -1,0 +1,154 @@
+{
+ "clip_id": "line_35",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:S&P 500 @ 2007",
+    "mark:Wages @ 2007",
+    "mark:S&P 500 @ 2014",
+    "mark:Wages @ 2014"
+   ],
+   "assertion": {
+    "low": "Wages @ 2007",
+    "low_value": 95.0083,
+    "high": "S&P 500 @ 2014",
+    "high_value": 204.9917,
+    "delta": 109.9834,
+    "ratio": 2.1576,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series must be visible from 2007 to 2014, and the S&P 500 trajectory must end visibly farther above its starting level than the wage trajectory ends above its starting level."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:S&P 500 @ 2007",
+    "mark:Wages @ 2007"
+   ],
+   "assertion": {
+    "greater": "S&P 500 @ 2007",
+    "lesser": "Wages @ 2007",
+    "expected_ratio": 1.5788,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The separation between the S&P 500 series and the wage series must be visibly larger at 2014 than at 2007."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:S&P 500 @ 2014"
+   ],
+   "assertion": {
+    "mark": "S&P 500 @ 2014",
+    "field": "value",
+    "expected": 204.9917,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final 2014 values for both series must be visible, and the S&P 500 final level must be clearly above the wage final level."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Wages @ 2009",
+    "mark:S&P 500 @ 2009"
+   ],
+   "assertion": {
+    "at": "2009",
+    "above": "Wages",
+    "above_value": 97.9907,
+    "below": "S&P 500",
+    "below_value": 90.0174,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two series must visibly cross or exchange order around 2009–2011, with the S&P 500 below wages in 2009 and above wages in 2011."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Wages @ 2007",
+    "mark:S&P 500 @ 2007",
+    "mark:S&P 500 @ 2009",
+    "mark:Wages @ 2014",
+    "mark:S&P 500 @ 2014"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Wages @ 2007",
+      "value": 95.0083
+     },
+     {
+      "mark": "S&P 500 @ 2007",
+      "value": 150.0
+     },
+     {
+      "mark": "S&P 500 @ 2009",
+      "value": 90.0174
+     },
+     {
+      "mark": "Wages @ 2014",
+      "value": 116.0068
+     },
+     {
+      "mark": "S&P 500 @ 2014",
+      "value": 204.9917
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The wage series must appear as a gradual upward path, while the S&P 500 series must show a sharp 2009 low followed by a strong recovery to 2014."
+  }
+ ]
+}

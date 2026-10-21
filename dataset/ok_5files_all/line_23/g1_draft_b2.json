@@ -1,0 +1,245 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_23",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that the value of a ship and its cargo decreases as time passes.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the start of the shown period, the relative value of the ship cargo is 0.75 on the table's 0-1 scale.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Ship cargo value",
+     "x": "first shown row",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "Initial relative value in the series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative value begins at 0.75.",
+    "The starting level is 0.75 on the relative scale.",
+    "The first shown value is 0.75."
+   ],
+   "visual_evidence_rule": "The plot must clearly establish the starting relative level as 0.75.",
+   "temporal_anchor": "the value of the ship and its cargo goes down",
+   "reviewer_question": "Should the video explicitly show the starting relative value of 0.75, or is the downward shape alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "By the end of the shown period, the relative value of the ship cargo is 0.09 on the table's 0-1 scale.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Ship cargo value",
+     "x": "last shown row",
+     "field": "relative_value",
+     "value": 0.09,
+     "note": "Final relative value in the series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative value ends at 0.09.",
+    "The final shown level is 0.09.",
+    "By the end it has reached 0.09 on the relative scale."
+   ],
+   "visual_evidence_rule": "The plot must make the ending relative level visible as 0.09.",
+   "temporal_anchor": "the value of the ship and its cargo goes down",
+   "reviewer_question": "Should the video explicitly show the ending relative value of 0.09, or can it only imply the endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The relative value of the ship cargo trends downward over the shown period; later shown values are lower than earlier shown values, with no upward reversal.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Ship cargo value",
+     "x": "first shown row",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "Start of the downward trend."
+    },
+    {
+     "entity": "Ship cargo value",
+     "x": "last shown row",
+     "field": "relative_value",
+     "value": 0.09,
+     "note": "End of the downward trend."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative value goes down over time.",
+    "The series declines from start to end.",
+    "Later relative values are lower than earlier values.",
+    "There is no upward recovery in the shown values."
+   ],
+   "visual_evidence_rule": "The plotted values must visibly decline from the first to the last shown point and must not show any upward reversal.",
+   "temporal_anchor": "As time goes on",
+   "reviewer_question": "Is the overall downward trend the core required message, rather than any single endpoint value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Over the shown period, the relative value falls by 0.66 on the table's 0-1 scale, from 0.75 to 0.09.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Ship cargo value",
+     "x": "first shown row",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "Starting value for the total change calculation."
+    },
+    {
+     "entity": "Ship cargo value",
+     "x": "last shown row",
+     "field": "relative_value",
+     "value": 0.09,
+     "note": "Ending value for the total change calculation."
+    }
+   ],
+   "computation": "0.7500 - 0.0900 = 0.6600 relative-value points",
+   "accepted_routes": [
+    "The relative value drops by about 0.66 over the shown period.",
+    "It loses roughly 0.66 relative-value points from start to end.",
+    "The ending value is about 0.66 lower than the starting value."
+   ],
+   "visual_evidence_rule": "The chart should make the total drop between the first and last relative values evident.",
+   "temporal_anchor": "the value of the ship and its cargo goes down",
+   "reviewer_question": "Should the video explicitly state the total relative decline, or is it enough to show the downward trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The relative value crosses below 0.10 and remains at or below 0.10 through the end of the shown period, ending at 0.09.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Ship cargo value",
+     "x": "row at the 0.10 threshold",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "Last shown value at 0.10 before dropping below."
+    },
+    {
+     "entity": "Ship cargo value",
+     "x": "first row below 0.10",
+     "field": "relative_value",
+     "value": 0.098,
+     "note": "Crossing below the 0.10 threshold."
+    },
+    {
+     "entity": "Ship cargo value",
+     "x": "last shown row",
+     "field": "relative_value",
+     "value": 0.09,
+     "note": "Remains below 0.10 through the end."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative value crosses below 0.10 and stays below it in the shown data.",
+    "After reaching 0.10, it drops to 0.098 and never rises above 0.10 again.",
+    "The final portion remains in a low range at or below 0.10, ending at 0.09."
+   ],
+   "visual_evidence_rule": "The plot should show the series dropping below 0.10 and then staying in a low or flat range through the endpoint.",
+   "temporal_anchor": "As time goes on",
+   "reviewer_question": "Is the below-0.10 threshold and flat tail worth showing, or is it optional detail beyond the main decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The decline can be described as gradual rather than sudden.",
+  "The final portion can be emphasized as flattening near the bottom of the relative scale.",
+  "The series can be summarized as moving from a higher relative level to a much lower one without showing every intermediate value."
+ ],
+ "unsupported_to_avoid": [
+  "The average ransom going up",
+  "The clock ticking as a cause of value loss",
+  "Any absolute currency, percentage, or count not derivable from the relative-value table",
+  "Separate ship value and cargo value, since the table only provides a combined ship cargo value",
+  "Causal claims that time passing itself causes the value decrease",
+  "Chart positions, colors, axis ticks, or rendering choices"
+ ],
+ "notes": "The table only has relative_value, so all units stay on the 0-1 relative scale and avoid absolute money or percentages. The ransom clause is not supported by the table and should not be visualized.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 42.1,
+  "usage": {
+   "prompt_tokens": 2369,
+   "completion_tokens": 9723,
+   "total_tokens": 12092,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7924
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 1985
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

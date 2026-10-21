@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+bar_84,5-17,5-17,,,17,0.7083,%,#c8c8c8,svg_geometry,
+bar_84,18-29,18-29,,,24,1.0000,%,#fcee0a,svg_geometry,
+bar_84,30-44,30-44,,,17,0.7083,%,#c8c8c8,svg_geometry,
+bar_84,45-59,45-59,,,9,0.3750,%,#c8c8c8,svg_geometry,
+bar_84,60+,60,,,13,0.5417,%,#c8c8c8,svg_geometry,

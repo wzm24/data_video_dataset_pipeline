@@ -1,0 +1,307 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_37",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the monthly price of the insulin Lantus is significantly higher in the United States than in other developed nations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The United States has the highest monthly Lantus price at $359.492, making it the extreme endpoint of the comparison.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "monthly price",
+     "field": "value",
+     "value": 359.492,
+     "note": "U.S. monthly price cell"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "U.S. monthly Lantus price is about $359.49",
+    "The United States reaches roughly $359 per month",
+    "The highest monthly price shown is $359.492 in the U.S."
+   ],
+   "visual_evidence_rule": "The U.S. bar must be visibly the tallest and labeled with a value near $359.",
+   "temporal_anchor": "the clause stating Lantus is more expensive in the U.S.",
+   "reviewer_question": "Must the video state the exact U.S. endpoint value, or is showing 'highest' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Even Canada, the highest-priced non-U.S. country shown, pays only about 20.6% of the U.S. price; equivalently, the U.S. is about 4.86 times Canada.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "monthly price",
+     "field": "value",
+     "value": 359.492,
+     "note": "U.S. monthly price used as numerator"
+    },
+    {
+     "entity": "Canada",
+     "x": "monthly price",
+     "field": "value",
+     "value": 73.9679,
+     "note": "Canada monthly price used as denominator comparator"
+    }
+   ],
+   "computation": "359.492 / 73.9679 = 4.86; 73.9679 / 359.492 = 0.2058",
+   "accepted_routes": [
+    "U.S. price is about 4.9 times Canada's",
+    "Canada's monthly price is about one-fifth of the U.S. price",
+    "The U.S. is nearly five times more expensive than Canada"
+   ],
+   "visual_evidence_rule": "A U.S.-vs-Canada comparison must be shown, e.g., side-by-side bars or an annotation of the 4.86x ratio or 20.6% share.",
+   "temporal_anchor": "the clause comparing the U.S. with other developed nations.",
+   "reviewer_question": "Is a ratio/share comparison to Canada required to establish 'significantly higher'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The U.S. monthly price is about $285.52 higher than Canada's, quantifying the premium over the next-most-expensive country.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "monthly price",
+     "field": "value",
+     "value": 359.492,
+     "note": "U.S. monthly price"
+    },
+    {
+     "entity": "Canada",
+     "x": "monthly price",
+     "field": "value",
+     "value": 73.9679,
+     "note": "Canada monthly price"
+    }
+   ],
+   "computation": "359.492 - 73.9679 = 285.5241",
+   "accepted_routes": [
+    "The U.S. costs about $286 more per month than Canada",
+    "The gap to Canada is about $285.52",
+    "Canada is roughly $286 cheaper per month than the U.S."
+   ],
+   "visual_evidence_rule": "A visible gap or annotation between U.S. and Canada bars equivalent to roughly $286.",
+   "temporal_anchor": "the clause emphasizing the U.S. is significantly more expensive.",
+   "reviewer_question": "Should the video quantify the U.S. premium as a dollar difference, not only as a ratio or rank?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Every non-U.S. country in the table is below $75 per month; Canada is the highest of them at $73.9679.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Canada",
+     "x": "monthly price",
+     "field": "value",
+     "value": 73.9679,
+     "note": "Highest non-U.S. value"
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "monthly price",
+     "field": "value",
+     "value": 71.2156,
+     "note": "Below $75"
+    },
+    {
+     "entity": "Germany",
+     "x": "monthly price",
+     "field": "value",
+     "value": 68.4633,
+     "note": "Below $75"
+    },
+    {
+     "entity": "Australia",
+     "x": "monthly price",
+     "field": "value",
+     "value": 63.6468,
+     "note": "Below $75"
+    },
+    {
+     "entity": "France",
+     "x": "monthly price",
+     "field": "value",
+     "value": 58.1422,
+     "note": "Below $75"
+    },
+    {
+     "entity": "Norway",
+     "x": "monthly price",
+     "field": "value",
+     "value": 55.3899,
+     "note": "Below $75"
+    }
+   ],
+   "computation": "max(73.9679, 71.2156, 68.4633, 63.6468, 58.1422, 55.3899) = 73.9679 < 75",
+   "accepted_routes": [
+    "All other countries are under $75 per month",
+    "No non-U.S. country shown reaches $75",
+    "Canada is highest outside the U.S. but still under $74"
+   ],
+   "visual_evidence_rule": "All non-U.S. bars must sit below a $75 reference line or be labeled with values below $75.",
+   "temporal_anchor": "the clause about other developed nations.",
+   "reviewer_question": "Is the 'all others below $75' threshold a required takeaway, or is the Canadian endpoint enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The full descending order is United States, Canada, United Kingdom, Germany, Australia, France, Norway.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "monthly price",
+     "field": "value",
+     "value": 359.492,
+     "note": "Rank 1"
+    },
+    {
+     "entity": "Canada",
+     "x": "monthly price",
+     "field": "value",
+     "value": 73.9679,
+     "note": "Rank 2"
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "monthly price",
+     "field": "value",
+     "value": 71.2156,
+     "note": "Rank 3"
+    },
+    {
+     "entity": "Germany",
+     "x": "monthly price",
+     "field": "value",
+     "value": 68.4633,
+     "note": "Rank 4"
+    },
+    {
+     "entity": "Australia",
+     "x": "monthly price",
+     "field": "value",
+     "value": 63.6468,
+     "note": "Rank 5"
+    },
+    {
+     "entity": "France",
+     "x": "monthly price",
+     "field": "value",
+     "value": 58.1422,
+     "note": "Rank 6"
+    },
+    {
+     "entity": "Norway",
+     "x": "monthly price",
+     "field": "value",
+     "value": 55.3899,
+     "note": "Rank 7"
+    }
+   ],
+   "computation": "none; sorted descending by value",
+   "accepted_routes": [
+    "U.S. > Canada > UK > Germany > Australia > France > Norway",
+    "The ranking runs from the U.S. at $359.49 down to Norway at $55.39",
+    "Canada and the UK are second and third, respectively"
+   ],
+   "visual_evidence_rule": "Bars should be ordered descending or otherwise labeled so the full ranking is recoverable.",
+   "temporal_anchor": "the overall comparative clause; can extend across the whole animation.",
+   "reviewer_question": "Should the video be required to show the complete seven-country ranking, or only the U.S. versus the others?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Canada is the highest non-U.S. country at $73.9679 per month.",
+  "Norway has the lowest monthly price at $55.3899.",
+  "The U.S. relative_value is 1.0 while all other listed countries range from 0.1541 to 0.2058 relative to the U.S.",
+  "The United Kingdom is third-highest at $71.2156, just below Canada."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as patent law, insurance, or pharmacy benefit managers explaining the U.S. price.",
+  "Extrapolating beyond the table to say the U.S. is more expensive than every developed nation.",
+  "Using an average non-U.S. price unless the arithmetic is explicitly shown.",
+  "Treating the result as applying to all insulin products rather than Lantus monthly price in this table.",
+  "Any time trend or future projection because no time-series data are provided."
+ ],
+ "notes": "Core required proof is U.S. highest and all listed non-U.S. prices below $75; ratio and dollar gap make 'significantly higher' explicit. Full ranking is useful but optional beyond proving the U.S. exceeds each listed comparison country.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 31.7,
+  "usage": {
+   "prompt_tokens": 899,
+   "completion_tokens": 7702,
+   "total_tokens": 8601,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5387
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 515
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

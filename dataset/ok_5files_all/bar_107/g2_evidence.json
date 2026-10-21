@@ -1,0 +1,131 @@
+{
+ "clip_id": "bar_107",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both compared entities must be identifiable from text in the video."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:TAXES LOST WITH 4 @ taxes-lost-with-4",
+    "mark:DEPT. OF EDUCATION @ dept-of-education"
+   ],
+   "assertion": {
+    "greater": "TAXES LOST WITH 4 @ taxes-lost-with-4",
+    "lesser": "DEPT. OF EDUCATION @ dept-of-education",
+    "expected_ratio": 3.149,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The video must show or state that the taxes-lost quantity is larger than the Education quantity."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:DEPT. OF EDUCATION @ dept-of-education",
+    "mark:TAXES LOST WITH 4 @ taxes-lost-with-4"
+   ],
+   "assertion": {
+    "low": "DEPT. OF EDUCATION @ dept-of-education",
+    "low_value": 0.1597,
+    "high": "TAXES LOST WITH 4 @ taxes-lost-with-4",
+    "high_value": 0.5029,
+    "delta": 0.3432,
+    "ratio": 3.149,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The video must communicate a multiplier or ratio between the two relative magnitudes, not only their separate values."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:DEPT. OF EDUCATION @ dept-of-education",
+    "mark:TAXES LOST WITH 4 @ taxes-lost-with-4"
+   ],
+   "assertion": {
+    "series": "DEPT. OF EDUCATION",
+    "values": [
+     0.1597,
+     0.5029
+    ],
+    "threshold_between": [
+     0.1597,
+     0.5029
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, the video must indicate the ratio is above 3×, not merely above 1×."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:TAXES LOST WITH 4 @ taxes-lost-with-4",
+    "mark:DEPT. OF EDUCATION @ dept-of-education"
+   ],
+   "assertion": {
+    "greater": "TAXES LOST WITH 4 @ taxes-lost-with-4",
+    "lesser": "DEPT. OF EDUCATION @ dept-of-education",
+    "expected_ratio": 3.149,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, the video must make the inverse comparison visible or stated."
+  }
+ ]
+}

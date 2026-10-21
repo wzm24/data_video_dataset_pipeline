@@ -1,0 +1,6 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_76,Terrestrial Planets,terrestrial-planets,164.8,,1.000,0.1250,,#8a2f2f,printed,bar-1,semantic_svg_backfill
+bar_76,Jupiter,jupiter,505.6,,70.000,0.1250,,#e8a13c,printed,bar-2,semantic_svg_backfill
+bar_76,Neptune 5%,neptune-5,937.6,,20.000,0.1250,,#9db54b,printed,,
+bar_76,Neptune 5%,neptune-5,1052.8,,4.000,0.1250,,#3d5a8c,printed,,
+bar_76,Neptune 5%,neptune-5,1096.0,,5.000,0.1250,,#7da0c4,printed,,

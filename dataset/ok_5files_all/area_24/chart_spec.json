@@ -1,0 +1,21 @@
+{
+ "clip_id": "area_24",
+ "family": "area",
+ "sub_type": "bubble",
+ "orientation": "cartesian",
+ "series_count": 6,
+ "has_reference_line": false,
+ "panel_count": 10,
+ "has_axis": true,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 11,
+ "row_count": 6,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "medium",
+ "needs_review": true,
+ "time_behavior": "snapshot"
+}

@@ -1,0 +1,5 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_127,survived,survived,489.4,,,0.2022,relative,#d48c8c,relative_only,,
+bar_127,HIROSHIMA,bar-2,929.4,,,0.4853,relative,#e0e0e0,relative_only,bar-2,semantic_svg_order_backfill
+bar_127,survived,survived,468.8,,,0.1699,relative,#d48c8c,relative_only,,
+bar_127,100k killed,bar-4,908.8,,,0.5176,relative,#e0e0e0,relative_only,bar-4,semantic_svg_order_backfill

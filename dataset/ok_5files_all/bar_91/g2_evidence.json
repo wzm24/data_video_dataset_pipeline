@@ -1,0 +1,81 @@
+{
+ "clip_id": "bar_91",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:20-64 @ multiple",
+    "segment:all ages @ multiple"
+   ],
+   "assertion": {
+    "segment": "20-64 @ multiple",
+    "expected_share": 0.578,
+    "total_of": "unknown",
+    "total": 25.393,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The combined 20-64 age groups must be encoded as a single quantity or highlighted as a group, and the total across all age groups must be available for comparison."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:20-64 @ multiple",
+    "mark:65+ @ multiple"
+   ],
+   "assertion": {
+    "greater": "20-64 @ multiple",
+    "lesser": "65+ @ multiple",
+    "expected_ratio": 2.2833,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 65+ age groups must be visually separable from the 20-64 age groups, and their combined size must be comparable to the 20-64 combined size."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Male)"
+   ],
+   "assertion": {
+    "mark": "45-49 @ 45-49-left",
+    "extreme": "max",
+    "expected": 1.0,
+    "compared_set": "Male",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 45-49 age group must be visually identifiable as the tallest combined age band or as the maximum total."
+  }
+ ]
+}

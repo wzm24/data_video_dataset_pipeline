@@ -1,0 +1,17 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_52,Audit rate for Americans with annual income >=$500K,audit-rate-for-americans-with-annual-income-500k,130.0,,8.0000,1.0000,%,#d9a514,estimated
+line_52,Audit rate for Americans with annual income >=$500K,audit-rate-for-americans-with-annual-income-500k,413.3,2013,6.2000,0.7780,%,#d9a514,estimated
+line_52,Audit rate for Americans with annual income >=$500K,audit-rate-for-americans-with-annual-income-500k,696.7,2015,4.3000,0.5438,%,#d9a514,estimated
+line_52,Audit rate for Americans with annual income >=$500K,audit-rate-for-americans-with-annual-income-500k,980.0,2017,2.5000,0.3220,%,#d9a514,estimated
+line_52,$200K-500K,200k-500k,130.0,,2.6000,0.3344,%,#2e8b57,estimated
+line_52,$200K-500K,200k-500k,413.3,2013,2.0000,0.2603,%,#2e8b57,estimated
+line_52,$200K-500K,200k-500k,696.7,2015,1.3000,0.1741,%,#2e8b57,estimated
+line_52,$200K-500K,200k-500k,980.0,2017,0.7000,0.1000,%,#2e8b57,estimated
+line_52,<$25K,25k,130.0,,1.2000,0.1617,%,#c0392b,estimated
+line_52,<$25K,25k,413.3,2013,1.1000,0.1493,%,#c0392b,estimated
+line_52,<$25K,25k,696.7,2015,0.9000,0.1248,%,#c0392b,estimated
+line_52,<$25K,25k,980.0,2017,0.8000,0.1124,%,#c0392b,estimated
+line_52,$25K-200K,25k-200k,130.0,,0.8000,0.1124,%,#4682b4,estimated
+line_52,$25K-200K,25k-200k,413.3,2013,0.7000,0.1000,%,#4682b4,estimated
+line_52,$25K-200K,25k-200k,696.7,2015,0.6000,0.0876,%,#4682b4,estimated
+line_52,$25K-200K,25k-200k,980.0,2017,0.5000,0.0755,%,#4682b4,estimated

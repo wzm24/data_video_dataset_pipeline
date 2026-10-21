@@ -1,0 +1,242 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_19",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain how the weighting of standardized test scores in the U.S. News college ranking formula allows universities to manipulate their rankings.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "SAT/ACT scores account for 7.75% of the U.S. News college ranking formula.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "U.S. NEWS",
+     "x": "slice-1",
+     "field": "value",
+     "value": 7.75,
+     "note": "Slice-1 table value; narration maps 7.75% to the SAT/ACT weight in the U.S. News formula."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "SAT/ACT scores account for 7.75% of the U.S. News ranking formula.",
+    "The U.S. News formula gives SAT/ACT scores a 7.75% weight.",
+    "7.75% of the ranking formula is based on SAT/ACT scores.",
+    "About 7.8% of the U.S. News ranking formula comes from SAT/ACT scores."
+   ],
+   "visual_evidence_rule": "A slice or label must show 7.75% attached to SAT/ACT scores in the U.S. News ranking formula.",
+   "temporal_anchor": "the narration clause introducing the 7.75% SAT/ACT weight",
+   "reviewer_question": "Must the 7.75% be explicitly labeled as SAT/ACT scores in the U.S. News ranking formula?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The other slice shown alongside the SAT/ACT weight is 92.2% of the formula.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "7.75% SAT/ACT Scores",
+     "x": "slice-2",
+     "field": "value",
+     "value": 92.2,
+     "note": "Slice-2 table value; label appears to include the 7.75% SAT/ACT phrase, so reviewer should verify whether this is the other/remainder slice."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The other slice is 92.2%.",
+    "The remaining share shown in the pie is 92.2%.",
+    "The non-SAT/ACT portion of the formula is 92.2%.",
+    "The pie includes another slice at about 92.2%."
+   ],
+   "visual_evidence_rule": "The other slice must be labeled or annotated with 92.2%.",
+   "temporal_anchor": "the clause or visual beat showing the remainder of the ranking formula",
+   "reviewer_question": "Must the video convey the other 92.2% slice, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The other 92.2% slice is much larger than the 7.75% SAT/ACT slice; it is about 12 times larger.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "U.S. NEWS",
+     "x": "slice-1",
+     "field": "value",
+     "value": 7.75,
+     "note": "SAT/ACT weight from slice-1."
+    },
+    {
+     "entity": "7.75% SAT/ACT Scores",
+     "x": "slice-2",
+     "field": "value",
+     "value": 92.2,
+     "note": "Other slice value from slice-2."
+    }
+   ],
+   "computation": "92.2 / 7.75 = 11.8968, rounded to about 12; or 7.75 / 92.2 = 0.0841, meaning SAT/ACT is about 8.4% the size of the other slice.",
+   "accepted_routes": [
+    "The other slice is about 12 times the SAT/ACT slice.",
+    "The rest of the formula is roughly 12x the SAT/ACT weight.",
+    "SAT/ACT is about one-twelfth the size of the remaining share.",
+    "The 92.2% share dwarfs the 7.75% SAT/ACT share."
+   ],
+   "visual_evidence_rule": "Both 7.75% and 92.2% must appear together, or a ratio annotation must be shown.",
+   "temporal_anchor": "the comparison beat after both shares are introduced",
+   "reviewer_question": "Must the video quantify how much larger the other slice is about 12 times, or is that optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "SAT/ACT is the smaller of the two slices shown in the U.S. News ranking formula.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "U.S. NEWS",
+     "x": "slice-1",
+     "field": "value",
+     "value": 7.75,
+     "note": "SAT/ACT weight from slice-1."
+    },
+    {
+     "entity": "7.75% SAT/ACT Scores",
+     "x": "slice-2",
+     "field": "value",
+     "value": 92.2,
+     "note": "Other slice value from slice-2."
+    }
+   ],
+   "computation": "7.75 < 92.2",
+   "accepted_routes": [
+    "SAT/ACT is the smaller slice, at 7.75%, versus 92.2% for the other slice.",
+    "The SAT/ACT share is the smaller of the two.",
+    "The other slice is the larger share.",
+    "7.75% is less than 92.2%."
+   ],
+   "visual_evidence_rule": "Both slices must be visible with the SAT/ACT slice clearly smaller.",
+   "temporal_anchor": "the comparison beat contrasting slice sizes",
+   "reviewer_question": "Must the video explicitly state SAT/ACT is the smaller slice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The table stores the shares as relative values: 7.75% corresponds to 0.0775, and 92.2% corresponds to 0.9220.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "U.S. NEWS",
+     "x": "slice-1",
+     "field": "relative_value",
+     "value": 0.0775,
+     "note": "Relative value for slice-1, corresponding to 7.75%."
+    },
+    {
+     "entity": "7.75% SAT/ACT Scores",
+     "x": "slice-2",
+     "field": "relative_value",
+     "value": 0.922,
+     "note": "Relative value for slice-2, corresponding to 92.2%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative_value for SAT/ACT is 0.0775, matching 7.75%.",
+    "The other relative_value is 0.9220, matching 92.2%.",
+    "The proportions are 0.0775 and 0.9220.",
+    "The decimals 0.0775 and 0.9220 correspond to the percent labels 7.75% and 92.2%."
+   ],
+   "visual_evidence_rule": "If decimals are shown, they must be paired with the correct percent labels.",
+   "temporal_anchor": "any data-table or decimal-label reveal, if present",
+   "reviewer_question": "Should the video surface the decimal relative values 0.0775 and 0.9220, or only the percentages?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The pie chart is split into two shares that sum to 99.95% from the table values 7.75 + 92.2, effectively representing the whole formula.",
+  "The SAT/ACT slice is visually smaller than the other slice.",
+  "The two slices use distinct colors to separate the SAT/ACT share from the remainder."
+ ],
+ "unsupported_to_avoid": [
+  "The 15% discount for fewer than 75% of students submitting scores.",
+  "The 75.1% submission threshold.",
+  "Claims that schools can game the system by ensuring 75.1% submit or by compensating with extremely high average scores.",
+  "Causal claims that the 7.75% weight directly allows a specific manipulation tactic.",
+  "Any ranking outcome or change over time.",
+  "The exact complement 92.25% as a required value, because the table gives 92.2%."
+ ],
+ "notes": "The table label for slice-2 is '7.75% SAT/ACT Scores' but its value is 92.2, so the slice-label mapping should be verified before requiring 92.2 as the non-SAT/ACT remainder. Numbers in units are taken from table values 7.75 and 92.2; any ratio is derived by stated division.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 55.8,
+  "usage": {
+   "prompt_tokens": 778,
+   "completion_tokens": 13412,
+   "total_tokens": 14190,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11374
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 394
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

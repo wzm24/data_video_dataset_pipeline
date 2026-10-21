@@ -1,0 +1,262 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_151",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the recent increase in public confidence in scientists is uneven, driven primarily by Democrats while Republican confidence has remained stagnant or declined, highlighting a widening political divide.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "One confidence series rises from Jan '19 to Nov '20, about 0.098 to 0.143 on relative scale.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "rising series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.0976,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "rising series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.1425,
+     "note": "first occurrence"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "increases from about 0.10 to about 0.14",
+    "rises across the period",
+    "the rising series is higher in Nov '20 than Jan '19"
+   ],
+   "visual_evidence_rule": "The rising series must appear higher in Nov '20 than in Jan '19.",
+   "temporal_anchor": "public confidence has ticked up",
+   "reviewer_question": "Is the rising series' increase required to show the uptick?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Another confidence series declines from Jan '19 to Nov '20, about 0.084 to 0.069.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "declining series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.0844,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "declining series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.0686,
+     "note": "first occurrence"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "declines from about 0.08 to about 0.07",
+    "drops over the period",
+    "the declining series is lower in Nov '20 than Jan '19"
+   ],
+   "visual_evidence_rule": "The declining series must appear lower in Nov '20 than in Jan '19.",
+   "temporal_anchor": "Republicans have stayed about the same",
+   "reviewer_question": "Should this decline be shown as stagnant or declining?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "A second series in the flat/declining group stays roughly unchanged, about 0.148 to 0.145.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "flat series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.1478,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "flat series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.1451,
+     "note": "first occurrence"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "remains around 0.15",
+    "changes little across the period",
+    "stays roughly flat from Jan '19 to Nov '20"
+   ],
+   "visual_evidence_rule": "The flat series must have similar relative height in Jan '19 and Nov '20.",
+   "temporal_anchor": "Republicans have stayed about the same",
+   "reviewer_question": "Is the flat series required to show stagnation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The gap between the rising series and the declining series widens from about 0.013 to about 0.074.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "gap Jan '19",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.0132,
+     "note": "0.0976 - 0.0844"
+    },
+    {
+     "entity": "gap Nov '20",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.0739,
+     "note": "0.1425 - 0.0686"
+    }
+   ],
+   "computation": "Nov gap = 0.1425 - 0.0686 = 0.0739; Jan gap = 0.0976 - 0.0844 = 0.0132",
+   "accepted_routes": [
+    "divide widens from about 0.01 to about 0.07",
+    "the two series become more separated",
+    "difference grows over the period"
+   ],
+   "visual_evidence_rule": "The separation between the rising and declining series must be larger in Nov '20 than Jan '19.",
+   "temporal_anchor": "widening political divide",
+   "reviewer_question": "Is the widening gap required to show the divide?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Within the rising group, the initially lower series overtakes the initially higher series by Nov '20.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "rising group first series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.0976,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "rising group second series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.1319,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "rising group first series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.1425,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "rising group second series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.095,
+     "note": "first occurrence"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the lower series becomes the higher one",
+    "a rank flip occurs within the group",
+    "first series overtakes second by Nov '20"
+   ],
+   "visual_evidence_rule": "In Jan '19 the second series is higher; in Nov '20 the first series is higher.",
+   "temporal_anchor": "growing sense of confidence",
+   "reviewer_question": "Is the within-group rank flip required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The rising group's second series declines from about 0.132 to 0.095.",
+  "The absolute highest relative value overall is about 0.148 in Jan '19."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that Democrats caused the increase",
+  "Percentages, counts, dollars, or absolute quantities",
+  "Extrapolation beyond Nov '20",
+  "Using color or x-position as the entity"
+ ],
+ "notes": "Used first occurrence for duplicate rows. All values are relative 0-1 normalisations, not percentages.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 47.5,
+  "usage": {
+   "prompt_tokens": 2447,
+   "completion_tokens": 11310,
+   "total_tokens": 13757,
+   "prompt_tokens_details": {
+    "cached_tokens": 2304
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9727
+   },
+   "prompt_cache_hit_tokens": 2304,
+   "prompt_cache_miss_tokens": 143
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,146 @@
+{
+ "clip_id": "bar_102",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Toutiao @ ranking",
+    "mark:Uber @ ranking",
+    "mark:Didi @ ranking",
+    "mark:WeWork @ ranking"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Toutiao @ ranking",
+      "value": 1.0
+     },
+     {
+      "mark": "Uber @ ranking",
+      "value": 0.95
+     },
+     {
+      "mark": "Didi @ ranking",
+      "value": 0.71
+     },
+     {
+      "mark": "WeWork @ ranking",
+      "value": 0.56
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars must be ordered descending, with WeWork shown as the fourth/lowest bar and labeled as WeWork."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:WeWork @ normalized valuation"
+   ],
+   "assertion": {
+    "mark": "WeWork @ normalized valuation",
+    "field": "value",
+    "expected": 0.56,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The WeWork bar endpoint or value label must show 0.560 (or 0.56)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Didi @ value gap vs WeWork",
+    "mark:WeWork @ value gap vs Didi"
+   ],
+   "assertion": {
+    "greater": "Didi @ value gap vs WeWork",
+    "lesser": "WeWork @ value gap vs Didi",
+    "expected_ratio": 1.2679,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Didi and Uber bars must be visibly longer than WeWork; if gaps are labeled, show 0.150 and 0.390."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Didi @ threshold comparison",
+    "mark:WeWork @ threshold comparison"
+   ],
+   "assertion": {
+    "at": "threshold comparison",
+    "above": "Didi",
+    "above_value": 0.71,
+    "below": "WeWork",
+    "below_value": 0.56,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A reference line or annotation at Didi's 0.710 value should separate WeWork from the other bars."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:WeWork @ ratio to top",
+    "segment:Toutiao @ ratio to top",
+    "segment:Didi @ ratio to Didi"
+   ],
+   "assertion": {
+    "segment": "WeWork @ ratio to top",
+    "expected_share": 0.1739,
+    "total_of": "unknown",
+    "total": 3.2199999999999998,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Ratio annotation or comparative bar lengths must show WeWork at 56% of top and about 79% of Didi."
+  }
+ ]
+}

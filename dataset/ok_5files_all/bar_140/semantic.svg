@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f7f7f7"/>
+<text x="640.0" y="52" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">Income inequality is on the rise</text>
+<rect x="198.6" y="269.4" width="118.8" height="310.6" fill="#b3b3b3"/>
+<text x="258.0" y="257.4" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">9.1</text>
+<text x="258.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">1980</text>
+<rect x="414.6" y="235.3" width="118.8" height="344.7" fill="#b3b3b3"/>
+<text x="474.0" y="223.3" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">10.1</text>
+<text x="474.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">1990</text>
+<rect x="630.6" y="218.3" width="118.8" height="361.7" fill="#b3b3b3"/>
+<text x="690.0" y="206.3" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">10.6</text>
+<text x="690.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">2000</text>
+<rect x="846.6" y="180.7" width="118.8" height="399.3" fill="#b3b3b3"/>
+<text x="906.0" y="168.7" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">11.7</text>
+<text x="906.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">2010</text>
+<rect x="1062.6" y="150.0" width="118.8" height="430.0" fill="#4a8c4a"/>
+<text x="1122.0" y="138.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">12.6</text>
+<text x="1122.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">2019</text>
+</svg>

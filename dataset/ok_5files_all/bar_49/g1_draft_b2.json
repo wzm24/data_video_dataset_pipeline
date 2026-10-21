@@ -1,0 +1,277 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_49",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that combining estate, corporate, and property taxes results in a much heavier tax burden for the wealthiest individuals.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "For the Richest group, combining corporate/property taxes (10.9%) with estate taxes (0.8%) produces a total tax burden of 11.7%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.9,
+     "note": "Corporate and property taxes segment"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 0.8,
+     "note": "Estate taxes segment"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "group_total",
+     "value": 11.7,
+     "note": "Stacked total"
+    }
+   ],
+   "computation": "10.9 + 0.8 = 11.7",
+   "accepted_routes": [
+    "The Richest group's combined tax burden is 11.7%.",
+    "Corporate and property taxes plus estate taxes total 11.7% for the Richest.",
+    "For the Richest, 10.9% corporate/property and 0.8% estate stack to 11.7%."
+   ],
+   "visual_evidence_rule": "Richest bar must show a stacked total of 11.7, with visible segments 10.9 and 0.8 or a label for 11.7.",
+   "temporal_anchor": "Put these taxes together / including billionaires",
+   "reviewer_question": "Should the video explicitly present 11.7% as the Richest group's combined total from the two visible segments?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Richest group's total tax burden (11.7%) is far heavier than the Poorest group's (1.4%), a gap of 10.3 percentage points and roughly 8.4 times the Poorest rate.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "group_total",
+     "value": 11.7,
+     "note": "Combined total"
+    },
+    {
+     "entity": "Poorest",
+     "x": "Poorest",
+     "field": "group_total",
+     "value": 1.4,
+     "note": "Combined total"
+    }
+   ],
+   "computation": "11.7 - 1.4 = 10.3; 11.7 / 1.4 ≈ 8.4",
+   "accepted_routes": [
+    "Richest total is 10.3 percentage points above Poorest (11.7% vs 1.4%).",
+    "The Richest burden is about 8.4 times the Poorest burden.",
+    "The combined burden is far heavier for the Richest than for the Poorest (11.7% vs 1.4%)."
+   ],
+   "visual_evidence_rule": "Chart must allow direct comparison of Richest total (11.7) and Poorest total (1.4) on the same scale.",
+   "temporal_anchor": "much heavier burden",
+   "reviewer_question": "Should the video state the Richest-vs-Poorest gap explicitly rather than only showing the two bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Corporate and property taxes increase monotonically across wealth groups from 1.4% for the Poorest to 10.9% for the Richest, with the top two groups much higher than lower groups (10th at 9.6%, Richest at 10.9%).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Poorest",
+     "x": "Poorest",
+     "field": "value",
+     "value": 1.4,
+     "note": "Corporate and property taxes"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "value",
+     "value": 9.6,
+     "note": "Corporate and property taxes"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.9,
+     "note": "Corporate and property taxes"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Corporate and property tax rates rise with wealth, from 1.4% for the Poorest to 10.9% for the Richest.",
+    "The top two groups have the highest corporate/property tax segments (10th: 9.6%; Richest: 10.9%).",
+    "The burden increases stepwise across the wealth groups, reaching 10.9% for the Richest."
+   ],
+   "visual_evidence_rule": "Bars must be ordered by wealth group and show the upward progression of the corporate/property tax segment.",
+   "temporal_anchor": "Put these taxes together / they place",
+   "reviewer_question": "Should the video show the full ordered progression of corporate/property taxes, or only the Richest and Poorest endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Estate taxes are a separate component for the top groups: 0.3 percentage points for the 10th group and 0.8 percentage points for the Richest.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "value",
+     "value": 0.3,
+     "note": "Estate taxes segment"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 0.8,
+     "note": "Estate taxes segment"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Estate taxes add 0.3 points for the 10th group and 0.8 points for the Richest.",
+    "The estate-tax segment is 0.8% for the Richest and 0.3% for the 10th group.",
+    "Estate taxes appear as the smaller stacked segment for the top two groups."
+   ],
+   "visual_evidence_rule": "Stacked bars for 10th and Richest must include a distinct estate-tax segment (0.3 and 0.8) separate from corporate/property taxes.",
+   "temporal_anchor": "including billionaires / these taxes",
+   "reviewer_question": "Should the video explicitly identify estate taxes as a separate stacked component for the Richest and 10th groups?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Estate taxes are a small share of the Richest group's combined burden: 0.8 out of 11.7 percentage points, about 6.8%; for the 10th group it is 0.3 out of 9.9, about 3.0%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 0.8,
+     "note": "Estate taxes segment"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "group_total",
+     "value": 11.7,
+     "note": "Combined total"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "value",
+     "value": 0.3,
+     "note": "Estate taxes segment"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "group_total",
+     "value": 9.9,
+     "note": "Combined total"
+    }
+   ],
+   "computation": "0.8 / 11.7 ≈ 0.068 = 6.8%; 0.3 / 9.9 ≈ 0.030 = 3.0%",
+   "accepted_routes": [
+    "Estate taxes make up about 7% of the Richest group's total burden.",
+    "For the Richest, estate taxes are 0.8 of 11.7 percentage points, roughly 6.8%.",
+    "Estate taxes are a larger share of total burden for the Richest (~6.8%) than for the 10th group (~3.0%)."
+   ],
+   "visual_evidence_rule": "The Richest and 10th bars must show the estate segment relative to total stacked height, or labels must permit the 0.8/11.7 and 0.3/9.9 calculation.",
+   "temporal_anchor": "Put these taxes together / including billionaires",
+   "reviewer_question": "Should the video quantify estate taxes as a share of the Richest group's total burden, or is showing the 0.8-point segment enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 10th group's combined total is 9.9% (9.6 corporate/property + 0.3 estate).",
+  "The Richest corporate/property tax segment alone is 10.9%, already higher than every lower group's corporate/property tax value.",
+  "Exact ratio Richest total to Poorest total is about 8.36x, if more precision is desired than 8.4x."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as estate taxes causing the richer burden or billionaires avoiding taxes.",
+  "Extrapolating to all billionaires, all rich people, or denominators not in the table (e.g., income, wealth, total tax revenue).",
+  "Claiming estate taxes are zero for lower groups; the table only supplies estate rows for 10th and Richest.",
+  "Using the wrong denominator for share calculations, such as dividing by the sum of all bars instead of the relevant group total."
+ ],
+ "notes": "The table supports stacked totals for Richest (10.9 + 0.8 = 11.7) and 10th (9.6 + 0.3 = 9.9), plus the ordered corporate/property progression. Avoid treating missing estate rows for lower groups as proof of zero estate taxes.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 32.5,
+  "usage": {
+   "prompt_tokens": 1440,
+   "completion_tokens": 8940,
+   "total_tokens": 10380,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6655
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 1056
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

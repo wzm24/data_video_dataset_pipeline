@@ -1,0 +1,134 @@
+{
+ "clip_id": "line_37",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:African-American share in South @ 1910"
+   ],
+   "assertion": {
+    "mark": "African-American share in South @ 1910",
+    "field": "value",
+    "expected": 90.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1910 data point must be visibly high on the series, at table value 90."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:African-American share in South @ 1910",
+    "mark:African-American share in South @ 1970",
+    "mark:African-American share in South @ 1990"
+   ],
+   "assertion": {
+    "low": "African-American share in South @ 1990",
+    "low_value": 52.0,
+    "high": "African-American share in South @ 1910",
+    "high_value": 90.0,
+    "delta": 38.0,
+    "ratio": 1.7308,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series must visibly decline from the 1910 value 90 to the 1990 value 52."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "African-American share in South @ 1970",
+    "extreme": "min",
+    "expected": 53.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1990 point must visibly be the lowest point in the series, at table value 52."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:African-American share in South @ 1990",
+    "mark:African-American share in South @ 2010"
+   ],
+   "assertion": {
+    "low": "African-American share in South @ 1990",
+    "low_value": 52.0,
+    "high": "African-American share in South @ 2010",
+    "high_value": 57.0,
+    "delta": 5.0,
+    "ratio": 1.0962,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The segment from 1990 to 2010 must visibly turn upward from 52 to 57."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:African-American share in South @ 1930",
+    "mark:African-American share in South @ 1950",
+    "mark:African-American share in South @ 1970",
+    "mark:African-American share in South @ 1990"
+   ],
+   "assertion": {
+    "low": "African-American share in South @ 1990",
+    "low_value": 52.0,
+    "high": "African-American share in South @ 1930",
+    "high_value": 79.0,
+    "delta": 27.0,
+    "ratio": 1.5192,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1950-to-1970 segment must visibly have the largest downward drop among measured intervals."
+  }
+ ]
+}

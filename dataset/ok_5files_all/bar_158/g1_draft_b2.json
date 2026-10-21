@@ -1,0 +1,288 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_158",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the timeline and expiration of key US-Russia nuclear treaties, providing context for the reassessment of arms control and the potential for new arms races.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series includes a parent category 'US-Russia Nuclear Treaties' and the named treaty entities ANTI-BALLISTIC MISSILE TREATY, INTERMEDIATE-RANGE NUCLEAR FORCES TREATY, START I, and SORT.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "US-Russia Nuclear Treaties",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "parent category listed with this relative_value"
+    },
+    {
+     "entity": "ANTI-BALLISTIC MISSILE TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "treaty entity listed with this relative_value"
+    },
+    {
+     "entity": "INTERMEDIATE-RANGE NUCLEAR FORCES TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "treaty entity listed with this relative_value"
+    },
+    {
+     "entity": "START I",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "treaty entity listed with this relative_value"
+    },
+    {
+     "entity": "SORT",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "treaty entity listed with this relative_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The video names US-Russia Nuclear Treaties, ABM, INF, START I, and SORT.",
+    "The listed entities are US-Russia Nuclear Treaties, ABM, INF, START I, and SORT."
+   ],
+   "visual_evidence_rule": "All five entity labels must appear in the chart/data video.",
+   "temporal_anchor": "Long-standing nuclear arms treaties are being reassessed",
+   "reviewer_question": "Must the video name all listed entities, or may it summarize them?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "All listed entities share the same relative_value (0.0333), so no entity is ranked or sized above another in this data field.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "US-Russia Nuclear Treaties",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "ANTI-BALLISTIC MISSILE TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "INTERMEDIATE-RANGE NUCLEAR FORCES TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "START I",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "SORT",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Every listed entity has the same relative_value, so none is larger than another.",
+    "The relative_value is identical across all listed entities."
+   ],
+   "visual_evidence_rule": "The relative_value encoding for all listed entities must be equal (same height/length/size if encoded).",
+   "temporal_anchor": "Long-standing nuclear arms treaties are being reassessed",
+   "reviewer_question": "Should the video explicitly show equal relative values, or may it omit them?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The parent category 'US-Russia Nuclear Treaties' has the same relative_value (0.0333) as the treaty entities.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "US-Russia Nuclear Treaties",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "parent category value"
+    },
+    {
+     "entity": "ANTI-BALLISTIC MISSILE TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "treaty entity value for comparison"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "US-Russia Nuclear Treaties is not larger than the individual treaties in relative_value.",
+    "The parent category shares the same relative_value as ABM, INF, START I, and SORT."
+   ],
+   "visual_evidence_rule": "The parent category label and its relative_value encoding must be visible and match the treaty rows.",
+   "temporal_anchor": "Long-standing nuclear arms treaties are being reassessed",
+   "reviewer_question": "Should the parent category be treated as a data entity or merely as a chart title?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "ABM and INF have the same relative_value (0.0333).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "ANTI-BALLISTIC MISSILE TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "ABM relative_value"
+    },
+    {
+     "entity": "INTERMEDIATE-RANGE NUCLEAR FORCES TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "INF relative_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "ABM and INF share the same relative_value.",
+    "Neither ABM nor INF is larger than the other in this data."
+   ],
+   "visual_evidence_rule": "Both ABM and INF must be identifiable and their relative_value encoding must match.",
+   "temporal_anchor": "Long-standing nuclear arms treaties are being reassessed",
+   "reviewer_question": "Is it necessary to compare ABM and INF specifically, or is a general equality statement enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "START I and SORT have the same relative_value (0.0333).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "START I",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "START I relative_value"
+    },
+    {
+     "entity": "SORT",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "SORT relative_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "START I and SORT share the same relative_value.",
+    "Neither START I nor SORT is larger than the other in this data."
+   ],
+   "visual_evidence_rule": "Both START I and SORT must be identifiable and their relative_value encoding must match.",
+   "temporal_anchor": "Long-standing nuclear arms treaties are being reassessed",
+   "reviewer_question": "Is it necessary to compare START I and SORT specifically, or is a general equality statement enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The listed relative_values are not shares of a whole and should not be rendered as percentages (0.0333 each; sum is 0.1665).",
+  "The video may note that the intent's timeline/expiration context is not represented in this table."
+ ],
+ "unsupported_to_avoid": [
+  "Expiration dates or specific years for ABM, INF, START I, or SORT",
+  "Treaty signing dates or durations",
+  "Causal claims that reassessment leads to new arms races",
+  "Absolute counts of treaties, warheads, or countries",
+  "Percentages, dollars, or other absolute units derived from relative_value",
+  "Ranking one treaty above another based on relative_value",
+  "Using x_px positions as time or ordering"
+ ],
+ "notes": "The table has only relative_value, all equal, and lacks dates/expiration; proposed units are limited to entity identity and relative-value equality. Timeline and expiration from the intent remain unsupported by this table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 46.7,
+  "usage": {
+   "prompt_tokens": 1107,
+   "completion_tokens": 11331,
+   "total_tokens": 12438,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9359
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 595
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_29",
+ "intent_en": "To illustrate how catastrophic events are perceived as much larger risks than frequent causes of death, highlighting a cognitive bias in risk perception.",
+ "previous_intent": "To illustrate the cognitive bias where memorable catastrophic events like plane crashes are perceived as a much larger threat than silent, ongoing risks like car travel and fossil fuel use.",
+ "narration_support": "Single catastrophic events burn into our memory",
+ "chart_support": "Square chart titled 'WHAT IT FEELS LIKE' showing a significantly larger block for 'DEATH BY PLANE' compared to 'DEATH BY CAR', visualizing the disproportionate perceived risk or emotional weight of catastrophic events.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": true,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration provides the thesis that dramatic events are memorable (burn into memory), while the chart provides a visual example of this bias ('What it feels like') where a catastrophic event (plane death) is depicted as much larger than a frequent event (car death), despite statistical realities usually being the opposite.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": true
+}

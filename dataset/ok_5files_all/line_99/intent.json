@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_99",
+ "intent_en": "To demonstrate that 'us versus them' polarization has worsened over the past 40 years.",
+ "previous_intent": "To illustrate the significant increase in 'us versus them' polarization over the past few decades.",
+ "narration_support": "even the stronger us versus them polarization has gotten much worse over the past 40 years.",
+ "chart_support": "Line chart plotting 'Us versus Them Polarization' on the y-axis against years from 1973-74 to 2015-16 on the x-axis, showing an upward trend in polarization levels over time.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly mentions the 40-year timeframe and the worsening of polarization, which aligns with the chart's x-axis range (1973-2016) and the upward trajectory of the polarization lines.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

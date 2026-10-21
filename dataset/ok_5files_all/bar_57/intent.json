@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_57",
+ "intent_en": "To demonstrate that the total tax burden is significantly higher for the richest individuals than for the poorest when combining income, corporate/property, and estate taxes.",
+ "previous_intent": "To demonstrate that the total tax burden, comprising income, corporate/property, and estate taxes, increases significantly from the poorest to the richest individuals, highlighting that the wealthy pay a substantially higher overall share.",
+ "narration_support": "Add these back onto the income taxes, and it looks like the rich really do pay way more than the poor.",
+ "chart_support": "Stacked bar chart showing total tax percentages (income, corporate/property, and estate taxes) generally increasing from the poorest to the richest income groups.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the conclusion that the rich pay more, which is visually supported by the stacked bars showing a higher total tax percentage for the rightmost (richest) groups compared to the leftmost (poorest) groups.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

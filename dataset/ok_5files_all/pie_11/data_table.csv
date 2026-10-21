@@ -1,0 +1,4 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_11,gauge arc,gauge-arc,0,,12.5,0.1250,%,#0058a3,printed
+pie_11,pieslice-yellow,pieslice-yellow,1,,58.3,0.5830,%,#fee34d,estimated
+pie_11,pieslice-white,pieslice-white,2,,41.7,0.4170,%,#ffffff,estimated

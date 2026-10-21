@@ -1,0 +1,80 @@
+{
+ "clip_id": "bar_120",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Strongly)"
+   ],
+   "assertion": {
+    "mark": "Require police to be trained @ Strongly",
+    "extreme": "max",
+    "expected": 0.3008,
+    "compared_set": "Strongly",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual encoding must show 'Require police to be trained' in the Strongly series as having the highest relative value compared to all other entries."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Strongly)"
+   ],
+   "assertion": {
+    "mark": "power to investigate and @ Strongly",
+    "extreme": "min",
+    "expected": 0.1039,
+    "compared_set": "Strongly",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual encoding must show 'power to investigate and' in the Strongly series as having the lowest relative value compared to all other entries."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:44 @ Somewhat",
+    "mark:27 @ Somewhat"
+   ],
+   "assertion": {
+    "greater": "44 @ Somewhat",
+    "lesser": "27 @ Somewhat",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Within the Somewhat series, the marks for '44' and '27' must be the highest and the mark for '26' must be the lowest."
+  }
+ ]
+}

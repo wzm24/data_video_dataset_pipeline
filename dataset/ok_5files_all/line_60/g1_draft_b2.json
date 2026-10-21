@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_60",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the shift in public opinion on same-sex marriage from majority opposition to majority support over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the start of the observed period (2003), opposition to same-sex marriage is higher than support (57 vs 34).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oppose same-sex marriage",
+     "x": 2003,
+     "field": "value",
+     "value": 57.0,
+     "note": "opposition value in 2003"
+    },
+    {
+     "entity": "favor same-sex marriage",
+     "x": 2003,
+     "field": "value",
+     "value": 34.0,
+     "note": "support value in 2003"
+    }
+   ],
+   "computation": "oppose 57 - favor 34 = 23",
+   "accepted_routes": [
+    "In 2003, opposition is higher than support (57 vs 34).",
+    "Opposition leads support at the start of the period.",
+    "The oppose series begins above the favor series in 2003."
+   ],
+   "visual_evidence_rule": "Both entity series must be visible over time, and at 2003 the oppose series must be above the favor series.",
+   "temporal_anchor": "Majority opposition in the 90s and early 2000s",
+   "reviewer_question": "Should the video be required to show the initial opposition lead, or is the later crossover enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Opposition declines over the observed period, from 57 in 2003 to 32 in 2017.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "oppose same-sex marriage",
+     "x": 2003,
+     "field": "value",
+     "value": 57.0,
+     "note": "start value"
+    },
+    {
+     "entity": "oppose same-sex marriage",
+     "x": 2017,
+     "field": "value",
+     "value": 32.0,
+     "note": "end value"
+    }
+   ],
+   "computation": "57 - 32 = 25 (decline)",
+   "accepted_routes": [
+    "Opposition falls from 57 in 2003 to 32 in 2017.",
+    "The oppose series trends downward across the period.",
+    "The change in opposition is 57 - 32 = 25 from 2003 to 2017."
+   ],
+   "visual_evidence_rule": "The oppose series must be visible from 2003 to 2017 and show a downward trend.",
+   "temporal_anchor": "over time / gradual gains in support",
+   "reviewer_question": "Is the full decline of opposition required, or only the final crossover?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Support rises over the observed period, from 34 in 2003 to 62 in 2017.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "favor same-sex marriage",
+     "x": 2003,
+     "field": "value",
+     "value": 34.0,
+     "note": "start value"
+    },
+    {
+     "entity": "favor same-sex marriage",
+     "x": 2017,
+     "field": "value",
+     "value": 62.0,
+     "note": "end value"
+    }
+   ],
+   "computation": "62 - 34 = 28 (increase)",
+   "accepted_routes": [
+    "Support rises from 34 in 2003 to 62 in 2017.",
+    "The favor series trends upward across the period.",
+    "The change in support is 62 - 34 = 28 from 2003 to 2017."
+   ],
+   "visual_evidence_rule": "The favor series must be visible from 2003 to 2017 and show an upward trend.",
+   "temporal_anchor": "gradual gains in support through the last decade",
+   "reviewer_question": "Is the full rise of support required, or only its final value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The two series tie at 49 in 2011, and support overtakes opposition by 2013 (favor 50 vs oppose 43).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "favor same-sex marriage",
+     "x": 2011,
+     "field": "value",
+     "value": 49.0,
+     "note": "tie with oppose"
+    },
+    {
+     "entity": "oppose same-sex marriage",
+     "x": 2011,
+     "field": "value",
+     "value": 49.0,
+     "note": "tie with favor"
+    },
+    {
+     "entity": "favor same-sex marriage",
+     "x": 2013,
+     "field": "value",
+     "value": 50.0,
+     "note": "support exceeds opposition"
+    },
+    {
+     "entity": "oppose same-sex marriage",
+     "x": 2013,
+     "field": "value",
+     "value": 43.0,
+     "note": "opposition below support"
+    }
+   ],
+   "computation": "2011: 49 vs 49; 2013: 50 - 43 = 7",
+   "accepted_routes": [
+    "The series tie at 49 in 2011, then support moves ahead by 2013.",
+    "A crossover occurs between 2011 and 2013, with support at 50 and opposition at 43 in 2013.",
+    "Support overtakes opposition shortly after 2011."
+   ],
+   "visual_evidence_rule": "The chart must show the two series meeting at 2011 (both 49) and the favor series above the oppose series at 2013.",
+   "temporal_anchor": "emergence of majority support in recent years",
+   "reviewer_question": "Must the video pinpoint the 2011 tie/2013 crossover, or is any visible crossover enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By 2017, support is higher than opposition and at its maximum (62), while opposition is at its minimum (32), a gap of 30.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "favor same-sex marriage",
+     "x": 2017,
+     "field": "value",
+     "value": 62.0,
+     "note": "maximum favor value"
+    },
+    {
+     "entity": "oppose same-sex marriage",
+     "x": 2017,
+     "field": "value",
+     "value": 32.0,
+     "note": "minimum oppose value"
+    }
+   ],
+   "computation": "62 - 32 = 30 (favor advantage)",
+   "accepted_routes": [
+    "In 2017, support is higher than opposition (62 vs 32).",
+    "Support ends at its highest value (62) while opposition is at its lowest (32).",
+    "The final gap is 62 - 32 = 30 in favor of support."
+   ],
+   "visual_evidence_rule": "At 2017, the favor series must be above the oppose series, with favor at its highest shown value and oppose at its lowest shown value.",
+   "temporal_anchor": "emergence of majority support in recent years",
+   "reviewer_question": "Should the video be required to state the final values (62 vs 32) and the 30 gap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Opposition remains above support from 2003 through 2009.",
+  "The gap between opposition and support narrows from 23 in 2003 to 0 in 2011.",
+  "Favor reaches its lowest value (34) in 2003 and oppose peaks at 57 in 2003."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why opinion changed.",
+  "Data before 2003 or after 2017.",
+  "Percentage signs or percentage language because the table's unit column is blank.",
+  "Claims about survey methodology or population denominators.",
+  "Extrapolating the trend beyond 2017."
+ ],
+ "notes": "All cited numbers come from the table's value column; differences are explicit arithmetic combinations. The unit column is blank, so phrasings avoid percentage symbols even though the intent uses majority language.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 42.9,
+  "usage": {
+   "prompt_tokens": 1635,
+   "completion_tokens": 10476,
+   "total_tokens": 12111,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8621
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1123
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,137 @@
+{
+ "clip_id": "donut_26",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Somalia @ 0"
+   ],
+   "assertion": {
+    "segment": "Somalia @ 0",
+    "expected_share": 0.0617,
+    "total_of": "percent",
+    "total": 81.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Somalia's 5% value must be visible as a label, segment, donut, or value annotation."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:India @ 1"
+   ],
+   "assertion": {
+    "segment": "India @ 1",
+    "expected_share": 0.5926,
+    "total_of": "percent",
+    "total": 81.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "India's 48% value must be visible as a label, segment, donut, or value annotation."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Germany @ 2"
+   ],
+   "assertion": {
+    "segment": "Germany @ 2",
+    "expected_share": 0.3457,
+    "total_of": "percent",
+    "total": 81.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Germany's 28% value must be visible as a label, segment, donut, or value annotation."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:India @ 1",
+    "mark:Somalia @ 0"
+   ],
+   "assertion": {
+    "greater": "India @ 1",
+    "lesser": "Somalia @ 0",
+    "expected_ratio": 9.6,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Somalia's 5% mark must be visibly smaller or lower than India's 48% and Germany's 28% marks."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Somalia @ 0",
+    "mark:India @ 1",
+    "mark:Germany @ 2"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Somalia @ 0",
+      "value": 5.0
+     },
+     {
+      "mark": "India @ 1",
+      "value": 48.0
+     },
+     {
+      "mark": "Germany @ 2",
+      "value": 28.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, the chart or annotation must make the order India > Germany > Somalia clear."
+  }
+ ]
+}

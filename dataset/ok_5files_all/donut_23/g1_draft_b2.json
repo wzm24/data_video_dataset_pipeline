@@ -1,0 +1,201 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_23",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that nuclear power generates a larger share of global electricity than solar energy.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Nuclear power accounts for 10.6% of global electricity generation.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "electricity generated (left)",
+     "x": "0",
+     "field": "value",
+     "value": 10.6,
+     "note": "Printed percent value; mapped to nuclear by intent/narration."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Nuclear supplies 10.6% of global electricity",
+    "Nuclear's global electricity share is about 10.6%",
+    "10.6% of world electricity comes from nuclear"
+   ],
+   "visual_evidence_rule": "The segment labeled nuclear (or left) must be visible with its 10.6% value, or the value must appear in a label/callout.",
+   "temporal_anchor": "When nuclear power's share is introduced.",
+   "reviewer_question": "Is the explicit nuclear 10.6% value required, or can the video imply it from the larger segment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Solar energy accounts for 6.3% of global electricity generation.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "electricity generated (right)",
+     "x": "1",
+     "field": "value",
+     "value": 6.3,
+     "note": "Printed percent value; mapped to solar by intent/narration."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Solar supplies 6.3% of global electricity",
+    "Solar's global electricity share is around 6.3%",
+    "6.3% of world electricity comes from solar"
+   ],
+   "visual_evidence_rule": "The segment labeled solar (or right) must be visible with its 6.3% value, or the value must appear in a label/callout.",
+   "temporal_anchor": "When solar energy's share is introduced.",
+   "reviewer_question": "Is the explicit solar 6.3% value required, or can the video imply it from the smaller segment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Nuclear power has a larger share of global electricity generation than solar energy.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "electricity generated (left)",
+     "x": "0",
+     "field": "value",
+     "value": 10.6,
+     "note": "Nuclear share."
+    },
+    {
+     "entity": "electricity generated (right)",
+     "x": "1",
+     "field": "value",
+     "value": 6.3,
+     "note": "Solar share."
+    }
+   ],
+   "computation": "10.6 > 6.3",
+   "accepted_routes": [
+    "Nuclear's share is larger than solar's",
+    "Nuclear outranks solar by share, 10.6% vs 6.3%",
+    "Solar is lower than nuclear, 6.3% vs 10.6%",
+    "Nuclear leads solar in global electricity share"
+   ],
+   "visual_evidence_rule": "Both nuclear and solar values/labels must be visible together, or an explicit comparison annotation must show nuclear > solar.",
+   "temporal_anchor": "During the while/comparison clause or final conclusion.",
+   "reviewer_question": "Is the explicit nuclear > solar inequality required, or do the two separate values suffice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Nuclear power's share exceeds solar energy's share by 4.3 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "electricity generated (left)",
+     "x": "0",
+     "field": "value",
+     "value": 10.6,
+     "note": "Nuclear share."
+    },
+    {
+     "entity": "electricity generated (right)",
+     "x": "1",
+     "field": "value",
+     "value": 6.3,
+     "note": "Solar share."
+    }
+   ],
+   "computation": "10.6 - 6.3 = 4.3 percentage points",
+   "accepted_routes": [
+    "Nuclear is 4.3 percentage points higher than solar",
+    "The nuclear-solar gap is about 4.3 points, 10.6% vs 6.3%",
+    "Nuclear exceeds solar by roughly 4 percentage points"
+   ],
+   "visual_evidence_rule": "Both values must be visible and a difference annotation of 4.3 percentage points, or a clearly labeled gap, must appear.",
+   "temporal_anchor": "During the comparison/conclusion if the gap is shown.",
+   "reviewer_question": "Is the exact 4.3 percentage-point gap required, or optional elaboration?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Nuclear share is about 1.68 times solar share (10.6 / 6.3 = 1.68).",
+  "Solar share is about 59% of nuclear share (6.3 / 10.6 = 0.594).",
+  "Solar is the smaller of the two shares.",
+  "The two shares are not equal.",
+  "The combined nuclear and solar share is 16.9% (10.6 + 6.3) if using the same global electricity denominator."
+ ],
+ "unsupported_to_avoid": [
+  "Nuclear supplies 10.6% of all global energy (wrong denominator; table is electricity generated).",
+  "Solar supplies 6.3% of total energy (wrong denominator).",
+  "Nuclear is 4.3% larger than solar (should be percentage points or a relative ratio, not percent).",
+  "Nuclear is the clear winner as an evaluative/causal claim beyond the numeric share comparison.",
+  "Nuclear share will increase or solar share will decline (extrapolation).",
+  "Nuclear causes more electricity than solar (causal; shares are not absolute generation)."
+ ],
+ "notes": "Left/right mapping to nuclear/solar comes from intent/narration; table entity labels are generic. Required set likely includes both share values and the nuclear>solar comparison; the 4.3-point gap and ratio are optional elaborations.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.94
+ },
+ "draft_cost": {
+  "sec": 44.2,
+  "usage": {
+   "prompt_tokens": 649,
+   "completion_tokens": 10145,
+   "total_tokens": 10794,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8681
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 393
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

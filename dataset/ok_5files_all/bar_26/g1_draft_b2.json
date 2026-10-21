@@ -1,0 +1,251 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_26",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the increasing importance placed on SAT scores by colleges between 1993 and 2005.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 1993, 46% of schools gave considerable importance to SAT scores.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1993",
+     "x": "1993",
+     "field": "value",
+     "value": 46.0,
+     "note": "Series=Considerable importance; table value 46.0% at 1993."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1993, 46% of schools gave considerable importance to SAT scores.",
+    "The 1993 considerable-importance share was 46%.",
+    "46% of schools placed considerable importance on SAT scores in 1993."
+   ],
+   "visual_evidence_rule": "The 1993 bar/point for the Considerable importance series must be visible and labeled or clearly encoded as 46%.",
+   "temporal_anchor": "In 1993 clause",
+   "reviewer_question": "Should the video be required to show the 1993 considerable-importance value of 46%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In 2005, 59% of schools gave considerable importance to SAT scores.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2005",
+     "x": "2005",
+     "field": "value",
+     "value": 59.0,
+     "note": "Series=Considerable importance; table value 59.0% at 2005."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "By 2005, 59% gave considerable importance to SAT scores.",
+    "The 2005 considerable-importance share was 59%.",
+    "In 2005, 59% of schools placed considerable importance on SAT scores."
+   ],
+   "visual_evidence_rule": "The 2005 bar/point for the Considerable importance series must be visible and labeled or clearly encoded as 59%.",
+   "temporal_anchor": "By 2005 clause",
+   "reviewer_question": "Should the video be required to show the 2005 considerable-importance value of 59%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From 1993 to 2005, the share of schools giving considerable importance to SAT scores increased by 13 percentage points, from 46% to 59%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1993",
+     "x": "1993",
+     "field": "value",
+     "value": 46.0,
+     "note": "Series=Considerable importance; start value."
+    },
+    {
+     "entity": "2005",
+     "x": "2005",
+     "field": "value",
+     "value": 59.0,
+     "note": "Series=Considerable importance; end value."
+    }
+   ],
+   "computation": "59 - 46 = 13 percentage points",
+   "accepted_routes": [
+    "Considerable importance rose 13 percentage points, from 46% to 59%.",
+    "The share giving considerable importance increased by 13 points between 1993 and 2005.",
+    "46% in 1993 to 59% in 2005, an increase of 13 percentage points."
+   ],
+   "visual_evidence_rule": "Both 1993 and 2005 Considerable importance values must be visible, with a change annotation, connecting line/arrow, or paired bars showing the increase.",
+   "temporal_anchor": "The transition from the In 1993 clause to the By 2005 clause",
+   "reviewer_question": "Is the 13-percentage-point increase required, or are the two endpoint values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The not-considerable share declined by 13 percentage points, from 54% in 1993 to 41% in 2005.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1993",
+     "x": "1993",
+     "field": "value",
+     "value": 54.0,
+     "note": "Series=Not considerable importance; start value."
+    },
+    {
+     "entity": "2005",
+     "x": "2005",
+     "field": "value",
+     "value": 41.0,
+     "note": "Series=Not considerable importance; end value."
+    }
+   ],
+   "computation": "54 - 41 = 13 percentage points",
+   "accepted_routes": [
+    "Not considerable importance fell 13 percentage points, from 54% to 41%.",
+    "The not-considerable share dropped from 54% in 1993 to 41% in 2005.",
+    "54% to 41%, a 13-point decline."
+   ],
+   "visual_evidence_rule": "If the Not considerable importance series is shown, its 1993 and 2005 values must be visible and the decline annotated or encoded.",
+   "temporal_anchor": "Complementary to both the In 1993 and By 2005 clauses; not explicitly in original narration",
+   "reviewer_question": "Should the not-considerable decline be required as complementary context, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The larger group reversed: in 1993, not considerable importance was higher than considerable importance (54% vs 46%); in 2005, considerable importance was higher than not considerable importance (59% vs 41%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1993",
+     "x": "1993",
+     "field": "value",
+     "value": 46.0,
+     "note": "Series=Considerable importance; 1993 comparison value."
+    },
+    {
+     "entity": "1993",
+     "x": "1993",
+     "field": "value",
+     "value": 54.0,
+     "note": "Series=Not considerable importance; 1993 comparison value."
+    },
+    {
+     "entity": "2005",
+     "x": "2005",
+     "field": "value",
+     "value": 59.0,
+     "note": "Series=Considerable importance; 2005 comparison value."
+    },
+    {
+     "entity": "2005",
+     "x": "2005",
+     "field": "value",
+     "value": 41.0,
+     "note": "Series=Not considerable importance; 2005 comparison value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1993, not considerable was higher (54% vs 46%); by 2005, considerable was higher (59% vs 41%).",
+    "The larger group flipped: not considerable in 1993 (54% vs 46%), considerable in 2005 (59% vs 41%).",
+    "By 2005 considerable importance overtook not considerable importance (59% vs 41%), whereas in 1993 it trailed (46% vs 54%)."
+   ],
+   "visual_evidence_rule": "Within-year paired bars must be visible and ordered so that 54 exceeds 46 in 1993 and 59 exceeds 41 in 2005, or labels must state the comparison.",
+   "temporal_anchor": "Both the In 1993 and By 2005 clauses if both series are shown; otherwise optional",
+   "reviewer_question": "Should the within-year ranking reversal be required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "In 1993, 54% of schools did not give considerable importance to SAT scores.",
+  "In 2005, 41% of schools did not give considerable importance to SAT scores.",
+  "The two series are complementary shares: 46% + 54% = 100% in 1993 and 59% + 41% = 100% in 2005."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that colleges increasingly valued SAT scores because of the SAT measuring something else.",
+  "Extrapolating the trend before 1993 or after 2005.",
+  "Saying all schools gave considerable importance; the table shows 46% and 59%.",
+  "Confusing percentage points with percent increase (e.g., a 13% increase rather than 13 percentage points).",
+  "Citing an explicit majority threshold unless the chart adds it; the table does not contain a threshold value.",
+  "Using a denominator other than schools in the relevant year."
+ ],
+ "notes": "Primary required story is the 46% to 59% increase; the complementary not-considerable series and ranking reversal are strong optional checks. Avoid causal or extrapolated claims and do not cite a threshold value that is absent from the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 34.5,
+  "usage": {
+   "prompt_tokens": 841,
+   "completion_tokens": 9141,
+   "total_tokens": 9982,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7089
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 457
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#1a1a1a"/>
+<text id="chart-title" data-role="title" x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">Black migration rates by age</text>
+<text id="chart-subtitle" data-role="subtitle" x="640" y="106" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#c9c9c9">Net migration per 1,000 Southern black residents</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120.0" y1="600.0" x2="1220.0" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120.0" y1="150.0" x2="120.0" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="120.0" y1="600.0" x2="120.0" y2="608.0" stroke="#8a8a8a" stroke-width="2"/>
+<text data-role="tick-label" x="120.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0%</text>
+<line data-role="tick" x1="340.0" y1="600.0" x2="340.0" y2="608.0" stroke="#8a8a8a" stroke-width="2"/>
+<text data-role="tick-label" x="340.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">5%</text>
+<line data-role="tick" x1="560.0" y1="600.0" x2="560.0" y2="608.0" stroke="#8a8a8a" stroke-width="2"/>
+<text data-role="tick-label" x="560.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">10%</text>
+<line data-role="tick" x1="780.0" y1="600.0" x2="780.0" y2="608.0" stroke="#8a8a8a" stroke-width="2"/>
+<text data-role="tick-label" x="780.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">15%</text>
+<line data-role="tick" x1="1000.0" y1="600.0" x2="1000.0" y2="608.0" stroke="#8a8a8a" stroke-width="2"/>
+<text data-role="tick-label" x="1000.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">20%</text>
+<line data-role="tick" x1="1220.0" y1="600.0" x2="1220.0" y2="608.0" stroke="#8a8a8a" stroke-width="2"/>
+<text data-role="tick-label" x="1220.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">25%</text>
+<g id="entity-5_17" data-role="entity" data-entity-id="5_17" data-label="5-17">
+<rect id="5_17-bar" data-role="bar" data-entity-id="5_17" data-value="17" x="120.0" y="172.0" width="748.0" height="46.0" fill="#c8c8c8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="5_17-value-label" data-role="value-label" data-entity-id="5_17" x="882.0" y="204.0" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">17%</text>
+<text id="5_17-category-label" data-role="category-label" data-entity-id="5_17" x="106.0" y="202.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#e5e5e5">5-17</text>
+</g>
+<g id="entity-18_29" data-role="entity" data-entity-id="18_29" data-label="18-29">
+<rect id="18_29-bar" data-role="bar" data-entity-id="18_29" data-value="24" x="120.0" y="262.0" width="1056.0" height="46.0" fill="#fcee0a" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="18_29-value-label" data-role="value-label" data-entity-id="18_29" x="1190.0" y="294.0" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">24%</text>
+<text id="18_29-category-label" data-role="category-label" data-entity-id="18_29" x="106.0" y="292.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#e5e5e5">18-29</text>
+</g>
+<g id="entity-30_44" data-role="entity" data-entity-id="30_44" data-label="30-44">
+<rect id="30_44-bar" data-role="bar" data-entity-id="30_44" data-value="17" x="120.0" y="352.0" width="748.0" height="46.0" fill="#c8c8c8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="30_44-value-label" data-role="value-label" data-entity-id="30_44" x="882.0" y="384.0" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">17%</text>
+<text id="30_44-category-label" data-role="category-label" data-entity-id="30_44" x="106.0" y="382.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#e5e5e5">30-44</text>
+</g>
+<g id="entity-45_59" data-role="entity" data-entity-id="45_59" data-label="45-59">
+<rect id="45_59-bar" data-role="bar" data-entity-id="45_59" data-value="9" x="120.0" y="442.0" width="396.0" height="46.0" fill="#c8c8c8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="45_59-value-label" data-role="value-label" data-entity-id="45_59" x="530.0" y="474.0" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">9%</text>
+<text id="45_59-category-label" data-role="category-label" data-entity-id="45_59" x="106.0" y="472.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#e5e5e5">45-59</text>
+</g>
+<g id="entity-60plus" data-role="entity" data-entity-id="60plus" data-label="60+">
+<rect id="60plus-bar" data-role="bar" data-entity-id="60plus" data-value="13" x="120.0" y="532.0" width="572.0" height="46.0" fill="#c8c8c8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="60plus-value-label" data-role="value-label" data-entity-id="60plus" x="706.0" y="564.0" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">13%</text>
+<text id="60plus-category-label" data-role="category-label" data-entity-id="60plus" x="106.0" y="562.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#e5e5e5">60+</text>
+</g>
+</g>
+</svg>

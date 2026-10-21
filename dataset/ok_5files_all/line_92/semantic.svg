@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#3a3a3c"/>
+<text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Majority of Americans have now received a COVID-19 vaccine</text>
+<text x="640" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#cccccc">% of U.S. adults who say they have received at least one dose of a vaccine to prevent COVID-19</text>
+<polyline points="160.0,527.8 184.8,512.5 209.5,502.1 234.2,493.0 259.0,484.6 283.8,476.7 308.5,469.2 333.2,462.0 358.0,455.1 382.8,448.4 407.5,441.9 432.2,435.5 457.0,429.3 481.8,423.2 506.5,417.2 531.2,411.3 556.0,405.5 580.8,399.8 605.5,394.2 630.2,388.7 655.0,383.3 679.8,377.9 704.5,372.6 729.2,367.3 754.0,362.1 778.8,356.9 803.5,351.8 828.2,348.3 853.0,346.3 877.8,344.3 902.5,342.3 927.2,340.4 952.0,338.4 976.8,336.4 1001.5,334.4 1026.2,332.5 1051.0,330.5 1075.8,328.5 1100.5,326.5 1125.2,324.6 1150.0,322.6" fill="none" stroke="#7b2fbe" stroke-width="3.5"/>
+<text x="160" y="517.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">19</text>
+<text x="1150" y="312.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">73 All adults</text>
+<text x="160" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#ffffff">Feb '21</text>
+<text x="816" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#ffffff">June '21</text>
+<text x="1150" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#ffffff">Aug '21</text>
+</svg>

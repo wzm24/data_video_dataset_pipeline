@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs><radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#fdfdfd"/><stop offset="1" stop-color="#d3d3d3"/></radialGradient></defs>
+<rect width="1280" height="720" fill="url(#bg)"/>
+<rect x="156" y="86" width="502" height="502" fill="#558fba"/>
+<rect x="156" y="596" width="502" height="46" fill="#558fba"/>
+<text x="407" y="628" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">5,974,000,000,000,000,000,000,000 KG</text>
+<rect x="1010" y="540" width="56" height="56" fill="#a8a8a8"/>
+<rect x="900" y="604" width="360" height="42" fill="#a8a8a8"/>
+<text x="1080" y="633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">73,490,000,000,000,000,000,000 KG</text>
+</svg>

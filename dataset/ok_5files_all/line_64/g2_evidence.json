@@ -1,0 +1,134 @@
+{
+ "clip_id": "line_64",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:reported cases india @ 1975"
+   ],
+   "assertion": {
+    "mark": "reported cases india @ 1975",
+    "field": "value",
+    "expected": 0.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final 1975 data point or bar must be shown at 0 and labeled as 0 cases or zero."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "reported cases india @ 1974",
+    "extreme": "max",
+    "expected": 190000.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1974 bar or point must be visibly highest and labeled or annotated as 190,000."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:reported cases india @ 1974",
+    "mark:reported cases india @ 1975"
+   ],
+   "assertion": {
+    "low": "reported cases india @ 1975",
+    "low_value": 0.0,
+    "high": "reported cases india @ 1974",
+    "high_value": 190000.0,
+    "delta": 190000.0,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 1974 value 190,000 and the 1975 value 0 must be visible, with the change annotated as -190,000 or 100% decrease."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:reported cases india @ 1962",
+    "mark:reported cases india @ 1975"
+   ],
+   "assertion": {
+    "greater": "reported cases india @ 1962",
+    "lesser": "reported cases india @ 1975",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If used, both the 1962 value 55,000 and the 1975 value 0 should be visible or labeled."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:reported cases india @ 1969",
+    "mark:reported cases india @ 1971",
+    "mark:reported cases india @ 1975"
+   ],
+   "assertion": {
+    "series": "reported cases india",
+    "values": [
+     25000.0,
+     25000.0,
+     0.0
+    ],
+    "threshold_between": [
+     0.0,
+     25000.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If used, the chart should show prior minimum years at 25,000 and the 1975 point at 0, making the threshold crossing clear."
+  }
+ ]
+}

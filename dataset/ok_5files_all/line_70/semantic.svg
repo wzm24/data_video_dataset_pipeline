@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#363946"/>
+<text x="640" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="38" fill="#ffffff">Q2 2019</text>
+<rect x="40" y="28" width="160" height="30" fill="#c8102e"/>
+<text x="120" y="49" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#ffffff">The Economist</text>
+<text x="640" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">Time</text>
+<text x="230" y="662" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">3m</text>
+<text x="1090" y="662" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">10y</text>
+<text x="1170" y="390" text-anchor="middle" transform="rotate(90 1170 390)" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Interest rate</text>
+<line x1="240" y1="200.0" x2="1080" y2="200.0" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+<line x1="240" y1="333.3" x2="1080" y2="333.3" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+<line x1="240" y1="466.7" x2="1080" y2="466.7" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+<line x1="240" y1="600.0" x2="1080" y2="600.0" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+<path d="M 240 330 C 430 415, 790 385, 1080 360" fill="none" stroke="#e8352c" stroke-width="3.5"/>
+<circle cx="240" cy="330" r="8" fill="#e8352c"/>
+<circle cx="1080" cy="360" r="8" fill="#e8352c"/>
+<text x="230" y="312" text-anchor="end" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#e8352c">2.4%</text>
+<text x="1090" y="342" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#e8352c">2.3%</text>
+</svg>

@@ -1,0 +1,4 @@
+﻿clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type,entity_source,label_printed
+donut_2,Physical,physical,0,77.1,0.771,percent,estimated_ring_geometry,chart_label_printed,yes
+donut_2,Digital,digital,1,12.5,0.125,percent,estimated_ring_geometry,chart_label_printed,yes
+donut_2,Unlabelled ring segment,unlabelled-segment,2,10.4,0.104,percent,estimated_ring_geometry,ring_arc_without_label,no

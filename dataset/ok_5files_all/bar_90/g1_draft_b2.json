@@ -1,0 +1,279 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_90",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that Israel's population is growing while most other developed nations are not.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip is showing Israel's population as an age-sex distribution: age groups from 0-4 to 95-99, split into Male and Female series.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.7438,
+     "note": "Example row has age group 0-4 and series Female; other rows cover age groups up to 95-99 and both Male/Female series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart breaks Israel's population into five-year age groups and male/female series.",
+    "The data is an age pyramid with age groups from 0-4 up to 95-99 and separate male/female values."
+   ],
+   "visual_evidence_rule": "Age-group labels and a visible male/female series distinction must be identifiable.",
+   "temporal_anchor": "Israel's growth is not quite so dramatic",
+   "reviewer_question": "Must the video explicitly identify the data as Israel's age-sex distribution, or is that assumed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Younger age groups are larger than older age groups; this is the pattern the video uses to convey that Israel's population is growing.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.7438,
+     "note": "Youngest listed cohort, highest relative_value."
+    },
+    {
+     "entity": "95-99",
+     "x": "Male",
+     "field": "relative_value",
+     "value": 0.0084,
+     "note": "Oldest listed cohort, lowest relative_value."
+    },
+    {
+     "entity": "95-99",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.0087,
+     "note": "Oldest listed cohort."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The age distribution has a broad base: younger cohorts have much larger bars than older cohorts.",
+    "Relative values decrease steadily as age increases.",
+    "The youngest listed age group is far larger than the oldest listed age group."
+   ],
+   "visual_evidence_rule": "The bars must visibly decrease from the youngest age group toward the oldest age group.",
+   "temporal_anchor": "but it is growing",
+   "reviewer_question": "Is the declining-with-age pattern required to support the growth message, or can the video just show one or two age groups?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 0-4 female cohort is the largest listed segment, while the 95-99 male/female cohorts are the smallest listed segments.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.7438,
+     "note": "Largest listed relative_value."
+    },
+    {
+     "entity": "95-99",
+     "x": "Male",
+     "field": "relative_value",
+     "value": 0.0084,
+     "note": "Smallest listed relative_value."
+    },
+    {
+     "entity": "95-99",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.0087,
+     "note": "Smallest listed relative_value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 0-4 female bar is the largest; the 95-99 bars are the smallest.",
+    "The youngest listed female cohort is the top extreme and the oldest cohorts are the bottom extreme."
+   ],
+   "visual_evidence_rule": "The largest and smallest listed cohorts must be visually distinguishable.",
+   "temporal_anchor": "Israel's growth is not quite so dramatic",
+   "reviewer_question": "Does the video need to call out the exact largest and smallest cohorts, or is the general trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Female cohorts are slightly larger than male cohorts in most listed age groups.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "5-9",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.7262,
+     "note": "Female greater than male 0.7042."
+    },
+    {
+     "entity": "5-9",
+     "x": "Male",
+     "field": "relative_value",
+     "value": 0.7042,
+     "note": "Male less than female."
+    },
+    {
+     "entity": "10-14",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.7,
+     "note": "Female greater than male 0.6875."
+    },
+    {
+     "entity": "10-14",
+     "x": "Male",
+     "field": "relative_value",
+     "value": 0.6875,
+     "note": "Male less than female."
+    },
+    {
+     "entity": "15-19",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.6695,
+     "note": "Female greater than male 0.6625."
+    },
+    {
+     "entity": "15-19",
+     "x": "Male",
+     "field": "relative_value",
+     "value": 0.6625,
+     "note": "Male less than female."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Females have slightly higher values than males across most age groups.",
+    "The female series is marginally larger than the male series."
+   ],
+   "visual_evidence_rule": "Male and female series must be visually comparable across age groups.",
+   "temporal_anchor": "none (optional visual detail; narration does not mention sex differences)",
+   "reviewer_question": "Is the male/female comparison required, or is it optional detail not central to the growth message?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The youngest listed cohort is about 88 times the size of the oldest listed cohort (0-4 female relative_value 0.7438 vs 95-99 male relative_value 0.0084).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.7438,
+     "note": "Youngest cohort numerator."
+    },
+    {
+     "entity": "95-99",
+     "x": "Male",
+     "field": "relative_value",
+     "value": 0.0084,
+     "note": "Oldest cohort denominator."
+    }
+   ],
+   "computation": "0.7438 / 0.0084 ≈ 88.5",
+   "accepted_routes": [
+    "The youngest listed cohort is roughly 88 times the oldest listed cohort.",
+    "0-4 female relative_value is about 88 times 95-99 male relative_value."
+   ],
+   "visual_evidence_rule": "The youngest and oldest listed cohorts must be visible enough to compare their relative sizes.",
+   "temporal_anchor": "but it is growing",
+   "reviewer_question": "Should the video state the dramatic youngest-to-oldest ratio, or is that over-specific?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may note that the youngest female cohort (0-4) is only slightly larger than the next youngest female cohort (5-9): 0.7438 vs 0.7262.",
+  "The video may emphasise that the male/female difference is small compared with the age-group differences."
+ ],
+ "unsupported_to_avoid": [
+  "Any claim about other developed nations (Europe, US, Canada, Australia, China) growing or not growing; the table contains only Israeli age-sex rows.",
+  "Any absolute population count or percentage; the table's unit column is blank, and no total population is given.",
+  "Any time-series growth rate or historical trend; the table has no year/time column.",
+  "Any causal explanation such as birth rates or immigration for why Israel is growing."
+ ],
+ "notes": "The table supports only an age-sex distribution for Israel, not a cross-country or time-series comparison. Use relative_value for comparisons because the unit column is blank.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 54.8,
+  "usage": {
+   "prompt_tokens": 2704,
+   "completion_tokens": 13112,
+   "total_tokens": 15816,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11110
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2192
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

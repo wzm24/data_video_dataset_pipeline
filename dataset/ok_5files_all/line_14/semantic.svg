@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f0f0f0"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#a0a0a0" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#a0a0a0" stroke-width="3"/>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,577.0 172.4,531.0 224.8,485.0 277.1,439.0 329.5,393.0 381.9,347.0 434.3,301.0 486.7,241.2 539.0,176.8 591.4,255.0 643.8,324.0 696.2,393.0 748.6,324.0 801.0,255.0 853.3,209.0 905.7,232.0 958.1,250.4 1010.5,268.8 1062.9,268.8 1115.2,268.8 1167.6,268.8 1220.0,264.2" fill="none" stroke="#6ba0d9" stroke-width="4" data-animation-property="points"/>
+</g>
+<line data-role="reference-line" x1="120" y1="259.6" x2="1220" y2="259.6" stroke="#b0b0b0" stroke-width="2" stroke-dasharray="6,5"/>
+<text data-role="reference-label" x="1212" y="251.6" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#888888">SUSTAINABLE</text>
+</g>
+</svg>

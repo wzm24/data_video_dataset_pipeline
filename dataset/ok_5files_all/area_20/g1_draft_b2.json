@@ -1,0 +1,248 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_20",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the disparity in mortality risks between driving and flying by comparing daily car fatalities to annual plane fatalities.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The comparison is between two different time scopes: average death by car for one day in 2014 versus death by plane for all of 2014.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Average death by car (one day in 2014)",
+     "x": "car",
+     "field": "value",
+     "value": 3.0,
+     "note": "Entity label carries the one-day 2014 scope; table value is 3.0 in relative_area units."
+    },
+    {
+     "entity": "Death by plane (all of 2014)",
+     "x": "plane",
+     "field": "value",
+     "value": 1.0,
+     "note": "Entity label carries the full-year 2014 scope; table value is 1.0 in relative_area units."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The clip compares a one-day car average with a full-year plane total.",
+    "Driving data is daily in 2014; flying data is annual in 2014.",
+    "The car row is one day of 2014; the plane row is all of 2014."
+   ],
+   "visual_evidence_rule": "Both entity labels must be visible with their time scopes clearly shown: one day in 2014 for car and all of 2014 for plane.",
+   "temporal_anchor": "during the 'flying versus driving' phrase, with a time-scope cue for each side",
+   "reviewer_question": "Must the clip explicitly distinguish one-day car data from full-year plane data, or is that only implied by labels?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The car value is greater than the plane value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Average death by car (one day in 2014)",
+     "x": "car",
+     "field": "value",
+     "value": 3.0,
+     "note": "Car value is 3.0 in relative_area units."
+    },
+    {
+     "entity": "Death by plane (all of 2014)",
+     "x": "plane",
+     "field": "value",
+     "value": 1.0,
+     "note": "Plane value is 1.0 in relative_area units; 3.0 > 1.0."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The car value exceeds the plane value.",
+    "Driving has the higher value; flying has the lower value.",
+    "The plane value is lower than the car value."
+   ],
+   "visual_evidence_rule": "The car data mark or area must visibly appear greater than the plane data mark or area.",
+   "temporal_anchor": "at the 'versus' comparison point",
+   "reviewer_question": "Must the clip show car value greater than plane value, or is the ratio alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The car one-day average is about three times the plane full-year total.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Average death by car (one day in 2014)",
+     "x": "car",
+     "field": "value",
+     "value": 3.0,
+     "note": "Used as numerator in the ratio."
+    },
+    {
+     "entity": "Death by plane (all of 2014)",
+     "x": "plane",
+     "field": "value",
+     "value": 1.0,
+     "note": "Used as denominator in the ratio."
+    }
+   ],
+   "computation": "3.0 / 1.0 = 3",
+   "accepted_routes": [
+    "The car one-day average is about three times the plane annual total.",
+    "The car value is roughly triple the plane value.",
+    "The plane full-year value is about one-third of the car one-day value."
+   ],
+   "visual_evidence_rule": "A visible comparison must communicate the threefold relation, either as a ratio annotation or as clearly proportional magnitudes.",
+   "temporal_anchor": "during the 'death rate of flying versus driving' comparison",
+   "reviewer_question": "Must the clip state the car one-day average is about three times the plane annual value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "On the table's relative_value normalization, the plane is about one-third of the car reference.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Average death by car (one day in 2014)",
+     "x": "car",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Car is the reference value in the relative_value normalization."
+    },
+    {
+     "entity": "Death by plane (all of 2014)",
+     "x": "plane",
+     "field": "relative_value",
+     "value": 0.3333,
+     "note": "Plane relative_value is 0.3333 against car's 1.0."
+    }
+   ],
+   "computation": "0.3333 / 1.0 = 0.3333 (about one-third)",
+   "accepted_routes": [
+    "The plane's relative_value is 0.3333 while the car's is 1.0000.",
+    "The plane is about one-third as large as the car in the normalized relative_area.",
+    "The smaller normalized value is about one-third of the reference value."
+   ],
+   "visual_evidence_rule": "If the relative_value normalization is shown, the plane's normalized magnitude should appear about one-third of the car's reference magnitude.",
+   "temporal_anchor": "at the 'versus' comparison as an optional normalization cue",
+   "reviewer_question": "Is the relative_value one-third normalization required, or is the 3x ratio sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "A full year of plane data has a lower value than one day of car data, which is the key disparity.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Average death by car (one day in 2014)",
+     "x": "car",
+     "field": "value",
+     "value": 3.0,
+     "note": "Car row is a one-day 2014 average with value 3.0."
+    },
+    {
+     "entity": "Death by plane (all of 2014)",
+     "x": "plane",
+     "field": "value",
+     "value": 1.0,
+     "note": "Plane row is a full-year 2014 total with value 1.0, lower than the car one-day value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "A full year of plane value is still lower than a single day of car value.",
+    "The plane annual total is less than the car one-day average.",
+    "Even with the plane row covering all of 2014, its value is below the car's one-day value."
+   ],
+   "visual_evidence_rule": "The time-scope labels and the lower plane magnitude must be simultaneously visible in the comparison.",
+   "temporal_anchor": "during the 'death rate of flying versus driving' clause",
+   "reviewer_question": "Must the clip explicitly contrast full-year plane data against one-day car data as the central disparity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Shortening the entity labels to 'car' and 'plane' is acceptable if their one-day versus full-year time scopes remain visible.",
+  "An optional annotation may show the relative_value 0.3333 and 1.0000 normalization alongside the main comparison."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state 3 car deaths per day or 1 plane death per year; the table's value unit is relative_area, not an absolute count.",
+  "Do not claim flying is 300% safer or that plane deaths are 33% of car deaths; relative_value is a 0-1 normalization, not a percentage.",
+  "Do not multiply the one-day car value into an annual car total or otherwise change the time basis unless the table explicitly provides that conversion.",
+  "Do not infer causation, risk per mile, policy conclusions, or other years/entities not present in the table."
+ ],
+ "notes": "The key trap is the mismatched time scopes: car is one day in 2014 while plane is all of 2014. The table's unit is relative_area, so the video should avoid absolute death counts and percentages while still conveying the car > plane ordering and the derived 3x ratio.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 45.2,
+  "usage": {
+   "prompt_tokens": 895,
+   "completion_tokens": 9968,
+   "total_tokens": 10863,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7950
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 383
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

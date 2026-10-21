@@ -1,0 +1,7 @@
+clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type,x_value
+area_2,contraceptive use,use,,16,0.5333,percent,printed,1990
+area_2,contraceptive use,use,,19,0.6333,percent,printed,1995
+area_2,contraceptive use,use,,22,0.7333,percent,printed,2000
+area_2,contraceptive use,use,,23.5,0.7833,percent,printed,2005
+area_2,contraceptive use,use,,27.5,0.9167,percent,printed,2010
+area_2,contraceptive use,use,,30,1.0000,percent,printed,2014

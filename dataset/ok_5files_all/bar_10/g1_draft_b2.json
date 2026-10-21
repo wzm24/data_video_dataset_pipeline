@@ -1,0 +1,280 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_10",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the low life expectancy of Bangladesh relative to the USA and South Korea, highlighting the country's development challenges.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Bangladesh has the lowest life expectancy among the three entities, at 47 years.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bangladesh",
+     "x": "960.0",
+     "field": "value",
+     "value": 47.0,
+     "note": "Life expectancy from table"
+    },
+    {
+     "entity": "USA",
+     "x": "320.0",
+     "field": "value",
+     "value": 71.0,
+     "note": "Comparison value showing Bangladesh is lower"
+    },
+    {
+     "entity": "South Korea",
+     "x": "640.0",
+     "field": "value",
+     "value": 52.0,
+     "note": "Comparison value showing Bangladesh is lower"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Bangladesh's life expectancy was 47 years, the lowest of the three.",
+    "At 47 years, Bangladesh ranked below USA and South Korea.",
+    "Bangladesh had the shortest life-expectancy bar at about 47 years."
+   ],
+   "visual_evidence_rule": "Show three labeled bars and make Bangladesh's bar the shortest, with the 47-year value visible or annotated.",
+   "temporal_anchor": "the life-expectancy clause ('Life expectancy was around 45')",
+   "reviewer_question": "Must the video explicitly state Bangladesh's absolute life expectancy (47), or is its lowest position enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "USA has the highest life expectancy at 71 years, and South Korea is at 52 years.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "320.0",
+     "field": "value",
+     "value": 71.0,
+     "note": "Highest life expectancy in table"
+    },
+    {
+     "entity": "South Korea",
+     "x": "640.0",
+     "field": "value",
+     "value": 52.0,
+     "note": "Middle life expectancy in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "USA had the highest life expectancy at 71 years.",
+    "South Korea's life expectancy was 52 years.",
+    "USA at 71 and South Korea at 52 years were both above Bangladesh."
+   ],
+   "visual_evidence_rule": "Show USA's bar as the highest with 71 visible or annotated, and South Korea's bar or value at 52 visible.",
+   "temporal_anchor": "the life-expectancy clause ('Life expectancy was around 45')",
+   "reviewer_question": "Must both USA and South Korea values be shown, or is only the USA comparison required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The life-expectancy order is USA (71) > South Korea (52) > Bangladesh (47).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "320.0",
+     "field": "value",
+     "value": 71.0,
+     "note": "First in order"
+    },
+    {
+     "entity": "South Korea",
+     "x": "640.0",
+     "field": "value",
+     "value": 52.0,
+     "note": "Second in order"
+    },
+    {
+     "entity": "Bangladesh",
+     "x": "960.0",
+     "field": "value",
+     "value": 47.0,
+     "note": "Third in order"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "USA (71) > South Korea (52) > Bangladesh (47).",
+    "The order was USA first, South Korea second, Bangladesh last.",
+    "Life expectancy fell from 71 in the USA to 52 in South Korea to 47 in Bangladesh."
+   ],
+   "visual_evidence_rule": "Show all three bars in descending order USA > South Korea > Bangladesh, with values or clear ordering labels.",
+   "temporal_anchor": "the life-expectancy clause ('Life expectancy was around 45')",
+   "reviewer_question": "Is the full ordering USA > South Korea > Bangladesh required, or only Bangladesh's bottom rank?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Bangladesh trails the USA by 24 years and South Korea by 5 years.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "320.0",
+     "field": "value",
+     "value": 71.0,
+     "note": "Used to compute gap to Bangladesh"
+    },
+    {
+     "entity": "South Korea",
+     "x": "640.0",
+     "field": "value",
+     "value": 52.0,
+     "note": "Used to compute gap to Bangladesh"
+    },
+    {
+     "entity": "Bangladesh",
+     "x": "960.0",
+     "field": "value",
+     "value": 47.0,
+     "note": "Compared against USA and South Korea"
+    }
+   ],
+   "computation": "24 = 71 - 47; 5 = 52 - 47",
+   "accepted_routes": [
+    "Bangladesh was 24 years below the USA.",
+    "USA exceeded Bangladesh by 24 years.",
+    "South Korea was 5 years above Bangladesh.",
+    "Bangladesh trailed South Korea by 5 years."
+   ],
+   "visual_evidence_rule": "Show gap/difference annotations or a clear visual comparison between Bangladesh and USA (24 years) and between Bangladesh and South Korea (5 years).",
+   "temporal_anchor": "the life-expectancy clause ('Life expectancy was around 45')",
+   "reviewer_question": "Are explicit year gaps (24 vs USA, 5 vs South Korea) required, or is visual ordering sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Bangladesh's life expectancy is about 66.2% of the USA's and about 90.4% of South Korea's.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Bangladesh",
+     "x": "960.0",
+     "field": "value",
+     "value": 47.0,
+     "note": "Numerator for both ratios"
+    },
+    {
+     "entity": "USA",
+     "x": "320.0",
+     "field": "value",
+     "value": 71.0,
+     "note": "Denominator for 47/71"
+    },
+    {
+     "entity": "South Korea",
+     "x": "640.0",
+     "field": "value",
+     "value": 52.0,
+     "note": "Denominator for 47/52"
+    }
+   ],
+   "computation": "47/71 = 0.66197; 47/52 = 0.90385",
+   "accepted_routes": [
+    "Bangladesh's life expectancy was about 66% of the USA's.",
+    "Bangladesh reached about 90% of South Korea's life expectancy.",
+    "Compared with USA, Bangladesh was at roughly two-thirds (47/71 ≈ 66%).",
+    "Compared with South Korea, Bangladesh was at about nine-tenths (47/52 ≈ 90%)."
+   ],
+   "visual_evidence_rule": "Show ratio/percentage annotations comparing Bangladesh to USA (≈66%) and to South Korea (≈90%), or an equivalent relative bar-length comparison.",
+   "temporal_anchor": "the life-expectancy clause ('Life expectancy was around 45')",
+   "reviewer_question": "Are ratio/share comparisons (≈66% of USA, ≈90% of South Korea) required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Use the table's relative_value bar lengths: USA 0.8875, South Korea 0.6500, Bangladesh 0.5875.",
+  "Mention that South Korea is also below the USA by 19 years (71 - 52 = 19).",
+  "Mention that USA's life expectancy is about 1.51 times Bangladesh's (71/47 ≈ 1.51)."
+ ],
+ "unsupported_to_avoid": [
+  "Using the narration's 'around 45' as the charted Bangladesh value instead of the table's 47.",
+  "Claiming Bangladesh had the lowest life expectancy in the world; the table only compares three entities.",
+  "Causal claims such as low life expectancy being caused by illiteracy, poverty, or per capita income.",
+  "Using the literacy value 'one in five' or per capita income claims not present in the table.",
+  "Treating relative_value 0.5875 as Bangladesh's share of the USA rather than as the table's own relative measure."
+ ],
+ "notes": "The table gives life expectancy values in years; relative_value is available but not used as a required unit because its denominator is not explicit. Required units focus on Bangladesh's bottom value, the three-country order, and explicit gaps.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 35.7,
+  "usage": {
+   "prompt_tokens": 667,
+   "completion_tokens": 8825,
+   "total_tokens": 9492,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6816
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 411
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

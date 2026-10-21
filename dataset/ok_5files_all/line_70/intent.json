@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_70",
+ "intent_en": "To explain how the yield curve (interest rates across different time horizons) serves as a tool for predicting economic downturns by reflecting market expectations.",
+ "previous_intent": "To explain how interest rates across different time periods reflect market expectations of economic direction and help predict economic downturns.",
+ "narration_support": "when you're trying to predict a downturn, you're often trying to get a read on people's expectations of where the economy is heading. Which is why that curve is so useful.",
+ "chart_support": "Line chart plotting interest rates against time (from 3m to 10y) for Q2 2019, illustrating the yield curve shape.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly links the 'curve' to predicting downturns and expectations. The chart visualizes this curve as interest rates over time (3m vs 10y), which is the standard representation of a yield curve used for such predictions.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

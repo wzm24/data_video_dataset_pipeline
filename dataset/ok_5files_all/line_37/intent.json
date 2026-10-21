@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_37",
+ "intent_en": "To illustrate the significant demographic shift of African Americans leaving the South starting in the early 20th century.",
+ "previous_intent": "To illustrate the significant demographic shift of African Americans migrating from the South to Northern and Western cities beginning in the early 20th century.",
+ "narration_support": "Starting in the early 20th century, nearly half of the African -American population left this region",
+ "chart_support": "Line chart showing the percentage of African Americans living in the South, which remains high until roughly 1910 and then declines sharply",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": true,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration is sparse (single sentence) and only covers the decline period, so the intent is anchored on the chart's full timeline showing the historical context before the drop.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": true
+}

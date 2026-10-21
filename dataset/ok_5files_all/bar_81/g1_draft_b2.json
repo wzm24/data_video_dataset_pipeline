@@ -1,0 +1,252 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_81",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the massive scale of the Congolese death toll by comparing it to the total population of Belgium.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart compares two scaled table values: CONGOLESE DEATHS at 1.000 and BELGIAN POPULATION 1890 at 0.740.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CONGOLESE DEATHS",
+     "x": "395.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Congolese deaths are indexed at 1.000 in the table."
+    },
+    {
+     "entity": "BELGIAN POPULATION 1890",
+     "x": "945.0",
+     "field": "value",
+     "value": 0.74,
+     "note": "Belgian population 1890 is indexed at 0.740 in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Two bars are labeled CONGOLESE DEATHS (1.000) and BELGIAN POPULATION 1890 (0.740).",
+    "Congolese deaths are shown at 1.000 while Belgium’s 1890 population is shown at 0.740.",
+    "The clip contrasts the Congolese death toll with the 1890 Belgian population using the table’s two scaled values."
+   ],
+   "visual_evidence_rule": "Both entity labels and their table values or corresponding bar heights (1.000 and 0.740) must be visible.",
+   "temporal_anchor": "the main Congolese death-toll clause; comparison labels should persist through the 15–20s clip",
+   "reviewer_question": "Must the video explicitly label both table values, or is identifying the two entities sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "CONGOLESE DEATHS exceed BELGIAN POPULATION 1890 in the comparison: 1.000 is greater than 0.740.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CONGOLESE DEATHS",
+     "x": "395.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Higher table value."
+    },
+    {
+     "entity": "BELGIAN POPULATION 1890",
+     "x": "945.0",
+     "field": "value",
+     "value": 0.74,
+     "note": "Lower table value."
+    }
+   ],
+   "computation": "1.000 > 0.740",
+   "accepted_routes": [
+    "The Congolese death toll is larger than Belgium’s 1890 population.",
+    "Congolese deaths outweigh the Belgian population.",
+    "The deaths bar is taller than the Belgium population bar."
+   ],
+   "visual_evidence_rule": "The CONGOLESE DEATHS bar must visibly be taller or higher than the BELGIAN POPULATION 1890 bar.",
+   "temporal_anchor": "the main death-toll clause",
+   "reviewer_question": "Is the order/comparison (deaths > Belgium population) required, or can the video just show both bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "CONGOLESE DEATHS are about 1.35 times BELGIAN POPULATION 1890, or about 35% higher than the Belgian population baseline.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CONGOLESE DEATHS",
+     "x": "395.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Numerator for ratio."
+    },
+    {
+     "entity": "BELGIAN POPULATION 1890",
+     "x": "945.0",
+     "field": "value",
+     "value": 0.74,
+     "note": "Denominator for ratio."
+    }
+   ],
+   "computation": "1.000 / 0.740 = 1.351...; (1.000 / 0.740 - 1) * 100 = 35.1% higher",
+   "accepted_routes": [
+    "Congolese deaths are roughly 1.35× Belgium’s 1890 population.",
+    "The death toll is about 35% larger than Belgium’s population.",
+    "The Congolese deaths value is about 35% above the Belgian population value on the table’s scale."
+   ],
+   "visual_evidence_rule": "A ratio or percentage annotation, or equivalent visual scale, must communicate about 1.35× or about 35% higher.",
+   "temporal_anchor": "the comparison reveal after or alongside the death-toll clause",
+   "reviewer_question": "Must the video quantify the ratio (~1.35× or ~35% higher), or is a qualitative 'massive scale' comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "BELGIAN POPULATION 1890 is 74.0% of CONGOLESE DEATHS on the table’s scale: 0.740 / 1.000 = 74.0%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "BELGIAN POPULATION 1890",
+     "x": "945.0",
+     "field": "value",
+     "value": 0.74,
+     "note": "Part relative to Congolese deaths."
+    },
+    {
+     "entity": "CONGOLESE DEATHS",
+     "x": "395.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Whole/reference on the table’s scale."
+    }
+   ],
+   "computation": "0.740 / 1.000 = 0.740 = 74.0%",
+   "accepted_routes": [
+    "Belgium’s 1890 population is 74% of the Congolese death toll.",
+    "The Belgian population bar reaches 74% of the deaths bar.",
+    "Congolese deaths are the 100% reference and Belgium’s population is 74% in this comparison."
+   ],
+   "visual_evidence_rule": "If used, the chart must show or annotate the Belgian bar at 74% of the Congolese deaths bar.",
+   "temporal_anchor": "optional comparison overlay",
+   "reviewer_question": "Should the video include the share framing (Belgium = 74% of deaths), or is the ratio/exceedance enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The scaled gap between CONGOLESE DEATHS and BELGIAN POPULATION 1890 is 0.260: 1.000 minus 0.740.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "CONGOLESE DEATHS",
+     "x": "395.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Minuend."
+    },
+    {
+     "entity": "BELGIAN POPULATION 1890",
+     "x": "945.0",
+     "field": "value",
+     "value": 0.74,
+     "note": "Subtrahend."
+    }
+   ],
+   "computation": "1.000 - 0.740 = 0.260",
+   "accepted_routes": [
+    "Congolese deaths exceed Belgium’s 1890 population by 0.260 scaled units.",
+    "The gap between the two bars is 0.260.",
+    "There is a 0.260 difference on the table’s scale."
+   ],
+   "visual_evidence_rule": "If used, the chart must show or annotate the absolute gap of 0.260 between the two bars.",
+   "temporal_anchor": "optional comparison annotation",
+   "reviewer_question": "Should the absolute gap (0.260) be shown, or are ratio and exceedance enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Displaying the exact table values 1.000 and 0.740 as labels.",
+  "Using the 74% share framing for the Belgian population comparison.",
+  "Using the 0.260 absolute gap framing for the two scaled values.",
+  "Showing source/color metadata such as printed source type and the two bar colors."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming about 10 million deaths as a table-grounded value; 10 million appears only in the narration, not in the table.",
+  "Stating an absolute Belgian population in people unless it is explicitly derived from table values.",
+  "Using Belgium’s current population or a Belgian population from another year.",
+  "Causal claims about execution or starvation, or explanations for why deaths occurred.",
+  "Extrapolating beyond the two table rows or treating the comparison as applying to all Congolese history.",
+  "Mixing up the denominator for the ratio: 0.740 is the Belgian population value relative to the 1.000 Congolese deaths reference."
+ ],
+ "notes": "All numeric claims are based on the table values 1.000 and 0.740 or arithmetic derived from them; the 10 million narration is not table-grounded. The main reviewer choice is whether the ratio/difference must be quantified or only the entity comparison shown.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 26.2,
+  "usage": {
+   "prompt_tokens": 654,
+   "completion_tokens": 6614,
+   "total_tokens": 7268,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4475
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 398
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

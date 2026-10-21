@@ -1,0 +1,121 @@
+{
+ "clip_id": "donut_21",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:share @ 0"
+   ],
+   "assertion": {
+    "mark": "share @ 0",
+    "field": "value",
+    "expected": 92.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A central donut/percentage mark or label must visibly show 92% as the urban share, with the urban segment dominating the composition."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:share @ 0"
+   ],
+   "assertion": {
+    "segment": "share @ 0",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 92.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If the chart is a donut, the complement segment should be labeled or visibly identified as 8% / non-urban; otherwise this is optional."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "share @ 0",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A textual callout, annotation, or comparative mark must show the 92% vs 8% contrast or the derived ~11.5:1 ratio if this optional unit is used."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:share @ 0"
+   ],
+   "assertion": {
+    "series": "share",
+    "values": [
+     92.0
+    ],
+    "threshold_between": [
+     92.0,
+     92.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The urban segment should visually dominate the composition and/or the narration or callout should characterize 92% as high concentration / overwhelming majority."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A title, callout, or narration transition must mention demographics as a key factor; no demographic data need be plotted."
+  }
+ ]
+}

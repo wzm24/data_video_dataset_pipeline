@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#2E2E2E"/>
+<text id="chart-title" data-role="title" x="640.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Transportation mode, by share of use</text>
+<g id="chart-legend" data-role="legend">
+<rect x="820" y="96" width="18" height="18" fill="#7FD8C4"/>
+<text x="846" y="111" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">National average</text>
+<rect x="820" y="124" width="18" height="18" fill="#8B7CF6"/>
+<text x="846" y="139" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">Transit-oriented developments</text>
+</g>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1160" y2="600" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+<line data-role="axis" x1="120" y1="180" x2="120" y2="600" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">0%</text>
+<line data-role="tick" x1="112" y1="495.0" x2="120" y2="495.0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="501.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">25%</text>
+<line data-role="tick" x1="112" y1="390.0" x2="120" y2="390.0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="396.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">50%</text>
+<line data-role="tick" x1="112" y1="285.0" x2="120" y2="285.0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="291.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">75%</text>
+<line data-role="tick" x1="112" y1="180.0" x2="120" y2="180.0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="186.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">100%</text>
+<g id="group-auto" data-role="group" data-label="Auto">
+<rect data-role="bar" data-entity-id="auto-na" data-label="Auto National average" data-value="80" x="160" y="264.0" width="100" height="336.0" fill="#7FD8C4"/>
+<rect data-role="bar" data-entity-id="auto-tod" data-label="Auto TOD" data-value="45" x="280" y="411.0" width="100" height="189.0" fill="#8B7CF6"/>
+<text data-role="category-label" x="250" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">Auto</text>
+</g>
+<g id="group-public-transit" data-role="group" data-label="Public transit">
+<rect data-role="bar" data-entity-id="public-transit-na" data-label="Public transit National average" data-value="5" x="420" y="579.0" width="100" height="21.0" fill="#7FD8C4"/>
+<rect data-role="bar" data-entity-id="public-transit-tod" data-label="Public transit TOD" data-value="30" x="540" y="474.0" width="100" height="126.0" fill="#8B7CF6"/>
+<text data-role="category-label" x="510" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">Public transit</text>
+</g>
+<g id="group-bike" data-role="group" data-label="Bike">
+<rect data-role="bar" data-entity-id="bike-na" data-label="Bike National average" data-value="1" x="680" y="595.8" width="100" height="4.2" fill="#7FD8C4"/>
+<rect data-role="bar" data-entity-id="bike-tod" data-label="Bike TOD" data-value="3" x="800" y="587.4" width="100" height="12.6" fill="#8B7CF6"/>
+<text data-role="category-label" x="770" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">Bike</text>
+</g>
+<g id="group-walk" data-role="group" data-label="Walk">
+<rect data-role="bar" data-entity-id="walk-na" data-label="Walk National average" data-value="3" x="940" y="587.4" width="100" height="12.6" fill="#7FD8C4"/>
+<rect data-role="bar" data-entity-id="walk-tod" data-label="Walk TOD" data-value="23" x="1060" y="503.4" width="100" height="96.6" fill="#8B7CF6"/>
+<text data-role="category-label" x="1030" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">Walk</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_20",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:50€ @ x_px=110.0"
+   ],
+   "assertion": {
+    "mark": "50€ @ x_px=110.0",
+    "field": "value",
+    "expected": 38.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly identify the initial value as 38€."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:50€ @ x_px=1230.0"
+   ],
+   "assertion": {
+    "mark": "50€ @ x_px=1230.0",
+    "field": "value",
+    "expected": 50.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly identify the final value as 50€."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:50€ @ x_px=110.0",
+    "mark:50€ @ x_px=1230.0"
+   ],
+   "assertion": {
+    "low": "50€ @ x_px=110.0",
+    "low_value": 38.0,
+    "high": "50€ @ x_px=1230.0",
+    "high_value": 50.0,
+    "delta": 12.0,
+    "ratio": 1.3158,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must convey that the endpoint is 12€ higher than the start, e.g. through comparative labels or a change annotation."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "50€ @ x_px=964.5",
+    "extreme": "max",
+    "expected": 63.7,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the maximum point at 63.7€ and make clear it exceeds 50€."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:50€ @ x_px=110.0",
+    "mark:50€ @ x_px=168.1",
+    "mark:50€ @ x_px=964.5",
+    "mark:50€ @ x_px=1230.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "50€ @ x_px=110.0",
+      "value": 38.0
+     },
+     {
+      "mark": "50€ @ x_px=168.1",
+      "value": 32.9
+     },
+     {
+      "mark": "50€ @ x_px=964.5",
+      "value": 63.7
+     },
+     {
+      "mark": "50€ @ x_px=1230.0",
+      "value": 50.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show an overall rising direction from early to late in the sequence, not a flat or falling series."
+  }
+ ]
+}

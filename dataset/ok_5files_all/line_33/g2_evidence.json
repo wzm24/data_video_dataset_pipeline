@@ -1,0 +1,139 @@
+{
+ "clip_id": "line_33",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Share of top percentage in total wealth @ early high",
+    "mark:Share of top percentage in total wealth @ trough",
+    "mark:Share of top percentage in total wealth @ final"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Share of top percentage in total wealth @ early high",
+      "value": 46.0025
+     },
+     {
+      "mark": "Share of top percentage in total wealth @ trough",
+      "value": 23.9975
+     },
+     {
+      "mark": "Share of top percentage in total wealth @ final",
+      "value": 40.0023
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series must visibly decline from an early high to a low and then rise to a higher final value."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Share of top percentage in total wealth)"
+   ],
+   "assertion": {
+    "mark": "Share of top percentage in total wealth @ early peak",
+    "extreme": "max",
+    "expected": 46.0025,
+    "compared_set": "Share of top percentage in total wealth",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest data point on the series must be approximately 46.0%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Share of top percentage in total wealth)"
+   ],
+   "assertion": {
+    "mark": "Share of top percentage in total wealth @ trough",
+    "extreme": "min",
+    "expected": 23.9975,
+    "compared_set": "Share of top percentage in total wealth",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The lowest data point on the series must be approximately 24.0%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Share of top percentage in total wealth @ final"
+   ],
+   "assertion": {
+    "segment": "Share of top percentage in total wealth @ final",
+    "expected_share": 0.5925,
+    "total_of": "%",
+    "total": 67.5198,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The final data point must be near 40.0%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Share of top percentage in total wealth @ trough",
+    "mark:Share of top percentage in total wealth @ final"
+   ],
+   "assertion": {
+    "low": "Share of top percentage in total wealth @ trough",
+    "low_value": 23.9975,
+    "high": "Share of top percentage in total wealth @ final",
+    "high_value": 40.0023,
+    "delta": 16.0048,
+    "ratio": 1.6669,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series must show an increase of roughly 16 percentage points from its trough to its final value."
+  }
+ ]
+}

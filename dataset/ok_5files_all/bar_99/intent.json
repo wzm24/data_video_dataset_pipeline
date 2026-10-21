@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_99",
+ "intent_en": "To demonstrate that wars between democratic nations are rare compared to other state-on-state conflicts.",
+ "previous_intent": "To illustrate that wars between democratic states constitute a small minority of all state-vs-state wars fought between 1900 and 2000.",
+ "narration_support": "Democracies hardly ever fight each other.",
+ "chart_support": "A bar chart titled 'State vs State Wars 1900-2000' displays a large red block and a smaller teal block labeled 'Wars between democracies', indicating that such wars are a minority of the total.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly claims democracies rarely fight, and the chart visualizes this by showing 'Wars between democracies' as a small segment of the total 'State vs State Wars' bar for the period 1900-2000.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

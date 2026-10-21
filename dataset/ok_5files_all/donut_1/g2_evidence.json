@@ -1,0 +1,124 @@
+{
+ "clip_id": "donut_1",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Digital @ digital"
+   ],
+   "assertion": {
+    "mark": "Digital @ digital",
+    "field": "value",
+    "expected": 66.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A label or slice for Digital must show 66% in the US/overall donut."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Physical @ physical"
+   ],
+   "assertion": {
+    "mark": "Physical @ physical",
+    "field": "value",
+    "expected": 34.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A label or slice for Physical must show 34% in the US/overall donut."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Digital @ digital",
+    "segment:Physical @ physical"
+   ],
+   "assertion": {
+    "segment": "Digital @ digital",
+    "expected_share": 0.66,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two labeled slices must be presented as the complete split and visibly sum to 100%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Digital @ digital",
+    "mark:Physical @ physical"
+   ],
+   "assertion": {
+    "greater": "Digital @ digital",
+    "lesser": "Physical @ physical",
+    "expected_ratio": 1.9412,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A callout, annotation, or visual difference must make the 32-point gap or the roughly 2× relationship visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Digital @ digital",
+    "mark:Physical @ physical"
+   ],
+   "assertion": {
+    "greater": "Digital @ digital",
+    "lesser": "Physical @ physical",
+    "expected_ratio": 1.9412,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Japan contrast must appear as near-opposite; if a Japan donut or value is shown, it must not introduce a precise share absent from the table."
+  }
+ ]
+}

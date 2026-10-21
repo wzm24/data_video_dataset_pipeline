@@ -1,0 +1,122 @@
+{
+ "clip_id": "pie_19",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:U.S. NEWS @ slice-1"
+   ],
+   "assertion": {
+    "segment": "U.S. NEWS @ slice-1",
+    "expected_share": 0.0775,
+    "total_of": "%",
+    "total": 99.95,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A slice or label must show 7.75% attached to SAT/ACT scores in the U.S. News ranking formula."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:7.75% SAT/ACT Scores @ slice-2"
+   ],
+   "assertion": {
+    "segment": "7.75% SAT/ACT Scores @ slice-2",
+    "expected_share": 0.9225,
+    "total_of": "%",
+    "total": 99.95,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The other slice must be labeled or annotated with 92.2%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:7.75% SAT/ACT Scores @ slice-2",
+    "mark:U.S. NEWS @ slice-1"
+   ],
+   "assertion": {
+    "greater": "7.75% SAT/ACT Scores @ slice-2",
+    "lesser": "U.S. NEWS @ slice-1",
+    "expected_ratio": 11.8968,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 7.75% and 92.2% must appear together, or a ratio annotation must be shown."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:7.75% SAT/ACT Scores @ slice-2",
+    "mark:U.S. NEWS @ slice-1"
+   ],
+   "assertion": {
+    "greater": "7.75% SAT/ACT Scores @ slice-2",
+    "lesser": "U.S. NEWS @ slice-1",
+    "expected_ratio": 11.8968,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both slices must be visible with the SAT/ACT slice clearly smaller."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If decimals are shown, they must be paired with the correct percent labels."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_77",
+ "intent_en": "To demonstrate the relatively small number of In-N-Out Burger locations compared to its major competitors in the United States market.",
+ "previous_intent": "To illustrate the relatively small number of locations and slow expansion rate of In-N-Out Burger compared to major competitors like Whataburger, Five Guys, and McDonald's in the United States.",
+ "narration_support": "In -N -Out is one of the smallest major fast food chains in the world... There are over twice as many water burgers, almost four times as many five guys, and forty times as many McDonald's",
+ "chart_support": "Horizontal bar chart comparing the number of locations for In-N-Out Burger, Whataburger, and Five Guys, showing In-N-Out has the fewest locations with a US flag indicating the market",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": true,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly compares In-N-Out's size to Whataburger (transcribed as 'water burgers'), Five Guys, and McDonald's. The chart visualizes this with In-N-Out having the shortest bar, followed by Whataburger and Five Guys, with a US flag context.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": true
+ },
+ "needs_video_escalation": false
+}

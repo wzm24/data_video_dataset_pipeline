@@ -1,0 +1,128 @@
+{
+ "clip_id": "donut_13",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:US flag circle @ x_px=0"
+   ],
+   "assertion": {
+    "mark": "US flag circle @ x_px=0",
+    "field": "value",
+    "expected": 42.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A US-labeled mark/segment must be visible and labeled with 42% or 42."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Netherlands flag circle @ x_px=1"
+   ],
+   "assertion": {
+    "mark": "Netherlands flag circle @ x_px=1",
+    "field": "value",
+    "expected": 20.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A Netherlands-labeled mark/segment must be visible and labeled with 20% or 20."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:US flag circle @ x_px=0",
+    "mark:Netherlands flag circle @ x_px=1"
+   ],
+   "assertion": {
+    "greater": "US flag circle @ x_px=0",
+    "lesser": "Netherlands flag circle @ x_px=1",
+    "expected_ratio": 2.1,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both US and Netherlands marks/segments must appear in the same chart so their order 42 > 20 is visually discernible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:US flag circle @ x_px=0",
+    "mark:Netherlands flag circle @ x_px=1"
+   ],
+   "assertion": {
+    "low": "Netherlands flag circle @ x_px=1",
+    "low_value": 20.0,
+    "high": "US flag circle @ x_px=0",
+    "high_value": 42.0,
+    "delta": 22.0,
+    "ratio": 2.1,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A gap/difference annotation of 22 percentage points, or a visible bracket/gap between 42% and 20%, must be shown if this unit is conveyed."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:US flag circle @ x_px=0",
+    "mark:Netherlands flag circle @ x_px=1"
+   ],
+   "assertion": {
+    "low": "Netherlands flag circle @ x_px=1",
+    "low_value": 20.0,
+    "high": "US flag circle @ x_px=0",
+    "high_value": 42.0,
+    "delta": 22.0,
+    "ratio": 2.1,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio/multiplier annotation such as '2.1x' or 'about double' or '48% of US' must be visible if this unit is conveyed."
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "clip_id": "bar_5",
+ "intent_en": "Compare private and state schools on paying business rates, and convey the potential annual revenue from requiring private schools to pay as state schools do.",
+ "previous_intent": "To illustrate the potential additional annual revenue that could be generated if private schools were required to pay business rates at the same level as state schools.",
+ "narration_support": "getting them to pay the full WAC, which is something state schools already have to do, could bring in an extra £105 million per year.",
+ "chart_support": "A bar chart comparing private and state schools under the title 'business rates', featuring a large monetary figure overlay to indicate potential revenue.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly links making private schools pay business rates (WAC) to a revenue increase. The chart visualizes this with a large monetary overlay (£105m) over a comparison of private and state schools regarding business rates, with bars reaching the top of the scale, likely representing the full rate scenario.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate the potential additional annual revenue that could be generated if private schools were required to pay business rates at the same level as state schools.",
+ "intent_machine": "To illustrate the potential additional annual revenue that could be generated if private schools were required to pay business rates at the same level as state schools.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
+}

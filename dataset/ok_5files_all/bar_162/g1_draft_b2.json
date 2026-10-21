@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_162",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the growth in the proportion of adult internet users posting online video from 2009 to 2013.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 2009, 14% of adult internet users posted online video.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2009",
+     "x": "2009",
+     "field": "value",
+     "value": 14,
+     "note": "Table row for 2009 gives value=14 and unit=%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "14% of adult internet users posted online video in 2009.",
+    "The 2009 baseline was 14%.",
+    "In 2009, the share was 14 percent."
+   ],
+   "visual_evidence_rule": "The 2009 value 14% must be visible or labeled.",
+   "temporal_anchor": "2009 clause or start of the 2009-to-2013 span.",
+   "reviewer_question": "Must the 2009 baseline (14%) be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In 2013, 31% of adult internet users posted online video.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 31,
+     "note": "Table row for 2013 gives value=31 and unit=%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "31% of adult internet users posted online video in 2013.",
+    "The 2013 value was 31%.",
+    "By 2013, the share had reached 31 percent."
+   ],
+   "visual_evidence_rule": "The 2013 value 31% must be visible or labeled.",
+   "temporal_anchor": "2013 clause or end of the 2009-to-2013 span.",
+   "reviewer_question": "Must the 2013 endpoint (31%) be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The proportion posting online video increased from 2009 to 2013; 2013 is higher than 2009.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2009",
+     "x": "2009",
+     "field": "value",
+     "value": 14,
+     "note": "2009 comparison endpoint."
+    },
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 31,
+     "note": "2013 comparison endpoint."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The share rose from 14% in 2009 to 31% in 2013.",
+    "2013 was higher than 2009.",
+    "There was an upward change over the period."
+   ],
+   "visual_evidence_rule": "The visual encoding must make clear that the 2013 value exceeds the 2009 value.",
+   "temporal_anchor": "from 2009 to 2013.",
+   "reviewer_question": "Is the upward direction required as a separate unit, or is it implied by the two endpoint values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The increase from 2009 to 2013 was 17 percentage points (31% minus 14%).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2009",
+     "x": "2009",
+     "field": "value",
+     "value": 14,
+     "note": "Starting percentage-point value."
+    },
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 31,
+     "note": "Ending percentage-point value."
+    }
+   ],
+   "computation": "31 - 14 = 17 percentage points",
+   "accepted_routes": [
+    "It increased by 17 percentage points.",
+    "The gain from 2009 to 2013 was 17 points.",
+    "31% is 17 percentage points higher than 14%."
+   ],
+   "visual_evidence_rule": "The chart must allow the 31% and 14% values to be compared so that a 17-point difference is derivable or labeled.",
+   "temporal_anchor": "from 2009 to 2013.",
+   "reviewer_question": "Must the absolute percentage-point gain (17 pp) be conveyed, or is the ratio/doubling sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 2013 proportion was more than double the 2009 proportion; 31% is about 2.2 times 14%, an increase of about 121% relative to 2009.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2009",
+     "x": "2009",
+     "field": "value",
+     "value": 14,
+     "note": "Base value for ratio and relative change."
+    },
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 31,
+     "note": "Comparison value for ratio and relative change."
+    }
+   ],
+   "computation": "31 / 14 = 2.214...; (31 - 14) / 14 = 1.214... (about 121% relative increase)",
+   "accepted_routes": [
+    "The share more than doubled, from 14% to 31%.",
+    "The 2013 share was about 2.2 times the 2009 share.",
+    "It increased by roughly 120% relative to 2009.",
+    "2013 was roughly double the 2009 level."
+   ],
+   "visual_evidence_rule": "The chart must show both 14% and 31% so the ratio or more-than-doubling is derivable or explicitly annotated.",
+   "temporal_anchor": "the 'last 4 years' or doubled clause.",
+   "reviewer_question": "Should the video be required to state the growth as more than doubled/about 2.2x, given the narration says 'doubled' but the table shows 31% vs. 14%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The time span is four years: 2013 - 2009 = 4.",
+  "The 2009 value is about 45.16% of the 2013 value: 14 / 31 = 0.4516."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as a specific platform or technology causing the growth.",
+  "Absolute counts of adult internet users or video posters; the denominator is not in the table.",
+  "Values for years other than 2009 and 2013.",
+  "Exact 'doubled' as 28% or exact 100% increase; 31 / 14 = 2.21 is more than double.",
+  "Continuous annual trend shape or per-year values between the endpoints."
+ ],
+ "notes": "The table gives two absolute percentage values: 14% in 2009 and 31% in 2013. Derived comparisons support 17 percentage points and about 2.2x/more-than-doubled, so avoid importing counts, causality, or exact doubling language.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 37.3,
+  "usage": {
+   "prompt_tokens": 795,
+   "completion_tokens": 9216,
+   "total_tokens": 10011,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7492
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 411
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

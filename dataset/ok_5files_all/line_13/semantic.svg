@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F95338"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#E0E0E0" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#E0E0E0" stroke-width="3"/>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,255.0 175.0,264.2 230.0,287.2 285.0,280.3 340.0,273.4 395.0,278.0 450.0,314.8 505.0,310.2 560.0,305.6" fill="none" stroke="#364570" stroke-width="4" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="120.0" cy="255.0" r="6" fill="#364570" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="230.0" cy="287.2" r="6" fill="#364570" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="340.0" cy="273.4" r="6" fill="#364570" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="450.0" cy="314.8" r="6" fill="#364570" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="560.0" cy="305.6" r="6" fill="#364570" stroke="#ffffff" stroke-width="2"/>
+</g>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="560.0,305.6 582.0,324.0 604.0,342.4 626.0,360.8 648.0,379.2 670.0,411.4 703.0,406.8 736.0,402.2 769.0,399.9 780.0,397.6 813.0,399.9 846.0,402.2 879.0,404.5 890.0,406.8 923.0,406.8 956.0,409.1 989.0,410.5 1000.0,411.4 1033.0,411.4 1066.0,413.7 1110.0,416.0 1143.0,411.4 1176.0,404.5 1220.0,393.0" fill="none" stroke="#FFD700" stroke-width="4" stroke-dasharray="8,6" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="670.0" cy="411.4" r="6" fill="#FFD700" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="780.0" cy="397.6" r="6" fill="#FFD700" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="890.0" cy="406.8" r="6" fill="#FFD700" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1000.0" cy="411.4" r="6" fill="#FFD700" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1110.0" cy="416.0" r="6" fill="#FFD700" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="393.0" r="6" fill="#FFD700" stroke="#ffffff" stroke-width="2"/>
+</g>
+<text data-role="x-axis-name" x="640.0" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">Years</text>
+<text data-role="y-axis-name" transform="translate(34, 370.0) rotate(-90)" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#FFFFFF">Deaths</text>
+</g>
+</svg>

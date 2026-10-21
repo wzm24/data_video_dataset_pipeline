@@ -1,0 +1,245 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_26",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To highlight the limited proportion of arable land in Somalia relative to India and Germany.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Somalia's arable land is 5% of its land area.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Somalia",
+     "x": "0",
+     "field": "value",
+     "value": 5,
+     "note": "printed percent value for Somalia"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Somalia has 5% arable land.",
+    "Only 5% of Somalia's land is arable.",
+    "Somalia's arable share is 5 percent."
+   ],
+   "visual_evidence_rule": "Somalia's 5% value must be visible as a label, segment, donut, or value annotation.",
+   "temporal_anchor": "the narration clause introducing Somalia's arable share",
+   "reviewer_question": "Must the video state Somalia's exact 5% arable-land share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "India's arable land is 48% of its land area.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "India",
+     "x": "1",
+     "field": "value",
+     "value": 48,
+     "note": "printed percent value for India"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "India has 48% arable land.",
+    "Nearly half of India's land is arable.",
+    "India's arable share is about half, at 48%."
+   ],
+   "visual_evidence_rule": "India's 48% value must be visible as a label, segment, donut, or value annotation.",
+   "temporal_anchor": "the comparison clause mentioning India",
+   "reviewer_question": "Must the video state India's 48% arable-land share as the comparison point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Germany's arable land is 28% of its land area.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Germany",
+     "x": "2",
+     "field": "value",
+     "value": 28,
+     "note": "printed percent value for Germany"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Germany has 28% arable land.",
+    "Just over a quarter of Germany's land is arable.",
+    "Germany's arable share is 28 percent."
+   ],
+   "visual_evidence_rule": "Germany's 28% value must be visible as a label, segment, donut, or value annotation.",
+   "temporal_anchor": "the comparison clause mentioning Germany",
+   "reviewer_question": "Must the video state Germany's 28% arable-land share as the comparison point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Somalia's arable share is lower than both India's and Germany's; India is 48% and Germany is 28%, compared with Somalia's 5%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Somalia",
+     "x": "0",
+     "field": "value",
+     "value": 5,
+     "note": "lower value in the comparison"
+    },
+    {
+     "entity": "India",
+     "x": "1",
+     "field": "value",
+     "value": 48,
+     "note": "higher comparison value"
+    },
+    {
+     "entity": "Germany",
+     "x": "2",
+     "field": "value",
+     "value": 28,
+     "note": "higher comparison value"
+    }
+   ],
+   "computation": "5 < 48; 5 < 28",
+   "accepted_routes": [
+    "Somalia's 5% arable share is far below India's 48% and Germany's 28%.",
+    "Somalia is much lower than both India and Germany.",
+    "India and Germany have much larger arable shares than Somalia."
+   ],
+   "visual_evidence_rule": "Somalia's 5% mark must be visibly smaller or lower than India's 48% and Germany's 28% marks.",
+   "temporal_anchor": "the comparative clause contrasting Somalia with India and Germany",
+   "reviewer_question": "Must the video explicitly state that Somalia's share is lower than both India's and Germany's?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Among the three, India has the highest arable share, Germany is second, and Somalia is lowest.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "India",
+     "x": "1",
+     "field": "value",
+     "value": 48,
+     "note": "largest value"
+    },
+    {
+     "entity": "Germany",
+     "x": "2",
+     "field": "value",
+     "value": 28,
+     "note": "middle value"
+    },
+    {
+     "entity": "Somalia",
+     "x": "0",
+     "field": "value",
+     "value": 5,
+     "note": "smallest value"
+    }
+   ],
+   "computation": "rank by value: India 48 > Germany 28 > Somalia 5",
+   "accepted_routes": [
+    "India has the largest arable share, Germany second, and Somalia the smallest.",
+    "The order is India, Germany, Somalia from most to least arable land.",
+    "Somalia ranks last among the three, below Germany and India."
+   ],
+   "visual_evidence_rule": "If included, the chart or annotation must make the order India > Germany > Somalia clear.",
+   "temporal_anchor": "the overall comparative statement across Somalia, India, and Germany",
+   "reviewer_question": "Should the video explicitly rank all three countries, including India above Germany?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Somalia's share is about one-tenth of India's (5 / 48 ≈ 0.10) and about one-fifth of Germany's (5 / 28 ≈ 0.18).",
+  "India's arable share is about 9.6 times Somalia's (48 / 5 = 9.6).",
+  "Germany's arable share is about 5.6 times Somalia's (28 / 5 = 5.6).",
+  "Somalia trails India by 43 percentage points (48 - 5 = 43).",
+  "Somalia trails Germany by 23 percentage points (28 - 5 = 23)."
+ ],
+ "unsupported_to_avoid": [
+  "Using the original narration's Somalia percentage instead of the table's 5%.",
+  "Using the original narration's Germany percentage instead of the table's 28%.",
+  "Stating India is exactly half rather than the table's 48%.",
+  "Causal claims for why Somalia's arable share is low.",
+  "Any historical change or future projection not in the table."
+ ],
+ "notes": "Use table values 5, 48, and 28; the narration's Somalia and Germany percentages conflict and should not be used. Ratios and differences are acceptable only as arithmetic from table cells.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 43.4,
+  "usage": {
+   "prompt_tokens": 642,
+   "completion_tokens": 10488,
+   "total_tokens": 11130,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8783
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 386
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

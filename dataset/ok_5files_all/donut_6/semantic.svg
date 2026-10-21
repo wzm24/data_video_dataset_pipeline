@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<path d="M 536.8 211.3 A 96.0 96.0 0 1 1 513.0 208.0" fill="none" stroke="#4472c4" stroke-width="32.0" stroke-linecap="butt"/>
+<path d="M 513.0 208.0 A 96.0 96.0 0 0 1 536.8 211.3" fill="none" stroke="#d3d3d3" stroke-width="32.0" stroke-linecap="butt"/>
+<text x="512.0" y="290.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#111111">UNIVERSAL</text>
+<text x="512.0" y="310.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#111111">BACKGROUND</text>
+<text x="512.0" y="330.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#111111">CHECK</text>
+<line x1="618" y1="304" x2="718" y2="278" stroke="#cccccc" stroke-width="2"/>
+<text x="728" y="286" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#1a1a2e">96%</text>
+<text x="728" y="322" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1a1a2e">IN FAVOR</text>
+<text x="728" y="352" font-family="Arial, sans-serif" font-size="18" font-style="italic" fill="#888888">Gallup, 2017</text>
+<text x="1210" y="60" text-anchor="end" font-family="Georgia, serif" font-size="38" font-style="italic" fill="#111111">Vox</text>
+</svg>

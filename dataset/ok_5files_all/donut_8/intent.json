@@ -1,0 +1,28 @@
+{
+ "clip_id": "donut_8",
+ "intent_en": "To demonstrate the broad popularity of a gun licensing system among American voters, including those who live in households with firearms.",
+ "previous_intent": "To illustrate the widespread support for a gun licensing system among American voters, including a strong majority of those living in households with firearms.",
+ "narration_support": "It's also pretty popular.",
+ "chart_support": "Donut chart titled 'American voters who support a licensing system' displaying support levels for 'All American voters' and those who 'Live in a house with a gun'.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "Narration explicitly claims popularity and cites high support fractions for both gun-owning voters and the general public. The chart visualizes support for a licensing system with a legend distinguishing these two groups, with the central figure (77%) aligning with the 'more than three-quarters' claim for all voters.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

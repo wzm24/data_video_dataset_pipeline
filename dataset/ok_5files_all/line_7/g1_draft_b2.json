@@ -1,0 +1,266 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_7",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate a corporate strategy that prioritizes long-term growth over immediate profitability, resulting in a massive divergence between revenue and profit.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The video must show two distinct series, REVENUE and PROFIT, compared over the same timeline.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "REVENUE",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "revenue endpoint on the shared relative scale"
+    },
+    {
+     "entity": "PROFIT",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.025,
+     "note": "profit endpoint on the shared relative scale"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart shows revenue and profit as two comparable series",
+    "Both revenue and profit are plotted over the same timeline",
+    "The video identifies revenue and profit as the two tracked quantities"
+   ],
+   "visual_evidence_rule": "Both the revenue series and the profit series must be visible and distinguishable in the animation.",
+   "temporal_anchor": "Here's its revenue, and here's its profit",
+   "reviewer_question": "Must both series be explicitly identified as revenue and profit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Revenue rises dramatically over the period and reaches its maximum at the 2018 endpoint.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "REVENUE",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "revenue starts at the bottom of the relative scale"
+    },
+    {
+     "entity": "REVENUE",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "revenue ends at the top of the relative scale"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Revenue grows from near zero to its maximum by 2018",
+    "Revenue climbs dramatically over the period",
+    "Revenue ends at the highest value in the series"
+   ],
+   "visual_evidence_rule": "The revenue series must visibly rise over the timeline and finish at its highest point.",
+   "temporal_anchor": "The company touches more money than ever",
+   "reviewer_question": "Must the video show revenue reaching its maximum at the final endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Profit remains low and near the bottom of the shared scale, ending at only 0.0250 relative to revenue's 1.0000.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "PROFIT",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.0083,
+     "note": "profit starts low on the shared relative scale"
+    },
+    {
+     "entity": "PROFIT",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.025,
+     "note": "profit ends low on the shared relative scale"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Profit stays near the bottom of the scale",
+    "Profit rises only slightly and remains a tiny fraction of revenue",
+    "Profit's relative value ends at 0.0250, far below revenue's peak"
+   ],
+   "visual_evidence_rule": "The profit series must remain visibly low or near-flat while revenue rises.",
+   "temporal_anchor": "Profit has stayed around zero because it's more interested in growth",
+   "reviewer_question": "Must profit be shown as low/flat on the same scale, not merely lower than revenue?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the 2018 endpoint, revenue is about 40 times profit.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "REVENUE",
+     "x": "2018",
+     "field": "value",
+     "value": 60000000000.0,
+     "note": "revenue endpoint value"
+    },
+    {
+     "entity": "PROFIT",
+     "x": "2018",
+     "field": "value",
+     "value": 1500000000.0,
+     "note": "profit endpoint value"
+    }
+   ],
+   "computation": "60000000000 / 1500000000 = 40",
+   "accepted_routes": [
+    "Revenue is about 40 times profit at 2018",
+    "Profit is about one-fortieth of revenue at 2018",
+    "At the endpoint, revenue dwarfs profit by roughly 40x"
+   ],
+   "visual_evidence_rule": "The final gap between revenue and profit must be shown as extremely large.",
+   "temporal_anchor": "It just doesn't keep it",
+   "reviewer_question": "Is the 40x endpoint ratio required, or is a qualitative massive gap enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The revenue-profit gap widens over time: revenue's relative value rises by 1.0000 while profit's rises by only about 0.0167.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "REVENUE",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "revenue start"
+    },
+    {
+     "entity": "REVENUE",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "revenue end"
+    },
+    {
+     "entity": "PROFIT",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.0083,
+     "note": "profit start"
+    },
+    {
+     "entity": "PROFIT",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.025,
+     "note": "profit end"
+    }
+   ],
+   "computation": "Revenue relative change = 1.0000 - 0.0000 = 1.0000; profit relative change = 0.0250 - 0.0083 = 0.0167; gap widens by about 0.9833",
+   "accepted_routes": [
+    "The gap between revenue and profit widens dramatically over time",
+    "Revenue pulls far ahead of profit by the end",
+    "Profit's rise is negligible compared with revenue's rise"
+   ],
+   "visual_evidence_rule": "The two series must visibly separate over the timeline, with revenue rising far more steeply than profit.",
+   "temporal_anchor": "It's playing the long game",
+   "reviewer_question": "Must the video show widening divergence over time, not only the final gap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Revenue reaches 60,000,000,000 at 2018 and profit reaches 1,500,000,000 at 2018 from the table's value column",
+  "Profit roughly triples in absolute value from 495,652,173.913 to 1,500,000,000, but remains low relative to revenue",
+  "The data endpoints span 1998 to 2018",
+  "Revenue fluctuates along its upward path before the final peak"
+ ],
+ "unsupported_to_avoid": [
+  "Profit is exactly zero or the company keeps no money",
+  "Revenue is 40 times profit at every point in time",
+  "The divergence was caused by antitrust law or a specific corporate strategy as a causal claim",
+  "The timeline starts in the 1970s",
+  "Profit is 2.5% of revenue (table unit is relative, not %)",
+  "The company is Netflix, Amazon, or any named company not present in the table"
+ ],
+ "notes": "All numeric claims are drawn from the table's value or relative_value columns; the 40x ratio is computed as 60,000,000,000 / 1,500,000,000 at 2018. I avoided percentages because the table unit is 'relative'.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 51.8,
+  "usage": {
+   "prompt_tokens": 9836,
+   "completion_tokens": 11534,
+   "total_tokens": 21370,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9724
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 9196
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

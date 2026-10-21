@@ -1,0 +1,134 @@
+{
+ "clip_id": "line_74",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series name and unit must be visible or clearly labeled."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Change in average global temperature @ 2019.977",
+    "extreme": "max",
+    "expected": 0.946,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final data point must be visibly marked or labeled with its 2019 value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Change in average global temperature @ 1883.991",
+    "mark:Change in average global temperature @ 2019.977"
+   ],
+   "assertion": {
+    "low": "Change in average global temperature @ 1883.991",
+    "low_value": -0.156,
+    "high": "Change in average global temperature @ 2019.977",
+    "high_value": 0.946,
+    "delta": 1.102,
+    "ratio": -6.0641,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the first and final data points must be visible enough to show the total change."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Change in average global temperature @ 1980.975",
+    "mark:Change in average global temperature @ 2019.977"
+   ],
+   "assertion": {
+    "low": "Change in average global temperature @ 1980.975",
+    "low_value": 0.198,
+    "high": "Change in average global temperature @ 2019.977",
+    "high_value": 0.946,
+    "delta": 0.748,
+    "ratio": 4.7778,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The upward slope must visibly steepen after 1980, with the 1980 and 2019 values identifiable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Change in average global temperature @ 1940.998",
+    "mark:Change in average global temperature @ 1975.986",
+    "mark:Change in average global temperature @ 1976.984"
+   ],
+   "assertion": {
+    "series": "Change in average global temperature",
+    "values": [
+     0.052,
+     -0.002,
+     0.032
+    ],
+    "threshold_between": [
+     -0.002,
+     0.052
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The baseline crossing and later sustained positive region must be visible in the series shape."
+  }
+ ]
+}

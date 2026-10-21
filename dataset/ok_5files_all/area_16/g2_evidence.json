@@ -1,0 +1,143 @@
+{
+ "clip_id": "area_16",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart title, axis label, or annotation must name child mortality and percent, with x-axis spanning 1990–2019."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:child mortality @ 1990"
+   ],
+   "assertion": {
+    "mark": "child mortality @ 1990",
+    "field": "value",
+    "expected": 20.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both endpoint values must be visible as labels, markers, or annotation on the line at 1990 and 2019."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:child mortality @ 1990",
+    "mark:child mortality @ 2019"
+   ],
+   "assertion": {
+    "low": "child mortality @ 2019",
+    "low_value": 7.0,
+    "high": "child mortality @ 1990",
+    "high_value": 20.0,
+    "delta": 13.0,
+    "ratio": 2.8571,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A difference annotation or visible endpoint labels must make the 13-percentage-point change derivable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:child mortality @ 1990",
+    "mark:child mortality @ 2000",
+    "mark:child mortality @ 2010",
+    "mark:child mortality @ 2019"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "child mortality @ 1990",
+      "value": 20.0
+     },
+     {
+      "mark": "child mortality @ 2000",
+      "value": 13.0
+     },
+     {
+      "mark": "child mortality @ 2010",
+      "value": 8.4
+     },
+     {
+      "mark": "child mortality @ 2019",
+      "value": 7.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plotted line must descend continuously across the full 1990–2019 x-axis without any upward segments."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:child mortality @ 1990",
+    "mark:child mortality @ 2019"
+   ],
+   "assertion": {
+    "low": "child mortality @ 2019",
+    "low_value": 7.0,
+    "high": "child mortality @ 1990",
+    "high_value": 20.0,
+    "delta": 13.0,
+    "ratio": 2.8571,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A percent-change annotation or a visible 1990 baseline of 20% must make the 65% decline or 35% retained level derivable."
+  }
+ ]
+}

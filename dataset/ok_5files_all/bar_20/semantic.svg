@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs>
+<pattern id="dot-pattern" width="22.5" height="22.5" patternUnits="userSpaceOnUse">
+<circle cx="11.25" cy="11.25" r="6.5" fill="#1D4ED8"/>
+</pattern>
+</defs>
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#5E129E"/>
+<rect id="year-box" data-role="year-box" x="60" y="28" width="130" height="52" rx="8" fill="#2563EB"/>
+<text id="year-label" data-role="year-label" x="125" y="64" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">2100</text>
+<text id="chart-title" data-role="title" x="640.0" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">2.8 Billion</text>
+<g id="chart-plot" data-role="plot">
+<rect id="dot-matrix-bg" data-role="bar-bg" x="190" y="230" width="900" height="320" fill="#3B0A6E" rx="8"/>
+<rect id="dot-matrix" data-role="bar" data-entity-id="2100" data-value="2.8" x="190" y="230" width="630" height="320" fill="#93C5FD" rx="8"/>
+<rect id="dot-matrix-fill" data-role="bar-fill" x="190" y="230" width="630" height="320" fill="url(#dot-pattern)" rx="8"/>
+<text data-role="legend-label" x="60" y="470" font-family="Arial, sans-serif" font-size="22" fill="#ffffff"><tspan fill="#1D4ED8">●</tspan> = 10 Million</text>
+</g>
+</svg>

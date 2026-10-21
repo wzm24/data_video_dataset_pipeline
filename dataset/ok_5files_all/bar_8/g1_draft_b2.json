@@ -1,0 +1,235 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_8",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that private school fees are prohibitively expensive for the average person, consuming a large portion of their income.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Private school fees are 16,000 (table value; currency not specified).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "School fees",
+     "x": "520.0",
+     "field": "value",
+     "value": 16000.0,
+     "note": "table value for School fees"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "School fees cost 16,000",
+    "Private school fees are 16k",
+    "The fee bar shows 16,000"
+   ],
+   "visual_evidence_rule": "A labeled School fees bar or marker with value 16,000 must be visible.",
+   "temporal_anchor": "Rising school fees clause",
+   "reviewer_question": "Must the exact school-fee amount be shown, or is the derived share enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Average earner income/wage is 28,400 (table value; currency not specified).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Average income",
+     "x": "760.0",
+     "field": "value",
+     "value": 28400.0,
+     "note": "table value for Average income"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Average income is 28,400",
+    "The average earner's wage is 28,400",
+    "Income bar shows 28.4k"
+   ],
+   "visual_evidence_rule": "A labeled Average income bar or marker with value 28,400 must be visible if the share or comparison is shown.",
+   "temporal_anchor": "average earner's wage clause",
+   "reviewer_question": "Must the average-income baseline be explicitly shown, or can it remain implicit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "School fees equal about 56.3% of average income, derived from 16,000 divided by 28,400.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "School fees",
+     "x": "520.0",
+     "field": "value",
+     "value": 16000.0,
+     "note": "numerator"
+    },
+    {
+     "entity": "Average income",
+     "x": "760.0",
+     "field": "value",
+     "value": 28400.0,
+     "note": "denominator"
+    }
+   ],
+   "computation": "16000 / 28400 = 0.56338; 56.3%",
+   "accepted_routes": [
+    "Fees are about 56% of average income",
+    "School fees consume 56.3% of an average earner's wage",
+    "For every 100 in income, about 56 goes to fees"
+   ],
+   "visual_evidence_rule": "A percentage annotation, ratio label, or fill showing School fees against Average income must be visible; it must use 56.3% or rounded 56%, not 50%.",
+   "temporal_anchor": "amount to ... of an average earner's wage clause",
+   "reviewer_question": "Should the table-derived 56.3% override the narration's 50% approximation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "School fees cross the 50% threshold of average income, taking more than half.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "School fees",
+     "x": "520.0",
+     "field": "value",
+     "value": 16000.0,
+     "note": "numerator"
+    },
+    {
+     "entity": "Average income",
+     "x": "760.0",
+     "field": "value",
+     "value": 28400.0,
+     "note": "denominator"
+    }
+   ],
+   "computation": "16000 / 28400 = 0.56338 > 0.5",
+   "accepted_routes": [
+    "Fees take more than half of average income",
+    "School fees exceed 50% of the average wage",
+    "Over half of an average earner's income goes to fees"
+   ],
+   "visual_evidence_rule": "A 50% reference line or explicit >50% annotation must be visible and exceeded by the fee share.",
+   "temporal_anchor": "can't afford to go private clause or amount to ... of an average earner's wage clause",
+   "reviewer_question": "Is the 'more than half' threshold obligatory, or is the precise 56.3% share enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Average income is about 1.78 times school fees, derived from 28,400 divided by 16,000.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "School fees",
+     "x": "520.0",
+     "field": "value",
+     "value": 16000.0,
+     "note": "denominator"
+    },
+    {
+     "entity": "Average income",
+     "x": "760.0",
+     "field": "value",
+     "value": 28400.0,
+     "note": "numerator"
+    }
+   ],
+   "computation": "28400 / 16000 = 1.775",
+   "accepted_routes": [
+    "Average income is about 1.78 times school fees",
+    "Income is about 78% larger than fees",
+    "Fees are just over half of income, leaving income 1.78x the fee"
+   ],
+   "visual_evidence_rule": "Side-by-side bars or a ratio label comparing Average income to School fees must be visible.",
+   "temporal_anchor": "average earner's wage clause",
+   "reviewer_question": "Should the video quantify the income-to-fee multiple, or only the fee share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Leftover income after school fees: 28,400 - 16,000 = 12,400, or about 43.7% of average income remains.",
+  "Relative-value bars: School fees relative_value 0.3286 and Average income relative_value 0.5833, if the animation uses the provided relative scale; do not label 0.3286 as fee share of income."
+ ],
+ "unsupported_to_avoid": [
+  "The narration's 50% figure as a table-derived value, since the table implies 16,000 / 28,400 = 56.3%.",
+  "Causal claim that rising fees alone make private school unaffordable.",
+  "Extrapolation to all private schools, all people, or income groups beyond the table's Average income entity.",
+  "Specific currency symbols not present in the table.",
+  "Using relative_value 0.3286 as the fee share of average income; the correct fee/income share is 16,000 / 28,400 = 56.3%."
+ ],
+ "notes": "Derived fee/income share is 16,000 / 28,400 = 56.3%, which conflicts with the narration's 50%. Reviewers should decide whether the benchmark prioritizes the table-derived share and/or the 'over half' threshold.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 44.9,
+  "usage": {
+   "prompt_tokens": 649,
+   "completion_tokens": 11332,
+   "total_tokens": 11981,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9615
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 393
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,17 @@
+clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type
+area_1,Infections,infections,0,0.0,0.0000,relative,estimated
+area_1,Infections,infections,10,55.8,0.5584,relative,estimated
+area_1,Infections,infections,20,90.4,0.9035,relative,estimated
+area_1,Infections,infections,30,90.4,0.9035,relative,estimated
+area_1,Infections,infections,37.5,67.2,0.6718,relative,estimated
+area_1,Infections,infections,45,29.4,0.2936,relative,estimated
+area_1,Infections,infections,55,0.0,0.0000,relative,estimated
+area_1,Infections,infections,65,0.0,0.0000,relative,estimated
+area_1,Infections,infections,75,0.0,0.0000,relative,estimated
+area_1,Healthcare capacity,capacity,10,45,,relative,estimated
+area_1,Healthcare capacity,capacity,20,45.0,,relative,estimated
+area_1,Healthcare capacity,capacity,28,36.53632653061224,,relative,estimated
+area_1,Healthcare capacity,capacity,37.5,33.0,,relative,estimated
+area_1,Healthcare capacity,capacity,47,36.53632653061224,,relative,estimated
+area_1,Healthcare capacity,capacity,55,45.0,,relative,estimated
+area_1,Healthcare capacity,capacity,80,45,,relative,estimated

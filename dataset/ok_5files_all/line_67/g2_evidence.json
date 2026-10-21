@@ -1,0 +1,147 @@
+{
+ "clip_id": "line_67",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both normal and inverted curves must be identifiable, and the x-direction from short-term (left) to long-term (right) must be visible or labeled."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Yield curve normal @ left/short-term",
+    "mark:Yield curve normal @ right/long-term"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Yield curve normal @ left/short-term",
+      "value": 0.2667
+     },
+     {
+      "mark": "Yield curve normal @ right/long-term",
+      "value": 0.8444
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The normal curve must visibly rise from the left endpoint to the right endpoint; if labeled, left value 0.2667 and right value 0.8444."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Yield curve inverted @ left/short-term",
+    "mark:Yield curve inverted @ right/long-term"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Yield curve inverted @ left/short-term",
+      "value": 0.6444
+     },
+     {
+      "mark": "Yield curve inverted @ right/long-term",
+      "value": 0.1778
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The inverted curve must visibly fall from the left endpoint to the right endpoint; if labeled, left value 0.6444 and right value 0.1778."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Yield curve normal @ right/long-term",
+    "mark:Yield curve inverted @ right/long-term"
+   ],
+   "assertion": {
+    "greater": "Yield curve normal @ right/long-term",
+    "lesser": "Yield curve inverted @ right/long-term",
+    "expected_ratio": 4.7492,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the right side of the chart, the normal curve must sit above the inverted curve."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Yield curve inverted @ left/short-term",
+    "mark:Yield curve inverted @ right/long-term",
+    "mark:Yield curve normal @ left/short-term",
+    "mark:Yield curve normal @ right/long-term"
+   ],
+   "assertion": {
+    "series": "Yield curve inverted",
+    "values": [
+     0.6444,
+     0.1778,
+     0.2667,
+     0.8444
+    ],
+    "threshold_between": [
+     0.1778,
+     0.8444
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The inverted curve must be highlighted or contrasted with the normal curve as the inversion/signal state."
+  }
+ ]
+}

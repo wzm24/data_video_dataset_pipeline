@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_30",
+ "intent_en": "To demonstrate that the monthly price of the hepatitis C drug Sovaldi is higher in the United States than in other countries.",
+ "previous_intent": "To compare the monthly price of the hepatitis C drug Sovaldi across several countries, highlighting that the cost in the United States is substantially higher than in Norway, Canada, France, the United Kingdom, and Germany.",
+ "narration_support": "Sevaldi, for hepatitis C, yep, cost more in the U .S.",
+ "chart_support": "Bar chart comparing the monthly price of Sovaldi across six countries, showing the United States has the highest price.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": true,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration is brief and contains a typo ('Sevaldi' instead of 'Sovaldi'), but clearly states the main point that the drug costs more in the US. The chart visualizes this by showing the US bar (blue) is much taller than the others (teal) for the monthly price of Sovaldi in 2017.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": true
+}

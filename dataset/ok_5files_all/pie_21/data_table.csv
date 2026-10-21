@@ -1,0 +1,5 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+pie_21,Too much,slice-1,0,,61,0.6100,%,#FDE04B,printed,,
+pie_21,"Source: Survey of U.S. adults conducted Sept. 16-29, 2019.",slice-2,1,,2.8,0.0280,%,#FFFFFF,estimated,slice-2,semantic_svg_order_backfill
+pie_21,The right amount,slice-3,2,,23,0.2300,%,#4C8F3D,printed,,
+pie_21,Too little,slice-4,3,,13,0.1300,%,#1F4E8C,printed,,

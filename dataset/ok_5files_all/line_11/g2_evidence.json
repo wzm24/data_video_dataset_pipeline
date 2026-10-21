@@ -1,0 +1,146 @@
+{
+ "clip_id": "line_11",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:TEST-OPTIONAL @ 1994",
+    "mark:TEST-OPTIONAL @ 2010"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "TEST-OPTIONAL @ 1994",
+      "value": 1650.2643
+     },
+     {
+      "mark": "TEST-OPTIONAL @ 2010",
+      "value": 3600.024
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show TEST-OPTIONAL values at 1994 and 2010 with the 2010 value higher and the series following an overall upward path."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:TEST-REQUIRED @ 1994",
+    "mark:TEST-REQUIRED @ 2010"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "TEST-REQUIRED @ 1994",
+      "value": 1550.2883
+     },
+     {
+      "mark": "TEST-REQUIRED @ 2010",
+      "value": 3000.1682
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show TEST-REQUIRED values at 1994 and 2010 with the 2010 value higher and the series following an overall upward path."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:TEST-OPTIONAL @ 1994",
+    "mark:TEST-REQUIRED @ 1994"
+   ],
+   "assertion": {
+    "greater": "TEST-OPTIONAL @ 1994",
+    "lesser": "TEST-REQUIRED @ 1994",
+    "expected_ratio": 1.0645,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series must be shown at the same labeled years, and TEST-OPTIONAL must be visibly above TEST-REQUIRED at each of those years."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:TEST-OPTIONAL @ 2010",
+    "mark:TEST-REQUIRED @ 2010"
+   ],
+   "assertion": {
+    "greater": "TEST-OPTIONAL @ 2010",
+    "lesser": "TEST-REQUIRED @ 2010",
+    "expected_ratio": 1.1999,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the 2010 point, the TEST-OPTIONAL value must be shown above the TEST-REQUIRED value, with the gap or ratio made legible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:TEST-OPTIONAL @ 1994",
+    "mark:TEST-REQUIRED @ 1994",
+    "mark:TEST-OPTIONAL @ 2010",
+    "mark:TEST-REQUIRED @ 2010"
+   ],
+   "assertion": {
+    "low": "TEST-REQUIRED @ 1994",
+    "low_value": 1550.2883,
+    "high": "TEST-OPTIONAL @ 2010",
+    "high_value": 3600.024,
+    "delta": 2049.7357,
+    "ratio": 2.3222,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the optional–required gap at 1994 and 2010, with the 2010 gap visibly larger than the 1994 gap."
+  }
+ ]
+}

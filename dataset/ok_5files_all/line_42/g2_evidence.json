@@ -1,0 +1,148 @@
+{
+ "clip_id": "line_42",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Tuition @ 1972 (first point, x_px=120.0)",
+    "mark:Tuition @ final point (x_px=1220.0)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Tuition @ 1972 (first point, x_px=120.0)",
+      "value": 0.0
+     },
+     {
+      "mark": "Tuition @ final point (x_px=1220.0)",
+      "value": 1390.0781
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The tuition line must be visible rising from near the bottom to the top over the x-axis."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Inflation (CPI) @ 1972 (first point, x_px=120.0)",
+    "mark:Inflation (CPI) @ final point (x_px=1220.0)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Inflation (CPI) @ 1972 (first point, x_px=120.0)",
+      "value": 0.0
+     },
+     {
+      "mark": "Inflation (CPI) @ final point (x_px=1220.0)",
+      "value": 420.0453
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The CPI line must be visible rising but staying much lower than the tuition line."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Tuition @ final point (x_px=1220.0)",
+    "mark:Inflation (CPI) @ final point (x_px=1220.0)"
+   ],
+   "assertion": {
+    "greater": "Tuition @ final point (x_px=1220.0)",
+    "lesser": "Inflation (CPI) @ final point (x_px=1220.0)",
+    "expected_ratio": 3.3094,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the final x, the tuition point must be visibly above the CPI point, with a gap consistent with a roughly 3.3:1 ratio."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Tuition @ 1972 (x_px=120.0)",
+    "mark:Inflation (CPI) @ 1972 (x_px=120.0)",
+    "mark:Tuition @ x_px=237.9",
+    "mark:Inflation (CPI) @ x_px=237.9",
+    "mark:Tuition @ final point (x_px=1220.0)",
+    "mark:Inflation (CPI) @ final point (x_px=1220.0)"
+   ],
+   "assertion": {
+    "low": "Tuition @ 1972 (x_px=120.0)",
+    "low_value": 0.0,
+    "high": "Tuition @ final point (x_px=1220.0)",
+    "high_value": 1390.0781,
+    "delta": 1390.0781,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two lines must start together and the distance between them must increase toward the right."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Computer $cience @ x_px=520.0",
+    "mark:Tuition @ x_px=520.0"
+   ],
+   "assertion": {
+    "greater": "Computer $cience @ x_px=520.0",
+    "lesser": "Tuition @ x_px=520.0",
+    "expected_ratio": 1.9384,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If Computer $cience is shown, its values must appear higher than the paired values at the same x positions."
+  }
+ ]
+}

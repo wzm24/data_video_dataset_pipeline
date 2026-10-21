@@ -1,0 +1,222 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_57",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the total tax burden is significantly higher for the richest individuals than for the poorest when combining income, corporate/property, and estate taxes.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Poorest group's total listed tax burden is 1.0% (from the table's only Poorest row, corporate and property taxes).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Poorest-Corporate and property taxes",
+     "x": "Poorest",
+     "field": "value",
+     "value": 1.0,
+     "note": "only Poorest row in table; total is this value"
+    }
+   ],
+   "computation": "sum of Poorest rows in value = 1.0% (only one row)",
+   "accepted_routes": [
+    "Poorest total tax burden is 1.0%",
+    "Poorest face about 1% in combined taxes",
+    "Poorest's listed tax burden is 1.0%"
+   ],
+   "visual_evidence_rule": "A Poorest total value/label of 1.0% must be visibly represented or recoverable from the visual encoding.",
+   "temporal_anchor": "the 'than the poor' clause when the Poorest baseline is established.",
+   "reviewer_question": "Must the video explicitly state the Poorest total (1.0%), or is it enough to show it implicitly for comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Richest group's combined total tax burden is 21.3%, summing income taxes (10.0%), corporate/property taxes (10.5%), and estate taxes (0.8%).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Richest-Income taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.0,
+     "note": "income tax component"
+    },
+    {
+     "entity": "Richest-Corporate and property taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.5,
+     "note": "corporate/property tax component"
+    },
+    {
+     "entity": "Richest-Estate taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 0.8,
+     "note": "estate tax component"
+    }
+   ],
+   "computation": "10.0 + 10.5 + 0.8 = 21.3%",
+   "accepted_routes": [
+    "Richest total tax burden is 21.3%",
+    "Combining all three taxes, Richest pay 21.3%",
+    "Richest total = 10.0 + 10.5 + 0.8 = 21.3%"
+   ],
+   "visual_evidence_rule": "A Richest combined total of 21.3% must be visibly represented or labeled, with all three components contributing.",
+   "temporal_anchor": "the 'the rich really do pay way more' clause or the moment the final combined total is shown.",
+   "reviewer_question": "Is the explicit Richest combined total (21.3%) mandatory, or can the video show only component values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The Richest group's total tax burden (21.3%) exceeds the Poorest group's total (1.0%) by 20.3 percentage points, or about 21.3 times.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Richest-Income taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.0,
+     "note": "used in Richest total"
+    },
+    {
+     "entity": "Richest-Corporate and property taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.5,
+     "note": "used in Richest total"
+    },
+    {
+     "entity": "Richest-Estate taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 0.8,
+     "note": "used in Richest total"
+    },
+    {
+     "entity": "Poorest-Corporate and property taxes",
+     "x": "Poorest",
+     "field": "value",
+     "value": 1.0,
+     "note": "Poorest total"
+    }
+   ],
+   "computation": "Richest total = 10.0 + 10.5 + 0.8 = 21.3%; difference = 21.3 - 1.0 = 20.3 pp; ratio = 21.3 / 1.0 = 21.3x",
+   "accepted_routes": [
+    "Richest pay 20.3 percentage points more than Poorest",
+    "Richest total is about 21 times Poorest total",
+    "The gap is 21.3% vs 1.0%, i.e. 20.3 pp"
+   ],
+   "visual_evidence_rule": "A direct Richest-vs-Poorest comparison must be visible, whether as side-by-side totals, a difference label, or a ratio.",
+   "temporal_anchor": "the 'the rich really do pay way more than the poor' clause.",
+   "reviewer_question": "Must the video quantify the Richest–Poorest gap as 20.3 pp or ~21×, or is a qualitative 'way more' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "For Richest, the total tax burden is composed of income taxes (10.0%, 46.95% of Richest total), corporate/property taxes (10.5%, 49.3%), and estate taxes (0.8%, 3.76%).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Richest-Income taxes",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.4695,
+     "note": "share of Richest total"
+    },
+    {
+     "entity": "Richest-Corporate and property taxes",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.493,
+     "note": "share of Richest total"
+    },
+    {
+     "entity": "Richest-Estate taxes",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.0376,
+     "note": "share of Richest total"
+    }
+   ],
+   "computation": "relative_value shares for Richest: 0.4695 + 0.493 + 0.0376 ≈ 1.0; corresponding value amounts: 10.0 + 10.5 + 0.8 = 21.3%",
+   "accepted_routes": [
+    "Richest total consists of income 10.0%, corporate/property 10.5%, estate 0.8%",
+    "Richest composition is about 47% income, 49% corporate/property, 4% estate",
+    "Richest combined taxes include income, corporate/property, and estate components"
+   ],
+   "visual_evidence_rule": "The Richest total must be decomposable into income, corporate/property, and estate components, with their relative sizes visible or labeled.",
+   "temporal_anchor": "the 'Add these back onto the income taxes' clause when the tax components are combined.",
+   "reviewer_question": "Is the three-part composition of the Richest total mandatory, or is the combined total alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.87
+ },
+ "draft_cost": {
+  "sec": 62.3,
+  "usage": {
+   "prompt_tokens": 1762,
+   "completion_tokens": 16000,
+   "total_tokens": 17762,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13837
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 1378
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

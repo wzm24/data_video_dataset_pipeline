@@ -1,0 +1,126 @@
+{
+ "clip_id": "area_20",
+ "family": "area",
+ "chart_form": "area/pictograph_blocks",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both entity labels must be visible with their time scopes clearly shown: one day in 2014 for car and all of 2014 for plane."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Average death by car (one day in 2014) @ car",
+    "mark:Death by plane (all of 2014) @ plane"
+   ],
+   "assertion": {
+    "greater": "Average death by car (one day in 2014) @ car",
+    "lesser": "Death by plane (all of 2014) @ plane",
+    "expected_ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The car data mark or area must visibly appear greater than the plane data mark or area."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Average death by car (one day in 2014) @ car",
+    "mark:Death by plane (all of 2014) @ plane"
+   ],
+   "assertion": {
+    "low": "Death by plane (all of 2014) @ plane",
+    "low_value": 1.0,
+    "high": "Average death by car (one day in 2014) @ car",
+    "high_value": 3.0,
+    "delta": 2.0,
+    "ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible comparison must communicate the threefold relation, either as a ratio annotation or as clearly proportional magnitudes."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Average death by car (one day in 2014) @ car",
+    "mark:Death by plane (all of 2014) @ plane"
+   ],
+   "assertion": {
+    "greater": "Average death by car (one day in 2014) @ car",
+    "lesser": "Death by plane (all of 2014) @ plane",
+    "expected_ratio": 3.0003,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If the relative_value normalization is shown, the plane's normalized magnitude should appear about one-third of the car's reference magnitude."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Average death by car (one day in 2014) @ car",
+    "mark:Death by plane (all of 2014) @ plane"
+   ],
+   "assertion": {
+    "greater": "Average death by car (one day in 2014) @ car",
+    "lesser": "Death by plane (all of 2014) @ plane",
+    "expected_ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The time-scope labels and the lower plane magnitude must be simultaneously visible in the comparison."
+  }
+ ]
+}

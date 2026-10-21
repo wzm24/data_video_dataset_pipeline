@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F7F7F5"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1120" y2="600" stroke="#8a8a8a" stroke-width="3"/>
+<g id="entity-school-fees" data-role="entity" data-entity-id="school-fees" data-label="School fees">
+<rect id="school-fees-bar" data-role="bar" data-entity-id="school-fees" data-value="16000" x="445" y="363.4" width="150" height="236.6" fill="#FFC107"/>
+<text id="school-fees-value-label" data-role="value-label" data-entity-id="school-fees" x="520" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">£16,000</text>
+<rect id="school-fees-label-box" data-role="category-box" data-entity-id="school-fees" x="445" y="628" width="150" height="36" rx="6" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+<text id="school-fees-label" data-role="category-label" data-entity-id="school-fees" x="520" y="652" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#D93025">School fees</text>
+</g>
+<g id="entity-average-income" data-role="entity" data-entity-id="average-income" data-label="Average income">
+<rect id="average-income-bar" data-role="bar" data-entity-id="average-income" data-value="28400" x="685" y="180" width="150" height="420" fill="#3B82F6"/>
+<text id="average-income-value-label" data-role="value-label" data-entity-id="average-income" x="760" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">£28,400</text>
+<rect id="average-income-label-box" data-role="category-box" data-entity-id="average-income" x="685" y="628" width="150" height="36" rx="6" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+<text id="average-income-label" data-role="category-label" data-entity-id="average-income" x="760" y="652" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#D93025">Average income</text>
+</g>
+</g>
+</svg>

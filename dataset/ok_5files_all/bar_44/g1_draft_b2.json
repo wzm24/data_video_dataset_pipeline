@@ -1,0 +1,307 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_44",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the concept of progressive taxation where tax rates increase as income levels rise.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The rising pattern shown by the chart is progressive taxation: lower-income groups are taxed at lower rates/amounts and higher-income groups at higher rates/amounts.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST 10%",
+     "x": "203.5",
+     "field": "value",
+     "value": 1.0,
+     "note": "bottom displayed group"
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "top displayed group"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "This pattern is called progressive taxation.",
+    "Progressive taxation means lower incomes pay lower rates and higher incomes pay higher rates.",
+    "Tax rates rise as income rises, which is progressive taxation."
+   ],
+   "visual_evidence_rule": "The upward-staircase pattern must be visible when the term progressive taxation is introduced.",
+   "temporal_anchor": "the clause saying this is called progressive taxation",
+   "reviewer_question": "Must the video explicitly name progressive taxation, or is showing the rising pattern enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Across the displayed income groups, the value does not decrease from poorest 10% to richest 10%, rising from 1.000 up to 21.000.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST 10%",
+     "x": "203.5",
+     "field": "value",
+     "value": 1.0,
+     "note": "first bottom value"
+    },
+    {
+     "entity": "POOREST 10%",
+     "x": "310.4",
+     "field": "value",
+     "value": 1.0,
+     "note": "duplicate/same-labeled bottom row; still 1.000"
+    },
+    {
+     "entity": "Group 3",
+     "x": "417.4",
+     "field": "value",
+     "value": 2.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 4",
+     "x": "524.5",
+     "field": "value",
+     "value": 3.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 5",
+     "x": "631.4",
+     "field": "value",
+     "value": 4.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 6",
+     "x": "738.4",
+     "field": "value",
+     "value": 6.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 7",
+     "x": "845.4",
+     "field": "value",
+     "value": 7.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 8",
+     "x": "952.4",
+     "field": "value",
+     "value": 9.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 9",
+     "x": "1059.5",
+     "field": "value",
+     "value": 12.0,
+     "note": "next value"
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "top value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The bars rise from the poorest group to the richest group.",
+    "Higher income groups have higher values, reaching 21 for the richest 10%.",
+    "There is no downward step in the sequence from 1 up to 21."
+   ],
+   "visual_evidence_rule": "All displayed income-group bars must be visible in income order with non-decreasing heights.",
+   "temporal_anchor": "the clause that rich people pay more or that tax rates increase as income rises",
+   "reviewer_question": "Must the video show the full monotonic sequence, or only the endpoint comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The richest 10% has a value of 21.000 versus 1.000 for the poorest 10%; this is 20.000 higher and 21 times larger.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "top endpoint"
+    },
+    {
+     "entity": "POOREST 10%",
+     "x": "203.5",
+     "field": "value",
+     "value": 1.0,
+     "note": "bottom endpoint"
+    }
+   ],
+   "computation": "21.000 - 1.000 = 20.000; 21.000 / 1.000 = 21",
+   "accepted_routes": [
+    "The richest 10% pay 21 while the poorest 10% pay 1.",
+    "The richest 10% are 20 points higher than the poorest 10%.",
+    "The richest 10% value is 21 times the poorest 10% value."
+   ],
+   "visual_evidence_rule": "Both endpoint bars must be visible with their values or labels.",
+   "temporal_anchor": "the clause that rich people pay more or that the poor pay a lower rate and the rich more",
+   "reviewer_question": "Should the video quantify the gap/ratio between richest and poorest, or only say rich people pay more?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The final adjacent step from Group 9 to the richest 10% is a 9.000 increase, or a 75% rise, from 12.000 to 21.000.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Group 9",
+     "x": "1059.5",
+     "field": "value",
+     "value": 12.0,
+     "note": "previous group"
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "final group"
+    }
+   ],
+   "computation": "21.000 - 12.000 = 9.000; 9.000 / 12.000 = 0.75 (75% increase)",
+   "accepted_routes": [
+    "The biggest final jump is 9 points from Group 9 to the richest 10%.",
+    "The richest 10% value is 75% higher than Group 9.",
+    "From 12 to 21 is a 9-point increase."
+   ],
+   "visual_evidence_rule": "Group 9 and richest 10% bars must be adjacent and labeled 12 and 21, or their heights must be visibly comparable.",
+   "temporal_anchor": "the clause about taxing the rich more or rich people paying more",
+   "reviewer_question": "Should the video call out the size of the final step, or is the overall upward pattern enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The richest 10% is the top endpoint, with the highest displayed value 21.000 and relative_value 0.7000.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "maximum value"
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "relative_value",
+     "value": 0.7,
+     "note": "maximum relative_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The richest 10% have the highest value: 21.000.",
+    "The top group reaches a relative_value of 0.7000.",
+    "The richest bar is tallest at 21."
+   ],
+   "visual_evidence_rule": "The richest 10% bar must be visibly the tallest and labeled 21.000 or 0.7000.",
+   "temporal_anchor": "the clause about rich people paying more or taxing the rich more",
+   "reviewer_question": "Is the top-end value 21.000 or 0.7000 required, or is it enough that the richest bar is tallest?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The poorest 10% is the lowest endpoint at value 1.000 and relative_value 0.0333.",
+  "The full displayed value series can be shown: 1,1,2,3,4,6,7,9,12,21.",
+  "The full displayed relative_value series can be shown: 0.0333,0.0333,0.0667,0.1000,0.1333,0.2000,0.2333,0.3000,0.4000,0.7000.",
+  "The richest 10% relative_value 0.7000 is the maximum relative_value shown."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that progressive taxation causes fairness or inequality.",
+  "Extrapolating to income groups or tax rates beyond those shown in the table.",
+  "Treating relative_value as a share of total that sums to 100%; the table's relative_values do not sum to 1.",
+  "Claiming exact statutory tax rates or country-specific tax policies not supported by the table.",
+  "Treating the duplicate POOREST 10% row at x=310.4 as a separate income group with a different value."
+ ],
+ "notes": "The table has a duplicate POOREST 10% row; treat it as the same bottom group or a non-decreasing first step. All numeric claims use value/relative_value as displayed, with relative_value appearing normalized to 30 rather than a sum-to-1 share.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 54.3,
+  "usage": {
+   "prompt_tokens": 1119,
+   "completion_tokens": 12872,
+   "total_tokens": 13991,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10471
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 735
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

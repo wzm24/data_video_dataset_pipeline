@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_36",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the long-standing public desire to replace the Electoral College and set up the explanation for why the system persists despite this opposition.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The tracked support for replacing the Electoral College remains above the majority threshold for the entire series; even the lowest value, 51, stays above the majority line.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "61%",
+     "x": "x_px=1135.4",
+     "field": "value",
+     "value": 51.0,
+     "note": "lowest value in the series; still above the majority threshold"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Every point stays above the majority line; the lowest point is 51.",
+    "Support never falls below a majority; the minimum value is 51.",
+    "The line remains in majority territory throughout, with a low of 51."
+   ],
+   "visual_evidence_rule": "The line must stay above a horizontal majority-threshold reference line across all data points; the lowest point should be visible at value 51.",
+   "temporal_anchor": "The majority of Americans do not like the system, and haven't for a long time.",
+   "reviewer_question": "Should the video require an explicit majority-threshold line, or is showing the lowest value at 51 sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest point in the series is 80, the maximum value shown.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "61%",
+     "x": "x_px=204.6",
+     "field": "value",
+     "value": 80.0,
+     "note": "peak value in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The highest point is 80.",
+    "The series peaks at 80.",
+    "Maximum value shown is 80."
+   ],
+   "visual_evidence_rule": "The line must reach its highest point at value 80.",
+   "temporal_anchor": "haven't for a long time",
+   "reviewer_question": "Is the peak value 80 required, or can the video only emphasize the majority persistence?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The lowest point in the series is 51, the minimum value shown.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "61%",
+     "x": "x_px=1135.4",
+     "field": "value",
+     "value": 51.0,
+     "note": "minimum value in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series dips to 51.",
+    "The minimum value is 51.",
+    "The lowest point on the line is 51."
+   ],
+   "visual_evidence_rule": "The minimum y-value of the line is 51.",
+   "temporal_anchor": "haven't for a long time",
+   "reviewer_question": "Is the minimum value 51 required, or can the video only emphasize that it stays majority?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The series fluctuates over time: it starts at 55, peaks at 80, drops to 51, and ends at 61, rather than showing a steady rise or fall.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "61%",
+     "x": "x_px=120.0",
+     "field": "value",
+     "value": 55.0,
+     "note": "first point"
+    },
+    {
+     "entity": "61%",
+     "x": "x_px=204.6",
+     "field": "value",
+     "value": 80.0,
+     "note": "peak"
+    },
+    {
+     "entity": "61%",
+     "x": "x_px=1135.4",
+     "field": "value",
+     "value": 51.0,
+     "note": "trough"
+    },
+    {
+     "entity": "61%",
+     "x": "x_px=1220.0",
+     "field": "value",
+     "value": 61.0,
+     "note": "final point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The line rises, peaks, falls, and recovers; it is volatile.",
+    "The trend goes 55 to 80 to 51 to 61.",
+    "Support fluctuates over time but stays high."
+   ],
+   "visual_evidence_rule": "The line must visibly move up and down, showing at least the rise to 80, the drop to 51, and the final point at 61.",
+   "temporal_anchor": "haven't for a long time",
+   "reviewer_question": "Should the video require showing the full fluctuation shape, or only that the line stays above majority?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The final value of the series is 61, showing that the most recent point remains in the majority range.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "61%",
+     "x": "x_px=1220.0",
+     "field": "value",
+     "value": 61.0,
+     "note": "last data point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The line ends at 61.",
+    "The final point is 61.",
+    "The series finishes at 61."
+   ],
+   "visual_evidence_rule": "The last data point on the line must be at value 61.",
+   "temporal_anchor": "The majority of Americans do not like the system",
+   "reviewer_question": "Is the endpoint value 61 required as the current level, or is it enough to show it is still a majority?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The exact intermediate values such as 65, 70, 60, and 57 need not be individually called out.",
+  "The series contains 13 data points; showing all 13 is optional.",
+  "The line's overall range from 51 to 80 can be shown as optional context."
+ ],
+ "unsupported_to_avoid": [
+  "That both political parties attempted to abolish the Electoral College, since the table has no party data.",
+  "That the system persists for a specific reason, which would be a causal claim not supported by the table.",
+  "That support is steadily increasing or decreasing, since the table shows fluctuation.",
+  "That the values are percentages, dollars, or counts, since the table's unit column is blank.",
+  "Specific years or time labels, which are not present in the table."
+ ],
+ "notes": "The table has one series with 13 points and no unit column; all numeric values are cited from the value column. U1, U4, and U5 are marked required because they carry the long-standing-majority and current-level ideas; U2 and U3 are optional extreme details.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 57.1,
+  "usage": {
+   "prompt_tokens": 1308,
+   "completion_tokens": 12783,
+   "total_tokens": 14091,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11128
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 796
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

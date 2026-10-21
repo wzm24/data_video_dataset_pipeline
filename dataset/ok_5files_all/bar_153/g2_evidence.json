@@ -1,0 +1,134 @@
+{
+ "clip_id": "bar_153",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 3,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The labels 1976, 2012, and 2016 must be legible and associated with the three data points."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1976 @ 1976",
+    "mark:2012 @ 2012",
+    "mark:2016 @ 2016"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1976 @ 1976",
+      "value": 0.2787
+     },
+     {
+      "mark": "2012 @ 2012",
+      "value": 0.4976
+     },
+     {
+      "mark": "2016 @ 2016",
+      "value": 0.5972
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A viewer must be able to compare the three relative values and see the monotonic increase."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:1976 @ 1976"
+   ],
+   "assertion": {
+    "mark": "1976 @ 1976",
+    "field": "value",
+    "expected": 0.2787,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1976 data point's relative value must be visible or readable as 0.2787."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2016 @ 2016"
+   ],
+   "assertion": {
+    "mark": "2016 @ 2016",
+    "field": "value",
+    "expected": 0.5972,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2016 data point's relative value must be visible or readable as 0.5972."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1976 @ 1976",
+    "mark:2016 @ 2016"
+   ],
+   "assertion": {
+    "low": "1976 @ 1976",
+    "low_value": 0.2787,
+    "high": "2016 @ 2016",
+    "high_value": 0.5972,
+    "delta": 0.3185,
+    "ratio": 2.1428,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual must allow seeing the magnitude of the 1976-to-2016 increase, not just its direction."
+  }
+ ]
+}

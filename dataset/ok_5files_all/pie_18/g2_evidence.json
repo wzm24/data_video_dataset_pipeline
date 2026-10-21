@@ -1,0 +1,103 @@
+{
+ "clip_id": "pie_18",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:NOT PAID @ 0"
+   ],
+   "assertion": {
+    "segment": "NOT PAID @ 0",
+    "expected_share": 0.183,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A NOT PAID slice/segment labeled 18.3% (or rounded 18%) must be visible and should appear as less than half of the whole."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:TAXES PAID @ 1"
+   ],
+   "assertion": {
+    "segment": "TAXES PAID @ 1",
+    "expected_share": 0.817,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A TAXES PAID slice/segment labeled 81.7% (or rounded 82%) must be visible and should appear as the majority of the whole."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:NOT PAID @ 0",
+    "segment:TAXES PAID @ 1"
+   ],
+   "assertion": {
+    "segment": "NOT PAID @ 0",
+    "expected_share": 0.183,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both slices must be shown as parts of one pie/whole representing all taxes owed; the whole should read as 100%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:TAXES PAID @ 1",
+    "mark:NOT PAID @ 0"
+   ],
+   "assertion": {
+    "greater": "TAXES PAID @ 1",
+    "lesser": "NOT PAID @ 0",
+    "expected_ratio": 4.4645,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The TAXES PAID slice must be visibly much larger than NOT PAID; if ratio text is used, it should be derived from the two shares, not presented as a table cell."
+  }
+ ]
+}

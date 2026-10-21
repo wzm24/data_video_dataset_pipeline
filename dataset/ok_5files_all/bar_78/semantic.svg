@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f6f6f4"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Regus Profit</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="200.0" y1="560.0" x2="1100.0" y2="560.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="200.0" y1="180.0" x2="200.0" y2="560.0" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="192.0" y1="560.0" x2="200.0" y2="560.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="186.0" y="565.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">0M</text>
+<line data-role="tick" x1="192.0" y1="484.0" x2="200.0" y2="484.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="186.0" y="489.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">50M</text>
+<line data-role="tick" x1="192.0" y1="408.0" x2="200.0" y2="408.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="186.0" y="413.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">100M</text>
+<line data-role="tick" x1="192.0" y1="332.0" x2="200.0" y2="332.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="186.0" y="337.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">150M</text>
+<line data-role="tick" x1="192.0" y1="256.0" x2="200.0" y2="256.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="186.0" y="261.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">200M</text>
+<line data-role="tick" x1="192.0" y1="180.0" x2="200.0" y2="180.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="186.0" y="185.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">250M</text>
+<g id="entity-regus-2013" data-role="entity" data-entity-id="regus-2013" data-label="Regus 2013">
+<rect id="regus-2013-bar" data-role="bar" data-entity-id="regus-2013" data-value="100" x="236.0" y="408.0" width="108.0" height="152.0" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="regus-2013-value-label" data-role="value-label" data-entity-id="regus-2013" x="290.0" y="398.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">100M</text>
+<text id="regus-2013-label" data-role="category-label" data-entity-id="regus-2013" x="290.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">2013</text>
+</g>
+<g id="entity-regus-2014" data-role="entity" data-entity-id="regus-2014" data-label="Regus 2014">
+<rect id="regus-2014-bar" data-role="bar" data-entity-id="regus-2014" data-value="130" x="416.0" y="362.4" width="108.0" height="197.6" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="regus-2014-value-label" data-role="value-label" data-entity-id="regus-2014" x="470.0" y="352.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">130M</text>
+<text id="regus-2014-label" data-role="category-label" data-entity-id="regus-2014" x="470.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">2014</text>
+</g>
+<g id="entity-regus-2015" data-role="entity" data-entity-id="regus-2015" data-label="Regus 2015">
+<rect id="regus-2015-bar" data-role="bar" data-entity-id="regus-2015" data-value="200" x="596.0" y="256.0" width="108.0" height="304.0" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="regus-2015-value-label" data-role="value-label" data-entity-id="regus-2015" x="650.0" y="246.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">200M</text>
+<text id="regus-2015-label" data-role="category-label" data-entity-id="regus-2015" x="650.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">2015</text>
+</g>
+<g id="entity-regus-2016" data-role="entity" data-entity-id="regus-2016" data-label="Regus 2016">
+<rect id="regus-2016-bar" data-role="bar" data-entity-id="regus-2016" data-value="190" x="776.0" y="271.2" width="108.0" height="288.8" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="regus-2016-value-label" data-role="value-label" data-entity-id="regus-2016" x="830.0" y="261.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">190M</text>
+<text id="regus-2016-label" data-role="category-label" data-entity-id="regus-2016" x="830.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">2016</text>
+</g>
+<g id="entity-regus-2017" data-role="entity" data-entity-id="regus-2017" data-label="Regus 2017">
+<rect id="regus-2017-bar" data-role="bar" data-entity-id="regus-2017" data-value="200" x="956.0" y="256.0" width="108.0" height="304.0" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="regus-2017-value-label" data-role="value-label" data-entity-id="regus-2017" x="1010.0" y="246.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">200M</text>
+<text id="regus-2017-label" data-role="category-label" data-entity-id="regus-2017" x="1010.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">2017</text>
+</g>
+</g>
+</svg>

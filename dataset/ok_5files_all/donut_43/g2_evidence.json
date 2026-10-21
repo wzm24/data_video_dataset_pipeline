@@ -1,0 +1,122 @@
+{
+ "clip_id": "donut_43",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "more likely to have a graduate degree @ 0",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or annotation must show 17% (or 0.17) and connect it to cat owners and graduate degree, not merely display a number."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:more likely to have a graduate degree @ 0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "more likely to have a graduate degree @ 0",
+      "value": 17.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The wording, arrow, or position must indicate 'more likely' or 'higher', not 'less likely'."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or label must mention graduate degree, not another education level or unrelated outcome."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:more likely to have a graduate degree @ 0",
+    "mark:more likely to have a graduate degree @ 0"
+   ],
+   "assertion": {
+    "low": "more likely to have a graduate degree @ 0",
+    "low_value": 0.17,
+    "high": "more likely to have a graduate degree @ 0",
+    "high_value": 17.0,
+    "delta": 16.83,
+    "ratio": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The label must use 'more likely' or 'higher likelihood' and avoid '17 percentage points' or '17% of cat owners'."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "more likely to have a graduate degree @ 0",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If shown, the chart should identify or label the comparison group; otherwise the wording must imply a baseline."
+  }
+ ]
+}

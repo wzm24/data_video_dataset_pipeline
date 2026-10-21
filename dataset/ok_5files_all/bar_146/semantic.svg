@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#eaeaea"/>
+<text x="640" y="60" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#222">NUMBER OF DOSES PROCURED PER PERSON</text>
+<text x="564.0" y="188.0" text-anchor="end" font-family="Arial" font-size="19" fill="#222">CANADA</text>
+<rect x="580.0" y="164.0" width="574.2" height="32" fill="#c95642"/>
+<text x="1164.2" y="188.0" font-family="Arial" font-size="22" font-weight="700" fill="#222">8.7</text>
+<text x="564.0" y="260.0" text-anchor="end" font-family="Arial" font-size="19" fill="#222">UNITED KINGDOM</text>
+<rect x="580.0" y="236.0" width="481.8" height="32" fill="#c95642"/>
+<text x="1071.8" y="260.0" font-family="Arial" font-size="22" font-weight="700" fill="#222">7.3</text>
+<text x="564.0" y="332.0" text-anchor="end" font-family="Arial" font-size="19" fill="#222">NEW ZEALAND</text>
+<rect x="580.0" y="308.0" width="435.6" height="32" fill="#c95642"/>
+<text x="1025.6" y="332.0" font-family="Arial" font-size="22" font-weight="700" fill="#222">6.6</text>
+<text x="564.0" y="404.0" text-anchor="end" font-family="Arial" font-size="19" fill="#222">AUSTRALIA</text>
+<rect x="580.0" y="380.0" width="336.6" height="32" fill="#c95642"/>
+<text x="926.6" y="404.0" font-family="Arial" font-size="22" font-weight="700" fill="#222">5.1</text>
+<text x="564.0" y="476.0" text-anchor="end" font-family="Arial" font-size="19" fill="#222">CHILE</text>
+<rect x="580.0" y="452.0" width="376.2" height="32" fill="#c95642"/>
+<text x="966.2" y="476.0" font-family="Arial" font-size="22" font-weight="700" fill="#222">5.7</text>
+<text x="564.0" y="548.0" text-anchor="end" font-family="Arial" font-size="19" fill="#222">EUROPEAN UNION</text>
+<rect x="580.0" y="524.0" width="303.6" height="32" fill="#c95642"/>
+<text x="893.6" y="548.0" font-family="Arial" font-size="22" font-weight="700" fill="#222">4.6</text>
+<text x="564.0" y="620.0" text-anchor="end" font-family="Arial" font-size="19" fill="#222">UNITED STATES</text>
+<rect x="580.0" y="596.0" width="264.0" height="32" fill="#c95642"/>
+<text x="854.0" y="620.0" font-family="Arial" font-size="22" font-weight="700" fill="#222">4.0</text>
+<text x="640" y="700" text-anchor="middle" font-family="Arial" font-size="14" fill="#666">Source: Duke Global Health Innovation Center | March 2021</text>
+</svg>

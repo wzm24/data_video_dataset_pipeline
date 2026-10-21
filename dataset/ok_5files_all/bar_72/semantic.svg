@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f2f2f0"/>
+<g id="chart-plot" data-role="plot">
+<g id="entity-actual-content" data-role="entity" data-entity-id="actual-content" data-label="Actual content">
+<rect id="actual-content-bar" data-role="bar" data-entity-id="actual-content" data-value="28" x="160.0" y="380.0" width="268.8" height="80.0" fill="#4a90d9" rx="8" ry="8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text data-role="category-label" x="294.4" y="488.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#4a90d9">ACTUAL CONTENT</text>
+</g>
+<g id="entity-filler" data-role="entity" data-entity-id="filler" data-label="Filler">
+<rect id="filler-bar" data-role="bar" data-entity-id="filler" data-value="72" x="428.8" y="380.0" width="691.2" height="80.0" fill="#333333" rx="8" ry="8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text data-role="segment-label" x="774.4" y="368.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#333333">STORIES / REPETITION / EXAMPLES / UNNECESSARY DETAILS</text>
+</g>
+</g>
+</svg>

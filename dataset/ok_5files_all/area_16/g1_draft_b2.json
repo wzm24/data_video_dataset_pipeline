@@ -1,0 +1,266 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_16",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the rapid progress and development of Ethiopia, highlighting improvements in health and infrastructure over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The health metric shown is child mortality in Ethiopia, measured in percent, tracked from 1990 to 2019.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "child mortality",
+     "x": "1990",
+     "field": "value",
+     "value": 20.0,
+     "note": "Series starts at 20.0 percent."
+    },
+    {
+     "entity": "child mortality",
+     "x": "2019",
+     "field": "value",
+     "value": 7.0,
+     "note": "Series ends at 7.0 percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Child mortality in Ethiopia (%) is shown from 1990 to 2019.",
+    "The chart tracks Ethiopia’s child mortality series over 1990–2019.",
+    "The health indicator is child mortality, measured as a percent."
+   ],
+   "visual_evidence_rule": "Chart title, axis label, or annotation must name child mortality and percent, with x-axis spanning 1990–2019.",
+   "temporal_anchor": "the opening Ethiopia/progress clause plus the child mortality clause",
+   "reviewer_question": "Must the video explicitly name child mortality as the health metric, or can it rely on the chart title?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Child mortality starts at 20.0% in 1990 and ends at 7.0% in 2019.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "child mortality",
+     "x": "1990",
+     "field": "value",
+     "value": 20.0,
+     "note": "Start endpoint."
+    },
+    {
+     "entity": "child mortality",
+     "x": "2019",
+     "field": "value",
+     "value": 7.0,
+     "note": "End endpoint."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "from 20% in 1990 to 7% in 2019",
+    "20% (1990) → 7% (2019)",
+    "started at 20% and ended at 7%"
+   ],
+   "visual_evidence_rule": "Both endpoint values must be visible as labels, markers, or annotation on the line at 1990 and 2019.",
+   "temporal_anchor": "the clause 'drop in child mortality from 20 % to 7 % since 1990'",
+   "reviewer_question": "Should both 1990=20% and 2019=7% endpoints be explicitly labeled?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Child mortality falls by 13.0 percentage points from 1990 to 2019.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "child mortality",
+     "x": "1990",
+     "field": "value",
+     "value": 20.0,
+     "note": "Baseline value."
+    },
+    {
+     "entity": "child mortality",
+     "x": "2019",
+     "field": "value",
+     "value": 7.0,
+     "note": "Final value."
+    }
+   ],
+   "computation": "20.0 - 7.0 = 13.0 percentage points",
+   "accepted_routes": [
+    "fell by 13 percentage points",
+    "a 13-point drop",
+    "20% to 7%, a decline of 13 percentage points"
+   ],
+   "visual_evidence_rule": "A difference annotation or visible endpoint labels must make the 13-percentage-point change derivable.",
+   "temporal_anchor": "the clause 'drop in child mortality from 20 % to 7 %'",
+   "reviewer_question": "Is the 13-percentage-point drop required, or is the 20%→7% endpoint contrast sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Child mortality declines monotonically across every listed year from 1990 to 2019.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "child mortality",
+     "x": "1990",
+     "field": "value",
+     "value": 20.0,
+     "note": "Start of downward trend."
+    },
+    {
+     "entity": "child mortality",
+     "x": "2000",
+     "field": "value",
+     "value": 13.0,
+     "note": "Intermediate anchor."
+    },
+    {
+     "entity": "child mortality",
+     "x": "2010",
+     "field": "value",
+     "value": 8.4,
+     "note": "Intermediate anchor."
+    },
+    {
+     "entity": "child mortality",
+     "x": "2019",
+     "field": "value",
+     "value": 7.0,
+     "note": "End of downward trend."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "declined every year",
+    "steady downward trend",
+    "continuous decline from 1990 to 2019"
+   ],
+   "visual_evidence_rule": "The plotted line must descend continuously across the full 1990–2019 x-axis without any upward segments.",
+   "temporal_anchor": "the 'since 1990' / 'over time' framing",
+   "reviewer_question": "Must the video assert uninterrupted annual decline, or is a general downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By 2019, child mortality is about 65% lower than its 1990 level, or 35% of the 1990 level.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "child mortality",
+     "x": "1990",
+     "field": "value",
+     "value": 20.0,
+     "note": "Denominator for relative change."
+    },
+    {
+     "entity": "child mortality",
+     "x": "2019",
+     "field": "value",
+     "value": 7.0,
+     "note": "Numerator/endpoint for relative change."
+    }
+   ],
+   "computation": "(20.0 - 7.0) / 20.0 = 0.65 = 65% relative decline; 7.0 / 20.0 = 0.35 = 35% of 1990 level",
+   "accepted_routes": [
+    "65% lower than in 1990",
+    "fell by about two-thirds",
+    "retained 35% of its 1990 level",
+    "a 65% relative reduction"
+   ],
+   "visual_evidence_rule": "A percent-change annotation or a visible 1990 baseline of 20% must make the 65% decline or 35% retained level derivable.",
+   "temporal_anchor": "the 'drop in child mortality' clause, if the video quantifies relative magnitude",
+   "reviewer_question": "Should the relative 65% decline be included, or is it optional given the narration only states percentage-point endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "First fall below 10% occurs in 2006 (2005=10.1, 2006=9.6).",
+  "First fall below 8% occurs in 2012 (2011=8.2, 2012=7.9).",
+  "Average annual reduction of about 0.45 percentage points per year: (20.0-7.0)/(2019-1990)=0.4483.",
+  "2019 is the lowest value in the series (7.0%)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that improving health services caused the child mortality drop; the table only contains child mortality values.",
+  "Infrastructure improvements, population rank, or development rankings not present in the table.",
+  "Extrapolating beyond 2019 or predicting future child mortality.",
+  "Calling the 20%→7% change a 13% drop; it is 13 percentage points or a 65% relative decline.",
+  "Global or regional comparisons not present in the table."
+ ],
+ "notes": "Only child mortality is in the table; infrastructure, population rank, and causal explanations are not supported. The key trade-off is whether to require the derived 13 pp and 65% reductions or only the endpoint/trend framing.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 40.1,
+  "usage": {
+   "prompt_tokens": 1409,
+   "completion_tokens": 9152,
+   "total_tokens": 10561,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7264
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 1153
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#3b3f44"/>
+<rect x="220" y="120" width="840" height="520" fill="#454a52"/>
+<defs><pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.2" fill="#52585f"/></pattern></defs>
+<rect x="220" y="120" width="840" height="520" fill="url(#dots)"/>
+<circle cx="345" cy="500" r="50" fill="#c8d068"/>
+<text x="345" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Owes</text>
+<text x="345" y="534" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2b2f33">$10,000</text>
+<circle cx="512" cy="470" r="86" fill="#c8d068"/>
+<text x="512" y="466" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Owes</text>
+<text x="512" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2b2f33">$30,000</text>
+<circle cx="793" cy="440" r="132" fill="#c8d068"/>
+<text x="793" y="436" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Owes</text>
+<text x="793" y="474" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2b2f33">$70,000</text>
+<text x="1210" y="60" text-anchor="end" font-family="Georgia, serif" font-size="40" font-style="italic" fill="#ffffff">Vox</text>
+</svg>

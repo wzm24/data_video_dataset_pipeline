@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_2",
+ "intent_en": "To explain how an increase in supply and a decrease in demand leads to falling prices and subsequent driver protests.",
+ "previous_intent": "To illustrate how an increase in supply and a decrease in demand drive down prices, leading to anger and protests from drivers.",
+ "narration_support": "when this line goes up and this one goes down, prices fall and drivers get angry. Like violent protests and the street angry.",
+ "chart_support": "Supply and Demand graph showing an upward supply curve and downward demand curve, with a large green downward arrow indicating falling prices, accompanied by thumbs-down gestures and a pitchfork symbolizing anger/protest.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly links the movement of supply (up) and demand (down) lines to falling prices and driver anger. The chart visualizes this with a standard supply/demand intersection, a downward price arrow, and protest imagery (pitchfork, thumbs down) matching the narration's description of 'violent protests' and 'street angry'.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

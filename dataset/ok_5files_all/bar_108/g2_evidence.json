@@ -1,0 +1,123 @@
+{
+ "clip_id": "bar_108",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Pfizer/BioNTech @ Months since last shot",
+    "mark:Moderna @ Months since last shot"
+   ],
+   "assertion": {
+    "greater": "Pfizer/BioNTech @ Months since last shot",
+    "lesser": "Moderna @ Months since last shot",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must display the value 6 months for Pfizer/BioNTech and Moderna on the months-since-last-shot measure."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Johnson & Johnson @ Months since last shot"
+   ],
+   "assertion": {
+    "mark": "Johnson & Johnson @ Months since last shot",
+    "field": "value",
+    "expected": 2.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must display the value 2 months for Johnson & Johnson on the months-since-last-shot measure."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "AstraZeneca @ Months since last shot",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must display the value 6 months for AstraZeneca on the months-since-last-shot measure."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Pfizer/BioNTech @ two weeks until fully effective"
+   ],
+   "assertion": {
+    "mark": "Pfizer/BioNTech @ two weeks until fully effective",
+    "field": "value",
+    "expected": 0.55,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must display the full-effectiveness wait values: 0.55 months for Pfizer/BioNTech, Moderna, and AstraZeneca, and 0.7 months for Johnson & Johnson."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Johnson & Johnson @ Months since last shot",
+    "mark:Pfizer/BioNTech @ Months since last shot"
+   ],
+   "assertion": {
+    "low": "Johnson & Johnson @ Months since last shot",
+    "low_value": 2.0,
+    "high": "Pfizer/BioNTech @ Months since last shot",
+    "high_value": 6.0,
+    "delta": 4.0,
+    "ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the 2-month Johnson & Johnson value alongside the 6-month values for Pfizer/BioNTech, Moderna, and AstraZeneca so the difference is derivable."
+  }
+ ]
+}

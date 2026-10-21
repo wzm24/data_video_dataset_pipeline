@@ -1,0 +1,136 @@
+{
+ "clip_id": "line_40",
+ "family": "line",
+ "chart_form": "line/multi_panel",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Connecticut HOMICIDES @ 1995",
+    "mark:Connecticut HOMICIDES @ 2005"
+   ],
+   "assertion": {
+    "low": "Connecticut HOMICIDES @ 2005",
+    "low_value": 1.78,
+    "high": "Connecticut HOMICIDES @ 1995",
+    "high_value": 3.08,
+    "delta": 1.3,
+    "ratio": 1.7303,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Connecticut HOMICIDES data must show the 1995 value 3.08 and the 2005 value 1.78, with the later value visibly lower."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Connecticut SUICIDES @ 1995",
+    "mark:Connecticut SUICIDES @ 2005"
+   ],
+   "assertion": {
+    "low": "Connecticut SUICIDES @ 2005",
+    "low_value": 2.88,
+    "high": "Connecticut SUICIDES @ 1995",
+    "high_value": 4.58,
+    "delta": 1.7,
+    "ratio": 1.5903,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Connecticut SUICIDES data must show the 1995 value 4.58 and the 2005 value 2.88, with the later value visibly lower."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Missouri HOMICIDES @ 2017",
+    "mark:Missouri HOMICIDES @ 2007 (derived from x_px 608.9)"
+   ],
+   "assertion": {
+    "low": "Missouri HOMICIDES @ 2007 (derived from x_px 608.9)",
+    "low_value": 4.61,
+    "high": "Missouri HOMICIDES @ 2017",
+    "high_value": 9.9,
+    "delta": 5.29,
+    "ratio": 2.1475,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Missouri HOMICIDES data must show the 2007 value 4.61 and the 2017 value 9.9, with the later value visibly higher and more than double."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Missouri SUICIDES @ 2017",
+    "mark:Missouri SUICIDES @ 2007 (derived from x_px 608.9)"
+   ],
+   "assertion": {
+    "low": "Missouri SUICIDES @ 2007 (derived from x_px 608.9)",
+    "low_value": 5.6,
+    "high": "Missouri SUICIDES @ 2017",
+    "high_value": 8.1,
+    "delta": 2.5,
+    "ratio": 1.4464,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Missouri SUICIDES data must show the 2007 value 5.6 and the 2017 value 8.1, with the later value visibly higher."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Connecticut SUICIDES @ 1995",
+    "mark:Connecticut HOMICIDES @ 1995"
+   ],
+   "assertion": {
+    "greater": "Connecticut SUICIDES @ 1995",
+    "lesser": "Connecticut HOMICIDES @ 1995",
+    "expected_ratio": 1.487,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four series endpoints for the two policy decades must be visible enough to show Connecticut decreasing and Missouri increasing."
+  }
+ ]
+}

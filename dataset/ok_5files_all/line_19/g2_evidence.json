@@ -1,0 +1,154 @@
+{
+ "clip_id": "line_19",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Sales performance @ first ordered observation"
+   ],
+   "assertion": {
+    "mark": "Sales performance @ first ordered observation",
+    "field": "value",
+    "expected": 0.7,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The opening point must be visibly relatively high compared with the late points, and not falsely shown as the series maximum."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Yikes)"
+   ],
+   "assertion": {
+    "mark": "Sales performance @ fourth ordered observation",
+    "extreme": "max",
+    "expected": 0.94,
+    "compared_set": "Yikes",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The fourth ordered point must be visibly the highest point of the series."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Sales performance @ fourth ordered observation",
+    "mark:Sales performance @ tenth ordered observation"
+   ],
+   "assertion": {
+    "low": "Sales performance @ tenth ordered observation",
+    "low_value": 0.18,
+    "high": "Sales performance @ fourth ordered observation",
+    "high_value": 0.94,
+    "delta": 0.76,
+    "ratio": 5.2222,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a large fall from the highest point to the last point."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Sales performance @ fifth ordered observation",
+    "mark:Sales performance @ sixth ordered observation",
+    "mark:Sales performance @ seventh ordered observation",
+    "mark:Sales performance @ eighth ordered observation",
+    "mark:Sales performance @ ninth ordered observation",
+    "mark:Sales performance @ tenth ordered observation"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Sales performance @ fifth ordered observation",
+      "value": 0.7
+     },
+     {
+      "mark": "Sales performance @ sixth ordered observation",
+      "value": 0.58
+     },
+     {
+      "mark": "Sales performance @ seventh ordered observation",
+      "value": 0.3
+     },
+     {
+      "mark": "Sales performance @ eighth ordered observation",
+      "value": 0.22
+     },
+     {
+      "mark": "Sales performance @ ninth ordered observation",
+      "value": 0.27
+     },
+     {
+      "mark": "Sales performance @ tenth ordered observation",
+      "value": 0.18
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The post-peak segment must visibly trend downward, including the small rebound near the end."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Sales performance @ first ordered observation",
+    "mark:Sales performance @ tenth ordered observation"
+   ],
+   "assertion": {
+    "greater": "Sales performance @ first ordered observation",
+    "lesser": "Sales performance @ tenth ordered observation",
+    "expected_ratio": 3.8889,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final point must be visibly much lower than the opening point."
+  }
+ ]
+}

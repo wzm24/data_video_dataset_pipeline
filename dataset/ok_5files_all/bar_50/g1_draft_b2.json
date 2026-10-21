@@ -1,0 +1,269 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_50",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that payroll taxes are applied at a roughly uniform percentage rate across individuals ranging from the poorest to the richest.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The richest group (RICHEST) has the table’s lowest payroll-tax rate at 10.0%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST",
+     "x": "1160.5",
+     "field": "value",
+     "value": 10.0,
+     "note": "Rightmost bar; table value is 10.000."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "RICHEST is at 10%",
+    "The richest group’s rate is 10.0 percent",
+    "The far-right bar ends at 10.0",
+    "The richest pay about 10 percent"
+   ],
+   "visual_evidence_rule": "The RICHEST bar or its value label must be visible at the far right and show 10.0 (or 10%).",
+   "temporal_anchor": "the 'But the wealthy?' clause",
+   "reviewer_question": "Must the video explicitly state the RICHEST endpoint value as 10.0%, or is showing the bar height enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The poorest group (POOREST) has a payroll-tax rate of 11.0%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "209.4",
+     "field": "value",
+     "value": 11.0,
+     "note": "Leftmost bar; table value is 11.000. A second POOREST row at x=328.4 also has value 11.000."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "POOREST is at 11%",
+    "The poorest group’s rate is 11.0 percent",
+    "The leftmost bar shows 11.0",
+    "The poorest pay about 11 percent"
+   ],
+   "visual_evidence_rule": "The POOREST bar or its value label must be visible at the left and show 11.0 (or 11%).",
+   "temporal_anchor": "the 'everyone is on the hook for the same percentage' clause",
+   "reviewer_question": "Must the video explicitly state the POOREST endpoint value as 11.0%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The highest rate in the table is Group 3 at 12.0%; combined with the lowest rate (RICHEST at 10.0%), the full range is 2.0 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Group 3",
+     "x": "447.2",
+     "field": "value",
+     "value": 12.0,
+     "note": "Highest value in table."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "1160.5",
+     "field": "value",
+     "value": 10.0,
+     "note": "Lowest value in table."
+    }
+   ],
+   "computation": "12.0 - 10.0 = 2.0 percentage points",
+   "accepted_routes": [
+    "Group 3 is highest at 12%",
+    "Range is 10% to 12%",
+    "Spread is 2 percentage points",
+    "Max 12.0, min 10.0, difference 2.0 points"
+   ],
+   "visual_evidence_rule": "Group 3 must be identifiable as the highest bar at 12.0, and RICHEST as the lowest at 10.0; the 2.0-point range should be stated or visually implied.",
+   "temporal_anchor": "a summary clause after the bars are shown, or the 'same percentage' clause if the video contrasts the spread",
+   "reviewer_question": "Must the video call out Group 3 as the 12.0% maximum and the 2.0-point range, or is the endpoint comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Several groups cluster near the same rate: POOREST, Group 4, Group 5, and Group 6 all have 11.0%; Group 7 and Group 8 both have 10.4%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "209.4",
+     "field": "value",
+     "value": 11.0,
+     "note": "One of the 11.0% cluster."
+    },
+    {
+     "entity": "Group 4",
+     "x": "566.1",
+     "field": "value",
+     "value": 11.0,
+     "note": "11.0% cluster."
+    },
+    {
+     "entity": "Group 5",
+     "x": "685.0",
+     "field": "value",
+     "value": 11.0,
+     "note": "11.0% cluster."
+    },
+    {
+     "entity": "Group 6",
+     "x": "803.9",
+     "field": "value",
+     "value": 11.0,
+     "note": "11.0% cluster."
+    },
+    {
+     "entity": "Group 7",
+     "x": "922.8",
+     "field": "value",
+     "value": 10.4,
+     "note": "10.4% cluster."
+    },
+    {
+     "entity": "Group 8",
+     "x": "1041.6",
+     "field": "value",
+     "value": 10.4,
+     "note": "10.4% cluster."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Most groups are 11.0% or 10.4%",
+    "POOREST, Group 4, Group 5, and Group 6 are all 11.0%",
+    "Group 7 and Group 8 are both 10.4%",
+    "The middle bars cluster between 10.4% and 11.0%"
+   ],
+   "visual_evidence_rule": "The chart must show the repeated 11.0% values for POOREST, Group 4, Group 5, Group 6 and the repeated 10.4% values for Group 7 and Group 8, either by labels or aligned bar heights.",
+   "temporal_anchor": "the 'everyone is on the hook for the same percentage' clause",
+   "reviewer_question": "Must the video show the repeated 11.0% / 10.4% clusters, or is a single average/uniformity statement enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The richest group’s rate is 1.0 percentage point lower than the poorest group’s rate: 11.0% for POOREST minus 10.0% for RICHEST.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "209.4",
+     "field": "value",
+     "value": 11.0,
+     "note": "Poorest rate."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "1160.5",
+     "field": "value",
+     "value": 10.0,
+     "note": "Richest rate."
+    }
+   ],
+   "computation": "11.0 - 10.0 = 1.0 percentage point",
+   "accepted_routes": [
+    "Richest pay 1 point less than poorest",
+    "Poorest 11.0% vs richest 10.0%",
+    "The poorest-to-richest gap is 1.0 percentage point",
+    "The difference from poorest to richest is about 1 point"
+   ],
+   "visual_evidence_rule": "Both the POOREST and RICHEST endpoint values must be visible or directly comparable so the 1.0-point gap can be seen.",
+   "temporal_anchor": "the 'But the wealthy?' clause",
+   "reviewer_question": "Must the video quantify the poorest-to-richest difference as 1.0 point, or is qualitative 'roughly uniform' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Group 3 is the only bar above 11.0% (12.0%).",
+  "The relative_value values in the table (e.g., 0.3667 for POOREST, 0.4000 for Group 3, 0.3333 for RICHEST) if the video visualizes normalized bar lengths rather than tax rates.",
+  "The duplicate POOREST row at x=328.4 also has value 11.000."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming everyone pays exactly the same percentage; the table shows values from 10.0 to 12.0.",
+  "Causal statements like 'the wealthy pay less because of loopholes' or 'payroll taxes are progressive/regressive'.",
+  "Extrapolating beyond the named groups to all individuals.",
+  "Using relative_value as the tax rate (e.g., saying the richest rate is 33.33% or poorest rate is 36.67%) unless the video explicitly defines that denominator.",
+  "Saying the richest pay zero or no payroll tax."
+ ],
+ "notes": "Values are treated as percentage rates per the intent/narration; the table omits an explicit unit column. The duplicate POOREST row is noted but not treated as a separate unique group for endpoint/cluster claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 39.0,
+  "usage": {
+   "prompt_tokens": 996,
+   "completion_tokens": 10051,
+   "total_tokens": 11047,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7824
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 612
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

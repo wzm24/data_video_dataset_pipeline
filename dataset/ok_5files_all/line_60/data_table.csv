@@ -1,0 +1,19 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,160.0,,57.0000,0.9194,,#c9a64b,printed
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,280.0,2003,57.0000,0.9194,,#c9a64b,estimated
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,400.0,2005,53.0000,0.8548,,#c9a64b,printed
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,520.0,2007,51.0000,0.8226,,#c9a64b,estimated
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,640.0,2009,54.0000,0.8710,,#c9a64b,printed
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,760.0,2011,49.0000,0.7903,,#c9a64b,estimated
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,880.0,2013,43.0000,0.6935,,#c9a64b,printed
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,1000.0,2015,38.0000,0.6129,,#c9a64b,estimated
+line_60,oppose same-sex marriage,oppose-same-sex-marriage,1120.0,2017,32.0000,0.5161,,#c9a64b,printed
+line_60,favor same-sex marriage,favor-same-sex-marriage,160.0,,35.0000,0.5645,,#8f9b65,printed
+line_60,favor same-sex marriage,favor-same-sex-marriage,280.0,2003,34.0000,0.5484,,#8f9b65,estimated
+line_60,favor same-sex marriage,favor-same-sex-marriage,400.0,2005,36.0000,0.5806,,#8f9b65,printed
+line_60,favor same-sex marriage,favor-same-sex-marriage,520.0,2007,38.0000,0.6129,,#8f9b65,estimated
+line_60,favor same-sex marriage,favor-same-sex-marriage,640.0,2009,37.0000,0.5968,,#8f9b65,printed
+line_60,favor same-sex marriage,favor-same-sex-marriage,760.0,2011,49.0000,0.7903,,#8f9b65,estimated
+line_60,favor same-sex marriage,favor-same-sex-marriage,880.0,2013,50.0000,0.8065,,#8f9b65,printed
+line_60,favor same-sex marriage,favor-same-sex-marriage,1000.0,2015,56.0000,0.9032,,#8f9b65,estimated
+line_60,favor same-sex marriage,favor-same-sex-marriage,1120.0,2017,62.0000,1.0000,,#8f9b65,printed

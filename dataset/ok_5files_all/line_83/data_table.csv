@@ -1,0 +1,19 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_83,Taiwan daily cases,taiwan-daily-cases,160.0,Jan 2020,5.9524,0.0000,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,334.7,,16.9048,0.0219,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,358.0,Apr 2020,22.7193,0.0335,cases,#0f766e,svg_geometry
+line_83,Taiwan daily cases,taiwan-daily-cases,392.9,,31.4286,0.0510,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,451.2,,13.2143,0.0145,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,509.4,,8.6905,0.0055,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,556.0,Aug 2020,7.2607,0.0026,cases,#0f766e,svg_geometry
+line_83,Taiwan daily cases,taiwan-daily-cases,567.6,,6.9048,0.0019,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,742.4,,6.9048,0.0019,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,754.0,Nov 2020,6.9601,0.0020,cases,#0f766e,svg_geometry
+line_83,Taiwan daily cases,taiwan-daily-cases,917.1,,7.7381,0.0036,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,952.0,Feb 2021,8.0236,0.0041,cases,#0f766e,svg_geometry
+line_83,Taiwan daily cases,taiwan-daily-cases,1033.5,,8.6905,0.0055,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,1091.8,,13.2143,0.0145,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,1150.0,Jun 2021,33.2143,0.0545,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,1179.1,,115.0000,0.2181,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,1202.4,,369.6429,0.7274,,#0f766e,axis_calibrated
+line_83,Taiwan daily cases,taiwan-daily-cases,1208.2,,496.9048,0.9819,,#0f766e,axis_calibrated

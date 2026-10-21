@@ -1,0 +1,245 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_9",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the low per capita income of developing nations like South Korea and Bangladesh compared to the USA.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "USA's per capita income is 16,500, the high reference value for the comparison.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "x_px=320.0",
+     "field": "value",
+     "value": 16500.0,
+     "note": "Table value for USA per capita income."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "USA's per capita income is 16,500.",
+    "The USA bar reaches $16.5k.",
+    "United States per capita income: 16,500."
+   ],
+   "visual_evidence_rule": "A USA bar is visible and labeled or annotated with 16,500 or 16.5k.",
+   "temporal_anchor": "the per-capita income clause",
+   "reviewer_question": "Must the video explicitly state the USA's 16,500 per-capita income value, or is its much taller bar enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "South Korea's per capita income is 1,500, far below the USA.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "South Korea",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 1500.0,
+     "note": "Table value for South Korea per capita income."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "South Korea's per capita income is 1,500.",
+    "South Korea is at $1.5k.",
+    "Korea's per capita income: 1,500."
+   ],
+   "visual_evidence_rule": "A South Korea bar is visible and labeled or annotated with 1,500 or 1.5k.",
+   "temporal_anchor": "the per-capita income clause",
+   "reviewer_question": "Must the video explicitly state South Korea's 1,500 per-capita income value, or only show it as a short bar?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Bangladesh's per capita income is 750, far below the USA.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bangladesh",
+     "x": "x_px=960.0",
+     "field": "value",
+     "value": 750.0,
+     "note": "Table value for Bangladesh per capita income."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Bangladesh's per capita income is 750.",
+    "Bangladesh is at $750.",
+    "Bangladesh per capita income: 0.75k."
+   ],
+   "visual_evidence_rule": "A Bangladesh bar is visible and labeled or annotated with 750 or 0.75k.",
+   "temporal_anchor": "the per-capita income clause",
+   "reviewer_question": "Must the video explicitly state Bangladesh's 750 per-capita income value, or only show it as the shortest bar?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among the three entities, USA has the highest per capita income, followed by South Korea, then Bangladesh; both developing-nation bars are much lower than the USA.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "x_px=320.0",
+     "field": "value",
+     "value": 16500.0,
+     "note": "Highest value in the table."
+    },
+    {
+     "entity": "South Korea",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 1500.0,
+     "note": "Middle value in the table."
+    },
+    {
+     "entity": "Bangladesh",
+     "x": "x_px=960.0",
+     "field": "value",
+     "value": 750.0,
+     "note": "Lowest value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "USA is far above South Korea and Bangladesh.",
+    "USA has the highest per capita income of the three.",
+    "Order: USA > South Korea > Bangladesh.",
+    "Both developing nations are much lower than the USA."
+   ],
+   "visual_evidence_rule": "All three bars must be visible with USA clearly tallest and Bangladesh clearly shortest, or an explicit order/ranking annotation must show USA > South Korea > Bangladesh.",
+   "temporal_anchor": "the per-capita income clause",
+   "reviewer_question": "Must the order USA > South Korea > Bangladesh be explicit, or do relative bar heights suffice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Derived ratios from the table: USA per capita income is about 11 times South Korea's and about 22 times Bangladesh's; South Korea is 2 times Bangladesh.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "x_px=320.0",
+     "field": "value",
+     "value": 16500.0,
+     "note": "Numerator for USA/South Korea and USA/Bangladesh ratios."
+    },
+    {
+     "entity": "South Korea",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 1500.0,
+     "note": "Denominator for USA/South Korea ratio and numerator for South Korea/Bangladesh ratio."
+    },
+    {
+     "entity": "Bangladesh",
+     "x": "x_px=960.0",
+     "field": "value",
+     "value": 750.0,
+     "note": "Denominator for USA/Bangladesh and South Korea/Bangladesh ratios."
+    }
+   ],
+   "computation": "16500 / 1500 = 11; 16500 / 750 = 22; 1500 / 750 = 2",
+   "accepted_routes": [
+    "USA is about 11 times South Korea.",
+    "USA is roughly 22 times Bangladesh.",
+    "South Korea is twice Bangladesh.",
+    "USA/Korea ratio ~11; USA/Bangladesh ratio ~22."
+   ],
+   "visual_evidence_rule": "Either a ratio annotation/text such as 11x, 22x, or 2x is shown, or labeled bars with all three values are visible so the ratios can be read or computed.",
+   "temporal_anchor": "the per-capita income clause; optional ratio reveal",
+   "reviewer_question": "Are exact multiplier statements required, or is a qualitative 'far below' comparison acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The printed relative_value cells: USA 0.8250, South Korea 0.0750, Bangladesh 0.0375, if the animation uses a separate normalized scale; do not infer a denominator not present in the table.",
+  "South Korea is twice Bangladesh's per capita income, using 1,500 vs 750.",
+  "Bangladesh is half of South Korea's per capita income, using 750 vs 1,500."
+ ],
+ "unsupported_to_avoid": [
+  "Life expectancy around 45 from the reference narration; it is not in the table.",
+  "Claiming these three countries are among the lowest in the world or giving a global ranking; the table only has three entities.",
+  "Treating USA relative_value 0.8250 as 82.5% of a world or global total; the denominator is not in the table.",
+  "Causal claims that low per capita income causes low life expectancy.",
+  "Extrapolating South Korea and Bangladesh to all developing nations."
+ ],
+ "notes": "The table supports only per-capita income for three named entities; the reference narration's life-expectancy claim is outside the table. Exact ratios are derived from the table's value cells and are optional unless the reviewer treats the comparison quantitatively.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 29.7,
+  "usage": {
+   "prompt_tokens": 667,
+   "completion_tokens": 7130,
+   "total_tokens": 7797,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5250
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 411
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

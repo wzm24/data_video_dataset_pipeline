@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f0f0f0"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#333333">Computer $cience</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#bfbfbf" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#bfbfbf" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#a0a0a0" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">0%</text>
+<line data-role="tick" x1="112" y1="202.9" x2="120" y2="202.9" stroke="#a0a0a0" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="208.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">1200%</text>
+<g id="entity-tuition" data-role="entity" data-entity-id="tuition" data-label="Tuition" data-series="true">
+<polyline id="tuition-polyline" data-role="polyline" data-entity-id="tuition" points="120.0,600.0 237.9,582.1 355.7,546.1 512.9,473.9 670.0,392.8 827.1,312.1 984.3,230.0 1141.4,149.9 1220.0,140.0" fill="none" stroke="#6ba86b" stroke-width="4" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="120.0" cy="600.0" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="237.9" cy="582.1" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="355.7" cy="546.1" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="512.9" cy="473.9" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="670.0" cy="392.8" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="827.1" cy="312.1" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="984.3" cy="230.0" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="1141.4" cy="149.9" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="tuition" cx="1220.0" cy="140.0" r="6" fill="#6ba86b" stroke="#ffffff" stroke-width="2"/>
+</g>
+<g id="entity-inflation-cpi" data-role="entity" data-entity-id="inflation-cpi" data-label="Inflation (CPI)" data-series="true">
+<polyline id="inflation-cpi-polyline" data-role="polyline" data-entity-id="inflation-cpi" points="120.0,600.0 237.9,582.1 355.7,550.4 512.9,533.8 670.0,517.3 827.1,500.7 984.3,484.2 1141.4,467.6 1220.0,461.0" fill="none" stroke="#d65d5d" stroke-width="4" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="120.0" cy="600.0" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="237.9" cy="582.1" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="355.7" cy="550.4" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="512.9" cy="533.8" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="670.0" cy="517.3" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="827.1" cy="500.7" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="984.3" cy="484.2" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="1141.4" cy="467.6" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="inflation-cpi" cx="1220.0" cy="461.0" r="6" fill="#d65d5d" stroke="#ffffff" stroke-width="2"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">1972</text>
+<text data-role="x-axis-label" x="1652.1" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">2011</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#6ba86b" stroke-width="4"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">Tuition</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#d65d5d" stroke-width="4"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">Inflation (CPI)</text>
+</g>
+</svg>

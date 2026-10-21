@@ -1,0 +1,4 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_97,SUNNI,sunni,640.0,,20.000,0.9871,,#2E8B57,printed,bar-1,semantic_svg_backfill
+bar_97,SHIA,shia,640.0,,63.000,0.9871,,#C0392B,printed,bar-2,semantic_svg_backfill
+bar_97,KURDS (SUNNI),kurds-sunni,640.0,,17.000,0.9871,,#DED4C5,printed,bar-3,semantic_svg_backfill

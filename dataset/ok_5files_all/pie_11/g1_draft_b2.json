@@ -1,0 +1,241 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_11",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how store psychology influences a large proportion of purchases at IKEA to be unplanned.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The estimated share of IKEA purchases that are unplanned is 58.3%, shown as the yellow pie slice.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "pieslice-yellow",
+     "x": "1",
+     "field": "value",
+     "value": 58.3,
+     "note": "yellow pie slice value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "58.3% of purchases are unplanned",
+    "about 58% of purchases are unplanned",
+    "the unplanned share is 58.3%",
+    "more than half of purchases are unplanned"
+   ],
+   "visual_evidence_rule": "The yellow pie slice must be visible and labeled or annotated as 58.3% / approximately 58%.",
+   "temporal_anchor": "the 'items purchased at Ikea are unplanned' clause",
+   "reviewer_question": "Must the video state the unplanned share as 58.3% rather than the narration's 60%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complementary planned share is 41.7%, so unplanned plus planned makes 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "pieslice-white",
+     "x": "2",
+     "field": "value",
+     "value": 41.7,
+     "note": "white pie slice value"
+    },
+    {
+     "entity": "pieslice-yellow",
+     "x": "1",
+     "field": "value",
+     "value": 58.3,
+     "note": "used to derive the complementary total"
+    }
+   ],
+   "computation": "58.3 + 41.7 = 100",
+   "accepted_routes": [
+    "41.7% of purchases are planned",
+    "the remaining 41.7% are planned",
+    "planned purchases account for 41.7%",
+    "unplanned and planned sum to 100%"
+   ],
+   "visual_evidence_rule": "The white pie slice must be visible and labeled or annotated as 41.7% / approximately 42%.",
+   "temporal_anchor": "optional; after the unplanned clause if the planned complement is shown",
+   "reviewer_question": "Is the 41.7% planned complement required, or merely useful context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Unplanned purchases exceed planned purchases by 16.6 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "pieslice-yellow",
+     "x": "1",
+     "field": "value",
+     "value": 58.3,
+     "note": "unplanned share"
+    },
+    {
+     "entity": "pieslice-white",
+     "x": "2",
+     "field": "value",
+     "value": 41.7,
+     "note": "planned share"
+    }
+   ],
+   "computation": "58.3 - 41.7 = 16.6",
+   "accepted_routes": [
+    "unplanned share is 16.6 percentage points higher than planned",
+    "58.3% versus 41.7%, a 16.6-point gap",
+    "unplanned exceeds planned by 16.6 points"
+   ],
+   "visual_evidence_rule": "Both slices must be labeled or otherwise the 16.6-point difference must be annotated.",
+   "temporal_anchor": "optional; on a comparison of unplanned versus planned purchases, if used",
+   "reviewer_question": "Should the video explicitly quantify the gap between unplanned and planned, or is showing the two shares enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Unplanned purchases are above the 50% majority threshold, while planned purchases are below it.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "pieslice-yellow",
+     "x": "1",
+     "field": "value",
+     "value": 58.3,
+     "note": "unplanned share above 50%"
+    },
+    {
+     "entity": "pieslice-white",
+     "x": "2",
+     "field": "value",
+     "value": 41.7,
+     "note": "planned share below 50%"
+    }
+   ],
+   "computation": "50 = 100 / 2; 58.3 > 50; 41.7 < 50",
+   "accepted_routes": [
+    "a majority of purchases are unplanned",
+    "more than half of purchases are unplanned",
+    "unplanned crosses the 50% line",
+    "planned purchases are below half"
+   ],
+   "visual_evidence_rule": "The chart must make clear that the unplanned share is greater than half, e.g. by a 50% reference line or majority callout.",
+   "temporal_anchor": "the 'large proportion' / unplanned clause",
+   "reviewer_question": "Is the above-50% majority threshold an obligatory claim from 'large proportion'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "A gauge arc is present in the chart and is labeled 12.5%.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "gauge arc",
+     "x": "0",
+     "field": "value",
+     "value": 12.5,
+     "note": "printed gauge arc value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "a gauge arc shows 12.5%",
+    "the chart includes a 12.5% gauge arc",
+    "12.5% is displayed on an arc",
+    "the gauge arc is labeled 12.5%"
+   ],
+   "visual_evidence_rule": "The gauge arc must be visible and labeled or annotated as 12.5% if this element is included.",
+   "temporal_anchor": "not tied to the narration; optional opening or separate annotation",
+   "reviewer_question": "Should the 12.5% gauge arc be treated as meaningful content or as a decorative/ambiguous element to ignore?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Unplanned is about 1.4 times planned (58.3 / 41.7 = 1.398).",
+  "Unplanned is about 40% higher than planned ((58.3 - 41.7) / 41.7 = 0.398).",
+  "The two pie slices sum to 100% (58.3 + 41.7 = 100).",
+  "Use yellow for the unplanned slice and white for the planned slice if the color mapping is treated as intentional."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that store psychology caused exactly 58.3% of purchases to be unplanned; the table only provides shares.",
+  "Using 60% as the charted unplanned share because the narration says 60 while the table gives 58.3%.",
+  "Treating the 12.5% gauge arc as a third pie slice or adding it to 58.3 and 41.7.",
+  "Extrapolating to all IKEA stores, all products, or all time periods.",
+  "Claiming planned purchases are 41.7% because store psychology was absent."
+ ],
+ "notes": "Table supports a 58.3% unplanned / 41.7% planned split; the 12.5% gauge arc has no defined semantic role in the intent. Review should decide whether the planned complement and derived comparisons are required or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.04
+ },
+ "draft_cost": {
+  "sec": 38.6,
+  "usage": {
+   "prompt_tokens": 677,
+   "completion_tokens": 8865,
+   "total_tokens": 9542,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7077
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 421
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

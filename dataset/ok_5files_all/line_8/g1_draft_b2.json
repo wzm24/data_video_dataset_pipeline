@@ -1,0 +1,334 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_8",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that test-optional college admissions policies are associated with higher average student test scores and increased application volumes compared to test-required policies, thereby enhancing institutional selectivity.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Test-optional average-score values are higher than test-required average-score values at the key endpoint years 1994 and 2010, with a 20.0 value-unit advantage at each.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Higher Average Scores - TEST OPTIONAL",
+     "x": "1994",
+     "field": "value",
+     "value": 953.3,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "Higher Average Scores - TEST REQUIRED",
+     "x": "1994",
+     "field": "value",
+     "value": 933.3,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "Higher Average Scores - TEST OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 1108.3,
+     "note": "end endpoint"
+    },
+    {
+     "entity": "Higher Average Scores - TEST REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 1088.3,
+     "note": "end endpoint"
+    }
+   ],
+   "computation": "difference = TEST OPTIONAL - TEST REQUIRED: 1994: 953.3 - 933.3 = 20.0; 2010: 1108.3 - 1088.3 = 20.0",
+   "accepted_routes": [
+    "Test-optional average scores are higher than test-required at both 1994 and 2010.",
+    "The optional score series leads the required score series at the start and end of the period.",
+    "The score advantage is about 20 value units at the endpoints."
+   ],
+   "visual_evidence_rule": "The TEST-OPTIONAL average-score series must be visibly above the TEST-REQUIRED average-score series at the 1994 and 2010 endpoints.",
+   "temporal_anchor": "the 'it definitely helps strengthen other metrics' clause, paired with the Higher Average Scores endpoint comparison",
+   "reviewer_question": "Must the video explicitly state that test-optional scores are higher at the endpoints, or is showing the optional score series above required at those years sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The test-optional average-score advantage is not uniform: the score gap narrows near 2002 and the two score series briefly cross or become equal around the middle of the period.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Higher Average Scores - TEST OPTIONAL",
+     "x": "486.7",
+     "field": "value",
+     "value": 1073.3,
+     "note": "optional below required at this point"
+    },
+    {
+     "entity": "Higher Average Scores - TEST REQUIRED",
+     "x": "486.7",
+     "field": "value",
+     "value": 1078.3,
+     "note": "required above optional at this point"
+    },
+    {
+     "entity": "Higher Average Scores - TEST OPTIONAL",
+     "x": "608.9",
+     "field": "value",
+     "value": 1083.3,
+     "note": "equal score point"
+    },
+    {
+     "entity": "Higher Average Scores - TEST REQUIRED",
+     "x": "608.9",
+     "field": "value",
+     "value": 1083.3,
+     "note": "equal score point"
+    },
+    {
+     "entity": "Higher Average Scores - TEST OPTIONAL",
+     "x": "2002",
+     "field": "value",
+     "value": 1088.3,
+     "note": "2002 endpoint"
+    },
+    {
+     "entity": "Higher Average Scores - TEST REQUIRED",
+     "x": "2002",
+     "field": "value",
+     "value": 1085.3,
+     "note": "2002 endpoint"
+    }
+   ],
+   "computation": "difference at 486.7 = 1073.3 - 1078.3 = -5.0; difference at 608.9 = 1083.3 - 1083.3 = 0.0; difference at 2002 = 1088.3 - 1085.3 = 3.0",
+   "accepted_routes": [
+    "The optional score advantage is not constant; the lines briefly cross around 2000.",
+    "The score gap shrinks to about 3.0 by 2002.",
+    "Test-optional is not above test-required for every point in the Higher Average Scores panel."
+   ],
+   "visual_evidence_rule": "The two higher-average-score series must show a crossing or equality near the middle of the timeline, so the optional advantage is visibly non-uniform.",
+   "temporal_anchor": "the same 'other metrics' clause, if the score crossing or narrow gap is shown",
+   "reviewer_question": "Should the video disclose the mid-period score crossing/narrow gap, or may it simplify to the endpoint score advantage only?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Test-optional applicant values are higher than test-required applicant values throughout the observed period.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "More Applicants - TEST OPTIONAL",
+     "x": "1994",
+     "field": "value",
+     "value": 1627.4,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST REQUIRED",
+     "x": "1994",
+     "field": "value",
+     "value": 1527.4,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 3627.4,
+     "note": "end endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 2527.2,
+     "note": "end endpoint"
+    }
+   ],
+   "computation": "difference = TEST OPTIONAL - TEST REQUIRED: 1994: 1627.4 - 1527.4 = 100.0; 2010: 3627.4 - 2527.2 = 1100.2",
+   "accepted_routes": [
+    "Test-optional schools show higher applicant values than test-required schools across the period.",
+    "The optional applicant series stays above the required applicant series throughout.",
+    "By 2010 the optional applicant value is about 1100.2 higher than required."
+   ],
+   "visual_evidence_rule": "The TEST-OPTIONAL applicant series must be visibly above the TEST-REQUIRED applicant series throughout the More Applicants timeline.",
+   "temporal_anchor": "the increased-application-volumes claim, paired with the More Applicants panel during the 'other metrics' clause",
+   "reviewer_question": "Must the video explicitly compare applicant volumes between the two policies, or is showing the optional applicant series above required sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Applicant values increase from 1994 to 2010 for both policies, with test-optional rising by about 2000.0 and test-required by about 999.8.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "More Applicants - TEST OPTIONAL",
+     "x": "1994",
+     "field": "value",
+     "value": 1627.4,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 3627.4,
+     "note": "end endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST REQUIRED",
+     "x": "1994",
+     "field": "value",
+     "value": 1527.4,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 2527.2,
+     "note": "end endpoint"
+    }
+   ],
+   "computation": "optional change = 3627.4 - 1627.4 = 2000.0; required change = 2527.2 - 1527.4 = 999.8; optional ratio = 3627.4 / 1627.4 ≈ 2.23; required ratio = 2527.2 / 1527.4 ≈ 1.65",
+   "accepted_routes": [
+    "Both applicant series grow, but the test-optional series grows by about twice as much.",
+    "Test-optional applicant values rise by about 2000.0, while test-required rises by about 999.8.",
+    "Test-optional applicant values more than double; required applicant values increase by about 1.65×."
+   ],
+   "visual_evidence_rule": "Both applicant series must visibly increase from 1994 to 2010, and the TEST-OPTIONAL series must show the larger end-to-end rise.",
+   "temporal_anchor": "the increased-application-volumes claim, paired with the More Applicants panel during the 'other metrics' clause",
+   "reviewer_question": "Should the video be required to quantify the applicant growth difference, or is showing both series rising with optional higher sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The test-optional applicant advantage widens over time, from about 100.0 in 1994 to about 1100.2 in 2010.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "More Applicants - TEST OPTIONAL",
+     "x": "1994",
+     "field": "value",
+     "value": 1627.4,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST REQUIRED",
+     "x": "1994",
+     "field": "value",
+     "value": 1527.4,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 3627.4,
+     "note": "end endpoint"
+    },
+    {
+     "entity": "More Applicants - TEST REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 2527.2,
+     "note": "end endpoint"
+    }
+   ],
+   "computation": "gap 1994 = 1627.4 - 1527.4 = 100.0; gap 2010 = 3627.4 - 2527.2 = 1100.2; gap change = 1100.2 - 100.0 = 1000.2",
+   "accepted_routes": [
+    "The application gap between test-optional and test-required widens from about 100.0 to about 1100.2.",
+    "Test-optional pulls away in applicant values over the period.",
+    "The optional applicant advantage grows by about 1000.2."
+   ],
+   "visual_evidence_rule": "The vertical distance between the optional and required applicant series must visibly increase from left to right.",
+   "temporal_anchor": "the 'makes schools look more selective' clause, if the widening applicant gap is tied to selectivity",
+   "reviewer_question": "Is the widening applicant gap a required takeaway or merely a valid optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Both average-score series rise from 1994 to 2010 by 155.0 value units (optional 953.3 to 1108.3; required 933.3 to 1088.3).",
+  "The score gap is small at 2002 (optional 1088.3 vs required 1085.3, difference 3.0).",
+  "Intermediate fluctuations in the score and applicant series are valid to animate but are not necessary takeaways from the intent alone."
+ ],
+ "unsupported_to_avoid": [
+  "Acceptance rate improvements or decreases, because no acceptance-rate column exists in the table.",
+  "Diversity gains or losses, because no diversity metric exists in the table.",
+  "Causal claims that test-optional policies caused higher scores or applicant volumes.",
+  "Selectivity rankings beyond the two metrics shown, or claims that one policy is universally more selective.",
+  "Percentages for the unitless score/applicant values unless the table's unit explicitly supports them."
+ ],
+ "notes": "Values in the table are unitless, so quantities are stated as value units or arithmetic differences. The score series briefly cross or become equal mid-period, so do not overstate a uniform test-optional score advantage.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 56.6,
+  "usage": {
+   "prompt_tokens": 4363,
+   "completion_tokens": 13545,
+   "total_tokens": 17908,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10783
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 3851
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,123 @@
+{
+ "clip_id": "pie_10",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Top 1% @ 0"
+   ],
+   "assertion": {
+    "segment": "Top 1% @ 0",
+    "expected_share": 0.2259,
+    "total_of": "%",
+    "total": 99.6,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A pie/donut slice or annotation labeled 'Top 1%' must display 22.5% (or 'about 22.5%') as its income share."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:22.5% @ 1"
+   ],
+   "assertion": {
+    "segment": "22.5% @ 1",
+    "expected_share": 0.7741,
+    "total_of": "%",
+    "total": 99.6,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A second pie slice or legend entry for slice-2 must display 77.1% (or 'about 77.1%'), with clear labeling if it is called the remainder/non-top-1% share."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:22.5% @ 1",
+    "mark:Top 1% @ 0"
+   ],
+   "assertion": {
+    "greater": "22.5% @ 1",
+    "lesser": "Top 1% @ 0",
+    "expected_ratio": 3.4267,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 22.5% and 77.1% must be visible in the same chart, or a comparison graphic must show the rest slice is larger/multiple of the top 1% slice."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Top 1% @ 0"
+   ],
+   "assertion": {
+    "low": "Top 1% @ 0",
+    "low_value": 22.5,
+    "high": "Top 1% @ 0",
+    "high_value": 22.5,
+    "delta": null,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 22.5% income share and the 1% population share (or an explicit '22.5x' annotation) must both be visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A title, subtitle, or on-chart annotation must say 'before taxes' or 'pre-tax national income' near the 22.5% figure."
+  }
+ ]
+}

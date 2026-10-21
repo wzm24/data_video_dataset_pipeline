@@ -1,0 +1,11 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,entity_label_printed,series,entity_group
+bar_112,Top 10% (Dewi's Family),bar_112-g1,195.0,,,0.6250,relative,#4a6fa5,relative_only,Dewi's Family (richest),narration_named,yes,household share,g1
+bar_112,Income group 2 (descending),bar_112-g2,305.0,,,0.2188,relative,#4a6fa5,relative_only,2nd,positional,no,household share,g2
+bar_112,Income group 3 (descending),bar_112-g3,415.0,,,0.1562,relative,#4a6fa5,relative_only,3rd,positional,no,household share,g3
+bar_112,Income group 4 (descending),bar_112-g4,525.0,,,0.1250,relative,#4a6fa5,relative_only,4th,positional,no,household share,g4
+bar_112,Income group 5 (descending),bar_112-g5,635.0,,,0.0938,relative,#4a6fa5,relative_only,5th,positional,no,household share,g5
+bar_112,Income group 6 (descending),bar_112-g6,745.0,,,0.0625,relative,#4a6fa5,relative_only,6th,positional,no,household share,g6
+bar_112,Bottom 40% group 7,bar_112-g7,855.0,,,0.0625,relative,#4a6fa5,relative_only,7th,narration_named,no,household share,g7
+bar_112,Bottom 40% group 8,bar_112-g8,965.0,,,0.0500,relative,#4a6fa5,relative_only,8th,narration_named,no,household share,g8
+bar_112,Bottom 40% group 9,bar_112-g9,1075.0,,,0.0375,relative,#4a6fa5,relative_only,9th,narration_named,no,household share,g9
+bar_112,Bottom 10% (Putri's Family),bar_112-g10,1185.0,,,0.0375,relative,#4a6fa5,relative_only,Putri's Family (poorest),narration_named,yes,household share,g10

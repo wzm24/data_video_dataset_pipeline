@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_69,USA,usa,300.0,,18.500,0.4882,,#d64541,printed
+bar_69,European Union,european-union,540.0,,15.400,0.4064,,#3d6fb4,printed
+bar_69,China,china,780.0,,11.800,0.3114,,#f2b134,printed
+bar_69,Japan,japan,1020.0,,4.800,0.1267,,#5aa469,printed

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#34495e"/>
+<circle cx="880.0" cy="360.0" r="245.0" fill="#ffffff"/>
+<path d="M 880.0 123.0 A 237.0 237.0 0 0 1 887.4 123.1" fill="none" stroke="#e74c3c" stroke-width="22" stroke-linecap="round"/>
+<text x="90" y="170" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">VEGAN POPULATION IN US (2008)</text>
+<text x="90" y="210" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ff9f9f">0.5%</text>
+</svg>

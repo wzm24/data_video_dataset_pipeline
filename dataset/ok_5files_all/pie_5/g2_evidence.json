@@ -1,0 +1,141 @@
+{
+ "clip_id": "pie_5",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four category labels or slices are present in the chart."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Federal @ 0",
+    "extreme": "min",
+    "expected": 6.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Local government slice is labeled 36% and is visually the largest."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Federal @ 0",
+    "mark:Fares @ 1",
+    "mark:Local government @ 2",
+    "mark:State @ 3"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Federal @ 0",
+      "value": 6.0
+     },
+     {
+      "mark": "Fares @ 1",
+      "value": 26.0
+     },
+     {
+      "mark": "Local government @ 2",
+      "value": 36.0
+     },
+     {
+      "mark": "State @ 3",
+      "value": 21.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or labels make the descending order clear, either by slice size or a labeled ranking."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Federal @ 0",
+    "segment:Fares @ 1",
+    "segment:Local government @ 2",
+    "segment:State @ 3"
+   ],
+   "assertion": {
+    "segment": "Federal @ 0",
+    "expected_share": 0.0674,
+    "total_of": "%",
+    "total": 89.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Local and state slices are visibly combined or labeled together, and the comparison to fares+federal is shown or inferable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Federal @ 0",
+    "extreme": "min",
+    "expected": 6.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Federal slice is labeled 6% and shown as smallest; optional gap labels to state/local."
+  }
+ ]
+}

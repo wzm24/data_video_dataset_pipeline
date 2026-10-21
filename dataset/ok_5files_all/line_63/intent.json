@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_63",
+ "intent_en": "To illustrate the decline and eventual eradication of global smallpox cases, setting up an explanation for how it was achieved.",
+ "previous_intent": "To illustrate the successful eradication of smallpox by showing the decline in global reported cases over the 20th century.",
+ "narration_support": "We completely wiped it out of existence. So how did we do it?",
+ "chart_support": "Line chart showing reported global smallpox cases from 1920 to 1980, depicting a fluctuating but overall downward trend that reaches zero by the end of the period.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the disease was eradicated ('wiped it out') and asks for the method, while the chart visualizes the case numbers dropping from hundreds of thousands to near zero by 1980.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

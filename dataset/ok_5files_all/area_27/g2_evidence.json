@@ -1,0 +1,155 @@
+{
+ "clip_id": "area_27",
+ "family": "area",
+ "chart_form": "area/overlay_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:income distribution @ 120.0",
+    "mark:income distribution @ 781.4",
+    "mark:income distribution @ 1175.8"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "income distribution @ 120.0",
+      "value": 0.0
+     },
+     {
+      "mark": "income distribution @ 781.4",
+      "value": 0.7739
+     },
+     {
+      "mark": "income distribution @ 1175.8",
+      "value": 0.0118
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The income distribution data series must show one clear highest region and descending sides."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "income distribution @ 781.4",
+    "extreme": "max",
+    "expected": 0.7739,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The income distribution series must visibly reach its highest point at the peak position."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:bottom 10% @ 120.0",
+    "mark:bottom 10% @ 601.2"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "bottom 10% @ 120.0",
+      "value": 0.0
+     },
+     {
+      "mark": "bottom 10% @ 601.2",
+      "value": 0.3426
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The bottom 10% data series must show no downward segments across its plotted range."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:income distribution @ 781.4",
+    "mark:bottom 10% @ 601.2"
+   ],
+   "assertion": {
+    "greater": "income distribution @ 781.4",
+    "lesser": "bottom 10% @ 601.2",
+    "expected_ratio": 2.2589,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series' maximum points must be visible or labeled for comparison."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:income distribution @ 611.8",
+    "mark:income distribution @ 622.4",
+    "mark:income distribution @ 932.0",
+    "mark:income distribution @ 942.6"
+   ],
+   "assertion": {
+    "series": "income distribution",
+    "values": [
+     0.3768,
+     0.4121,
+     0.4121,
+     0.3768
+    ],
+    "threshold_between": [
+     0.3768,
+     0.4121
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The income distribution series must show a broad central section above the half-peak level."
+  }
+ ]
+}

@@ -1,0 +1,251 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_79",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the severe surge in daily COVID-19 deaths in India during the second wave in early 2021.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The plotted series is the 7-day moving average of daily COVID-19 deaths, not cumulative deaths, cases, or another metric.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily deaths 7dma",
+     "x": "Mar 2020",
+     "field": "value",
+     "value": 46.7314,
+     "note": "first plotted point; establishes the series starts low"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "daily deaths on a 7-day moving average",
+    "7-day average of daily COVID-19 deaths",
+    "daily death toll smoothed over seven days"
+   ],
+   "visual_evidence_rule": "The series label or annotation must identify the line as daily deaths on a 7-day moving average.",
+   "temporal_anchor": "the 'daily COVID-19 deaths' or 'second wave of COVID-19' clause",
+   "reviewer_question": "Must the video explicitly identify the measure as daily deaths 7dma rather than cases or cumulative deaths?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Through early 2021 the 7dma remains low and relatively flat, then turns sharply upward in April 2021 and keeps rising to the final point.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily deaths 7dma",
+     "x": "Jan 2021",
+     "field": "value",
+     "value": 318.3193,
+     "note": "early-2021 level before the second-wave surge"
+    },
+    {
+     "entity": "daily deaths 7dma",
+     "x": "Feb 2021",
+     "field": "value",
+     "value": 175.5256,
+     "note": "lower early-2021 level"
+    },
+    {
+     "entity": "daily deaths 7dma",
+     "x": "Apr 2021",
+     "field": "value",
+     "value": 365.9172,
+     "note": "start of the steep April rise"
+    },
+    {
+     "entity": "daily deaths 7dma",
+     "x": "final plotted point",
+     "field": "value",
+     "value": 3233.9229,
+     "note": "last row; x_value blank"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "low plateau through early 2021 then steep rise",
+    "relatively flat before April 2021, then explosive increase",
+    "slow early-2021 levels followed by a sharp upward turn in April"
+   ],
+   "visual_evidence_rule": "The plotted series must visibly remain near its early-2021 values and then turn sharply upward toward the final point.",
+   "temporal_anchor": "the 'second wave of COVID-19' clause",
+   "reviewer_question": "Must the video show the flat-then-steep shape of the early-2021 series, or is the peak alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From the pre-surge low around late Feb/early Mar 2021 to the final peak, daily deaths 7dma increased roughly 24-fold, or by about 3,100 daily deaths on the 7-day average.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily deaths 7dma",
+     "x": "Feb 2021 (subsequent low)",
+     "field": "value",
+     "value": 137.2607,
+     "note": "lowest nearby value after the Feb 2021 label; x_value blank on this row"
+    },
+    {
+     "entity": "daily deaths 7dma",
+     "x": "final plotted point",
+     "field": "value",
+     "value": 3233.9229,
+     "note": "final maximum"
+    }
+   ],
+   "computation": "3233.9229 / 137.2607 ≈ 23.6; 3233.9229 - 137.2607 ≈ 3096.7",
+   "accepted_routes": [
+    "roughly a 24-fold increase",
+    "about 23–24 times higher than the pre-surge low",
+    "rose by about 3,100 daily deaths on the 7-day average"
+   ],
+   "visual_evidence_rule": "The end of the series must appear dramatically higher than the pre-surge trough, supporting a roughly 24-fold rise.",
+   "temporal_anchor": "the 'added avoidable deaths' or 'second wave' clause",
+   "reviewer_question": "Must the video quantify the magnitude of the surge, or is the visual steepness enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The final second-wave peak is about 2.7 times the earlier first-wave peak around September 2020.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "daily deaths 7dma",
+     "x": "Sep 2020 (nearby peak)",
+     "field": "value",
+     "value": 1212.4128,
+     "note": "first-wave peak value around the Sep 2020 label"
+    },
+    {
+     "entity": "daily deaths 7dma",
+     "x": "final plotted point",
+     "field": "value",
+     "value": 3233.9229,
+     "note": "final maximum"
+    }
+   ],
+   "computation": "3233.9229 / 1212.4128 ≈ 2.7; 3233.9229 - 1212.4128 ≈ 2021.5",
+   "accepted_routes": [
+    "about 2.7 times the first-wave peak",
+    "nearly three times the earlier peak",
+    "roughly 2,000 more daily deaths than the first-wave peak"
+   ],
+   "visual_evidence_rule": "The final peak must be visibly much taller than the previous first-wave hump.",
+   "temporal_anchor": "the 'second wave of COVID-19' clause",
+   "reviewer_question": "Is comparing the second-wave peak to the first-wave peak required, or optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The maximum value of the series is 3233.9229 at the final plotted point, the highest daily-deaths 7dma value in the dataset.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily deaths 7dma",
+     "x": "final plotted point",
+     "field": "value",
+     "value": 3233.9229,
+     "note": "highest value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "peak reaches about 3,234 on the 7-day average",
+    "highest 7dma value is 3,233.9",
+    "series tops out at roughly 3.2 thousand"
+   ],
+   "visual_evidence_rule": "The line must visibly reach its highest point at the end of the plotted period.",
+   "temporal_anchor": "the 'second wave of COVID-19' clause",
+   "reviewer_question": "Must the video explicitly state or label the peak value, or is the maximum implied by the curve?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Optional: annotate the first-wave peak around Sep 2020 for context.",
+  "Optional: call out the pre-surge low around late Feb/early Mar 2021 before the rise.",
+  "Optional: emphasize the final peak value on-screen."
+ ],
+ "unsupported_to_avoid": [
+  "causal claims about demand mismatch or avoidable deaths",
+  "total COVID-19 deaths or cumulative deaths",
+  "case counts or vaccination rates",
+  "future wave predictions",
+  "percentages or per-capita rates not in the table",
+  "exact dates not present in x_value labels"
+ ],
+ "notes": "All cited numbers are from the value column for entity 'daily deaths 7dma'; ratios and differences are arithmetic combinations of those cells. The table has absolute values, so absolute daily-death counts are allowed, but causes and non-table metrics should be avoided.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 49.3,
+  "usage": {
+   "prompt_tokens": 10182,
+   "completion_tokens": 11412,
+   "total_tokens": 21594,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9490
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 9670
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

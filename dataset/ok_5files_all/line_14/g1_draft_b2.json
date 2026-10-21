@@ -1,0 +1,252 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_14",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the concept of carrying capacity and population regulation, demonstrating how populations self-correct from overpopulation to a sustainable equilibrium through cycles of starvation and recovery.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series starts at a low relative level (0.05) and rises to its highest relative value (0.92), showing initial growth or overshoot.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUSTAINABLE",
+     "x": "initial",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "first value in the series"
+    },
+    {
+     "entity": "SUSTAINABLE",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "highest value in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The curve starts near the bottom and climbs to the maximum.",
+    "The initial relative level is 0.05 and the peak is 0.92.",
+    "The first half shows an upward trend to the highest point."
+   ],
+   "visual_evidence_rule": "The plotted series must visibly include an initial low relative level and a rise to the highest relative level.",
+   "temporal_anchor": "If there are too many penguins",
+   "reviewer_question": "Should the video explicitly show the initial rise to the peak as the overpopulation or overshoot stage?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "After the peak, the series falls sharply to a local minimum of 0.45, a drop of 0.47 relative units, representing starvation or crash.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUSTAINABLE",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "highest value before decline"
+    },
+    {
+     "entity": "SUSTAINABLE",
+     "x": "trough",
+     "field": "relative_value",
+     "value": 0.45,
+     "note": "local minimum after peak"
+    }
+   ],
+   "computation": "0.92 - 0.45 = 0.47",
+   "accepted_routes": [
+    "The series drops from 0.92 to 0.45.",
+    "After the highest point, the curve declines to a low of 0.45.",
+    "The post-peak fall is about half of the peak level."
+   ],
+   "visual_evidence_rule": "The chart must show a clear downward segment after the peak reaching a lower minimum near 0.45.",
+   "temporal_anchor": "they starve",
+   "reviewer_question": "Is the post-peak crash required, or can the video imply starvation without showing the drop to 0.45?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From the trough of 0.45, the series rises again to 0.85, showing recovery after starvation.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUSTAINABLE",
+     "x": "trough",
+     "field": "relative_value",
+     "value": 0.45,
+     "note": "local minimum before recovery"
+    },
+    {
+     "entity": "SUSTAINABLE",
+     "x": "recovery_peak",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "later high after trough"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The curve rebounds from 0.45 to 0.85.",
+    "After the low at 0.45, the series climbs to 0.85.",
+    "Recovery is shown by an upward trend after the trough."
+   ],
+   "visual_evidence_rule": "The plotted series must show an upward segment after the 0.45 trough reaching 0.85.",
+   "temporal_anchor": "and recover",
+   "reviewer_question": "Should recovery be a distinct beat separate from the initial growth?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After recovery, the series settles near 0.72–0.73 for the final stretch, indicating a stable sustainable level rather than ongoing large oscillations.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUSTAINABLE",
+     "x": "late_plateau",
+     "field": "relative_value",
+     "value": 0.72,
+     "note": "repeated late values around the plateau"
+    },
+    {
+     "entity": "SUSTAINABLE",
+     "x": "final",
+     "field": "relative_value",
+     "value": 0.73,
+     "note": "final value in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series ends at 0.73.",
+    "The last several values are stable around 0.72–0.73.",
+    "The curve flattens near 0.72–0.73 in the final segment."
+   ],
+   "visual_evidence_rule": "The final portion of the series must appear relatively flat and end near 0.73.",
+   "temporal_anchor": "until a sustainable number is reached",
+   "reviewer_question": "Is the final plateau required, or is a single endpoint value at 0.73 enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The stable final level (0.72–0.73) is lower than the earlier peak (0.92), showing that the sustainable equilibrium is not the same as the overpopulation peak.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUSTAINABLE",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "highest value in the series"
+    },
+    {
+     "entity": "SUSTAINABLE",
+     "x": "final",
+     "field": "relative_value",
+     "value": 0.73,
+     "note": "final stable value"
+    }
+   ],
+   "computation": "0.92 - 0.73 = 0.19 relative units lower",
+   "accepted_routes": [
+    "The final level 0.73 is below the peak 0.92.",
+    "The sustainable equilibrium is lower than the maximum population level.",
+    "The curve settles below its earlier high by about 0.19 relative units."
+   ],
+   "visual_evidence_rule": "The final plateau must be visibly lower than the peak value.",
+   "temporal_anchor": "until a sustainable number is reached",
+   "reviewer_question": "Must the video explicitly compare the final equilibrium to the peak, or is a lower final plateau sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the exact intermediate rise values (0.15, 0.25, ... 0.85) as long as the overall trend is clear.",
+  "Showing the smaller fluctuations after the recovery peak (0.80, 0.76, 0.72) before the final plateau.",
+  "Starting at 0.05 as an explicit initial value.",
+  "Mentioning that the final value is 0.73 rather than only an approximate plateau."
+ ],
+ "unsupported_to_avoid": [
+  "absolute population counts, percentages, or dollar values (e.g., '92%', '0.92 penguins')",
+  "claim that the final sustainable number is very low in absolute terms or near zero",
+  "causal claims about economic laws, competition, or Antarctic conditions",
+  "extrapolating beyond the table to future cycles or other species",
+  "claim that the series reaches 1.0 or that 0.92 means 92%",
+  "describing chart type, axis ticks, colors, or pixel positions as semantic content"
+ ],
+ "notes": "All cited quantities are relative_value from the table; differences are arithmetic combinations. The core arc is initial low 0.05, peak 0.92, trough 0.45, recovery 0.85, and final plateau 0.72–0.73 below the peak.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 37.6,
+  "usage": {
+   "prompt_tokens": 1700,
+   "completion_tokens": 8910,
+   "total_tokens": 10610,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7110
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 1060
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

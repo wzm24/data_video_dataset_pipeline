@@ -1,0 +1,277 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_56",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that vaccine effectiveness against hospitalization declines for older adults over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data describe adults aged 65+ and compare two time points, May and August.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 95.5,
+     "note": "Representative row: all rows have entity 65+; Pfizer/BioNTech 65+ May."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 89.5,
+     "note": "Representative row: all rows have entity 65+; Pfizer/BioNTech 65+ August."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The clip focuses on older adults, specifically the 65+ group.",
+    "The comparison is between May and August for the 65+ group.",
+    "The data cover adults aged 65 and older over May to August."
+   ],
+   "visual_evidence_rule": "The chart must make clear that the entities are 65+ and that the two time points are May and August.",
+   "temporal_anchor": "older people",
+   "reviewer_question": "Must the video explicitly identify the 65+ group and the May–August time frame?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "For every 65+ vaccine series shown, reported effectiveness is lower in August than in May.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 95.5,
+     "note": "Pfizer/BioNTech 65+ May."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 89.5,
+     "note": "Pfizer/BioNTech 65+ August."
+    },
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 97.5,
+     "note": "Moderna 65+ May."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 93.5,
+     "note": "Moderna 65+ August."
+    },
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 85.5,
+     "note": "Johnson & Johnson 65+ May."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 82.5,
+     "note": "Johnson & Johnson 65+ August."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "All three 65+ vaccine series decline from May to August.",
+    "Each May value is higher than its corresponding August value.",
+    "Pfizer/BioNTech, Moderna, and Johnson & Johnson all show lower effectiveness in August than in May for the 65+ group."
+   ],
+   "visual_evidence_rule": "For each of the three 65+ vaccine series, the August endpoint must be visibly lower than the May endpoint.",
+   "temporal_anchor": "reduction in protection",
+   "reviewer_question": "Must the video show the decline for all three vaccine series, or is one series or an aggregate sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Pfizer/BioNTech 65+ effectiveness falls from 95.5% in May to 89.5% in August, a decline of 6.0 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 95.5,
+     "note": "Pfizer/BioNTech 65+ May."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 89.5,
+     "note": "Pfizer/BioNTech 65+ August."
+    }
+   ],
+   "computation": "95.50 - 89.50 = 6.00 percentage points",
+   "accepted_routes": [
+    "Pfizer/BioNTech 65+ drops about 6 points from May to August, from 95.5% to 89.5%.",
+    "The Pfizer/BioNTech 65+ May-to-August decline is 6 percentage points.",
+    "Pfizer/BioNTech 65+ effectiveness falls from 95.5% in May to 89.5% in August."
+   ],
+   "visual_evidence_rule": "The chart must make the Pfizer/BioNTech 65+ May and August values visible, or their difference, so a 6-point drop is apparent.",
+   "temporal_anchor": "reduction in protection",
+   "reviewer_question": "Is Pfizer/BioNTech's exact 6-point decline required, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Moderna 65+ effectiveness falls from 97.5% in May to 93.5% in August, a decline of 4.0 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 97.5,
+     "note": "Moderna 65+ May."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 93.5,
+     "note": "Moderna 65+ August."
+    }
+   ],
+   "computation": "97.50 - 93.50 = 4.00 percentage points",
+   "accepted_routes": [
+    "Moderna 65+ drops about 4 points from May to August, from 97.5% to 93.5%.",
+    "The Moderna 65+ May-to-August decline is 4 percentage points.",
+    "Moderna 65+ effectiveness falls from 97.5% in May to 93.5% in August."
+   ],
+   "visual_evidence_rule": "The chart must make the Moderna 65+ May and August values visible, or their difference, so a 4-point drop is apparent.",
+   "temporal_anchor": "reduction in protection",
+   "reviewer_question": "Is Moderna's exact 4-point decline required, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Johnson & Johnson 65+ effectiveness falls from 85.5% in May to 82.5% in August, a decline of 3.0 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 85.5,
+     "note": "Johnson & Johnson 65+ May."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 82.5,
+     "note": "Johnson & Johnson 65+ August."
+    }
+   ],
+   "computation": "85.50 - 82.50 = 3.00 percentage points",
+   "accepted_routes": [
+    "Johnson & Johnson 65+ drops about 3 points from May to August, from 85.5% to 82.5%.",
+    "The Johnson & Johnson 65+ May-to-August decline is 3 percentage points.",
+    "Johnson & Johnson 65+ effectiveness falls from 85.5% in May to 82.5% in August."
+   ],
+   "visual_evidence_rule": "The chart must make the Johnson & Johnson 65+ May and August values visible, or their difference, so a 3-point drop is apparent.",
+   "temporal_anchor": "reduction in protection",
+   "reviewer_question": "Is Johnson & Johnson's exact 3-point decline required, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "At both May and August, Moderna 65+ has the highest effectiveness among the three vaccines, while Johnson & Johnson 65+ has the lowest.",
+  "Pfizer/BioNTech 65+ has the largest May-to-August drop (6.0 percentage points) and Johnson & Johnson 65+ has the smallest (3.0 percentage points).",
+  "The average effectiveness across the three 65+ vaccine series declines from about 92.8% in May to 88.5% in August, a drop of about 4.3 percentage points."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as waning immunity, variant effects, or vaccine-induced decline.",
+  "Extrapolating beyond May and August or to age groups other than 65+.",
+  "Absolute counts of hospitalizations, denominators, or percentages not present in the table.",
+  "Claims about statistical significance or real-world effectiveness beyond the table's reported values."
+ ],
+ "notes": "The table has absolute % values for three 65+ vaccine series at May and August; all decline magnitudes are derived by subtracting August from May. Reviewers should decide whether the video must show all three series' specific declines or can summarize the pattern.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 53.3,
+  "usage": {
+   "prompt_tokens": 1087,
+   "completion_tokens": 12654,
+   "total_tokens": 13741,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10535
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 575
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

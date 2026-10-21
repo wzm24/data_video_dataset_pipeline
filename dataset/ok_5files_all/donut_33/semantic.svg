@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#2b3342"/>
+<text x="60" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Long-term capital gains collected by income group, 2018</text>
+<text x="60" y="106" font-family="Arial, sans-serif" font-size="20" font-style="italic" fill="#c9d1dd">Center on Budget and Policy Priorities, Tax Policy Center</text>
+<text x="1220" y="66" text-anchor="end" font-family="Georgia, serif" font-size="38" font-style="italic" fill="#e3e6ea">Vox</text>
+<path d="M 520.0 200.0 A 210.0 210.0 0 1 1 324.7 487.3" fill="none" stroke="#e88530" stroke-width="46" stroke-linecap="round"/>
+<path d="M 319.8 473.5 A 210.0 210.0 0 0 1 505.4 200.5" fill="none" stroke="#a9a9a9" stroke-width="46" stroke-linecap="round"/>
+<rect x="920" y="430" width="210" height="56" rx="10" fill="#e88530"/>
+<text x="1025" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111">Top 1%</text>
+<rect x="60" y="470" width="240" height="56" rx="10" fill="#a9a9a9"/>
+<text x="180" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#111">everyone else</text>
+</svg>

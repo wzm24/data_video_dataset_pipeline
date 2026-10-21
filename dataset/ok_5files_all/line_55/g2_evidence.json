@@ -1,0 +1,145 @@
+{
+ "clip_id": "line_55",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:effectiveness against infection @ x_px=160.0",
+    "mark:effectiveness against infection @ x_px=1000.0"
+   ],
+   "assertion": {
+    "low": "effectiveness against infection @ x_px=1000.0",
+    "low_value": 0.47,
+    "high": "effectiveness against infection @ x_px=160.0",
+    "high_value": 0.85,
+    "delta": 0.38,
+    "ratio": 1.8085,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The infection line must start near 85% and end near 47% on the y-axis."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:effectiveness against hospitalization @ x_px=160.0",
+    "mark:effectiveness against hospitalization @ x_px=664.0",
+    "mark:effectiveness against hospitalization @ x_px=1000.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "effectiveness against hospitalization @ x_px=160.0",
+      "value": 0.85
+     },
+     {
+      "mark": "effectiveness against hospitalization @ x_px=664.0",
+      "value": 0.92
+     },
+     {
+      "mark": "effectiveness against hospitalization @ x_px=1000.0",
+      "value": 0.86
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The hospitalization line must stay in the upper range, visibly between 85% and 92%, with final point at 86%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:effectiveness against hospitalization @ x_px=1000.0",
+    "mark:effectiveness against infection @ x_px=1000.0"
+   ],
+   "assertion": {
+    "greater": "effectiveness against hospitalization @ x_px=1000.0",
+    "lesser": "effectiveness against infection @ x_px=1000.0",
+    "expected_ratio": 1.8298,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both final points must be visible or annotated: hospitalization near 86%, infection near 47%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:effectiveness against hospitalization @ x_px=160.0",
+    "mark:effectiveness against infection @ x_px=160.0"
+   ],
+   "assertion": {
+    "greater": "effectiveness against hospitalization @ x_px=160.0",
+    "lesser": "effectiveness against infection @ x_px=160.0",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "For every x after the first point, the hospitalization line must be visibly above the infection line."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:effectiveness against hospitalization @ x_px=664.0",
+    "mark:effectiveness against hospitalization @ x_px=1000.0",
+    "mark:effectiveness against hospitalization @ x_px=160.0"
+   ],
+   "assertion": {
+    "low": "effectiveness against hospitalization @ x_px=160.0",
+    "low_value": 0.85,
+    "high": "effectiveness against hospitalization @ x_px=664.0",
+    "high_value": 0.92,
+    "delta": 0.07,
+    "ratio": 1.0824,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The hospitalization line must show a maximum at x_px=664 near 92% and a lower final point near 86%."
+  }
+ ]
+}

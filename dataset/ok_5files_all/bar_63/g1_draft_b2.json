@@ -1,0 +1,241 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_63",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To compare the estimated sales volumes and legal status of medical versus recreational marijuana markets.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Medical estimated sales volume is 55.0 in the chart's unit.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Medical",
+     "x": "x_px=440.0",
+     "field": "value",
+     "value": 55.0,
+     "note": "Medical row value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Medical sales: 55.0",
+    "Medical estimated volume is 55",
+    "About 55 (medical)",
+    "Medical is 55.0 units"
+   ],
+   "visual_evidence_rule": "A labeled Medical bar/value at 55.0 must be visible or explicitly read out.",
+   "temporal_anchor": "Narration clause stating medical estimated sales volume.",
+   "reviewer_question": "Must the video convey Medical's exact endpoint value of 55.0?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Dispensary/recreational estimated sales volume is 18.4 in the chart's unit.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dispensary",
+     "x": "x_px=740.0",
+     "field": "value",
+     "value": 18.4,
+     "note": "Dispensary row value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Dispensary/recreational sales: 18.4",
+    "Recreational estimated volume is 18.4",
+    "About 18.4 (dispensary/recreational)",
+    "Dispensary is 18.4"
+   ],
+   "visual_evidence_rule": "A labeled Dispensary/recreational bar/value at 18.4 must be visible or explicitly read out.",
+   "temporal_anchor": "Narration clause stating recreational/dispensary estimated sales volume.",
+   "reviewer_question": "Must the video convey the Dispensary/recreational endpoint value of 18.4?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Medical volume is higher than Dispensary/recreational volume by 36.6 units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Medical",
+     "x": "x_px=440.0",
+     "field": "value",
+     "value": 55.0,
+     "note": "Medical row value used in difference"
+    },
+    {
+     "entity": "Dispensary",
+     "x": "x_px=740.0",
+     "field": "value",
+     "value": 18.4,
+     "note": "Dispensary row value used in difference"
+    }
+   ],
+   "computation": "55.000 - 18.400 = 36.600",
+   "accepted_routes": [
+    "Medical exceeds recreational/dispensary by 36.6",
+    "There are 36.6 more medical than dispensary/recreational units",
+    "Medical is larger by about 36.6",
+    "Difference: 36.6"
+   ],
+   "visual_evidence_rule": "Both endpoint values must be visible, or an explicit difference callout must show 36.6.",
+   "temporal_anchor": "Narration clause comparing medical and recreational/dispensary volumes.",
+   "reviewer_question": "Must the video quantify the gap as 36.6, not just show two bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Medical volume is about 3 times the Dispensary/recreational volume.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Medical",
+     "x": "x_px=440.0",
+     "field": "value",
+     "value": 55.0,
+     "note": "Numerator for ratio"
+    },
+    {
+     "entity": "Dispensary",
+     "x": "x_px=740.0",
+     "field": "value",
+     "value": 18.4,
+     "note": "Denominator for ratio"
+    }
+   ],
+   "computation": "55.000 / 18.400 ≈ 2.989",
+   "accepted_routes": [
+    "Medical is about 3x recreational/dispensary",
+    "Medical is nearly three times the dispensary/recreational volume",
+    "Ratio ≈ 2.99:1",
+    "Medical is almost triple"
+   ],
+   "visual_evidence_rule": "A ratio annotation (e.g., 3x) or both bars visible with scale supporting the ratio must be shown.",
+   "temporal_anchor": "Optional narration clause comparing relative sizes.",
+   "reviewer_question": "Is a ratio/3x comparison required, or is the absolute difference sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Of the combined Medical+Dispensary/recreational volume, Medical accounts for about 74.9% and Dispensary/recreational for about 25.1%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Medical",
+     "x": "x_px=440.0",
+     "field": "value",
+     "value": 55.0,
+     "note": "Numerator for Medical share of combined two-category total"
+    },
+    {
+     "entity": "Dispensary",
+     "x": "x_px=740.0",
+     "field": "value",
+     "value": 18.4,
+     "note": "Numerator for Dispensary share of combined two-category total"
+    }
+   ],
+   "computation": "55.000 / (55.000 + 18.400) ≈ 0.7493; 18.400 / (55.000 + 18.400) ≈ 0.2507",
+   "accepted_routes": [
+    "Medical is about 75% of the combined medical+dispensary total",
+    "Dispensary/recreational is about one quarter of the combined total",
+    "Share split: ~74.9% medical vs ~25.1% dispensary/recreational",
+    "Medical accounts for roughly three quarters of the two-category total"
+   ],
+   "visual_evidence_rule": "A stacked/share annotation or explicit percentage labels must show the shares relative to the combined medical+dispensary total.",
+   "temporal_anchor": "Optional narration clause describing composition/share.",
+   "reviewer_question": "Is share/composition required, or is it an optional derived view?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Combined Medical + Dispensary/recreational estimated sales volume totals 73.4 (55.0 + 18.4).",
+  "If the table's relative_value column is visualized, Medical = 0.4965 and Dispensary = 0.1661, but the denominator is undefined in the table.",
+  "Order/ranking: Medical > Dispensary/recreational."
+ ],
+ "unsupported_to_avoid": [
+  "Legal status/tax claims not in table: legal since 2000; tax rate 78% lower; recreational legal status.",
+  "Causal claims such as medical sales are higher because of legal status or lower tax.",
+  "Treating relative_value 0.4965/0.1661 as shares of the combined medical+dispensary total or any total market without a stated denominator.",
+  "Extrapolating to total marijuana market or future sales.",
+  "Assuming Dispensary is exactly recreational without an explicit mapping."
+ ],
+ "notes": "The table supports volume comparison; legal-status and tax claims are not table-grounded. Dispensary is treated as the non-medical/recreational category only because the narration maps it that way.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 39.6,
+  "usage": {
+   "prompt_tokens": 654,
+   "completion_tokens": 9059,
+   "total_tokens": 9713,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7261
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 398
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

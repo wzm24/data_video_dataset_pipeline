@@ -1,0 +1,243 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_20",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate how a new business model increases Facebook's profits and consequently raises the value of its shares for shareholders.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The first observable share value in the series is 38€.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "50€",
+     "x": "x_px=110.0",
+     "field": "value",
+     "value": 38.0,
+     "note": "first row of the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The initial value is 38 euros.",
+    "At the start of the sequence, the share is worth 38€.",
+    "The series begins at 38€."
+   ],
+   "visual_evidence_rule": "The chart must visibly identify the initial value as 38€.",
+   "temporal_anchor": "A share which perhaps used to be worth 38 euros",
+   "reviewer_question": "Should the initial 38€ value be explicitly shown, or is only the later increase required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The final observable share value in the series is 50€.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "50€",
+     "x": "x_px=1230.0",
+     "field": "value",
+     "value": 50.0,
+     "note": "last row of the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The end value is 50 euros.",
+    "By the end of the sequence, the share reaches 50€.",
+    "The series finishes at 50€."
+   ],
+   "visual_evidence_rule": "The chart must visibly identify the final value as 50€.",
+   "temporal_anchor": "could now be worth a whole 50 euros",
+   "reviewer_question": "Should the final 50€ value be explicitly labeled, or can the net increase imply it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The net change from the first to the final value is an increase of 12€.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "50€",
+     "x": "x_px=110.0",
+     "field": "value",
+     "value": 38.0,
+     "note": "first value"
+    },
+    {
+     "entity": "50€",
+     "x": "x_px=1230.0",
+     "field": "value",
+     "value": 50.0,
+     "note": "last value"
+    }
+   ],
+   "computation": "50.0 - 38.0 = 12.0",
+   "accepted_routes": [
+    "Value rises by 12 euros from start to end.",
+    "The share gains 12€ overall.",
+    "Net increase is 12€, from 38€ to 50€."
+   ],
+   "visual_evidence_rule": "The chart must convey that the endpoint is 12€ higher than the start, e.g. through comparative labels or a change annotation.",
+   "temporal_anchor": "used to be worth 38 euros could now be worth a whole 50 euros",
+   "reviewer_question": "Should the video state the derived net increase of +12€, or is showing 38€ and 50€ sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The series reaches a maximum value of 63.7€, which is above both the initial 38€ and final 50€.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "50€",
+     "x": "x_px=964.5",
+     "field": "value",
+     "value": 63.7,
+     "note": "highest value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The peak share value is 63.7 euros.",
+    "The highest point in the sequence is 63.7€.",
+    "Share value peaks at 63.7€ before settling to 50€."
+   ],
+   "visual_evidence_rule": "The chart must show the maximum point at 63.7€ and make clear it exceeds 50€.",
+   "temporal_anchor": "greatly increase its profits ... so will the value of its shares",
+   "reviewer_question": "Should the peak 63.7€ be required, or is it optional context beyond the 38€ to 50€ story?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series generally trends upward over the sequence despite fluctuations; later values are higher than early values, with an early minimum of 32.9€ and later values reaching 50€ or the 63.7€ peak.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "50€",
+     "x": "x_px=110.0",
+     "field": "value",
+     "value": 38.0,
+     "note": "first value"
+    },
+    {
+     "entity": "50€",
+     "x": "x_px=168.1",
+     "field": "value",
+     "value": 32.9,
+     "note": "minimum value"
+    },
+    {
+     "entity": "50€",
+     "x": "x_px=964.5",
+     "field": "value",
+     "value": 63.7,
+     "note": "maximum value"
+    },
+    {
+     "entity": "50€",
+     "x": "x_px=1230.0",
+     "field": "value",
+     "value": 50.0,
+     "note": "final value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Overall share value rises over time, with some dips.",
+    "The trend is upward from 38€ toward 50€ and higher, though not monotonic.",
+    "Later values generally exceed earlier values."
+   ],
+   "visual_evidence_rule": "The chart must show an overall rising direction from early to late in the sequence, not a flat or falling series.",
+   "temporal_anchor": "as a result, so will the value of its shares",
+   "reviewer_question": "Should the video emphasize the overall upward trend, or are the start, end, and peak values enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series is not monotonic: it dips to a minimum of 32.9€ early at x_px=168.1.",
+  "There are multiple later values exactly at 50€, e.g. x_px=1171.9 and x_px=1230.0.",
+  "After the 63.7€ peak at x_px=964.5, the series falls back to 50€ by the end."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that the new business model caused profit increases or share-price increases.",
+  "Any profit figures, shareholder benefit, company size, or Facebook pizza/pie references not present in the table.",
+  "Future share values beyond the final x_px=1230.0 endpoint.",
+  "Percentage change unless explicitly computed from table values and clearly labeled.",
+  "Units about chart type, colors, axis ticks, positions, or rendering."
+ ],
+ "notes": "The table provides absolute € values for one series, so endpoint and derived change units are valid. The main trade-off is whether the peak 63.7€ is required or optional context for the 38€→50€ story.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 36.6,
+  "usage": {
+   "prompt_tokens": 1826,
+   "completion_tokens": 8569,
+   "total_tokens": 10395,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6807
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 1442
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

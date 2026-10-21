@@ -1,0 +1,349 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_71",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the breakdown of Amazon's revenue by business segment (Online Store, AWS, Subscriptions, 3rd Party Retail) from 2015 to 2018, establishing the revenue composition before pivoting to a discussion on profitability.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Online Store is the largest revenue segment in each year from 2015 to 2018, with relative values 0.65, 0.57, 0.60, and 0.65.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Online Store",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "largest segment in 2015"
+    },
+    {
+     "entity": "Online Store",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.57,
+     "note": "largest segment in 2016"
+    },
+    {
+     "entity": "Online Store",
+     "x": "2017",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "largest segment in 2017"
+    },
+    {
+     "entity": "Online Store",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "largest segment in 2018"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Online Store is the biggest segment in every year, with relative values 0.65, 0.57, 0.60, 0.65.",
+    "The largest slice is always Online Store from 2015 through 2018.",
+    "Online Store dominates the revenue mix, about 0.6 relative value across the period."
+   ],
+   "visual_evidence_rule": "In every year of the animation, the encoded mark for Online Store must be visually larger than the marks for 3rd Party Retail, AWS, and Subscriptions.",
+   "temporal_anchor": "Amazon is mostly an online store",
+   "reviewer_question": "Should the video be required to show Online Store as largest in every individual year, not just overall?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "3rd Party Retail is the second-largest revenue segment in each year from 2015 to 2018, with relative values 0.20, 0.2998, 0.2501, and 0.20.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "3rd Party Retail",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "second-largest in 2015"
+    },
+    {
+     "entity": "3rd Party Retail",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.2998,
+     "note": "second-largest in 2016"
+    },
+    {
+     "entity": "3rd Party Retail",
+     "x": "2017",
+     "field": "relative_value",
+     "value": 0.2501,
+     "note": "second-largest in 2017"
+    },
+    {
+     "entity": "3rd Party Retail",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "second-largest in 2018"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "3rd Party Retail is always the second-biggest segment, with relative values 0.20, 0.2998, 0.2501, 0.20.",
+    "After Online Store, 3rd Party Retail is the next largest revenue source each year.",
+    "3rd Party Retail stays second in the revenue breakdown across 2015-2018."
+   ],
+   "visual_evidence_rule": "In each year, the 3rd Party Retail mark must be visually larger than AWS and Subscriptions but smaller than Online Store.",
+   "temporal_anchor": "divide it by source",
+   "reviewer_question": "Is 3rd Party Retail's second-place ranking in each year required, or is Online Store dominance sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Online Store and 3rd Party Retail together make up the large majority of the relative revenue composition, about 0.85 to 0.87 in each year.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Online Store + 3rd Party Retail",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "0.65 + 0.20 from table"
+    },
+    {
+     "entity": "Online Store + 3rd Party Retail",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.8698,
+     "note": "0.57 + 0.2998 from table"
+    },
+    {
+     "entity": "Online Store + 3rd Party Retail",
+     "x": "2017",
+     "field": "relative_value",
+     "value": 0.8501,
+     "note": "0.60 + 0.2501 from table"
+    },
+    {
+     "entity": "Online Store + 3rd Party Retail",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "0.65 + 0.20 from table"
+    }
+   ],
+   "computation": "formula: Online Store relative_value + 3rd Party Retail relative_value by year",
+   "accepted_routes": [
+    "Online Store plus 3rd Party Retail account for about 0.85-0.87 of the revenue mix each year.",
+    "The two largest segments together make up the vast majority of relative revenue.",
+    "Combined, Online Store and 3rd Party Retail stay around 0.85 relative value from 2015 to 2018."
+   ],
+   "visual_evidence_rule": "In each year, the combined encoded area or attribute for Online Store and 3rd Party Retail must be visibly much larger than the combined AWS and Subscriptions portion.",
+   "temporal_anchor": "divide it by source",
+   "reviewer_question": "Should the video explicitly state that the two largest segments together dominate the composition, or is showing the individual segments enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "AWS and Subscriptions are the two smaller segments; AWS is consistently around 0.10 relative value, while Subscriptions is smaller, with values 0.05, 0.03, 0.0501, and 0.05.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "AWS",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "smaller segment; AWS > Subscriptions"
+    },
+    {
+     "entity": "AWS",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.1002,
+     "note": "smaller segment; AWS > Subscriptions"
+    },
+    {
+     "entity": "AWS",
+     "x": "2017",
+     "field": "relative_value",
+     "value": 0.0999,
+     "note": "smaller segment; AWS > Subscriptions"
+    },
+    {
+     "entity": "AWS",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "smaller segment; AWS > Subscriptions"
+    },
+    {
+     "entity": "Subscriptions",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "smallest"
+    },
+    {
+     "entity": "Subscriptions",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.03,
+     "note": "smallest"
+    },
+    {
+     "entity": "Subscriptions",
+     "x": "2017",
+     "field": "relative_value",
+     "value": 0.0501,
+     "note": "smallest"
+    },
+    {
+     "entity": "Subscriptions",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "smallest"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "AWS is a small segment at about 0.10 relative value each year, and Subscriptions is even smaller.",
+    "The two smallest revenue components are AWS and Subscriptions, with AWS consistently above Subscriptions.",
+    "AWS stays near 0.10 while Subscriptions stays at or below about 0.05."
+   ],
+   "visual_evidence_rule": "In each year, AWS and Subscriptions must be the two smallest encoded marks, with Subscriptions smaller than AWS.",
+   "temporal_anchor": "why we're talking so much about AWS",
+   "reviewer_question": "Should the video call out AWS and Subscriptions as the small revenue components, or only show them in the breakdown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The segment ordering is stable across 2015-2018: Online Store largest, 3rd Party Retail second, AWS third, and Subscriptions smallest.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Online Store",
+     "x": "2015-2018",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "largest each year; values 0.65, 0.57, 0.60, 0.65"
+    },
+    {
+     "entity": "3rd Party Retail",
+     "x": "2015-2018",
+     "field": "relative_value",
+     "value": 0.2998,
+     "note": "second each year; values 0.20, 0.2998, 0.2501, 0.20"
+    },
+    {
+     "entity": "AWS",
+     "x": "2015-2018",
+     "field": "relative_value",
+     "value": 0.1002,
+     "note": "third each year; values 0.10, 0.1002, 0.0999, 0.10"
+    },
+    {
+     "entity": "Subscriptions",
+     "x": "2015-2018",
+     "field": "relative_value",
+     "value": 0.0501,
+     "note": "smallest each year; values 0.05, 0.03, 0.0501, 0.05"
+    }
+   ],
+   "computation": "formula: compare relative_value within each x year to derive ordering; no rank reversal across 2015-2018",
+   "accepted_routes": [
+    "The ranking of segments does not change from 2015 to 2018.",
+    "Online Store stays largest and Subscriptions stays smallest across all four years.",
+    "The relative revenue mix preserves the same order throughout the period."
+   ],
+   "visual_evidence_rule": "The animation must preserve the same rank order of encoded segment marks in every year, with no segment crossing another in rank.",
+   "temporal_anchor": "pretty much what you'd expect",
+   "reviewer_question": "Is the unchanged segment ordering across all four years a required takeaway, or an optional reinforcing observation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "3rd Party Retail peaks in 2016 at relative value 0.2998, up from 0.20 in 2015 and back to 0.20 in 2018.",
+  "Online Store dips to 0.57 in 2016 before returning to 0.60 in 2017 and 0.65 in 2018.",
+  "AWS is about twice Subscriptions in 2015, 2017, and 2018 (0.10 vs 0.05, 0.0999 vs 0.0501, 0.10 vs 0.05), but not in 2016 (0.1002 vs 0.03).",
+  "Subscriptions has its lowest relative value in 2016 at 0.03."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute revenue dollar amounts, percentages with a % sign, or counts.",
+  "Claims about profit, income, margins, or profitability by segment, since the table only has relative revenue composition.",
+  "Causal explanations for why AWS is discussed or why segments changed.",
+  "Extrapolating beyond 2018 or claiming future growth.",
+  "Treating relative_value as a percentage or saying '65%'."
+ ],
+ "notes": "The table only has relative_value 0-1, so all units are relative ranking/composition claims. The narration mentions income/profit, but the table provides no profit data.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 56.7,
+  "usage": {
+   "prompt_tokens": 1530,
+   "completion_tokens": 15134,
+   "total_tokens": 16664,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12382
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1018
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

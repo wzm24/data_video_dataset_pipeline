@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_80",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the trend of daily COVID-19 cases in India, contrasting the decline following lockdowns with the dramatic surge in early 2021.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series is not monotonic: it rises to a first peak, declines substantially, then rises again to a much larger final peak, forming a two-wave shape.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "628.9",
+     "field": "value",
+     "value": 97.7863,
+     "note": "first-wave peak before the decline"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "977.1",
+     "field": "value",
+     "value": 15.7921,
+     "note": "post-decline trough"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "1150.0",
+     "field": "value",
+     "value": 369.5175,
+     "note": "final/second-wave high"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cases rose, fell, then surged to a much higher level.",
+    "A first wave was followed by a decline and then a second, larger wave.",
+    "The line traces an initial climb, a long drop, and a dramatic late spike."
+   ],
+   "visual_evidence_rule": "Line must show at least one local maximum before a clear trough and a later, higher maximum near the right edge.",
+   "temporal_anchor": "Whole clip, especially the contrast between the decline clause and the early-2021 surge clause.",
+   "reviewer_question": "Must the video show two distinct waves rather than a single rising trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "After the first-wave peak, the 7-day average fell from 97.7863 to a trough of 15.7921, a drop of 81.9942, or about 84%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "628.9",
+     "field": "value",
+     "value": 97.7863,
+     "note": "first-wave peak before decline"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "977.1",
+     "field": "value",
+     "value": 15.7921,
+     "note": "post-decline trough; equal trough also appears at x=972.4"
+    }
+   ],
+   "computation": "97.7863 - 15.7921 = 81.9942; 81.9942 / 97.7863 ≈ 0.8385, i.e. about 83.85% decline.",
+   "accepted_routes": [
+    "The 7-day average fell from about 98 to about 16, an ~84% decline.",
+    "After peaking near 98, cases dropped to roughly 16.",
+    "The post-peak decline cut the 7-day average by more than four-fifths."
+   ],
+   "visual_evidence_rule": "A clear descending segment from the first peak to a low point, with the low visibly far below the first peak.",
+   "temporal_anchor": "The clause about infection rates starting to drop / the lockdown period.",
+   "reviewer_question": "Must the animation quantify the post-first-peak decline by showing the peak, trough, or percent drop?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From the trough, the series surged to the final value of 369.5175, an increase of 353.7254, or about 23.4 times the trough, roughly a 2,240% increase.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "977.1",
+     "field": "value",
+     "value": 15.7921,
+     "note": "inter-wave trough"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "1150.0",
+     "field": "value",
+     "value": 369.5175,
+     "note": "final endpoint and overall maximum"
+    }
+   ],
+   "computation": "369.5175 - 15.7921 = 353.7254; 369.5175 / 15.7921 ≈ 23.40; 353.7254 / 15.7921 ≈ 22.40, i.e. about 2,240% increase.",
+   "accepted_routes": [
+    "The 7-day average surged from about 16 to about 370 by the end.",
+    "Cases rose more than 20-fold from the inter-wave low.",
+    "The late surge added roughly 354 to the daily average."
+   ],
+   "visual_evidence_rule": "A steep rising segment from the trough to the final high endpoint, with the final point near the top of the y-axis.",
+   "temporal_anchor": "The dramatic surge in early 2021 clause / final rising segment.",
+   "reviewer_question": "Must the video show the late rise is much larger than the earlier decline using the trough-to-final magnitude?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The final/second-wave level 369.5175 is about 3.78 times the first-wave peak 97.7863, showing the later surge far exceeded the first wave.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "628.9",
+     "field": "value",
+     "value": 97.7863,
+     "note": "first-wave peak"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "1150.0",
+     "field": "value",
+     "value": 369.5175,
+     "note": "final/second-wave high"
+    }
+   ],
+   "computation": "369.5175 / 97.7863 ≈ 3.78; 369.5175 - 97.7863 = 271.7312.",
+   "accepted_routes": [
+    "The final 7-day average was about 3.8x the first-wave peak.",
+    "The second wave reached nearly four times the first peak.",
+    "The later high (~370) dwarfed the earlier high (~98)."
+   ],
+   "visual_evidence_rule": "First peak and final endpoint must both be identifiable on the same y-scale, with the final visibly much higher.",
+   "temporal_anchor": "The contrast between the post-lockdown decline and the early-2021 surge; ideally carry at the final high.",
+   "reviewer_question": "Must the animation explicitly compare the second-wave high to the first-wave peak?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The overall maximum and final plotted value is 369.5175 at x_px = 1150.0 for the 7-day average.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "1150.0",
+     "field": "value",
+     "value": 369.5175,
+     "note": "final endpoint and overall maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series ends at about 370, its highest point.",
+    "The final 7-day average value is about 369.5.",
+    "The maximum shown is roughly 370 at the right edge."
+   ],
+   "visual_evidence_rule": "Final plotted point must be visible and labeled or annotated as ~370.",
+   "temporal_anchor": "Final frame / early-2021 surge peak.",
+   "reviewer_question": "Must the final/maximum endpoint value be explicitly labeled or otherwise readable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Initial low value 4.5613 at x_px = 170.0.",
+  "First-wave peak 97.7863 at x_px = 628.9, if not already covered by the decline unit.",
+  "The second wave crosses above the first-wave peak between x_px = 1090.0 (value 83.0858) and x_px = 1097.0 (value 105.5474)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that lockdowns caused the decline; the table has no policy data.",
+  "Calendar dates or months such as early 2021 without a separate timeline mapping.",
+  "Assuming values are thousands, per capita, or actual daily counts; the unit column is blank.",
+  "Extrapolation past x_px = 1150 or beyond the final value.",
+  "Comparisons to other countries, states, or variants; the table only has this single daily-cases 7dma series."
+ ],
+ "notes": "All numeric claims use the table's value column, and derived percentages/ratios are explicit arithmetic combinations. The main trade-off is whether the first-vs-second-wave comparison and the final endpoint label are treated as required or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 43.3,
+  "usage": {
+   "prompt_tokens": 9829,
+   "completion_tokens": 10277,
+   "total_tokens": 20106,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8253
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 9573
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

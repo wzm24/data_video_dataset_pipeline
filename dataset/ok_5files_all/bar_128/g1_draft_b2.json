@@ -1,0 +1,333 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_128",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the timeline of casualties from the atomic bombings of Hiroshima and Nagasaki, emphasizing that the vast majority of deaths occurred in the weeks following the event rather than instantly or decades later.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The timeline separates casualties into three timing buckets for each city: instantly, within 3 weeks, and 3+ weeks.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Hiroshima",
+     "x": "instantly",
+     "field": "value",
+     "value": 90,
+     "note": "instant bucket"
+    },
+    {
+     "entity": "Hiroshima",
+     "x": "within 3 weeks",
+     "field": "value",
+     "value": 204,
+     "note": "within-3-weeks bucket"
+    },
+    {
+     "entity": "Hiroshima",
+     "x": "3+ weeks",
+     "field": "value",
+     "value": 30,
+     "note": "after-3-weeks bucket"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "instantly",
+     "field": "value",
+     "value": 60,
+     "note": "instant bucket"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "within 3 weeks",
+     "field": "value",
+     "value": 132,
+     "note": "within-3-weeks bucket"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "3+ weeks",
+     "field": "value",
+     "value": 18,
+     "note": "after-3-weeks bucket"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The data divides deaths into instantly, within 3 weeks, and 3+ weeks.",
+    "Both Hiroshima and Nagasaki have the same three timing categories.",
+    "The timeline has three stages: instant deaths, deaths within three weeks, and deaths after three weeks."
+   ],
+   "visual_evidence_rule": "The three timing categories must be distinguishable and labeled for each city or in a combined series.",
+   "temporal_anchor": "Opening clause that introduces the casualty timeline after the bombings.",
+   "reviewer_question": "Must the video show all three timing buckets for both cities, or is one city enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The within-3-weeks bucket is the largest timing category in each city, at about 0.63 of each city's total: Hiroshima 204 of 324 dots; Nagasaki 132 of 210 dots.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Hiroshima",
+     "x": "within 3 weeks",
+     "field": "value",
+     "value": 204,
+     "note": "largest bucket for Hiroshima"
+    },
+    {
+     "entity": "Hiroshima",
+     "x": "within 3 weeks",
+     "field": "relative_value",
+     "value": 0.6296,
+     "note": "share of Hiroshima total"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "within 3 weeks",
+     "field": "value",
+     "value": 132,
+     "note": "largest bucket for Nagasaki"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "within 3 weeks",
+     "field": "relative_value",
+     "value": 0.6286,
+     "note": "share of Nagasaki total"
+    }
+   ],
+   "computation": "formula: Hiroshima 204/(90+204+30); Nagasaki 132/(60+132+18)",
+   "accepted_routes": [
+    "Within 3 weeks is the largest category for both cities.",
+    "About 0.63 of each city's deaths were in the within-3-weeks bucket.",
+    "Hiroshima has 204 dots and Nagasaki has 132 dots in the within-3-weeks category, the biggest bucket in each city."
+   ],
+   "visual_evidence_rule": "The within-3-weeks category must be visibly the largest of the three timing categories for each city or for the combined total.",
+   "temporal_anchor": "The clause contrasting deaths in the weeks following the event with instant deaths and later deaths.",
+   "reviewer_question": "Is it required to state that within 3 weeks is the largest bucket, or is showing it visually enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Instant deaths are a minority, about 0.28 of all deaths: Hiroshima 90 of 324 dots and Nagasaki 60 of 210 dots; combined 150 of 534 dots.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Hiroshima",
+     "x": "instantly",
+     "field": "value",
+     "value": 90,
+     "note": "instant deaths"
+    },
+    {
+     "entity": "Hiroshima",
+     "x": "instantly",
+     "field": "relative_value",
+     "value": 0.2778,
+     "note": "instant share of Hiroshima total"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "instantly",
+     "field": "value",
+     "value": 60,
+     "note": "instant deaths"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "instantly",
+     "field": "relative_value",
+     "value": 0.2857,
+     "note": "instant share of Nagasaki total"
+    }
+   ],
+   "computation": "formula for combined instant share: (90+60)/(90+204+30+60+132+18)=150/534≈0.281",
+   "accepted_routes": [
+    "Only a minority of deaths were instant.",
+    "Instant deaths were about 0.28 of each city's total.",
+    "Hiroshima 90 dots and Nagasaki 60 dots were instant; together 150 of 534 dots."
+   ],
+   "visual_evidence_rule": "The instant category must appear smaller than the within-3-weeks category and less than half of the total.",
+   "temporal_anchor": "The clause stating that only a minority were killed instantly from the blast.",
+   "reviewer_question": "Should the video explicitly quantify the instant share, or just show it as smaller than the within-3-weeks bucket?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Deaths after 3 weeks are the smallest portion, about 0.09 of combined deaths: Hiroshima 30 of 324 dots, Nagasaki 18 of 210 dots, combined 48 of 534 dots.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Hiroshima",
+     "x": "3+ weeks",
+     "field": "value",
+     "value": 30,
+     "note": "after-3-weeks deaths"
+    },
+    {
+     "entity": "Hiroshima",
+     "x": "3+ weeks",
+     "field": "relative_value",
+     "value": 0.0926,
+     "note": "share of Hiroshima total"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "3+ weeks",
+     "field": "value",
+     "value": 18,
+     "note": "after-3-weeks deaths"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "3+ weeks",
+     "field": "relative_value",
+     "value": 0.0857,
+     "note": "share of Nagasaki total"
+    }
+   ],
+   "computation": "formula for combined after-3-weeks share: (30+18)/(90+204+30+60+132+18)=48/534≈0.090",
+   "accepted_routes": [
+    "Deaths after 3 weeks were a small portion.",
+    "The 3+ weeks category is the smallest in both cities.",
+    "About 0.09 of combined deaths were after 3 weeks (48 of 534 dots)."
+   ],
+   "visual_evidence_rule": "The 3+ weeks category must be visibly the smallest among the timing categories.",
+   "temporal_anchor": "The clause about long-term effects accounting for a small portion of victims.",
+   "reviewer_question": "Must the video call out 3+ weeks as small, or can it just show the small segment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Combining instant deaths with the within-3-weeks bucket, about 0.91 of all deaths occurred within the first three weeks: Hiroshima 294 of 324 dots, Nagasaki 192 of 210 dots, combined 486 of 534 dots.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Hiroshima",
+     "x": "instantly",
+     "field": "value",
+     "value": 90,
+     "note": "part of first-three-weeks total"
+    },
+    {
+     "entity": "Hiroshima",
+     "x": "within 3 weeks",
+     "field": "value",
+     "value": 204,
+     "note": "part of first-three-weeks total"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "instantly",
+     "field": "value",
+     "value": 60,
+     "note": "part of first-three-weeks total"
+    },
+    {
+     "entity": "Nagasaki",
+     "x": "within 3 weeks",
+     "field": "value",
+     "value": 132,
+     "note": "part of first-three-weeks total"
+    }
+   ],
+   "computation": "formula: Hiroshima (90+204)/(90+204+30)=294/324≈0.907; Nagasaki (60+132)/(60+132+18)=192/210≈0.914; combined (90+204+60+132)/(90+204+30+60+132+18)=486/534≈0.910",
+   "accepted_routes": [
+    "About nine-tenths of deaths occurred within the first three weeks when instant and within-3-weeks are combined.",
+    "Instant plus within-3-weeks totals 486 of 534 dots, about 0.91.",
+    "For Hiroshima, 294 of 324 dots; for Nagasaki, 192 of 210 dots were within the first three weeks."
+   ],
+   "visual_evidence_rule": "The chart must make the combined first-three-weeks share apparent, not only the separate instant and within-3-weeks buckets.",
+   "temporal_anchor": "The opening sentence about the vast majority occurring within the first three weeks.",
+   "reviewer_question": "Is the combined first-three-weeks total required as a headline takeaway, or is the separate within-3-weeks bucket enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Hiroshima's total is larger than Nagasaki's (324 vs 210 dots, about 1.5 times as many), but the intent does not require this city-total comparison.",
+  "The timing distribution is nearly the same in both cities (instant about 0.28, within 3 weeks about 0.63, 3+ weeks about 0.09).",
+  "The 3+ weeks bucket can be described as later/after-effects, but the table only labels it '3+ weeks'."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim radiation-induced cancer killed thousands; the table has no cancer or radiation category.",
+  "Do not present '3+ weeks' as 'decades later' as if it were a separate measured bucket.",
+  "Do not state the first-three-weeks share as a table percentage; it must be presented as a computed combined share of dots (instant + within 3 weeks).",
+  "Do not causally attribute instant vs later deaths to blast vs radiation beyond the timing labels."
+ ],
+ "notes": "Table values are dots, not percentages; shares are arithmetic combinations of dot values. The narration's first-three-weeks share maps to combined instant + within-3-weeks, not to the within-3-weeks row alone.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 52.8,
+  "usage": {
+   "prompt_tokens": 1072,
+   "completion_tokens": 12798,
+   "total_tokens": 13870,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10240
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 560
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,17 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series
+bar_109,High-income countries,high-income-countries,602.9,,,0.1608,relative,#fce000,relative_only,,,Boosters
+bar_109,Share of population vaccinated,bar-2,845.4,,,0.2182,relative,#5378a9,relative_only,bar-2,semantic_svg_order_backfill,Fully vaccinated
+bar_109,Boosters,bar-3,1003.5,,,0.0287,relative,#d96459,relative_only,bar-3,semantic_svg_order_backfill,Partially vaccinated
+bar_109,Fully vaccinated,bar-4,1128.4,,,0.1666,relative,#d1d1d1,relative_only,bar-4,semantic_svg_order_backfill,Not vaccinated
+bar_109,Upper-middle income,upper-middle-income,544.1,,,0.0689,relative,#fce000,relative_only,,,Boosters
+bar_109,Upper-middle income,upper-middle-income,786.7,,,0.3101,relative,#5378a9,relative_only,,,Fully vaccinated
+bar_109,Partially vaccinated,bar-7,1007.1,,,0.0345,relative,#d96459,relative_only,bar-7,semantic_svg_order_backfill,Partially vaccinated
+bar_109,Not vaccinated,bar-8,1132.1,,,0.1608,relative,#d1d1d1,relative_only,bar-8,semantic_svg_order_backfill,Not vaccinated
+bar_109,Lower-middle income,lower-middle-income,503.6,,,0.0057,relative,#fce000,relative_only,,,Boosters
+bar_109,Lower-middle income,lower-middle-income,650.7,,,0.2239,relative,#5378a9,relative_only,,,Fully vaccinated
+bar_109,High-income countries,bar-11,830.8,,,0.0574,relative,#d96459,relative_only,bar-11,semantic_svg_order_backfill,Partially vaccinated
+bar_109,Upper-middle income,bar-12,1051.2,,,0.2871,relative,#d1d1d1,relative_only,bar-12,semantic_svg_order_backfill,Not vaccinated
+bar_109,Low-income countries,low-income-countries,507.4,,,0.0115,relative,#fce000,relative_only,,,Boosters
+bar_109,Low-income countries,low-income-countries,522.1,,,0.0115,relative,#5378a9,relative_only,,,Fully vaccinated
+bar_109,Low-income countries,low-income-countries,540.4,,,0.0173,relative,#d96459,relative_only,,,Partially vaccinated
+bar_109,Low-income countries,low-income-countries,893.2,,,0.5340,relative,#d1d1d1,relative_only,,,Not vaccinated

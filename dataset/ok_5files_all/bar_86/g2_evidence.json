@@ -1,0 +1,147 @@
+{
+ "clip_id": "bar_86",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Rise @ rise",
+    "extreme": "min",
+    "expected": 7.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Rise bar must be visible with its 7% value label and must read as the shortest/lowest option."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Fall @ fall",
+    "extreme": "max",
+    "expected": 42.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Fall bar must be visible, labelled 42%, and must read as the tallest/highest option."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Fall @ fall",
+    "mark:Stay @ stay",
+    "mark:Unsure @ unsure",
+    "mark:Rise @ rise"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Fall @ fall",
+      "value": 42.0
+     },
+     {
+      "mark": "Stay @ stay",
+      "value": 29.0
+     },
+     {
+      "mark": "Unsure @ unsure",
+      "value": 22.0
+     },
+     {
+      "mark": "Rise @ rise",
+      "value": 7.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four category bars/labels must be visible in a way that lets the viewer infer the descending order Fall, Stay, Unsure, Rise."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Fall @ fall",
+    "mark:Rise @ rise"
+   ],
+   "assertion": {
+    "low": "Rise @ rise",
+    "low_value": 7.0,
+    "high": "Fall @ fall",
+    "high_value": 42.0,
+    "delta": 35.0,
+    "ratio": 6.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both Fall (42%) and Rise (7%) bars/labels must be visible together so the gap or ratio can be computed."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Fall @ fall",
+    "segment:Stay @ stay",
+    "segment:Unsure @ unsure",
+    "segment:Rise @ rise"
+   ],
+   "assertion": {
+    "segment": "Fall @ fall",
+    "expected_share": 0.42,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four category labels and values must be visible, with a total or 100% indicator/callout showing they make up the whole poll."
+  }
+ ]
+}

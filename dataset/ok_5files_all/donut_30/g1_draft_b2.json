@@ -1,0 +1,224 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_30",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the growth of the vegan population in the United States between 2008 and 2014.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 2014, vegans made up about 2.5% of the U.S. population.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2014): 2.5%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 2.5,
+     "note": "Table row gives the 2014 U.S. vegan population share as 2.5 percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2014, roughly 2.5% of the US population was vegan.",
+    "Vegans represented about 2.5% of people in the United States in 2014.",
+    "The US vegan population share was 2.5% as of 2014."
+   ],
+   "visual_evidence_rule": "Chart, label, or annotation must show 2.5% (or 2.5 percent) tied to the US and 2014.",
+   "temporal_anchor": "the 'As of Pulse taken in 2014' / 'now make up roughly 2.5%' clause",
+   "reviewer_question": "Is the 2014 US vegan share of 2.5% required as the clip's headline endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 2.5% share corresponds to a proportion of 0.025, or 2.5 out of every 100 people.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2014): 2.5%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 2.5,
+     "note": "2.5 percent."
+    },
+    {
+     "entity": "VEGAN POPULATION IN US (2014): 2.5%",
+     "x": "donut_value",
+     "field": "relative_value",
+     "value": 0.025,
+     "note": "Table also gives 0.0250 as the relative share."
+    }
+   ],
+   "computation": "value/100 = 2.5/100 = 0.025; matches table relative_value 0.0250",
+   "accepted_routes": [
+    "2.5 out of every 100 people",
+    "a 0.025 share of the US population",
+    "2.5% is equivalent to 0.025 of the whole"
+   ],
+   "visual_evidence_rule": "If a donut, pie, or progress arc is used, the highlighted portion must be 2.5% of the whole, not 25% or 0.25 of the whole.",
+   "temporal_anchor": "same 2014 clause where 2.5% is introduced",
+   "reviewer_question": "Must the animation explicitly render the share as 0.025 or 2.5 per 100, or is the 2.5% label sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The metric is a percentage share of the US population, not an absolute count of vegans.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2014): 2.5%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 2.5,
+     "note": "Unit is percent, not a count."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Vegans were 2.5% of the US population.",
+    "The measure is a share of the total US population, not a headcount.",
+    "The 2.5% is a percentage of people in the US."
+   ],
+   "visual_evidence_rule": "The label or chart title must include '%' and reference the US population denominator; do not display 2.5 as a raw count.",
+   "temporal_anchor": "'vegans now make up roughly 2.5% of the population' clause",
+   "reviewer_question": "Does the video need to state the denominator as total US population rather than adults, respondents, or absolute vegans?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 2.5% figure is an estimate or approximate share, not an exact census count.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2014): 2.5%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 2.5,
+     "note": "Table source_type is estimated; narration says roughly 2.5%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2.5% is an estimated share.",
+    "Roughly 2.5%, an estimate rather than an exact count.",
+    "The 2014 figure is approximate."
+   ],
+   "visual_evidence_rule": "If a source or qualifier is shown, include 'estimated' or 'roughly' near the 2.5% label; do not present it as exact.",
+   "temporal_anchor": "'roughly 2.5%' / 'Pulse taken in 2014' clause",
+   "reviewer_question": "Should the video carry the approximate or estimated qualifier, or is that optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 2014 value is the only supported endpoint; the video may frame it as part of a growth story but cannot quantify an earlier baseline or change from the table alone.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "VEGAN POPULATION IN US (2014): 2.5%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 2.5,
+     "note": "Only the 2014 endpoint is present; no earlier value is in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The data point is the 2014 endpoint of the vegan-share story.",
+    "Show it as the latest value in a growth narrative, without a quantified earlier baseline.",
+    "Treat the 2014 2.5% as the endpoint rather than a complete time series."
+   ],
+   "visual_evidence_rule": "If a timeline is shown, it must not fabricate an earlier starting value or a slope; any earlier period can only be indicated as missing or unsupported unless additional data is supplied.",
+   "temporal_anchor": "the 2014 clause; do not invent an earlier period from the table",
+   "reviewer_question": "Should the video include a growth-over-time frame at all, given the table provides only the 2014 endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the 2.5% as a donut, pie, or progress slice is an optional visual encoding of the share.",
+  "The approximate or estimated qualifier ('roughly', 'estimated') is an optional but valid framing.",
+  "A growth-over-time title may be used only if it does not imply a quantified earlier baseline."
+ ],
+ "unsupported_to_avoid": [
+  "Any earlier-year baseline or multi-year growth/change magnitude (the table has no earlier value).",
+  "Gender split or a claim that women are X% of vegans (no gender data in the table).",
+  "Absolute number of vegans or total population count (the table gives only a percent share).",
+  "Causal explanations for why veganism grew.",
+  "Extrapolating beyond 2014.",
+  "Treating 2.5% as 25% or 0.25 of the population.",
+  "Using a denominator other than total US population without supporting data."
+ ],
+ "notes": "Only one 2014 2.5% US share is in the table; the intended multi-year growth and gender comparison are not quantifiable from it. The reviewer should decide whether to treat the 2014 share as the sole required endpoint or allow optional donut-proportion and estimated-qualifier content.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.04
+ },
+ "draft_cost": {
+  "sec": 38.7,
+  "usage": {
+   "prompt_tokens": 635,
+   "completion_tokens": 9046,
+   "total_tokens": 9681,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7122
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 379
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,150 @@
+{
+ "clip_id": "area_14",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Y-axis or label must indicate relative/normalized infections; no absolute case-count numbers or population-share denominator."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Infections @ 29.4",
+    "extreme": "min",
+    "expected": 99.4,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Apex of the infections curve must be visible at x=31.0 and y=100.0 relative (or 1.0000 normalized)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Infections @ 14.0",
+    "mark:Infections @ 15.5",
+    "mark:Infections @ 17.1"
+   ],
+   "assertion": {
+    "low": "Infections @ 14.0",
+    "low_value": 42.2,
+    "high": "Infections @ 17.1",
+    "high_value": 57.8,
+    "delta": 15.6,
+    "ratio": 1.3697,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The steepest tangent/segment of the rising curve should be visible around x=14.0–15.5, with values 42.2 and 50.0."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Infections @ 15.5",
+    "mark:Infections @ 31.0",
+    "mark:Infections @ 46.5"
+   ],
+   "assertion": {
+    "series": "Infections",
+    "values": [
+     50.0,
+     100.0,
+     50.0
+    ],
+    "threshold_between": [
+     50.0,
+     100.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible 50.0 relative level/line and intersection points at x=15.5 and x=46.5."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Infections @ 31.0",
+    "mark:Infections @ 46.5",
+    "mark:Infections @ 52.7",
+    "mark:Infections @ 62.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Infections @ 31.0",
+      "value": 100.0
+     },
+     {
+      "mark": "Infections @ 46.5",
+      "value": 50.0
+     },
+     {
+      "mark": "Infections @ 52.7",
+      "value": 20.6
+     },
+     {
+      "mark": "Infections @ 62.0",
+      "value": 0.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Descending right side of the curve from apex at x=31.0 to endpoint 0.0 at x=62.0."
+  }
+ ]
+}

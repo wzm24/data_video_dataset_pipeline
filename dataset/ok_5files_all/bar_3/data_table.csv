@@ -1,0 +1,3 @@
+﻿entity,metric,value,unit,label
+cyclists,compliance_rate,88,%,88%
+drivers,compliance_rate,85,%,85%

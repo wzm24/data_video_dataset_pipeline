@@ -1,0 +1,156 @@
+{
+ "clip_id": "line_39",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Supply @ start",
+    "mark:Supply @ middle",
+    "mark:Supply @ end"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Supply @ start",
+      "value": 0.02
+     },
+     {
+      "mark": "Supply @ middle",
+      "value": 0.3
+     },
+     {
+      "mark": "Supply @ end",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Supply trend must be visibly ascending from the early part of the clip to the final part."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Salary @ start",
+    "mark:Salary @ middle",
+    "mark:Salary @ end"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Salary @ start",
+      "value": 0.95
+     },
+     {
+      "mark": "Salary @ middle",
+      "value": 0.5
+     },
+     {
+      "mark": "Salary @ end",
+      "value": 0.05
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Salary trend must be visibly descending from the early part of the clip to the final part."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Supply @ start to end",
+    "mark:Salary @ start to end"
+   ],
+   "assertion": {
+    "low": "Salary @ start to end",
+    "low_value": 0.05,
+    "high": "Supply @ start to end",
+    "high_value": 1.0,
+    "delta": 0.95,
+    "ratio": 20.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both Supply and Salary trends must be visible together long enough to show their opposing slopes."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Salary @ pre-crossing sample",
+    "mark:Supply @ pre-crossing sample"
+   ],
+   "assertion": {
+    "at": "pre-crossing sample",
+    "above": "Salary",
+    "above_value": 0.46,
+    "below": "Supply",
+    "below_value": 0.4,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The crossing of the two series must be visible if this unit is included."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Salary @ start",
+    "mark:Supply @ start"
+   ],
+   "assertion": {
+    "greater": "Salary @ start",
+    "lesser": "Supply @ start",
+    "expected_ratio": 47.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the start of the clip, the Salary series must be visibly much higher than the Supply series."
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type
+area_18,JUPITER,jupiter,0,142984,1.00000,km_diameter,real
+area_18,NEPTUNE,neptune,0,49528,0.34639,km_diameter,real
+area_18,EARTH,earth,0,12742,0.08911,km_diameter,real
+area_18,MARS,mars,0,6779,0.04741,km_diameter,real
+area_18,MOON,moon,0,3474,0.02430,km_diameter,real

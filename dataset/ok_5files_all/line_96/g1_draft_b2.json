@@ -1,0 +1,278 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_96",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the decline in the number of unauthorized immigrants from Mexico since 2007 and the resulting demographic shift where immigrants from other countries have surpassed those from Mexico.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Mexico's unauthorized immigrant population declined from 6.9 million in 2007 to 4.9 million in 2017, a drop of 2.0 million or about 29%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Mexico",
+     "x": "2007",
+     "field": "value",
+     "value": 6.9,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Mexico",
+     "x": "2017",
+     "field": "value",
+     "value": 4.9,
+     "note": "table value in millions"
+    }
+   ],
+   "computation": "(6.9 - 4.9) = 2.0 million; (6.9 - 4.9) / 6.9 * 100 = 28.99% (about 29%).",
+   "accepted_routes": [
+    "Mexico fell by 2 million, from 6.9m in 2007 to 4.9m in 2017.",
+    "The Mexican unauthorized immigrant population dropped about 29% between 2007 and 2017.",
+    "From its 2007 level of 6.9 million, Mexico declined to 4.9 million by 2017."
+   ],
+   "visual_evidence_rule": "Mexico series must visibly fall from 2007 to 2017, with 2007 and 2017 values or a labeled drop shown.",
+   "temporal_anchor": "the clause 'the number of Mexicans ... has been falling since 2007'",
+   "reviewer_question": "Must the video quantify the Mexico decline (2.0m or ~29%), or is a qualitative 'falling' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "By 2017, other countries (5.5 million) had surpassed Mexico (4.9 million) as the larger unauthorized-immigrant group.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Mexico",
+     "x": "2017",
+     "field": "value",
+     "value": 4.9,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Other countries",
+     "x": "2017",
+     "field": "value",
+     "value": 5.5,
+     "note": "table value in millions"
+    }
+   ],
+   "computation": "5.5 - 4.9 = 0.6 million; 5.5 / 4.9 = 1.122 (Other is about 12.2% higher).",
+   "accepted_routes": [
+    "In 2017, other countries surpassed Mexico, 5.5m to 4.9m.",
+    "Immigrants from other countries outnumbered unauthorized immigrants from Mexico by 0.6 million in 2017.",
+    "Mexico was no longer the larger group by 2017: other countries led 5.5m vs. 4.9m."
+   ],
+   "visual_evidence_rule": "At the 2017 x-position, the Other countries series/bar must be visibly above Mexico's 4.9m mark.",
+   "temporal_anchor": "the closing comparative claim that immigrants from other countries have surpassed those from Mexico",
+   "reviewer_question": "Is the 2017 Other>Mexico comparison required, or is the fact of a crossover alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The overtake happened after 2015: in 2015 Mexico still led 5.6m to 5.4m, but in 2017 other countries led 5.5m to 4.9m.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Mexico",
+     "x": "2015",
+     "field": "value",
+     "value": 5.6,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Other countries",
+     "x": "2015",
+     "field": "value",
+     "value": 5.4,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Mexico",
+     "x": "2017",
+     "field": "value",
+     "value": 4.9,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Other countries",
+     "x": "2017",
+     "field": "value",
+     "value": 5.5,
+     "note": "table value in millions"
+    }
+   ],
+   "computation": "2015 gap: 5.6 - 5.4 = 0.2m Mexico lead; 2017 gap: 5.5 - 4.9 = 0.6m Other lead.",
+   "accepted_routes": [
+    "Mexico was still ahead in 2015, but other countries had moved ahead by 2017.",
+    "The crossover between the two groups occurred after 2015 and before 2017.",
+    "The two lines cross between 2015 and 2017."
+   ],
+   "visual_evidence_rule": "Chart must show Mexico above Other at 2015 and Other above Mexico at 2017, ideally marking the interval or crossing point.",
+   "temporal_anchor": "the transition after 'falling since 2007' when the demographic shift is shown",
+   "reviewer_question": "Must the video locate the overtake between 2015 and 2017, or is just saying 'by 2017' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Other countries' unauthorized immigrant population rose from 1.5 million in 1990 to 5.5 million in 2017, an increase of 4.0 million or about 267%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Other countries",
+     "x": "1990",
+     "field": "value",
+     "value": 1.5,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Other countries",
+     "x": "2017",
+     "field": "value",
+     "value": 5.5,
+     "note": "table value in millions"
+    }
+   ],
+   "computation": "5.5 - 1.5 = 4.0 million; 4.0 / 1.5 * 100 = 266.7% (about 267%).",
+   "accepted_routes": [
+    "Other countries rose from 1.5m in 1990 to 5.5m in 2017.",
+    "The other-countries group increased by 4 million over the period.",
+    "Other countries more than tripled since 1990."
+   ],
+   "visual_evidence_rule": "Other countries series must visibly rise across the full 1990-2017 span, with endpoint values or growth annotation.",
+   "temporal_anchor": "optional background before the Mexico decline or before the 2017 comparison",
+   "reviewer_question": "Should the video quantify the long-term rise of other countries as context, or only the Mexico decline and overtake?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "In 2017, other countries made up 52.9% of the combined Mexico+Other unauthorized-immigrant population, versus Mexico's 47.1%; in 2007 Mexico had 56.6% and other countries 43.4%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Mexico",
+     "x": "2007",
+     "field": "value",
+     "value": 6.9,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Other countries",
+     "x": "2007",
+     "field": "value",
+     "value": 5.3,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Mexico",
+     "x": "2017",
+     "field": "value",
+     "value": 4.9,
+     "note": "table value in millions"
+    },
+    {
+     "entity": "Other countries",
+     "x": "2017",
+     "field": "value",
+     "value": 5.5,
+     "note": "table value in millions"
+    }
+   ],
+   "computation": "2007: Mexico share = 6.9/(6.9+5.3)=56.56%; Other = 5.3/12.2=43.44%. 2017: Mexico share = 4.9/(4.9+5.5)=47.12%; Other = 5.5/10.4=52.88%.",
+   "accepted_routes": [
+    "By 2017, other countries were about 53% of the Mexico+Other total, while Mexico was about 47%.",
+    "The share flipped from Mexico 57% vs. other countries 43% in 2007 to other countries 53% vs. Mexico 47% in 2017.",
+    "Other countries became the majority of the combined group by 2017."
+   ],
+   "visual_evidence_rule": "A stacked share/100% chart or labeled percentages must show Other above 50% and Mexico below 50% in 2017, optionally contrasting with 2007.",
+   "temporal_anchor": "the 'largest share' framing, if the video uses share language",
+   "reviewer_question": "Should the video show share/composition, or are absolute counts sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Note that Mexico's 6.9 million in 2007 was its table maximum before the decline.",
+  "Show that other countries edged up from 5.3 million in 2007 to 5.5 million in 2017 (+0.2 million).",
+  "Mark that Mexico was still ahead in 2015 (5.6m vs 5.4m) as context for the 2017 reversal."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that specific policies or economic conditions caused the decline, unless the source provides them.",
+  "Extrapolating after 2017 or saying other countries will continue to rise.",
+  "Claiming Mexico was still the larger group in 2017 for the Mexico-vs-Other aggregate comparison; the table shows Other countries 5.5m > Mexico 4.9m.",
+  "Using relative_value as a share; it appears scale-normalized, not a composition share.",
+  "Using a denominator other than Mexico+Other for the share claims in U5."
+ ],
+ "notes": "Core required candidates are U1 and U2; U3-U5 are high-value but optional depending on reviewer tolerance. Avoid the narration's 'still do' as a 2017 claim for the Mexico-vs-Other aggregate, because the table shows Other countries surpassed Mexico by 2017.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 46.9,
+  "usage": {
+   "prompt_tokens": 1008,
+   "completion_tokens": 11497,
+   "total_tokens": 12505,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9095
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 752
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

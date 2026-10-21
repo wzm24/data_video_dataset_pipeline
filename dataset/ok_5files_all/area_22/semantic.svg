@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#743960"/>
+<circle cx="576" cy="346" r="280" fill="#403f42"/>
+<text x="576" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">EARTH</text>
+<circle cx="948" cy="346" r="29" fill="#317eb5"/>
+<rect x="820" y="404" width="330" height="52" rx="6" fill="#317eb5"/>
+<text x="985" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">ALL THE WATER ON EARTH</text>
+</svg>

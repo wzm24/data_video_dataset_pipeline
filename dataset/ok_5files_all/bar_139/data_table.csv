@@ -1,0 +1,10 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_139,10th,10th,270.0,,,0.0499,relative,#5c9e65,relative_only
+bar_139,20th,20th,370.0,,,0.0683,relative,#d3d3d3,relative_only
+bar_139,30th,30th,470.0,,,0.0932,relative,#d3d3d3,relative_only
+bar_139,40th,40th,570.0,,,0.1243,relative,#d3d3d3,relative_only
+bar_139,50th,50th,670.0,,,0.1708,relative,#d3d3d3,relative_only
+bar_139,60th,60th,770.0,,,0.2175,relative,#d3d3d3,relative_only
+bar_139,70th,70th,870.0,,,0.2642,relative,#d3d3d3,relative_only
+bar_139,80th,80th,970.0,,,0.3262,relative,#d3d3d3,relative_only
+bar_139,90th,90th,1070.0,,,0.6250,relative,#5c9e65,relative_only

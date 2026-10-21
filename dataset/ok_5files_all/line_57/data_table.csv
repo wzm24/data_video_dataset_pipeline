@@ -1,0 +1,19 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+line_57,18-49,pfizer-biontech-18-49,100.0,MAY,97.50,,%,#555555,svg_geometry,Pfizer/BioNTech
+line_57,18-49,pfizer-biontech-18-49,370.0,AUGUST,96.50,,%,#555555,svg_geometry,Pfizer/BioNTech
+line_57,50-64,pfizer-biontech-50-64,100.0,MAY,96.50,,%,#222222,svg_geometry,Pfizer/BioNTech
+line_57,50-64,pfizer-biontech-50-64,370.0,AUGUST,95.50,,%,#222222,svg_geometry,Pfizer/BioNTech
+line_57,65+,pfizer-biontech-65,100.0,MAY,95.00,,%,#d98a8a,svg_geometry,Pfizer/BioNTech
+line_57,65+,pfizer-biontech-65,370.0,AUGUST,89.00,,%,#d98a8a,svg_geometry,Pfizer/BioNTech
+line_57,18-49,moderna-18-49,490.0,MAY,96.50,,%,#555555,svg_geometry,Moderna
+line_57,18-49,moderna-18-49,790.0,AUGUST,97.50,,%,#555555,svg_geometry,Moderna
+line_57,50-64,moderna-50-64,490.0,MAY,96.50,,%,#222222,svg_geometry,Moderna
+line_57,50-64,moderna-50-64,790.0,AUGUST,97.00,,%,#222222,svg_geometry,Moderna
+line_57,65+,moderna-65,490.0,MAY,97.00,,%,#d98a8a,svg_geometry,Moderna
+line_57,65+,moderna-65,790.0,AUGUST,94.00,,%,#d98a8a,svg_geometry,Moderna
+line_57,18-49,johnson-johnson-18-49,900.0,MAY,95.50,,%,#555555,svg_geometry,Johnson & Johnson
+line_57,18-49,johnson-johnson-18-49,1210.0,AUGUST,93.50,,%,#555555,svg_geometry,Johnson & Johnson
+line_57,50-64,johnson-johnson-50-64,900.0,MAY,88.00,,%,#222222,svg_geometry,Johnson & Johnson
+line_57,50-64,johnson-johnson-50-64,1210.0,AUGUST,93.00,,%,#222222,svg_geometry,Johnson & Johnson
+line_57,65+,johnson-johnson-65,900.0,MAY,85.00,,%,#d98a8a,svg_geometry,Johnson & Johnson
+line_57,65+,johnson-johnson-65,1210.0,AUGUST,83.00,,%,#d98a8a,svg_geometry,Johnson & Johnson

@@ -1,0 +1,153 @@
+{
+ "clip_id": "line_43",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Demand @ start of series",
+    "mark:Demand @ end of series"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Demand @ start of series",
+      "value": 0.0
+     },
+     {
+      "mark": "Demand @ end of series",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The animated demand series must visibly move from its lowest shown relative value to its highest shown relative value over the sequence."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Demand)"
+   ],
+   "assertion": {
+    "mark": "Demand @ penultimate point",
+    "extreme": "max",
+    "expected": 1.0,
+    "compared_set": "Demand",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animated demand series must show the final two relative values both at 1.0000, with no value above 1.0000."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Demand @ earlier segment end",
+    "mark:Demand @ later segment end"
+   ],
+   "assertion": {
+    "low": "Demand @ earlier segment end",
+    "low_value": 0.2608,
+    "high": "Demand @ later segment end",
+    "high_value": 0.8766,
+    "delta": 0.6158,
+    "ratio": 3.3612,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animated demand series must show a larger total rise in the later portion from 0.2608 to 0.8766 than in the earlier portion from 0.0000 to 0.2608."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Demand @ point before crossing",
+    "mark:Demand @ point after crossing"
+   ],
+   "assertion": {
+    "series": "Demand",
+    "values": [
+     0.4636,
+     0.5234
+    ],
+    "threshold_between": [
+     0.4636,
+     0.5234
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animated demand series must show a value below 0.5000 followed by a value above 0.5000 between the cited points."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Demand @ first point",
+    "mark:Demand @ middle point",
+    "mark:Demand @ final point"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Demand @ first point",
+      "value": 0.0
+     },
+     {
+      "mark": "Demand @ middle point",
+      "value": 0.5234
+     },
+     {
+      "mark": "Demand @ final point",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animated demand series must not show any downward movement between consecutive shown relative values."
+  }
+ ]
+}

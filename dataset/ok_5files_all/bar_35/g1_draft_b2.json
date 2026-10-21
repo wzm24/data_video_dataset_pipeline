@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_35",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To validate the use of objective standards in pretrial decisions by presenting encouraging data on defendant compliance and public safety.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The release rate: 94% of defendants were released pretrial.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Released Pretrial",
+     "x": "released-pretrial",
+     "field": "value",
+     "value": 94.0,
+     "note": "Table value is 94; narration supplies the percent sign."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "94% of defendants were released pretrial",
+    "the pretrial release rate was 94%",
+    "about 94 out of every 100 defendants were released pretrial"
+   ],
+   "visual_evidence_rule": "A bar or label for Released Pretrial must be visible with value 94 or 94%.",
+   "temporal_anchor": "The clause stating 94% of defendants were released pre-trial.",
+   "reviewer_question": "Is the 94% pretrial release rate required in the final video?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Among released defendants, 88% returned for every court date.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Returned for Every Court Date",
+     "x": "returned-for-every-court-date",
+     "field": "value",
+     "value": 88.0,
+     "note": "Table value is 88; narration indicates the denominator is released pretrial defendants."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "88% of released defendants returned for every court date",
+    "of those released pretrial, 88% made every court date",
+    "nearly nine in ten released defendants returned for every court date"
+   ],
+   "visual_evidence_rule": "The chart must show Returned for Every Court Date with 88 or 88% and, if possible, label it as conditional on released defendants.",
+   "temporal_anchor": "The clause stating 88% of those returned for every single court date.",
+   "reviewer_question": "Must the video preserve the conditional denominator 'of released defendants' for the 88% figure?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Among released defendants, 86% were not arrested pretrial.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Not Arrested Pretrial",
+     "x": "not-arrested-pretrial",
+     "field": "value",
+     "value": 86.0,
+     "note": "Table value is 86; narration links the no-arrest period to released defendants."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "86% of released defendants were not arrested pretrial",
+    "86% were not arrested during the pretrial period",
+    "about 86% of released defendants avoided pretrial arrest"
+   ],
+   "visual_evidence_rule": "The chart must show Not Arrested Pretrial with 86 or 86% and avoid implying it is a rate for all defendants unless stated.",
+   "temporal_anchor": "The clause stating 86% were not arrested during that time.",
+   "reviewer_question": "Must the video present 86% as a public-safety outcome for released defendants?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The displayed rates rank as Released Pretrial 94%, then Returned for Every Court Date 88%, then Not Arrested Pretrial 86%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Released Pretrial",
+     "x": "released-pretrial",
+     "field": "value",
+     "value": 94.0,
+     "note": "Highest of the three displayed values."
+    },
+    {
+     "entity": "Returned for Every Court Date",
+     "x": "returned-for-every-court-date",
+     "field": "value",
+     "value": 88.0,
+     "note": "Middle of the three displayed values."
+    },
+    {
+     "entity": "Not Arrested Pretrial",
+     "x": "not-arrested-pretrial",
+     "field": "value",
+     "value": 86.0,
+     "note": "Lowest of the three displayed values."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "94% is the highest rate, followed by 88% and then 86%",
+    "the three bars descend from 94% to 88% to 86%",
+    "release rate ranks first, return-for-court second, and not-arrested third"
+   ],
+   "visual_evidence_rule": "The chart must make the descending order of the three bars or labels visible.",
+   "temporal_anchor": "Across the three data clauses, if the video shows all three bars together.",
+   "reviewer_question": "Should the final video be required to show the descending order, or is showing the three values enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Among released defendants, the return-for-every-court-date rate is 2 percentage points higher than the not-arrested-pretrial rate (88% minus 86%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Returned for Every Court Date",
+     "x": "returned-for-every-court-date",
+     "field": "value",
+     "value": 88.0,
+     "note": "Used as minuend in the derived 2-point comparison."
+    },
+    {
+     "entity": "Not Arrested Pretrial",
+     "x": "not-arrested-pretrial",
+     "field": "value",
+     "value": 86.0,
+     "note": "Used as subtrahend in the derived 2-point comparison."
+    }
+   ],
+   "computation": "88.000 - 86.000 = 2.000 percentage points",
+   "accepted_routes": [
+    "return rate is 2 percentage points above the not-arrested rate",
+    "88% vs. 86%, a 2-point gap",
+    "compliance exceeds no-arrest by 2 percentage points"
+   ],
+   "visual_evidence_rule": "If called out, the chart must show both 88% and 86% with comparable denominators (released defendants).",
+   "temporal_anchor": "The second and third data clauses jointly, only if both are framed as among released defendants.",
+   "reviewer_question": "Is the 2-point difference between return-for-court and not-arrested rates worth an explicit callout?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may note that all three displayed rates are high or encouraging.",
+  "The video may show that the minimum displayed rate is 86%.",
+  "The video may use the table's relative_value fields for internal bar scaling without requiring viewers to read them."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim that objective standards or any policy caused the 94%, 88%, or 86% rates.",
+  "Do not say 88% or 86% of all defendants; the narration ties these outcomes to released pretrial defendants.",
+  "Do not subtract 94% - 88% or 94% - 86% as if all three rates had the same denominator.",
+  "Do not invent total defendant counts, arrest counts, or other values not in the table.",
+  "Do not cite dates or values not present in the table as chart data unless separately sourced."
+ ],
+ "notes": "Core required candidates are the three narrated rates: 94, 88, and 86, with the 88 and 86 figures conditional on released defendants. Ranking and the 88-vs-86 gap are optional but valid if denominators are handled correctly.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 38.0,
+  "usage": {
+   "prompt_tokens": 734,
+   "completion_tokens": 9011,
+   "total_tokens": 9745,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7194
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 478
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

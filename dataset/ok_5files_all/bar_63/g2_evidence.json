@@ -1,0 +1,126 @@
+{
+ "clip_id": "bar_63",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Medical @ x_px=440.0"
+   ],
+   "assertion": {
+    "mark": "Medical @ x_px=440.0",
+    "field": "value",
+    "expected": 55.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled Medical bar/value at 55.0 must be visible or explicitly read out."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Dispensary @ x_px=740.0"
+   ],
+   "assertion": {
+    "mark": "Dispensary @ x_px=740.0",
+    "field": "value",
+    "expected": 18.4,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled Dispensary/recreational bar/value at 18.4 must be visible or explicitly read out."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Medical @ x_px=440.0",
+    "mark:Dispensary @ x_px=740.0"
+   ],
+   "assertion": {
+    "low": "Dispensary @ x_px=740.0",
+    "low_value": 18.4,
+    "high": "Medical @ x_px=440.0",
+    "high_value": 55.0,
+    "delta": 36.6,
+    "ratio": 2.9891,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both endpoint values must be visible, or an explicit difference callout must show 36.6."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Medical @ x_px=440.0",
+    "mark:Dispensary @ x_px=740.0"
+   ],
+   "assertion": {
+    "greater": "Medical @ x_px=440.0",
+    "lesser": "Dispensary @ x_px=740.0",
+    "expected_ratio": 2.9891,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio annotation (e.g., 3x) or both bars visible with scale supporting the ratio must be shown."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Medical @ x_px=440.0",
+    "segment:Dispensary @ x_px=740.0"
+   ],
+   "assertion": {
+    "segment": "Medical @ x_px=440.0",
+    "expected_share": 0.7493,
+    "total_of": "unknown",
+    "total": 73.4,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A stacked/share annotation or explicit percentage labels must show the shares relative to the combined medical+dispensary total."
+  }
+ ]
+}

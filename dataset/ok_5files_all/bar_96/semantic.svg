@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f7f7f5"/>
+<g id="entity-shia" data-role="entity" data-entity-id="shia" data-label="SHIA">
+<rect id="shia-bar" data-role="bar" data-entity-id="shia" data-value="63" x="200" y="110" width="880" height="330" fill="#C0392B"/>
+<text id="shia-value-label" data-role="value-label" data-entity-id="shia" x="228" y="168" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">SHIA = 63%</text>
+</g>
+<g data-role="annotation"><line x1="340" y1="445" x2="340" y2="490" stroke="#C0392B" stroke-width="8"/><polygon points="328,486 352,486 340,508" fill="#C0392B"/></g>
+<g data-role="annotation"><line x1="640" y1="445" x2="640" y2="490" stroke="#C0392B" stroke-width="8"/><polygon points="628,486 652,486 640,508" fill="#C0392B"/></g>
+<g data-role="annotation"><line x1="940" y1="445" x2="940" y2="490" stroke="#C0392B" stroke-width="8"/><polygon points="928,486 952,486 940,508" fill="#C0392B"/></g>
+<g id="entity-sunni" data-role="entity" data-entity-id="sunni" data-label="SUNNI">
+<rect id="sunni-bar" data-role="bar" data-entity-id="sunni" data-value="20" x="200" y="540" width="880" height="104" fill="#2E8B57"/>
+<text id="sunni-value-label" data-role="value-label" data-entity-id="sunni" x="228" y="612" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">SUNNI = 20%</text>
+</g>
+<g data-role="annotation"><line x1="280" y1="535" x2="280" y2="492" stroke="#2E8B57" stroke-width="6"/><polygon points="270,496 290,496 280,474" fill="#2E8B57"/></g>
+<g data-role="annotation"><line x1="460" y1="535" x2="460" y2="492" stroke="#2E8B57" stroke-width="6"/><polygon points="450,496 470,496 460,474" fill="#2E8B57"/></g>
+<g data-role="annotation"><line x1="640" y1="535" x2="640" y2="492" stroke="#2E8B57" stroke-width="6"/><polygon points="630,496 650,496 640,474" fill="#2E8B57"/></g>
+<g data-role="annotation"><line x1="820" y1="535" x2="820" y2="492" stroke="#2E8B57" stroke-width="6"/><polygon points="810,496 830,496 820,474" fill="#2E8B57"/></g>
+<g data-role="annotation"><line x1="1000" y1="535" x2="1000" y2="492" stroke="#2E8B57" stroke-width="6"/><polygon points="990,496 1010,496 1000,474" fill="#2E8B57"/></g>
+</g>
+</svg>

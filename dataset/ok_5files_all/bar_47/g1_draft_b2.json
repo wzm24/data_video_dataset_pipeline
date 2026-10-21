@@ -1,0 +1,270 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_47",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that corporate and property taxes disproportionately burden the wealthiest individuals.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The RICHEST group has the highest relative_value, 0.3667 (36.67%), among all entities.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST",
+     "x": "1171.4",
+     "field": "relative_value",
+     "value": 0.3667,
+     "note": "highest relative value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The richest group faces a 36.67% relative burden, the highest of all groups.",
+    "RICHEST has the top relative_value at 0.3667.",
+    "At 36.7%, the richest group's relative tax burden tops the chart."
+   ],
+   "visual_evidence_rule": "RICHEST bar must be the tallest in the relative-value series, with 0.3667 or 36.67% visible or legible.",
+   "temporal_anchor": "the clause 'these corporate and property taxes hit them the hardest' referencing the richest.",
+   "reviewer_question": "Must the video explicitly identify RICHEST as having the highest relative burden?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The RICHEST group's relative_value (0.3667) is about 5.5 times the POOREST group's relative_value (0.0667), a 30 percentage-point gap.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST",
+     "x": "1171.4",
+     "field": "relative_value",
+     "value": 0.3667,
+     "note": "top relative value"
+    },
+    {
+     "entity": "POOREST",
+     "x": "198.7",
+     "field": "relative_value",
+     "value": 0.0667,
+     "note": "bottom relative value"
+    }
+   ],
+   "computation": "0.3667 / 0.0667 = 5.5; 0.3667 - 0.0667 = 0.3000",
+   "accepted_routes": [
+    "Richest relative burden is 5.5x the poorest.",
+    "Poorest pay 6.67%, richest pay 36.67%.",
+    "A 30 percentage-point difference in relative burden."
+   ],
+   "visual_evidence_rule": "Both POOREST and RICHEST relative-value bars must be visible with labels or axis values allowing the ratio or difference to be derived.",
+   "temporal_anchor": "the clause 'hit them the hardest' contrasting rich and poor.",
+   "reviewer_question": "Is the 5.5x ratio (or 30-point gap) between richest and poorest required, or is showing both endpoints enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The two highest groups (Group 10 and RICHEST) have much larger absolute values (9.000 and 11.000) than the poorest groups (e.g., POOREST at 2.000).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Group 10",
+     "x": "1074.1",
+     "field": "value",
+     "value": 9.0,
+     "note": "second highest absolute value"
+    },
+    {
+     "entity": "RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 11.0,
+     "note": "highest absolute value"
+    },
+    {
+     "entity": "POOREST",
+     "x": "198.7",
+     "field": "value",
+     "value": 2.0,
+     "note": "one of the lowest absolute values"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Group 10 and RICHEST have values of 9 and 11, far above the poorest group's 2.",
+    "The richest groups' absolute tax amounts dwarf the poorest groups' amounts.",
+    "Top two groups are 9 and 11 versus 2 for the poorest."
+   ],
+   "visual_evidence_rule": "Bars for Group 10 and RICHEST must be visibly taller than the POOREST bar on the absolute-value axis.",
+   "temporal_anchor": "the clause 'rich people own more things' or 'taxes hit them the hardest'.",
+   "reviewer_question": "Must the video compare absolute values of top vs bottom groups, or is relative value sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Only the top two groups cross the 30% relative-value threshold: Group 10 has 0.3000 and RICHEST has 0.3667, while all other groups are at 0.1000 or below.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Group 10",
+     "x": "1074.1",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "reaches 30% threshold"
+    },
+    {
+     "entity": "RICHEST",
+     "x": "1171.4",
+     "field": "relative_value",
+     "value": 0.3667,
+     "note": "above 30% threshold"
+    },
+    {
+     "entity": "Group 9",
+     "x": "976.9",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "highest below 30%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Group 10 and RICHEST are the only groups at or above 30% relative burden.",
+    "The relative burden crosses 30% only for the two richest groups.",
+    "All groups up to Group 9 are at 10% or less; Group 10 and RICHEST exceed 30%."
+   ],
+   "visual_evidence_rule": "A threshold marker at 0.3000 (30%) must show only Group 10 and RICHEST above it, with other bars below.",
+   "temporal_anchor": "optional clause emphasizing the sharp jump for the wealthiest groups.",
+   "reviewer_question": "Should the video include the 30% threshold crossing as an explicit takeaway?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The absolute value trend is flat at 2.000 for the poorest groups, rises to 3.000 for Groups 7-9, then jumps sharply to 9.000 for Group 10 and 11.000 for RICHEST.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "198.7",
+     "field": "value",
+     "value": 2.0,
+     "note": "low plateau"
+    },
+    {
+     "entity": "Group 7",
+     "x": "782.2",
+     "field": "value",
+     "value": 3.0,
+     "note": "middle rise"
+    },
+    {
+     "entity": "Group 10",
+     "x": "1074.1",
+     "field": "value",
+     "value": 9.0,
+     "note": "sharp increase"
+    },
+    {
+     "entity": "RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 11.0,
+     "note": "highest endpoint"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Values stay low then spike for the top two groups.",
+    "The distribution is heavily skewed: 2, 3, then 9 and 11.",
+    "A sharp rise at the right end of the chart."
+   ],
+   "visual_evidence_rule": "The bar chart must display a low plateau followed by a sharp increase at Group 10 and RICHEST.",
+   "temporal_anchor": "overall narration or the clause 'Usually rich people own more things'.",
+   "reviewer_question": "Must the video convey the overall increasing trend and sharp top-end jump?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Listing every group's exact value is optional.",
+  "Highlighting Group 10 alone as the second-highest value is optional.",
+  "Showing the full ordered sequence of groups from POOREST through RICHEST is optional if the trend is clear."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that corporate/property taxes cause wealth inequality.",
+  "Extrapolating beyond the groups shown in the table.",
+  "Treating relative_value as a share of total (the listed relative_values sum to more than 1).",
+  "Claiming the poorest groups pay zero or negative taxes."
+ ],
+ "notes": "The table has a duplicate POOREST row; treat the intended series as wealth-ordered groups. Relative_value appears to be a rate or burden, not a share of total.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 48.2,
+  "usage": {
+   "prompt_tokens": 1079,
+   "completion_tokens": 12878,
+   "total_tokens": 13957,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10796
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 695
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,103 @@
+{
+ "clip_id": "line_68",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Interest rate @ 240",
+    "mark:Interest rate @ 1080"
+   ],
+   "assertion": {
+    "low": "Interest rate @ 240",
+    "low_value": 0.2667,
+    "high": "Interest rate @ 1080",
+    "high_value": 0.8444,
+    "delta": 0.5777,
+    "ratio": 3.1661,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A line labeled Interest rate must visibly descend from x=240 to x=1080."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Interest rate @ 240"
+   ],
+   "assertion": {
+    "mark": "Interest rate @ 240",
+    "field": "value",
+    "expected": 0.2667,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both endpoint positions of the interest-rate line are visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Interest rate @ 240",
+    "mark:Interest rate @ 1080"
+   ],
+   "assertion": {
+    "low": "Interest rate @ 240",
+    "low_value": 0.2667,
+    "high": "Interest rate @ 1080",
+    "high_value": 0.8444,
+    "delta": 0.5777,
+    "ratio": 3.1661,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The vertical distance between the line's start and end is 0.5777 relative units."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "An axis label, legend, or on-chart text identifies the line as Interest rate."
+  }
+ ]
+}

@@ -1,0 +1,215 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_65",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that CEO compensation at American companies like General Motors is uniquely high compared to international counterparts and to link this disparity to profit distribution.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "General Motors CEO compensation is 22.000 in the table's value field.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "General Motors",
+     "x": "value",
+     "field": "value",
+     "value": 22.0,
+     "note": "Table value cell for the only entity row."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "GM CEO compensation is 22.000",
+    "the GM CEO compensation value is 22.0",
+    "General Motors reaches 22.000 in the table's value field"
+   ],
+   "visual_evidence_rule": "A bar, endpoint, or label for General Motors must encode the value 22.000.",
+   "temporal_anchor": "the clause comparing the compensation for General Motors CEO",
+   "reviewer_question": "Must the video show 22.000 as the GM CEO compensation value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "General Motors has a relative/profit measure of 0.0750 in the table's relative_value field.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "General Motors",
+     "x": "relative_value",
+     "field": "relative_value",
+     "value": 0.075,
+     "note": "Table relative_value cell for the only entity row."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "GM's relative value is 0.0750",
+    "the relative/profit measure is 0.075",
+    "GM CEO compensation is 0.0750 of profits"
+   ],
+   "visual_evidence_rule": "A label or visual encoding must show 0.0750 for General Motors as the relative/profit measure.",
+   "temporal_anchor": "the clause about how much of their profits these people have earned",
+   "reviewer_question": "Should the video interpret relative_value=0.0750 as a profit share, or keep it as an unlabeled relative index?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The table's 0.0750 relative value converts to 7.5 percent.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "General Motors",
+     "x": "relative_value",
+     "field": "relative_value",
+     "value": 0.075,
+     "note": "Formula: 0.0750 * 100 = 7.5."
+    }
+   ],
+   "computation": "0.0750 * 100 = 7.5",
+   "accepted_routes": [
+    "7.5%",
+    "about 7.5 percent",
+    "7.5 cents per dollar"
+   ],
+   "visual_evidence_rule": "If shown as a percentage, the chart must display 7.5% or an equivalent percent label for General Motors.",
+   "temporal_anchor": "the clause about how much of their profits these people have earned",
+   "reviewer_question": "May the video convert 0.0750 into 7.5%, or must it preserve 0.0750 exactly?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "If 0.0750 is a share of profits, then GM CEO compensation of 22.000 implies a profit base of about 293.333 table units.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "General Motors",
+     "x": "value / relative_value",
+     "field": "value",
+     "value": 22.0,
+     "note": "Uses table value 22.000 and relative_value 0.0750."
+    }
+   ],
+   "computation": "22.000 / 0.0750 = 293.333",
+   "accepted_routes": [
+    "implied profit base is about 293.3 table units",
+    "if 7.5% equals 22.000, the whole is about 293.3",
+    "22.000 divided by 0.0750 equals 293.333"
+   ],
+   "visual_evidence_rule": "If displayed, the derived profit base must be clearly labeled as implied/calculated, not as a table-provided value.",
+   "temporal_anchor": "the clause about part of the reason for this gap when looking at how much of their profits these people have earned",
+   "reviewer_question": "Should the video derive and display an implied profit total, or is that beyond the table?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "General Motors is the only entity in the clip's data table, so the chart can show only one GM data point and cannot numerically rank VW/Toyota against it.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "General Motors",
+     "x": "x_px",
+     "field": "x_px",
+     "value": 497.5,
+     "note": "Single table row; x_px=497.5 positions the one GM bar/entity."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "GM is the only company with data",
+    "the chart shows a single GM bar/entity",
+    "no numeric Volkswagen or Toyota values are available"
+   ],
+   "visual_evidence_rule": "Only one entity, General Motors, is rendered as a data mark; VW/Toyota may appear qualitatively but not with numeric bars or values.",
+   "temporal_anchor": "the clause comparing GM with counterparts at Volkswagen in Germany and Toyota in Japan",
+   "reviewer_question": "Must the video avoid numeric VW/Toyota comparisons and show only GM's table value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Qualitative mention that Volkswagen and Toyota are international counterparts, provided no numeric compensation values are invented.",
+  "Describing General Motors as American, since that is identity/context from the narration rather than a table value.",
+  "Showing the 0.0750 relative value as a profit-share visual if the reviewer accepts the narration's profit denominator."
+ ],
+ "unsupported_to_avoid": [
+  "Numeric Volkswagen or Toyota compensation values, rankings, or gaps not present in the table.",
+  "Claiming GM is uniquely highest among American companies from this single row.",
+  "Causal claims that high compensation causes profit distribution or vice versa.",
+  "Treating 0.0750 as dollars, millions, or a percent without explicitly converting it.",
+  "Presenting 293.333 as a table-provided profit value rather than an arithmetic derivation."
+ ],
+ "notes": "Only General Motors has data, so VW/Toyota comparison must remain qualitative. U4 is conditional on interpreting relative_value=0.0750 as a profit share.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.01
+ },
+ "draft_cost": {
+  "sec": 35.4,
+  "usage": {
+   "prompt_tokens": 700,
+   "completion_tokens": 7793,
+   "total_tokens": 8493,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6201
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 316
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

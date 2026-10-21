@@ -1,0 +1,145 @@
+{
+ "clip_id": "bar_79",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 5,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Five labeled bars must be visible: Vision Fund, VC Fund 1, VC Fund 2, VC Fund 3, VC Fund 4, with relative heights/values matching 1.000, 0.300, 0.280, 0.260, 0.240."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "VC Fund 1 @ 389.0",
+    "extreme": "min",
+    "expected": 0.3,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Vision Fund bar must be visibly tallest, and the chart should support the gap of 0.700 to VC Fund 1 via annotation, difference marker, or readable scale."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:VC Fund 1 @ 389.0",
+    "mark:Vision Fund @ 690.0"
+   ],
+   "assertion": {
+    "low": "VC Fund 1 @ 389.0",
+    "low_value": 0.3,
+    "high": "Vision Fund @ 690.0",
+    "high_value": 1.0,
+    "delta": 0.7,
+    "ratio": 3.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio/multiplier callout or clearly comparable bar lengths must make the ~3.3x relationship to VC Fund 1 visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:VC Fund 4 @ 363.2",
+    "mark:VC Fund 3 @ 371.8",
+    "mark:VC Fund 2 @ 380.4",
+    "mark:VC Fund 1 @ 389.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "VC Fund 4 @ 363.2",
+      "value": 0.24
+     },
+     {
+      "mark": "VC Fund 3 @ 371.8",
+      "value": 0.26
+     },
+     {
+      "mark": "VC Fund 2 @ 380.4",
+      "value": 0.28
+     },
+     {
+      "mark": "VC Fund 1 @ 389.0",
+      "value": 0.3
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The four non-Vision bars must be ordered or labeled so that VC Fund 1 > VC Fund 2 > VC Fund 3 > VC Fund 4 is visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:VC Fund 4 @ 363.2",
+    "segment:VC Fund 3 @ 371.8",
+    "segment:VC Fund 2 @ 380.4",
+    "segment:VC Fund 1 @ 389.0",
+    "segment:Vision Fund @ 690.0"
+   ],
+   "assertion": {
+    "segment": "VC Fund 4 @ 363.2",
+    "expected_share": 0.1154,
+    "total_of": "unknown",
+    "total": 2.08,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A part-to-whole visual or annotation must show Vision Fund at ~48% of the five-fund total, with the denominator clearly limited to the five displayed funds."
+  }
+ ]
+}

@@ -1,0 +1,244 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_64",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the effectiveness of the smallpox eradication program, using the elimination of cases in India as evidence for its global success.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "India’s reported smallpox cases fell to 0 in 1975, the final year in the series.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases india",
+     "x": "1975",
+     "field": "value",
+     "value": 0,
+     "note": "final year and zero reported cases"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1975, India reported 0 smallpox cases.",
+    "By 1975, reported smallpox cases in India reached zero.",
+    "The series ends at zero cases for India in 1975."
+   ],
+   "visual_evidence_rule": "The final 1975 data point or bar must be shown at 0 and labeled as 0 cases or zero.",
+   "temporal_anchor": "The clause about India’s elimination or the final drop.",
+   "reviewer_question": "Must the video explicitly state that India’s reported cases were 0 in 1975?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest reported case count in the series was 190,000 in 1974.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases india",
+     "x": "1974",
+     "field": "value",
+     "value": 190000,
+     "note": "maximum value in the 1962–1975 series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cases peaked at 190,000 in 1974.",
+    "The 1974 outbreak reached 190,000 reported cases.",
+    "India’s highest reported smallpox total in this series was 190,000 in 1974."
+   ],
+   "visual_evidence_rule": "The 1974 bar or point must be visibly highest and labeled or annotated as 190,000.",
+   "temporal_anchor": "The clause before the final 1975 drop, establishing the peak.",
+   "reviewer_question": "Must the video identify 1974 as the peak year with 190,000 cases?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Reported cases dropped from 190,000 in 1974 to 0 in 1975, a one-year decline of 190,000 cases, or a 100% reduction.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "reported cases india",
+     "x": "1974",
+     "field": "value",
+     "value": 190000,
+     "note": "start of the one-year drop"
+    },
+    {
+     "entity": "reported cases india",
+     "x": "1975",
+     "field": "value",
+     "value": 0,
+     "note": "end of the one-year drop"
+    }
+   ],
+   "computation": "190000 - 0 = 190000; (190000 - 0) / 190000 * 100 = 100%",
+   "accepted_routes": [
+    "The 1974-to-1975 drop was 190,000 cases, reaching zero.",
+    "Cases declined 100% from 190,000 in 1974 to 0 in 1975.",
+    "A one-year drop of 190,000 cases eliminated the reported total by 1975."
+   ],
+   "visual_evidence_rule": "Both the 1974 value 190,000 and the 1975 value 0 must be visible, with the change annotated as -190,000 or 100% decrease.",
+   "temporal_anchor": "The clause linking the 1974 peak to the 1975 zero.",
+   "reviewer_question": "Must the video quantify the 1974-to-1975 reduction as 190,000 cases or 100%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "From the first year shown, India reported 55,000 cases in 1962; by 1975 it reported 0, a decline of 55,000 from the series start.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "reported cases india",
+     "x": "1962",
+     "field": "value",
+     "value": 55000,
+     "note": "first year shown"
+    },
+    {
+     "entity": "reported cases india",
+     "x": "1975",
+     "field": "value",
+     "value": 0,
+     "note": "final year shown"
+    }
+   ],
+   "computation": "55000 - 0 = 55000; (55000 - 0) / 55000 * 100 = 100% decline from the 1962 baseline",
+   "accepted_routes": [
+    "Reported cases fell from 55,000 in 1962 to 0 in 1975.",
+    "The 1962 baseline of 55,000 cases reached zero by 1975.",
+    "Over the shown period, cases were reduced by 55,000 from the starting value."
+   ],
+   "visual_evidence_rule": "If used, both the 1962 value 55,000 and the 1975 value 0 should be visible or labeled.",
+   "temporal_anchor": "An optional baseline clause contrasting the start with the final year.",
+   "reviewer_question": "Should the video include the 1962 starting value as context, or is the 1974 peak the intended baseline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 1975 value of 0 is the only zero in the series; all prior years had at least 25,000 cases, so it crosses below the previous minimum.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "reported cases india",
+     "x": "1975",
+     "field": "value",
+     "value": 0,
+     "note": "the only zero in the series"
+    },
+    {
+     "entity": "reported cases india",
+     "x": "1969",
+     "field": "value",
+     "value": 25000,
+     "note": "prior minimum, also 1971"
+    },
+    {
+     "entity": "reported cases india",
+     "x": "1971",
+     "field": "value",
+     "value": 25000,
+     "note": "prior minimum"
+    }
+   ],
+   "computation": "min(1962–1974 values) = 25,000 (1969 and 1971); 1975 = 0, so 1975 is below the prior minimum.",
+   "accepted_routes": [
+    "In 1975, cases dropped to 0, below the earlier minimum of 25,000.",
+    "The only zero in the series occurs in 1975; prior years were at least 25,000.",
+    "India crossed from a prior low of 25,000 to zero in 1975."
+   ],
+   "visual_evidence_rule": "If used, the chart should show prior minimum years at 25,000 and the 1975 point at 0, making the threshold crossing clear.",
+   "temporal_anchor": "An optional clause emphasizing elimination as a threshold crossing.",
+   "reviewer_question": "Should the video call out that 1975 is the only zero and prior years never fell below 25,000?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may frame India’s 1975 zero as a case study for the eradication program’s success, but the table itself only supports India.",
+  "It may show that cases were volatile before 1974, with 85,000 cases in 1963, 1967, and 1973.",
+  "It may use the table’s relative_value scale, where 1974 = 0.95 and 1975 = 0, if the chart uses normalized units.",
+  "It may state the 1974 peak was more than double the 1973 value (190,000 vs 85,000; +105,000)."
+ ],
+ "unsupported_to_avoid": [
+  "Global eradication or worldwide elimination claims from an India-only table.",
+  "Causal claims that the program directly caused the 1974-to-1975 drop without causal data.",
+  "A steady-decline narrative; the table fluctuates and has a large 1974 spike.",
+  "Extrapolating before 1962 or after 1975.",
+  "Wrong percentage denominators; if using percent decline, use the 190,000 1974 value or 55,000 1962 value as stated."
+ ],
+ "notes": "The India-only table supports a case-study elimination claim, not global data. The core required message is the 1974 peak and 1975 zero, with the one-year drop as the strongest effectiveness evidence.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 41.4,
+  "usage": {
+   "prompt_tokens": 963,
+   "completion_tokens": 9745,
+   "total_tokens": 10708,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7698
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 707
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

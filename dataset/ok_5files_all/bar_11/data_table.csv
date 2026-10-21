@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_11,Motorcyclists,motorcyclists,240.0,,1.000,1.0000,,#9E9E9E,printed
+bar_11,Walkers,walkers,480.0,,0.400,0.4000,,#1F4E9C,printed
+bar_11,Cyclists,cyclists,720.0,,0.330,0.3300,,#E45756,printed
+bar_11,Car drivers,car-drivers,960.0,,0.050,0.0500,,#C9C9C9,printed

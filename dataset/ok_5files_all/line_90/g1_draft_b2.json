@@ -1,0 +1,230 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_90",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the timeline and key phases of the US military conflict in Iraq, from the 2003 invasion through the insurgency and surge to the withdrawal in 2010.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The US-troops series opens at its minimum level, about 2,381 (relative_value 0.0000), establishing the pre-buildup/invasion-start baseline.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "US troops",
+     "x": "start of series",
+     "field": "value",
+     "value": 2380.9524,
+     "note": "opening minimum; relative_value 0.0000"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "starts at the series minimum, about 2,381",
+    "opens at relative_value 0.00",
+    "begins essentially at zero on the normalized US-troops scale"
+   ],
+   "visual_evidence_rule": "The first US-troops value shown must be at the minimum level.",
+   "temporal_anchor": "The first shots of that war were fired here",
+   "reviewer_question": "Should the opening minimum be obligatory as the invasion-start baseline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "After the opening baseline, US troop level rises steeply to a high plateau around 152,381 (relative_value 0.8721), and is already about 140,381 (relative_value 0.8023) by the 2005 marker.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "US troops",
+     "x": "early high plateau",
+     "field": "value",
+     "value": 152380.9524,
+     "note": "repeated plateau value; relative_value 0.8721"
+    },
+    {
+     "entity": "US troops",
+     "x": "2005",
+     "field": "value",
+     "value": 140380.9524,
+     "note": "x_value 2005 marker; relative_value 0.8023"
+    }
+   ],
+   "computation": "152380.9524 - 2380.9524 = 150000; 152380.9524 / 2380.9524 ≈ 64.0",
+   "accepted_routes": [
+    "early buildup reaches a high plateau around 152,381",
+    "US troop level rises roughly 64x from the opening baseline to about 152,381",
+    "by 2005 the level is near 140,381, close to the early plateau"
+   ],
+   "visual_evidence_rule": "The US-troops series must visibly rise steeply from the first minimum to a high plateau near 152,381.",
+   "temporal_anchor": "The hammer blows of the American attack started",
+   "reviewer_question": "Must the early steep buildup and high plateau be shown as a distinct phase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series contains a pre-surge trough around 117,381 (relative_value 0.6686), the lowest post-buildup level before the later maximum.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "US troops",
+     "x": "pre-surge trough",
+     "field": "value",
+     "value": 117380.9524,
+     "note": "lowest post-buildup value before the peak; relative_value 0.6686"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "dips to a local low of about 117,381",
+    "pre-surge trough is about 0.67 of the series maximum",
+    "falls from the early plateau to roughly 117,381 before turning upward"
+   ],
+   "visual_evidence_rule": "The US-troops series must show a local trough around 117,381 before the maximum.",
+   "temporal_anchor": "what turned into a decade of insurgency",
+   "reviewer_question": "Should the pre-surge trough be required or treated as optional shape detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The surge produces the series maximum at about 174,381 (relative_value 1.0000), higher than the pre-surge trough and earlier high plateau.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "US troops",
+     "x": "surge peak",
+     "field": "value",
+     "value": 174380.9524,
+     "note": "highest table value; relative_value 1.0000"
+    },
+    {
+     "entity": "US troops",
+     "x": "pre-surge trough",
+     "field": "value",
+     "value": 117380.9524,
+     "note": "used for comparison; relative_value 0.6686"
+    }
+   ],
+   "computation": "174380.9524 - 117380.9524 = 57000; 174380.9524 / 117380.9524 ≈ 1.49",
+   "accepted_routes": [
+    "surge peak reaches the maximum at about 174,381",
+    "highest US troop level is about 174,381",
+    "peak is about 1.49 times the pre-surge trough"
+   ],
+   "visual_evidence_rule": "The highest point of the US-troops series must be at about 174,381, visibly above earlier levels.",
+   "temporal_anchor": "No matching clause in the provided narration; the intent's surge phase needs an added clause.",
+   "reviewer_question": "Is the surge peak obligatory at the series maximum?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After the surge maximum, US troop level declines through withdrawal and ends at about 2,381 (relative_value 0.0000), returning to the opening baseline.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "US troops",
+     "x": "end of series",
+     "field": "value",
+     "value": 2380.9524,
+     "note": "final value equals opening minimum; relative_value 0.0000"
+    }
+   ],
+   "computation": "174380.9524 - 2380.9524 = 172000; 2380.9524 / 174380.9524 ≈ 0.01365",
+   "accepted_routes": [
+    "withdrawal ends at about 2,381, the same as the opening baseline",
+    "falls from the peak back to the minimum",
+    "declines by about 172,000 from the peak to the final low"
+   ],
+   "visual_evidence_rule": "The US-troops series must end at the same low level as the start, after a decline from the maximum.",
+   "temporal_anchor": "No matching clause in the provided narration; the intent's 2010 withdrawal needs an added clause.",
+   "reviewer_question": "Must the video show the withdrawal returning to the opening baseline by the end?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2005 time marker (140380.9524, relative_value 0.8023) and 2007 time marker (137380.9524, relative_value 0.7849) can be shown as labeled timeline anchors.",
+  "Intermediate fluctuations around the high plateau, such as 157380.9524 (relative_value 0.9012) and 147380.9524 (relative_value 0.8430), are valid optional shape details.",
+  "The peak-to-trough ratio (174380.9524 / 117380.9524 ≈ 1.49) can be shown as an optional comparison."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that the US attack caused the insurgency or that specific troop levels caused later events.",
+  "Absolute units such as soldiers, percent, dollars, or casualties because the table's unit column is blank.",
+  "Exact years 2003 or 2010 as data values; the table only has x_value markers for 2005 and 2007.",
+  "Chart-type, color, axis-tick, or x_px positional requirements.",
+  "Claiming the 2007 marker is the surge peak; the table's maximum occurs later in the series.",
+  "Extrapolating before the first row or after the final row."
+ ],
+ "notes": "The table is a single US-troops series with a blank unit column, so units describe the table's value/relative_value shape rather than adding external units. The five proposed units cover start, early buildup, pre-surge trough, surge maximum, and withdrawal endpoint; the pre-surge trough is marked optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 62.1,
+  "usage": {
+   "prompt_tokens": 3756,
+   "completion_tokens": 14266,
+   "total_tokens": 18022,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12282
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 3244
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

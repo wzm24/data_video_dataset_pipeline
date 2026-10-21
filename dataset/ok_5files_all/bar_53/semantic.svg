@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#fdfdfb"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Consumption taxes</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="150.0" y1="590.0" x2="1220.0" y2="590.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="150.0" y1="140.0" x2="150.0" y2="590.0" stroke="#666666" stroke-width="3"/>
+<line data-role="gridline" x1="150.0" y1="590.0" x2="1220.0" y2="590.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="142.0" y1="590.0" x2="150.0" y2="590.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="134.0" y="596.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">0%</text>
+<line data-role="gridline" x1="150.0" y1="440.0" x2="1220.0" y2="440.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="142.0" y1="440.0" x2="150.0" y2="440.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="134.0" y="446.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">10%</text>
+<line data-role="gridline" x1="150.0" y1="290.0" x2="1220.0" y2="290.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="142.0" y1="290.0" x2="150.0" y2="290.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="134.0" y="296.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">20%</text>
+<line data-role="gridline" x1="150.0" y1="140.0" x2="1220.0" y2="140.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="142.0" y1="140.0" x2="150.0" y2="140.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="134.0" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">30%</text>
+<g id="entity-bar-1" data-role="entity" data-entity-id="bar-1" data-label="POOREST">
+<rect id="bar-1-bar" data-role="bar" data-entity-id="bar-1" data-value="12.5" x="168.5" y="402.5" width="60.3" height="187.5" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-2" data-role="entity" data-entity-id="bar-2" data-label="Group 2">
+<rect id="bar-2-bar" data-role="bar" data-entity-id="bar-2" data-value="11" x="265.8" y="425.0" width="60.3" height="165.0" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-3" data-role="entity" data-entity-id="bar-3" data-label="Group 3">
+<rect id="bar-3-bar" data-role="bar" data-entity-id="bar-3" data-value="9.5" x="363.0" y="447.5" width="60.3" height="142.5" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-4" data-role="entity" data-entity-id="bar-4" data-label="Group 4">
+<rect id="bar-4-bar" data-role="bar" data-entity-id="bar-4" data-value="8" x="460.3" y="470.0" width="60.3" height="120.0" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-5" data-role="entity" data-entity-id="bar-5" data-label="Group 5">
+<rect id="bar-5-bar" data-role="bar" data-entity-id="bar-5" data-value="7" x="557.6" y="485.0" width="60.3" height="105.0" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-6" data-role="entity" data-entity-id="bar-6" data-label="Group 6">
+<rect id="bar-6-bar" data-role="bar" data-entity-id="bar-6" data-value="6.5" x="654.8" y="492.5" width="60.3" height="97.5" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-7" data-role="entity" data-entity-id="bar-7" data-label="Group 7">
+<rect id="bar-7-bar" data-role="bar" data-entity-id="bar-7" data-value="6" x="752.1" y="500.0" width="60.3" height="90.0" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-8" data-role="entity" data-entity-id="bar-8" data-label="Group 8">
+<rect id="bar-8-bar" data-role="bar" data-entity-id="bar-8" data-value="5" x="849.4" y="515.0" width="60.3" height="75.0" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-9" data-role="entity" data-entity-id="bar-9" data-label="Group 9">
+<rect id="bar-9-bar" data-role="bar" data-entity-id="bar-9" data-value="4.5" x="946.7" y="522.5" width="60.3" height="67.5" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-10" data-role="entity" data-entity-id="bar-10" data-label="Group 10">
+<rect id="bar-10-bar" data-role="bar" data-entity-id="bar-10" data-value="3" x="1043.9" y="545.0" width="60.3" height="45.0" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<g id="entity-bar-11" data-role="entity" data-entity-id="bar-11" data-label="RICHEST">
+<rect id="bar-11-bar" data-role="bar" data-entity-id="bar-11" data-value="2" x="1141.2" y="560.0" width="60.3" height="30.0" fill="#E2705A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+</g>
+<text data-role="category-label" x="198.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">POOREST</text>
+<text data-role="category-label" x="1171.4" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">RICHEST</text>
+</g>
+</svg>

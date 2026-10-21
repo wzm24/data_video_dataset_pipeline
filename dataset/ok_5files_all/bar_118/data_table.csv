@@ -1,0 +1,11 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+bar_118,Require police to be trained,require-police-to-be-trained,748.5,,,0.3883,relative,#6e45a3,relative_only,Strongly
+bar_118,71,71,1074.0,,,0.1203,relative,#a98dd6,relative_only,Somewhat
+bar_118,Create a federal government,create-a-federal-government,717.0,,,0.3391,relative,#6e45a3,relative_only,Strongly
+bar_118,62,62,1028.5,,,0.1477,relative,#a98dd6,relative_only,Somewhat
+bar_118,power to investigate and,power-to-investigate-and,650.5,,,0.2352,relative,#6e45a3,relative_only,Strongly
+bar_118,43,43,913.0,,,0.1750,relative,#a98dd6,relative_only,Somewhat
+bar_118,Make it a crime for police to,make-it-a-crime-for-police-to,671.5,,,0.2680,relative,#6e45a3,relative_only,Strongly
+bar_118,49,49,930.5,,,0.1367,relative,#a98dd6,relative_only,Somewhat
+bar_118,Require officers to live in,require-officers-to-live-in,622.5,,,0.1914,relative,#6e45a3,relative_only,Strongly
+bar_118,35,35,881.5,,,0.2133,relative,#a98dd6,relative_only,Somewhat

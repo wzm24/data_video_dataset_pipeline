@@ -1,0 +1,277 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_142",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that among Americans who believe there is too much economic inequality, the federal government and large corporations are viewed as having the primary responsibility for reducing it.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The two leading categories (federal government and large corporations, per intent) are the top two relative magnitudes.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "66",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3197,
+     "note": "entity_id 66; highest relative_value"
+    },
+    {
+     "entity": "62",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3003,
+     "note": "entity_id 62; second-highest relative_value"
+    }
+   ],
+   "computation": "none; ordering from table relative_value",
+   "accepted_routes": [
+    "The two leading actors are the top two relative magnitudes.",
+    "Federal government and large corporations rank first and second in responsibility.",
+    "The highest and second-highest categories correspond to the two primary-responsibility actors."
+   ],
+   "visual_evidence_rule": "The relative magnitudes of the top two categories must be visibly higher than those of the other three.",
+   "temporal_anchor": "the clause 'how much responsibility different groups should have in reducing economic inequality'",
+   "reviewer_question": "Should the video explicitly name federal government and large corporations as the top two, or is showing the top two categories sufficient given the table lacks entity names?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The largest category is only slightly larger than the second-largest; the top two are nearly tied.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "66",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3197,
+     "note": "entity_id 66; largest"
+    },
+    {
+     "entity": "62",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3003,
+     "note": "entity_id 62; second-largest"
+    }
+   ],
+   "computation": "difference = 0.3197 - 0.3003 = 0.0194; small relative to the values",
+   "accepted_routes": [
+    "The top two are nearly tied.",
+    "The second-largest is only slightly below the largest.",
+    "There is only a small difference between the first and second categories."
+   ],
+   "visual_evidence_rule": "The two tallest relative magnitudes must appear close to each other, with a small visible gap.",
+   "temporal_anchor": "the clause 'how much responsibility different groups should have in reducing economic inequality'",
+   "reviewer_question": "Is the near-tie between the top two required to show both are primary, or is ranking alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The combined relative magnitude of the top two categories is greater than the combined relative magnitude of the remaining three.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "66",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3197,
+     "note": "top category"
+    },
+    {
+     "entity": "62",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3003,
+     "note": "second category"
+    },
+    {
+     "entity": "52",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2519,
+     "note": "remaining category"
+    },
+    {
+     "entity": "46",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2228,
+     "note": "remaining category"
+    },
+    {
+     "entity": "13",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.063,
+     "note": "remaining category"
+    }
+   ],
+   "computation": "sum(top two) = 0.3197 + 0.3003 = 0.6200; sum(rest) = 0.2519 + 0.2228 + 0.0630 = 0.5377; 0.6200 > 0.5377",
+   "accepted_routes": [
+    "The two leading actors together outweigh all other groups combined.",
+    "The combined top two exceed the other three combined.",
+    "The sum of the first two is greater than the sum of the bottom three."
+   ],
+   "visual_evidence_rule": "The combined encoded magnitude of the top two categories must appear larger than the combined encoded magnitude of the other three.",
+   "temporal_anchor": "the clause 'how much responsibility different groups should have in reducing economic inequality'",
+   "reviewer_question": "Is the combined top-two versus rest comparison required, or is it an optional supporting detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The smallest category is dramatically smaller than the largest, roughly one-fifth the relative magnitude.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "13",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.063,
+     "note": "smallest"
+    },
+    {
+     "entity": "66",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3197,
+     "note": "largest"
+    }
+   ],
+   "computation": "0.0630 / 0.3197 ≈ 0.197, about one-fifth",
+   "accepted_routes": [
+    "The smallest category is about one-fifth of the largest.",
+    "The bottom category is roughly five times smaller than the top.",
+    "There is a large gap between the smallest and the largest."
+   ],
+   "visual_evidence_rule": "The shortest relative magnitude must appear much smaller than the tallest.",
+   "temporal_anchor": "the clause 'how much responsibility different groups should have in reducing economic inequality'",
+   "reviewer_question": "Is the smallest category's contrast required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The top two categories form a distinct pair: the drop from the second to the third is larger than the gap between the first and second.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "66",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3197,
+     "note": "first"
+    },
+    {
+     "entity": "62",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3003,
+     "note": "second"
+    },
+    {
+     "entity": "52",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2519,
+     "note": "third"
+    }
+   ],
+   "computation": "gap(first,second) = 0.3197 - 0.3003 = 0.0194; gap(second,third) = 0.3003 - 0.2519 = 0.0484; gap2 > gap1",
+   "accepted_routes": [
+    "The top two are separated from the rest by a larger gap than between them.",
+    "The drop after the second bar is bigger than the gap between the first two.",
+    "The first two form a distinct pair, with a noticeable drop to the third."
+   ],
+   "visual_evidence_rule": "The visual gap between the second and third magnitudes must be larger than the gap between the first and second.",
+   "temporal_anchor": "the clause 'how much responsibility different groups should have in reducing economic inequality'",
+   "reviewer_question": "Is the separation of the top two from the rest required to establish 'primary' responsibility?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The third and fourth categories are closer to each other than either is to the second.",
+  "The top two categories are the only ones above the third-ranked relative magnitude."
+ ],
+ "unsupported_to_avoid": [
+  "Stating absolute percentages from the entity labels as if they were values in the table.",
+  "Claiming which of federal government or large corporations is the single most-cited actor unless the ordering is specified in the intent.",
+  "Causal claims about why these actors are viewed as responsible.",
+  "Extrapolating the findings to all Americans rather than only those who say there is too much economic inequality.",
+  "Treating relative_value as a share of the whole or as a percentage."
+ ],
+ "notes": "The table is relative_only, so all units use relative_value and avoid absolute percentages. Entity labels are used only as identifiers; the top two correspond to federal government and large corporations per the intent.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 57.3,
+  "usage": {
+   "prompt_tokens": 1002,
+   "completion_tokens": 14311,
+   "total_tokens": 15313,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12536
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 490
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,148 @@
+{
+ "clip_id": "area_7",
+ "family": "area",
+ "chart_form": "area/two_panel_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:population 1972 @ x_px=-1",
+    "mark:population 2019 @ x_px=19",
+    "mark:population 2019 @ x_px=-1"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "population 1972 @ x_px=-1",
+      "value": 211.0
+     },
+     {
+      "mark": "population 2019 @ x_px=19",
+      "value": 115.0
+     },
+     {
+      "mark": "population 2019 @ x_px=-1",
+      "value": 115.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both curves shown; 1972 maximum at x=-1 (211) and 2019 plateau at 115 for x=19 through -1 are visible or labeled."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:population 1972 @ x_px=15",
+    "mark:population 2019 @ x_px=15"
+   ],
+   "assertion": {
+    "at": "x_px=15",
+    "above": "population 1972",
+    "above_value": 118.0,
+    "below": "population 2019",
+    "below_value": 115.0,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both curves intersect or visibly swap relative height between x=15 and x=16."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:population 1972 @ x_px=-1",
+    "mark:population 2019 @ x_px=-1"
+   ],
+   "assertion": {
+    "low": "population 2019 @ x_px=-1",
+    "low_value": 115.0,
+    "high": "population 1972 @ x_px=-1",
+    "high_value": 211.0,
+    "delta": 96.0,
+    "ratio": 1.8348,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "1972 value 211 at x=-1 and 2019 value 115 at x=-1 (or the 2019 peak plateau) are visible, with the decline/difference indicated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:population 1972 @ x_px=40",
+    "mark:population 2019 @ x_px=40"
+   ],
+   "assertion": {
+    "low": "population 1972 @ x_px=40",
+    "low_value": 55.0,
+    "high": "population 2019 @ x_px=40",
+    "high_value": 83.0,
+    "delta": 28.0,
+    "ratio": 1.5091,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "At x=40, both 1972 (55) and 2019 (83) values are visible; the increase is highlighted."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:population 1972 @ x_px=74",
+    "mark:population 2019 @ x_px=74"
+   ],
+   "assertion": {
+    "low": "population 1972 @ x_px=74",
+    "low_value": 6.0,
+    "high": "population 2019 @ x_px=74",
+    "high_value": 10.0,
+    "delta": 4.0,
+    "ratio": 1.6667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "At x=74, both 1972 (6) and 2019 (10) values are visible; the increase is highlighted."
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<text x="640.0" y="52" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">PERCENTAGE OF VOTERS WHO LIVE IN</text>
+<text x="640.0" y="89" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">LANDSLIDE COUNTIES*</text>
+<rect x="231.0" y="379.3" width="198.0" height="200.7" fill="#9999c0"/>
+<text x="330.0" y="367.3" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">28%</text>
+<text x="330.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">1976</text>
+<rect x="591.0" y="221.7" width="198.0" height="358.3" fill="#b56b5c"/>
+<text x="690.0" y="209.7" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">50%</text>
+<text x="690.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">2012</text>
+<rect x="951.0" y="150.0" width="198.0" height="430.0" fill="#7d3828"/>
+<text x="1050.0" y="138.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">60%</text>
+<text x="1050.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">2016</text>
+</svg>

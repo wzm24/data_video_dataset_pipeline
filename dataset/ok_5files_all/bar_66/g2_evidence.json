@@ -1,0 +1,119 @@
+{
+ "clip_id": "bar_66",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Corporate tax rate @ value"
+   ],
+   "assertion": {
+    "mark": "Corporate tax rate @ value",
+    "field": "value",
+    "expected": 21.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar, label, or on-screen number for Corporate tax rate must read 21% or 21.0."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Corporate tax rate @ relative_value"
+   ],
+   "assertion": {
+    "segment": "Corporate tax rate @ relative_value",
+    "expected_share": 0.004,
+    "total_of": "unknown",
+    "total": 21.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If the chart uses a relative or normalized scale, the Corporate tax rate bar or segment must align with 0.0833 or 8.33%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 1,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A text, icon, or callout must attribute the reinvestment claim to supporters of the tax cut, not present it as a verified outcome."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "Corporate tax rate @ supporters' prediction",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": true,
+   "visual_evidence_rule_original": "A text, icon, or callout must show workers as the group predicted to benefit most, attributed to supporters."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Corporate tax rate @ value"
+   ],
+   "assertion": {
+    "low": "Corporate tax rate @ value",
+    "low_value": 21.0,
+    "high": "Corporate tax rate @ value",
+    "high_value": 21.0,
+    "delta": null,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart or annotation must indicate a downward change or reduction ending at 21%, e.g., a down arrow, before/after framing, or wording 'cut/lowered to 21%'."
+  }
+ ]
+}

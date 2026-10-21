@@ -1,0 +1,258 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_32",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that income inequality in the United States has returned to levels seen during the Great Depression.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series is the income share of the top 10% over time, with anchors at 1910 (40.5%) and 2010 (47.5%).",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 10%",
+     "x": "1910",
+     "field": "value",
+     "value": 40.5,
+     "note": "Top 10% share at 1910 is 40.5%"
+    },
+    {
+     "entity": "Top 10%",
+     "x": "2010",
+     "field": "value",
+     "value": 47.5,
+     "note": "Top 10% share at 2010 is 47.5%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart tracks the top 10% income share from 1910 to 2010.",
+    "The line shows how much income goes to the top 10% across the twentieth century.",
+    "The measured series is the top 10% share, starting at 40.5% in 1910 and ending at 47.5% in 2010."
+   ],
+   "visual_evidence_rule": "The top 10% series must be identifiable, and the 1910 and 2010 anchors must be visible or labeled.",
+   "temporal_anchor": "The clause introducing income inequality should carry the series identity.",
+   "reviewer_question": "Must the video explicitly identify the series as the top 10% income share, or is a generic 'inequality' label enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The series is not flat: it falls from an early high (49.5%) to an interior low of 32.5%, then rises again toward the recent high.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 10%",
+     "x": "x_px 344.4",
+     "field": "value",
+     "value": 49.5,
+     "note": "early high row; x_value not given"
+    },
+    {
+     "entity": "Top 10%",
+     "x": "x_px 512.7",
+     "field": "value",
+     "value": 32.5,
+     "note": "interior low row; x_value not given"
+    },
+    {
+     "entity": "Top 10%",
+     "x": "2010",
+     "field": "value",
+     "value": 47.5,
+     "note": "recent value after the low"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top 10% share declines from its early high (49.5%) to a low of 32.5%, then climbs again.",
+    "The series follows a U-shape, with a low point of 32.5% between early and recent high levels.",
+    "After falling to 32.5%, the top 10% share returns upward toward its earlier high levels."
+   ],
+   "visual_evidence_rule": "The line must visibly fall to a low and then rise; the 32.5% low should be discernible.",
+   "temporal_anchor": "The 'since the Great Depression' clause should be supported by the fall-and-return trend shape.",
+   "reviewer_question": "Must the mid-century decline and low of 32.5% be shown, or is the recent rise alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series reaches a maximum of 50.0%, the highest top 10% share value shown in the table.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 10%",
+     "x": "x_px 1185.9",
+     "field": "value",
+     "value": 50.0,
+     "note": "maximum value in series; x_value not given"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top 10% share peaks at 50.0%.",
+    "The highest point in the series is 50.0%.",
+    "The maximum top 10% share shown is 50.0%."
+   ],
+   "visual_evidence_rule": "The maximum point must be visible or labeled as 50.0%.",
+   "temporal_anchor": "The phrase 'at its highest level' should carry the maximum value.",
+   "reviewer_question": "Must the 50.0% maximum be shown, or can the video rely on the 2010/early-high comparison alone?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 2010 value (47.5%) is close to the early high (49.5%), about 2 percentage points lower, and about 7 percentage points above the 1910 value (40.5%), indicating a return near early high levels.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 10%",
+     "x": "2010",
+     "field": "value",
+     "value": 47.5,
+     "note": "recent value"
+    },
+    {
+     "entity": "Top 10%",
+     "x": "x_px 344.4",
+     "field": "value",
+     "value": 49.5,
+     "note": "early high row; x_value not given"
+    },
+    {
+     "entity": "Top 10%",
+     "x": "1910",
+     "field": "value",
+     "value": 40.5,
+     "note": "early start"
+    }
+   ],
+   "computation": "49.5 - 47.5 = 2.0 percentage points; 47.5 - 40.5 = 7.0 percentage points",
+   "accepted_routes": [
+    "By 2010, the top 10% share was 47.5%, only about 2 points below the early high of 49.5%.",
+    "The 2010 value is within roughly 2 percentage points of the early twentieth-century peak (49.5%) and 7 points above 1910 (40.5%).",
+    "Recent top 10% share (47.5%) has returned close to the early high (49.5%), well above the 1910 level (40.5%)."
+   ],
+   "visual_evidence_rule": "The chart must make the 2010 point, the early high point, and their proximity visually comparable.",
+   "temporal_anchor": "The clause 'since the Great Depression' should carry the comparison to early high levels.",
+   "reviewer_question": "Is the core claim that recent inequality is near the early high (49.5%), or must it also visibly exceed the early high?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "From 1990 to 2010, the top 10% share rises from 40.68% to 47.5%, an increase of 6.82 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Top 10%",
+     "x": "1990",
+     "field": "value",
+     "value": 40.68,
+     "note": "1990 anchor"
+    },
+    {
+     "entity": "Top 10%",
+     "x": "2010",
+     "field": "value",
+     "value": 47.5,
+     "note": "2010 endpoint"
+    }
+   ],
+   "computation": "47.5 - 40.68 = 6.82 percentage points",
+   "accepted_routes": [
+    "Between 1990 and 2010, the top 10% share increased by about 6.8 percentage points.",
+    "The top 10% share rose from 40.68% in 1990 to 47.5% in 2010.",
+    "Recent decades show a rise from 40.68% to 47.5%, a 6.82-point increase."
+   ],
+   "visual_evidence_rule": "The 1990 and 2010 points should be visible or labeled if this recent-change detail is shown.",
+   "temporal_anchor": "This optional detail can sit under the 'highest level since the Great Depression' clause as recent-rise evidence.",
+   "reviewer_question": "Must the video quantify the 1990-to-2010 rise, or is the longer U-shaped return comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 1910-to-2010 change is an increase of 7.0 percentage points (47.5 - 40.5 = 7.0).",
+  "The early high of 49.5% is 0.5 percentage points below the series maximum of 50.0%.",
+  "The 1990 anchor is 40.68%."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about policy, taxes, or the Great Depression causing the pattern.",
+  "Extrapolating before 1910 or after 2010.",
+  "Treating relative_value as a percentage or using it to state absolute shares.",
+  "Claiming the top 10% share is wealth inequality or a dollar amount.",
+  "Stating exact Great Depression year values not present in the table.",
+  "Claiming the 2010 value (47.5%) is the maximum when the table's maximum is 50.0%."
+ ],
+ "notes": "The core required content is the U-shaped series and the recent-near-early-high comparison; the maximum 50.0% and optional 1990-to-2010 rise support the 'highest level since the Great Depression' claim.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 58.0,
+  "usage": {
+   "prompt_tokens": 2588,
+   "completion_tokens": 13571,
+   "total_tokens": 16159,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11720
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2076
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

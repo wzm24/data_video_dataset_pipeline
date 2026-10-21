@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_2",
+ "family": "bar",
+ "sub_type": "simple",
+ "orientation": "horizontal",
+ "series_count": 1,
+ "category_count": 4,
+ "unit_mark": "bar",
+ "has_axis": true,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 10,
+ "row_count": 8,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "high",
+ "needs_review": false,
+ "time_encoding": "frame",
+ "frames": [
+  1990,
+  2017
+ ],
+ "marks_per_frame": 4,
+ "time_behavior": "frame",
+ "motion": "bar_race"
+}

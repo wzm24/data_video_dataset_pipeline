@@ -1,0 +1,286 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_11",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how the initial speed of a pandemic's spread determines its severity and outcome, demonstrating that a slower onset keeps infection levels below a critical threshold.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Initial onset is steeper for fast spread: from x=7 to x=9, fast rises from 0.029 to 0.404 (average +0.1875 per x-unit), while slow rises from 0.000 to 0.180 (average +0.0900 per x-unit).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "fast spread infections",
+     "x": "7",
+     "field": "value",
+     "value": 0.029,
+     "note": "fast start"
+    },
+    {
+     "entity": "fast spread infections",
+     "x": "9",
+     "field": "value",
+     "value": 0.404,
+     "note": "fast at x=9"
+    },
+    {
+     "entity": "slow spread infections",
+     "x": "7",
+     "field": "value",
+     "value": 0.0,
+     "note": "slow start"
+    },
+    {
+     "entity": "slow spread infections",
+     "x": "9",
+     "field": "value",
+     "value": 0.18,
+     "note": "slow at x=9"
+    }
+   ],
+   "computation": "(0.404-0.029)/(9-7)=0.1875; (0.180-0.000)/(9-7)=0.0900",
+   "accepted_routes": [
+    "Fast initial rise is about 0.19 per step versus about 0.09 per step for slow.",
+    "From x=7 to x=9, fast goes 0.03 to 0.40 while slow goes 0.00 to 0.18.",
+    "Fast spread's early slope is roughly twice the slow spread's early slope."
+   ],
+   "visual_evidence_rule": "Both curves are plotted over x=7-9 with enough y-scale to see fast is visibly above/steeper than slow; values or slope annotations may be shown.",
+   "temporal_anchor": "The narration clause 'depends on how they start' / 'If they start fast with a steep slope... If they start slow with a not-so-steep slope'",
+   "reviewer_question": "Must the video quantify the early slope difference, or is showing fast above slow in the first few time steps sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Fast spread peaks early at 0.988 at x=13 and then crashes to 0.029 by x=18, a drop of 0.959 from its peak.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "fast spread infections",
+     "x": "13",
+     "field": "value",
+     "value": 0.988,
+     "note": "fast peak"
+    },
+    {
+     "entity": "fast spread infections",
+     "x": "18",
+     "field": "value",
+     "value": 0.029,
+     "note": "fast endpoint"
+    }
+   ],
+   "computation": "0.988-0.029=0.959",
+   "accepted_routes": [
+    "Fast peaks near 0.99 at x=13 and falls to about 0.03 by x=18.",
+    "Fast loses roughly 0.96 from its peak by the end of its series.",
+    "Fast curve has a sharp post-peak collapse."
+   ],
+   "visual_evidence_rule": "Fast curve must show its maximum at x=13 and its endpoint at x=18, with the downward segment visible.",
+   "temporal_anchor": "'If they start fast with a steep slope, they end badly'",
+   "reviewer_question": "Must the fast peak-to-end drop be explicit, or is the peak alone enough for 'ends badly'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Slow spread peaks later at 1.000 at x=16, remains high at 0.934 by x=18, and then declines to 0.000 at x=25.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "slow spread infections",
+     "x": "16",
+     "field": "value",
+     "value": 1.0,
+     "note": "slow peak"
+    },
+    {
+     "entity": "slow spread infections",
+     "x": "18",
+     "field": "value",
+     "value": 0.934,
+     "note": "slow still high"
+    },
+    {
+     "entity": "slow spread infections",
+     "x": "25",
+     "field": "value",
+     "value": 0.0,
+     "note": "slow endpoint"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Slow reaches its maximum 1.00 at x=16 and only returns to zero at x=25.",
+    "Slow stays near its peak through x=18 and then tapers to zero by x=25.",
+    "Slow's late peak is followed by a long decline."
+   ],
+   "visual_evidence_rule": "Slow curve must show maximum at x=16, elevated value at x=18, and endpoint at x=25.",
+   "temporal_anchor": "'If they start slow with a not-so-steep slope, they end okayish'",
+   "reviewer_question": "Is the slow curve's late peak and long tail obligatory, or optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Fast spread is higher than slow through x=14, but slow overtakes between x=14 and x=15: at x=14 fast is 0.930 vs slow 0.902, and at x=15 slow is 0.967 vs fast 0.708. Slow stays higher thereafter.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "fast spread infections",
+     "x": "14",
+     "field": "value",
+     "value": 0.93,
+     "note": "fast above slow at x=14"
+    },
+    {
+     "entity": "slow spread infections",
+     "x": "14",
+     "field": "value",
+     "value": 0.902,
+     "note": "slow below fast at x=14"
+    },
+    {
+     "entity": "fast spread infections",
+     "x": "15",
+     "field": "value",
+     "value": 0.708,
+     "note": "fast below slow at x=15"
+    },
+    {
+     "entity": "slow spread infections",
+     "x": "15",
+     "field": "value",
+     "value": 0.967,
+     "note": "slow above fast at x=15"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Fast leads early, slow overtakes around x=15 and remains above fast.",
+    "Order reverses between x=14 and x=15: fast 0.930/0.708 vs slow 0.902/0.967.",
+    "After x=14, slow becomes the higher curve."
+   ],
+   "visual_evidence_rule": "Both curves must be visible around x=14-15 with a clear crossing/order reversal.",
+   "temporal_anchor": "'how pandemics end depends on how they start' or the fast/slow contrast clause",
+   "reviewer_question": "Must the crossover/order reversal be shown, or can the two peak outcomes be shown without the crossing?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Peak timing and height differ by onset: fast peaks earlier at x=13 with 0.988, while slow peaks later at x=16 with 1.000; slow's maximum is slightly higher and arrives 3 x-units later.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "fast spread infections",
+     "x": "13",
+     "field": "value",
+     "value": 0.988,
+     "note": "fast peak"
+    },
+    {
+     "entity": "slow spread infections",
+     "x": "16",
+     "field": "value",
+     "value": 1.0,
+     "note": "slow peak"
+    }
+   ],
+   "computation": "slow peak x - fast peak x = 16-13 = 3",
+   "accepted_routes": [
+    "Fast peaks earlier (x=13, ~0.99) than slow (x=16, 1.00).",
+    "Slow's maximum is later and slightly higher than fast's maximum.",
+    "Fast peaks about 3 x-units earlier than slow."
+   ],
+   "visual_evidence_rule": "Peak markers or annotations for both curves at their maximum x positions.",
+   "temporal_anchor": "'initial speed determines severity and outcome' / fast vs slow clauses",
+   "reviewer_question": "Must the video contrast peak timing/height, or is one curve's peak enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Exact fast endpoint at x=18 is 0.029 and slow endpoint at x=25 is 0.000.",
+  "Slow series extends 7 x-units longer than fast: 25-18=7.",
+  "Intermediate values not mentioned (e.g., x=10-12) may be omitted if curve shapes and crossover remain clear.",
+  "A visual threshold band may be shown only if its value is supplied outside this table; the table itself has no threshold value."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim slow onset keeps infections below any numeric critical threshold: slow reaches 1.000 at x=16 while fast peaks at 0.988 at x=13.",
+  "Do not invent threshold values (e.g., 0.5, 0.9, 0.95) because no threshold field exists in the table.",
+  "Do not say fast has the highest peak; slow's peak is 1.000 vs fast's 0.988.",
+  "Do not extend fast beyond x=18 or slow beyond x=25.",
+  "Do not assert causality beyond the narration's illustrative contrast; the table only contains relative estimated curves."
+ ],
+ "notes": "All numbers are table cells or simple arithmetic (slope, drop, duration/timing). The table lacks a threshold value, so any critical-threshold claim needs external sourcing or must be non-numeric.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 45.7,
+  "usage": {
+   "prompt_tokens": 1396,
+   "completion_tokens": 10463,
+   "total_tokens": 11859,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8213
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 1140
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

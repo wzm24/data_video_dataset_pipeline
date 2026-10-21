@@ -1,0 +1,325 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_76",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the relative mass distribution of the solar system's planets, highlighting Jupiter's dominance.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Jupiter is the largest plotted planetary mass, with a value of 70.000.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Jupiter",
+     "x": "505.6",
+     "field": "value",
+     "value": 70.0,
+     "note": "Jupiter row value; maximum among listed values"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Jupiter is plotted at 70",
+    "Jupiter has a mass value of about 70",
+    "Jupiter is the largest bar/segment with value 70",
+    "Jupiter accounts for roughly 70 units on the chart"
+   ],
+   "visual_evidence_rule": "A bar/segment or label for Jupiter must visibly show 70, or the tallest bar must reach the 70 mark on the value axis.",
+   "temporal_anchor": "Jupiter is so massive...",
+   "reviewer_question": "Must Jupiter's 70 value be explicitly shown or labeled, or is a proportionally dominant visual enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Jupiter's 70.000 equals 70% of the summed listed planetary mass, because the other listed values total 30.000 (1 + 20 + 4 + 5).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Jupiter",
+     "x": "505.6",
+     "field": "value",
+     "value": 70.0,
+     "note": "Jupiter row value"
+    },
+    {
+     "entity": "Terrestrial Planets",
+     "x": "164.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "Terrestrial Planets row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "937.6",
+     "field": "value",
+     "value": 20.0,
+     "note": "First Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1052.8",
+     "field": "value",
+     "value": 4.0,
+     "note": "Second Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1096.0",
+     "field": "value",
+     "value": 5.0,
+     "note": "Third Neptune 5% row value"
+    }
+   ],
+   "computation": "70 / (70 + 1 + 20 + 4 + 5) * 100 = 70%",
+   "accepted_routes": [
+    "Jupiter accounts for about 70% of the total mass shown",
+    "Jupiter is 70 of the 100 summed mass units",
+    "The rest of the planets total 30%, so Jupiter is 70%",
+    "Jupiter is roughly 70% of all planetary mass in the table"
+   ],
+   "visual_evidence_rule": "A cumulative or part-to-whole view must show Jupiter as 70% and the other listed categories as the remaining 30%.",
+   "temporal_anchor": "alone it contains roughly 70 %...",
+   "reviewer_question": "Is Jupiter's 70% share of total listed mass required, or is only its raw 70 value required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The non-Jupiter listed planetary categories together sum to 30.000, i.e. the remaining 30% if the total listed mass is 100.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Terrestrial Planets",
+     "x": "164.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "Terrestrial Planets row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "937.6",
+     "field": "value",
+     "value": 20.0,
+     "note": "First Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1052.8",
+     "field": "value",
+     "value": 4.0,
+     "note": "Second Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1096.0",
+     "field": "value",
+     "value": 5.0,
+     "note": "Third Neptune 5% row value"
+    }
+   ],
+   "computation": "1 + 20 + 4 + 5 = 30",
+   "accepted_routes": [
+    "All other listed planets sum to 30",
+    "The non-Jupiter total is 30 units",
+    "Jupiter's 70 leaves 30 for the rest",
+    "The remaining listed planets account for about 30%"
+   ],
+   "visual_evidence_rule": "The chart must aggregate or visibly sum the non-Jupiter categories to 30, or show the remainder as 30.",
+   "temporal_anchor": "all the other planets...",
+   "reviewer_question": "Must the video explicitly show the other planets totaling 30, or is the 70% Jupiter share sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Jupiter's 70.000 is more than twice the 30.000 combined mass of all other listed planets; the ratio is 70/30, or about 2.33 times.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Jupiter",
+     "x": "505.6",
+     "field": "value",
+     "value": 70.0,
+     "note": "Jupiter row value"
+    },
+    {
+     "entity": "Terrestrial Planets",
+     "x": "164.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "Terrestrial Planets row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "937.6",
+     "field": "value",
+     "value": 20.0,
+     "note": "First Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1052.8",
+     "field": "value",
+     "value": 4.0,
+     "note": "Second Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1096.0",
+     "field": "value",
+     "value": 5.0,
+     "note": "Third Neptune 5% row value"
+    }
+   ],
+   "computation": "70 / 30 = 2.33; 70 - 30 = 40",
+   "accepted_routes": [
+    "Jupiter is over 2 times the combined mass of all other listed planets",
+    "Jupiter's 70 is about 2.33 times the others' total of 30",
+    "Jupiter exceeds all others combined by about 40 units",
+    "Jupiter dominates the other listed planets by more than double"
+   ],
+   "visual_evidence_rule": "A side-by-side, ratio annotation, or combined-remainder mark must show Jupiter's 70 against the 30-unit total for all other listed planets.",
+   "temporal_anchor": "has a massive impact on its surroundings...",
+   "reviewer_question": "Should the video make the explicit 'more than twice all others combined' comparison, or is that optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The listed values are ordered from largest to smallest as Jupiter 70.000 > the 20.000 row > the 5.000 row > the 4.000 row > Terrestrial Planets 1.000.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Jupiter",
+     "x": "505.6",
+     "field": "value",
+     "value": 70.0,
+     "note": "Jupiter row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "937.6",
+     "field": "value",
+     "value": 20.0,
+     "note": "First Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1096.0",
+     "field": "value",
+     "value": 5.0,
+     "note": "Third Neptune 5% row value"
+    },
+    {
+     "entity": "Neptune 5%",
+     "x": "1052.8",
+     "field": "value",
+     "value": 4.0,
+     "note": "Second Neptune 5% row value"
+    },
+    {
+     "entity": "Terrestrial Planets",
+     "x": "164.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "Terrestrial Planets row value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Jupiter is largest, then the 20.000 entry, then 5.000, then 4.000, then Terrestrial Planets at 1.000",
+    "The descending order is 70, 20, 5, 4, 1",
+    "Jupiter > 20 > 5 > 4 > 1",
+    "Jupiter is first, the 20.000 row is second, and Terrestrial Planets is last"
+   ],
+   "visual_evidence_rule": "The chart's bars/segments must be ordered or labeled so the 70, 20, 5, 4, and 1 values appear in descending order.",
+   "temporal_anchor": "relative mass distribution...",
+   "reviewer_question": "Must the video preserve the exact descending order of all five listed values, or can it group or aggregate some categories?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Terrestrial Planets is the smallest listed value at 1.000, which is 1% of the 100.000 summed listed mass.",
+  "The three rows under entity 'Neptune 5%' can be shown separately as 20.000, 4.000, and 5.000 value segments.",
+  "Jupiter's 70.000 can be rounded to 'about 70' or 'roughly 70' in narration.",
+  "The chart may label Jupiter's value as both 70.000 and 70% of the listed total."
+ ],
+ "unsupported_to_avoid": [
+  "Jupiter contains 70% of the mass of the other planets excluding Jupiter; the table gives 70 vs 30, not 70% of the non-Jupiter total.",
+  "Any causal claim that Jupiter's mass produces specific orbital effects on the other planets.",
+  "Values not in the table, such as the Sun's mass, Earth's absolute mass, or exact planet names for the 20.000/4.000/5.000 rows unless separately sourced.",
+  "Extrapolating beyond the listed planetary categories or treating the 30.000 non-Jupiter sum as 30% of Jupiter rather than the remainder of 100."
+ ],
+ "notes": "The table's three 'Neptune 5%' rows are treated as separate value rows because entity_id is duplicated; this labeling ambiguity should be resolved by the reviewer. Total listed mass sums to 100.000, making Jupiter's 70.000 equal to 70% of the listed total.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 53.0,
+  "usage": {
+   "prompt_tokens": 822,
+   "completion_tokens": 12779,
+   "total_tokens": 13601,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10108
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 438
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

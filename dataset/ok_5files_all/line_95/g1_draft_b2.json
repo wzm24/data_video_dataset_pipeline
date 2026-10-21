@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_95",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the decline in the U.S. unauthorized immigrant population following its peak in 2007.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 2017, the U.S. unauthorized immigrant population was 10.5 million.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2017",
+     "field": "value",
+     "value": 10.5,
+     "note": "Final table year and endpoint value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "10.5 million in 2017",
+    "the 2017 total was 10.5 million",
+    "by 2017 the population stood at 10.5 million"
+   ],
+   "visual_evidence_rule": "The 2017 endpoint must be labeled or clearly indicated as the final point on the line.",
+   "temporal_anchor": "The narration clause reporting the 2017 total.",
+   "reviewer_question": "Must the video state the final 2017 value explicitly?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The unauthorized immigrant population peaked at 12.2 million in 2007.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2007",
+     "field": "value",
+     "value": 12.2,
+     "note": "Highest value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "peaked at 12.2 million in 2007",
+    "the 2007 peak was 12.2 million",
+    "reached its highest point of 12.2 million in 2007"
+   ],
+   "visual_evidence_rule": "The 2007 point must be visibly the highest point or annotated as the peak.",
+   "temporal_anchor": "The narration clause identifying the peak in 2007.",
+   "reviewer_question": "Must the video identify 2007 as the peak and give 12.2 million?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From 2007 to 2017, the population fell by 1.7 million.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2007",
+     "field": "value",
+     "value": 12.2,
+     "note": "Peak year value."
+    },
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2017",
+     "field": "value",
+     "value": 10.5,
+     "note": "Final year value."
+    }
+   ],
+   "computation": "(12.2 - 10.5) = 1.7 million",
+   "accepted_routes": [
+    "down by 1.7 million from 2007 to 2017",
+    "a decline of 1.7 million since the 2007 peak",
+    "1.7 million fewer unauthorized immigrants in 2017 than in 2007"
+   ],
+   "visual_evidence_rule": "The chart should support comparison between the 2007 and 2017 values or annotate the 1.7 million gap.",
+   "temporal_anchor": "The narration clause stating the absolute drop from peak to 2017.",
+   "reviewer_question": "Must the video quantify the absolute drop as 1.7 million?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The drop from the 2007 peak to 2017 represents about a 14% decline, calculated as (12.2 - 10.5) / 12.2.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2007",
+     "field": "value",
+     "value": 12.2,
+     "note": "Denominator is the 2007 peak."
+    },
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2017",
+     "field": "value",
+     "value": 10.5,
+     "note": "Endpoint value."
+    }
+   ],
+   "computation": "((12.2 - 10.5) / 12.2) * 100 = 13.9344%, approximately 14%",
+   "accepted_routes": [
+    "about 14% below its 2007 peak",
+    "a 13.9% decline from 2007 to 2017",
+    "nearly 14 percent lower than the peak"
+   ],
+   "visual_evidence_rule": "If a percentage is shown, it must use the 2007 peak as the denominator, not the 2017 value.",
+   "temporal_anchor": "The narration clause reporting the percentage decline from the peak.",
+   "reviewer_question": "Should the percentage decline be required despite the reference narration saying about 15% while table arithmetic gives about 13.9%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After peaking in 2007, the population generally declined through 2017; post-2007 values are below the 12.2 million peak, including 11.4 million in 2010, 11.1 million in 2014, 11.0 million in 2015, and 10.5 million in 2017.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2007",
+     "field": "value",
+     "value": 12.2,
+     "note": "Peak before decline."
+    },
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2010",
+     "field": "value",
+     "value": 11.4,
+     "note": "Post-peak value."
+    },
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2014",
+     "field": "value",
+     "value": 11.1,
+     "note": "Post-peak value."
+    },
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2015",
+     "field": "value",
+     "value": 11.0,
+     "note": "Post-peak value."
+    },
+    {
+     "entity": "unauthorized immigrants",
+     "x": "2017",
+     "field": "value",
+     "value": 10.5,
+     "note": "Final post-peak value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "population trended downward after 2007",
+    "the series falls from 12.2 million in 2007 to 10.5 million in 2017",
+    "post-2007 values remain below the 2007 peak, reaching 10.5 million by 2017"
+   ],
+   "visual_evidence_rule": "The line must visibly decline after the 2007 peak, and post-2007 points should not be higher than 12.2 million.",
+   "temporal_anchor": "The narration clause describing the decline after the peak.",
+   "reviewer_question": "Must the video show the post-2007 downward trend, or is the 2007-to-2017 endpoint comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The longer history rises from 3.5 million in 1990 to 12.2 million in 2007 before the decline.",
+  "Intermediate post-peak values include 11.4 million in 2010, 11.1 million in 2014, and 11.0 million in 2015.",
+  "The 2015-to-2017 change is a decline from 11.0 million to 10.5 million, a drop of 0.5 million."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that specific policies, politics, or economic conditions caused the decline.",
+  "Extrapolating beyond 2017 or claiming what happened after 2017.",
+  "Using the 2017 value as the denominator for the peak-to-2017 percentage decline, e.g. 1.7 / 10.5 = 16.2%.",
+  "Unqualifiedly stating a 15% decline if the table-derived calculation is 13.9%, unless source rounding is explicitly allowed.",
+  "Claiming annual year-by-year decline from 2007 to 2017, since the table only provides selected years."
+ ],
+ "notes": "The table’s 2007-to-2017 arithmetic gives a 1.7 million drop and about 13.9% decline; the reference narration’s 'about 15 percent' should be reconciled by the reviewer. Units overlap intentionally so the human can decide whether endpoint, absolute drop, percentage drop, and post-peak trend are all required.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 27.6,
+  "usage": {
+   "prompt_tokens": 871,
+   "completion_tokens": 6784,
+   "total_tokens": 7655,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4759
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 615
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

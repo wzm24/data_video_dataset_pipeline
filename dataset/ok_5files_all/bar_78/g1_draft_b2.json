@@ -1,0 +1,322 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_78",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the factors driving WeWork's high valuation in contrast to the traditional profitability of Regus.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The main annual series has values 100 for 2013, 130 for 2014, 200 for 2015, 190 for 2016, and 200 for 2017.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 100.0,
+     "note": "2013 bar value; x_px=290.0"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 130.0,
+     "note": "2014 bar value; x_px=470.0"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 200.0,
+     "note": "2015 bar value; x_px=650.0"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 190.0,
+     "note": "2016 bar value; x_px=830.0"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 200.0,
+     "note": "2017 bar value; x_px=1010.0"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart shows 100 in 2013, 130 in 2014, 200 in 2015, 190 in 2016, and 200 in 2017.",
+    "Yearly values run 100, 130, 200, 190, and 200 from 2013 through 2017.",
+    "The series starts at 100 and ends at 200, with intermediate values 130, 200, and 190."
+   ],
+   "visual_evidence_rule": "Year labels 2013–2017 must be visible, and each bar or point must be readable or directly annotated with its value.",
+   "temporal_anchor": "the opening/overview clause that establishes the data being shown",
+   "reviewer_question": "Is the full 2013–2017 series required, or can the video omit some years?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The series is not monotonically increasing: it rises from 2013 to 2015, falls in 2016, and returns to its 2015 peak in 2017.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 100.0,
+     "note": "series start"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 130.0,
+     "note": "increase from 2013"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 200.0,
+     "note": "local/global peak"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 190.0,
+     "note": "only year-over-year decline"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 200.0,
+     "note": "recovery to 2015 peak"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "After rising from 100 in 2013 to 200 in 2015, the value dips to 190 in 2016 before returning to 200 in 2017.",
+    "The series reaches 200 twice, in 2015 and 2017, with a 2016 dip to 190.",
+    "2016 is the only year-over-year decline in the 2013–2017 series."
+   ],
+   "visual_evidence_rule": "The chart must make the 2016 decline and 2017 recovery visible, e.g., the 2016 bar lower than 2015 and 2017.",
+   "temporal_anchor": "the narration clause describing the trajectory over time",
+   "reviewer_question": "Must the 2016 dip and 2017 recovery be shown, or is overall growth enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From 2013 to 2017, the value doubles: 100 to 200, a 100% increase.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 100.0,
+     "note": "starting value"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 200.0,
+     "note": "ending value"
+    }
+   ],
+   "computation": "(200 - 100) / 100 = 1.00 = 100% increase; 200 / 100 = 2x",
+   "accepted_routes": [
+    "The value doubles from 100 to 200 between 2013 and 2017.",
+    "It grows 100% over the period.",
+    "2017 is 2x the 2013 value."
+   ],
+   "visual_evidence_rule": "First and last values, 100 and 200, must be visible or directly comparable as a 2x relationship.",
+   "temporal_anchor": "the closing or overall-change clause",
+   "reviewer_question": "Is the 2x/100% overall change required, or only the endpoint values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "2016 is a decline of 10 units, or 5%, from 2015's 200 to 190; 2017 recovers by about 5.3% back to 200.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 200.0,
+     "note": "pre-decline value"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 190.0,
+     "note": "decline year"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 200.0,
+     "note": "recovery year"
+    }
+   ],
+   "computation": "(190 - 200) / 200 = -0.05 = -5%; (200 - 190) / 190 = 0.05263 ≈ 5.3%",
+   "accepted_routes": [
+    "The 2016 dip is 10 units, or 5%, from 200 to 190.",
+    "2017 rebounds from 190 to 200, about a 5.3% increase.",
+    "The value falls 5% in 2016 and then regains the lost ground in 2017."
+   ],
+   "visual_evidence_rule": "2016 must be visibly lower than 2015 and 2017 by an amount that reads as about a 5% change.",
+   "temporal_anchor": "the clause mentioning the 2016 dip or 2017 recovery",
+   "reviewer_question": "Should the video quantify the 2016 dip and 2017 rebound, or just note the direction?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The relative_value metric rises from 0.40 in 2013 to 0.80 in 2015, dips to 0.76 in 2016, and returns to 0.80 in 2017; its 2015 and 2017 highs are double the 2013 level.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "relative value in 2013"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "relative_value",
+     "value": 0.52,
+     "note": "relative value in 2014"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.8,
+     "note": "relative value in 2015"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.76,
+     "note": "relative value in 2016"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "relative_value",
+     "value": 0.8,
+     "note": "relative value in 2017"
+    }
+   ],
+   "computation": "0.80 / 0.40 = 2.0; 0.80 - 0.40 = 0.40",
+   "accepted_routes": [
+    "Relative value rises from 0.40 in 2013 to 0.80 in 2015, dips to 0.76 in 2016, and returns to 0.80 in 2017.",
+    "The 0.80 relative values in 2015 and 2017 are twice the 2013 value of 0.40.",
+    "Relative value peaks at 0.80 in both 2015 and 2017."
+   ],
+   "visual_evidence_rule": "The relative_value metric must be explicitly shown, e.g., secondary bars, labels, or annotations, not merely inferred from the primary value bars.",
+   "temporal_anchor": "the narration clause discussing Regus's profitability or the relative metric",
+   "reviewer_question": "Should the video be required to show and quantify the relative_value series, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "2014's value is 130 and its relative_value is 0.52.",
+  "2015 and 2017 tie for the highest primary value at 200.",
+  "2013 is the lowest primary value at 100.",
+  "2016's primary value is 190 and its relative_value is 0.76."
+ ],
+ "unsupported_to_avoid": [
+  "Using the $43 billion figure from the narration as if it came from the table.",
+  "Asserting that WeWork's valuation or Regus's profitability is the cause of the values shown.",
+  "Treating relative_value as profit margin, share, or any specific denominator unless the video labels it that way.",
+  "Comparing WeWork and Regus directly as separate bars or entities; the table only has year entities.",
+  "Extrapolating beyond 2017 or interpolating years not in the table.",
+  "Saying the 2016 decline is 10% by using 100 as the denominator; the correct denominator is 200."
+ ],
+ "notes": "The table appears to contain only a 2013–2017 year series with no WeWork/Regus split, so all units stay within that series. The main trade-offs are whether to require the full series/dip and whether the relative_value metric is central.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 42.6,
+  "usage": {
+   "prompt_tokens": 742,
+   "completion_tokens": 10301,
+   "total_tokens": 11043,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7769
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 486
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

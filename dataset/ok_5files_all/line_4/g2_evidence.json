@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_4",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Net housing additions @ 2018-19"
+   ],
+   "assertion": {
+    "series": "Net housing additions",
+    "values": [
+     247770.0
+    ],
+    "threshold_between": [
+     247770.0,
+     247770.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible target reference and the 2018-19 maximum mark must make the maximum appear below the target."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Net housing additions @ 2000-01",
+    "mark:Net housing additions @ 2018-19"
+   ],
+   "assertion": {
+    "low": "Net housing additions @ 2000-01",
+    "low_value": 132000.0,
+    "high": "Net housing additions @ 2018-19",
+    "high_value": 247770.0,
+    "delta": 115770.0,
+    "ratio": 1.877,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The first and last annual marks must be visible or labeled so their values can be compared."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Net housing additions @ 2007-08 (inferred from annual row order)",
+    "mark:Net housing additions @ 2012-13 (inferred from annual row order)"
+   ],
+   "assertion": {
+    "low": "Net housing additions @ 2012-13 (inferred from annual row order)",
+    "low_value": 130610.0,
+    "high": "Net housing additions @ 2007-08 (inferred from annual row order)",
+    "high_value": 223530.0,
+    "delta": 92920.0,
+    "ratio": 1.7114,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2007-08 high and 2012-13 low must be visible or labeled sufficiently to see the decline."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Net housing additions @ 2012-13 (inferred from annual row order)",
+    "mark:Net housing additions @ 2018-19"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Net housing additions @ 2012-13 (inferred from annual row order)",
+      "value": 130610.0
+     },
+     {
+      "mark": "Net housing additions @ 2018-19",
+      "value": 247770.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The 2012-13 low and 2018-19 endpoint must be visible or labeled to see the recovery."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Net housing additions @ 2018-19",
+    "mark:Net housing additions @ 2007-08 (inferred from annual row order)"
+   ],
+   "assertion": {
+    "greater": "Net housing additions @ 2018-19",
+    "lesser": "Net housing additions @ 2007-08 (inferred from annual row order)",
+    "expected_ratio": 1.1084,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2007-08 local peak and 2018-19 maximum must be visible or labeled for comparison."
+  }
+ ]
+}

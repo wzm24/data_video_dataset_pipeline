@@ -1,0 +1,144 @@
+{
+ "clip_id": "bar_58",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "extreme": "max",
+    "expected": 72.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The eyewitness-misinterpretation bar must be visibly the tallest and must be labeled or annotated with 72% or 72."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "mark:Improper forensics @ Improper forensics"
+   ],
+   "assertion": {
+    "greater": "Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "lesser": "Improper forensics @ Improper forensics",
+    "expected_ratio": 1.5319,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The eyewitness bar must be shown alongside the other three bars at lower heights, with values or labels visible enough to compare."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "mark:Improper forensics @ Improper forensics",
+    "mark:False confessions @ False confessions",
+    "mark:Informant @ Informant"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Eyewitness misinterpretation @ Eyewitness misinterpretation",
+      "value": 72.0
+     },
+     {
+      "mark": "Improper forensics @ Improper forensics",
+      "value": 47.0
+     },
+     {
+      "mark": "False confessions @ False confessions",
+      "value": 27.0
+     },
+     {
+      "mark": "Informant @ Informant",
+      "value": 15.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four bars must appear in the correct order or be visibly sortable as eyewitness > improper forensics > false confessions > informant."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "mark:Improper forensics @ Improper forensics"
+   ],
+   "assertion": {
+    "greater": "Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "lesser": "Improper forensics @ Improper forensics",
+    "expected_ratio": 1.5319,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The top two bars must be visible with their values 72 and 47, plus a gap annotation or label showing 25."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "mark:False confessions @ False confessions"
+   ],
+   "assertion": {
+    "greater": "Eyewitness misinterpretation @ Eyewitness misinterpretation",
+    "lesser": "False confessions @ False confessions",
+    "expected_ratio": 2.6667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The eyewitness bar 72 and false-confessions bar 27 must be visible, with an annotation or scale indicating a greater-than-twofold difference."
+  }
+ ]
+}

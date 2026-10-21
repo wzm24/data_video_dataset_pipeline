@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_90",
+ "intent_en": "To illustrate that Israel's population is growing while most other developed nations are not.",
+ "previous_intent": "To illustrate that Israel's population is growing, contrasting with the future demographic outlook of most other developed countries including the US, Europe, and Australia.",
+ "narration_support": "Israel's growth is not quite so dramatic, but it is growing, which is more than you can say about the future of most developed countries",
+ "chart_support": "Population pyramid with a broad base indicating a growing population, displayed alongside flags of Israel and other developed nations (EU, US, Canada, Australia)",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly contrasts Israel's growth with other developed countries. The chart shows a classic population pyramid shape (wide base) which signifies population growth, and includes flags of the countries mentioned in the narration.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_121",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:In person at polling places @ Very",
+    "mark:By absentee or mail-in ballot @ Very"
+   ],
+   "assertion": {
+    "greater": "In person at polling places @ Very",
+    "lesser": "By absentee or mail-in ballot @ Very",
+    "expected_ratio": 2.4497,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The mark for In person at polling places under Very must extend farther than the mark for By absentee or mail-in ballot under Very."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Very)"
+   ],
+   "assertion": {
+    "mark": "In person at polling places @ Very",
+    "extreme": "max",
+    "expected": 0.268,
+    "compared_set": "Very",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The mark for In person at polling places under Very must be the farthest-extending or tallest among all four marks."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Very)"
+   ],
+   "assertion": {
+    "mark": "By absentee or mail-in ballot @ Very",
+    "extreme": "min",
+    "expected": 0.1094,
+    "compared_set": "Very",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The mark for By absentee or mail-in ballot under Very must be the shortest or least-extending among all four marks."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:In person at polling places @ Very",
+    "mark:By absentee or mail-in ballot @ Very"
+   ],
+   "assertion": {
+    "low": "By absentee or mail-in ballot @ Very",
+    "low_value": 0.1094,
+    "high": "In person at polling places @ Very",
+    "high_value": 0.268,
+    "delta": 0.1586,
+    "ratio": 2.4497,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The In person at polling places Very mark must appear more than twice as long as the By absentee or mail-in ballot Very mark."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:49 @ Somewhat",
+    "mark:20 @ Somewhat"
+   ],
+   "assertion": {
+    "greater": "49 @ Somewhat",
+    "lesser": "20 @ Somewhat",
+    "expected_ratio": 1.0789,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two Somewhat marks (for entities 49 and 20) must appear similar in length and must fall between the mail-in Very and in-person Very marks."
+  }
+ ]
+}

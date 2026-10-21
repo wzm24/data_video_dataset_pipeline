@@ -1,0 +1,142 @@
+{
+ "clip_id": "bar_94",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 4,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars or labels must show these four entities and their corresponding values, or a clearly readable data table must be present."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Finland @ 560.0",
+    "mark:Japan @ 600.0",
+    "mark:Israel @ 660.0",
+    "mark:South Korea @ 680.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Finland @ 560.0",
+      "value": 0.65
+     },
+     {
+      "mark": "Japan @ 600.0",
+      "value": 0.75
+     },
+     {
+      "mark": "Israel @ 660.0",
+      "value": 0.9
+     },
+     {
+      "mark": "South Korea @ 680.0",
+      "value": 0.95
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars must be ordered or labeled so the rank order South Korea > Israel > Japan > Finland is unambiguous."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:South Korea @ 680.0",
+    "mark:Israel @ 660.0"
+   ],
+   "assertion": {
+    "greater": "South Korea @ 680.0",
+    "lesser": "Israel @ 660.0",
+    "expected_ratio": 1.0556,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Israel bar must be adjacent to and lower than the South Korea bar, with both entities identifiable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Israel @ 660.0",
+    "mark:South Korea @ 680.0"
+   ],
+   "assertion": {
+    "low": "Israel @ 660.0",
+    "low_value": 0.9,
+    "high": "South Korea @ 680.0",
+    "high_value": 0.95,
+    "delta": 0.05,
+    "ratio": 1.0556,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A difference annotation or side-by-side values 0.950 and 0.900 must make the 0.050 gap visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "South Korea @ 680.0",
+    "extreme": "max",
+    "expected": 0.95,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "South Korea bar must be the tallest bar."
+  }
+ ]
+}

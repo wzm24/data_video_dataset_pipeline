@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_58",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that national polling accuracy for presidential elections has improved significantly over time, with recent polls being much more accurate than in the past.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The largest national poll error in the series is 12.0 pts, occurring at the 1936 point.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "National polls off by",
+     "x": "1936",
+     "field": "value",
+     "value": 12.0,
+     "note": "highest value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 1936 national poll error is 12.0 pts, the largest in the series.",
+    "The chart peaks at 12.0 pts in 1936.",
+    "The worst error shown is 12.0 pts in 1936."
+   ],
+   "visual_evidence_rule": "The 1936 point must be visibly marked or labeled as the series maximum at 12.0 pts.",
+   "temporal_anchor": "the clause introducing the historical starting point or overall peak",
+   "reviewer_question": "Must the video explicitly identify 1936 as the worst error?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The overall error trend is downward from 1936 to 2016: the error falls from 12.0 pts in 1936 to 2.0 pts in 2016.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "National polls off by",
+     "x": "1936",
+     "field": "value",
+     "value": 12.0,
+     "note": "start of long-run trend"
+    },
+    {
+     "entity": "National polls off by",
+     "x": "2016",
+     "field": "value",
+     "value": 2.0,
+     "note": "endpoint of long-run trend"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series generally trends downward over time.",
+    "Recent errors are lower than early errors.",
+    "The error line falls from 12.0 pts in 1936 to 2.0 pts in 2016."
+   ],
+   "visual_evidence_rule": "The chart must show a generally descending direction from left to right, with the 1936 point high and the 2016 endpoint low.",
+   "temporal_anchor": "the clause claiming national polling is more accurate now than decades ago",
+   "reviewer_question": "Should the trend be described as generally downward even though 1960 is lower than nearby points?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 1936-to-2016 endpoint change is a drop of 10.0 pts (12.0 minus 2.0), and the 2016 error is about one-sixth of the 1936 error.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "National polls off by",
+     "x": "1936",
+     "field": "value",
+     "value": 12.0,
+     "note": "start value for endpoint change"
+    },
+    {
+     "entity": "National polls off by",
+     "x": "2016",
+     "field": "value",
+     "value": 2.0,
+     "note": "end value for endpoint change"
+    }
+   ],
+   "computation": "12.0 - 2.0 = 10.0 pts; 12.0 / 2.0 = 6.0",
+   "accepted_routes": [
+    "The error drops by 10.0 pts from 1936 to 2016.",
+    "2016 error is 2.0 pts compared with 12.0 pts in 1936.",
+    "The error is about six times smaller in 2016 than in 1936."
+   ],
+   "visual_evidence_rule": "Both endpoint values, 12.0 pts for 1936 and 2.0 pts for 2016, must be visible or labeled.",
+   "temporal_anchor": "the clause contrasting current accuracy with a few decades ago",
+   "reviewer_question": "Is the explicit 1936-to-2016 magnitude change required, or is a general downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The recent 2000-through-2016 segment has an average error of about 3.4 pts (sum 17.0 pts over 5 points); excluding the 2000 point, the later four points average about 2.75 pts (sum 11.0 pts over 4 points).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "National polls off by",
+     "x": "2000",
+     "field": "value",
+     "value": 6.0,
+     "note": "labeled 2000 point included in recent segment"
+    },
+    {
+     "entity": "National polls off by",
+     "x": "post-2000 point (x_px 861)",
+     "field": "value",
+     "value": 4.0,
+     "note": "unlabeled point after 2000"
+    },
+    {
+     "entity": "National polls off by",
+     "x": "post-2000 point (x_px 894)",
+     "field": "value",
+     "value": 2.5,
+     "note": "unlabeled point after 2000"
+    },
+    {
+     "entity": "National polls off by",
+     "x": "post-2000 point (x_px 927)",
+     "field": "value",
+     "value": 2.5,
+     "note": "unlabeled point after 2000"
+    },
+    {
+     "entity": "National polls off by",
+     "x": "2016",
+     "field": "value",
+     "value": 2.0,
+     "note": "2016 endpoint included in recent segment"
+    }
+   ],
+   "computation": "(6.0 + 4.0 + 2.5 + 2.5 + 2.0) / 5 = 3.4 pts; excluding 2000: (4.0 + 2.5 + 2.5 + 2.0) / 4 = 2.75 pts",
+   "accepted_routes": [
+    "From 2000 through 2016, the average national poll error is about 3.4 pts.",
+    "After 2000, the later four points average about 2.75 pts.",
+    "Recent errors average roughly 3 pts, depending on whether the 2000 point is included."
+   ],
+   "visual_evidence_rule": "The 2000 point through the 2016 endpoint must be visually distinguishable as the recent segment, with its average or summary value shown or derivable.",
+   "temporal_anchor": "the clause beginning 'Since 2000...'",
+   "reviewer_question": "Should the recent average include the 2000 point (about 3.4 pts) or exclude it (about 2.75 pts)?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The minimum error in the entire series is 1.5 pts in 1960; the 2016 endpoint at 2.0 pts is close to but not below that all-time minimum.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "National polls off by",
+     "x": "1960",
+     "field": "value",
+     "value": 1.5,
+     "note": "lowest value in the table"
+    },
+    {
+     "entity": "National polls off by",
+     "x": "2016",
+     "field": "value",
+     "value": 2.0,
+     "note": "recent endpoint, not the series minimum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The smallest error shown is 1.5 pts in 1960.",
+    "2016 is very accurate at 2.0 pts, but 1960 was slightly better at 1.5 pts.",
+    "The all-time minimum is 1.5 pts, so 2016 is not the absolute best."
+   ],
+   "visual_evidence_rule": "The 1960 point at 1.5 pts must be visible if the video discusses the all-time minimum or claims 2016 is best.",
+   "temporal_anchor": "optional supporting caveat around the accuracy-improvement claim",
+   "reviewer_question": "Should the video include the 1960 minimum to avoid implying 2016 is the most accurate ever?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2000 point is the highest recent error at 6.0 pts, so recent polls are not uniformly below 3 pts.",
+  "The 2016 endpoint is 2.0 pts, one of the lowest values in the table, but not the minimum.",
+  "The series contains a visible dip at 1.5 pts in 1960, so the long-term improvement is not monotonic."
+ ],
+ "unsupported_to_avoid": [
+  "2016 is the most accurate presidential election poll ever; the table shows 1960 at 1.5 pts, lower than 2016's 2.0 pts.",
+  "Accuracy improved monotonically over every election; 1960 and 1980 break a simple monotonic decline.",
+  "All recent polls are within 2–3 pts; the 2000 point is 6.0 pts.",
+  "The average since 2000 is exactly 2–3 pts; including the 2000 point gives about 3.4 pts.",
+  "Any causal explanation for the improvement, such as methodology changes, because the table only contains error values and labels."
+ ],
+ "notes": "The table supports an overall downward error trend and a recent low-error era, but it also shows 1960 as the all-time minimum and 2000 as a recent high. The video should distinguish the 2000-inclusive recent average (about 3.4 pts) from the post-2000 average (about 2.75 pts).",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 53.7,
+  "usage": {
+   "prompt_tokens": 1677,
+   "completion_tokens": 13568,
+   "total_tokens": 15245,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11262
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 1037
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

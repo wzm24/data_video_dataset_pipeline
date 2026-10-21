@@ -1,0 +1,208 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_9",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the extremely thin profit margins typical in grocery retail businesses.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The profit margin is only 3%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "profit margin",
+     "x": "0",
+     "field": "value",
+     "value": 3,
+     "note": "profit-margin row; unit is percent; relative_value is 0.03"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Profit margin: 3%",
+    "The margin is only 3%",
+    "Just 3% profit margin",
+    "A 3 percent profit margin"
+   ],
+   "visual_evidence_rule": "A label, legend, or annotation must show the profit margin as 3% (or 3 percent).",
+   "temporal_anchor": "The clause stating 'you might manage a profit margin of 3%'.",
+   "reviewer_question": "Should the exact 3% profit margin be required, or is a visual-only 3% slice enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The remainder of the ring is 97%, so the profit margin is only a small slice of the whole.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "remainder of the ring",
+     "x": "1",
+     "field": "value",
+     "value": 97,
+     "note": "ring-rest row; unit is percent; source_type is estimated"
+    },
+    {
+     "entity": "profit margin",
+     "x": "0",
+     "field": "value",
+     "value": 3,
+     "note": "profit-margin row; used to establish the 3% slice in the same composition"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The remainder of the ring is 97%",
+    "97% of the ring is not profit margin",
+    "The rest of the donut is 97%",
+    "Non-margin remainder: 97%"
+   ],
+   "visual_evidence_rule": "The donut/ring must visibly include a 97% remainder segment, or the remaining area must be labeled/legend-ed as 97%.",
+   "temporal_anchor": "The same margin clause or the donut reveal that completes the ring after the 3% slice appears.",
+   "reviewer_question": "Is the 97% remainder required as an explicit fact, or is it optional visual context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The remainder is about 32.3 times the profit margin.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "profit margin",
+     "x": "0",
+     "field": "value",
+     "value": 3,
+     "note": "profit margin percent"
+    },
+    {
+     "entity": "remainder of the ring",
+     "x": "1",
+     "field": "value",
+     "value": 97,
+     "note": "remainder percent"
+    }
+   ],
+   "computation": "97 / 3 = 32.333...",
+   "accepted_routes": [
+    "The remainder is about 32 times the profit margin",
+    "97% is roughly 32× the 3% margin",
+    "The non-margin remainder is about 32.3 times the margin",
+    "Profit margin is about 1/32 of the remainder"
+   ],
+   "visual_evidence_rule": "A viewer must be able to see the large remainder vs tiny margin contrast; an annotation or label should communicate the ~32× ratio if this unit is required.",
+   "temporal_anchor": "A contrast/summary clause after the 3% margin statement.",
+   "reviewer_question": "Is the derived ~32× ratio required, optional, or too interpretive?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The gap between the 97% remainder and the 3% profit margin is 94 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "profit margin",
+     "x": "0",
+     "field": "value",
+     "value": 3,
+     "note": "profit margin percent"
+    },
+    {
+     "entity": "remainder of the ring",
+     "x": "1",
+     "field": "value",
+     "value": 97,
+     "note": "remainder percent"
+    }
+   ],
+   "computation": "97 - 3 = 94",
+   "accepted_routes": [
+    "The gap between remainder and margin is 94 percentage points",
+    "97% vs 3% is a 94-point difference",
+    "The remainder exceeds the margin by 94 percentage points",
+    "There is a 94 pp gap between the 97% remainder and 3% margin"
+   ],
+   "visual_evidence_rule": "A chart annotation or label should show the 97% vs 3% contrast and/or the 94 percentage-point gap.",
+   "temporal_anchor": "A contrast/summary clause after the 3% margin statement.",
+   "reviewer_question": "Is the derived 94-percentage-point gap required, optional, or unnecessary?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Profit margin can also be expressed as relative_value 0.03 (3/100).",
+  "The remainder row is marked source_type estimated; this provenance can be mentioned but is not a core data claim.",
+  "The profit margin is a tiny minority of the ring, i.e., 3% of the whole."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that one mistake or bad shelf arrangement wipes out all profit; the table does not quantify loss events.",
+  "Extrapolation that all grocery retailers have exactly a 3% profit margin; the table gives one clip-level value.",
+  "Calling the 97% remainder 'costs', 'expenses', or 'loss'; the table only labels it remainder of the ring.",
+  "Adding a revenue/sales denominator (e.g., 3% of revenue) unless the chart explicitly labels it as such.",
+  "Deriving a dollar example such as $3 profit on $100 in sales; no dollar amount is in the table."
+ ],
+ "notes": "Core required content is the 3% profit margin; the 97% remainder and derived ratio/gap are valid but may be optional depending on whether the chart explicitly labels them. Avoid causal, extrapolative, or unspecified-denominator claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.92
+ },
+ "draft_cost": {
+  "sec": 43.9,
+  "usage": {
+   "prompt_tokens": 626,
+   "completion_tokens": 9702,
+   "total_tokens": 10328,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8196
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 370
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

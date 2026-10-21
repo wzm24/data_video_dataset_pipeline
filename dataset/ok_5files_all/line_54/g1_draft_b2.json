@@ -1,0 +1,293 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_54",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that vaccine effectiveness wanes over time, as indicated by rising case rates in Israel and the US, while reassuring viewers that this trend is not alarming.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Both Israel and US case rates end higher than they start, so the plotted period shows an overall upward trend for both entities.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "180.0",
+     "field": "value",
+     "value": 1.5769,
+     "note": "first plotted Israel point"
+    },
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 3.6769,
+     "note": "last plotted Israel point"
+    },
+    {
+     "entity": "United States (cases/1000)",
+     "x": "180.0",
+     "field": "value",
+     "value": 0.5769,
+     "note": "first plotted US point"
+    },
+    {
+     "entity": "United States (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 5.2769,
+     "note": "last plotted US point"
+    }
+   ],
+   "computation": "Israel change = 3.6769 - 1.5769 = 2.1000; US change = 5.2769 - 0.5769 = 4.7000 (cases/1000).",
+   "accepted_routes": [
+    "Both Israel and US case rates trend upward over the chart.",
+    "Case rates rise from first to last plotted point in Israel and the US.",
+    "Israel and US both finish higher than they began."
+   ],
+   "visual_evidence_rule": "Both series' final markers must be visibly higher on the y-axis than their first markers.",
+   "temporal_anchor": "narration clause about rising case rates in Israel and the US",
+   "reviewer_question": "Must the video explicitly state that both series end higher than they start, or is showing the upward slope enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The US case rate increases by a larger amount than Israel's over the plotted period; the US rise is about 4.7 vs Israel's 2.1 cases per 1,000.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "180.0",
+     "field": "value",
+     "value": 1.5769,
+     "note": "Israel start value"
+    },
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 3.6769,
+     "note": "Israel end value"
+    },
+    {
+     "entity": "United States (cases/1000)",
+     "x": "180.0",
+     "field": "value",
+     "value": 0.5769,
+     "note": "US start value"
+    },
+    {
+     "entity": "United States (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 5.2769,
+     "note": "US end value"
+    }
+   ],
+   "computation": "US change = 5.2769 - 0.5769 = 4.7000; Israel change = 3.6769 - 1.5769 = 2.1000; ratio = 4.7000 / 2.1000 ≈ 2.24.",
+   "accepted_routes": [
+    "The US rise is larger/steeper than Israel's.",
+    "US increases by about 4.7 cases per 1,000 versus Israel's about 2.1.",
+    "The US increase is roughly 2.2 times Israel's increase."
+   ],
+   "visual_evidence_rule": "The US line's net vertical change from first to last point must appear visibly larger than Israel's.",
+   "temporal_anchor": "narration clause contrasting Israel with other countries like the US",
+   "reviewer_question": "Should the video quantify the US-Israel difference in rise, or merely show that the US line is steeper?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The US starts below Israel but surpasses Israel by the final plotted point.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "885.0",
+     "field": "value",
+     "value": 3.3769,
+     "note": "Israel is still above US at x=885"
+    },
+    {
+     "entity": "United States (cases/1000)",
+     "x": "885.0",
+     "field": "value",
+     "value": 2.7769,
+     "note": "US is below Israel at x=885"
+    },
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 3.6769,
+     "note": "Israel final value"
+    },
+    {
+     "entity": "United States (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 5.2769,
+     "note": "US final value, now above Israel"
+    }
+   ],
+   "computation": "none (order reversal: Israel > US at x=885; US > Israel at x=1120).",
+   "accepted_routes": [
+    "Israel is ahead until the final point, when the US overtakes it.",
+    "The lines cross, and the US ends above Israel.",
+    "At the last point, US is higher than Israel after starting lower."
+   ],
+   "visual_evidence_rule": "The Israel and US lines must visibly cross or the final point must show US above Israel while earlier points show Israel above US.",
+   "temporal_anchor": "clause comparing Israel with other countries such as the US",
+   "reviewer_question": "Must the video highlight the US-Israel crossover/final reversal, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the final plotted point, the US case rate is 5.2769 and Israel's is 3.6769 cases per 1,000; the US endpoint is higher.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 5.2769,
+     "note": "US final endpoint"
+    },
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "1120.0",
+     "field": "value",
+     "value": 3.6769,
+     "note": "Israel final endpoint"
+    }
+   ],
+   "computation": "difference = 5.2769 - 3.6769 = 1.6000; ratio = 5.2769 / 3.6769 ≈ 1.44.",
+   "accepted_routes": [
+    "US ends at about 5.28 cases per 1,000; Israel ends at about 3.68.",
+    "Final US value is 5.2769 vs Israel's 3.6769.",
+    "US final case rate is about 1.44 times Israel's final rate."
+   ],
+   "visual_evidence_rule": "The final markers or labels must show US ≈5.28 and Israel ≈3.68 on the y-axis.",
+   "temporal_anchor": "final plotted point or closing chart state",
+   "reviewer_question": "Are the final endpoint values required labels, or is the line shape sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Israel's case rate first edges down from 1.5769 to 1.4769 before rising, so its path is not perfectly monotonic.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "180.0",
+     "field": "value",
+     "value": 1.5769,
+     "note": "Israel first point"
+    },
+    {
+     "entity": "Israel (cases/1000)",
+     "x": "415.0",
+     "field": "value",
+     "value": 1.4769,
+     "note": "Israel second point"
+    }
+   ],
+   "computation": "decrease = 1.5769 - 1.4769 = 0.1000.",
+   "accepted_routes": [
+    "Israel initially drops slightly before rising.",
+    "Israel's first two points are 1.5769 then 1.4769.",
+    "Israel's uptrend is not monotonic at the start."
+   ],
+   "visual_evidence_rule": "The Israel line must show a slight downward step from the first to second point.",
+   "temporal_anchor": "early Israel portion of the chart",
+   "reviewer_question": "Should the video preserve Israel's small early dip, or can it smooth the line into a simple rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The clip may include a closing reassurance that the plotted rise is not alarming, as long as it is not tied to a numerical data claim.",
+  "The clip may label intermediate points, e.g., US 0.9769, 1.9769, 2.7769 and Israel 1.4769, 2.3769, 3.3769, if the animation shows exact point values.",
+  "The clip may note that the US final endpoint is about 1.44 times the Israel final endpoint, derived from 5.2769 / 3.6769."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming antibody levels or six-month timing as chart data; the table only has case rates and x_px positions.",
+  "Causal claim that vaccination or waning directly caused the case-rate increase.",
+  "Predicting future case rates beyond x=1120.",
+  "Saying the US rate was above Israel throughout; it is below until after x=885.",
+  "Using external population totals or per-capita denominators not in the table.",
+  "Interpreting relative_value as a real-world share without a defined denominator."
+ ],
+ "notes": "The table supports plotted x positions and case rates, but does not identify time labels or antibody data. The strongest required signals are the overall upward trend and the larger US rise, with the US-Israel crossover as a key but intent-optional comparison.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 36.1,
+  "usage": {
+   "prompt_tokens": 1079,
+   "completion_tokens": 8536,
+   "total_tokens": 9615,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6226
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 823
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

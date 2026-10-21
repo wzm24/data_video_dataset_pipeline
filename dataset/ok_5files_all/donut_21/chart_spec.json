@@ -1,0 +1,23 @@
+{
+ "clip_id": "donut_21",
+ "family": "donut",
+ "sub_type": "full_ring",
+ "orientation": "radial",
+ "slice_count": 1,
+ "ring_count": 1,
+ "arc_count": 1,
+ "arc_total_deg": 331,
+ "panel_count": 1,
+ "has_axis": false,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 2,
+ "row_count": 1,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "high",
+ "needs_review": false,
+ "time_behavior": "snapshot"
+}

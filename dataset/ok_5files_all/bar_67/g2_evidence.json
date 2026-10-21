@@ -1,0 +1,159 @@
+{
+ "clip_id": "bar_67",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 6,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show all six years on the x-axis and encode the annual value and relative_value series."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:2013 @ 2013",
+    "mark:2014 @ 2014",
+    "mark:2015 @ 2015",
+    "mark:2016 @ 2016",
+    "mark:2017 @ 2017",
+    "mark:2018 @ 2018"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "2013 @ 2013",
+      "value": 1.0
+     },
+     {
+      "mark": "2014 @ 2014",
+      "value": 0.952
+     },
+     {
+      "mark": "2015 @ 2015",
+      "value": 0.905
+     },
+     {
+      "mark": "2016 @ 2016",
+      "value": 0.746
+     },
+     {
+      "mark": "2017 @ 2017",
+      "value": 0.698
+     },
+     {
+      "mark": "2018 @ 2018",
+      "value": 0.778
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a descending sequence from 2013 to 2017 and a visible uptick in 2018."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2013 @ 2013",
+    "mark:2013 @ 2013",
+    "mark:2018 @ 2018",
+    "mark:2018 @ 2018"
+   ],
+   "assertion": {
+    "low": "2018 @ 2018",
+    "low_value": 0.4106,
+    "high": "2013 @ 2013",
+    "high_value": 1.0,
+    "delta": 0.5894,
+    "ratio": 2.4355,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make it possible to compare the 2013 and 2018 endpoints and show the net change over the full period."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2015 @ 2015",
+    "mark:2016 @ 2016"
+   ],
+   "assertion": {
+    "low": "2016 @ 2016",
+    "low_value": 0.746,
+    "high": "2015 @ 2015",
+    "high_value": 0.905,
+    "delta": 0.159,
+    "ratio": 1.2131,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the 2015 and 2016 bars/points and enough scale to see this as the largest annual step down."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2017 @ 2017",
+    "mark:2018 @ 2018"
+   ],
+   "assertion": {
+    "low": "2017 @ 2017",
+    "low_value": 0.698,
+    "high": "2018 @ 2018",
+    "high_value": 0.778,
+    "delta": 0.08,
+    "ratio": 1.1146,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the 2017 low point and the 2018 uptick relative to it."
+  }
+ ]
+}

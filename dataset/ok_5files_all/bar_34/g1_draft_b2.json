@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_34",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that Americans face the highest rates of skipping medication due to cost compared to residents of other developed nations, particularly those without insurance.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Uninsured United States has the highest relative value for skipping medication due to cost among all listed entities.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Uninsured United States",
+     "x": "Uninsured United States",
+     "field": "relative_value",
+     "value": 0.5616,
+     "note": "Highest relative_value in the table; next highest is Insured United States at 0.3366."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Uninsured United States is the top-ranked entity.",
+    "No listed group has a higher relative value than the uninsured US.",
+    "Uninsured Americans are the most likely among the listed groups to skip medication because of cost."
+   ],
+   "visual_evidence_rule": "The visual encoding must make the Uninsured United States value clearly the highest or top-ranked among all eight listed entities.",
+   "temporal_anchor": "The clause 'Americans without insurance are the most likely to skip medication because of the cost.'",
+   "reviewer_question": "Should the video explicitly state that the uninsured US is the highest of all listed entities, or is showing it as top-ranked sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Insured United States has the second-highest relative value among the listed entities, behind only the uninsured US.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Insured United States",
+     "x": "Insured United States",
+     "field": "relative_value",
+     "value": 0.3366,
+     "note": "Second-highest relative_value; only Uninsured United States (0.5616) is higher."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Insured United States ranks second.",
+    "Only the uninsured US is higher than insured US.",
+    "Insured Americans are the second most likely listed group."
+   ],
+   "visual_evidence_rule": "The visual encoding must show Insured United States as second in order and above every non-US listed entity.",
+   "temporal_anchor": "The clause 'Even Americans with insurance are second.'",
+   "reviewer_question": "Must the video explicitly rank insured US second, or is it enough to show both US groups at the top?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The uninsured US relative value is substantially higher than the insured US relative value, with a gap of 0.2250 on the normalized scale and a ratio of about 1.67 times.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Uninsured United States",
+     "x": "Uninsured United States",
+     "field": "relative_value",
+     "value": 0.5616,
+     "note": "Compared with Insured United States relative_value 0.3366."
+    },
+    {
+     "entity": "Insured United States",
+     "x": "Insured United States",
+     "field": "relative_value",
+     "value": 0.3366,
+     "note": "Comparison point for the uninsured-vs-insured gap."
+    }
+   ],
+   "computation": "0.5616 - 0.3366 = 0.2250; 0.5616 / 0.3366 ≈ 1.67",
+   "accepted_routes": [
+    "The uninsured US value is about 1.7 times the insured US value.",
+    "There is a gap of about 0.225 between uninsured and insured US on the normalized scale.",
+    "Uninsured Americans are substantially more likely than insured Americans, not just slightly more."
+   ],
+   "visual_evidence_rule": "The visual encoding must make the difference between the two US values apparent, not just their top-two ranks.",
+   "temporal_anchor": "The contrast between the two narration clauses: uninsured most likely and insured still second.",
+   "reviewer_question": "Should the video quantify the uninsured-vs-insured gap, or only state both are top two?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Both US groups have higher relative values than every non-US developed country listed, and Canada is the highest non-US entity.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Insured United States",
+     "x": "Insured United States",
+     "field": "relative_value",
+     "value": 0.3366,
+     "note": "Lower of the two US entities but still above all non-US entities."
+    },
+    {
+     "entity": "Canada",
+     "x": "Canada",
+     "field": "relative_value",
+     "value": 0.1648,
+     "note": "Highest non-US entity."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The two US groups are the top two, ahead of every other listed country.",
+    "No non-US country reaches the insured US value.",
+    "Canada is the highest non-US country but still far below insured US."
+   ],
+   "visual_evidence_rule": "The visual encoding must clearly separate the two US values from the non-US country values, with Canada shown as the top non-US entity.",
+   "temporal_anchor": "The narration's comparison to residents of other developed nations, especially the ranking of insured US as second.",
+   "reviewer_question": "Must the video explicitly identify Canada as the highest non-US comparison, or is a general US-vs-others contrast enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Among the non-US countries, the ordering from highest to lowest relative value is Canada, Switzerland, Australia, France, Germany, United Kingdom.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Canada",
+     "x": "Canada",
+     "field": "relative_value",
+     "value": 0.1648,
+     "note": "Highest among non-US countries."
+    },
+    {
+     "entity": "Switzerland",
+     "x": "Switzerland",
+     "field": "relative_value",
+     "value": 0.1476,
+     "note": "Second-highest among non-US countries."
+    },
+    {
+     "entity": "Australia",
+     "x": "Australia",
+     "field": "relative_value",
+     "value": 0.0978,
+     "note": "Third-highest among non-US countries."
+    },
+    {
+     "entity": "France",
+     "x": "France",
+     "field": "relative_value",
+     "value": 0.0653,
+     "note": "Fourth-highest among non-US countries."
+    },
+    {
+     "entity": "Germany",
+     "x": "Germany",
+     "field": "relative_value",
+     "value": 0.0481,
+     "note": "Fifth-highest among non-US countries."
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "United Kingdom",
+     "field": "relative_value",
+     "value": 0.0325,
+     "note": "Lowest among non-US countries and overall in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Canada leads the non-US countries, followed by Switzerland, Australia, France, Germany, and the UK.",
+    "The non-US ranking descends from Canada to the United Kingdom.",
+    "Among countries outside the US, Canada and Switzerland are highest, while the UK is lowest."
+   ],
+   "visual_evidence_rule": "If all non-US countries are shown, the visual encoding should preserve the non-US ordering from Canada down to the United Kingdom.",
+   "temporal_anchor": "Optional background comparison in the phrase 'other developed nations'.",
+   "reviewer_question": "Should the video show the full non-US ordering, or only Canada as the highest non-US comparator?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The United Kingdom and Germany are the lowest two relative values among all listed entities.",
+  "The full eight-entity ordering can be shown if space allows: uninsured US, insured US, Canada, Switzerland, Australia, France, Germany, United Kingdom.",
+  "The exact normalized relative values can be displayed as decimals, but they should not be converted into percentages or absolute units."
+ ],
+ "unsupported_to_avoid": [
+  "Stating that uninsured Americans are 56% likely or insured Americans are 34% likely, because the table's unit column is blank.",
+  "Causal claims such as lacking insurance causes medication skipping.",
+  "Claims about all developed nations or all Americans beyond the entities listed in the table.",
+  "Adding dollar amounts, counts, or percentages not supported by the table's unit column.",
+  "Treating the two US rows as separate countries in a way that double-counts a national total."
+ ],
+ "notes": "Use relative_value because the unit column is blank; do not convert to percentages. The core required story is the top-two US ordering plus the uninsured-vs-insured gap, with non-US comparisons optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 34.3,
+  "usage": {
+   "prompt_tokens": 1232,
+   "completion_tokens": 7758,
+   "total_tokens": 8990,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5676
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 720
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

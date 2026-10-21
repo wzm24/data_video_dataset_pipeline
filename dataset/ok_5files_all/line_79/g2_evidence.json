@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_79",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series label or annotation must identify the line as daily deaths on a 7-day moving average."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:daily deaths 7dma @ Jan 2021",
+    "mark:daily deaths 7dma @ Feb 2021",
+    "mark:daily deaths 7dma @ Apr 2021",
+    "mark:daily deaths 7dma @ final plotted point"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "daily deaths 7dma @ Jan 2021",
+      "value": 318.3193
+     },
+     {
+      "mark": "daily deaths 7dma @ Feb 2021",
+      "value": 175.5256
+     },
+     {
+      "mark": "daily deaths 7dma @ Apr 2021",
+      "value": 365.9172
+     },
+     {
+      "mark": "daily deaths 7dma @ final plotted point",
+      "value": 3233.9229
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plotted series must visibly remain near its early-2021 values and then turn sharply upward toward the final point."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:daily deaths 7dma @ Feb 2021 (subsequent low)",
+    "mark:daily deaths 7dma @ final plotted point"
+   ],
+   "assertion": {
+    "low": "daily deaths 7dma @ Feb 2021 (subsequent low)",
+    "low_value": 137.2607,
+    "high": "daily deaths 7dma @ final plotted point",
+    "high_value": 3233.9229,
+    "delta": 3096.6622,
+    "ratio": 23.5604,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The end of the series must appear dramatically higher than the pre-surge trough, supporting a roughly 24-fold rise."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:daily deaths 7dma @ final plotted point",
+    "mark:daily deaths 7dma @ Sep 2020 (nearby peak)"
+   ],
+   "assertion": {
+    "greater": "daily deaths 7dma @ final plotted point",
+    "lesser": "daily deaths 7dma @ Sep 2020 (nearby peak)",
+    "expected_ratio": 2.6673,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final peak must be visibly much taller than the previous first-wave hump."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "daily deaths 7dma @ final plotted point",
+    "extreme": "max",
+    "expected": 3233.9229,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must visibly reach its highest point at the end of the plotted period."
+  }
+ ]
+}

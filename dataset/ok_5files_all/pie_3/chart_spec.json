@@ -1,0 +1,23 @@
+{
+ "clip_id": "pie_3",
+ "family": "pie",
+ "sub_type": "full_pie",
+ "orientation": "radial",
+ "slice_count": 7,
+ "ring_count": 1,
+ "arc_count": 7,
+ "arc_total_deg": 660,
+ "panel_count": 1,
+ "has_axis": false,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 11,
+ "row_count": 7,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "high",
+ "needs_review": false,
+ "time_behavior": "snapshot"
+}

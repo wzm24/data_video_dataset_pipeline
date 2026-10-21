@@ -1,0 +1,240 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_46",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that Americans hold a negative view of the economy, believing it is hurting their families and favoring the wealthy.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "46% of responses fall in the 'economic conditions hurting' category.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "economic conditions hurting",
+     "x": "",
+     "field": "value",
+     "value": 46,
+     "note": "table value 46, unit percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "46% say economic conditions are hurting",
+    "Just under half (46%) report economic conditions hurting",
+    "The hurting response is 46%"
+   ],
+   "visual_evidence_rule": "The 46% value must be visibly tied to the 'economic conditions hurting' category.",
+   "temporal_anchor": "the 'roughly half ... hurting themselves and their families' narration clause",
+   "reviewer_question": "Must the 46% hurting endpoint be a required headline number?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "54% of responses fall in the 'other' category, the complement to 'economic conditions hurting'.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "other",
+     "x": "",
+     "field": "value",
+     "value": 54,
+     "note": "table value 54, unit percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "54% give the 'other' response",
+    "The remaining 54% is categorized as other",
+    "Other responses total 54%"
+   ],
+   "visual_evidence_rule": "The 54% value must be visibly tied to the 'other' category.",
+   "temporal_anchor": "the same 'roughly half' clause, showing the remainder/other portion",
+   "reviewer_question": "Must the 54% other category be shown, or can the clip focus only on the hurting share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 'other' category is 8 percentage points larger than the 'economic conditions hurting' category (54% vs 46%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "other",
+     "x": "",
+     "field": "value",
+     "value": 54,
+     "note": "larger share"
+    },
+    {
+     "entity": "economic conditions hurting",
+     "x": "",
+     "field": "value",
+     "value": 46,
+     "note": "smaller share"
+    }
+   ],
+   "computation": "54 - 46 = 8 percentage points",
+   "accepted_routes": [
+    "54% vs 46%, an 8-point gap",
+    "Other exceeds hurting by 8 percentage points",
+    "The hurting share is 8 points below other"
+   ],
+   "visual_evidence_rule": "Both 46% and 54% must be visible in the same comparison so the 8-point gap can be read.",
+   "temporal_anchor": "the 'roughly half' clause when the hurting share is compared with other responses",
+   "reviewer_question": "Must the clip explicitly state the 8-point gap, or is showing both values enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The displayed responses split 46% 'economic conditions hurting' and 54% 'other', together making 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "economic conditions hurting",
+     "x": "",
+     "field": "value",
+     "value": 46,
+     "note": "first part of split"
+    },
+    {
+     "entity": "other",
+     "x": "",
+     "field": "value",
+     "value": 54,
+     "note": "second part of split"
+    }
+   ],
+   "computation": "46 + 54 = 100%",
+   "accepted_routes": [
+    "The split is 46% hurting to 54% other",
+    "Together the two categories sum to 100%",
+    "Hurting and other account for 46% and 54% respectively"
+   ],
+   "visual_evidence_rule": "Both 46% and 54% must be visible as parts of the same two-category distribution.",
+   "temporal_anchor": "the 'roughly half' clause where the response split is established",
+   "reviewer_question": "Must the clip present both categories as a complete 46/54 split?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 'economic conditions hurting' share is below the midpoint of the two-category split, i.e., just under half (46% vs 50% midpoint).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "economic conditions hurting",
+     "x": "",
+     "field": "value",
+     "value": 46,
+     "note": "hurting share"
+    },
+    {
+     "entity": "other",
+     "x": "",
+     "field": "value",
+     "value": 54,
+     "note": "used to derive midpoint 50%"
+    }
+   ],
+   "computation": "46 < (46 + 54) / 2 = 50",
+   "accepted_routes": [
+    "46% is just under half",
+    "The hurting share falls below a 50% midpoint",
+    "It is not a majority"
+   ],
+   "visual_evidence_rule": "The viewer must be able to see that the 46% hurting value is below a 50% midpoint, either via a reference or explicit under-half statement.",
+   "temporal_anchor": "the 'roughly half' clause, clarifying it is below half/majority",
+   "reviewer_question": "Should the clip explicitly say the hurting share is below half/majority, or is that optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Describing 'other' as the remainder/complement of the hurting share, without implying what it contains.",
+  "Using the relative_value framing (0.46 vs 0.54) as a size/order comparison rather than percentages.",
+  "Noting that the hurting share is close to half but not a majority."
+ ],
+ "unsupported_to_avoid": [
+  "Americans believe the economy favors the wealthy or hurts poor/middle-class people",
+  "About a quarter of Americans said there was the right amount of economic inequality",
+  "A majority of Americans said the economy was helping the wealthy and hurting poor/middle-class people",
+  "The economy is actually not working",
+  "Any breakdown of the 54% 'other' category, such as right-amount, helping, or no opinion",
+  "Absolute counts of Americans",
+  "Causal claims that economic conditions are causing harm",
+  "Demographic or partisan breakdowns",
+  "Any claim that 46% is a majority or that most Americans hold this view"
+ ],
+ "notes": "The table contains only a 46% 'economic conditions hurting' share and a 54% 'other' share, so all candidate units stay within that two-category split. The narration's wealthy/poor/middle-class and inequality claims are not in the table and are listed as unsupported.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 33.7,
+  "usage": {
+   "prompt_tokens": 944,
+   "completion_tokens": 8043,
+   "total_tokens": 8987,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6372
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 432
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

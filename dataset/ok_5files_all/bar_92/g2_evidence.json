@@ -1,0 +1,145 @@
+{
+ "clip_id": "bar_92",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Somalia @ country"
+   ],
+   "assertion": {
+    "mark": "Somalia @ country",
+    "field": "value",
+    "expected": 55.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Somalia's bar or label must be visibly associated with the value 55."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Ivory Coast @ country",
+    "mark:Nigeria @ country",
+    "mark:Somalia @ country",
+    "mark:Mozambique @ country"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Ivory Coast @ country",
+      "value": 53.0
+     },
+     {
+      "mark": "Nigeria @ country",
+      "value": 54.0
+     },
+     {
+      "mark": "Somalia @ country",
+      "value": 55.0
+     },
+     {
+      "mark": "Mozambique @ country",
+      "value": 57.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four bars must be shown with values or a visibly ordered axis from 53 to 57."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Somalia @ country",
+    "mark:Ivory Coast @ country"
+   ],
+   "assertion": {
+    "greater": "Somalia @ country",
+    "lesser": "Ivory Coast @ country",
+    "expected_ratio": 1.0377,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gaps between Somalia and Ivory Coast/Nigeria bars must be visible or labeled."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Mozambique @ country",
+    "mark:Somalia @ country"
+   ],
+   "assertion": {
+    "greater": "Mozambique @ country",
+    "lesser": "Somalia @ country",
+    "expected_ratio": 1.0364,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Mozambique's 57 bar and Somalia's 55 bar must be visible together or the 2-year gap labeled."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Ivory Coast @ country",
+    "mark:Mozambique @ country"
+   ],
+   "assertion": {
+    "low": "Ivory Coast @ country",
+    "low_value": 53.0,
+    "high": "Mozambique @ country",
+    "high_value": 57.0,
+    "delta": 4.0,
+    "ratio": 1.0755,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The minimum and maximum bars or their values must be visible to show the spread."
+  }
+ ]
+}

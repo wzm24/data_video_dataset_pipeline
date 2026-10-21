@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#5e25e0"/>
+<text x="640" y="46" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#ffffff">Most Americans are confident in</text>
+<text x="640" y="81" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#ffffff">the police</text>
+<text x="640" y="136" text-anchor="middle" font-family="Arial" font-size="16" fill="#e8dcff">% of U.S. adults who have ____ of confidence in police officers to act in the public's best interests</text>
+<text x="400.0" y="253" text-anchor="end" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">A great deal</text>
+<rect x="420.0" y="222" width="329.3" height="48" fill="#1a1a1a"/>
+<text x="763.3333333333333" y="253" font-family="Arial" font-size="24" font-weight="700" fill="#ffffff">26%</text>
+<text x="400.0" y="373" text-anchor="end" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">A fair amount</text>
+<rect x="420.0" y="342" width="608.0" height="48" fill="#d4d4d4"/>
+<text x="1042.0" y="373" font-family="Arial" font-size="24" font-weight="700" fill="#ffffff">48%</text>
+</svg>

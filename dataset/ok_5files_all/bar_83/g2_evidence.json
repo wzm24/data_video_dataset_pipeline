@@ -1,0 +1,135 @@
+{
+ "clip_id": "bar_83",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both categories must be labeled on the chart so Beer is distinguishable from Cannabis."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Beer @ Beer"
+   ],
+   "assertion": {
+    "mark": "Beer @ Beer",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The endpoint values or clear value labels for both Beer and Cannabis must be visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Beer @ Beer",
+    "mark:Cannabis @ Cannabis"
+   ],
+   "assertion": {
+    "greater": "Beer @ Beer",
+    "lesser": "Cannabis @ Cannabis",
+    "expected_ratio": 20.4082,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A direct comparison such as side-by-side bars, an annotation, or a ratio label must make Beer's dominance over Cannabis visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Beer @ Beer",
+    "mark:Cannabis @ Cannabis",
+    "mark:Beer @ Beer",
+    "mark:Cannabis @ Cannabis"
+   ],
+   "assertion": {
+    "series": "Beer",
+    "values": [
+     1.0,
+     0.049,
+     1.0,
+     0.0485
+    ],
+    "threshold_between": [
+     0.0485,
+     1.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 5% threshold line or annotation must be visible if this framing is used."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Beer @ Beer",
+    "mark:Cannabis @ Cannabis",
+    "mark:Beer @ Beer",
+    "mark:Cannabis @ Cannabis"
+   ],
+   "assertion": {
+    "low": "Cannabis @ Cannabis",
+    "low_value": 0.0485,
+    "high": "Beer @ Beer",
+    "high_value": 1.0,
+    "delta": 0.9515,
+    "ratio": 20.6186,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gap or difference between the Beer and Cannabis bars must be visually indicated if this unit is used."
+  }
+ ]
+}

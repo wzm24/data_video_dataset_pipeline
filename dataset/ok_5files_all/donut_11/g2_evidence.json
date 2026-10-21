@@ -1,0 +1,128 @@
+{
+ "clip_id": "donut_11",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:AWS @ 0",
+    "segment:AWS @ 0"
+   ],
+   "assertion": {
+    "segment": "AWS @ 0",
+    "expected_share": 0.66,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The AWS slice must be visibly labeled or annotated as 66% (or about two-thirds) within a 100% composition."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:total (all other business) @ 1",
+    "segment:total (all other business) @ 1"
+   ],
+   "assertion": {
+    "segment": "total (all other business) @ 1",
+    "expected_share": 0.34,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The non-AWS portion must be labeled or annotated as 34% (or about one-third)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:AWS @ 0",
+    "mark:total (all other business) @ 1"
+   ],
+   "assertion": {
+    "greater": "AWS @ 0",
+    "lesser": "total (all other business) @ 1",
+    "expected_ratio": 1.9412,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make AWS's slice visibly larger than the non-AWS slice, with the 66% and 34% labels readable or the 32-point gap annotated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:AWS @ 0",
+    "mark:total (all other business) @ 1"
+   ],
+   "assertion": {
+    "greater": "AWS @ 0",
+    "lesser": "total (all other business) @ 1",
+    "expected_ratio": 1.9412,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If this unit is used, the chart or narration must show or state a near-2x ratio derived from 66 vs 34; no separate chart label is required."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:AWS @ 0",
+    "segment:total (all other business) @ 1"
+   ],
+   "assertion": {
+    "segment": "AWS @ 0",
+    "expected_share": 0.66,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must be a complete donut or pie composition with both slices accounted for."
+  }
+ ]
+}

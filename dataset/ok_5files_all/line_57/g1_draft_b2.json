@@ -1,0 +1,390 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_57",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that vaccines remain effective at preventing hospitalization for most people across different age groups and vaccine brands.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Across all age groups, brands, and both months, reported hospitalization-prevention effectiveness remains high: the lowest table value is 83% and the highest is 97.5%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 83.0,
+     "note": "Johnson & Johnson series; table minimum."
+    },
+    {
+     "entity": "18-49",
+     "x": "MAY",
+     "field": "value",
+     "value": 97.5,
+     "note": "Pfizer/BioNTech series; table maximum."
+    },
+    {
+     "entity": "18-49",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 97.5,
+     "note": "Moderna series; tied table maximum."
+    }
+   ],
+   "computation": "MIN(value) = 83.0; MAX(value) = 97.5",
+   "accepted_routes": [
+    "Effectiveness ranges from 83% to 97.5% across all shown groups.",
+    "The lowest reported value is 83%, and the highest is 97.5%.",
+    "Even the weakest age-brand-month combination is still 83% effective."
+   ],
+   "visual_evidence_rule": "The chart must make the overall minimum and maximum data points readable across the age-group, brand, and month values.",
+   "temporal_anchor": "'continue to do effectively for most people'",
+   "reviewer_question": "Should the video state the overall high range/minimum to establish that effectiveness remains high?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Johnson & Johnson is the lowest-effectiveness brand in every age group and month; in August 65+ it is 83% versus Pfizer 89% and Moderna 94%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 83.0,
+     "note": "Johnson & Johnson series; lowest August 65+ value."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 89.0,
+     "note": "Pfizer/BioNTech series."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 94.0,
+     "note": "Moderna series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "J&J is consistently the least effective brand across the age groups and months.",
+    "For 65+ in August, J&J is 83% compared with Pfizer 89% and Moderna 94%.",
+    "The lowest brand series is Johnson & Johnson throughout."
+   ],
+   "visual_evidence_rule": "All three brand series must be visible for each age group and month so the lowest brand can be compared.",
+   "temporal_anchor": "'across different age groups and vaccine brands' / 'for most people'",
+   "reviewer_question": "Is the brand ranking—especially J&J as the lowest—required, or is it enough to show effectiveness remains high?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In August, 65+ is the lowest age group for every brand: Pfizer 65+ 89% vs 96.5% for 18-49 and 95.5% for 50-64; Moderna 65+ 94% vs 97.5% and 97%; J&J 65+ 83% vs 93.5% and 93%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 89.0,
+     "note": "Pfizer/BioNTech series."
+    },
+    {
+     "entity": "18-49",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 96.5,
+     "note": "Pfizer/BioNTech series."
+    },
+    {
+     "entity": "50-64",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 95.5,
+     "note": "Pfizer/BioNTech series."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 94.0,
+     "note": "Moderna series."
+    },
+    {
+     "entity": "18-49",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 97.5,
+     "note": "Moderna series."
+    },
+    {
+     "entity": "50-64",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 97.0,
+     "note": "Moderna series."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 83.0,
+     "note": "Johnson & Johnson series."
+    },
+    {
+     "entity": "18-49",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 93.5,
+     "note": "Johnson & Johnson series."
+    },
+    {
+     "entity": "50-64",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 93.0,
+     "note": "Johnson & Johnson series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "By August, the 65+ group is lowest for each brand.",
+    "August 65+ values (Pfizer 89%, Moderna 94%, J&J 83%) are below the corresponding younger-group values.",
+    "The oldest age group has the weakest August effectiveness in every brand series."
+   ],
+   "visual_evidence_rule": "For each brand, the August values for 18-49, 50-64, and 65+ must be visible and comparable.",
+   "temporal_anchor": "the 'for most people' clause supported by age-group data",
+   "reviewer_question": "Should the video explicitly call out the August age gradient, with 65+ lower in every brand?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "From May to August, all three brands' 65+ values decline; Pfizer 65+ has the largest drop, from 95% to 89% (down 6 percentage points), while Moderna 65+ drops 97% to 94% (-3 points) and J&J 65+ drops 85% to 83% (-2 points).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 95.0,
+     "note": "Pfizer/BioNTech series."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 89.0,
+     "note": "Pfizer/BioNTech series."
+    },
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 97.0,
+     "note": "Moderna series."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 94.0,
+     "note": "Moderna series."
+    },
+    {
+     "entity": "65+",
+     "x": "MAY",
+     "field": "value",
+     "value": 85.0,
+     "note": "Johnson & Johnson series."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 83.0,
+     "note": "Johnson & Johnson series."
+    }
+   ],
+   "computation": "Pfizer: 89.0 - 95.0 = -6.0 percentage points; Moderna: 94.0 - 97.0 = -3.0; J&J: 83.0 - 85.0 = -2.0",
+   "accepted_routes": [
+    "All 65+ series decline from May to August, with Pfizer falling the most (6 points).",
+    "Pfizer 65+ goes from 95% to 89%, Moderna 65+ from 97% to 94%, J&J 65+ from 85% to 83%.",
+    "The largest May-to-August drop is Pfizer 65+ at 6 percentage points."
+   ],
+   "visual_evidence_rule": "The May and August endpoints for the 65+ group must be visible for each brand, or the change must be directly shown.",
+   "temporal_anchor": "'continue to do effectively' (the May-to-August continuation)",
+   "reviewer_question": "Should the video highlight that 65+ effectiveness declines from May to August, especially Pfizer's 6-point drop?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By August, Moderna has the highest effectiveness in every age group: 18-49 is 97.5%, 50-64 is 97%, and 65+ is 94%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "18-49",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 97.5,
+     "note": "Moderna series; highest August 18-49."
+    },
+    {
+     "entity": "18-49",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 96.5,
+     "note": "Pfizer/BioNTech series; lower than Moderna."
+    },
+    {
+     "entity": "18-49",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 93.5,
+     "note": "Johnson & Johnson series; lower than Moderna."
+    },
+    {
+     "entity": "50-64",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 97.0,
+     "note": "Moderna series; highest August 50-64."
+    },
+    {
+     "entity": "50-64",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 95.5,
+     "note": "Pfizer/BioNTech series; lower than Moderna."
+    },
+    {
+     "entity": "50-64",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 93.0,
+     "note": "Johnson & Johnson series; lower than Moderna."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 94.0,
+     "note": "Moderna series; highest August 65+."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 89.0,
+     "note": "Pfizer/BioNTech series; lower than Moderna."
+    },
+    {
+     "entity": "65+",
+     "x": "AUGUST",
+     "field": "value",
+     "value": 83.0,
+     "note": "Johnson & Johnson series; lower than Moderna."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Moderna is the top brand in August for all three age groups.",
+    "August Moderna values are 97.5%, 97%, and 94%, above Pfizer and J&J in each age group.",
+    "Moderna has the highest August effectiveness in 18-49, 50-64, and 65+."
+   ],
+   "visual_evidence_rule": "The August values for all brands within each age group must be visible to confirm Moderna is highest.",
+   "temporal_anchor": "'across different vaccine brands' / the August endpoint",
+   "reviewer_question": "Is Moderna being the August leader optional detail, or should it be required for brand comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Pfizer 18-49 in May is tied for the highest value in the table at 97.5%.",
+  "Moderna 65+ in May is 97%, the highest 65+ May value.",
+  "J&J 50-64 rises from 88% in May to 93% in August, a +5 percentage-point change (93 - 88 = 5)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as waning immunity, vaccine brand causing lower protection, or vaccines becoming unnecessary.",
+  "Population shares or counts of people/hospitalizations not present in the table.",
+  "Future months or extrapolation beyond May and August.",
+  "Claims that all people are protected, or that any group has 100% effectiveness.",
+  "Describing percentage-point declines as a percent decrease rather than a difference in percentage points."
+ ],
+ "notes": "All cited numbers are table values in %, and differences are percentage-point arithmetic. The set separates overall level, age ordering, brand ranking, and May-to-August change.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 55.9,
+  "usage": {
+   "prompt_tokens": 1537,
+   "completion_tokens": 13712,
+   "total_tokens": 15249,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10775
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1025
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

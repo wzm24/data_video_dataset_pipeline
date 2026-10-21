@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_84",
+ "intent_en": "To illustrate that younger generations are the primary drivers of Black migration to the South, supporting the narrator's explanation about increased educational opportunities for newer generations.",
+ "previous_intent": "To illustrate that young adults have the highest rate of migration to the South, supporting the narrator's explanation that younger generations since the 1960s are moving for advanced education.",
+ "narration_support": "I attribute some of it to younger generations... who now do have an opportunity to get advanced education.",
+ "chart_support": "Bar chart showing Black migration rates by age, with the 18-29 age group highlighted as the largest segment.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly links migration to younger generations and education. The chart visualizes this by highlighting the 18-29 age bracket (typically college age) as having the highest migration rate/share, directly supporting the narrator's claim.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

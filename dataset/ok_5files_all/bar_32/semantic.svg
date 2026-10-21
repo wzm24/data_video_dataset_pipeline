@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Monthly price of Crestor, cholesterol drug</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="515.7" x2="1220" y2="515.7" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="515.7" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="515.7" x2="120" y2="515.7" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="521.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$0</text>
+<line data-role="gridline" x1="120" y1="474.2" x2="1220" y2="474.2" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="474.2" x2="120" y2="474.2" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="480.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$50</text>
+<line data-role="gridline" x1="120" y1="432.8" x2="1220" y2="432.8" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="432.8" x2="120" y2="432.8" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="438.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$100</text>
+<line data-role="gridline" x1="120" y1="391.4" x2="1220" y2="391.4" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="391.4" x2="120" y2="391.4" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="397.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$150</text>
+<line data-role="gridline" x1="120" y1="350.0" x2="1220" y2="350.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="350.0" x2="120" y2="350.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="356.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$200</text>
+<line data-role="gridline" x1="120" y1="308.6" x2="1220" y2="308.6" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="308.6" x2="120" y2="308.6" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="314.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">$250</text>
+<g id="entity-australia-value" data-role="entity" data-entity-id="australia" data-label="Australia">
+<rect id="australia-value-bar" data-role="bar" data-entity-id="australia" data-value="7.71208" x="417.3" y="509.3" width="61.9" height="6.4" fill="#466974" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="australia-value-label" data-role="category-label" data-entity-id="australia" x="448.3" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Australia</text>
+</g>
+<g id="entity-canada-value" data-role="entity" data-entity-id="canada" data-label="Canada">
+<rect id="canada-value-bar" data-role="bar" data-entity-id="canada" data-value="32.3907" x="737.9" y="488.8" width="62.7" height="26.8" fill="#466974" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="canada-value-label" data-role="category-label" data-entity-id="canada" x="769.3" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Canada</text>
+</g>
+<g id="entity-france-value" data-role="entity" data-entity-id="france" data-label="France">
+<rect id="france-value-bar" data-role="bar" data-entity-id="france" data-value="20.0514" x="497.3" y="499.1" width="62.7" height="16.6" fill="#466974" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="france-value-label" data-role="category-label" data-entity-id="france" x="528.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">France</text>
+</g>
+<g id="entity-germany-value" data-role="entity" data-entity-id="germany" data-label="Germany">
+<rect id="germany-value-bar" data-role="bar" data-entity-id="germany" data-value="37.7892" x="817.8" y="484.4" width="62.7" height="31.3" fill="#466974" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="germany-value-label" data-role="category-label" data-entity-id="germany" x="849.2" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Germany</text>
+</g>
+<g id="entity-norway-value" data-role="entity" data-entity-id="norway" data-label="Norway">
+<rect id="norway-value-bar" data-role="bar" data-entity-id="norway" data-value="20.0514" x="577.2" y="499.1" width="63.6" height="16.6" fill="#466974" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="norway-value-label" data-role="category-label" data-entity-id="norway" x="609.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Norway</text>
+</g>
+<g id="entity-united-kingdom-value" data-role="entity" data-entity-id="united-kingdom" data-label="United Kingdom">
+<rect id="united-kingdom-value-bar" data-role="bar" data-entity-id="united-kingdom" data-value="26.2211" x="658.0" y="493.9" width="62.7" height="21.7" fill="#466974" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="united-kingdom-value-label" data-role="category-label" data-entity-id="united-kingdom" x="689.3" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333"><tspan x="689.3" dy="0.0">United</tspan><tspan x="689.3" dy="20.0">Kingdom</tspan></text>
+</g>
+<g id="entity-united-states-value" data-role="entity" data-entity-id="united-states" data-label="United States">
+<rect id="united-states-value-bar" data-role="bar" data-entity-id="united-states" data-value="230.946" x="897.7" y="324.0" width="64.5" height="191.7" fill="#4b8cc4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="united-states-value-label" data-role="category-label" data-entity-id="united-states" x="930.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">United States</text>
+</g>
+</g>
+</svg>

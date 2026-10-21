@@ -1,0 +1,207 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_12",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To highlight the high prevalence of prejudice experienced by British Muslims in the past year.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In the past year, 70% of British Muslims experienced some form of prejudice; the Experienced slice is 70%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Experienced",
+     "x": "0",
+     "field": "value",
+     "value": 70,
+     "note": "Table row for Experienced slice; unit is %. The British Muslims group and past-year timeframe come from the intent/narration, not a separate table value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "70% of British Muslims experienced some form of prejudice in the past year.",
+    "In the last year, 70% reported experiencing prejudice.",
+    "The Experienced slice is 70%.",
+    "Seven in ten British Muslims say they experienced prejudice in the past year."
+   ],
+   "visual_evidence_rule": "The 70% value and Experienced label must be visible; the British Muslims group and past-year timeframe must appear in title/caption/text or narration.",
+   "temporal_anchor": "Main narration clause: 'In the past year, 70% of British Muslims say they've experienced some form of prejudice.'",
+   "reviewer_question": "Must the video explicitly state the 70% prevalence for British Muslims in the past year?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The table's second slice is 30.0% (30%), so the displayed values are 70% and 30%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "British Muslims",
+     "x": "1",
+     "field": "value",
+     "value": 30.0,
+     "note": "Table value for the second slice; unit is %."
+    },
+    {
+     "entity": "Experienced",
+     "x": "0",
+     "field": "value",
+     "value": 70,
+     "note": "First slice value used to verify the two-slice composition."
+    }
+   ],
+   "computation": "70 + 30 = 100; 100 - 70 = 30",
+   "accepted_routes": [
+    "The other slice is 30%.",
+    "The chart shows a 70% / 30% split.",
+    "The second slice accounts for 30.0%.",
+    "Experienced is 70% and the remaining slice is 30%."
+   ],
+   "visual_evidence_rule": "A second slice or label showing 30% (or 30.0%) must be visible if this unit is used.",
+   "temporal_anchor": "Optional clause or on-screen label mentioning the remaining/second share; not carried by the main 70% clause alone.",
+   "reviewer_question": "Is the 30% second slice required to be conveyed, or is it optional chart context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The Experienced share (70%) is 40 percentage points higher than, and more than twice as large as, the table's other slice (30%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Experienced",
+     "x": "0",
+     "field": "value",
+     "value": 70,
+     "note": "First slice value."
+    },
+    {
+     "entity": "British Muslims",
+     "x": "1",
+     "field": "value",
+     "value": 30.0,
+     "note": "Second slice value."
+    }
+   ],
+   "computation": "70 - 30 = 40; 70 / 30 ≈ 2.33",
+   "accepted_routes": [
+    "70% is more than double the 30% slice.",
+    "The gap is 40 percentage points.",
+    "Experienced is about 2.3 times the other slice.",
+    "70% vs 30%."
+   ],
+   "visual_evidence_rule": "Both 70% and 30% must be visible, or one must be visible with an explicit comparison/ratio/gap annotation.",
+   "temporal_anchor": "A comparison clause after the main statistic, e.g., 'that's more than double the remaining share.'",
+   "reviewer_question": "Must the video explicitly contrast 70% with 30% (ratio or gap), or is the 70% value alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "70% is a clear majority, crossing both the half and two-thirds thresholds.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Experienced",
+     "x": "0",
+     "field": "value",
+     "value": 70,
+     "note": "First slice value."
+    },
+    {
+     "entity": "British Muslims",
+     "x": "1",
+     "field": "value",
+     "value": 30.0,
+     "note": "Second slice value used to derive the 100% pie total."
+    }
+   ],
+   "computation": "100 = 70 + 30; 50 = 100/2; 66.7 ≈ 100 × 2/3; 70 > 50 and 70 > 66.7",
+   "accepted_routes": [
+    "70% is a clear majority.",
+    "More than half of British Muslims experienced prejudice.",
+    "70% is above two-thirds.",
+    "More than two in three."
+   ],
+   "visual_evidence_rule": "The 70% value must be visible alongside a majority/above-half/above-two-thirds annotation or narrative phrase if this unit is used.",
+   "temporal_anchor": "The emphasis clause highlighting high prevalence, not a separate data point.",
+   "reviewer_question": "Should the video explicitly characterize 70% as a majority/above-half/above-two-thirds?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The two slices sum to 100% (70% + 30%).",
+  "The chart is a two-slice pie labelled Experienced and British Muslims.",
+  "The 30.0% value is rounded to 30% in the animation."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why British Muslims experienced prejudice.",
+  "Trend claims such as prejudice increasing or decreasing over time.",
+  "Applying 70% to the whole UK population rather than British Muslims.",
+  "Asserting that the 30% slice means 'did not experience prejudice' unless the reviewer accepts that complement despite the table label."
+ ],
+ "notes": "U1 is the core intent; U3 is a strong derived contrast; U2/U4 are valid but optional unless the reviewer wants full pie composition or threshold framing. The odd table label 'British Muslims' for the 30% row is treated as the second slice, not as the interviewed group in U2.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.87
+ },
+ "draft_cost": {
+  "sec": 46.0,
+  "usage": {
+   "prompt_tokens": 628,
+   "completion_tokens": 10597,
+   "total_tokens": 11225,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9027
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 372
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

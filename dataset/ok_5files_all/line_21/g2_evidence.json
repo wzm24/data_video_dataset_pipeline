@@ -1,0 +1,130 @@
+{
+ "clip_id": "line_21",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must identify the series as Global temperature; no second entity is required."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Global temperature @ x_px 120.0",
+    "mark:Global temperature @ x_px 1220.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Global temperature @ x_px 120.0",
+      "value": -0.1002
+     },
+     {
+      "mark": "Global temperature @ x_px 1220.0",
+      "value": 0.9499
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The rendered series must visibly change from early values below zero to late values above zero."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Global temperature @ x_px 120.0",
+    "mark:Global temperature @ x_px 1220.0"
+   ],
+   "assertion": {
+    "low": "Global temperature @ x_px 120.0",
+    "low_value": -0.1002,
+    "high": "Global temperature @ x_px 1220.0",
+    "high_value": 0.9499,
+    "delta": 1.0501,
+    "ratio": -9.48,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the end-to-start increase visible; the final plotted value must be about 1.05 table units above the first."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Global temperature @ x_px 1220.0"
+   ],
+   "assertion": {
+    "mark": "Global temperature @ x_px 1220.0",
+    "field": "value",
+    "expected": 0.9499,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final plotted value must be visibly the highest point of the series."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Global temperature @ x_px 545.8",
+    "extreme": "min",
+    "expected": -0.2998,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a mid-series trough below the surrounding values."
+  }
+ ]
+}

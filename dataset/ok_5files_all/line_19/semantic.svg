@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ececec"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#b3b3b3" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#b3b3b3" stroke-width="3"/>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,278.0 242.2,218.2 364.4,232.0 486.7,167.6 608.9,278.0 731.1,333.2 853.3,462.0 975.6,498.8 1097.8,475.8 1220.0,517.2" fill="none" stroke="#5b8fd9" stroke-width="5" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="242.2" cy="218.2" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="364.4" cy="232.0" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="486.7" cy="167.6" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="608.9" cy="278.0" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="731.1" cy="333.2" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="853.3" cy="462.0" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="975.6" cy="498.8" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1097.8" cy="475.8" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="517.2" r="6" fill="#5b8fd9" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="486.7" y="149.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Wow</text>
+<text data-role="point-label" x="731.1" y="315.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Not bad</text>
+<text data-role="point-label" x="1097.8" y="457.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Yikes</text>
+</g>
+<text data-role="x-axis-name" x="640.0" y="664" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">TIME</text>
+<text data-role="y-axis-name" transform="translate(34, 370.0) rotate(-90)" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">SALES</text>
+</g>
+</svg>

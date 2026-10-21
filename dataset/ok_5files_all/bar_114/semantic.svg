@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#6338c4"/>
+<text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#ffffff">White adults are more likely than</text>
+<text x="640" y="81" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#ffffff">Black, Hispanic and Asian adults</text>
+<text x="640" y="114" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#ffffff">to have a great deal of confidence</text>
+<text x="452.0" y="248.0" text-anchor="end" font-family="Arial" font-size="18" fill="#ffffff">White adults</text>
+<rect x="470.0" y="223.0" width="568.0" height="36" fill="#ffffff"/>
+<text x="1048.0" y="247.0" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">32%</text>
+<text x="452.0" y="348.0" text-anchor="end" font-family="Arial" font-size="18" fill="#ffffff">Hispanic adults</text>
+<rect x="470.0" y="323.0" width="319.5" height="36" fill="#111111"/>
+<text x="799.5" y="347.0" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">18%</text>
+<text x="452.0" y="448.0" text-anchor="end" font-family="Arial" font-size="18" fill="#ffffff">Asian adults*</text>
+<rect x="470.0" y="423.0" width="284.0" height="36" fill="#111111"/>
+<text x="764.0" y="447.0" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">16%</text>
+<text x="452.0" y="548.0" text-anchor="end" font-family="Arial" font-size="18" fill="#ffffff">Black adults</text>
+<rect x="470.0" y="523.0" width="177.5" height="36" fill="#111111"/>
+<text x="657.5" y="547.0" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">10%</text>
+</svg>

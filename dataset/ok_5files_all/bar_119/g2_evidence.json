@@ -1,0 +1,141 @@
+{
+ "clip_id": "bar_119",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": 10,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Proposal names or labels are visible for the listed reform measures."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": 10,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series labels 'Strongly' and 'Somewhat' are visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Require officers to live in @ Strongly",
+    "mark:43 @ Somewhat"
+   ],
+   "assertion": {
+    "greater": "Require officers to live in @ Strongly",
+    "lesser": "43 @ Somewhat",
+    "expected_ratio": 1.1319,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Strongly and Somewhat values are visible, with Strongly consistently higher."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Strongly)"
+   ],
+   "assertion": {
+    "mark": "Require police to be trained @ Strongly",
+    "extreme": "max",
+    "expected": 0.4594,
+    "compared_set": "Strongly",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 'Require police to be trained' label and its top relative value are visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Require police to be trained @ Strongly",
+    "mark:Create a federal government @ Strongly",
+    "mark:Make it a crime for police to @ Strongly",
+    "mark:power to investigate and @ Strongly",
+    "mark:Require officers to live in @ Strongly"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Require police to be trained @ Strongly",
+      "value": 0.4594
+     },
+     {
+      "mark": "Create a federal government @ Strongly",
+      "value": 0.4211
+     },
+     {
+      "mark": "Make it a crime for police to @ Strongly",
+      "value": 0.3664
+     },
+     {
+      "mark": "power to investigate and @ Strongly",
+      "value": 0.3391
+     },
+     {
+      "mark": "Require officers to live in @ Strongly",
+      "value": 0.2352
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Strongly proposal labels are ordered by their relative values."
+  }
+ ]
+}

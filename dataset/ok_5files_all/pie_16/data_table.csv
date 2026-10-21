@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_16,Residential,slice-1,0,,14,0.1400,%,#E84B4B,printed
+pie_16,Commercial,slice-2,1,,12,0.1200,%,#F2B5C2,printed
+pie_16,Industrial,slice-3,2,,21,0.2100,%,#136A8A,printed
+pie_16,Transportation,slice-4,3,,28,0.2800,%,#ED8F56,printed
+pie_16,Electricity generation,slice-5,4,,28,0.2800,%,#8AB4C4,printed

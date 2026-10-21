@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_114,32%,32,754.0,,,0.4437,relative,#ffffff,relative_only
+bar_114,18%,18,629.8,,,0.2496,relative,#111111,relative_only
+bar_114,16%,16,612.0,,,0.2219,relative,#111111,relative_only
+bar_114,10%,10,558.8,,,0.1387,relative,#111111,relative_only

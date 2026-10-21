@@ -1,0 +1,263 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_114",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the racial and ethnic disparities in public confidence in police officers, demonstrating that White adults express significantly higher confidence than Black, Hispanic, and Asian adults.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The largest relative value among the four categories is 0.4437, making it the top category for confidence.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "32%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.4437,
+     "note": "largest relative_value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top category has the highest relative confidence at about 0.44.",
+    "The largest bar or segment is the one with relative_value 0.4437.",
+    "One category clearly leads with relative_value 0.4437."
+   ],
+   "visual_evidence_rule": "The top category's magnitude must be visibly the largest among the four.",
+   "temporal_anchor": "White adults are much more likely than black or Hispanic adults...",
+   "reviewer_question": "Must the video identify the top category as the maximum relative value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The relative values are ordered from largest to smallest: 0.4437 > 0.2496 > 0.2219 > 0.1387.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "32%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.4437,
+     "note": "rank 1"
+    },
+    {
+     "entity": "18%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2496,
+     "note": "rank 2"
+    },
+    {
+     "entity": "16%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2219,
+     "note": "rank 3"
+    },
+    {
+     "entity": "10%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1387,
+     "note": "rank 4"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The four categories rank in descending order: about 0.44, 0.25, 0.22, 0.14.",
+    "The chart shows a descending sequence from largest to smallest across the four categories.",
+    "Largest to smallest is 0.4437, 0.2496, 0.2219, 0.1387."
+   ],
+   "visual_evidence_rule": "The four magnitudes must be shown in descending order.",
+   "temporal_anchor": "race and ethnicity is one of them",
+   "reviewer_question": "Must the video preserve the full descending order of all four categories?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The largest relative value (0.4437) exceeds the second-largest (0.2496) by 0.1941 relative units, a gap of about 1.78x.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "32%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.4437,
+     "note": "top category"
+    },
+    {
+     "entity": "18%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2496,
+     "note": "second category"
+    }
+   ],
+   "computation": "0.4437 - 0.2496 = 0.1941; 0.4437 / 0.2496 ≈ 1.78",
+   "accepted_routes": [
+    "The top category is nearly twice the second category in relative terms.",
+    "The gap between the top and second category is about 0.19 relative units.",
+    "The top value is about 1.8 times the next value."
+   ],
+   "visual_evidence_rule": "The chart must make the gap between the highest and next-highest magnitudes visually apparent.",
+   "temporal_anchor": "much more likely than black or Hispanic adults",
+   "reviewer_question": "Is the top-to-second gap an essential signal, or is just the top being highest enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The smallest relative value (0.1387) is less than one-third of the largest (0.4437), about 0.31x, or the largest is about 3.2 times the smallest.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "32%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.4437,
+     "note": "top category"
+    },
+    {
+     "entity": "10%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1387,
+     "note": "bottom category"
+    }
+   ],
+   "computation": "0.1387 / 0.4437 ≈ 0.3126; 0.4437 / 0.1387 ≈ 3.20",
+   "accepted_routes": [
+    "The smallest category is less than a third of the largest.",
+    "The largest value is more than three times the smallest.",
+    "The bottom category is far below the top (about 0.14 vs 0.44)."
+   ],
+   "visual_evidence_rule": "The chart must show the lowest magnitude is much smaller than the highest.",
+   "temporal_anchor": "White adults are much more likely...",
+   "reviewer_question": "Must the video convey the magnitude of the top-to-bottom disparity, not just the ranking?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The second and third relative values are close (0.2496 and 0.2219, difference 0.0277), while both are above the smallest (0.1387).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "18%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2496,
+     "note": "second category"
+    },
+    {
+     "entity": "16%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2219,
+     "note": "third category"
+    },
+    {
+     "entity": "10%",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1387,
+     "note": "bottom category"
+    }
+   ],
+   "computation": "0.2496 - 0.2219 = 0.0277",
+   "accepted_routes": [
+    "The middle two categories are nearly the same, within about 0.03 relative units.",
+    "The second and third values are close together and both exceed the bottom value.",
+    "The second and third bars are similar in length."
+   ],
+   "visual_evidence_rule": "The chart must show the second and third magnitudes as visually similar and both larger than the fourth.",
+   "temporal_anchor": "race and ethnicity is one of them",
+   "reviewer_question": "Should the video mention that the middle two categories are close, or is that too much detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The exact relative_value of the top category is 0.4437.",
+  "The exact relative_value of the smallest category is 0.1387.",
+  "The total of the four relative values is 1.0539."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute percentages, counts, or dollar amounts (e.g., 32%, 18%, 16%, 10% as values).",
+  "Causal explanations for why confidence differs by race or ethnicity.",
+  "Age comparisons or young vs middle-aged/older differences (not present in the table).",
+  "Mapping specific rows to White, Black, Hispanic, or Asian labels beyond what the video's own labels provide."
+ ],
+ "notes": "Units are framed as relative-value comparisons and ordering because all rows carry only relative_value. The table's entity labels are used only as row identifiers; no absolute percentages, counts, or dollar amounts are asserted.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 44.0,
+  "usage": {
+   "prompt_tokens": 913,
+   "completion_tokens": 11211,
+   "total_tokens": 12124,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9303
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 529
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

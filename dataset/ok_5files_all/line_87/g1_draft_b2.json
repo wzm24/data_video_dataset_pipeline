@@ -1,0 +1,343 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_87",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the ideological divide between political parties has grown significantly larger than divides based on other demographic characteristics.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The partisan gap more than doubled from 1994 to 2017, rising from 15 to 36.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Party",
+     "x": "1994",
+     "field": "value",
+     "value": 15,
+     "note": "Party gap in 1994"
+    },
+    {
+     "entity": "Party",
+     "x": "2017",
+     "field": "value",
+     "value": 36,
+     "note": "Party gap in 2017"
+    }
+   ],
+   "computation": "36 / 15 = 2.4; 36 - 15 = 21",
+   "accepted_routes": [
+    "The partisan gap rose from 15 in 1994 to 36 in 2017, more than doubling.",
+    "The Party divide grew from 15 to 36 between 1994 and 2017, a roughly 2.4x increase.",
+    "The Party gap increased by 21 gap units over the period, from 15 to 36."
+   ],
+   "visual_evidence_rule": "The Party trajectory must be traceable from 15 in 1994 to 36 in 2017, and the increase or ratio must be readable.",
+   "temporal_anchor": "it's more than doubled since 1994",
+   "reviewer_question": "Should the video explicitly state both endpoint values and that the increase is more than double?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "By 2017, the Party gap of 36 dwarfs every other demographic gap; the nearest other gap is Race at 14.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Party",
+     "x": "2017",
+     "field": "value",
+     "value": 36,
+     "note": "Party gap in 2017"
+    },
+    {
+     "entity": "Race",
+     "x": "2017",
+     "field": "value",
+     "value": 14,
+     "note": "Largest non-Party gap in 2017"
+    },
+    {
+     "entity": "Religious attendance",
+     "x": "2017",
+     "field": "value",
+     "value": 11,
+     "note": "Religious attendance gap in 2017"
+    },
+    {
+     "entity": "Education",
+     "x": "2017",
+     "field": "value",
+     "value": 11,
+     "note": "Education gap in 2017"
+    },
+    {
+     "entity": "Age",
+     "x": "2017",
+     "field": "value",
+     "value": 10,
+     "note": "Age gap in 2017"
+    },
+    {
+     "entity": "Gender",
+     "x": "2017",
+     "field": "value",
+     "value": 7,
+     "note": "Gender gap in 2017"
+    }
+   ],
+   "computation": "36 / 14 ≈ 2.57; 36 > 14 > 11 = 11 > 10 > 7",
+   "accepted_routes": [
+    "In 2017, the partisan gap is far above every other demographic gap; the closest is Race at 14.",
+    "Today's Party divide is about 2.6 times the next-largest gap and dwarfs Religious attendance, Education, Age, and Gender.",
+    "In 2017, the Party gap is the clear maximum, with Race 14 the only other gap above 11."
+   ],
+   "visual_evidence_rule": "In 2017, the Party gap must appear clearly separated above all other demographic gaps, with at least Party 36 and the nearest other gap 14 readable.",
+   "temporal_anchor": "Today, the partisan gap dwarfs any of these other measures",
+   "reviewer_question": "Must the video show the 2017 Party gap as the clear maximum over every other gap, or only over selected categories?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In 1994, the Party gap was only slightly larger than the largest other gap, Race, and was not yet a dominant outlier.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Party",
+     "x": "1994",
+     "field": "value",
+     "value": 15,
+     "note": "Party gap in 1994"
+    },
+    {
+     "entity": "Race",
+     "x": "1994",
+     "field": "value",
+     "value": 14,
+     "note": "Largest non-Party gap in 1994"
+    },
+    {
+     "entity": "Gender",
+     "x": "1994",
+     "field": "value",
+     "value": 9,
+     "note": "Gender gap in 1994"
+    },
+    {
+     "entity": "Education",
+     "x": "1994",
+     "field": "value",
+     "value": 8,
+     "note": "Education gap in 1994"
+    },
+    {
+     "entity": "Age",
+     "x": "1994",
+     "field": "value",
+     "value": 6,
+     "note": "Age gap in 1994"
+    },
+    {
+     "entity": "Religious attendance",
+     "x": "1994",
+     "field": "value",
+     "value": 5,
+     "note": "Religious attendance gap in 1994"
+    }
+   ],
+   "computation": "15 - 14 = 1; 15 / 14 ≈ 1.07",
+   "accepted_routes": [
+    "In 1994 the Party gap was barely above Race's 14 and close to other demographic gaps.",
+    "At the start, the partisan divide was not dramatically larger than the largest other divide.",
+    "In 1994, Party 15 vs Race 14, Gender 9, Education 8, Age 6, Religious attendance 5."
+   ],
+   "visual_evidence_rule": "In 1994, Party 15 and the largest other gap Race 14 must be visible as close or comparable, with other non-Party gaps lower.",
+   "temporal_anchor": "the opening contrast clause about the prior period before 'Today...'",
+   "reviewer_question": "Should the 1994 baseline be framed as only slightly larger than Race, rather than as no larger than all demographic gaps?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Across all recorded years, non-Party demographic gaps stay within a 4-to-14 range, while the Party gap reaches 36 by 2017.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Race",
+     "x": "2017",
+     "field": "value",
+     "value": 14,
+     "note": "Maximum non-Party gap in the table"
+    },
+    {
+     "entity": "Religious attendance",
+     "x": "1998",
+     "field": "value",
+     "value": 4,
+     "note": "Minimum non-Party gap in the table"
+    },
+    {
+     "entity": "Party",
+     "x": "2017",
+     "field": "value",
+     "value": 36,
+     "note": "Party endpoint above the non-Party band"
+    }
+   ],
+   "computation": "non-Party range = 14 - 4 = 10; Party 36 > 14",
+   "accepted_routes": [
+    "Every non-Party gap remains between 4 and 14 over the recorded years, while Party rises to 36.",
+    "Other demographic divides never exceed 14, and the smallest is 4, far below Party's 36 in 2017.",
+    "The non-Party divides are contained within a 4-to-14 band; Party breaks far above it."
+   ],
+   "visual_evidence_rule": "The non-Party series must stay within the 4-to-14 band across their recorded years while Party reaches 36.",
+   "temporal_anchor": "the 'other measures' clause in 'Today, the partisan gap dwarfs any of these other measures'",
+   "reviewer_question": "Is it required to show that non-Party gaps never exceed 14, or is that optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "In 2017, the gaps rank as Party > Race > Religious attendance/Education > Age > Gender.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Party",
+     "x": "2017",
+     "field": "value",
+     "value": 36,
+     "note": "Highest 2017 gap"
+    },
+    {
+     "entity": "Race",
+     "x": "2017",
+     "field": "value",
+     "value": 14,
+     "note": "Second-highest 2017 gap"
+    },
+    {
+     "entity": "Religious attendance",
+     "x": "2017",
+     "field": "value",
+     "value": 11,
+     "note": "Tied third-highest 2017 gap"
+    },
+    {
+     "entity": "Education",
+     "x": "2017",
+     "field": "value",
+     "value": 11,
+     "note": "Tied third-highest 2017 gap"
+    },
+    {
+     "entity": "Age",
+     "x": "2017",
+     "field": "value",
+     "value": 10,
+     "note": "Fifth-highest 2017 gap"
+    },
+    {
+     "entity": "Gender",
+     "x": "2017",
+     "field": "value",
+     "value": 7,
+     "note": "Lowest 2017 gap"
+    }
+   ],
+   "computation": "36 > 14 > 11 = 11 > 10 > 7",
+   "accepted_routes": [
+    "In 2017, Party is first, Race is second, Religious attendance and Education tie for third, then Age, then Gender.",
+    "The 2017 ordering is Party 36, Race 14, Religious attendance 11, Education 11, Age 10, Gender 7.",
+    "By 2017 the Party gap is followed by Race, with Religious attendance and Education tied below it."
+   ],
+   "visual_evidence_rule": "The 2017 order Party > Race > Religious attendance/Education > Age > Gender must be inferable from the displayed 2017 values.",
+   "temporal_anchor": "the same 'dwarfs any of these other measures' clause, if the video ranks the other gaps",
+   "reviewer_question": "Should the exact 2017 ranking among non-Party gaps be treated as required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Party gap is the largest recorded gap in every year it appears: 15 in 1994, 16 in 2004, 23 in 2014, and 36 in 2017.",
+  "Race remains the largest non-Party gap across the period, staying near 13.5 to 14.",
+  "Religious attendance gap increases from 5 in 1994 to 11 in 2017, but remains below the Party gap.",
+  "Gender gap does not rise: it goes from 9 in 1994 to 7 in 2017."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim the 1994 Party gap was smaller than Race or all other demographic gaps; the table shows Party 15 versus Race 14, Gender 9, Education 8, Age 6, and Religious attendance 5.",
+  "Do not treat gap values as percentages, vote shares, or counts unless explicitly converted and justified from the table.",
+  "Do not extrapolate beyond 2017 or mention years not present in the table.",
+  "Do not say all non-Party gaps were flat; Religious attendance, Education, Age, and Gender changed by different amounts and sometimes in different directions.",
+  "Do not make causal claims about why the partisan gap grew.",
+  "Do not present colors, positions, chart type, axis ticks, or layout as semantic content."
+ ],
+ "notes": "The strongest contrast is 1994 (Party 15 vs Race 14) versus 2017 (Party 36 vs next-highest Race 14). Because the narration says 'no larger' in the past, keep the data tension visible: Party 15 was slightly larger than Race 14, but not yet an outlier.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 35.0,
+  "usage": {
+   "prompt_tokens": 2047,
+   "completion_tokens": 8489,
+   "total_tokens": 10536,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5827
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 1407
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

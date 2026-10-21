@@ -1,0 +1,234 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_85",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the sharp decline or crash that results from a speculative bubble.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series reaches its maximum at relative_value 1.0000 early in the sequence, establishing the speculative peak before the fall.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trend",
+     "x": "second point",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "The highest relative_value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The trend hits its highest point at 1.0000 early in the series.",
+    "The peak is the full normalized height.",
+    "The series starts near the top and then reaches its maximum of 1.0000."
+   ],
+   "visual_evidence_rule": "A visibly highest point on the line occurs before the decline.",
+   "temporal_anchor": "speculative bubble with nothing more than hot air",
+   "reviewer_question": "Must the video explicitly identify the early maximum as the bubble peak?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The final point falls to relative_value 0.0000, the lowest value in the series, after the decline.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trend",
+     "x": "final point",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "The minimum relative_value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The line ends at 0.0000.",
+    "The last value is the bottom of the normalized scale.",
+    "The series finishes at its lowest point, 0.0000."
+   ],
+   "visual_evidence_rule": "The endpoint of the line sits at the bottom of the plotted relative_value range.",
+   "temporal_anchor": "as in the case with bubbles",
+   "reviewer_question": "Must the clip show the series ending exactly at zero?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "There is an abrupt late-series one-step drop from relative_value 0.4194 to 0.1505, a fall of 0.2689 relative units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trend",
+     "x": "late point before the crash",
+     "field": "relative_value",
+     "value": 0.4194,
+     "note": "Value immediately before a steep downward step."
+    },
+    {
+     "entity": "trend",
+     "x": "next late point",
+     "field": "relative_value",
+     "value": 0.1505,
+     "note": "Value immediately after the steep downward step."
+    }
+   ],
+   "computation": "0.4194 - 0.1505 = 0.2689",
+   "accepted_routes": [
+    "Late in the sequence the line plunges from about 0.42 to about 0.15.",
+    "Consecutive points show a sharp fall of about 0.27 relative units.",
+    "The value drops from 0.4194 to 0.1505 in one move."
+   ],
+   "visual_evidence_rule": "A very steep downward segment connects those two consecutive points.",
+   "temporal_anchor": "as in the case with bubbles",
+   "reviewer_question": "Should this specific late one-step plunge be highlighted as the crash moment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Overall, the series collapses from its early maximum 1.0000 to its final minimum 0.0000, losing the full normalized range.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trend",
+     "x": "early peak",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Maximum value in the series."
+    },
+    {
+     "entity": "trend",
+     "x": "final point",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "Minimum value in the series."
+    }
+   ],
+   "computation": "1.0000 - 0.0000 = 1.0000",
+   "accepted_routes": [
+    "The overall shape is a crash from the highest point to the lowest point.",
+    "The line falls from full normalized height to zero.",
+    "The series moves from its peak of 1.0000 down to 0.0000."
+   ],
+   "visual_evidence_rule": "A descending trajectory connects the early maximum to the final minimum.",
+   "temporal_anchor": "worst case scenario",
+   "reviewer_question": "Is the full peak-to-final collapse required beyond the separate peak and final-zero facts?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The decline is not perfectly monotonic: before the final crash, the series contains minor rebounds, such as a move from relative_value 0.4516 to 0.5806.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "trend",
+     "x": "mid-series low before rebound",
+     "field": "relative_value",
+     "value": 0.4516,
+     "note": "A local low before a temporary upward move."
+    },
+    {
+     "entity": "trend",
+     "x": "later mid-series high",
+     "field": "relative_value",
+     "value": 0.5806,
+     "note": "A local rebound after the previous low."
+    }
+   ],
+   "computation": "0.5806 - 0.4516 = 0.1290",
+   "accepted_routes": [
+    "There are small recoveries along the way before the final fall.",
+    "The series bounces from 0.4516 up to 0.5806 before falling further.",
+    "The fall includes temporary upward moves rather than being a straight decline."
+   ],
+   "visual_evidence_rule": "At least one visible upward segment interrupts the broader downward path before the final collapse.",
+   "temporal_anchor": "as in the case with bubbles",
+   "reviewer_question": "Are minor pre-crash rebounds optional context, or should the animation simplify to a monotonic fall?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A secondary local high at 0.9032 after the initial peak may be shown but is not required for the crash.",
+  "The early plateau around 0.9677, 1.0000, and 0.8925 can provide bubble-inflation context."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that a speculative bubble, hot air, or investor psychology caused the decline; the table only contains relative trend values.",
+  "Absolute percentages, dollar amounts, counts, market-cap figures, or date/time durations not present in the table.",
+  "Treating x_px as a date/time unit or claiming a specific real-world duration.",
+  "Claiming the decline is perfectly monotonic or that the series must recover beyond the table."
+ ],
+ "notes": "All cited values are relative_value entries or arithmetic differences between them; no absolute units exist in the table. The required units focus on peak, final zero, sharp late drop, and overall collapse, with minor rebounds left optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 33.8,
+  "usage": {
+   "prompt_tokens": 1598,
+   "completion_tokens": 7589,
+   "total_tokens": 9187,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5883
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1086
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,149 @@
+{
+ "clip_id": "bar_84",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "18-29 @ 18-29",
+    "extreme": "max",
+    "expected": 24.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 18-29 mark must be visibly the highest and labeled or annotated with 24%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:5-17 @ 5-17",
+    "mark:30-44 @ 30-44"
+   ],
+   "assertion": {
+    "greater": "5-17 @ 5-17",
+    "lesser": "30-44 @ 30-44",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 5-17 and 30-44 marks must be visibly equal in height and labeled 17% each, or otherwise shown as tied."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:60+ @ 60+",
+    "mark:45-59 @ 45-59"
+   ],
+   "assertion": {
+    "greater": "60+ @ 60+",
+    "lesser": "45-59 @ 45-59",
+    "expected_ratio": 1.4444,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 45-59 mark must be visibly the lowest and labeled 9%, with the 60+ mark labeled 13% and shown higher."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:18-29 @ 18-29",
+    "mark:5-17 @ 5-17",
+    "mark:30-44 @ 30-44",
+    "mark:60+ @ 60+",
+    "mark:45-59 @ 45-59"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "18-29 @ 18-29",
+      "value": 24.0
+     },
+     {
+      "mark": "5-17 @ 5-17",
+      "value": 17.0
+     },
+     {
+      "mark": "30-44 @ 30-44",
+      "value": 17.0
+     },
+     {
+      "mark": "60+ @ 60+",
+      "value": 13.0
+     },
+     {
+      "mark": "45-59 @ 45-59",
+      "value": 9.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative heights of all five age-group marks must match the ranking, or an on-screen ordered list or labels must show it."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:18-29 @ 18-29",
+    "mark:45-59 @ 45-59"
+   ],
+   "assertion": {
+    "greater": "18-29 @ 18-29",
+    "lesser": "45-59 @ 45-59",
+    "expected_ratio": 2.6667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 18-29 mark must be shown as taller than the 45-59 and 60+ marks combined, or an annotation must state 24 vs 22."
+  }
+ ]
+}

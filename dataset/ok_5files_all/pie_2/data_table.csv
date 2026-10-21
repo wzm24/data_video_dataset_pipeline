@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_2,Transportation 28%,transportation-28-,0,,30.8,0.3080,%,,estimated
+pie_2,Electricity 23%,electricity-23-,1,,24.0,0.2400,%,,estimated
+pie_2,Industry 22%,industry-22-,2,,21.2,0.2120,%,,estimated
+pie_2,Commercial and residential 12%,commercial-and-residential-12-,3,,13.2,0.1320,%,,estimated
+pie_2,Agriculture 10%,agriculture-10-,4,,10.9,0.1090,%,,estimated

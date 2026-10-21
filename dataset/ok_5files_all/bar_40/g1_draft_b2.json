@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_40",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the disparity in wealth between two individuals with the same income to highlight a flaw in the tax system.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Both individuals have the same job/income, so their income tax treatment is about the same; this context is needed to frame the wealth disparity.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [],
+   "computation": "none",
+   "accepted_routes": [
+    "Both have the same job and earn about the same amount.",
+    "Same income, different wealth.",
+    "Their income is about the same, so income tax treats them similarly."
+   ],
+   "visual_evidence_rule": "Narration or on-screen text states same job/income; no bar from the table is required for this context.",
+   "temporal_anchor": "because both of us have the same job and earn about the same amount of money",
+   "reviewer_question": "Should the same-income context be required even though it is not in the data table?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The chart shows two wealth bars: MY WEALTH = 0.373 and FRIEND'S WEALTH = 1.000 (relative_value 0.2639 and 0.7080).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 0.373,
+     "note": "table value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "table value"
+    },
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2639,
+     "note": "table relative_value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.708,
+     "note": "table relative_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "My wealth is 0.373; friend's wealth is 1.000.",
+    "Bars are labeled MY WEALTH and FRIEND'S WEALTH.",
+    "Relative values are 0.2639 and 0.7080."
+   ],
+   "visual_evidence_rule": "Two labeled bars are present, with MY WEALTH and FRIEND'S WEALTH values or relative values readable or implied.",
+   "temporal_anchor": "this bar represents my wealth and this is my friend's wealth",
+   "reviewer_question": "Must the video show both exact values or relative values, or are labels and relative heights enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "FRIEND'S WEALTH is greater than MY WEALTH; the friend's bar is the larger/taller one.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 0.373,
+     "note": "table value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "table value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Friend has more wealth than me.",
+    "My wealth is less than my friend's wealth.",
+    "The friend's bar is taller than my bar."
+   ],
+   "visual_evidence_rule": "Friend bar is visibly taller/larger than MY WEALTH bar, making the order clear.",
+   "temporal_anchor": "this bar represents my wealth and this is my friend's wealth",
+   "reviewer_question": "Is the ordering/taller-bar comparison required, or is showing both endpoints enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "FRIEND'S WEALTH is about 2.68 times MY WEALTH; equivalently, MY WEALTH is about 37.3% of FRIEND'S WEALTH.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 0.373,
+     "note": "table value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "table value"
+    }
+   ],
+   "computation": "1.000 / 0.373 = 2.680965; alternatively 0.7080 / 0.2639 = 2.6828; 0.373 / 1.000 = 0.373",
+   "accepted_routes": [
+    "Friend has about 2.7 times as much wealth as me.",
+    "Friend's wealth is almost 3x mine.",
+    "My wealth is about 37% of my friend's.",
+    "Friend's bar is nearly three times the size of mine."
+   ],
+   "visual_evidence_rule": "A ratio annotation, multiplier label, or text comparing bar lengths (e.g., 2.68x or about 2.7x) is visible.",
+   "temporal_anchor": "two people who may have the same income but",
+   "reviewer_question": "Is the wealth multiplier/ratio required to convey disparity, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Of the combined wealth shown by the two bars, FRIEND'S WEALTH accounts for about 72.8% and MY WEALTH about 27.2%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 0.373,
+     "note": "table value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "table value"
+    }
+   ],
+   "computation": "1.000 / (1.000 + 0.373) = 0.7283; 0.373 / (1.000 + 0.373) = 0.2717",
+   "accepted_routes": [
+    "Friend holds about 73% of the combined wealth; I hold about 27%.",
+    "The two-person wealth split is roughly 73/27.",
+    "Friend's share is almost three-quarters; mine is just over a quarter."
+   ],
+   "visual_evidence_rule": "A stacked bar, percentage labels, or annotation shows the combined two-bar share.",
+   "temporal_anchor": "two people who may have the same income but",
+   "reviewer_question": "Should the video show combined-share composition, or is it optional given the two separate bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Friend has 0.627 more wealth units than MY WEALTH (1.000 - 0.373 = 0.627).",
+  "Friend has about 168% more wealth than MY WEALTH ((1.000 - 0.373) / 0.373 = 1.681).",
+  "Same income tax treatment is the same for both, presented as context from the narration."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming the tax system is flawed because of the wealth gap; no tax data is in the table.",
+  "Claiming same income causes the wealth disparity; no income data is in the table.",
+  "Extrapolating to broader society or other individuals; only two entities are in the table.",
+  "Treating relative_value 0.2639 and 0.7080 as shares that sum to 100%; they do not sum to 1.0 in the table.",
+  "Using a share denominator other than the combined two bars without table support."
+ ],
+ "notes": "The table only provides two wealth bars and their relative values; same-income/tax context comes from narration/intent, not the table. Ratios and shares are arithmetic combinations of the two value cells.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 51.8,
+  "usage": {
+   "prompt_tokens": 702,
+   "completion_tokens": 12763,
+   "total_tokens": 13465,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10951
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 446
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,256 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_32",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the accelerating expansion of the universe over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip presents a single relative series for 'scale of the universe', not multiple entities or categories.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "scale of the universe",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "first table row"
+    },
+    {
+     "entity": "scale of the universe",
+     "x": "end",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "last table row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "One series tracks the scale of the universe.",
+    "The data has a single entity: scale of the universe.",
+    "No separate categories or multiple series are shown."
+   ],
+   "visual_evidence_rule": "A single labeled series or continuous mark for 'scale of the universe' is visible.",
+   "temporal_anchor": "Opening narration clause about the universe expanding.",
+   "reviewer_question": "Must the video identify the single entity as 'scale of the universe'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The relative scale generally increases over the sequence from 0.0000 to 1.0000 and never decreases.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "scale of the universe",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "minimum/first value"
+    },
+    {
+     "entity": "scale of the universe",
+     "x": "end",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "maximum/last value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The value rises overall from 0.0000 to 1.0000.",
+    "The series is non-decreasing and ends at its maximum.",
+    "Expansion measure grows over the sequence."
+   ],
+   "visual_evidence_rule": "The plotted series moves upward overall from its first value to its last value without a downward reversal.",
+   "temporal_anchor": "Narration clause about the expansion of the universe.",
+   "reviewer_question": "Must the video show the overall upward, non-decreasing trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The relative scale crosses about half of its maximum (0.5025) before reaching the maximum 1.0000.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "scale of the universe",
+     "x": "mid",
+     "field": "relative_value",
+     "value": 0.5025,
+     "note": "table value at x=630; about half of max"
+    },
+    {
+     "entity": "scale of the universe",
+     "x": "later",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "table value at x=891; maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series passes the midpoint value 0.5025 before hitting 1.0000.",
+    "About half of the maximum is reached before the maximum.",
+    "The curve crosses roughly 0.5 on its way to 1.0."
+   ],
+   "visual_evidence_rule": "The series is visibly above the halfway level of its relative range before it reaches the top of the range.",
+   "temporal_anchor": "Middle narration clause about recent discoveries or acceleration.",
+   "reviewer_question": "Is the half-maximum crossing required to be shown, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Later expansion is faster: the relative gain from 0.5025 to 1.0000 occurs over a shorter x-progression than the relative gain from 0.0000 to 0.5025, so the average rate is higher later.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "scale of the universe",
+     "x": "150",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "start value"
+    },
+    {
+     "entity": "scale of the universe",
+     "x": "630",
+     "field": "relative_value",
+     "value": 0.5025,
+     "note": "midpoint value"
+    },
+    {
+     "entity": "scale of the universe",
+     "x": "891",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "maximum value"
+    }
+   ],
+   "computation": "(1.0000 - 0.5025) / (891 - 630) = 0.4975 / 261 ≈ 0.001906 per x-step; (0.5025 - 0.0000) / (630 - 150) = 0.5025 / 480 ≈ 0.001047 per x-step; later/earlier ≈ 1.82.",
+   "accepted_routes": [
+    "The curve steepens after the midpoint, so later expansion is faster.",
+    "The second half of the relative range is covered at a higher average rate than the first half.",
+    "The rate increases from the first half to the second half."
+   ],
+   "visual_evidence_rule": "The series is visibly steeper after it passes about 0.5025 than it was before that point.",
+   "temporal_anchor": "Narration clause stating the expansion is accelerating.",
+   "reviewer_question": "Must the video convey the increasing rate of expansion, not just an upward trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The maximum relative scale is 1.0000, reached at x=891, and remains at 1.0000 through x=1179; the series does not exceed this maximum.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "scale of the universe",
+     "x": "891",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "first row at max"
+    },
+    {
+     "entity": "scale of the universe",
+     "x": "1179",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "last row at max"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series tops out at 1.0000 and stays there.",
+    "The maximum is 1.0000 from x=891 onward.",
+    "The value ends at its maximum and does not go higher."
+   ],
+   "visual_evidence_rule": "The series reaches the top of the relative range and then flattens at that level through the end.",
+   "temporal_anchor": "Closing narration clause about expansion acceleration.",
+   "reviewer_question": "Must the video show the maximum and final plateau, or is the upward rise alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series is non-decreasing throughout.",
+  "A slow middle phase around 0.25 before the later steep rise.",
+  "Intermediate landmarks such as 0.2858 at x=450 or 0.7071 at x=750."
+ ],
+ "unsupported_to_avoid": [
+  "Percentages, dollar amounts, distances, ages, or absolute times not present in the table.",
+  "Causal explanations such as dark energy or redshift causing acceleration.",
+  "Extrapolating beyond the table's maximum relative_value 1.0000.",
+  "Treating relative_value as a percentage share or literal physical size."
+ ],
+ "notes": "All quantitative claims use relative_value and table x-progression values; no absolute value column exists. The acceleration unit is an average rate comparison, not a claim about every adjacent step.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 55.4,
+  "usage": {
+   "prompt_tokens": 11213,
+   "completion_tokens": 13102,
+   "total_tokens": 24315,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11244
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 10573
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

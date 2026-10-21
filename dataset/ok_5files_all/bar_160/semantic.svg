@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#EAE6DF"/>
+<text x="640" y="56" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#222">Pay ratio: teachers vs. college grads</text>
+<rect x="243.8" y="159.6" width="77.5" height="470.4" fill="#C47F6A"/>
+<text x="282.5" y="149.6" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">.98</text>
+<text x="282.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">FIN</text>
+<rect x="368.8" y="150.0" width="77.5" height="480.0" fill="#C47F6A"/>
+<text x="407.5" y="140.0" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">$1</text>
+<text x="407.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">DEU</text>
+<rect x="493.8" y="169.2" width="77.5" height="460.8" fill="#C47F6A"/>
+<text x="532.5" y="159.2" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">.96</text>
+<text x="532.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">ISR</text>
+<rect x="618.8" y="178.8" width="77.5" height="451.2" fill="#C47F6A"/>
+<text x="657.5" y="168.8" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">.94</text>
+<text x="657.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">AUS</text>
+<rect x="743.8" y="188.4" width="77.5" height="441.6" fill="#C47F6A"/>
+<text x="782.5" y="178.4" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">.92</text>
+<text x="782.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">UK</text>
+<rect x="868.8" y="207.6" width="77.5" height="422.4" fill="#C47F6A"/>
+<text x="907.5" y="197.6" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">.88</text>
+<text x="907.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">NZL</text>
+<rect x="993.8" y="207.6" width="77.5" height="422.4" fill="#C47F6A"/>
+<text x="1032.5" y="197.6" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">.88</text>
+<text x="1032.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">OECD</text>
+<rect x="1118.8" y="318.0" width="77.5" height="312.0" fill="#C47F6A"/>
+<text x="1157.5" y="308.0" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">.65</text>
+<text x="1157.5" y="656.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">USA</text>
+<text x="640" y="700" text-anchor="middle" font-family="Arial" font-size="14" fill="#666">OECD, 2019</text>
+</svg>

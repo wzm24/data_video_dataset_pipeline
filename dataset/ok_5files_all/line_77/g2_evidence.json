@@ -1,0 +1,148 @@
+{
+ "clip_id": "line_77",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must have a label/title or legend identifying the entity as India daily cases 7dma."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:daily cases 7dma @ x_px=972.4",
+    "mark:daily cases 7dma @ x_px=977.1",
+    "mark:daily cases 7dma @ x_px=1027.8",
+    "mark:daily cases 7dma @ x_px=1097.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "daily cases 7dma @ x_px=972.4",
+      "value": 15.7921
+     },
+     {
+      "mark": "daily cases 7dma @ x_px=977.1",
+      "value": 15.7921
+     },
+     {
+      "mark": "daily cases 7dma @ x_px=1027.8",
+      "value": 21.7271
+     },
+     {
+      "mark": "daily cases 7dma @ x_px=1097.0",
+      "value": 105.5474
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a trough/low before the final steep upward segment; the surge should not be read as the initial rise."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:daily cases 7dma @ x_px=1150.0"
+   ],
+   "assertion": {
+    "mark": "daily cases 7dma @ x_px=1150.0",
+    "field": "value",
+    "expected": 369.5175,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final endpoint/value should be visible or labeled on the y-axis or annotation."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:daily cases 7dma @ x_px=972.4",
+    "mark:daily cases 7dma @ x_px=1150.0"
+   ],
+   "assertion": {
+    "low": "daily cases 7dma @ x_px=972.4",
+    "low_value": 15.7921,
+    "high": "daily cases 7dma @ x_px=1150.0",
+    "high_value": 369.5175,
+    "delta": 353.7254,
+    "ratio": 23.3989,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the pre-surge low and final high must be visible, or the rise must be quantified in an annotation."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:daily cases 7dma @ x_px=1097.0",
+    "mark:daily cases 7dma @ x_px=1120.0",
+    "mark:daily cases 7dma @ x_px=1136.2"
+   ],
+   "assertion": {
+    "series": "daily cases 7dma",
+    "values": [
+     105.5474,
+     208.7249,
+     314.9156
+    ],
+    "threshold_between": [
+     105.5474,
+     314.9156
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Horizontal reference lines or annotations at 100, 200, and 300 should be shown with the curve crossing them."
+  }
+ ]
+}

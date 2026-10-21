@@ -1,0 +1,276 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_83",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the sudden and massive surge in daily COVID-19 cases in Taiwan after a prolonged period of low transmission.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Before the 2021 outbreak, Taiwan's daily COVID-19 cases stayed at low levels for more than a year, with examples around 6 in Jan 2020, 23 in Apr 2020, 7 in Aug 2020, 7 in Nov 2020, and 8 in Feb 2021.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Jan 2020",
+     "field": "value",
+     "value": 5.9524,
+     "note": "early low point"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Apr 2020",
+     "field": "value",
+     "value": 22.7193,
+     "note": "still low relative to later surge"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Aug 2020",
+     "field": "value",
+     "value": 7.2607,
+     "note": "low during 2020"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Nov 2020",
+     "field": "value",
+     "value": 6.9601,
+     "note": "low during 2020"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Feb 2021",
+     "field": "value",
+     "value": 8.0236,
+     "note": "low before outbreak"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Taiwan had a long stretch of low daily cases before the outbreak, e.g. about 6 in Jan 2020, 23 in Apr 2020, 7 in Aug 2020, 7 in Nov 2020, and 8 in Feb 2021.",
+    "Daily cases stayed mostly in the single digits to low tens for over a year before the June 2021 surge.",
+    "From Jan 2020 through Feb 2021, Taiwan's daily case curve remained low, with only small fluctuations."
+   ],
+   "visual_evidence_rule": "The chart must show a prolonged low level in the line before the steep rise, including at least two early labeled months such as Jan 2020 and Feb 2021.",
+   "temporal_anchor": "After more than a year of normalcy",
+   "reviewer_question": "Is the prolonged low-transmission baseline required as a separate unit, or can it be folded into the surge comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The surge begins around June 2021, when daily cases jump from about 33 to about 115.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Jun 2021",
+     "field": "value",
+     "value": 33.2143,
+     "note": "last labeled pre-surge level"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "post-Jun 2021 first surge point",
+     "field": "value",
+     "value": 115.0,
+     "note": "first clear surge point after June 2021"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The outbreak begins after June 2021, with daily cases rising from about 33 to about 115.",
+    "Daily cases first surge from roughly 33 in June 2021 to about 115 soon after.",
+    "A sharp upward move starts at the June 2021 point and reaches about 115."
+   ],
+   "visual_evidence_rule": "The chart must show the line turning sharply upward at or after the June 2021 point and passing through about 115 cases.",
+   "temporal_anchor": "Taiwan faced its biggest COVID outbreak ever",
+   "reviewer_question": "Should the onset point be required, or is the overall steep climb enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The surge is multi-step and steep: daily cases climb from about 33 in June 2021 to about 115, then about 370, then about 497 at the series peak.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Jun 2021",
+     "field": "value",
+     "value": 33.2143,
+     "note": "start of surge"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "post-Jun 2021 first surge point",
+     "field": "value",
+     "value": 115.0,
+     "note": "first surge step"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "post-Jun 2021 second surge point",
+     "field": "value",
+     "value": 369.6429,
+     "note": "second surge step"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "post-Jun 2021 peak",
+     "field": "value",
+     "value": 496.9048,
+     "note": "peak surge point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The daily case curve rises steeply through successive points: about 33, then 115, then 370, then 497.",
+    "After June 2021, cases jump in steps to roughly 115, 370, and finally 497.",
+    "The outbreak produces a rapid multi-step ascent ending near 497 daily cases."
+   ],
+   "visual_evidence_rule": "The chart must show the line's steep upward path and the ordered high points around 115, 370, and 497.",
+   "temporal_anchor": "biggest COVID outbreak ever",
+   "reviewer_question": "Is the ordered multi-step climb required, or is the single peak value sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The highest daily case count in the series is about 497 cases.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taiwan daily cases",
+     "x": "post-Jun 2021 peak",
+     "field": "value",
+     "value": 496.9048,
+     "note": "maximum value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Daily cases peak at about 497.",
+    "The series maximum is roughly 497 cases.",
+    "The outbreak tops out near 497 daily cases."
+   ],
+   "visual_evidence_rule": "The chart must show the line reaching its highest point at about 497 cases.",
+   "temporal_anchor": "biggest COVID outbreak ever",
+   "reviewer_question": "Is the exact peak value required, or would a clear maximum without the number suffice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The peak is roughly 15 times the pre-surge June 2021 level: about 497 cases versus about 33 cases.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taiwan daily cases",
+     "x": "Jun 2021",
+     "field": "value",
+     "value": 33.2143,
+     "note": "pre-surge level"
+    },
+    {
+     "entity": "Taiwan daily cases",
+     "x": "post-Jun 2021 peak",
+     "field": "value",
+     "value": 496.9048,
+     "note": "peak level"
+    }
+   ],
+   "computation": "496.9048 / 33.2143 ≈ 14.96",
+   "accepted_routes": [
+    "The peak is about 15 times the June 2021 level.",
+    "Daily cases end up nearly 15 times higher than the pre-surge level of about 33.",
+    "The maximum is roughly 497 compared with about 33 before the surge, a nearly 15-fold increase."
+   ],
+   "visual_evidence_rule": "The chart must make the peak visibly far above the June 2021 pre-surge level, supporting a roughly 15x comparison.",
+   "temporal_anchor": "After more than a year of normalcy, Taiwan faced its biggest COVID outbreak ever",
+   "reviewer_question": "Should the magnitude comparison be required, or is the surge shape alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The final point's relative_value is about 0.98, indicating it is essentially the highest point in the normalized series.",
+  "The series begins at about 6 cases in Jan 2020."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why the outbreak happened (e.g. policy failures, variants, travel).",
+  "Any dates for unlabeled surge points beyond 'after June 2021'.",
+  "Percentages, dollars, or counts not present in or directly computed from the table.",
+  "Claims that Taiwan had zero cases before the outbreak."
+ ],
+ "notes": "The table has absolute daily case values, so the units use case counts from the value column; unlabeled post-June 2021 points are identified by their order after the June 2021 label. The core story is the contrast between the long low baseline and the steep, roughly 15-fold rise to the peak.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 37.1,
+  "usage": {
+   "prompt_tokens": 1625,
+   "completion_tokens": 9212,
+   "total_tokens": 10837,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7153
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1113
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

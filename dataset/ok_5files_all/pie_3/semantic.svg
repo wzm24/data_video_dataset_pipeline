@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#303030"/>
+<path d="M 640.0 448.0 L 640.0 250.0 A 198.0 198.0 0 0 1 703.5 260.5 Z" fill="#8bb7b6" stroke="#303030" stroke-width="2"/>
+<path d="M 640.0 448.0 L 703.5 260.5 A 198.0 198.0 0 1 1 458.3 369.4 Z" fill="#da5751" stroke="#e8c060" stroke-width="6"/>
+<path d="M 640.0 448.0 L 458.3 369.4 A 198.0 198.0 0 0 1 467.7 350.4 Z" fill="#f6cc6f" stroke="#e8c060" stroke-width="6"/>
+<path d="M 640.0 448.0 L 467.7 350.4 A 198.0 198.0 0 0 1 507.2 301.1 Z" fill="#24638c" stroke="#e8c060" stroke-width="6"/>
+<path d="M 640.0 448.0 L 507.2 301.1 A 198.0 198.0 0 0 1 531.8 282.2 Z" fill="#fff151" stroke="#e8c060" stroke-width="6"/>
+<path d="M 640.0 448.0 L 531.8 282.2 A 198.0 198.0 0 0 1 627.6 250.4 Z" fill="#dd8962" stroke="#e8c060" stroke-width="6"/>
+<path d="M 640.0 448.0 L 627.6 250.4 A 198.0 198.0 0 0 1 640.0 250.0 Z" fill="#5b7ba8" stroke="#e8c060" stroke-width="6"/>
+<text x="640" y="86" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#ffffff">Commute mode, by percentage</text>
+<text x="640" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#dddddd">Bureau of Transportation Statistics</text>
+<text x="1210" y="70" text-anchor="end" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#ffffff">Vox</text>
+<text x="640" y="556" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#ffffff">76%</text>
+<line x1="668" y1="280" x2="679" y2="209" stroke="#9a9a9a" stroke-width="2"/>
+<text x="691" y="218" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#ffffff">Public transportation</text>
+<line x1="488" y1="372" x2="411" y2="334" stroke="#9a9a9a" stroke-width="2"/>
+<text x="399" y="343" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#ffffff">Taxi, motorcycle, or other</text>
+<line x1="507" y1="342" x2="451" y2="297" stroke="#9a9a9a" stroke-width="2"/>
+<text x="439" y="306" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#ffffff">Work at home</text>
+<line x1="536" y1="313" x2="492" y2="256" stroke="#9a9a9a" stroke-width="2"/>
+<text x="480" y="265" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#ffffff">Walk</text>
+<line x1="586" y1="286" x2="564" y2="218" stroke="#9a9a9a" stroke-width="2"/>
+<text x="552" y="227" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#ffffff">Carpool</text>
+<line x1="635" y1="278" x2="632" y2="192" stroke="#9a9a9a" stroke-width="2"/>
+<text x="620" y="201" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#ffffff">Bicycle</text>
+<line x1="728" y1="637" x2="753" y2="691" stroke="#9a9a9a" stroke-width="2"/>
+<text x="767" y="701" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Drive alone</text>
+</svg>

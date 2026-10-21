@@ -1,0 +1,131 @@
+{
+ "clip_id": "line_9",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:TEST-OPTIONAL (series) @ 2010",
+    "mark:TEST-OPTIONAL (series) @ 1994"
+   ],
+   "assertion": {
+    "greater": "TEST-OPTIONAL (series) @ 2010",
+    "lesser": "TEST-OPTIONAL (series) @ 1994",
+    "expected_ratio": 1.1414,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series visible; test-optional line stays above test-required at labeled years."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:TEST-OPTIONAL (series) @ 1994",
+    "mark:TEST-REQUIRED (series) @ 1994",
+    "mark:TEST-OPTIONAL (series) @ 2010",
+    "mark:TEST-REQUIRED (series) @ 2010"
+   ],
+   "assertion": {
+    "low": "TEST-REQUIRED (series) @ 1994",
+    "low_value": 980.0,
+    "high": "TEST-OPTIONAL (series) @ 2010",
+    "high_value": 1130.0,
+    "delta": 150.0,
+    "ratio": 1.1531,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Start and end values visible for both lines."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "TEST-OPTIONAL (series) @ 2010",
+    "extreme": "min",
+    "expected": 1130.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Endpoint 2010 values and separation visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:TEST-REQUIRED (series) @ 2006",
+    "mark:TEST-OPTIONAL (series) @ 2006",
+    "mark:TEST-REQUIRED (series) @ 2010",
+    "mark:TEST-OPTIONAL (series) @ 2010"
+   ],
+   "assertion": {
+    "low": "TEST-REQUIRED (series) @ 2010",
+    "low_value": 1100.0,
+    "high": "TEST-OPTIONAL (series) @ 2006",
+    "high_value": 1130.0,
+    "delta": 30.0,
+    "ratio": 1.0273,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "2006 and 2010 values for both series visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Narration or on-screen text explains selective submission mechanism."
+  }
+ ]
+}

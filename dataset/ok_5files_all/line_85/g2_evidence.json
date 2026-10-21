@@ -1,0 +1,141 @@
+{
+ "clip_id": "line_85",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "trend @ second point",
+    "extreme": "max",
+    "expected": 1.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visibly highest point on the line occurs before the decline."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:trend @ final point"
+   ],
+   "assertion": {
+    "mark": "trend @ final point",
+    "field": "value",
+    "expected": 0.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The endpoint of the line sits at the bottom of the plotted relative_value range."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:trend @ late point before the crash",
+    "mark:trend @ next late point"
+   ],
+   "assertion": {
+    "low": "trend @ next late point",
+    "low_value": 0.1505,
+    "high": "trend @ late point before the crash",
+    "high_value": 0.4194,
+    "delta": 0.2689,
+    "ratio": 2.7867,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A very steep downward segment connects those two consecutive points."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:trend @ early peak",
+    "mark:trend @ final point"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "trend @ early peak",
+      "value": 1.0
+     },
+     {
+      "mark": "trend @ final point",
+      "value": 0.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A descending trajectory connects the early maximum to the final minimum."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:trend @ mid-series low before rebound",
+    "mark:trend @ later mid-series high"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "trend @ mid-series low before rebound",
+      "value": 0.4516
+     },
+     {
+      "mark": "trend @ later mid-series high",
+      "value": 0.5806
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "At least one visible upward segment interrupts the broader downward path before the final collapse."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_67",
+ "intent_en": "To explain how the yield curve functions as an economic indicator and why an inversion signals a potential economic slowdown.",
+ "previous_intent": "To explain the mechanics of the yield curve and how an inversion in interest rates between short-term and long-term bonds signals investor expectations of an economic slowdown.",
+ "narration_support": "what is it about this curve that seems to make it such a good indicator of where the economy is heading?",
+ "chart_support": "Line chart titled 'Yield curve' comparing 'Normal' and 'Inverted' curves, plotting 'Interest rate' against 'Time' (3m to 10y).",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly asks about the curve's predictive power and explains the mechanism of inversion (long-term rates dropping below short-term rates due to fear of slowing economy), while the chart visualizes the 'Normal' (upward sloping) and 'Inverted' (downward sloping) relationships between interest rates and time.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

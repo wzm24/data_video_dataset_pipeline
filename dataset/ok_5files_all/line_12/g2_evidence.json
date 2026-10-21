@@ -1,0 +1,168 @@
+{
+ "clip_id": "line_12",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A label or legend must identify the series as Subway ridership and/or the unit as riders."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Subway ridership @ 2006"
+   ],
+   "assertion": {
+    "mark": "Subway ridership @ 2006",
+    "field": "value",
+    "expected": 20721.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2006 and 2011 endpoint values must be readable or directly derivable from visible labels."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Subway ridership @ 2006",
+    "mark:Subway ridership @ 2011"
+   ],
+   "assertion": {
+    "low": "Subway ridership @ 2006",
+    "low_value": 20721.0,
+    "high": "Subway ridership @ 2011",
+    "high_value": 25285.0,
+    "delta": 4564.0,
+    "ratio": 1.2203,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the net change derivable from the 2006 and 2011 values, or show a labelled delta of 4,564."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Subway ridership @ 2006",
+    "mark:Subway ridership @ 2011"
+   ],
+   "assertion": {
+    "low": "Subway ridership @ 2006",
+    "low_value": 20721.0,
+    "high": "Subway ridership @ 2011",
+    "high_value": 25285.0,
+    "delta": 4564.0,
+    "ratio": 1.2203,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show or annotate the 22% growth calculation from 20,721 to 25,285."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Subway ridership @ 2006",
+    "mark:Subway ridership @ 2011",
+    "mark:Subway ridership @ x_px 384",
+    "mark:Subway ridership @ x_px 520",
+    "mark:Subway ridership @ x_px 600",
+    "mark:Subway ridership @ x_px 604",
+    "mark:Subway ridership @ x_px 780",
+    "mark:Subway ridership @ x_px 1000",
+    "mark:Subway ridership @ x_px 1154"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Subway ridership @ 2006",
+      "value": 20721.0
+     },
+     {
+      "mark": "Subway ridership @ 2011",
+      "value": 25285.0
+     },
+     {
+      "mark": "Subway ridership @ x_px 384",
+      "value": 21908.0
+     },
+     {
+      "mark": "Subway ridership @ x_px 520",
+      "value": 22105.0
+     },
+     {
+      "mark": "Subway ridership @ x_px 600",
+      "value": 22221.0
+     },
+     {
+      "mark": "Subway ridership @ x_px 604",
+      "value": 22227.0
+     },
+     {
+      "mark": "Subway ridership @ x_px 780",
+      "value": 23277.0
+     },
+     {
+      "mark": "Subway ridership @ x_px 1000",
+      "value": 23870.0
+     },
+     {
+      "mark": "Subway ridership @ x_px 1154",
+      "value": 24737.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plotted series must show a continuous upward trend with no downward segment from start to end."
+  }
+ ]
+}

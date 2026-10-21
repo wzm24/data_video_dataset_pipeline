@@ -1,0 +1,306 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_31",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the monthly price of the arthritis drug Humira across different countries.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The full cross-country ordering of monthly Humira price values: Norway < France < United Kingdom < Canada < Australia < Germany < United States, with the United States highest and Norway lowest.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Norway",
+     "x": "448.7",
+     "field": "value",
+     "value": 894.602,
+     "note": "lowest of the series"
+    },
+    {
+     "entity": "France",
+     "x": "528.6",
+     "field": "value",
+     "value": 956.298,
+     "note": "second lowest"
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "609.0",
+     "field": "value",
+     "value": 1149.1,
+     "note": "middle of the lower group"
+    },
+    {
+     "entity": "Canada",
+     "x": "689.4",
+     "field": "value",
+     "value": 1156.81,
+     "note": "just above United Kingdom"
+    },
+    {
+     "entity": "Australia",
+     "x": "769.2",
+     "field": "value",
+     "value": 1218.51,
+     "note": "highest of the lower group"
+    },
+    {
+     "entity": "Germany",
+     "x": "849.1",
+     "field": "value",
+     "value": 1726.34,
+     "note": "second highest"
+    },
+    {
+     "entity": "United States",
+     "x": "929.5",
+     "field": "value",
+     "value": 3300.0,
+     "note": "highest of the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "lowest to highest: Norway, France, United Kingdom, Canada, Australia, Germany, United States",
+    "highest to lowest: United States, Germany, Australia, Canada, United Kingdom, France, Norway",
+    "United States ranks first, Germany second, Norway last"
+   ],
+   "visual_evidence_rule": "The chart must show all seven countries with magnitudes that make the complete ranking perceptible.",
+   "temporal_anchor": "the country-comparison clause introducing the monthly Humira price across countries",
+   "reviewer_question": "Should the full seven-country ordering be required, or is only the top and bottom enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The United States is the highest-priced country at 3300.000, and Norway is the lowest at 894.602.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "929.5",
+     "field": "value",
+     "value": 3300.0,
+     "note": "maximum value"
+    },
+    {
+     "entity": "Norway",
+     "x": "448.7",
+     "field": "value",
+     "value": 894.602,
+     "note": "minimum value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "United States is highest at 3300.000 and Norway is lowest at 894.602",
+    "the top price is in the United States and the bottom price is in Norway",
+    "maximum is United States, minimum is Norway"
+   ],
+   "visual_evidence_rule": "Both the United States and Norway must be identifiable as the maximum and minimum, with country labels attached.",
+   "temporal_anchor": "the clause identifying the most and least expensive countries",
+   "reviewer_question": "Are both the maximum and minimum required, or is one endpoint enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The United States value is about 3.7 times Norway's value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "929.5",
+     "field": "value",
+     "value": 3300.0,
+     "note": "numerator"
+    },
+    {
+     "entity": "Norway",
+     "x": "448.7",
+     "field": "value",
+     "value": 894.602,
+     "note": "denominator"
+    }
+   ],
+   "computation": "3300.000 / 894.602 = 3.688",
+   "accepted_routes": [
+    "United States is about 3.7 times Norway",
+    "United States is nearly four times Norway",
+    "Norway is far below the United States"
+   ],
+   "visual_evidence_rule": "The gap between the United States and Norway should be visibly the largest top-to-bottom spread in the series.",
+   "temporal_anchor": "the clause comparing the United States with the lowest-priced country",
+   "reviewer_question": "Should the clip explicitly convey the roughly 3.7x top-to-bottom gap, or is that optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Germany is the second-highest value at 1726.340, and the United States is about 1.9 times Germany.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Germany",
+     "x": "849.1",
+     "field": "value",
+     "value": 1726.34,
+     "note": "second-highest value"
+    },
+    {
+     "entity": "United States",
+     "x": "929.5",
+     "field": "value",
+     "value": 3300.0,
+     "note": "compared against Germany"
+    }
+   ],
+   "computation": "3300.000 / 1726.340 = 1.912",
+   "accepted_routes": [
+    "Germany is second-highest at 1726.340",
+    "United States is about 1.9 times Germany",
+    "only Germany approaches the United States, but still remains well below it"
+   ],
+   "visual_evidence_rule": "Germany must be visibly second in magnitude, clearly below the United States but above all other countries.",
+   "temporal_anchor": "the clause comparing Germany with the United States or naming second place",
+   "reviewer_question": "Should Germany as second-highest be required, or is it acceptable context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The five countries other than the United States and Germany form a lower-price cluster: Norway 894.602, France 956.298, United Kingdom 1149.100, Canada 1156.810, and Australia 1218.510, with Australia highest and Norway lowest in that cluster.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Norway",
+     "x": "448.7",
+     "field": "value",
+     "value": 894.602,
+     "note": "lowest in lower cluster"
+    },
+    {
+     "entity": "France",
+     "x": "528.6",
+     "field": "value",
+     "value": 956.298,
+     "note": "lower cluster"
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "609.0",
+     "field": "value",
+     "value": 1149.1,
+     "note": "lower cluster"
+    },
+    {
+     "entity": "Canada",
+     "x": "689.4",
+     "field": "value",
+     "value": 1156.81,
+     "note": "lower cluster"
+    },
+    {
+     "entity": "Australia",
+     "x": "769.2",
+     "field": "value",
+     "value": 1218.51,
+     "note": "highest in lower cluster"
+    }
+   ],
+   "computation": "1218.510 / 894.602 = 1.362",
+   "accepted_routes": [
+    "the five countries besides the United States and Germany are clustered between 894.602 and 1218.510",
+    "Australia is highest of the lower group and Norway is lowest",
+    "United Kingdom and Canada are nearly tied near 1150"
+   ],
+   "visual_evidence_rule": "The five lower-country values must appear grouped below Germany and the United States.",
+   "temporal_anchor": "the clause describing the remaining or lower-priced countries",
+   "reviewer_question": "Is the lower-price cluster required, or are individual country values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "United States accounts for about one-third of the combined total across the seven listed countries (3300.000 / 10401.660 ≈ 0.317).",
+  "United States value is more than the sum of Norway and France (3300.000 vs 894.602 + 956.298 = 1850.900).",
+  "Canada and United Kingdom are nearly equal (1156.810 vs 1149.100)."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state a currency symbol such as $ or USD, because the table's unit column is empty.",
+  "Do not treat relative_value as a percentage; it is a 0-1 normalization and is not used in these units.",
+  "Do not claim causes such as policy, insurance, rebates, or manufacturer pricing differences.",
+  "Do not extrapolate to other drugs, other months, or countries not listed in the table.",
+  "Do not claim United Kingdom and Canada are exactly equal or that all lower-price countries are identical."
+ ],
+ "notes": "All cited values come from the table's value column; ratios are arithmetic combinations of those values. The required focus is the cross-country ranking and top/bottom extremes, with second-place and lower-cluster details treated as optional but valid.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 41.5,
+  "usage": {
+   "prompt_tokens": 1160,
+   "completion_tokens": 9101,
+   "total_tokens": 10261,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7001
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 648
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

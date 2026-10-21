@@ -1,0 +1,8 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series,name_source
+bar_31,Norway,norway,448.7,,894.602,0.1971,,#3e6b76,printed,Norway,semantic_svg_backfill,,vlm_axis
+bar_31,France,france,528.6,,956.298,0.2106,,#3e6b76,printed,France,semantic_svg_backfill,,vlm_axis
+bar_31,United Kingdom,united-kingdom,609.0,,1149.100,0.2532,,#3e6b76,printed,United Kingdom,semantic_svg_backfill,,vlm_axis
+bar_31,Canada,canada,689.4,,1156.810,0.2548,,#3e6b76,printed,Canada,semantic_svg_backfill,,vlm_axis
+bar_31,Australia,australia,769.2,,1218.510,0.2684,,#3e6b76,printed,Australia,semantic_svg_backfill,,vlm_axis
+bar_31,Germany,germany,849.1,,1726.340,0.3806,,#3e6b76,printed,Germany,semantic_svg_backfill,,vlm_axis
+bar_31,United States,united-states,929.5,,3300.000,0.7290,,#4b8fc4,printed,United States,semantic_svg_backfill,,vlm_axis

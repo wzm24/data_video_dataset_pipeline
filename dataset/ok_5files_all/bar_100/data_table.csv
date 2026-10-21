@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_100,UNTIL 1989,until-1989,284.0,,1.000,0.4444,,#E67E22,printed
+bar_100,CURRENTLY,currently,485.6,,0.350,0.1556,,#A0522D,printed
+bar_100,UNTIL 1989,until-1989,804.0,,0.250,0.1111,,#1F3A5F,printed
+bar_100,CURRENTLY,currently,1005.6,,1.000,0.4444,,#5B9BD5,printed

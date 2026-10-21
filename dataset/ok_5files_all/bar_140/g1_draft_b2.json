@@ -1,0 +1,292 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_140",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that income inequality, measured by the ratio of household income at the 90th percentile to the 10th percentile, has increased steadily since 1980.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The relative income-inequality measure is higher in 2019 than in 1980, showing an overall upward trend.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1980",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.4314,
+     "note": "start of the series"
+    },
+    {
+     "entity": "2019",
+     "x": "2019",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "end of the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The inequality indicator rises overall from 1980 to 2019.",
+    "The series ends higher than it starts.",
+    "There is a net upward movement from the first to the last benchmark year."
+   ],
+   "visual_evidence_rule": "Both the 1980 and 2019 relative-value marks must be visible, and the 2019 mark must be higher than the 1980 mark.",
+   "temporal_anchor": "has also been rising steadily",
+   "reviewer_question": "Must the video convey an overall upward trend from 1980 to 2019?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The rise is steady: each successive benchmark year has a higher relative_value than the previous year (1980 < 1990 < 2000 < 2010 < 2019).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1980",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.4314,
+     "note": "first benchmark value"
+    },
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4788,
+     "note": "higher than 1980"
+    },
+    {
+     "entity": "2000",
+     "x": "2000",
+     "field": "relative_value",
+     "value": 0.5024,
+     "note": "higher than 1990"
+    },
+    {
+     "entity": "2010",
+     "x": "2010",
+     "field": "relative_value",
+     "value": 0.5546,
+     "note": "higher than 2000"
+    },
+    {
+     "entity": "2019",
+     "x": "2019",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "higher than 2010"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The indicator increases at every benchmark step.",
+    "No benchmark year is lower than the one before it.",
+    "The series is monotonically rising across the listed years."
+   ],
+   "visual_evidence_rule": "Consecutive benchmark-year relative-value marks must appear in increasing order, with no downward step between them.",
+   "temporal_anchor": "rising steadily",
+   "reviewer_question": "Must the clip show monotonic/steady increase across all consecutive benchmark years, not just an overall endpoint rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The endpoint relative values are 0.4314 in 1980 and 0.5972 in 2019.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1980",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.4314,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "2019",
+     "x": "2019",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "end endpoint"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series starts at 0.4314 in 1980 and finishes at 0.5972 in 2019.",
+    "The 1980 value is 0.4314; the 2019 value is 0.5972.",
+    "Endpoint values are 0.4314 (1980) and 0.5972 (2019)."
+   ],
+   "visual_evidence_rule": "The clip must display or state the two endpoint relative values, and their 1980/2019 timing must be clear.",
+   "temporal_anchor": "since about 1980; has also been rising",
+   "reviewer_question": "Must the exact endpoint relative values be stated/displayed, or is the trend shape enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The total change from 1980 to 2019 is +0.1658 relative-value units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1980",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.4314,
+     "note": "baseline"
+    },
+    {
+     "entity": "2019",
+     "x": "2019",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "comparison endpoint"
+    }
+   ],
+   "computation": "2019 relative_value - 1980 relative_value = 0.5972 - 0.4314 = 0.1658",
+   "accepted_routes": [
+    "The measure is 0.1658 higher in 2019 than in 1980.",
+    "The total rise is 0.1658 relative-value units.",
+    "From 0.4314 to 0.5972, the net increase is 0.1658."
+   ],
+   "visual_evidence_rule": "The difference between the 2019 and 1980 relative-value marks must be shown or stated as an increase.",
+   "temporal_anchor": "has also been rising steadily",
+   "reviewer_question": "Must the video quantify the total increase, or is showing the upward shape sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "2019 has the highest relative_value (0.5972) and 1980 has the lowest (0.4314) among the listed benchmark years.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1980",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.4314,
+     "note": "minimum"
+    },
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4788,
+     "note": "intermediate"
+    },
+    {
+     "entity": "2000",
+     "x": "2000",
+     "field": "relative_value",
+     "value": 0.5024,
+     "note": "intermediate"
+    },
+    {
+     "entity": "2010",
+     "x": "2010",
+     "field": "relative_value",
+     "value": 0.5546,
+     "note": "intermediate"
+    },
+    {
+     "entity": "2019",
+     "x": "2019",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "maximum"
+    }
+   ],
+   "computation": "max(0.4314,0.4788,0.5024,0.5546,0.5972)=0.5972; min(...)=0.4314",
+   "accepted_routes": [
+    "The highest point is 2019 at 0.5972; the lowest is 1980 at 0.4314.",
+    "The series peaks at the final benchmark year and starts at its minimum.",
+    "2019 is the maximum and 1980 is the minimum."
+   ],
+   "visual_evidence_rule": "The 2019 relative-value mark must be visibly the highest and the 1980 mark visibly the lowest among the five benchmark years.",
+   "temporal_anchor": "has also been rising steadily",
+   "reviewer_question": "Must the clip explicitly identify the maximum and minimum benchmark years?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The clip may name the metric as the 90th/10th household income ratio, provided it uses only relative comparisons and no absolute income values.",
+  "The clip may note that the five years are benchmark observations rather than annual data.",
+  "The clip may display intermediate benchmark values 1990=0.4788, 2000=0.5024, and 2010=0.5546."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that policy, demographics, or specific events caused the rise.",
+  "Absolute household income, dollar amounts, percentages, or 90th/10th ratio values not in the table.",
+  "Extrapolating beyond 2019 or claiming the ratio will keep rising.",
+  "Claiming annual data or that every year from 1980 to 2019 rose; the table only has benchmark years.",
+  "Claiming the measure doubled; 0.5972 / 0.4314 is about 1.38 times the 1980 relative value."
+ ],
+ "notes": "All numeric claims are taken from relative_value or computed as differences/comparisons of relative_value cells. Because the table is relative-only, avoid absolute ratio, dollar, percentage, or count statements.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 42.8,
+  "usage": {
+   "prompt_tokens": 916,
+   "completion_tokens": 10227,
+   "total_tokens": 11143,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8515
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 532
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,158 @@
+{
+ "clip_id": "pie_3",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Drive alone @ 1",
+    "extreme": "max",
+    "expected": 76.3,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Drive-alone slice must be clearly the largest and labeled or implied at 76.3% or about 76%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Public transportation @ 0"
+   ],
+   "assertion": {
+    "segment": "Public transportation @ 0",
+    "expected_share": 0.0529,
+    "total_of": "%",
+    "total": 98.3,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Public-transportation slice must be visibly small and labeled or implied at 5.2% or about 5%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Drive alone @ 1",
+    "mark:Public transportation @ 0"
+   ],
+   "assertion": {
+    "greater": "Drive alone @ 1",
+    "lesser": "Public transportation @ 0",
+    "expected_ratio": 14.6731,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Either a single drive-alone wedge versus combined rest, or an annotation that non-drive-alone modes total 23.7%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Drive alone @ 1",
+    "mark:Public transportation @ 0"
+   ],
+   "assertion": {
+    "greater": "Drive alone @ 1",
+    "lesser": "Public transportation @ 0",
+    "expected_ratio": 14.6731,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio annotation or side-by-side comparison showing transit is about 1/15 of drive alone, or drive alone is about 14.7 times transit."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Public transportation @ 0",
+    "mark:Drive alone @ 1",
+    "mark:Taxi, motorcycle, or other @ 2",
+    "mark:Work at home @ 3",
+    "mark:Walk @ 4",
+    "mark:Carpool @ 5",
+    "mark:Bicycle @ 6"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Public transportation @ 0",
+      "value": 5.2
+     },
+     {
+      "mark": "Drive alone @ 1",
+      "value": 76.3
+     },
+     {
+      "mark": "Taxi, motorcycle, or other @ 2",
+      "value": 1.7
+     },
+     {
+      "mark": "Work at home @ 3",
+      "value": 5.1
+     },
+     {
+      "mark": "Walk @ 4",
+      "value": 2.5
+     },
+     {
+      "mark": "Carpool @ 5",
+      "value": 8.2
+     },
+     {
+      "mark": "Bicycle @ 6",
+      "value": 1.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All slices must be sized or ordered correctly; public transit must not be shown as the smallest slice; bicycle should be the smallest if distinguished."
+  }
+ ]
+}

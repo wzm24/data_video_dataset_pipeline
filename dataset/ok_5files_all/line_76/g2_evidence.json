@@ -1,0 +1,78 @@
+{
+ "clip_id": "line_76",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:temp anomaly @ 1131.9",
+    "mark:temp anomaly @ 1136.0"
+   ],
+   "assertion": {
+    "low": "temp anomaly @ 1131.9",
+    "low_value": -0.2,
+    "high": "temp anomaly @ 1136.0",
+    "high_value": 0.2,
+    "delta": 0.4,
+    "ratio": -1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final segment of the line must show a clear upward move from the second-to-last point to the last point."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:temp anomaly @ 452.9",
+    "mark:temp anomaly @ 493.3",
+    "mark:temp anomaly @ 614.6",
+    "mark:temp anomaly @ 671.2"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "temp anomaly @ 452.9",
+      "value": 0.4
+     },
+     {
+      "mark": "temp anomaly @ 493.3",
+      "value": 0.38
+     },
+     {
+      "mark": "temp anomaly @ 614.6",
+      "value": 0.45
+     },
+     {
+      "mark": "temp anomaly @ 671.2",
+      "value": 0.39
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A substantial middle portion of the line must appear nearly flat within a narrow value band."
+  }
+ ]
+}

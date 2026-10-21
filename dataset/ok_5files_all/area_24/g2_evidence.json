@@ -1,0 +1,154 @@
+{
+ "clip_id": "area_24",
+ "family": "area",
+ "chart_form": "area/bubble",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:GANYMED @ GANYMED",
+    "mark:TITAN @ TITAN",
+    "mark:KALLISTO @ KALLISTO",
+    "mark:IO @ IO",
+    "mark:MOON @ MOON",
+    "mark:PLUTO @ PLUTO"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "GANYMED @ GANYMED",
+      "value": 5300.0
+     },
+     {
+      "mark": "TITAN @ TITAN",
+      "value": 5200.0
+     },
+     {
+      "mark": "KALLISTO @ KALLISTO",
+      "value": 4800.0
+     },
+     {
+      "mark": "IO @ IO",
+      "value": 3600.0
+     },
+     {
+      "mark": "MOON @ MOON",
+      "value": 3500.0
+     },
+     {
+      "mark": "PLUTO @ PLUTO",
+      "value": 2300.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All six diameter values must be presented on a common comparison so the sequence Ganymede > Titan > Callisto > Io > Moon > Pluto is visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:MOON @ MOON",
+    "mark:PLUTO @ PLUTO"
+   ],
+   "assertion": {
+    "greater": "MOON @ MOON",
+    "lesser": "PLUTO @ PLUTO",
+    "expected_ratio": 1.5217,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both Moon and Pluto must be shown on the same scale with Moon visibly larger by about half again."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:IO @ IO",
+    "mark:MOON @ MOON"
+   ],
+   "assertion": {
+    "greater": "IO @ IO",
+    "lesser": "MOON @ MOON",
+    "expected_ratio": 1.0286,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Moon and Io must be shown at the same scale so their nearly equal diameters are apparent."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:GANYMED @ GANYMED",
+    "mark:MOON @ MOON"
+   ],
+   "assertion": {
+    "greater": "GANYMED @ GANYMED",
+    "lesser": "MOON @ MOON",
+    "expected_ratio": 1.5143,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Ganymede and Moon must be compared on the same scale so Moon appears about two-thirds of Ganymede."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "PLUTO @ PLUTO",
+    "extreme": "min",
+    "expected": 2300.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The six diameters must be shown on a common scale so Pluto's smallest size is visible."
+  }
+ ]
+}

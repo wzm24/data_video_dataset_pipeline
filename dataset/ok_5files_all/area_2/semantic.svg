@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#36206e"/>
+<text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Contraceptive Use</text>
+<text x="640" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#cccccc">% of women of reproductive age using any contraceptive method</text>
+<polygon points="180.0,381.3 382.1,340.3 584.2,299.3 786.2,278.8 988.3,224.2 1150.0,190.0 1150.0,600.0 180.0,600.0" fill="#ffffff" opacity="0.12"/>
+<polyline points="180.0,381.3 382.1,340.3 584.2,299.3 786.2,278.8 988.3,224.2 1150.0,190.0" fill="none" stroke="#ffffff" stroke-width="3"/>
+<text x="180.0" y="367.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">16%</text>
+<text x="584.2" y="285.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">22%</text>
+<text x="1150.0" y="176.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">30%</text>
+<text x="180" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#ffffff">1990</text>
+<text x="584" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#ffffff">2000</text>
+<text x="1150" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#ffffff">2014</text>
+<text x="1150" y="710" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#bbbbbb">Source: Worldbank, 2018 | Guttmacher, 2018</text>
+</svg>

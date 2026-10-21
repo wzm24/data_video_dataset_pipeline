@@ -1,0 +1,196 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_14",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the substantial proportion of cannabis cultivation that takes place indoors in the United States.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Indoor cultivation accounts for 35% of U.S. cannabis cultivation.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "indoor",
+     "x": "0",
+     "field": "value",
+     "value": 35,
+     "note": "table value in percent"
+    },
+    {
+     "entity": "indoor",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.35,
+     "note": "0.3500 share equivalent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Indoor accounts for 35% of U.S. cannabis cultivation.",
+    "35% of America's cannabis cultivation is indoors.",
+    "The indoor slice of the cultivation donut is 35%."
+   ],
+   "visual_evidence_rule": "A chart mark labeled 'indoor' or 'indoors' must show 35% (or 35) as its value/share.",
+   "temporal_anchor": "The main clause stating that one-third/35% of America's weed is grown indoors.",
+   "reviewer_question": "Must the exact 35% value be shown, or is an approximation such as 'about one-third' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 35 value is a percentage/share of total cultivation, not a count of farms/plants or a decimal 0.35%.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "indoor",
+     "x": "0",
+     "field": "value",
+     "value": 35,
+     "note": "printed as 35 with unit percent"
+    },
+    {
+     "entity": "indoor",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.35,
+     "note": "0.3500 corresponds to 35 percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The metric is percent of total cultivation.",
+    "35 is a share, not an absolute count.",
+    "The relative value 0.3500 corresponds to 35 percent."
+   ],
+   "visual_evidence_rule": "Percent sign or 'of cultivation' part-to-whole label must be visible; donut/part-to-whole encoding preferred.",
+   "temporal_anchor": "The phrase 'of America's weed' / 'of cultivation'.",
+   "reviewer_question": "Must the video explicitly say this is a percentage/share rather than a raw count?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "If the donut shows a full composition, the remaining non-indoor categories account for 65%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "indoor",
+     "x": "0",
+     "field": "value",
+     "value": 35,
+     "note": "table indoor percent used to derive complement"
+    }
+   ],
+   "computation": "100 - 35 = 65",
+   "accepted_routes": [
+    "Non-indoor cultivation accounts for 65%.",
+    "The remainder outside the indoor slice is 65%.",
+    "65% is not indoor, if a full donut is shown."
+   ],
+   "visual_evidence_rule": "If a full donut/part-to-whole chart is shown, the complement/remainder must be labeled or visually inferable as 65%.",
+   "temporal_anchor": "Any additional clause about the rest of cultivation, if included after the indoor statement.",
+   "reviewer_question": "Is the 65% complement required by the donut framing, or optional because the table only lists indoor?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Indoor cultivation is a minority share: 35% is below half, so it should not be described as the majority of cultivation.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "indoor",
+     "x": "0",
+     "field": "value",
+     "value": 35,
+     "note": "35% is below a half/majority threshold"
+    }
+   ],
+   "computation": "35% < half (qualitative threshold; no extra table value cited)",
+   "accepted_routes": [
+    "Indoor is less than half of cultivation.",
+    "Indoor is not a majority share.",
+    "Indoor accounts for a minority of cultivation."
+   ],
+   "visual_evidence_rule": "The chart must not label indoor as majority/most; if a full donut is shown, the indoor slice should occupy less than half.",
+   "temporal_anchor": "The 'one-third' clause, which implies a minority share, or any summary characterization of the 35% value.",
+   "reviewer_question": "Should the video explicitly characterize 35% as below half/not a majority, or is that an optional implication?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Approximating 35% as 'about one-third' is acceptable if the exact 35% is also available.",
+  "Calling the 35% a 'substantial' share is acceptable as characterization, but it must not become 'majority'."
+ ],
+ "unsupported_to_avoid": [
+  "Saying indoor cultivation is the majority/most, because 35% is below half.",
+  "Saying the remaining 65% is specifically outdoor unless the table labels it outdoor; the table only lists indoor.",
+  "Causal claims about why cultivation is indoors.",
+  "Trend or increase claims, since there is no time series.",
+  "Treating 35 as 35 farms/plants or as 0.35% instead of 35%."
+ ],
+ "notes": "The table has only one indoor share row, with an exact value of 35% and relative_value 0.3500. The main G1 trade-off is whether to require the exact 35% label and whether the full-donut 65% complement is implied.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.79
+ },
+ "draft_cost": {
+  "sec": 43.8,
+  "usage": {
+   "prompt_tokens": 584,
+   "completion_tokens": 9193,
+   "total_tokens": 9777,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7836
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 328
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,16 @@
+clip_id,panel,entity,entity_id,x_px,x_value,value,unit,color,source_type,series
+line_51,IRS BUDGET (2018 DOLLARS),IRS BUDGET (2018 DOLLARS),irs-budget-2018-dollars-2011,,2011,13,$B,#2b7bb9,generator_table,IRS BUDGET (2018 DOLLARS)
+line_51,IRS BUDGET (2018 DOLLARS),IRS BUDGET (2018 DOLLARS),irs-budget-2018-dollars-2012,,2012,12,$B,#2b7bb9,generator_table,IRS BUDGET (2018 DOLLARS)
+line_51,IRS BUDGET (2018 DOLLARS),IRS BUDGET (2018 DOLLARS),irs-budget-2018-dollars-2013,,2013,11.5,$B,#2b7bb9,generator_table,IRS BUDGET (2018 DOLLARS)
+line_51,IRS BUDGET (2018 DOLLARS),IRS BUDGET (2018 DOLLARS),irs-budget-2018-dollars-2014,,2014,11,$B,#2b7bb9,generator_table,IRS BUDGET (2018 DOLLARS)
+line_51,IRS BUDGET (2018 DOLLARS),IRS BUDGET (2018 DOLLARS),irs-budget-2018-dollars-2015,,2015,12,$B,#2b7bb9,generator_table,IRS BUDGET (2018 DOLLARS)
+line_51,IRS REVENUE AGENTS,IRS REVENUE AGENTS,irs-revenue-agents-2011,,2011,13.5,k,#2b7bb9,generator_table,IRS REVENUE AGENTS
+line_51,IRS REVENUE AGENTS,IRS REVENUE AGENTS,irs-revenue-agents-2012,,2012,12.5,k,#2b7bb9,generator_table,IRS REVENUE AGENTS
+line_51,IRS REVENUE AGENTS,IRS REVENUE AGENTS,irs-revenue-agents-2013,,2013,12,k,#2b7bb9,generator_table,IRS REVENUE AGENTS
+line_51,IRS REVENUE AGENTS,IRS REVENUE AGENTS,irs-revenue-agents-2014,,2014,11,k,#2b7bb9,generator_table,IRS REVENUE AGENTS
+line_51,IRS REVENUE AGENTS,IRS REVENUE AGENTS,irs-revenue-agents-2015,,2015,10,k,#2b7bb9,generator_table,IRS REVENUE AGENTS
+line_51,IRS AUDITS PER YEAR,IRS AUDITS PER YEAR,irs-audits-per-year-2011,,2011,1.7,M,#2b7bb9,generator_table,IRS AUDITS PER YEAR
+line_51,IRS AUDITS PER YEAR,IRS AUDITS PER YEAR,irs-audits-per-year-2012,,2012,1.6,M,#2b7bb9,generator_table,IRS AUDITS PER YEAR
+line_51,IRS AUDITS PER YEAR,IRS AUDITS PER YEAR,irs-audits-per-year-2013,,2013,1.5,M,#2b7bb9,generator_table,IRS AUDITS PER YEAR
+line_51,IRS AUDITS PER YEAR,IRS AUDITS PER YEAR,irs-audits-per-year-2014,,2014,1.3,M,#2b7bb9,generator_table,IRS AUDITS PER YEAR
+line_51,IRS AUDITS PER YEAR,IRS AUDITS PER YEAR,irs-audits-per-year-2015,,2015,1.2,M,#2b7bb9,generator_table,IRS AUDITS PER YEAR

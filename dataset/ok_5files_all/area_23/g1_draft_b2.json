@@ -1,0 +1,239 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_23",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the relative physical size of the Moon compared to Earth, emphasizing that the Moon is unusually large for a satellite.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Earth's physical diameter is 12,700 km, establishing the baseline size for the comparison.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "diameter",
+     "field": "value",
+     "value": 12700,
+     "note": "Earth diameter from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Earth's diameter is about 12,700 km",
+    "Earth is roughly 12,700 kilometers across",
+    "Earth measures about 12.7 thousand km in diameter"
+   ],
+   "visual_evidence_rule": "Earth's diameter value or a labeled size encoding for Earth must be visible.",
+   "temporal_anchor": "the clause introducing Earth's size",
+   "reviewer_question": "Is Earth's absolute diameter required, or is the Moon-to-Earth ratio sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Moon's physical diameter is 3,500 km.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Moon",
+     "x": "diameter",
+     "field": "value",
+     "value": 3500,
+     "note": "Moon diameter from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The Moon's diameter is about 3,500 km",
+    "The Moon is roughly 3,500 kilometers across",
+    "The Moon measures about 3.5 thousand km in diameter"
+   ],
+   "visual_evidence_rule": "The Moon's diameter value or a labeled size encoding for the Moon must be visible.",
+   "temporal_anchor": "the clause introducing the Moon's size",
+   "reviewer_question": "Is the Moon's absolute diameter required, or can the video show only the relative ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The Moon's diameter is about 0.28 times Earth's diameter, i.e., just over a quarter of Earth's width.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "diameter",
+     "field": "value",
+     "value": 12700,
+     "note": "baseline Earth diameter"
+    },
+    {
+     "entity": "Moon",
+     "x": "diameter",
+     "field": "value",
+     "value": 3500,
+     "note": "Moon diameter numerator"
+    }
+   ],
+   "computation": "Moon value / Earth value = 3500 / 12700 = 0.2756 (about 0.28)",
+   "accepted_routes": [
+    "The Moon's diameter is about 0.28 times Earth's",
+    "The Moon is just over a quarter as wide as Earth",
+    "The Moon's width is roughly 0.28 of Earth's diameter"
+   ],
+   "visual_evidence_rule": "The Moon's diameter must be visibly encoded as roughly one-quarter to just over one-quarter of Earth's diameter.",
+   "temporal_anchor": "the clause about how big the Moon is in relation to Earth",
+   "reviewer_question": "Must the video state the Moon-to-Earth ratio, or can it rely on side-by-side sizes alone?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Earth's diameter is about 3.6 times the Moon's diameter.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "diameter",
+     "field": "value",
+     "value": 12700,
+     "note": "Earth diameter numerator"
+    },
+    {
+     "entity": "Moon",
+     "x": "diameter",
+     "field": "value",
+     "value": 3500,
+     "note": "Moon diameter denominator"
+    }
+   ],
+   "computation": "Earth value / Moon value = 12700 / 3500 = 3.6286 (about 3.6)",
+   "accepted_routes": [
+    "Earth is about 3.6 times wider than the Moon",
+    "You could fit about 3.6 Moon diameters across Earth's diameter",
+    "Earth's diameter is over three and a half times the Moon's"
+   ],
+   "visual_evidence_rule": "Earth's diameter must be visibly encoded as about 3.6 times the Moon's diameter.",
+   "temporal_anchor": "the clause emphasizing Earth's larger size",
+   "reviewer_question": "Is the inverse ratio acceptable as an alternative framing, or is it redundant with the Moon-to-Earth ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The Moon's diameter is between one-quarter and one-half of Earth's diameter, placing it above a quarter but below half.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Moon",
+     "x": "diameter",
+     "field": "value",
+     "value": 3500,
+     "note": "Moon diameter"
+    },
+    {
+     "entity": "Earth",
+     "x": "diameter",
+     "field": "value",
+     "value": 12700,
+     "note": "Earth diameter"
+    }
+   ],
+   "computation": "Earth/4 = 3175 < Moon 3500 < Earth/2 = 6350",
+   "accepted_routes": [
+    "The Moon is over a quarter but under half as wide as Earth",
+    "The Moon's diameter is between a quarter and half of Earth's",
+    "Earth is more than twice but less than four times wider than the Moon"
+   ],
+   "visual_evidence_rule": "The Moon's diameter must be visibly placed above one-quarter and below one-half of Earth's diameter.",
+   "temporal_anchor": "the clause about the Moon being quite big in relation to Earth",
+   "reviewer_question": "Is this range threshold useful, or does it overcomplicate the simpler ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The comparison is based on physical diameter, not mass or volume.",
+  "The Moon is the smaller of the two bodies by diameter.",
+  "The Moon's diameter is less than one-third of Earth's diameter."
+ ],
+ "unsupported_to_avoid": [
+  "The Moon is about 1/81 the mass of Earth (narration only, not in table).",
+  "The Moon is the biggest moon in the solar system relative to its planet.",
+  "The Moon is the fifth largest moon in the solar system.",
+  "Any ranking or comparison involving other moons or planets not in the table.",
+  "Volume or mass ratios derived from diameter without an explicit table value.",
+  "Distance between Earth and Moon, density, orbit, or surface features.",
+  "Causal explanations for the Moon's size.",
+  "Chart positions, colors, axis ticks, or chart type."
+ ],
+ "notes": "The table supports only Earth and Moon diameters; it does not support the narration's mass ratio or solar-system rankings. The core required content is the Moon-to-Earth diameter ratio, with absolute endpoints as likely optional context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 51.8,
+  "usage": {
+   "prompt_tokens": 930,
+   "completion_tokens": 12587,
+   "total_tokens": 13517,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10933
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 418
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,237 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_27",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the substantial reduction in fatality risk provided by professional negotiation services under Kidnapping & Ransom insurance.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The baseline/left fatality risk is 9%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "left-share",
+     "field": "value",
+     "value": 9,
+     "note": "Printed as 9 percent; relative_value is 0.09."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The baseline chance of death is 9%.",
+    "Without professional negotiation, the risk is 9%.",
+    "The pre-negotiation/left risk value is about 9%."
+   ],
+   "visual_evidence_rule": "A visible label or annotation for the left/baseline side shows 9% or 0.09.",
+   "temporal_anchor": "the clause 'reduces the chance of death from 9%'",
+   "reviewer_question": "Must the baseline 9% be shown, or is only the final 2% endpoint required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The post-negotiation/right fatality risk is 2%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "right share",
+     "x": "right-share",
+     "field": "value",
+     "value": 2,
+     "note": "Printed as 2 percent; relative_value is 0.02."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "With professional negotiation, the chance of death is 2%.",
+    "The reduced risk is just 2%.",
+    "The post-negotiation/right risk value is about 2%."
+   ],
+   "visual_evidence_rule": "A visible label or annotation for the right/negotiated side shows 2% or 0.02.",
+   "temporal_anchor": "the clause 'to just 2%'",
+   "reviewer_question": "Must the final 2% endpoint be shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The fatality risk drops by 7 percentage points, from 9% to 2%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "left-share",
+     "field": "value",
+     "value": 9,
+     "note": "Baseline/left value."
+    },
+    {
+     "entity": "right share",
+     "x": "right-share",
+     "field": "value",
+     "value": 2,
+     "note": "Post-negotiation/right value."
+    }
+   ],
+   "computation": "9 - 2 = 7 percentage points",
+   "accepted_routes": [
+    "The fatality risk falls from 9% to 2%, a 7-point decrease.",
+    "There is a 7 percentage-point drop in death risk.",
+    "The chance of death is 7 points lower after negotiation."
+   ],
+   "visual_evidence_rule": "Both 9% and 2% must be visible, with an arrow, delta, or annotation showing the decrease, not just one endpoint.",
+   "temporal_anchor": "the combined clause 'from 9% to just 2%'",
+   "reviewer_question": "Must the absolute 7-percentage-point drop be displayed, or is the directional change from 9% to 2% enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The right/negotiated value is lower than the left/baseline value; the ordering is 9% > 2%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "left-share",
+     "field": "value",
+     "value": 9,
+     "note": "Higher value."
+    },
+    {
+     "entity": "right share",
+     "x": "right-share",
+     "field": "value",
+     "value": 2,
+     "note": "Lower value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "2% is lower than 9%.",
+    "The negotiated risk is the smaller share.",
+    "The baseline risk exceeds the post-negotiation risk."
+   ],
+   "visual_evidence_rule": "The chart must make the direction/order visible: the 9% element should be visibly larger or higher than the 2% element, with labels tying each value to the correct side.",
+   "temporal_anchor": "the reduction clause 'from 9% to just 2%'",
+   "reviewer_question": "Must the chart explicitly show 2% as lower than 9%, or is showing both values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The relative reduction is about 78%, or the negotiated risk is about 22% of the baseline risk.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "left share",
+     "x": "left-share",
+     "field": "value",
+     "value": 9,
+     "note": "Baseline/left value."
+    },
+    {
+     "entity": "right share",
+     "x": "right-share",
+     "field": "value",
+     "value": 2,
+     "note": "Post-negotiation/right value."
+    }
+   ],
+   "computation": "1 - (2 / 9) = 0.777... ≈ 77.8% reduction; equivalently 2 / 9 ≈ 22.2% residual risk.",
+   "accepted_routes": [
+    "The risk falls by about 78%.",
+    "Death risk is reduced by roughly three-quarters to four-fifths.",
+    "The negotiated risk is about 22% of the baseline risk."
+   ],
+   "visual_evidence_rule": "A visible annotation or scale shows the relative reduction, about 78% lower, or the residual ratio, about 22% of baseline.",
+   "temporal_anchor": "the reduction clause 'reduces ... from 9% to just 2%'",
+   "reviewer_question": "Should the relative 78% reduction be optional or required to communicate 'substantial'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2% negotiated risk is about 22% of the 9% baseline risk (2 ÷ 9 = 0.222...).",
+  "The 9% baseline risk is about 4.5 times the 2% negotiated risk (9 ÷ 2 = 4.5).",
+  "The two values are percentages, not raw counts.",
+  "Companies are not allowed to say they have insurance; many corporate travelers do not know they have K&R insurance."
+ ],
+ "unsupported_to_avoid": [
+  "Do not imply the 9% and 2% are parts of a single whole that must sum to a full donut.",
+  "Do not infer counts, sample sizes, or absolute numbers of deaths from the percentages.",
+  "Do not confuse percentage points with relative percent when describing the drop.",
+  "Do not extrapolate the 9%-to-2% reduction to other insurance types, time periods, or populations without data.",
+  "Do not assert a causal mechanism beyond the professional-negotiation context given by the intent/narration."
+ ],
+ "notes": "The table gives only two printed percentages, 9% and 2%, mapped by narration to fatality risk before and after professional negotiation. Derived units use simple arithmetic on those two cells and should be reviewed for whether the exact rate or just direction is required.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 47.0,
+  "usage": {
+   "prompt_tokens": 654,
+   "completion_tokens": 10717,
+   "total_tokens": 11371,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8942
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 398
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

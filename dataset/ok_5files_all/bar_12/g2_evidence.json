@@ -1,0 +1,108 @@
+{
+ "clip_id": "bar_12",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:July 2018 @ 480.0"
+   ],
+   "assertion": {
+    "mark": "July 2018 @ 480.0",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both July 2018 and Aug 2018 bars/points must be visible, with heights or labels corresponding to 1.000 and 1.150, or to the normalized relative values 0.8281 and 0.9524."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:July 2018 @ 480.0",
+    "mark:Aug 2018 @ 800.0"
+   ],
+   "assertion": {
+    "low": "July 2018 @ 480.0",
+    "low_value": 1.0,
+    "high": "Aug 2018 @ 800.0",
+    "high_value": 1.15,
+    "delta": 0.15,
+    "ratio": 1.15,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible callout, annotation, or arrow between the two bars must indicate +15% or 1.15x, not merely the two bar heights."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:July 2018 @ 480.0",
+    "mark:Aug 2018 @ 800.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "July 2018 @ 480.0",
+      "value": 1.0
+     },
+     {
+      "mark": "Aug 2018 @ 800.0",
+      "value": 1.15
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The August bar/point is visibly taller or higher than the July bar/point, or the line slopes upward."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The x-axis/time labels must show July 2018 followed by Aug 2018, with no intervening month."
+  }
+ ]
+}

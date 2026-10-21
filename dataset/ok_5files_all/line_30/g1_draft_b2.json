@@ -1,0 +1,333 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_30",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain a financial gap by contrasting the share of profits spent on stock buybacks among GM, Toyota, and Volkswagen.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Volkswagen's share of profits spent on buybacks is effectively zero in every year from 2012 to 2017 (table value 0.0035% each year), the lowest of the three companies.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "VW",
+     "x": "2012",
+     "field": "value",
+     "value": 0.0035,
+     "note": "VW row; all VW years share this near-zero value"
+    },
+    {
+     "entity": "VW",
+     "x": "2013",
+     "field": "value",
+     "value": 0.0035,
+     "note": "VW row; all VW years share this near-zero value"
+    },
+    {
+     "entity": "VW",
+     "x": "2014",
+     "field": "value",
+     "value": 0.0035,
+     "note": "VW row; all VW years share this near-zero value"
+    },
+    {
+     "entity": "VW",
+     "x": "2015",
+     "field": "value",
+     "value": 0.0035,
+     "note": "VW row; all VW years share this near-zero value"
+    },
+    {
+     "entity": "VW",
+     "x": "2016",
+     "field": "value",
+     "value": 0.0035,
+     "note": "VW row; all VW years share this near-zero value"
+    },
+    {
+     "entity": "VW",
+     "x": "2017",
+     "field": "value",
+     "value": 0.0035,
+     "note": "VW row; all VW years share this near-zero value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "VW stays at essentially 0% across 2012-2017",
+    "VW does no meaningful buybacks in the period",
+    "VW is flat at the bottom, near zero, for all years"
+   ],
+   "visual_evidence_rule": "The VW series or mark must stay at or near zero across all years and visibly below GM and Toyota.",
+   "temporal_anchor": "Volkswagen hasn't done any since 2012",
+   "reviewer_question": "Should VW's near-zero buyback share be obligatory, or is it only supporting context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "GM's buyback share is generally much larger than Toyota's and VW's; GM is above 80% in 2012 and 2014 and is the highest of the three in most years, but not in 2016.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "GM",
+     "x": "2012",
+     "field": "value",
+     "value": 82.0041,
+     "note": "GM is above 80%"
+    },
+    {
+     "entity": "Toyota",
+     "x": "2012",
+     "field": "value",
+     "value": 5.9928,
+     "note": "Much lower than GM"
+    },
+    {
+     "entity": "VW",
+     "x": "2012",
+     "field": "value",
+     "value": 0.0035,
+     "note": "Near zero"
+    },
+    {
+     "entity": "GM",
+     "x": "2014",
+     "field": "value",
+     "value": 82.0041,
+     "note": "GM is above 80%"
+    },
+    {
+     "entity": "Toyota",
+     "x": "2014",
+     "field": "value",
+     "value": 19.9923,
+     "note": "Much lower than GM"
+    },
+    {
+     "entity": "VW",
+     "x": "2014",
+     "field": "value",
+     "value": 0.0035,
+     "note": "Near zero"
+    },
+    {
+     "entity": "GM",
+     "x": "2016",
+     "field": "value",
+     "value": 28.0025,
+     "note": "Exception year: GM is below Toyota"
+    },
+    {
+     "entity": "Toyota",
+     "x": "2016",
+     "field": "value",
+     "value": 39.0073,
+     "note": "Exception year: Toyota exceeds GM"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "GM is usually the highest buyback spender among the three",
+    "GM's buyback share is far above Toyota and VW in most years",
+    "GM is above 80% in 2012 and 2014 while Toyota and VW are much lower"
+   ],
+   "visual_evidence_rule": "GM's series must be visibly above Toyota's and VW's in most years, with the 2016 exception not contradicted.",
+   "temporal_anchor": "how much of their profits these three companies spend on buybacks",
+   "reviewer_question": "Should 'GM generally dominates Toyota and VW' be required, or is the specific 2016 exception enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Toyota's buyback share rises from near zero in 2013 to a peak of 39.0% in 2016, then falls to 19.0% in 2017; it remains much smaller than GM's peaks.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Toyota",
+     "x": "2013",
+     "field": "value",
+     "value": 0.0035,
+     "note": "Near zero"
+    },
+    {
+     "entity": "Toyota",
+     "x": "2014",
+     "field": "value",
+     "value": 19.9923,
+     "note": "Rise begins"
+    },
+    {
+     "entity": "Toyota",
+     "x": "2015",
+     "field": "value",
+     "value": 35.0144,
+     "note": "Higher"
+    },
+    {
+     "entity": "Toyota",
+     "x": "2016",
+     "field": "value",
+     "value": 39.0073,
+     "note": "Toyota peak"
+    },
+    {
+     "entity": "Toyota",
+     "x": "2017",
+     "field": "value",
+     "value": 18.9941,
+     "note": "Decline"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Toyota climbs to its highest buyback share in 2016",
+    "Toyota's buyback share peaks at about 39% in 2016",
+    "Toyota's series rises from near zero in 2013 to a 2016 peak and then declines"
+   ],
+   "visual_evidence_rule": "Toyota's series must show a rise to its maximum at 2016 and a decline in 2017.",
+   "temporal_anchor": "Toyota's biggest buyback years",
+   "reviewer_question": "Should Toyota's rise-and-peak trend be required, or is only the peak-vs-GM comparison needed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "In 2016, Toyota's buyback share (39.0%) is higher than GM's (28.0%); GM's 28.0% is its smallest value, so Toyota's biggest buyback year is roughly the size of GM's smallest.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Toyota",
+     "x": "2016",
+     "field": "value",
+     "value": 39.0073,
+     "note": "Toyota's largest value in the table"
+    },
+    {
+     "entity": "GM",
+     "x": "2016",
+     "field": "value",
+     "value": 28.0025,
+     "note": "GM's smallest value in the table"
+    }
+   ],
+   "computation": "difference = 39.0073 - 28.0025 = 11.0048 percentage points",
+   "accepted_routes": [
+    "Toyota's largest buyback year is roughly comparable to GM's smallest",
+    "Toyota's 2016 peak (39%) is just above GM's 2016 low (28%)",
+    "Toyota's biggest buyback year is about 11 percentage points above GM's smallest"
+   ],
+   "visual_evidence_rule": "Toyota's 2016 point must be visible as higher than GM's 2016 point, and GM's 2016 point should be identifiable as its lowest.",
+   "temporal_anchor": "Toyota's biggest buyback years are roughly the size of GM's smallest",
+   "reviewer_question": "Should the 2016 Toyota-above-GM comparison be obligatory, or is the broader 'Toyota is much lower than GM' claim sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "GM's 2017 buyback share is 112%, the highest value in the table and the only value above 100%.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "GM",
+     "x": "2017",
+     "field": "value",
+     "value": 111.9996,
+     "note": "GM's maximum and only value above 100%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "GM spent 112% of profits on buybacks in 2017",
+    "GM's 2017 buyback share exceeds 100%, the only such point",
+    "GM's maximum is 112% in 2017"
+   ],
+   "visual_evidence_rule": "GM's 2017 point must be visibly the highest and should read as exceeding 100%.",
+   "temporal_anchor": "none in the provided narration; optional if the timeline includes 2017",
+   "reviewer_question": "Should the 2017 >100% peak be required, or is it an optional striking detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Toyota's 2015 value (35.0%) is close to GM's 2015 value (36.0%), so 2015 is another near-parity year.",
+  "GM's series is volatile: 82.0% in 2012, 46.0% in 2013, 82.0% in 2014, 36.0% in 2015, 28.0% in 2016, 112.0% in 2017."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming VW did exactly zero buybacks; the table shows 0.0035%.",
+  "Claiming Toyota's biggest buyback is exactly equal to GM's smallest; it is 39.0% vs 28.0%.",
+  "Claiming GM always spends more than Toyota; GM is lower than Toyota in 2016.",
+  "Claiming buybacks caused the financial gap; the table only shows buyback share.",
+  "Extrapolating beyond 2012-2017 or using values not in the table."
+ ],
+ "notes": "The core contrast is VW near zero, GM generally high, and Toyota's peak comparable to GM's low; the 2016 crossover and 2017 >100% are the most contestable inclusions. The 2017 >100% and Toyota trend are marked optional because the narration does not explicitly require them.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 52.4,
+  "usage": {
+   "prompt_tokens": 1540,
+   "completion_tokens": 12780,
+   "total_tokens": 14320,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10288
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1028
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_23",
+ "family": "bar",
+ "chart_form": "bar/stacked_100",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Alabama @ Clinton",
+    "segment:Alabama @ Other",
+    "segment:Alabama @ Trump"
+   ],
+   "assertion": {
+    "segment": "Alabama @ Clinton",
+    "expected_share": 0.34,
+    "total_of": "the same category's stacked series",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "At least one state must show all three candidate shares individually and their total as the full state result."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Wyoming @ Trump",
+    "mark:Alabama @ Trump"
+   ],
+   "assertion": {
+    "greater": "Wyoming @ Trump",
+    "lesser": "Alabama @ Trump",
+    "expected_ratio": 1.0968,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The video must make the Trump-vs-Clinton comparison readable across states and present or derive the count 28."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:California @ Clinton",
+    "mark:Hawaii @ Clinton"
+   ],
+   "assertion": {
+    "greater": "California @ Clinton",
+    "lesser": "Hawaii @ Clinton",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The video must make the Clinton-vs-Trump comparison readable across states and present or derive the count 19."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Michigan @ Clinton",
+    "mark:Michigan @ Trump"
+   ],
+   "assertion": {
+    "greater": "Michigan @ Clinton",
+    "lesser": "Michigan @ Trump",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Michigan, New Hampshire, and Wisconsin must be identifiable as 47 Clinton, 47 Trump, and 6 Other."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Clinton)"
+   ],
+   "assertion": {
+    "mark": "Utah @ Other",
+    "extreme": "min",
+    "expected": 26.0,
+    "compared_set": "Clinton",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Utah's Other value of 26 and Mississippi's Other value of 2 must be readable as the high and low endpoints for the Other series."
+  }
+ ]
+}

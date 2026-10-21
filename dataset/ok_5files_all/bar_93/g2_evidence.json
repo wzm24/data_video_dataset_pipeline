@@ -1,0 +1,129 @@
+{
+ "clip_id": "bar_93",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:SUNNI @ Muslim world share"
+   ],
+   "assertion": {
+    "segment": "SUNNI @ Muslim world share",
+    "expected_share": 0.8,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A Sunni-labeled mark must occupy about 80% of the whole, e.g. an 80% bar/area/slice or four-fifths of the composition."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:SHIA @ Muslim world share"
+   ],
+   "assertion": {
+    "segment": "SHIA @ Muslim world share",
+    "expected_share": 0.2,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A Shia-labeled mark must occupy about 20% of the whole, e.g. a 20% bar/area/slice or one-fifth of the composition."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:SUNNI @ Muslim world share",
+    "mark:SHIA @ Muslim world share"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "SUNNI @ Muslim world share",
+      "value": 80.0
+     },
+     {
+      "mark": "SHIA @ Muslim world share",
+      "value": 20.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The Sunni visual element must be clearly larger or higher than the Shia visual element."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:SUNNI @ Muslim world share",
+    "mark:SHIA @ Muslim world share"
+   ],
+   "assertion": {
+    "greater": "SUNNI @ Muslim world share",
+    "lesser": "SHIA @ Muslim world share",
+    "expected_ratio": 4.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a ratio is shown, the annotation must compare the 80 and 20 values as 4:1, not 1:4."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A verbal or visual cue of tension/friction must appear between the two groups, while specifying hardliners rather than all Sunnis and all Shia."
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "clip_id": "donut_14",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:indoor @ 0",
+    "segment:indoor @ 0"
+   ],
+   "assertion": {
+    "segment": "indoor @ 0",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 35.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A chart mark labeled 'indoor' or 'indoors' must show 35% (or 35) as its value/share."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Percent sign or 'of cultivation' part-to-whole label must be visible; donut/part-to-whole encoding preferred."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:indoor @ 0"
+   ],
+   "assertion": {
+    "segment": "indoor @ 0",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 35.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If a full donut/part-to-whole chart is shown, the complement/remainder must be labeled or visually inferable as 65%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:indoor @ 0"
+   ],
+   "assertion": {
+    "series": "indoor",
+    "values": [
+     35.0
+    ],
+    "threshold_between": [
+     35.0,
+     35.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must not label indoor as majority/most; if a full donut is shown, the indoor slice should occupy less than half."
+  }
+ ]
+}

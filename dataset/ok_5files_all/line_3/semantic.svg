@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#333333"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ff4444">global income inequality</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">5%</text>
+<line data-role="tick" x1="112" y1="485.0" x2="120" y2="485.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="491.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">10%</text>
+<line data-role="tick" x1="112" y1="370.0" x2="120" y2="370.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="376.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">15%</text>
+<line data-role="tick" x1="112" y1="255.0" x2="120" y2="255.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="261.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">20%</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">25%</text>
+<g id="entity-top-1" data-role="entity" data-entity-id="top-1" data-label="top 1%" data-series="true">
+<path id="top-1-path" data-role="line" data-entity-id="top-1" d="M 120.0 347.0 C 125.2 347.8, 141.0 349.7, 151.4 351.6 C 161.9 353.5, 172.4 357.4, 182.9 358.5 C 193.3 359.6, 203.8 361.2, 214.3 358.5 C 224.8 355.8, 235.2 348.2, 245.7 342.4 C 256.2 336.7, 266.7 327.8, 277.1 324.0 C 287.6 320.2, 298.1 321.3, 308.6 319.4 C 319.0 317.5, 329.5 314.8, 340.0 312.5 C 350.5 310.2, 361.0 307.5, 371.4 305.6 C 381.9 303.7, 392.4 301.8, 402.9 301.0 C 413.3 300.2, 423.8 301.8, 434.3 301.0 C 444.8 300.2, 455.2 296.4, 465.7 296.4 C 476.2 296.4, 486.7 301.0, 497.1 301.0 C 507.6 301.0, 518.1 298.3, 528.6 296.4 C 539.0 294.5, 549.5 292.6, 560.0 289.5 C 570.5 286.4, 581.0 280.7, 591.4 278.0 C 601.9 275.3, 612.4 275.3, 622.9 273.4 C 633.3 271.5, 643.8 268.8, 654.3 266.5 C 664.8 264.2, 675.2 261.5, 685.7 259.6 C 696.2 257.7, 706.7 257.7, 717.1 255.0 C 727.6 252.3, 738.1 246.6, 748.6 243.5 C 759.0 240.4, 769.5 238.5, 780.0 236.6 C 790.5 234.7, 801.0 233.5, 811.4 232.0 C 821.9 230.5, 832.4 229.3, 842.9 227.4 C 853.3 225.5, 863.8 222.8, 874.3 220.5 C 884.8 218.2, 895.2 215.5, 905.7 213.6 C 916.2 211.7, 926.7 211.7, 937.1 209.0 C 947.6 206.3, 958.1 198.3, 968.6 197.5 C 979.0 196.7, 989.5 200.6, 1000.0 204.4 C 1010.5 208.2, 1021.0 215.9, 1031.4 220.5 C 1041.9 225.1, 1052.4 229.3, 1062.9 232.0 C 1073.3 234.7, 1083.8 234.7, 1094.3 236.6 C 1104.8 238.5, 1115.2 242.3, 1125.7 243.5 C 1136.2 244.7, 1146.7 243.5, 1157.1 243.5 C 1167.6 243.5, 1178.1 243.5, 1188.6 243.5 C 1199.0 243.5, 1214.8 243.5, 1220.0 243.5 C 1225.2 243.5, 1220.0 243.5, 1220.0 243.5 C 1220.0 243.5, 1220.0 243.5, 1220.0 243.5 C 1220.0 243.5, 1220.0 243.5, 1220.0 243.5 C 1220.0 243.5, 1220.0 243.5, 1220.0 243.5" fill="none" stroke="#ff5555" stroke-width="3"/>
+</g>
+<g id="entity-bottom-50" data-role="entity" data-entity-id="bottom-50" data-label="bottom 50%" data-series="true">
+<path id="bottom-50-path" data-role="line" data-entity-id="bottom-50" d="M 120.0 531.0 C 125.2 530.2, 141.0 528.3, 151.4 526.4 C 161.9 524.5, 172.4 520.6, 182.9 519.5 C 193.3 518.4, 203.8 520.6, 214.3 519.5 C 224.8 518.4, 235.2 514.5, 245.7 512.6 C 256.2 510.7, 266.7 509.5, 277.1 508.0 C 287.6 506.5, 298.1 504.2, 308.6 503.4 C 319.0 502.6, 329.5 503.4, 340.0 503.4 C 350.5 503.4, 361.0 503.4, 371.4 503.4 C 381.9 503.4, 392.4 503.4, 402.9 503.4 C 413.3 503.4, 423.8 502.6, 434.3 503.4 C 444.8 504.2, 455.2 507.2, 465.7 508.0 C 476.2 508.8, 486.7 508.0, 497.1 508.0 C 507.6 508.0, 518.1 508.0, 528.6 508.0 C 539.0 508.0, 549.5 508.0, 560.0 508.0 C 570.5 508.0, 581.0 508.0, 591.4 508.0 C 601.9 508.0, 612.4 508.0, 622.9 508.0 C 633.3 508.0, 643.8 508.0, 654.3 508.0 C 664.8 508.0, 675.2 508.0, 685.7 508.0 C 696.2 508.0, 706.7 508.0, 717.1 508.0 C 727.6 508.0, 738.1 508.0, 748.6 508.0 C 759.0 508.0, 769.5 507.2, 780.0 508.0 C 790.5 508.8, 801.0 511.8, 811.4 512.6 C 821.9 513.4, 832.4 511.8, 842.9 512.6 C 853.3 513.4, 863.8 516.1, 874.3 517.2 C 884.8 518.4, 895.2 519.5, 905.7 519.5 C 916.2 519.5, 926.7 518.4, 937.1 517.2 C 947.6 516.1, 958.1 514.1, 968.6 512.6 C 979.0 511.1, 989.5 509.5, 1000.0 508.0 C 1010.5 506.5, 1021.0 505.3, 1031.4 503.4 C 1041.9 501.5, 1052.4 497.6, 1062.9 496.5 C 1073.3 495.4, 1083.8 496.5, 1094.3 496.5 C 1104.8 496.5, 1115.2 496.5, 1125.7 496.5 C 1136.2 496.5, 1146.7 496.5, 1157.1 496.5 C 1167.6 496.5, 1178.1 496.5, 1188.6 496.5 C 1199.0 496.5, 1214.8 496.5, 1220.0 496.5 C 1225.2 496.5, 1220.0 496.5, 1220.0 496.5 C 1220.0 496.5, 1220.0 496.5, 1220.0 496.5 C 1220.0 496.5, 1220.0 496.5, 1220.0 496.5 C 1220.0 496.5, 1220.0 496.5, 1220.0 496.5" fill="none" stroke="#4477cc" stroke-width="3"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1980</text>
+<text data-role="x-axis-label" x="277.1" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1985</text>
+<text data-role="x-axis-label" x="434.3" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1990</text>
+<text data-role="x-axis-label" x="591.4" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1995</text>
+<text data-role="x-axis-label" x="748.6" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2000</text>
+<text data-role="x-axis-label" x="905.7" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2005</text>
+<text data-role="x-axis-label" x="1062.9" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2010</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2015</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#ff5555" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">top 1%</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#4477cc" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">bottom 50%</text>
+</g>
+</svg>

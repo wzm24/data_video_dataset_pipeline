@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#222222">Public transit funding</text>
+<text x="640" y="94" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#555555">Congressional Research Service</text>
+<path d="M 640.0 420.0 L 571.6 232.1 A 200.0 200.0 0 0 1 724.7 238.8 Z" fill="#5f779b" stroke="#ffffff" stroke-width="3"/>
+<text x="646" y="298" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#ffffff">6%</text>
+<line x1="648" y1="240" x2="651" y2="172" stroke="#9a9a9a" stroke-width="2"/>
+<text x="663" y="181" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#222222">Federal</text>
+<path d="M 640.0 420.0 L 724.7 238.8 A 200.0 200.0 0 0 1 806.7 530.5 Z" fill="#296386" stroke="#ffffff" stroke-width="3"/>
+<text x="771" y="397" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#ffffff">26%</text>
+<line x1="813" y1="371" x2="879" y2="353" stroke="#9a9a9a" stroke-width="2"/>
+<text x="891" y="362" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#222222">Fares</text>
+<path d="M 640.0 420.0 L 806.7 530.5 A 200.0 200.0 0 0 1 442.2 449.4 Z" fill="#d95751" stroke="#ffffff" stroke-width="3"/>
+<text x="610" y="567" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#ffffff">36%</text>
+<line x1="601" y1="596" x2="586" y2="662" stroke="#9a9a9a" stroke-width="2"/>
+<text x="574" y="671" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#222222">Local government</text>
+<path d="M 640.0 420.0 L 442.2 449.4 A 200.0 200.0 0 0 1 571.6 232.1 Z" fill="#85afc1" stroke="#ffffff" stroke-width="3"/>
+<text x="523" y="364" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#ffffff">21%</text>
+<line x1="485" y1="328" x2="427" y2="293" stroke="#9a9a9a" stroke-width="2"/>
+<text x="415" y="302" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#222222">State</text>
+</svg>

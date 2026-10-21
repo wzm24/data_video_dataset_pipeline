@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_28",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the profit distribution and accounting breakdown of a pirate raid among investors, port officials, and the attacking crew.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Investors receive a 30% share of the distribution.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "INVESTORS",
+     "x": "investors",
+     "field": "value",
+     "value": 30.0,
+     "note": "Table lists INVESTORS at 30%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Investors receive 30%.",
+    "Investors get a 30% cut.",
+    "The investors segment is 30% of the distribution.",
+    "30% goes to investors."
+   ],
+   "visual_evidence_rule": "A chart segment or label for INVESTORS must show 30% or 0.30.",
+   "temporal_anchor": "the clause introducing investors' guaranteed cut",
+   "reviewer_question": "Must the video explicitly show investors receiving 30%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Port fees or port officials receive a 10% share of the distribution.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "PORT 'FEES'",
+     "x": "port_'fees",
+     "field": "value",
+     "value": 10.0,
+     "note": "Table lists PORT 'FEES' at 10%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Port fees are 10%.",
+    "The port's cut is 10%.",
+    "Port officials get a 10% share.",
+    "The port-fees segment is 10%."
+   ],
+   "visual_evidence_rule": "A chart segment or label for PORT 'FEES' must show 10% or 0.10.",
+   "temporal_anchor": "the clause about the port's cut",
+   "reviewer_question": "Must the video state the table's 10% port-fee share rather than a wider range?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Bounties or the attacking crew's bounty pool receive a 50% share of the distribution.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "BOUNTIES",
+     "x": "bounties",
+     "field": "value",
+     "value": 50.0,
+     "note": "Table lists BOUNTIES at 50%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Bounties are 50%.",
+    "The attackers' bounty pool is 50%.",
+    "Half goes to bounties.",
+    "The bounties segment is 50%."
+   ],
+   "visual_evidence_rule": "A chart segment or label for BOUNTIES must show 50% or 0.50.",
+   "temporal_anchor": "the clause about the rest being split among attackers or bounties",
+   "reviewer_question": "Must the video explicitly show bounties or attacking crew at 50%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The $10,000 bonus corresponds to the 10% bonus share, implying a total distribution of $100,000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "$10,000 BONUS",
+     "x": "10000-bonus",
+     "field": "value",
+     "value": 10000.0,
+     "note": "Flat bonus amount in USD."
+    },
+    {
+     "entity": "bonus share",
+     "x": "bonus-share",
+     "field": "value",
+     "value": 10.0,
+     "note": "Ring share of the bonus segment, in percent."
+    }
+   ],
+   "computation": "10000 / (10 / 100) = 100000",
+   "accepted_routes": [
+    "The $10,000 bonus is a 10% share, so the total is $100,000.",
+    "A $10,000 bonus equals 10% of the pot, implying a $100,000 total.",
+    "The bonus segment is 10% and worth $10,000, giving a total pot of $100,000.",
+    "10% of the total is $10,000, so the total is $100,000."
+   ],
+   "visual_evidence_rule": "If shown, the chart must link the $10,000 bonus label to the 10% bonus segment and display or derive $100,000 total.",
+   "temporal_anchor": "the clause about the $10,000 bonus for being first to board",
+   "reviewer_question": "Should the video derive the $100,000 total from the $10,000 bonus and 10% share, or is the bonus amount alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Ranking of shares: Bounties are largest at 50%, investors are second at 30%, and port fees plus the bonus share tie at 10% each.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "BOUNTIES",
+     "x": "bounties",
+     "field": "value",
+     "value": 50.0,
+     "note": "Largest share."
+    },
+    {
+     "entity": "INVESTORS",
+     "x": "investors",
+     "field": "value",
+     "value": 30.0,
+     "note": "Second-largest share."
+    },
+    {
+     "entity": "PORT 'FEES'",
+     "x": "port_'fees",
+     "field": "value",
+     "value": 10.0,
+     "note": "Tied smallest share with bonus share."
+    },
+    {
+     "entity": "bonus share",
+     "x": "bonus-share",
+     "field": "value",
+     "value": 10.0,
+     "note": "Tied smallest share with port fees."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Bounties are the biggest slice at 50%, followed by investors at 30%; port fees and the bonus share are tied at 10%.",
+    "50% bounties > 30% investors > 10% port fees = 10% bonus share.",
+    "The largest category is bounties at 50%; the smallest are port fees and bonus at 10% each.",
+    "Investors are second at 30%, behind 50% bounties and ahead of the 10% port and bonus shares."
+   ],
+   "visual_evidence_rule": "If shown, segment sizes or labels must make bounties largest, investors second, and port fees plus bonus share tied smallest.",
+   "temporal_anchor": "could be carried across the segment-introduction clauses or a summary clause",
+   "reviewer_question": "Is an explicit ranking or order required, or are individual segment values enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The four percentage segments sum to 100%: 30% investors + 10% port fees + 50% bounties + 10% bonus share.",
+  "The three named non-bonus shares sum to 90%: 30% + 10% + 50%.",
+  "The $10,000 bonus is a flat amount, while the bonus ring share is the separate 10% row.",
+  "Port fees can be described as one-tenth of the distribution."
+ ],
+ "unsupported_to_avoid": [
+  "Do not require or state a port-fee range other than the table's 10% value.",
+  "Do not present the $10,000 bonus as a 10% share without distinguishing the flat amount row from the bonus-share row.",
+  "Do not claim the port looked away because of the 10% fee or any other causal effect.",
+  "Do not extrapolate to other raids or future totals beyond the table.",
+  "Do not add the $10,000 dollar amount directly to percentage shares or treat it as a percentage.",
+  "Do not assume bounties and bonus form a single attacking-crew total unless the chart explicitly groups them."
+ ],
+ "notes": "The three estimated percentage rows plus the bonus share row sum to 100%, while the $10,000 bonus is a flat amount tied to the 10% bonus segment. The reviewer should decide whether the derived $100,000 total and explicit ranking are required or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.11
+ },
+ "draft_cost": {
+  "sec": 40.2,
+  "usage": {
+   "prompt_tokens": 772,
+   "completion_tokens": 9719,
+   "total_tokens": 10491,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7756
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 516
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

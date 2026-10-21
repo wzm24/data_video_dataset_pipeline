@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#222222">MERCURY</text>
+<g id="chart-plot" data-role="plot">
+<circle id="outer-ring" data-role="bar" data-entity-id="orbital-period" data-label="Orbital period" cx="620.0" cy="400.0" r="180.0" fill="none" stroke="#D9D3C6" stroke-width="64.0" stroke-dasharray="1130.97 1140.97" stroke-dashoffset="-282.74"/>
+<circle id="inner-ring" data-role="bar" data-entity-id="rotation-period" data-label="Rotation period" cx="620.0" cy="400.0" r="85.0" fill="none" stroke="#8C7E6E" stroke-width="56.0" stroke-dasharray="358.07 544.07" stroke-dashoffset="-133.52"/>
+<text id="outer-label" data-role="value-label" x="834.0" y="452.0" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#666666">88 Days</text>
+<text id="inner-label" data-role="value-label" x="834.0" y="390.0" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#8C7E6E">59 Days</text>
+</g>
+</svg>

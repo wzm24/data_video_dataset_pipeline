@@ -1,0 +1,280 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_46",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the substantial growth in median executive pay at large US companies since the 1970s.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "CEO pay rises substantially from the 1970 value to the 2000 value: 0.85 to 5.30, an increase of 4.45 and a multiple of about 6.2x.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CEO pay",
+     "x": "1970",
+     "field": "value",
+     "value": 0.85,
+     "note": "labeled 1970 row"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "2000",
+     "field": "value",
+     "value": 5.3,
+     "note": "labeled 2000 row"
+    }
+   ],
+   "computation": "5.30 / 0.85 = 6.235; 5.30 - 0.85 = 4.45",
+   "accepted_routes": [
+    "rose from 0.85 in 1970 to 5.30 in 2000",
+    "more than quadrupled, about 6.2 times the 1970 value",
+    "increased by 4.45 in the table's $ units"
+   ],
+   "visual_evidence_rule": "The 1970 value 0.85 and 2000 value 5.30 must be marked or labeled, and the connecting line must visibly rise between them.",
+   "temporal_anchor": "the clause about growth since the 1970s / more than quadrupled",
+   "reviewer_question": "Should the video explicitly state the 1970 and 2000 values and the ~6.2x multiple, or is 'more than quadrupled' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 2000 value, 5.30, is the maximum of the series, with relative_value 1.0000.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CEO pay",
+     "x": "2000",
+     "field": "value",
+     "value": 5.3,
+     "note": "highest value in the table; relative_value = 1.0000"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the highest value is 5.30 at 2000",
+    "2000 marks the series peak",
+    "the relative value reaches 1.0000 in 2000"
+   ],
+   "visual_evidence_rule": "The 2000 point must be visibly the highest point on the line.",
+   "temporal_anchor": "the clause about growth since the 1970s reaching its highest point",
+   "reviewer_question": "Must the video explicitly call out the 2000 peak, or is the endpoint growth enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Across the labeled decade points, CEO pay rises at each step: 1970 = 0.85, 1980 = 1.30, 1990 = 2.30, 2000 = 5.30.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CEO pay",
+     "x": "1970",
+     "field": "value",
+     "value": 0.85,
+     "note": "labeled decade point"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "1980",
+     "field": "value",
+     "value": 1.3,
+     "note": "labeled decade point"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "1990",
+     "field": "value",
+     "value": 2.3,
+     "note": "labeled decade point"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "2000",
+     "field": "value",
+     "value": 5.3,
+     "note": "labeled decade point"
+    }
+   ],
+   "computation": "1.30 > 0.85; 2.30 > 1.30; 5.30 > 2.30",
+   "accepted_routes": [
+    "each labeled decade value is higher than the previous one",
+    "the series climbs from 0.85 to 1.30 to 2.30 to 5.30",
+    "upward trend across the labeled decade points"
+   ],
+   "visual_evidence_rule": "The four labeled decade points must appear in a rising sequence.",
+   "temporal_anchor": "the clause about more than quadrupling since the 1970s",
+   "reviewer_question": "Is it enough to show the overall rise, or must each labeled decade point be shown as higher than the last?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 1990–2000 increase is the largest labeled decade jump: from 2.30 to 5.30, an increase of 3.00 (about 2.3x), compared with the 1970–1990 increase of 1.45 (0.85 to 2.30).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "CEO pay",
+     "x": "1970",
+     "field": "value",
+     "value": 0.85,
+     "note": "start of early period"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "1990",
+     "field": "value",
+     "value": 2.3,
+     "note": "end of early period"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "2000",
+     "field": "value",
+     "value": 5.3,
+     "note": "end of late period"
+    }
+   ],
+   "computation": "2000 - 1990 = 3.00; 1990 - 1970 = 1.45; 3.00 / 1.45 ≈ 2.07; 5.30 / 2.30 ≈ 2.30",
+   "accepted_routes": [
+    "the 1990s jump is the largest labeled decade increase",
+    "from 1990 to 2000 pay rose by 3.00, about twice the 1970–1990 rise",
+    "most of the growth occurs after 1990"
+   ],
+   "visual_evidence_rule": "The segment from 1990 to 2000 must appear steeper or larger than earlier labeled segments.",
+   "temporal_anchor": "the clause about substantial growth since the 1970s",
+   "reviewer_question": "Should the video highlight the 1990–2000 acceleration, or is the overall 1970–2000 rise sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 1970 value is about one-sixth of the 2000 peak: 0.85 / 5.30 ≈ 0.16, matching the relative_value comparison 0.1605 vs 1.0000.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "CEO pay",
+     "x": "1970",
+     "field": "value",
+     "value": 0.85,
+     "note": "absolute 1970 value"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "2000",
+     "field": "value",
+     "value": 5.3,
+     "note": "absolute 2000 peak"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "1970",
+     "field": "relative_value",
+     "value": 0.1605,
+     "note": "relative 1970 value"
+    },
+    {
+     "entity": "CEO pay",
+     "x": "2000",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "relative 2000 peak"
+    }
+   ],
+   "computation": "0.85 / 5.30 ≈ 0.1604; relative_value 0.1605 / 1.0000 = 0.1605",
+   "accepted_routes": [
+    "1970 pay is about one-sixth of the 2000 peak",
+    "the 1970 value is far below the 2000 maximum",
+    "relative value rises from 0.1605 to 1.0000"
+   ],
+   "visual_evidence_rule": "The 1970 point must appear far below the 2000 point, roughly one-sixth of its height.",
+   "temporal_anchor": "the clause about growth since the 1970s",
+   "reviewer_question": "Should the video explicitly compare the 1970 and 2000 magnitudes as a ratio, or only show the increase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may show intermediate unlabeled values in the same CEO pay series, such as 0.8220, 0.9500, 1.1000, 1.0000, 1.2000, 1.8000, 1.9500, 3.1000, 4.2000, 4.3000, 5.1000, without assigning them to specific years.",
+  "The video may note that the series is not monotonic, for example the drop from 2.30 at 1990 to the next listed value 1.95 before the 2000 peak.",
+  "The video may use the relative_value ordering (0.1605 to 1.0000) to describe the rise, but must not call it a percentage."
+ ],
+ "unsupported_to_avoid": [
+  "worker pay dropped more than 10% (no worker-pay rows in the table)",
+  "inflation-adjusted or real terms (not in the table)",
+  "causal explanations for executive pay growth",
+  "treating relative_value 0.1605 as 16% or any percentage",
+  "explicit dollar millions (the table unit is $, not $ million)",
+  "chart type, colors, axis tick positions, or other rendering choices",
+  "extrapolation before 1970 or after 2000"
+ ],
+ "notes": "Only CEO pay rows exist; worker pay and inflation adjustments are not supported by the table. Use the labeled decade points (1970, 1980, 1990, 2000) for the core growth claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 47.6,
+  "usage": {
+   "prompt_tokens": 1425,
+   "completion_tokens": 11824,
+   "total_tokens": 13249,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9554
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 913
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

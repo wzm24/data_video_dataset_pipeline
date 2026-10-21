@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<svg x="0.0" y="0.0" width="640.0" height="720.0" viewBox="0 0 1280 720" overflow="visible" data-role="subplot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f4f6f9"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Higher Average Scores</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#cccccc" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#cccccc" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">900</text>
+<line data-role="tick" x1="112" y1="370.0" x2="120" y2="370.0" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="376.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">1025</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">1150</text>
+<g id="entity-test-optional" data-role="entity" data-entity-id="test-optional" data-label="TEST-OPTIONAL" data-series="true">
+<polyline id="test-optional-polyline" data-role="polyline" data-entity-id="test-optional" points="120.0,508.0 181.1,498.8 242.2,489.6 303.3,379.2 364.4,268.8 425.6,278.0 486.7,287.2 547.8,278.0 608.9,268.8 670.0,259.6 731.1,250.4 792.2,241.2 853.3,232.0 914.4,222.8 975.6,213.6 1036.7,222.8 1097.8,241.2 1158.9,232.0 1220.0,222.8" fill="none" stroke="#2b7bb9" stroke-width="3" data-animation-property="points"/>
+</g>
+<g id="entity-test-required" data-role="entity" data-entity-id="test-required" data-label="TEST-REQUIRED" data-series="true">
+<polyline id="test-required-polyline" data-role="polyline" data-entity-id="test-required" points="120.0,544.8 181.1,535.6 242.2,526.4 303.3,416.0 364.4,287.2 425.6,283.5 486.7,278.0 547.8,272.5 608.9,268.8 670.0,265.1 731.1,259.6 792.2,254.1 853.3,250.4 914.4,246.7 975.6,241.2 1036.7,250.4 1097.8,268.8 1158.9,265.1 1220.0,259.6" fill="none" stroke="#a9a9a9" stroke-width="3" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1994</text>
+<text data-role="x-axis-label" x="395.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1998</text>
+<text data-role="x-axis-label" x="670.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2002</text>
+<text data-role="x-axis-label" x="945.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2006</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2010</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#2b7bb9" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#999999">TEST-OPTIONAL</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#a9a9a9" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#999999">TEST-REQUIRED</text>
+</g>
+
+</svg>
+<svg x="640.0" y="0.0" width="640.0" height="720.0" viewBox="0 0 1280 720" overflow="visible" data-role="subplot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f4f6f9"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">More Applicants</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#cccccc" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#cccccc" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">1500</text>
+<line data-role="tick" x1="112" y1="424.8" x2="120" y2="424.8" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="430.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">2300</text>
+<line data-role="tick" x1="112" y1="161.9" x2="120" y2="161.9" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="167.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">3500</text>
+<g id="entity-test-optional" data-role="entity" data-entity-id="test-optional" data-label="TEST-OPTIONAL" data-series="true">
+<polyline id="test-optional-polyline" data-role="polyline" data-entity-id="test-optional" points="120.0,578.1 230.0,573.7 340.0,567.1 450.0,551.8 560.0,534.3 670.0,501.4 780.0,468.6 890.0,424.8 1000.0,381.0 1110.0,315.2 1220.0,140.0" fill="none" stroke="#2b7bb9" stroke-width="3" data-animation-property="points"/>
+</g>
+<g id="entity-test-required" data-role="entity" data-entity-id="test-required" data-label="TEST-REQUIRED" data-series="true">
+<polyline id="test-required-polyline" data-role="polyline" data-entity-id="test-required" points="120.0,600.0 230.0,595.6 340.0,589.0 450.0,567.1 560.0,556.2 670.0,534.3 780.0,512.4 890.0,479.5 1000.0,446.7 1110.0,413.8 1220.0,381.0" fill="none" stroke="#a9a9a9" stroke-width="3" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1994</text>
+<text data-role="x-axis-label" x="395.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1998</text>
+<text data-role="x-axis-label" x="670.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2002</text>
+<text data-role="x-axis-label" x="945.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2006</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2010</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#2b7bb9" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#999999">TEST-OPTIONAL</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#a9a9a9" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#999999">TEST-REQUIRED</text>
+</g>
+
+</svg>
+</svg>

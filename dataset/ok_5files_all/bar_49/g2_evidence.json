@@ -1,0 +1,140 @@
+{
+ "clip_id": "bar_49",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Richest @ Richest"
+   ],
+   "assertion": {
+    "mark": "Richest @ Richest",
+    "field": "value",
+    "expected": 10.9,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Richest bar must show a stacked total of 11.7, with visible segments 10.9 and 0.8 or a label for 11.7."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Richest @ Richest",
+    "mark:Poorest @ Poorest"
+   ],
+   "assertion": {
+    "greater": "Richest @ Richest",
+    "lesser": "Poorest @ Poorest",
+    "expected_ratio": 8.3571,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must allow direct comparison of Richest total (11.7) and Poorest total (1.4) on the same scale."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Poorest @ Poorest",
+    "mark:10th @ 10th",
+    "mark:Richest @ Richest"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Poorest @ Poorest",
+      "value": 1.4
+     },
+     {
+      "mark": "10th @ 10th",
+      "value": 9.6
+     },
+     {
+      "mark": "Richest @ Richest",
+      "value": 10.9
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars must be ordered by wealth group and show the upward progression of the corporate/property tax segment."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:10th @ 10th",
+    "segment:Richest @ Richest"
+   ],
+   "assertion": {
+    "segment": "10th @ 10th",
+    "expected_share": 0.0303,
+    "total_of": "the same category's stacked series",
+    "total": 9.9,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Stacked bars for 10th and Richest must include a distinct estate-tax segment (0.3 and 0.8) separate from corporate/property taxes."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Richest @ Richest",
+    "segment:Richest @ Richest",
+    "segment:10th @ 10th",
+    "segment:10th @ 10th"
+   ],
+   "assertion": {
+    "segment": "Richest @ Richest",
+    "expected_share": 0.0684,
+    "total_of": "the same category's stacked series",
+    "total": 11.700000000000001,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Richest and 10th bars must show the estate segment relative to total stacked height, or labels must permit the 0.8/11.7 and 0.3/9.9 calculation."
+  }
+ ]
+}

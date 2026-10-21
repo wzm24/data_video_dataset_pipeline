@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_67,Yield curve normal,yield-curve-normal,240.0,,,0.2667,relative,#ffffff,relative_only
+line_67,Yield curve normal,yield-curve-normal,1080.0,,,0.8444,relative,#ffffff,relative_only
+line_67,Yield curve inverted,yield-curve-inverted,240.0,,,0.6444,relative,#e60000,relative_only
+line_67,Yield curve inverted,yield-curve-inverted,1080.0,,,0.1778,relative,#e60000,relative_only

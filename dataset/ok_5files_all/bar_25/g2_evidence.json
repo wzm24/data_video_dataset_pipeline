@@ -1,0 +1,133 @@
+{
+ "clip_id": "bar_25",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:1982 @ 1982"
+   ],
+   "assertion": {
+    "mark": "1982 @ 1982",
+    "field": "value",
+    "expected": 2.7,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1982 value must be visually readable and tied to the 1982 category."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2004 @ 2004"
+   ],
+   "assertion": {
+    "mark": "2004 @ 2004",
+    "field": "value",
+    "expected": 1.65,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2004 value must be visually readable and tied to the 2004 category."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1982 @ 1982",
+    "mark:2004 @ 2004"
+   ],
+   "assertion": {
+    "low": "2004 @ 2004",
+    "low_value": 1.65,
+    "high": "1982 @ 1982",
+    "high_value": 2.7,
+    "delta": 1.05,
+    "ratio": 1.6364,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must expose both endpoints so the 1.050 gap or decrease from 1982 to 2004 is inferable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:1982 @ 1982",
+    "mark:2004 @ 2004"
+   ],
+   "assertion": {
+    "greater": "1982 @ 1982",
+    "lesser": "2004 @ 2004",
+    "expected_ratio": 1.6364,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both endpoint values must be visible so a viewer can compare them as a ratio."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1982 @ 1982",
+    "mark:2004 @ 2004"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1982 @ 1982",
+      "value": 2.7
+     },
+     {
+      "mark": "2004 @ 2004",
+      "value": 1.65
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must make the 1982-to-2004 direction clearly downward or otherwise show that 2004 is below 1982."
+  }
+ ]
+}

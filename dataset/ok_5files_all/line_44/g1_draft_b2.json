@@ -1,0 +1,123 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_44",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how central banks have significantly lowered interest rates to stimulate the economy, particularly highlighting the sharp decline following the 2008 financial crisis and subsequent further reductions.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Bank of England base rate is dramatically lower than its 1991 peak: it starts at 13.87% in 1991 and later reaches 0.25%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.5,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "1991",
+     "field": "value",
+     "value": 13.87,
+     "note": "highest value in the table; start of the Bank Rate series"
+    },
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "unspecified final row",
+     "field": "value",
+     "value": 0.25,
+     "note": "final low in the Bank Rate series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "from 13.87% in 1991 down to 0.25% later",
+    "fell from an early 13.87% peak to a 0.25% low",
+    "the Bank Rate ends far below its 1991 high"
+   ],
+   "visual_evidence_rule": "The Bank Rate line must show an early high at 13.87% and a final low at 0.25%.",
+   "temporal_anchor": "the opening clause about lowering interest rates",
+   "reviewer_question": "Must the clip show both the 1991 13.87% high and the final 0.25% low, or is the overall decline enough without both endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "During the financial-crisis period, the Bank of England base rate dropped sharply from 5.00% to 0.50%, a 4.50 percentage-point cut.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.5,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "unspecified crisis-period start",
+     "field": "value",
+     "value": 5.0,
+     "note": "value immediately before the sharp drop"
+    },
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "unspecified crisis-period end",
+     "field": "value",
+     "value": 0.5,
+     "note": "value after the sharp drop"
+    }
+   ],
+   "computation": "5.00 - 0.50 = 4.50 percentage points",
+   "accepted_routes": [
+    "cut from 5.00% to 0.50%",
+    "a 4.5-point drop to 0.50%",
+    "fell sharply from 5% to 0.5%"
+   ],
+   "visual_evidence_rule": "A steep downward segment from 5.00% to 0.50% must be visible on the Bank Rate line.",
+   "temporal_anchor": "the 'dropped so sharply' clause",
+   "reviewer_question": "Is the 5.00% starting point of the sharp decline required, or can the clip just show the fall to 0.50%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 2,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.47
+ },
+ "draft_cost": {
+  "sec": 72.8,
+  "usage": {
+   "prompt_tokens": 10721,
+   "completion_tokens": 16000,
+   "total_tokens": 26721,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 15063
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 10209
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

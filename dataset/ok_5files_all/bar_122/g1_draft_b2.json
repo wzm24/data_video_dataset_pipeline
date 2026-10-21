@@ -1,0 +1,162 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_122",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that Trump supporters' confidence in the accuracy of vote counting increased significantly after his 2016 election victory.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The 'Very' confidence relative value for the group corresponding to Trump supporters (the group with the lower Aug 2016 'Very' value) increases substantially from Aug 2016 to Nov 2016: 0.0764 to 0.3264, roughly 4.3 times its earlier relative value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Aug 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.0764,
+     "note": "Lower of the two Aug 2016 'Very' values; this is the rising group per intent."
+    },
+    {
+     "entity": "Nov 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.3264,
+     "note": "Higher of the two Nov 2016 'Very' values; same group as the Aug 0.0764 value."
+    }
+   ],
+   "computation": "0.3264 / 0.0764 ≈ 4.3",
+   "accepted_routes": [
+    "The 'Very' relative value for the rising group jumps from 0.0764 in Aug 2016 to 0.3264 in Nov 2016.",
+    "Trump-support 'Very' confidence rises from a very low relative value to its highest Nov value.",
+    "The group with the lower Aug 'Very' value increases its 'Very' relative value roughly fourfold by Nov."
+   ],
+   "visual_evidence_rule": "The chart must show the same group's 'Very' relative value at both Aug 2016 and Nov 2016, with the Nov value clearly greater than the Aug value.",
+   "temporal_anchor": "When Trump won the 2016 election, his voters suddenly become much more confident in the process",
+   "reviewer_question": "Is the within-group Aug-to-Nov increase in 'Very' required, or is showing only the higher Nov 'Very' value sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In Aug 2016, the rising group's 'Very' relative value (0.0764) is far below the other group's 'Very' relative value (0.3403), less than a quarter of it.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Aug 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.0764,
+     "note": "Lower group's Aug 'Very' value."
+    },
+    {
+     "entity": "Aug 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.3403,
+     "note": "Other group's Aug 'Very' value."
+    }
+   ],
+   "computation": "0.0764 / 0.3403 ≈ 0.225, so less than a quarter",
+   "accepted_routes": [
+    "The rising group starts far below the other group on Aug 'Very' relative value (0.0764 vs 0.3403).",
+    "In Aug 2016, the later-rising group's 'Very' value is less than a quarter of the other group's 'Very' value.",
+    "Aug 2016 shows a large gap between the two groups' 'Very' relative values, with the future riser much lower."
+   ],
+   "visual_evidence_rule": "Both Aug 2016 'Very' relative values must be visible and directly comparable, with the rising group's relative value clearly lower.",
+   "temporal_anchor": "ahead of both of those elections ... substantially less confident in the process",
+   "reviewer_question": "Is the Aug 2016 cross-group 'Very' gap required context, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In Nov 2016, the previously lower 'Very' group's relative value (0.3264) is slightly above the other group's 'Very' value (0.3056), reversing the Aug 2016 gap.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Nov 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.3264,
+     "note": "Previously lower group's Nov 'Very' value."
+    },
+    {
+     "entity": "Nov 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.3056,
+     "note": "Other group's Nov 'Very' value."
+    }
+   ],
+   "computation": "0.3264 - 0.3056 = 0.0208; ordering reverses from Aug (0.0764 < 0.3403)",
+   "accepted_routes": [
+    "By Nov 2016, the rising group's 'Very' relative value edges past the other group's 'Very' value (0.3264 vs 0.3056).",
+    "The Aug gap closes and slightly reverses in Nov 2016 for the 'Very' relative values.",
+    "Nov 2016 'Very' values are 0.3264 and 0.3056, with the previously lower group now higher."
+   ],
+   "visual_evidence_rule": "Both Nov 2016 'Very' relative values must be visible, and the value for the group that was lower in Aug must appear marginally greater than the other.",
+   "temporal_anchor": "his voters suddenly become much more confident in the process",
+   "reviewer_question": "Must the video show the cross-group Nov reversal, or is the within-group increase enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 3,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.75
+ },
+ "draft_cost": {
+  "sec": 67.1,
+  "usage": {
+   "prompt_tokens": 1318,
+   "completion_tokens": 16000,
+   "total_tokens": 17318,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 14370
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 678
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

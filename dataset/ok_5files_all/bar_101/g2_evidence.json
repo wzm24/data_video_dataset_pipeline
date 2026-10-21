@@ -1,0 +1,140 @@
+{
+ "clip_id": "bar_101",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Working-age (15-64) @ aggregate",
+    "mark:Dependents (0-14 and 65+) @ aggregate"
+   ],
+   "assertion": {
+    "greater": "Working-age (15-64) @ aggregate",
+    "lesser": "Dependents (0-14 and 65+) @ aggregate",
+    "expected_ratio": 1.4756,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must show or allow comparison of the combined 15–64 segment against the combined 0–14 plus 65+ segment."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Working-age (15-64) @ aggregate",
+    "mark:Young dependents (0-14) @ aggregate"
+   ],
+   "assertion": {
+    "greater": "Working-age (15-64) @ aggregate",
+    "lesser": "Young dependents (0-14) @ aggregate",
+    "expected_ratio": 2.1806,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must show or allow comparison of the 15–64 combined segment against the 0–14 combined segment."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Working-age (15-64) @ aggregate",
+    "mark:Older dependents (65+) @ aggregate"
+   ],
+   "assertion": {
+    "greater": "Working-age (15-64) @ aggregate",
+    "lesser": "Older dependents (65+) @ aggregate",
+    "expected_ratio": 4.564,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must show or allow comparison of the 15–64 combined segment against the 65+ combined segment."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Young dependents (0-14) @ aggregate",
+    "mark:Older dependents (65+) @ aggregate"
+   ],
+   "assertion": {
+    "greater": "Young dependents (0-14) @ aggregate",
+    "lesser": "Older dependents (65+) @ aggregate",
+    "expected_ratio": 2.093,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must show or allow comparison of the 0–14 combined segment against the 65+ combined segment."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:0-4 @ 0-4-left",
+    "mark:5-9 @ 5-9-left",
+    "mark:95-99 @ 95-99-left"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "0-4 @ 0-4-left",
+      "value": 1.0
+     },
+     {
+      "mark": "5-9 @ 5-9-left",
+      "value": 1.0
+     },
+     {
+      "mark": "95-99 @ 95-99-left",
+      "value": 0.016
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must visibly show the 0–4 and 5–9 groups as the longest bars and the 95–99 groups as the shortest."
+  }
+ ]
+}

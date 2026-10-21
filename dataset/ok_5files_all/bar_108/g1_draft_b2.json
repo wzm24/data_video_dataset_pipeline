@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_108",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers about the recommended timing for receiving COVID-19 booster shots based on the specific vaccine type and the time required for full effectiveness.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Pfizer/BioNTech and Moderna both require a 6-month wait after the last shot before receiving a booster.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Pfizer/BioNTech",
+     "x": "Months since last shot",
+     "field": "value",
+     "value": 6.0,
+     "note": "Recommended wait before booster"
+    },
+    {
+     "entity": "Moderna",
+     "x": "Months since last shot",
+     "field": "value",
+     "value": 6.0,
+     "note": "Recommended wait before booster"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Pfizer and Moderna: wait 6 months after last shot",
+    "Both Pfizer/BioNTech and Moderna have a 6-month booster interval",
+    "6 months for Pfizer or Moderna"
+   ],
+   "visual_evidence_rule": "The chart must display the value 6 months for Pfizer/BioNTech and Moderna on the months-since-last-shot measure.",
+   "temporal_anchor": "narration clause about waiting six months after a second dose of Pfizer or Moderna",
+   "reviewer_question": "Must the video state both Pfizer/BioNTech and Moderna explicitly, or is grouping them as mRNA vaccines sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Johnson & Johnson requires a 2-month wait after the last shot before receiving a booster.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Johnson & Johnson",
+     "x": "Months since last shot",
+     "field": "value",
+     "value": 2.0,
+     "note": "Recommended wait before booster"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Johnson & Johnson: wait 2 months",
+    "J&J booster interval is 2 months",
+    "Two months after Johnson & Johnson shot"
+   ],
+   "visual_evidence_rule": "The chart must display the value 2 months for Johnson & Johnson on the months-since-last-shot measure.",
+   "temporal_anchor": "narration clause about waiting two months after the Johnson & Johnson vaccine",
+   "reviewer_question": "Is the exact 2-month value required, or is conveying that it is shorter than the mRNA vaccines enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "AstraZeneca has the same 6-month wait after the last shot as Pfizer/BioNTech and Moderna.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "AstraZeneca",
+     "x": "Months since last shot",
+     "field": "value",
+     "value": 6.0,
+     "note": "Recommended wait before booster"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "AstraZeneca also requires a 6-month wait",
+    "AstraZeneca matches Pfizer/Moderna at 6 months",
+    "6 months for AstraZeneca"
+   ],
+   "visual_evidence_rule": "The chart must display the value 6 months for AstraZeneca on the months-since-last-shot measure.",
+   "temporal_anchor": "no narration clause; optional table-derived addition",
+   "reviewer_question": "Should AstraZeneca be required even though the original narration only mentions Pfizer, Moderna, and Johnson & Johnson?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After the booster, full effectiveness takes about two weeks, shown in the table as 0.55 months for Pfizer/BioNTech, Moderna, and AstraZeneca, and 0.7 months for Johnson & Johnson.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Pfizer/BioNTech",
+     "x": "two weeks until fully effective",
+     "field": "value",
+     "value": 0.55,
+     "note": "Time to full effectiveness in months"
+    },
+    {
+     "entity": "Moderna",
+     "x": "two weeks until fully effective",
+     "field": "value",
+     "value": 0.55,
+     "note": "Time to full effectiveness in months"
+    },
+    {
+     "entity": "AstraZeneca",
+     "x": "two weeks until fully effective",
+     "field": "value",
+     "value": 0.55,
+     "note": "Time to full effectiveness in months"
+    },
+    {
+     "entity": "Johnson & Johnson",
+     "x": "two weeks until fully effective",
+     "field": "value",
+     "value": 0.7,
+     "note": "Time to full effectiveness in months"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Full effectiveness takes about two weeks (0.55 months for most; 0.7 months for J&J)",
+    "Wait about two weeks after booster for peak effectiveness",
+    "0.55 months for Pfizer/Moderna/AstraZeneca, 0.7 months for Johnson & Johnson"
+   ],
+   "visual_evidence_rule": "The chart must display the full-effectiveness wait values: 0.55 months for Pfizer/BioNTech, Moderna, and AstraZeneca, and 0.7 months for Johnson & Johnson.",
+   "temporal_anchor": "narration clause about waiting about two weeks to reach peak antibody levels",
+   "reviewer_question": "Must the video convey the exact 0.55 vs 0.7 month distinction, or is the general 'about two weeks' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Johnson & Johnson's 2-month booster wait is 4 months shorter than the 6-month wait for Pfizer/BioNTech, Moderna, and AstraZeneca (6 - 2 = 4).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Johnson & Johnson",
+     "x": "Months since last shot",
+     "field": "value",
+     "value": 2.0,
+     "note": "Shorter booster interval"
+    },
+    {
+     "entity": "Pfizer/BioNTech",
+     "x": "Months since last shot",
+     "field": "value",
+     "value": 6.0,
+     "note": "Representative of the 6-month group; Moderna and AstraZeneca also have 6.0"
+    }
+   ],
+   "computation": "6 - 2 = 4 months shorter",
+   "accepted_routes": [
+    "J&J wait is 4 months shorter than Pfizer/Moderna/AstraZeneca",
+    "Two months vs six months, a four-month difference",
+    "J&J interval is one-third of the six-month interval (2/6 = 1/3)"
+   ],
+   "visual_evidence_rule": "The chart must show the 2-month Johnson & Johnson value alongside the 6-month values for Pfizer/BioNTech, Moderna, and AstraZeneca so the difference is derivable.",
+   "temporal_anchor": "narration comparison between the two-month Johnson & Johnson wait and the six-month Pfizer/Moderna wait",
+   "reviewer_question": "Is the explicit 4-month difference (or one-third ratio) required, or are the individual wait times enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "AstraZeneca's 6-month wait, if the video chooses to include all vaccine types present in the table",
+  "The exact 0.7 vs 0.55 month distinction for full-effectiveness timing",
+  "The derived one-third ratio between Johnson & Johnson's 2-month wait and the 6-month wait"
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why intervals differ between vaccine types",
+  "Extrapolation to vaccine types not in the table",
+  "Any absolute counts, percentages, or efficacy numbers not present in the table",
+  "Treating the relative_value column as a percentage or absolute count",
+  "Claiming the booster is mandated rather than recommended by the timing data"
+ ],
+ "notes": "The table provides absolute month values for two series per vaccine. Units 3 and 5 are optional because AstraZeneca is absent from the narration and the derived difference is a comparison, respectively.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 63.7,
+  "usage": {
+   "prompt_tokens": 1372,
+   "completion_tokens": 15427,
+   "total_tokens": 16799,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13491
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 860
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_149",
+ "intent_en": "To demonstrate the projected tax revenue of Biden's proposal over a ten-year period, highlighting a range of estimates from different organizations.",
+ "previous_intent": "To demonstrate the projected tax revenue of Biden's proposal over a decade, highlighting the range of estimates from different organizations.",
+ "narration_support": "But it would bring in more tax revenue, from more conservative estimates of $200 billion over 10 years to double that.",
+ "chart_support": "Horizontal bar chart displaying revenue estimates of Biden's proposal over 10 years from four different organizations.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration discusses tax revenue over 10 years, and the chart visualizes specific revenue estimates from the Tax Foundation, Penn Wharton, Tax Policy Center, and Americans for Tax Fairness for the same period.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

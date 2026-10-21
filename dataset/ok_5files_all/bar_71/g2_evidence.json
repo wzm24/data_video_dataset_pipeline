@@ -1,0 +1,146 @@
+{
+ "clip_id": "bar_71",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Online Store @ 2015",
+    "extreme": "max",
+    "expected": 0.65,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "In every year of the animation, the encoded mark for Online Store must be visually larger than the marks for 3rd Party Retail, AWS, and Subscriptions."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:3rd Party Retail @ 2016",
+    "mark:3rd Party Retail @ 2015"
+   ],
+   "assertion": {
+    "greater": "3rd Party Retail @ 2016",
+    "lesser": "3rd Party Retail @ 2015",
+    "expected_ratio": 1.499,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In each year, the 3rd Party Retail mark must be visually larger than AWS and Subscriptions but smaller than Online Store."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Online Store + 3rd Party Retail @ 2015",
+    "segment:Online Store + 3rd Party Retail @ 2016",
+    "segment:Online Store + 3rd Party Retail @ 2017",
+    "segment:Online Store + 3rd Party Retail @ 2018"
+   ],
+   "assertion": {
+    "segment": "Online Store + 3rd Party Retail @ 2015",
+    "expected_share": null,
+    "total_of": "the same category's stacked series",
+    "total": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "In each year, the combined encoded area or attribute for Online Store and 3rd Party Retail must be visibly much larger than the combined AWS and Subscriptions portion."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:AWS @ 2015",
+    "mark:Subscriptions @ 2015"
+   ],
+   "assertion": {
+    "greater": "AWS @ 2015",
+    "lesser": "Subscriptions @ 2015",
+    "expected_ratio": 2.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In each year, AWS and Subscriptions must be the two smallest encoded marks, with Subscriptions smaller than AWS."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Online Store @ 2015-2018",
+    "mark:3rd Party Retail @ 2015-2018",
+    "mark:AWS @ 2015-2018",
+    "mark:Subscriptions @ 2015-2018"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Online Store @ 2015-2018",
+      "value": 0.65
+     },
+     {
+      "mark": "3rd Party Retail @ 2015-2018",
+      "value": 0.2998
+     },
+     {
+      "mark": "AWS @ 2015-2018",
+      "value": 0.1002
+     },
+     {
+      "mark": "Subscriptions @ 2015-2018",
+      "value": 0.0501
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animation must preserve the same rank order of encoded segment marks in every year, with no segment crossing another in rank."
+  }
+ ]
+}

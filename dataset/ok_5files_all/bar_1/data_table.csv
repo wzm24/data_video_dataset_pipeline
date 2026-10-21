@@ -1,0 +1,4 @@
+entity,metric,value,unit,label
+CAR,travel_days,,days,a lot of time
+BOING 747,travel_days,28,days,28 days
+SPACESHIP,travel_days,2,days,two full days

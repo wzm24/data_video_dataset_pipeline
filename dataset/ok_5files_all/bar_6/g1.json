@@ -1,0 +1,68 @@
+{
+ "clip_id": "bar_6",
+ "version": "g1_r_u_v1",
+ "intent": "Show that people in transit-oriented developments drive less and use public transit, biking, and walking more than the national average.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How do trip shares differ between transit-oriented developments and the national average?",
+   "relation": "all_of",
+   "unit_ids": [
+    "U1",
+    "U2"
+   ],
+   "scope": {
+    "entities": [
+     "Car",
+     "Public transit",
+     "Bike",
+     "Walk"
+    ],
+    "measure": "share of trips",
+    "time": "the plotted snapshot"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "The car share is lower in transit-oriented developments: 45% vs 90% nationally (45 percentage points lower).",
+   "accept": [
+    "45% vs 90%",
+    "transit-oriented developments have a lower car share",
+    "45 percentage points lower for car trips"
+   ],
+   "reject": [
+    "swapped values (90% in transit-oriented developments)",
+    "saying car use is higher there",
+    "wrong unit (trips instead of %)"
+   ],
+   "evidence": "Two bars for car use: 45% at transit-oriented developments vs 90% nationally."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R1",
+   "claim": "Public transit, biking, and walking shares are higher in transit-oriented developments: 30% vs 6%, 3% vs 1%, and 22% vs 3%.",
+   "accept": [
+    "all three pairs",
+    "all three percentage-point gains",
+    "all three non-car modes are higher"
+   ],
+   "reject": [
+    "missing any of the three modes",
+    "swapped values",
+    "saying one of the three is lower"
+   ],
+   "evidence": "Bar pairs for public transit, biking and walking all show the development value higher."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21"
+}

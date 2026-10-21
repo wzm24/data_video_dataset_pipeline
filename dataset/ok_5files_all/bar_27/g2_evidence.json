@@ -1,0 +1,160 @@
+{
+ "clip_id": "bar_27",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 7,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly encode family-income brackets on one axis and SAT-score values on the other, with bars for the income categories."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Less than $20,000 @ income bracket",
+    "mark:$40,000 @ income bracket",
+    "mark:$60,000 @ income bracket",
+    "mark:$80,000 @ income bracket",
+    "mark:$100,000 @ income bracket",
+    "mark:$140,000 @ income bracket",
+    "mark:More than $200,000 @ income bracket"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Less than $20,000 @ income bracket",
+      "value": 890.0
+     },
+     {
+      "mark": "$40,000 @ income bracket",
+      "value": 946.0
+     },
+     {
+      "mark": "$60,000 @ income bracket",
+      "value": 994.0
+     },
+     {
+      "mark": "$80,000 @ income bracket",
+      "value": 1006.0
+     },
+     {
+      "mark": "$100,000 @ income bracket",
+      "value": 1054.0
+     },
+     {
+      "mark": "$140,000 @ income bracket",
+      "value": 1103.0
+     },
+     {
+      "mark": "More than $200,000 @ income bracket",
+      "value": 1150.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars must be ordered by income and must not decrease from left to right; a trend line or sequential highlight can reinforce the monotonic increase."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:More than $200,000 @ income bracket",
+    "mark:Less than $20,000 @ income bracket"
+   ],
+   "assertion": {
+    "greater": "More than $200,000 @ income bracket",
+    "lesser": "Less than $20,000 @ income bracket",
+    "expected_ratio": 1.2921,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the lowest and highest income bars must be visible or highlighted so their relative heights can be compared."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:More than $200,000 @ income bracket",
+    "mark:Less than $20,000 @ income bracket"
+   ],
+   "assertion": {
+    "low": "Less than $20,000 @ income bracket",
+    "low_value": 890.0,
+    "high": "More than $200,000 @ income bracket",
+    "high_value": 1150.0,
+    "delta": 260.0,
+    "ratio": 1.2921,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, the animation should annotate or visually bracket the 260-point difference between the lowest and highest income bars."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:$80,000 @ income bracket",
+    "mark:$60,000 @ income bracket"
+   ],
+   "assertion": {
+    "at": "income bracket",
+    "above": "$80,000",
+    "above_value": 1006.0,
+    "below": "$60,000",
+    "below_value": 994.0,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, show the $60,000 and $80,000 bars with a reference line or annotation at 1000 to mark the crossing."
+  }
+ ]
+}

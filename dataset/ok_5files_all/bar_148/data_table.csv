@@ -1,0 +1,13 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series
+bar_148,75,75,300.0,,101.156,0.1800,,#6b7280,axis_calibrated,,,Federal income tax
+bar_148,Bottom fifth,bottom-fifth,300.0,,83.140,0.8200,,#769696,axis_calibrated,,,Labor income
+bar_148,Type of income,bar-3,460.0,,101.156,0.1500,,#6b7280,axis_calibrated,bar-3,semantic_svg_order_backfill,Federal income tax
+bar_148,Second fifth,second-fifth,460.0,,86.143,0.8500,,#769696,axis_calibrated,,,Labor income
+bar_148,Labor income,bar-5,620.0,,101.156,0.1800,,#6b7280,axis_calibrated,bar-5,semantic_svg_order_backfill,Federal income tax
+bar_148,Third fifth,third-fifth,620.0,,83.140,0.8200,,#769696,axis_calibrated,,,Labor income
+bar_148,Federal income tax,bar-7,780.0,,101.156,0.1900,,#6b7280,axis_calibrated,bar-7,semantic_svg_order_backfill,Federal income tax
+bar_148,Fourth fifth,fourth-fifth,780.0,,82.140,0.8100,,#769696,axis_calibrated,,,Labor income
+bar_148,0,bar-9,940.0,,101.156,0.3800,,#6b7280,axis_calibrated,bar-9,semantic_svg_order_backfill,Federal income tax
+bar_148,Top fifth,top-fifth,940.0,,63.123,0.6200,,#769696,axis_calibrated,,,Labor income
+bar_148,25,bar-11,1100.0,,101.156,0.6500,,#6b7280,axis_calibrated,bar-11,semantic_svg_order_backfill,Federal income tax
+bar_148,Top 1%,top-1,1100.0,,36.099,0.3500,,#769696,axis_calibrated,,,Labor income

@@ -1,0 +1,138 @@
+{
+ "clip_id": "line_31",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Top 0.1% wealth share in the United States @ endpoint"
+   ],
+   "assertion": {
+    "mark": "Top 0.1% wealth share in the United States @ endpoint",
+    "field": "value",
+    "expected": 18.5,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the final point of the top 0.1% share line and the 1920s reference line must be visible at the same 18.5% level."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Top 0.1% wealth share in the United States @ mid-century trough (between 1960 and 1990)",
+    "extreme": "min",
+    "expected": 6.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must have a visible minimum near 6.0% in the middle portion of the timeline."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Top 0.1% wealth share in the United States @ 1990",
+    "mark:Top 0.1% wealth share in the United States @ near end",
+    "mark:Top 0.1% wealth share in the United States @ endpoint"
+   ],
+   "assertion": {
+    "low": "Top 0.1% wealth share in the United States @ 1990",
+    "low_value": 10.0,
+    "high": "Top 0.1% wealth share in the United States @ near end",
+    "high_value": 20.0,
+    "delta": 10.0,
+    "ratio": 2.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must show a clear rise from the 1990 point at 10.0% to a near-end value of 20.0%, then a slight dip to 18.5%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Top 0.1% wealth share in the United States @ 1930",
+    "extreme": "max",
+    "expected": 24.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must have a visible spike to 24.0% at the 1930 label, clearly above the 18.5% reference line."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Top 0.1% wealth share in the United States @ 1930",
+    "mark:Top 0.1% wealth share in the United States @ 1960",
+    "mark:Top 0.1% wealth share in the United States @ mid-century trough",
+    "mark:Top 0.1% wealth share in the United States @ endpoint",
+    "mark:1920s peak level (reference line) @ 1920s peak level"
+   ],
+   "assertion": {
+    "series": "Top 0.1% wealth share in the United States",
+    "values": [
+     24.0,
+     8.5,
+     6.0,
+     18.5,
+     18.5
+    ],
+    "threshold_between": [
+     6.0,
+     24.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must cross the 18.5% reference line downward after the early period and then touch or cross it again at the final point."
+  }
+ ]
+}

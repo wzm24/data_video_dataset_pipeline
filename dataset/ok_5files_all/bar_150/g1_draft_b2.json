@@ -1,0 +1,201 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_150",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that scientists and medical scientists are held in high public regard and command the highest levels of confidence among various groups to act in the public's best interest.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Among the named groups, Medical scientists have the highest relative_value in the 'A great deal' confidence series (0.2188), slightly above Scientists and The military (each 0.2133).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Medical scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2188,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2133,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "The military",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2133,
+     "note": "named group, A great deal series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Medical scientists top the 'A great deal' series at about 0.219, just ahead of Scientists and The military at about 0.213.",
+    "Medical scientists have the highest 'great deal' relative score among named groups."
+   ],
+   "visual_evidence_rule": "The relative_value for Medical scientists in the 'A great deal' series must be visibly the highest among named groups.",
+   "temporal_anchor": "scientists and medical scientists ... held in pretty high regard",
+   "reviewer_question": "Must the video explicitly identify Medical scientists as the highest 'A great deal' group, or is a general high-regard statement sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Scientists and Medical scientists have 'A great deal' relative_values around 0.21, much larger than Business leaders (0.0273), Journalists (0.0492), and Elected officials (0.0219).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2133,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Medical scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2188,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Business leaders",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.0273,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Journalists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.0492,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Elected officials",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.0219,
+     "note": "named group, A great deal series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Scientists and Medical scientists score far higher than Business leaders, Journalists, and Elected officials on 'A great deal'.",
+    "The top two scientist groups have 'A great deal' relative values near 0.21, while the lowest groups are near 0.02–0.05."
+   ],
+   "visual_evidence_rule": "The chart must make the large relative_value gap between Scientists/Medical scientists and the lower groups visible.",
+   "temporal_anchor": "held in pretty high regard by the public",
+   "reviewer_question": "Is a cross-group comparison required, or is the top rank alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Across the paired rows, the 'A fair amount' relative_value is consistently higher than the 'A great deal' relative_value; e.g., Medical scientists 0.2188 vs paired A fair amount 0.2461, and K-12 principals 0.1148 vs paired A fair amount 0.2953.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Medical scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2188,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "40",
+     "x": "A fair amount",
+     "field": "relative_value",
+     "value": 0.2461,
+     "note": "A fair amount row paired by row order with Medical scientists"
+    },
+    {
+     "entity": "K-12 public school principals",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.1148,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "21",
+     "x": "A fair amount",
+     "field": "relative_value",
+     "value": 0.2953,
+     "note": "A fair amount row paired by row order with K-12 public school principals"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 'fair amount' segment is larger than the 'great deal' segment for each group.",
+    "In every paired group, 'a fair amount' has a higher relative_value than 'a great deal'."
+   ],
+   "visual_evidence_rule": "For each group, the A fair amount relative_value must appear larger than the A great deal relative_value.",
+   "temporal_anchor": "either a great deal or a fair amount of confidence",
+   "reviewer_question": "Must the video convey that 'fair amount' is generally larger than 'great deal', or can it focus only on combined confidence?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 3,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.72
+ },
+ "draft_cost": {
+  "sec": 62.2,
+  "usage": {
+   "prompt_tokens": 1426,
+   "completion_tokens": 16000,
+   "total_tokens": 17426,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 14201
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 914
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

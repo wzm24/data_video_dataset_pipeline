@@ -1,0 +1,128 @@
+{
+ "clip_id": "donut_25",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:left share @ 0"
+   ],
+   "assertion": {
+    "mark": "left share @ 0",
+    "field": "value",
+    "expected": 28.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The left segment or label must show 28% or 0.28 (or an equivalent 28/100 representation) as its value."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:right share @ 1"
+   ],
+   "assertion": {
+    "mark": "right share @ 1",
+    "field": "value",
+    "expected": 8.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The right segment or label must show 8% or 0.08 (or an equivalent 8/100 representation) as its value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:left share @ 0",
+    "mark:right share @ 1"
+   ],
+   "assertion": {
+    "greater": "left share @ 0",
+    "lesser": "right share @ 1",
+    "expected_ratio": 3.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both values must be visible or directly labeled so the viewer can see the left value is larger than the right."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:left share @ 0",
+    "mark:right share @ 1"
+   ],
+   "assertion": {
+    "low": "right share @ 1",
+    "low_value": 8.0,
+    "high": "left share @ 0",
+    "high_value": 28.0,
+    "delta": 20.0,
+    "ratio": 3.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A gap annotation, difference label, or side-by-side values that make the 20-point difference inferable must be visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:left share @ 0",
+    "mark:right share @ 1"
+   ],
+   "assertion": {
+    "low": "right share @ 1",
+    "low_value": 8.0,
+    "high": "left share @ 0",
+    "high_value": 28.0,
+    "delta": 20.0,
+    "ratio": 3.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio annotation or both values visible and labeled so the 3.5x relationship can be inferred."
+  }
+ ]
+}

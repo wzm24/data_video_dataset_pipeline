@@ -1,0 +1,105 @@
+{
+ "clip_id": "donut_23",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:electricity generated (left) @ 0"
+   ],
+   "assertion": {
+    "segment": "electricity generated (left) @ 0",
+    "expected_share": 0.6272,
+    "total_of": "percent",
+    "total": 16.9,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The segment labeled nuclear (or left) must be visible with its 10.6% value, or the value must appear in a label/callout."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:electricity generated (right) @ 1"
+   ],
+   "assertion": {
+    "segment": "electricity generated (right) @ 1",
+    "expected_share": 0.3728,
+    "total_of": "percent",
+    "total": 16.9,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The segment labeled solar (or right) must be visible with its 6.3% value, or the value must appear in a label/callout."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:electricity generated (left) @ 0",
+    "mark:electricity generated (right) @ 1"
+   ],
+   "assertion": {
+    "greater": "electricity generated (left) @ 0",
+    "lesser": "electricity generated (right) @ 1",
+    "expected_ratio": 1.6825,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both nuclear and solar values/labels must be visible together, or an explicit comparison annotation must show nuclear > solar."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:electricity generated (left) @ 0",
+    "mark:electricity generated (right) @ 1"
+   ],
+   "assertion": {
+    "low": "electricity generated (right) @ 1",
+    "low_value": 6.3,
+    "high": "electricity generated (left) @ 0",
+    "high_value": 10.6,
+    "delta": 4.3,
+    "ratio": 1.6825,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both values must be visible and a difference annotation of 4.3 percentage points, or a clearly labeled gap, must appear."
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "clip_id": "donut_7",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:passed @ passed"
+   ],
+   "assertion": {
+    "segment": "passed @ passed",
+    "expected_share": 0.97,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A donut or arc labeled passed shows a 97% value or a near-complete segment corresponding to 97%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:did not pass @ did not pass"
+   ],
+   "assertion": {
+    "segment": "did not pass @ did not pass",
+    "expected_share": 0.03,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The small complementary slice of the donut is labeled did not pass with 3%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:passed @ passed",
+    "mark:did not pass @ did not pass"
+   ],
+   "assertion": {
+    "greater": "passed @ passed",
+    "lesser": "did not pass @ did not pass",
+    "expected_ratio": 32.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both slices are visible and labeled so the viewer can compare 97% against 3%, or the 94-point gap is explicitly annotated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:passed @ passed"
+   ],
+   "assertion": {
+    "series": "passed",
+    "values": [
+     97.0
+    ],
+    "threshold_between": [
+     97.0,
+     97.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The passed segment occupies more than half of the donut, or the video explicitly labels it as a majority/vast majority."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:passed @ passed",
+    "mark:did not pass @ did not pass"
+   ],
+   "assertion": {
+    "low": "did not pass @ did not pass",
+    "low_value": 3.0,
+    "high": "passed @ passed",
+    "high_value": 97.0,
+    "delta": 94.0,
+    "ratio": 32.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The donut or labels show 97% and 3%, making the ratio derivable if the video chooses to state it."
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#F4DCA3"/>
+<path d="M 640 360 L 640.0 225.6 A 134.4 134.4 0 1 1 558.2 253.4 Z" fill="#C98C3E" stroke="#ffffff" stroke-width="5"/>
+<path d="M 640 360 L 558.2 253.4 A 134.4 134.4 0 0 1 640.0 225.6 Z" fill="#D5A96D" stroke="#ffffff" stroke-width="2"/>
+<line x1="678" y1="472" x2="697" y2="527" stroke="#9a9a9a" stroke-width="2"/>
+<text x="709" y="536" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">He</text>
+<line x1="602" y1="248" x2="583" y2="193" stroke="#9a9a9a" stroke-width="2"/>
+<text x="571" y="202" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">H</text>
+</svg>

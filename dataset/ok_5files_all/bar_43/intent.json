@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_43",
+ "intent_en": "To illustrate the significant disparity in voter registration between white and nonwhite populations in Southern states in 1963, which resulted in political overrepresentation for the white electorate.",
+ "previous_intent": "To illustrate the disparity in voter registration between White and Nonwhite populations in Southern states, highlighting how the exclusion of non-voters led to political overrepresentation.",
+ "narration_support": "This meant they continued to have overrepresentation in the Electoral College on behalf of a large population that couldn't vote.",
+ "chart_support": "Bar chart titled 'Average voter registration in Southern states, 1963' showing a much higher registration percentage for White individuals compared to Nonwhite individuals.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explains the political consequence (overrepresentation due to non-voters counting towards representation), while the chart provides the statistical evidence (low voter registration for nonwhites in 1963 Southern states) that created this condition.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

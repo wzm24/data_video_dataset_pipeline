@@ -1,0 +1,198 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_70",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain how the yield curve (interest rates across different time horizons) serves as a tool for predicting economic downturns by reflecting market expectations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The yield curve displays two plotted rate values: 2.4% and 2.3% at the two shown x-positions.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "yield curve",
+     "x": "0",
+     "field": "value",
+     "value": 2.4,
+     "note": "First plotted yield-curve value."
+    },
+    {
+     "entity": "yield curve",
+     "x": "1",
+     "field": "value",
+     "value": 2.3,
+     "note": "Second plotted yield-curve value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The yield curve plots two rates: 2.4% and 2.3%.",
+    "Two rate values are shown, 2.4% and 2.3%.",
+    "The curve's displayed values are 2.4% and 2.3%."
+   ],
+   "visual_evidence_rule": "Both 2.4% and 2.3% must be visible as labels or clearly readable point values on the curve.",
+   "temporal_anchor": "The 'that curve is so useful' clause, when the yield curve is introduced or displayed.",
+   "reviewer_question": "Should both endpoint values be required, or is one endpoint plus the slope enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The curve slopes slightly downward from the first plotted x-position to the second, moving from 2.4% to 2.3%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "yield curve",
+     "x": "0",
+     "field": "value",
+     "value": 2.4,
+     "note": "Higher first plotted rate."
+    },
+    {
+     "entity": "yield curve",
+     "x": "1",
+     "field": "value",
+     "value": 2.3,
+     "note": "Lower second plotted rate."
+    }
+   ],
+   "computation": "2.4 - 2.3 = 0.1 percentage point decrease",
+   "accepted_routes": [
+    "The curve slopes slightly downward from the first to the second plotted point: 2.4% to 2.3%.",
+    "The rate falls from 2.4% to 2.3% across the displayed plotted positions.",
+    "The second plotted rate is lower than the first, giving a shallow downward slope."
+   ],
+   "visual_evidence_rule": "The first plotted point must appear higher than the second on a common y-axis, or an annotation must show 2.4% moving to 2.3%.",
+   "temporal_anchor": "The moment the curve's shape or direction is described while the two values are on screen.",
+   "reviewer_question": "Should the video be required to show the downward direction/order, or are the two values alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The first plotted rate is higher than the second by 0.1 percentage point: 2.4% versus 2.3%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "yield curve",
+     "x": "0",
+     "field": "value",
+     "value": 2.4,
+     "note": "First plotted rate."
+    },
+    {
+     "entity": "yield curve",
+     "x": "1",
+     "field": "value",
+     "value": 2.3,
+     "note": "Second plotted rate."
+    }
+   ],
+   "computation": "2.4 - 2.3 = 0.1 percentage point difference",
+   "accepted_routes": [
+    "The first plotted rate is 0.1 percentage point higher than the second (2.4% vs 2.3%).",
+    "There is a 0.1-point gap between the two rates.",
+    "2.4% minus 2.3% equals a 0.1 percentage-point difference."
+   ],
+   "visual_evidence_rule": "A label, annotation, or visually distinct gap must show the 0.1 percentage-point difference between 2.4% and 2.3%.",
+   "temporal_anchor": "The same curve-display moment, after both plotted values are visible.",
+   "reviewer_question": "Should the 0.1 percentage-point difference be explicitly stated or annotated, or is it enough that the endpoints are visible?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The yield curve is useful for predicting downturns because it reflects market expectations of where the economy is heading.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [],
+   "computation": "none",
+   "accepted_routes": [
+    "The yield curve is a tool for reading market expectations of where the economy is heading.",
+    "It helps predict downturns because it reflects expectations about the economy's direction.",
+    "Its usefulness comes from showing people's expectations about where the economy is going."
+   ],
+   "visual_evidence_rule": "The chart or accompanying text must tie the yield curve to expectations about the economy's direction, not just show a generic rate line.",
+   "temporal_anchor": "The 'read on people's expectations of where the economy is heading' clause.",
+   "reviewer_question": "Should the expectations-link be required even though it is not in the numeric table?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The first plotted rate is the higher of the two values (2.4% > 2.3%).",
+  "The two rates are close, so the visible downward slope is shallow.",
+  "The table contains only two plotted yield-curve rates, not a full maturity series.",
+  "The curve may be called a yield curve without naming specific maturities."
+ ],
+ "unsupported_to_avoid": [
+  "Treating 2.4% or 2.3% as a recession probability or GDP growth rate.",
+  "Claiming exact recession timing or causation from this two-point curve.",
+  "Stating the curve is inverted or has crossed a recession threshold from only these two values.",
+  "Inventing additional maturities or rates not present in the table, such as 1-year or 10-year values.",
+  "Labeling the points as specific short-term and long-term rates unless that labeling is supplied elsewhere.",
+  "Describing the 0.1-point drop as a 4.2% relative decline without clearly stating the denominator."
+ ],
+ "notes": "The table has no explicit maturity labels, so any short-term/long-term naming should be treated as optional unless narration supplies it. The only derived number is the 0.1 percentage-point drop from 2.4% to 2.3%.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.8
+ },
+ "draft_cost": {
+  "sec": 35.7,
+  "usage": {
+   "prompt_tokens": 642,
+   "completion_tokens": 7677,
+   "total_tokens": 8319,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6110
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 386
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

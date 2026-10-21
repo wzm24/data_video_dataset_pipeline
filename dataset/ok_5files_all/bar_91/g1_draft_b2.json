@@ -1,0 +1,162 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_91",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that Japan's demographic challenge is the caregiving burden on its working-age population which hinders innovation, rather than a shortage of workers.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Japan still has a large working-age population: the age groups 20-64 sum to 14.677 table-value units, which is more than half (about 0.58) of the combined total across all age groups (25.393).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "20-64",
+     "x": "multiple",
+     "field": "value",
+     "value": 14.677,
+     "note": "Sum of value for age groups 20-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64 for both Male and Female series."
+    },
+    {
+     "entity": "all ages",
+     "x": "multiple",
+     "field": "value",
+     "value": 25.393,
+     "note": "Sum of value for all age groups 0-4 through 95-99 for both Male and Female series."
+    }
+   ],
+   "computation": "14.677 / 25.393 = 0.578",
+   "accepted_routes": [
+    "The 20-64 age groups total about 14.7, more than half of the total table value.",
+    "Working-age people are the largest block: about 58 per 100 of all table-value units shown.",
+    "There is no small working-age pool; ages 20-64 make up the majority of the distribution."
+   ],
+   "visual_evidence_rule": "The combined 20-64 age groups must be encoded as a single quantity or highlighted as a group, and the total across all age groups must be available for comparison.",
+   "temporal_anchor": "The problem is not that Japan doesn't have working-aged people / there will long be millions and millions of workers.",
+   "reviewer_question": "Should the video explicitly quantify the working-age pool as more than half of the shown population, or only imply that it is large?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The elderly population is substantial: ages 65+ sum to 6.428 table-value units, about 0.44 times the 20-64 working-age sum (14.677).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "multiple",
+     "field": "value",
+     "value": 6.428,
+     "note": "Sum of value for age groups 65-69, 70-74, 75-79, 80-84, 85-89, 90-95, 95-99 for both Male and Female series."
+    },
+    {
+     "entity": "20-64",
+     "x": "multiple",
+     "field": "value",
+     "value": 14.677,
+     "note": "Sum of value for age groups 20-24 through 60-64 for both Male and Female series."
+    }
+   ],
+   "computation": "6.428 / 14.677 = 0.438",
+   "accepted_routes": [
+    "65+ is about 44 per 100 of the working-age 20-64 total.",
+    "The elderly population is about 0.44 times the working-age population.",
+    "For every working-age person, there are roughly 0.44 elderly people."
+   ],
+   "visual_evidence_rule": "The 65+ age groups must be visually separable from the 20-64 age groups, and their combined size must be comparable to the 20-64 combined size.",
+   "temporal_anchor": "But they'll be busy caring for their parents.",
+   "reviewer_question": "Is the elderly-to-working-age ratio the right way to convey caregiving burden, or is a simple count of elderly people enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The largest single age cohort is 45-49, totaling 2.050 table-value units (Male 1.000 + Female 1.050), making it the peak of the age distribution.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.3333,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "45-49",
+     "x": "45-49-left",
+     "field": "value",
+     "value": 1.0,
+     "note": "Male series value for age group 45-49."
+    },
+    {
+     "entity": "45-49",
+     "x": "45-49-right",
+     "field": "value",
+     "value": 1.05,
+     "note": "Female series value for age group 45-49."
+    }
+   ],
+   "computation": "1.000 + 1.050 = 2.050",
+   "accepted_routes": [
+    "45-49 is the tallest age band, with a total of about 2.05.",
+    "The 45-49 cohort is the maximum of the distribution.",
+    "The peak age group is 45-49, slightly larger than 50-54."
+   ],
+   "visual_evidence_rule": "The 45-49 age group must be visually identifiable as the tallest combined age band or as the maximum total.",
+   "temporal_anchor": "working-aged people / busy caring for their parents.",
+   "reviewer_question": "Should the video call out the specific peak age cohort (45-49), or is aggregate working-age enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 3,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.69
+ },
+ "draft_cost": {
+  "sec": 64.8,
+  "usage": {
+   "prompt_tokens": 2764,
+   "completion_tokens": 16000,
+   "total_tokens": 18764,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 14372
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2252
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

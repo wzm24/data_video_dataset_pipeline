@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#2B313A"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="100" y1="560" x2="1220" y2="560" stroke="#8a8a8a" stroke-width="3"/>
+<g id="entity-cashier" data-role="entity" data-entity-id="cashier" data-label="Cashier">
+<rect id="cashier-bar" data-role="bar" data-entity-id="cashier" data-value="-4000" x="160" y="560" width="60" height="14" fill="#E45756"/>
+<text data-role="value-label" x="190" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#E45756">-$4,000</text>
+<text data-role="category-label" x="190" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e5e5e5">Cashier</text>
+</g>
+<g id="entity-working-mom" data-role="entity" data-entity-id="working-mom" data-label="Working mom">
+<rect id="working-mom-bar" data-role="bar" data-entity-id="working-mom" data-value="1000" x="350" y="556.7" width="60" height="3.3" fill="#E6E7EB"/>
+<text data-role="value-label" x="380" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e5e5e5">$1,000</text>
+<text data-role="category-label" x="380" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e5e5e5">Working mom</text>
+</g>
+<g id="entity-office-clerk" data-role="entity" data-entity-id="office-clerk" data-label="Office clerk">
+<rect id="office-clerk-bar" data-role="bar" data-entity-id="office-clerk" data-value="2000" x="540" y="553.3" width="60" height="6.7" fill="#E6E7EB"/>
+<text data-role="value-label" x="570" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e5e5e5">$2,000</text>
+<text data-role="category-label" x="570" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e5e5e5">Office clerk</text>
+</g>
+<g id="entity-nurse" data-role="entity" data-entity-id="nurse" data-label="Nurse">
+<rect id="nurse-bar" data-role="bar" data-entity-id="nurse" data-value="26000" x="730" y="473.3" width="60" height="86.7" fill="#E6E7EB"/>
+<text data-role="value-label" x="760" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e5e5e5">$26,000</text>
+<text data-role="category-label" x="760" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e5e5e5">Nurse</text>
+</g>
+<g id="entity-teacher" data-role="entity" data-entity-id="teacher" data-label="Teacher">
+<rect id="teacher-bar" data-role="bar" data-entity-id="teacher" data-value="32000" x="920" y="453.3" width="60" height="106.7" fill="#E6E7EB"/>
+<text data-role="value-label" x="950" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e5e5e5">$32,000</text>
+<text data-role="category-label" x="950" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e5e5e5">Teacher</text>
+</g>
+<g id="entity-accountant" data-role="entity" data-entity-id="accountant" data-label="Accountant">
+<rect id="accountant-bar" data-role="bar" data-entity-id="accountant" data-value="110000" x="1110" y="193.3" width="60" height="366.7" fill="#E6E7EB"/>
+<text data-role="value-label" x="1140" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e5e5e5">$110,000</text>
+<text data-role="category-label" x="1140" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e5e5e5">Accountant</text>
+</g>
+</g>
+</svg>

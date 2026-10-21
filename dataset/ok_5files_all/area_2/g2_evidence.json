@@ -1,0 +1,155 @@
+{
+ "clip_id": "area_2",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:contraceptive use @ 1990"
+   ],
+   "assertion": {
+    "mark": "contraceptive use @ 1990",
+    "field": "value",
+    "expected": 16.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible data mark or label for contraceptive use in 1990 must show 16%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:contraceptive use @ 2000"
+   ],
+   "assertion": {
+    "mark": "contraceptive use @ 2000",
+    "field": "value",
+    "expected": 22.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible data mark or label for contraceptive use in 2000 must show 22%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:contraceptive use @ 1990",
+    "mark:contraceptive use @ 2000"
+   ],
+   "assertion": {
+    "low": "contraceptive use @ 1990",
+    "low_value": 16.0,
+    "high": "contraceptive use @ 2000",
+    "high_value": 22.0,
+    "delta": 6.0,
+    "ratio": 1.375,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 1990 value and the 2000 value must be visible, or the 6-percentage-point difference must be explicitly labelled."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:contraceptive use @ 1990",
+    "mark:contraceptive use @ 2000"
+   ],
+   "assertion": {
+    "low": "contraceptive use @ 1990",
+    "low_value": 16.0,
+    "high": "contraceptive use @ 2000",
+    "high_value": 22.0,
+    "delta": 6.0,
+    "ratio": 1.375,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1990 and 2000 values must be visible enough to support the relative comparison; if only one is shown, the 37.5% claim is unsupported."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:contraceptive use @ 1990",
+    "mark:contraceptive use @ 1995",
+    "mark:contraceptive use @ 2000",
+    "mark:contraceptive use @ 2005",
+    "mark:contraceptive use @ 2010",
+    "mark:contraceptive use @ 2014"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "contraceptive use @ 1990",
+      "value": 16.0
+     },
+     {
+      "mark": "contraceptive use @ 1995",
+      "value": 19.0
+     },
+     {
+      "mark": "contraceptive use @ 2000",
+      "value": 22.0
+     },
+     {
+      "mark": "contraceptive use @ 2005",
+      "value": 23.5
+     },
+     {
+      "mark": "contraceptive use @ 2010",
+      "value": 27.5
+     },
+     {
+      "mark": "contraceptive use @ 2014",
+      "value": 30.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The full sequence of values must be visible or labelled if the video claims a no-decline trend beyond 2000."
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+clip_id,panel,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,120.0,1994,953.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,181.1,,958.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,242.2,,963.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,303.3,,1023.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,364.4,,1083.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,425.6,,1078.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,486.7,,1073.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,547.8,,1078.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,608.9,,1083.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,670.0,2002,1088.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,731.1,,1093.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,792.2,,1098.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,853.3,,1103.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,914.4,,1108.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,975.6,,1113.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,1036.7,,1108.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,1097.8,,1098.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,1158.9,,1103.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST OPTIONAL,higher-average-scores-test-optional,1220.0,2010,1108.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,120.0,1994,933.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,181.1,,938.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,242.2,,943.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,303.3,,1003.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,364.4,,1073.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,425.6,,1075.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,486.7,,1078.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,547.8,,1081.2,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,608.9,,1083.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,670.0,2002,1085.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,731.1,,1088.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,792.2,,1091.2,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,853.3,,1093.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,914.4,,1095.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,975.6,,1098.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,1036.7,,1093.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,1097.8,,1083.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,1158.9,,1085.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,Higher Average Scores,Higher Average Scores - TEST REQUIRED,higher-average-scores-test-required,1220.0,2010,1088.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,120.0,1994,1627.4,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,230.0,,1647.5,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,340.0,,1677.6,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,450.0,,1747.4,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,560.0,,1827.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,670.0,2002,1977.5,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,780.0,,2127.3,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,890.0,,2327.2,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,1000.0,,2527.2,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,1110.0,,2827.6,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST OPTIONAL,more-applicants-test-optional,1220.0,2010,3627.4,,,#2b7bb9,svg_polyline_axis_calibrated,TEST-OPTIONAL
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,120.0,1994,1527.4,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,230.0,,1547.5,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,340.0,,1577.6,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,450.0,,1677.6,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,560.0,,1727.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,670.0,2002,1827.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,780.0,,1927.3,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,890.0,,2077.5,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,1000.0,,2227.2,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,1110.0,,2377.4,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED
+line_8,More Applicants,More Applicants - TEST REQUIRED,more-applicants-test-required,1220.0,2010,2527.2,,,#a9a9a9,svg_polyline_axis_calibrated,TEST-REQUIRED

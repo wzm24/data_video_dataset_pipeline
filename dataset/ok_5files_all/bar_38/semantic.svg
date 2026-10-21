@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#4C1D95"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">World population in 2100</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="bracket" x1="120.0" y1="230" x2="1000.0" y2="230" stroke="#ffffff" stroke-width="3"/>
+<line data-role="bracket" x1="120.0" y1="230" x2="120.0" y2="242" stroke="#ffffff" stroke-width="3"/>
+<line data-role="bracket" x1="1000.0" y1="230" x2="1000.0" y2="242" stroke="#ffffff" stroke-width="3"/>
+<text data-role="total-label" x="560.0" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">4.0 Billion total</text>
+<g id="entity-3-6-billion" data-role="entity" data-entity-id="3-6-billion" data-label="3.6 Billion">
+<rect id="3-6-billion-bar" data-role="bar" data-entity-id="3-6-billion" data-value="3.6" x="120.0" y="280.0" width="792.0" height="56.0" fill="#FFC72C" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="3-6-billion-value-label" data-role="value-label" data-entity-id="3-6-billion" x="516.0" y="316.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">3.6 Billion</text>
+</g>
+<g id="entity-0-4-billion" data-role="entity" data-entity-id="0-4-billion" data-label="0.4 Billion">
+<rect id="0-4-billion-bar" data-role="bar" data-entity-id="0-4-billion" data-value="0.4" x="912.0" y="280.0" width="88.0" height="56.0" fill="#7A5BC7" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="0-4-billion-value-label" data-role="value-label" data-entity-id="0-4-billion" x="956.0" y="316.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f2f2f2">0.4B</text>
+</g>
+</g>
+</svg>

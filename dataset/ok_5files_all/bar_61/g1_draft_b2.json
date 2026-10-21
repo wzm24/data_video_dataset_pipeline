@@ -1,0 +1,308 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_61",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the decline in US job creation over recent decades.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "US job creation declines across the decades shown, from 30 in the 1960s to 1 in the 2000s*; the series is generally downward rather than rising.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1960s",
+     "x": "1960s",
+     "field": "value",
+     "value": 30,
+     "note": "first/peak bar"
+    },
+    {
+     "entity": "1970s",
+     "x": "1970s",
+     "field": "value",
+     "value": 25,
+     "note": "lower than 1960s"
+    },
+    {
+     "entity": "1980s",
+     "x": "1980s",
+     "field": "value",
+     "value": 18,
+     "note": "continues lower"
+    },
+    {
+     "entity": "1990s",
+     "x": "1990s",
+     "field": "value",
+     "value": 18,
+     "note": "same as 1980s"
+    },
+    {
+     "entity": "2000-7*",
+     "x": "2000-7*",
+     "field": "value",
+     "value": 5,
+     "note": "sharp drop"
+    },
+    {
+     "entity": "2000s*",
+     "x": "2000s*",
+     "field": "value",
+     "value": 1,
+     "note": "lowest/endpoint"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Job creation falls from 30 in the 1960s to 1 in the 2000s*.",
+    "The bars step down over time: 30, 25, 18, 18, 5, then 1.",
+    "US job creation trends downward across the 1960s–2000s* decades shown."
+   ],
+   "visual_evidence_rule": "All six decade bars/points appear in order with heights 30, 25, 18, 18, 5, 1; the overall direction from first to last is clearly downward.",
+   "temporal_anchor": "The narration clause 'generation of new jobs in the US has begun to shrink' / overall decline over recent decades.",
+   "reviewer_question": "Must the video show the full ordered decline across all six table categories, or is a general downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The endpoint decline from the 1960s to the 2000s* is 29 fewer jobs, or 96.7% lower; the 2000s* value is only 3.3% of the 1960s value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1960s",
+     "x": "1960s",
+     "field": "value",
+     "value": 30,
+     "note": "baseline decade"
+    },
+    {
+     "entity": "2000s*",
+     "x": "2000s*",
+     "field": "value",
+     "value": 1,
+     "note": "endpoint decade"
+    },
+    {
+     "entity": "1960s",
+     "x": "1960s",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "normalized baseline"
+    },
+    {
+     "entity": "2000s*",
+     "x": "2000s*",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "about 3.3% of 1960s"
+    }
+   ],
+   "computation": "Drop = 30 - 1 = 29; percent drop = (30 - 1)/30 = 0.9667 = 96.7%; 2000s*/1960s = 1/30 = 0.0333 = 3.3%.",
+   "accepted_routes": [
+    "Job creation is 96.7% lower in the 2000s* than in the 1960s.",
+    "The series falls from 30 in the 1960s to 1 in the 2000s*, a drop of 29.",
+    "The 2000s* level is just 3.3% of the 1960s level."
+   ],
+   "visual_evidence_rule": "The 1960s bar (30) and 2000s* bar (1) are both visible or annotated, with the computed drop or share called out.",
+   "temporal_anchor": "The narration clause 'generation of new jobs... has begun to shrink' as the endpoint consequence.",
+   "reviewer_question": "Should the 1960s-to-2000s* magnitude, 29 fewer or 96.7% lower or 3.3% share, be required, or only the trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The decline starts after the 1960s peak: the 1970s value is 25, down 5 or 16.7% from the 1960s 30.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1960s",
+     "x": "1960s",
+     "field": "value",
+     "value": 30,
+     "note": "peak before decline"
+    },
+    {
+     "entity": "1970s",
+     "x": "1970s",
+     "field": "value",
+     "value": 25,
+     "note": "first decline"
+    },
+    {
+     "entity": "1970s",
+     "x": "1970s",
+     "field": "relative_value",
+     "value": 0.8333,
+     "note": "83.3% of 1960s"
+    }
+   ],
+   "computation": "Drop = 30 - 25 = 5; percent drop = 5/30 = 0.1667 = 16.7%; 1970s relative_value 0.8333 = 83.3% of 1960s.",
+   "accepted_routes": [
+    "The 1970s falls to 25, down from 30 in the 1960s.",
+    "After the 1960s peak, job creation is about 17% lower in the 1970s.",
+    "The 1970s is at 83.3% of the 1960s level."
+   ],
+   "visual_evidence_rule": "The 1960s and 1970s bars are adjacent and show 30 then 25, with the 5-unit drop or 83.3% relative value visible.",
+   "temporal_anchor": "The narration's start-of-shrink clause / the early 1970s portion of the decline.",
+   "reviewer_question": "Must the video explicitly mark the start of the decline in the 1970s, given the narration says the shrink begins in the early 1970s?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Job creation is flat between the 1980s and 1990s, both at 18, after falling from 25 in the 1970s.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1970s",
+     "x": "1970s",
+     "field": "value",
+     "value": 25,
+     "note": "prior higher level"
+    },
+    {
+     "entity": "1980s",
+     "x": "1980s",
+     "field": "value",
+     "value": 18,
+     "note": "first 18"
+    },
+    {
+     "entity": "1990s",
+     "x": "1990s",
+     "field": "value",
+     "value": 18,
+     "note": "same as 1980s"
+    }
+   ],
+   "computation": "1970s-to-1980s drop = 25 - 18 = 7; 1980s-to-1990s change = 18 - 18 = 0.",
+   "accepted_routes": [
+    "The 1980s and 1990s are tied at 18.",
+    "After dropping to 18 in the 1980s, job creation stays at 18 in the 1990s.",
+    "The 1970s-to-1980s fall is 7, but the next decade is flat."
+   ],
+   "visual_evidence_rule": "The 1980s and 1990s bars are equal height at 18, with the 1970s bar higher at 25.",
+   "temporal_anchor": "Mid-sequence portion of the decline over recent decades.",
+   "reviewer_question": "Should the 1980s–1990s plateau be included as a required nuance, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The largest single-step decline in the shown sequence is from the 1990s to the 2000-7*: 18 to 5, a drop of 13 or about 72.2% lower.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1990s",
+     "x": "1990s",
+     "field": "value",
+     "value": 18,
+     "note": "pre-drop level"
+    },
+    {
+     "entity": "2000-7*",
+     "x": "2000-7*",
+     "field": "value",
+     "value": 5,
+     "note": "post-drop level"
+    }
+   ],
+   "computation": "Drop = 18 - 5 = 13; percent drop = (18 - 5)/18 = 0.7222 = 72.2%.",
+   "accepted_routes": [
+    "From the 1990s to 2000-7*, job creation plunges from 18 to 5.",
+    "That is a 13-unit drop, or about a 72% decline.",
+    "The steepest one-step fall is the 18-to-5 move into 2000-7*."
+   ],
+   "visual_evidence_rule": "The 1990s (18) and 2000-7* (5) bars are adjacent, with the 13-unit drop or 72.2% decline called out.",
+   "temporal_anchor": "The recent-decades / late portion of the shrink.",
+   "reviewer_question": "Should the largest single-step drop be highlighted, or is it optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2000-7* intermediate value of 5 as its own late-period bar.",
+  "The exact relative_value for any decade, such as 1970s = 0.8333, 1980s/1990s = 0.6000, or 2000-7* = 0.1667.",
+  "The 2000s* lowest-value status as a standalone annotation, if not already covered by the endpoint change.",
+  "The equal 1980s/1990s plateau as an optional aside."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that a specific early-1970s event or policy caused the decline.",
+  "Extrapolating beyond 2000s* or predicting future job creation.",
+  "Saying job creation fell every decade; the 1980s-to-1990s change is 0.",
+  "Treating 2000-7* and 2000s* as exact non-overlapping annual periods unless the table labels are explicitly explained.",
+  "Using total jobs, population, or a per-year denominator not present in the table.",
+  "Claiming an exact 1973 value; the table only provides a 1970s category."
+ ],
+ "notes": "relative_value is normalized to the 1960s (1.0000), so percent/share statements are computed against that base. Keep 2000-7* and 2000s* as separate table labels rather than inventing their exact coverage.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 40.6,
+  "usage": {
+   "prompt_tokens": 766,
+   "completion_tokens": 10450,
+   "total_tokens": 11216,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7826
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 510
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

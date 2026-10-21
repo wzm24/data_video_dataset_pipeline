@@ -1,0 +1,123 @@
+{
+ "clip_id": "bar_38",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:= 10 Million @ 2100"
+   ],
+   "assertion": {
+    "mark": "= 10 Million @ 2100",
+    "field": "value",
+    "expected": 3.6,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible label or value callout showing 3.6 billion associated with the 2100 total."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Track20 @ 2100"
+   ],
+   "assertion": {
+    "low": "Track20 @ 2100",
+    "low_value": 0.4,
+    "high": "Track20 @ 2100",
+    "high_value": 0.4,
+    "delta": null,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible label or value callout showing 0.4 billion or 400 million as the reduction/gap."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Track20 @ 2100",
+    "segment:= 10 Million @ 2100"
+   ],
+   "assertion": {
+    "segment": "Track20 @ 2100",
+    "expected_share": 0.1,
+    "total_of": "unknown",
+    "total": 4.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The 0.4 billion value and 3.6 billion total must be visually compared in a way that shows the 0.4 is a small fraction of the 3.6, not an absolute percentage unless the table unit allows it."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:= 10 Million @ 2100",
+    "mark:Track20 @ 2100"
+   ],
+   "assertion": {
+    "greater": "= 10 Million @ 2100",
+    "lesser": "Track20 @ 2100",
+    "expected_ratio": 9.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible comparison or annotation indicating the 3.6 billion total is nine times the 0.4 billion reduction."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must clearly distinguish the 0.4 billion as a reduction/gap and the 3.6 billion as the total, rather than presenting both as separate population totals."
+  }
+ ]
+}

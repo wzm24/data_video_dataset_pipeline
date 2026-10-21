@@ -1,0 +1,240 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_13",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the elemental composition of a celestial body, demonstrating that it is predominantly made of hydrogen and helium.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Hydrogen is the dominant component, making up 89.6% of the composition (about 90%).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "H",
+     "x": "slice-1",
+     "field": "value",
+     "value": 89.6,
+     "note": "Hydrogen percent composition; relative_value=0.8960"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Hydrogen accounts for 89.6% of the composition.",
+    "H makes up about 90% of the body.",
+    "Hydrogen is the largest slice at roughly 90%.",
+    "H is nearly 90% of the total."
+   ],
+   "visual_evidence_rule": "A chart must show hydrogen as the largest slice/component with a label around 89.6% or 90%.",
+   "temporal_anchor": "For the most part, it consists of hydrogen and helium",
+   "reviewer_question": "Must the video explicitly show hydrogen at ~89.6% as the largest component?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Helium is the second component, making up 10.4% (about 10%) of the composition.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "He",
+     "x": "slice-2",
+     "field": "value",
+     "value": 10.4,
+     "note": "Helium percent composition; relative_value=0.1040"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Helium accounts for 10.4% of the composition.",
+    "He makes up about 10% of the body.",
+    "Helium is the smaller slice at roughly 10%.",
+    "He is just over one-tenth of the total."
+   ],
+   "visual_evidence_rule": "A chart must show helium as a smaller slice/component with a label around 10.4% or 10%.",
+   "temporal_anchor": "For the most part, it consists of hydrogen and helium",
+   "reviewer_question": "Must the video explicitly show helium at ~10.4% as the secondary component?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Hydrogen is about 8.6 times more abundant than helium (H/He ratio ≈ 8.6:1).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "H",
+     "x": "slice-1",
+     "field": "value",
+     "value": 89.6,
+     "note": "Numerator for ratio"
+    },
+    {
+     "entity": "He",
+     "x": "slice-2",
+     "field": "value",
+     "value": 10.4,
+     "note": "Denominator for ratio"
+    }
+   ],
+   "computation": "89.6 / 10.4 = 8.615... (rounded to 8.6)",
+   "accepted_routes": [
+    "Hydrogen is roughly 8.6 times as abundant as helium.",
+    "For every part helium there are about 8.6 parts hydrogen.",
+    "He is about one-ninth as abundant as H (10.4/89.6 ≈ 11.6%).",
+    "H-to-He ratio is approximately 8.6:1."
+   ],
+   "visual_evidence_rule": "A ratio annotation, relative slice-size cue, or explicit statement comparing H and He must be visible.",
+   "temporal_anchor": "For the most part, it consists of hydrogen and helium",
+   "reviewer_question": "Should this ratio be required, or is it optional supporting detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "In the table, hydrogen and helium are the only components and together sum to 100.0% of the listed composition.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "H",
+     "x": "slice-1",
+     "field": "value",
+     "value": 89.6,
+     "note": "Hydrogen percent composition"
+    },
+    {
+     "entity": "He",
+     "x": "slice-2",
+     "field": "value",
+     "value": 10.4,
+     "note": "Helium percent composition"
+    }
+   ],
+   "computation": "89.6 + 10.4 = 100.0",
+   "accepted_routes": [
+    "Hydrogen and helium together make up 100.0% of the listed composition.",
+    "H and He account for essentially the whole composition in the table.",
+    "The two slices sum to 100.0%.",
+    "All listed components are H and He."
+   ],
+   "visual_evidence_rule": "If a pie/donut is used, H and He slices together fill the chart or are labeled as summing to 100.0%; if bars, labels show the two components cover the full table.",
+   "temporal_anchor": "For the most part, it consists of hydrogen and helium",
+   "reviewer_question": "Should the video present H+He as the full 100% listed composition, or should it leave room for unlisted heavy elements?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Hydrogen outranks helium in abundance: H > He.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "H",
+     "x": "slice-1",
+     "field": "value",
+     "value": 89.6,
+     "note": "Hydrogen is the larger value"
+    },
+    {
+     "entity": "He",
+     "x": "slice-2",
+     "field": "value",
+     "value": 10.4,
+     "note": "Helium is the smaller value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Hydrogen is more abundant than helium.",
+    "H ranks above He in the composition.",
+    "The order is hydrogen first, helium second.",
+    "H > He in percent composition."
+   ],
+   "visual_evidence_rule": "The chart must place hydrogen above or before helium by size, order, or explicit ranking.",
+   "temporal_anchor": "For the most part, it consists of hydrogen and helium",
+   "reviewer_question": "Must the video explicitly establish that hydrogen is more abundant than helium?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A simplified two-slice pie/donut showing H ≈ 90% and He ≈ 10% is acceptable as a rounded presentation.",
+  "The H:He ratio ≈ 8.6:1 may be shown as supporting detail even if not required.",
+  "The video may label the chart as estimated composition using the source_type metadata."
+ ],
+ "unsupported_to_avoid": [
+  "Heavy elements like oxygen or iron (narration-only; no heavy-element row in table).",
+  "Causal claims about where elements came from or why H/He dominate.",
+  "Absolute masses, volumes, or denominators not present in the table.",
+  "Exact 90% / 10% as if they were the table values rather than rounded approximations."
+ ],
+ "notes": "The provided table supports H=89.6% and He=10.4%, their sum to 100.0%, and the H/He ratio ≈8.6:1. The narration's heavy-element statement is not backed by a table row and should be handled as unsupported unless additional data is added.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 39.5,
+  "usage": {
+   "prompt_tokens": 645,
+   "completion_tokens": 9028,
+   "total_tokens": 9673,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7260
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 389
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

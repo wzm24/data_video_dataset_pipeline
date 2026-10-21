@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f4f4f2"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#555555">GLOBAL LOCATIONS</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="260.0" y1="580.0" x2="1120.0" y2="580.0" stroke="#888888" stroke-width="3"/>
+<line data-role="tick" x1="260.0" y1="580.0" x2="260.0" y2="588.0" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="260.0" y="610.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666666">0k</text>
+<line data-role="tick" x1="432.0" y1="580.0" x2="432.0" y2="588.0" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="432.0" y="610.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666666">10k</text>
+<line data-role="tick" x1="604.0" y1="580.0" x2="604.0" y2="588.0" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="604.0" y="610.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666666">20k</text>
+<line data-role="tick" x1="776.0" y1="580.0" x2="776.0" y2="588.0" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="776.0" y="610.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666666">30k</text>
+<line data-role="tick" x1="1120.0" y1="580.0" x2="1120.0" y2="588.0" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="1120.0" y="610.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666666">50k</text>
+<g id="entity-kfc" data-role="entity" data-entity-id="kfc" data-label="KFC">
+<rect id="kfc-bar" data-role="bar" data-entity-id="kfc" data-value="20000" x="260.0" y="221.5" width="344.0" height="52.0" fill="#a50e2d" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="kfc-value-label" data-role="value-label" data-entity-id="kfc" x="590.0" y="254.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f2f2f2">20,000</text>
+<text id="kfc-label" data-role="category-label" data-entity-id="kfc" x="246.0" y="254.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">KFC</text>
+</g>
+<g id="entity-starbucks" data-role="entity" data-entity-id="starbucks" data-label="Starbucks">
+<rect id="starbucks-bar" data-role="bar" data-entity-id="starbucks" data-value="30000" x="260.0" y="316.5" width="516.0" height="52.0" fill="#00704a" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="starbucks-value-label" data-role="value-label" data-entity-id="starbucks" x="762.0" y="349.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f2f2f2">30,000</text>
+<text id="starbucks-label" data-role="category-label" data-entity-id="starbucks" x="246.0" y="349.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">Starbucks</text>
+</g>
+<g id="entity-mcdonald-s" data-role="entity" data-entity-id="mcdonald-s" data-label="McDonald&#x27;s">
+<rect id="mcdonald-s-bar" data-role="bar" data-entity-id="mcdonald-s" data-value="37000" x="260.0" y="411.5" width="636.4" height="52.0" fill="#d64541" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="mcdonald-s-value-label" data-role="value-label" data-entity-id="mcdonald-s" x="882.4" y="444.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f2f2f2">37,000</text>
+<text id="mcdonald-s-label" data-role="category-label" data-entity-id="mcdonald-s" x="246.0" y="444.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">McDonald&#x27;s</text>
+</g>
+<g id="entity-subway" data-role="entity" data-entity-id="subway" data-label="Subway">
+<rect id="subway-bar" data-role="bar" data-entity-id="subway" data-value="43000" x="260.0" y="506.5" width="739.6" height="52.0" fill="#77b21d" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="subway-value-label" data-role="value-label" data-entity-id="subway" x="985.6" y="539.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f2f2f2">43,000</text>
+<text id="subway-label" data-role="category-label" data-entity-id="subway" x="246.0" y="539.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">Subway</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,81 @@
+{
+ "clip_id": "bar_150",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series A great deal)"
+   ],
+   "assertion": {
+    "mark": "Medical scientists @ A great deal",
+    "extreme": "max",
+    "expected": 0.2188,
+    "compared_set": "A great deal",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative_value for Medical scientists in the 'A great deal' series must be visibly the highest among named groups."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Medical scientists @ A great deal",
+    "mark:Scientists @ A great deal"
+   ],
+   "assertion": {
+    "greater": "Medical scientists @ A great deal",
+    "lesser": "Scientists @ A great deal",
+    "expected_ratio": 1.0258,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the large relative_value gap between Scientists/Medical scientists and the lower groups visible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:40 @ A fair amount",
+    "mark:Medical scientists @ A great deal"
+   ],
+   "assertion": {
+    "greater": "40 @ A fair amount",
+    "lesser": "Medical scientists @ A great deal",
+    "expected_ratio": 1.1248,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "For each group, the A fair amount relative_value must appear larger than the A great deal relative_value."
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "clip_id": "line_32",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The top 10% series must be identifiable, and the 1910 and 2010 anchors must be visible or labeled."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Top 10% @ 2010",
+    "mark:Top 10% @ x_px 344.4",
+    "mark:Top 10% @ x_px 512.7"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Top 10% @ 2010",
+      "value": 47.5
+     },
+     {
+      "mark": "Top 10% @ x_px 344.4",
+      "value": 49.5
+     },
+     {
+      "mark": "Top 10% @ x_px 512.7",
+      "value": 32.5
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must visibly fall to a low and then rise; the 32.5% low should be discernible."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Top 10%)"
+   ],
+   "assertion": {
+    "mark": "Top 10% @ x_px 1185.9",
+    "extreme": "max",
+    "expected": 50.0,
+    "compared_set": "Top 10%",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The maximum point must be visible or labeled as 50.0%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Top 10% @ 2010",
+    "mark:Top 10% @ 1910"
+   ],
+   "assertion": {
+    "greater": "Top 10% @ 2010",
+    "lesser": "Top 10% @ 1910",
+    "expected_ratio": 1.1728,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 2010 point, the early high point, and their proximity visually comparable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Top 10% @ 1990",
+    "mark:Top 10% @ 2010"
+   ],
+   "assertion": {
+    "low": "Top 10% @ 1990",
+    "low_value": 40.68,
+    "high": "Top 10% @ 2010",
+    "high_value": 47.5,
+    "delta": 6.82,
+    "ratio": 1.1676,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1990 and 2010 points should be visible or labeled if this recent-change detail is shown."
+  }
+ ]
+}

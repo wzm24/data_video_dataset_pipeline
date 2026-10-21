@@ -1,0 +1,11 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series,name_source
+bar_33,Sweden,sweden,400.2,,347.938,0.2293,,#546b70,printed,Sweden,semantic_svg_backfill,,vlm_axis
+bar_33,Norway,norway,459.1,,396.907,0.2617,,#546b70,printed,Norway,semantic_svg_backfill,,vlm_axis
+bar_33,Netherlands,netherlands,518.0,,417.526,0.2753,,#546b70,printed,Netherlands,semantic_svg_backfill,,vlm_axis
+bar_33,Australia,australia,576.4,,427.835,0.2822,,#546b70,printed,Australia,semantic_svg_backfill,,vlm_axis
+bar_33,United Kingdom,united-kingdom,634.4,,497.423,0.3279,,#546b70,printed,United Kingdom,semantic_svg_backfill,,vlm_axis
+bar_33,France,france,693.6,,546.154,0.3601,,#546b70,printed,France,semantic_svg_backfill,,vlm_axis
+bar_33,Canada,canada,751.6,,669.231,0.4418,,#546b70,printed,Canada,semantic_svg_backfill,,vlm_axis
+bar_33,Germany,germany,810.5,,687.179,0.4537,,#546b70,printed,Germany,semantic_svg_backfill,,vlm_axis
+bar_33,Switzerland,switzerland,869.0,,776.923,0.5130,,#546b70,printed,Switzerland,semantic_svg_backfill,,vlm_axis
+bar_33,United States,united-states,927.8,,1012.850,0.6694,,#4a86c8,printed,United States,semantic_svg_backfill,,vlm_axis

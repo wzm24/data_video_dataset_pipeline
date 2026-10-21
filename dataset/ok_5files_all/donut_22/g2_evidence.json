@@ -1,0 +1,131 @@
+{
+ "clip_id": "donut_22",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:orange share @ 0"
+   ],
+   "assertion": {
+    "segment": "orange share @ 0",
+    "expected_share": 0.6,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A segment or label showing 60% (or 0.60) for the orange category must appear."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:blue share @ 1"
+   ],
+   "assertion": {
+    "segment": "blue share @ 1",
+    "expected_share": 0.4,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The blue/other segment must show 40% (or 0.40)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:orange share @ 0",
+    "mark:blue share @ 1"
+   ],
+   "assertion": {
+    "series": "orange share",
+    "values": [
+     60.0,
+     40.0
+    ],
+    "threshold_between": [
+     40.0,
+     60.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart or annotation must make clear the orange/fracking slice is over half of the donut, e.g., >50% marker or majority label."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:orange share @ 0",
+    "mark:blue share @ 1"
+   ],
+   "assertion": {
+    "greater": "orange share @ 0",
+    "lesser": "blue share @ 1",
+    "expected_ratio": 1.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 60% and 40% shares must be visible, or a 20-point gap annotation must be shown."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:orange share @ 0",
+    "segment:blue share @ 1"
+   ],
+   "assertion": {
+    "segment": "orange share @ 0",
+    "expected_share": 0.6,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must be a complete donut/pie or otherwise indicate the full 100% composition, not a partial bar."
+  }
+ ]
+}

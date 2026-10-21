@@ -1,0 +1,298 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_12",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate Subway's rapid expansion and success as a franchise model between 2006 and 2011.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series being shown is Subway ridership measured in riders, not a franchise-location count or revenue figure.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Subway ridership",
+     "x": "2006",
+     "field": "value",
+     "value": 20721,
+     "note": "First row identifies entity as Subway ridership and unit as riders."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "2011",
+     "field": "value",
+     "value": 25285,
+     "note": "Last row confirms same entity and unit."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart tracks Subway ridership, measured in riders.",
+    "This is Subway ridership, not the number of franchise locations.",
+    "The metric shown is Subway riders from 2006 to 2011."
+   ],
+   "visual_evidence_rule": "A label or legend must identify the series as Subway ridership and/or the unit as riders.",
+   "temporal_anchor": "The opening franchising clause should be paired with the metric label so the data is not mistaken for franchise count.",
+   "reviewer_question": "Should the video be required to identify the metric as Subway ridership rather than franchise expansion?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Subway ridership begins at 20,721 riders in 2006 and ends at 25,285 riders in 2011.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Subway ridership",
+     "x": "2006",
+     "field": "value",
+     "value": 20721,
+     "note": "Start endpoint."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "2011",
+     "field": "value",
+     "value": 25285,
+     "note": "End endpoint."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2006 ridership was 20,721 and by 2011 it was 25,285.",
+    "The series runs from 20,721 riders in 2006 to 25,285 riders in 2011.",
+    "2006: 20,721 riders; 2011: 25,285 riders."
+   ],
+   "visual_evidence_rule": "The 2006 and 2011 endpoint values must be readable or directly derivable from visible labels.",
+   "temporal_anchor": "The growth clause ('growing 22 %...') should carry the endpoint values.",
+   "reviewer_question": "Are both endpoint years and values required, or is one endpoint enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Ridership increased by 4,564 riders over the period (25,285 - 20,721).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Subway ridership",
+     "x": "2006",
+     "field": "value",
+     "value": 20721,
+     "note": "Start value for net change calculation."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "2011",
+     "field": "value",
+     "value": 25285,
+     "note": "End value for net change calculation."
+    }
+   ],
+   "computation": "25285 - 20721 = 4564",
+   "accepted_routes": [
+    "Subway ridership grew by 4,564 riders from 2006 to 2011.",
+    "The net increase was 4,564 riders.",
+    "There were 4,564 more riders in 2011 than in 2006."
+   ],
+   "visual_evidence_rule": "The chart must make the net change derivable from the 2006 and 2011 values, or show a labelled delta of 4,564.",
+   "temporal_anchor": "The growth clause ('growing 22 %...') should carry the absolute increase.",
+   "reviewer_question": "Should the absolute increase be required, or is the percentage growth sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Ridership grew by about 22% from 2006 to 2011 (4,564 / 20,721).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Subway ridership",
+     "x": "2006",
+     "field": "value",
+     "value": 20721,
+     "note": "Base value for percent growth."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "2011",
+     "field": "value",
+     "value": 25285,
+     "note": "End value for percent growth."
+    }
+   ],
+   "computation": "(25285 - 20721) / 20721 = 0.22026, about 22%",
+   "accepted_routes": [
+    "Subway ridership grew about 22% between 2006 and 2011.",
+    "That is roughly a 22% increase.",
+    "2011 ridership was about 22% higher than 2006."
+   ],
+   "visual_evidence_rule": "The chart must show or annotate the 22% growth calculation from 20,721 to 25,285.",
+   "temporal_anchor": "The narration's 'growing 22 %' clause should be anchored to the 2006-2011 endpoint values.",
+   "reviewer_question": "Should the 22% growth be required as a stated figure, given the narration explicitly says it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series rises steadily and monotonically from 2006 to 2011; every successive plotted value is higher than the previous one, with 2011 at the maximum.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Subway ridership",
+     "x": "2006",
+     "field": "value",
+     "value": 20721,
+     "note": "Start of trend."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "x_px 384",
+     "field": "value",
+     "value": 21908,
+     "note": "Intermediate point."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "x_px 520",
+     "field": "value",
+     "value": 22105,
+     "note": "Intermediate point."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "x_px 600",
+     "field": "value",
+     "value": 22221,
+     "note": "Intermediate point."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "x_px 604",
+     "field": "value",
+     "value": 22227,
+     "note": "Intermediate point."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "x_px 780",
+     "field": "value",
+     "value": 23277,
+     "note": "Intermediate point."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "x_px 1000",
+     "field": "value",
+     "value": 23870,
+     "note": "Intermediate point."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "x_px 1154",
+     "field": "value",
+     "value": 24737,
+     "note": "Intermediate point."
+    },
+    {
+     "entity": "Subway ridership",
+     "x": "2011",
+     "field": "value",
+     "value": 25285,
+     "note": "End and maximum."
+    }
+   ],
+   "computation": "none (ordering check over all listed values)",
+   "accepted_routes": [
+    "Ridership rose continuously from 2006 to 2011.",
+    "Every later reading is higher than the one before it.",
+    "The series trends upward throughout, ending at its highest point."
+   ],
+   "visual_evidence_rule": "The plotted series must show a continuous upward trend with no downward segment from start to end.",
+   "temporal_anchor": "The growth clause ('growing 22 %...') should carry the upward trend.",
+   "reviewer_question": "Is a monotonic/no-decline trend required, or is a general upward direction enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "2011 is the highest value in the series and 2006 is the lowest (25,285 vs 20,721).",
+  "The relative_value scale runs from 0.0 at 2006 to 1.0 at 2011 and rises across the plotted points.",
+  "The largest single-step increase between consecutive plotted points is 1,187 riders (21,908 - 20,721)."
+ ],
+ "unsupported_to_avoid": [
+  "Franchise-location counts, revenue, market share, or any metric not present as riders in the table.",
+  "Causal claims that franchising, the recession/'worst recession in 75 years', or success as a franchise model caused the ridership change.",
+  "Extrapolating growth beyond 2011 or claiming continued expansion after the shown endpoint.",
+  "Treating the 0-1 relative_value as a percentage or as absolute rider counts."
+ ],
+ "notes": "The table has absolute rider values, so endpoint values, absolute growth, and about 22% growth are supported. The unit is Subway ridership, not franchise locations; causal and qualitative franchise-success claims should be excluded.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 60.2,
+  "usage": {
+   "prompt_tokens": 1208,
+   "completion_tokens": 14739,
+   "total_tokens": 15947,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12484
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 696
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

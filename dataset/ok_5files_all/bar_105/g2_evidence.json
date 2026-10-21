@@ -1,0 +1,157 @@
+{
+ "clip_id": "bar_105",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Less than $23,000 @ DIDN'T ATTEND COLLEGE",
+    "mark:More than $176,000 @ DIDN'T ATTEND COLLEGE"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Less than $23,000 @ DIDN'T ATTEND COLLEGE",
+      "value": 0.75
+     },
+     {
+      "mark": "More than $176,000 @ DIDN'T ATTEND COLLEGE",
+      "value": 0.05
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The values for DIDN'T ATTEND COLLEGE must be shown descending from the lowest-income category to the highest-income category."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Less than $23,000 @ DIDN'T ATTEND COLLEGE",
+    "mark:Less than $23,000 @ ATTENDED COLLEGE"
+   ],
+   "assertion": {
+    "greater": "Less than $23,000 @ DIDN'T ATTEND COLLEGE",
+    "lesser": "Less than $23,000 @ ATTENDED COLLEGE",
+    "expected_ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In the lowest two income categories, the DIDN'T ATTEND COLLEGE value must appear greater than the ATTENDED COLLEGE value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:$42,000 to $68,000 @ DIDN'T ATTEND COLLEGE",
+    "mark:$42,000 to $68,000 @ ATTENDED COLLEGE"
+   ],
+   "assertion": {
+    "series": "$42,000 to $68,000",
+    "values": [
+     0.5,
+     0.5
+    ],
+    "threshold_between": [
+     0.5,
+     0.5
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the middle income category, the two series must have equal values."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:More than $176,000 @ ATTENDED COLLEGE",
+    "mark:More than $176,000 @ DIDN'T ATTEND COLLEGE"
+   ],
+   "assertion": {
+    "greater": "More than $176,000 @ ATTENDED COLLEGE",
+    "lesser": "More than $176,000 @ DIDN'T ATTEND COLLEGE",
+    "expected_ratio": 11.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In the highest income category, the ATTENDED COLLEGE value must appear much greater than the DIDN'T ATTEND COLLEGE value."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Less than $23,000 @ ATTENDED COLLEGE",
+    "mark:$68,000 to $111,000 @ ATTENDED COLLEGE",
+    "mark:$111,000 to $176,000 @ ATTENDED COLLEGE",
+    "mark:More than $176,000 @ ATTENDED COLLEGE"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Less than $23,000 @ ATTENDED COLLEGE",
+      "value": 0.25
+     },
+     {
+      "mark": "$68,000 to $111,000 @ ATTENDED COLLEGE",
+      "value": 0.65
+     },
+     {
+      "mark": "$111,000 to $176,000 @ ATTENDED COLLEGE",
+      "value": 0.55
+     },
+     {
+      "mark": "More than $176,000 @ ATTENDED COLLEGE",
+      "value": 0.55
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The ATTENDED COLLEGE values must be shown rising from the lowest-income category and staying high in the top categories."
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_140,1980,1980,258.0,,,0.4314,relative,#b3b3b3,relative_only
+bar_140,1990,1990,474.0,,,0.4788,relative,#b3b3b3,relative_only
+bar_140,2000,2000,690.0,,,0.5024,relative,#b3b3b3,relative_only
+bar_140,2010,2010,906.0,,,0.5546,relative,#b3b3b3,relative_only
+bar_140,2019,2019,1122.0,,,0.5972,relative,#4a8c4a,relative_only

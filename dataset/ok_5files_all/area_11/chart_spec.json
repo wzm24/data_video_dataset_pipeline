@@ -1,0 +1,21 @@
+{
+ "clip_id": "area_11",
+ "family": "area",
+ "sub_type": "two_panel_area",
+ "orientation": "cartesian",
+ "series_count": 2,
+ "has_reference_line": true,
+ "panel_count": 2,
+ "has_axis": true,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 6,
+ "row_count": 31,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "medium",
+ "needs_review": true,
+ "time_behavior": "snapshot"
+}

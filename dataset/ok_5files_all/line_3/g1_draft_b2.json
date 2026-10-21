@@ -1,0 +1,279 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_3",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that global income inequality has worsened over recent decades, highlighting the growing disparity between the top earners and the bottom half of the population.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Top 1% income share rose from 16% in 1980 to 21% in 2010, an increase of 5 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "1980",
+     "field": "value",
+     "value": 16.0,
+     "note": "top 1% share at start"
+    },
+    {
+     "entity": "top 1%",
+     "x": "2010",
+     "field": "value",
+     "value": 21.0,
+     "note": "top 1% share at end"
+    }
+   ],
+   "computation": "formula: 21.0000 - 16.0000 = 5.0 percentage points",
+   "accepted_routes": [
+    "top 1% rose from 16% to 21%",
+    "top 1% increased by 5 percentage points",
+    "top 1% share was 5 points higher in 2010 than in 1980"
+   ],
+   "visual_evidence_rule": "The top 1% series must visibly start near 16% and end near 21% across the period.",
+   "temporal_anchor": "the 'income inequality' clause",
+   "reviewer_question": "Should the 1980-to-2010 top-1% increase be required, or is showing the trend alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Bottom 50% income share rose only from 8% in 1980 to 9.5% in 2010, an increase of 1.5 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "bottom 50%",
+     "x": "1980",
+     "field": "value",
+     "value": 8.0,
+     "note": "bottom 50% share at start"
+    },
+    {
+     "entity": "bottom 50%",
+     "x": "2010",
+     "field": "value",
+     "value": 9.5,
+     "note": "bottom 50% share at end"
+    }
+   ],
+   "computation": "formula: 9.5000 - 8.0000 = 1.5 percentage points",
+   "accepted_routes": [
+    "bottom 50% rose from 8% to 9.5%",
+    "bottom half's share increased by 1.5 percentage points",
+    "bottom 50% stayed near 10%"
+   ],
+   "visual_evidence_rule": "The bottom 50% series must visibly start near 8% and end near 9.5%, remaining far below the top 1% series.",
+   "temporal_anchor": "the 'income inequality' clause, as the bottom-half comparison baseline",
+   "reviewer_question": "Should the bottom-50% endpoint change be required even though it is much smaller than the top-1% change?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The gap between the top 1% and bottom 50% shares widened from 8 percentage points in 1980 to 11.5 percentage points in 2010, an increase of 3.5 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "1980",
+     "field": "value",
+     "value": 16.0,
+     "note": "top share at start"
+    },
+    {
+     "entity": "bottom 50%",
+     "x": "1980",
+     "field": "value",
+     "value": 8.0,
+     "note": "bottom share at start"
+    },
+    {
+     "entity": "top 1%",
+     "x": "2010",
+     "field": "value",
+     "value": 21.0,
+     "note": "top share at end"
+    },
+    {
+     "entity": "bottom 50%",
+     "x": "2010",
+     "field": "value",
+     "value": 9.5,
+     "note": "bottom share at end"
+    }
+   ],
+   "computation": "formula: (21.0000 - 9.5000) - (16.0000 - 8.0000) = 11.5 - 8.0 = 3.5 percentage points",
+   "accepted_routes": [
+    "top–bottom gap widened from 8 to 11.5 percentage points",
+    "disparity grew by 3.5 percentage points",
+    "top 1% moved from 8 points above bottom 50% to 11.5 points above"
+   ],
+   "visual_evidence_rule": "The numeric difference between the top 1% and bottom 50% values must visibly increase from 8 points in 1980 to 11.5 points in 2010.",
+   "temporal_anchor": "the 'at its worst for decades' clause",
+   "reviewer_question": "Should the widening gap in percentage points be required as the central inequality takeaway?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The top 1% share is about twice the bottom 50% share in 1980 and remains more than twice as large by 2010, with a ratio near 2.2x.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "1980",
+     "field": "value",
+     "value": 16.0,
+     "note": "top share"
+    },
+    {
+     "entity": "bottom 50%",
+     "x": "1980",
+     "field": "value",
+     "value": 8.0,
+     "note": "bottom share"
+    },
+    {
+     "entity": "top 1%",
+     "x": "2010",
+     "field": "value",
+     "value": 21.0,
+     "note": "top share"
+    },
+    {
+     "entity": "bottom 50%",
+     "x": "2010",
+     "field": "value",
+     "value": 9.5,
+     "note": "bottom share"
+    }
+   ],
+   "computation": "formula: 16.0000 / 8.0000 = 2.0; 21.0000 / 9.5000 ≈ 2.21",
+   "accepted_routes": [
+    "top 1% is about twice the bottom 50% in 1980",
+    "by 2010 top 1% remains more than twice the bottom half",
+    "top-to-bottom ratio stays above 2x"
+   ],
+   "visual_evidence_rule": "The top 1% series must visibly remain more than twice the bottom 50% series at both 1980 and 2010.",
+   "temporal_anchor": "the 'income inequality' clause",
+   "reviewer_question": "Should the top-to-bottom ratio be required, or is the percentage-point gap framing enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The top 1% share reached a mid-series peak of 22.5% before easing to 21.0% by 2010, so the rise is not strictly monotonic.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "between 2000 and 2010 (x_px 968.6)",
+     "field": "value",
+     "value": 22.5,
+     "note": "highest top-1% value in the series"
+    },
+    {
+     "entity": "top 1%",
+     "x": "2010",
+     "field": "value",
+     "value": 21.0,
+     "note": "top-1% endpoint"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "top 1% peaked at 22.5%",
+    "highest top-1% value is 22.5%",
+    "top share reached a mid-series high before easing to 21% by 2010"
+   ],
+   "visual_evidence_rule": "The top 1% series must visibly show a mid-series high near 22.5% that is above the 2010 endpoint of 21.0%.",
+   "temporal_anchor": "the 'for decades' clause",
+   "reviewer_question": "Should the mid-series peak/decline be included as optional nuance, or omitted to avoid weakening the long-run rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Top 1% share in 2000 was 20.5%, only 0.5 percentage points below its 2010 value of 21.0%.",
+  "Bottom 50% share dipped from 9.2% in 1990 to 9.0% in 2000 before rising to 9.5% in 2010.",
+  "Top 1% share at the mid-series peak is 22.5%, higher than both the 1980 and 2010 endpoints."
+ ],
+ "unsupported_to_avoid": [
+  "Causal explanations such as policy, trade, or technology driving the change.",
+  "Claiming the bottom 50% share fell or declined; the table shows it rose from 8.0% to 9.5%.",
+  "Treating the 'global income inequality' entity rows as a separate defined metric such as Gini.",
+  "Absolute dollar amounts, counts of people, or income totals not present in the table.",
+  "Saying 2010 was the series maximum; the table shows a higher top-1% value of 22.5% mid-series.",
+  "Extrapolating beyond the 1980–2010 data to claim today is the worst ever."
+ ],
+ "notes": "The table provides 1980, 1990, 2000, and 2010 anchors for top 1% and bottom 50%, plus a mid-series top-1% peak. All percentages are income shares under unit '%', so the defensible story is a large top-1% rise alongside a smaller bottom-50% rise, widening the gap.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 42.8,
+  "usage": {
+   "prompt_tokens": 5142,
+   "completion_tokens": 10661,
+   "total_tokens": 15803,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8414
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 4630
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

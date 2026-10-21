@@ -1,0 +1,325 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_163",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the construction and structure of a population pyramid by organizing a population by age and separating it by gender.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data is split into two gender series, male and female, with a value recorded for each gender at each age.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "male",
+     "x": "100",
+     "field": "value",
+     "value": 3,
+     "note": "male row at age 100"
+    },
+    {
+     "entity": "female",
+     "x": "100",
+     "field": "value",
+     "value": 3,
+     "note": "female row at age 100"
+    },
+    {
+     "entity": "male",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "male row at age 1"
+    },
+    {
+     "entity": "female",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "female row at age 1"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The population is separated into male and female series",
+    "Each age has both a male and a female value",
+    "Male and female are shown as two distinct groups across all ages"
+   ],
+   "visual_evidence_rule": "The chart must make male and female values distinguishable for the same age.",
+   "temporal_anchor": "separated by gender",
+   "reviewer_question": "Is the male/female split required for every age, or is gender separation optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The age dimension covers single years from 1 to 100, ordered by age, so each age has a row for each gender.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "male",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "youngest age row"
+    },
+    {
+     "entity": "male",
+     "x": "100",
+     "field": "value",
+     "value": 3,
+     "note": "oldest age row"
+    },
+    {
+     "entity": "female",
+     "x": "50",
+     "field": "value",
+     "value": 51,
+     "note": "middle age example"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Ages are arranged from 1 to 100",
+    "The data covers single years of age across the full range",
+    "Every age from 1 through 100 appears for male and female"
+   ],
+   "visual_evidence_rule": "The chart must show or label an age progression spanning 1 to 100, not just a few aggregated age bands.",
+   "temporal_anchor": "arrange the living by their age",
+   "reviewer_question": "Must the video show single-year ages from 1 to 100, or can it use age groups?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The values are largest at the youngest ages and smallest at the oldest ages: the youngest ages reach 73 squares while the oldest ages are around 3 squares.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "male",
+     "x": "100",
+     "field": "value",
+     "value": 3,
+     "note": "oldest male value"
+    },
+    {
+     "entity": "female",
+     "x": "97",
+     "field": "value",
+     "value": 3,
+     "note": "old female value"
+    },
+    {
+     "entity": "male",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "youngest male value"
+    },
+    {
+     "entity": "female",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "youngest female value"
+    }
+   ],
+   "computation": "73 - 3 = 70 squares difference between youngest and oldest examples",
+   "accepted_routes": [
+    "Values decline from youngest to oldest ages",
+    "The youngest ages are much larger than the oldest ages",
+    "The series shrinks from about 73 squares at the youngest to about 3 squares at the oldest"
+   ],
+   "visual_evidence_rule": "The chart must show a clear overall gradient from high values at the young end to low values at the old end.",
+   "temporal_anchor": "arrange the living by their age",
+   "reviewer_question": "Is the overall young-high/old-low shape required, or is only the age/gender breakdown required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The maximum value in the table is 73 squares, reached at the youngest ages for both genders (female ages 1–3 and male ages 1–2).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "female",
+     "x": "3",
+     "field": "value",
+     "value": 73,
+     "note": "female peak at age 3"
+    },
+    {
+     "entity": "male",
+     "x": "2",
+     "field": "value",
+     "value": 73,
+     "note": "male peak at age 2"
+    },
+    {
+     "entity": "male",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "male peak at age 1"
+    },
+    {
+     "entity": "female",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "female peak at age 1"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The largest value is 73 squares",
+    "The peak reaches 73 squares at the youngest ages",
+    "Maximum value is 73, at ages 1–3 depending on gender"
+   ],
+   "visual_evidence_rule": "The chart or narration must make the largest value identifiable as 73 squares.",
+   "temporal_anchor": "population pyramid",
+   "reviewer_question": "Should the peak value 73 be explicitly called out, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Female values are generally equal to or slightly higher than male values across ages; the largest female advantage is 3 squares (e.g., age 95: female 6 vs male 3; age 88: female 11 vs male 8), while male exceeds female slightly at age 35 (61 vs 60).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "female",
+     "x": "95",
+     "field": "value",
+     "value": 6,
+     "note": "female at age 95"
+    },
+    {
+     "entity": "male",
+     "x": "95",
+     "field": "value",
+     "value": 3,
+     "note": "male at age 95"
+    },
+    {
+     "entity": "female",
+     "x": "88",
+     "field": "value",
+     "value": 11,
+     "note": "female at age 88"
+    },
+    {
+     "entity": "male",
+     "x": "88",
+     "field": "value",
+     "value": 8,
+     "note": "male at age 88"
+    },
+    {
+     "entity": "male",
+     "x": "35",
+     "field": "value",
+     "value": 61,
+     "note": "male at age 35"
+    },
+    {
+     "entity": "female",
+     "x": "35",
+     "field": "value",
+     "value": 60,
+     "note": "female at age 35"
+    }
+   ],
+   "computation": "female - male = 6 - 3 = 3 squares at age 95; 11 - 8 = 3 squares at age 88; male - female = 61 - 60 = 1 square at age 35",
+   "accepted_routes": [
+    "Female counts are usually equal to or slightly above male counts",
+    "There is a small female skew across many ages",
+    "Male and female values are close, with female often a little higher"
+   ],
+   "visual_evidence_rule": "The chart must allow comparing male and female values at the same ages, showing that the two series are close and often slightly female-heavy.",
+   "temporal_anchor": "separated by gender",
+   "reviewer_question": "Is the male/female comparison pattern required, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The unit of the values is squares, with the maximum 73 squares and minimum 3 squares.",
+  "Relative_value is 1.0000 at the maximum 73-square rows and about 0.0411 at the minimum 3-square rows."
+ ],
+ "unsupported_to_avoid": [
+  "Actual population counts, percentages, or dollar values not present in the table",
+  "Causal claims about why one gender or age group is larger",
+  "Layout or rendering instructions such as left/right, top/bottom, colors, axis ticks, or specific chart type",
+  "Extrapolating to ages 0 or beyond 100"
+ ],
+ "notes": "The core required content is the age/gender organization and the overall young-high/old-low shape. Peak value and gender comparison are valid optional details, not necessarily obligatory.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 38.1,
+  "usage": {
+   "prompt_tokens": 5472,
+   "completion_tokens": 9245,
+   "total_tokens": 14717,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7203
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 4960
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,7 @@
+clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type
+area_24,GANYMED,ganymede,165,5300,1.0000,km_diameter,printed
+area_24,TITAN,titan,448.6,5200,0.9811,km_diameter,printed
+area_24,KALLISTO,callisto,720.5,4800,0.9057,km_diameter,printed
+area_24,IO,io,954.6,3600,0.6792,km_diameter,printed
+area_24,MOON,moon,1158.1,3500,0.6604,km_diameter,printed
+area_24,PLUTO,pluto,1158,2300,0.4340,km_diameter,printed

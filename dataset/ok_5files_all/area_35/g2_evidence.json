@@ -1,0 +1,128 @@
+{
+ "clip_id": "area_35",
+ "family": "area",
+ "chart_form": "area/two_panel_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "YouTube @ entity",
+    "extreme": "max",
+    "expected": 120.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly represent YouTube's value as the larger 120-euro data point among the two entities."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "TV @ entity",
+    "extreme": "min",
+    "expected": 32.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly represent TV's value as the smaller 32-euro data point among the two entities."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:YouTube @ entity",
+    "mark:TV @ entity"
+   ],
+   "assertion": {
+    "low": "TV @ entity",
+    "low_value": 32.0,
+    "high": "YouTube @ entity",
+    "high_value": 120.0,
+    "delta": 88.0,
+    "ratio": 3.75,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the gap between the 120-euro and 32-euro values visually discernible or directly annotate the difference."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:YouTube @ entity",
+    "mark:TV @ entity"
+   ],
+   "assertion": {
+    "greater": "YouTube @ entity",
+    "lesser": "TV @ entity",
+    "expected_ratio": 3.75,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must support comparing the magnitudes so that YouTube appears roughly 3.75 times larger than TV."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:YouTube @ entity",
+    "mark:TV @ entity"
+   ],
+   "assertion": {
+    "greater": "YouTube @ entity",
+    "lesser": "TV @ entity",
+    "expected_ratio": 3.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a normalized comparison is shown, it must preserve YouTube as the 1.0 maximum and TV as the 0.3 lower value."
+  }
+ ]
+}

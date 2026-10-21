@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_20,< minimum wage,below-min-wage,0,,54.2,0.5420,%,#d18397,estimated
+pie_20,at or above minimum wage,at-above-min-wage,1,,45.8,0.4580,%,#bfbfbf,estimated
+pie_20,Other income,other-income,0,,60.4,0.6040,%,#d18397,estimated
+pie_20,No other income,no-other-income,1,,39.6,0.3960,%,#bfbfbf,estimated

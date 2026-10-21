@@ -1,0 +1,137 @@
+{
+ "clip_id": "bar_152",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:2008 @ 2008",
+    "mark:2016 @ 2016"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "2008 @ 2008",
+      "value": 19923.404
+     },
+     {
+      "mark": "2016 @ 2016",
+      "value": 37923.404
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A line/bar series for 2008–2016 must visibly ascend overall; the start and end years should be identifiable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2016 @ 2016"
+   ],
+   "assertion": {
+    "mark": "2016 @ 2016",
+    "field": "value",
+    "expected": 37923.404,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2016 bar/point must be labeled or clearly end the series at its highest level."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2012 @ 2012",
+    "mark:2013 @ 2013"
+   ],
+   "assertion": {
+    "low": "2012 @ 2012",
+    "low_value": 23923.404,
+    "high": "2013 @ 2013",
+    "high_value": 31923.404,
+    "delta": 8000.0,
+    "ratio": 1.3344,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Adjacent 2012 and 2013 bars/points must show the largest vertical increase, ideally with the difference annotated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2014 @ 2014",
+    "mark:2015 @ 2015"
+   ],
+   "assertion": {
+    "low": "2015 @ 2015",
+    "low_value": 32927.66,
+    "high": "2014 @ 2014",
+    "high_value": 34927.66,
+    "delta": 2000.0,
+    "ratio": 1.0607,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2015 bar/point must be visibly lower than 2014, and the decline may be labeled."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:2014 @ 2014",
+    "mark:2015 @ 2015"
+   ],
+   "assertion": {
+    "greater": "2014 @ 2014",
+    "lesser": "2015 @ 2015",
+    "expected_ratio": 1.0607,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars/points for 2014, 2015, and 2016 must allow the ranking 2016 > 2014 > 2015 to be read."
+  }
+ ]
+}

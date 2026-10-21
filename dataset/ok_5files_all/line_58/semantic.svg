@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<rect x="80" y="150" width="1120" height="530" fill="#f1f1f1"/>
+<text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222222">Average error in final national presidential polls</text>
+<line x1="300.0" y1="640.0" x2="960.0" y2="640.0" stroke="#1d1d1d" stroke-width="2"/>
+<text x="640" y="686.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#222222">Presidential elections</text>
+<line x1="245.0" y1="220.0" x2="245.0" y2="640.0" stroke="#555555" stroke-width="2"/>
+<polygon points="245.0,211.0 237.0,230.0 253.0,230.0" fill="#555555"/>
+<polygon points="245.0,649.0 237.0,630.0 253.0,630.0" fill="#555555"/>
+<text x="222.0" y="224.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">Less</text>
+<text x="222.0" y="246.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#222222">accurate</text>
+<text x="216.0" y="640.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#222222">More</text>
+<text x="216.0" y="662.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#222222">accurate</text>
+<text x="300" y="668.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#222222">1936</text>
+<text x="498" y="668.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#222222">1960</text>
+<text x="663" y="668.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#222222">1980</text>
+<text x="828" y="668.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#222222">2000</text>
+<text x="960" y="668.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#222222">2016</text>
+<polyline points="300.0,252.3 333.0,510.8 366.0,543.1 399.0,446.2 432.0,494.6 465.0,559.2 498.0,591.5 531.0,575.4 564.0,543.1 597.0,526.9 630.0,478.5 663.0,430.0 696.0,526.9 729.0,494.6 762.0,559.2 795.0,494.6 828.0,446.2 861.0,510.8 894.0,559.2 927.0,559.2 960.0,575.4" fill="none" stroke="#c8a23e" stroke-width="3"/>
+<circle cx="300.0" cy="252.3" r="6" fill="none" stroke="#c8a23e" stroke-width="2.5"/>
+<circle cx="960.0" cy="575.4" r="6" fill="none" stroke="#c8a23e" stroke-width="2.5"/>
+<text x="115" y="300" font-family="Arial, sans-serif" font-size="19" fill="#222222">National polls off by</text>
+<text x="115" y="327" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">12 pts</text>
+<text x="1005" y="500" font-family="Arial, sans-serif" font-size="19" fill="#222222">National polls off by</text>
+<text x="1005" y="527" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">2 pts</text>
+<text x="120" y="700" font-family="Arial, sans-serif" font-size="16" fill="#666666">Source: NCPP and AAPOR (2017)</text>
+</svg>
