@@ -1,0 +1,130 @@
+{
+ "clip_id": "line_38",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Historical trend @ first point",
+    "extreme": "max",
+    "expected": 0.92,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The displayed series must begin at its highest value."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Historical trend @ 1970",
+    "mark:Historical trend @ first point"
+   ],
+   "assertion": {
+    "low": "Historical trend @ 1970",
+    "low_value": 0.31,
+    "high": "Historical trend @ first point",
+    "high_value": 0.92,
+    "delta": 0.61,
+    "ratio": 2.9677,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The displayed series must show a large downward change from the first point to the point labeled 1970."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Historical trend @ lowest point",
+    "extreme": "min",
+    "expected": 0.26,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The displayed series must visibly reach its lowest value before the final rise."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Historical trend @ 2010",
+    "mark:Historical trend @ lowest point"
+   ],
+   "assertion": {
+    "low": "Historical trend @ lowest point",
+    "low_value": 0.26,
+    "high": "Historical trend @ 2010",
+    "high_value": 0.51,
+    "delta": 0.25,
+    "ratio": 1.9615,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The displayed series must turn upward after the lowest point and end at a higher value."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Historical trend @ first point",
+    "mark:Historical trend @ 2010"
+   ],
+   "assertion": {
+    "greater": "Historical trend @ first point",
+    "lesser": "Historical trend @ 2010",
+    "expected_ratio": 1.8039,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The displayed series must end lower than it began."
+  }
+ ]
+}

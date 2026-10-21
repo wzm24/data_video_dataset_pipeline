@@ -1,0 +1,168 @@
+{
+ "clip_id": "line_62",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:global deaths @ 1170"
+   ],
+   "assertion": {
+    "mark": "global deaths @ 1170",
+    "field": "value",
+    "expected": 2.5,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final plotted point or end label must show 2.5M, or a rounded 2.5 million."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:global deaths @ 170"
+   ],
+   "assertion": {
+    "mark": "global deaths @ 170",
+    "field": "value",
+    "expected": 0.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The first plotted point or baseline must be at 0 on the deaths axis."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:global deaths @ 170",
+    "mark:global deaths @ 1170"
+   ],
+   "assertion": {
+    "low": "global deaths @ 170",
+    "low_value": 0.0,
+    "high": "global deaths @ 1170",
+    "high_value": 2.5,
+    "delta": 2.5,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show or annotate a rise from 0 to 2.5M, not merely the final value."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:global deaths @ 1003",
+    "mark:global deaths @ 1170"
+   ],
+   "assertion": {
+    "series": "global deaths",
+    "values": [
+     1.95,
+     2.5
+    ],
+    "threshold_between": [
+     1.95,
+     2.5
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 2M reference line or label must be visible and the curve must cross it before the final point."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:global deaths @ 170",
+    "mark:global deaths @ 253",
+    "mark:global deaths @ 420",
+    "mark:global deaths @ 587",
+    "mark:global deaths @ 670",
+    "mark:global deaths @ 837",
+    "mark:global deaths @ 1003",
+    "mark:global deaths @ 1170"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "global deaths @ 170",
+      "value": 0.0
+     },
+     {
+      "mark": "global deaths @ 253",
+      "value": 0.28
+     },
+     {
+      "mark": "global deaths @ 420",
+      "value": 0.52
+     },
+     {
+      "mark": "global deaths @ 587",
+      "value": 0.78
+     },
+     {
+      "mark": "global deaths @ 670",
+      "value": 1.0
+     },
+     {
+      "mark": "global deaths @ 837",
+      "value": 1.35
+     },
+     {
+      "mark": "global deaths @ 1003",
+      "value": 1.95
+     },
+     {
+      "mark": "global deaths @ 1170",
+      "value": 2.5
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animated line or sequence must ascend without downward segments across the tabulated points."
+  }
+ ]
+}

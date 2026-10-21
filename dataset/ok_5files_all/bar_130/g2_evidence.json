@@ -1,0 +1,139 @@
+{
+ "clip_id": "bar_130",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:DISARMAMENT @ 1990",
+    "mark:DISARMAMENT @ 1995",
+    "mark:DISARMAMENT @ 2000",
+    "mark:DISARMAMENT @ 2005",
+    "mark:DISARMAMENT @ 2010",
+    "mark:DISARMAMENT @ 2015"
+   ],
+   "assertion": {
+    "low": "DISARMAMENT @ 1990",
+    "low_value": 0.192,
+    "high": "DISARMAMENT @ 2015",
+    "high_value": 0.7301,
+    "delta": 0.5381,
+    "ratio": 3.8026,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make DISARMAMENT's relative share visibly larger in 2015 than in 1990, with the 1990 value 0.192 and 2015 value 0.7301 recoverable from the encoding."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Russia @ 1990",
+    "mark:DISARMAMENT @ 1990"
+   ],
+   "assertion": {
+    "at": "1990",
+    "above": "Russia",
+    "above_value": 0.6,
+    "below": "DISARMAMENT",
+    "below_value": 0.192,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must let a viewer identify the largest segment in 1990 as Russia at 0.6 and in 2015 as DISARMAMENT at 0.7301."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:USA @ 1990",
+    "mark:Russia @ 1990",
+    "mark:USA @ 2015",
+    "mark:Russia @ 2015"
+   ],
+   "assertion": {
+    "low": "Russia @ 2015",
+    "low_value": 0.1296,
+    "high": "Russia @ 1990",
+    "high_value": 0.6,
+    "delta": 0.4704,
+    "ratio": 4.6296,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the combined USA plus Russia share visibly shrink from 1990 to 2015, ending at 0.2646."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Russia @ 1990",
+    "mark:USA @ 1990"
+   ],
+   "assertion": {
+    "greater": "Russia @ 1990",
+    "lesser": "USA @ 1990",
+    "expected_ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, the chart must show Russia's 1990-to-2015 decline as larger than USA's decline."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Other @ 2000",
+    "extreme": "min",
+    "expected": 0.0102,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If shown, Other must be visibly much smaller than the main segments, and its maximum 0.0102 should not be overstated."
+  }
+ ]
+}

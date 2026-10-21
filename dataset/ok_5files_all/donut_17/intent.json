@@ -1,0 +1,28 @@
+{
+ "clip_id": "donut_17",
+ "intent_en": "To illustrate the significant shift in American public opinion regarding marijuana legalization from the 1969 baseline to the present.",
+ "previous_intent": "To illustrate the drastic shift in American public opinion favoring the legalization of marijuana since 1969.",
+ "narration_support": "Opinions have changed drastically since 1969",
+ "chart_support": "A calendar graphic displaying the year 1969, serving as a temporal anchor for a timeline of changing opinions.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly mentions the drastic change in opinions since 1969, and the chart visualizes the year 1969 as the historical starting point for this comparison.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

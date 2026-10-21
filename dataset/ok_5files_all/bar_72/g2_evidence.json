@@ -1,0 +1,126 @@
+{
+ "clip_id": "bar_72",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Actual content @ share",
+    "segment:Filler @ share"
+   ],
+   "assertion": {
+    "segment": "Actual content @ share",
+    "expected_share": 0.28,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled actual-content segment or bar with value 28 must be visible against a total that is visibly 100, or the 28 and 72 categories must jointly establish the denominator."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Filler @ share",
+    "segment:Actual content @ share"
+   ],
+   "assertion": {
+    "segment": "Filler @ share",
+    "expected_share": 0.72,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled filler segment or bar with value 72 must be visible against the same total/denominator used for actual content."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Filler @ share",
+    "mark:Actual content @ share"
+   ],
+   "assertion": {
+    "greater": "Filler @ share",
+    "lesser": "Actual content @ share",
+    "expected_ratio": 2.5714,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both labeled values 28 and 72 must be simultaneously visible, or the 44-point gap must be annotated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Filler @ share",
+    "mark:Actual content @ share"
+   ],
+   "assertion": {
+    "low": "Actual content @ share",
+    "low_value": 28.0,
+    "high": "Filler @ share",
+    "high_value": 72.0,
+    "delta": 44.0,
+    "ratio": 2.5714,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both labeled values 28 and 72 must be visible, or the multiplier of about 2.6× must be annotated."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both labeled values 28 and 72 must appear as complementary parts of one whole or total."
+  }
+ ]
+}

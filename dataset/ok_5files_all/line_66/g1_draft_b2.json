@@ -1,0 +1,336 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_66",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the escalating scale of the COVID-19 pandemic through rising death counts over the first year, supporting the argument that the virus was allowed to reach pandemic proportions.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Global deaths start at 0.0000 and reach 2.5000 at the final recorded point, with the final relative_value normalized to 1.0000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "x_px 170.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "start point"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1170.0",
+     "field": "value",
+     "value": 2.5,
+     "note": "final point"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1170.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "final normalized value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Global deaths rise from 0 to 2.5",
+    "The series starts at zero and ends at 2.5",
+    "Death count reaches its final value of 2.5 after starting at 0",
+    "The final normalized level is 1.0000, while the start is 0.0000"
+   ],
+   "visual_evidence_rule": "First and last plotted points must be visible or labeled; the line starts at baseline 0.0000 and ends at maximum height 2.5000.",
+   "temporal_anchor": "the 'rise to pandemic proportions' clause, especially when the final scale is revealed",
+   "reviewer_question": "Must both the start 0.0000 and final 2.5000 be explicitly labeled, or is the final endpoint alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The global-deaths series rises monotonically across all eight recorded points from 0.0000 to 2.5000, with no declines.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "x_px 170.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "point 1"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 253.3",
+     "field": "value",
+     "value": 0.28,
+     "note": "point 2"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 420.0",
+     "field": "value",
+     "value": 0.52,
+     "note": "point 3"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 586.7",
+     "field": "value",
+     "value": 0.78,
+     "note": "point 4"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 670.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "point 5"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 836.7",
+     "field": "value",
+     "value": 1.35,
+     "note": "point 6"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1003.3",
+     "field": "value",
+     "value": 1.95,
+     "note": "point 7"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1170.0",
+     "field": "value",
+     "value": 2.5,
+     "note": "point 8"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Every recorded death count is higher than the previous one",
+    "The line climbs continuously from 0.0000 to 2.5000 with no drops",
+    "All eight points form a non-decreasing upward sequence",
+    "No decline appears across the recorded rise"
+   ],
+   "visual_evidence_rule": "The line or area must not descend across any consecutive points; all eight points should appear left-to-right in increasing order.",
+   "temporal_anchor": "the 'rise' clause as the line animates upward",
+   "reviewer_question": "Is monotonic/no-decline wording required, or is a general upward trend acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The largest consecutive absolute rise is +0.6000, from 1.3500 to 1.9500.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "x_px 836.7",
+     "field": "value",
+     "value": 1.35,
+     "note": "start of largest consecutive rise"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1003.3",
+     "field": "value",
+     "value": 1.95,
+     "note": "end of largest consecutive rise"
+    }
+   ],
+   "computation": "1.9500 - 1.3500 = 0.6000",
+   "accepted_routes": [
+    "The largest one-step increase is +0.60",
+    "Deaths jump by 0.60 from 1.35 to 1.95",
+    "The steepest interval adds 0.6000, more than any other consecutive change",
+    "From 1.35 to 1.95 is the biggest consecutive rise"
+   ],
+   "visual_evidence_rule": "The segment between x_px 836.7 and x_px 1003.3 must have the largest vertical rise of any adjacent segment.",
+   "temporal_anchor": "the 'rise to pandemic proportions' clause at the steepest part of the animation",
+   "reviewer_question": "Should the largest consecutive jump (+0.60) be required, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the 1.9500 point, the series is at 0.7800 of the final 2.5000 value, i.e. 78% of the final level.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "x_px 1003.3",
+     "field": "value",
+     "value": 1.95,
+     "note": "penultimate point value"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1003.3",
+     "field": "relative_value",
+     "value": 0.78,
+     "note": "table normalized value"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1170.0",
+     "field": "value",
+     "value": 2.5,
+     "note": "final denominator"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1170.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "final normalized value"
+    }
+   ],
+   "computation": "1.9500 / 2.5000 = 0.7800 (matches relative_value 0.7800)",
+   "accepted_routes": [
+    "The 1.95 point is 78% of the final 2.5",
+    "Before the endpoint, deaths are at 0.7800 of the final value",
+    "The penultimate value is 78% of the peak",
+    "At 1.9500, the series is at 78% of its final level"
+   ],
+   "visual_evidence_rule": "The penultimate point height should be shown as about 78% of the final point height, with the final point at 100%.",
+   "temporal_anchor": "the 'pandemic proportions' phrase as the endpoint/scale comparison is shown",
+   "reviewer_question": "Should the 78% share of final be shown, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series reaches the 1.0000 threshold at x_px 670.0, which is 0.4000 of the final 2.5000 value.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "x_px 670.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "threshold point"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 670.0",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "table normalized value"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1170.0",
+     "field": "value",
+     "value": 2.5,
+     "note": "final denominator"
+    },
+    {
+     "entity": "global deaths",
+     "x": "x_px 1170.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "final normalized value"
+    }
+   ],
+   "computation": "1.0000 / 2.5000 = 0.4000 (matches relative_value 0.4000)",
+   "accepted_routes": [
+    "Deaths reach 1.0000 at one recorded point",
+    "The series hits the 1.0 threshold before ending at 2.5",
+    "The 1.0000 point is 40% of the final 2.5000",
+    "A milestone crossing at 1.0 occurs at x_px 670.0"
+   ],
+   "visual_evidence_rule": "A point at x_px 670.0 must sit at value 1.0000, about 40% of the final height.",
+   "temporal_anchor": "the 'rise' clause when crossing the 1.0 milestone",
+   "reviewer_question": "Should the 1.0 crossing be a required milestone, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "source_type distinction: the final point is printed and earlier points are estimated",
+  "entity label 'global deaths' is shown throughout",
+  "the series has eight recorded points",
+  "relative_value normalization to the final value",
+  "color #ff5c5c for the global-deaths series"
+ ],
+ "unsupported_to_avoid": [
+  "causal claim that policy failure or government inaction allowed the pandemic",
+  "specific governments, leaders, dates, or months not present in the table",
+  "inventing death units such as million or billion",
+  "death-rate or population-denominator claims",
+  "extrapolating beyond the final 2.5000 value",
+  "claiming exponential growth without a stated fit or computation",
+  "cross-entity comparisons not present in the table"
+ ],
+ "notes": "Table lacks date and unit columns, so the units avoid explicit dates and invented death units. The 'first year' framing is intent-level context, not a table-derived value.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 44.5,
+  "usage": {
+   "prompt_tokens": 866,
+   "completion_tokens": 10812,
+   "total_tokens": 11678,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8356
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 610
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<text x="640" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#222222">Global man-made greenhouse gas emissions</text>
+<text x="640" y="84" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#555555">Source: Center for Climate and Energy Solutions, 2015.</text>
+<text x="1220" y="60" text-anchor="end" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#333333">Vox</text>
+<path d="M 627 403 L 813.0 533.3 A 226.8 226.8 0 1 1 685.9 184.1 Z" fill="#e84d4d" stroke="#ffffff" stroke-width="2"/>
+<text x="495" y="463" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">76%</text>
+<path d="M 627 403 L 685.9 184.1 A 226.8 226.8 0 0 1 853.1 423.0 Z" fill="#8cb3c4" stroke="#ffffff" stroke-width="2"/>
+<text x="742" y="335" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">16%</text>
+<path d="M 627 403 L 853.1 423.0 A 226.8 226.8 0 0 1 832.8 499.0 Z" fill="#5b7fa3" stroke="#ffffff" stroke-width="2"/>
+<text x="763" y="452" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">6%</text>
+<path d="M 627 403 L 832.8 499.0 A 226.8 226.8 0 0 1 813.0 533.3 Z" fill="#1f6b7a" stroke="#ffffff" stroke-width="2"/>
+<text x="749" y="486" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">2%</text>
+<line x1="440" y1="471" x2="375" y2="495" stroke="#9a9a9a" stroke-width="2"/>
+<text x="363" y="504" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Carbon dioxide 76%</text>
+<line x1="791" y1="289" x2="847" y2="249" stroke="#9a9a9a" stroke-width="2"/>
+<text x="859" y="258" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Methane 16%</text>
+<line x1="820" y1="455" x2="887" y2="473" stroke="#9a9a9a" stroke-width="2"/>
+<text x="899" y="482" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Nitrous oxide 6%</text>
+<line x1="800" y1="503" x2="860" y2="538" stroke="#9a9a9a" stroke-width="2"/>
+<text x="872" y="547" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Other 2%</text>
+</svg>

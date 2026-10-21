@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#faf9f5"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">GDP</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="180.0" y1="560.0" x2="1140.0" y2="560.0" stroke="#666666" stroke-width="3"/>
+<g id="entity-usa" data-role="entity" data-entity-id="usa" data-label="USA">
+<rect id="usa-bar" data-role="bar" data-entity-id="usa" data-value="18.5" x="225.6" y="208.5" width="148.8" height="351.5" fill="#d64541" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="usa-value-label" data-role="value-label" data-entity-id="usa" x="300.0" y="196.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">$18.5T</text>
+<text id="usa-label" data-role="category-label" data-entity-id="usa" x="300.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">USA</text>
+</g>
+<g id="entity-european-union" data-role="entity" data-entity-id="european-union" data-label="European Union">
+<rect id="european-union-bar" data-role="bar" data-entity-id="european-union" data-value="15.4" x="465.6" y="267.4" width="148.8" height="292.6" fill="#3d6fb4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="european-union-value-label" data-role="value-label" data-entity-id="european-union" x="540.0" y="255.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">$15.4T</text>
+<text id="european-union-label" data-role="category-label" data-entity-id="european-union" x="540.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">European Union</text>
+</g>
+<g id="entity-china" data-role="entity" data-entity-id="china" data-label="China">
+<rect id="china-bar" data-role="bar" data-entity-id="china" data-value="11.8" x="705.6" y="335.8" width="148.8" height="224.2" fill="#f2b134" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="china-value-label" data-role="value-label" data-entity-id="china" x="780.0" y="323.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">$11.8T</text>
+<text id="china-label" data-role="category-label" data-entity-id="china" x="780.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">China</text>
+</g>
+<g id="entity-japan" data-role="entity" data-entity-id="japan" data-label="Japan">
+<rect id="japan-bar" data-role="bar" data-entity-id="japan" data-value="4.8" x="945.6" y="468.8" width="148.8" height="91.2" fill="#5aa469" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="japan-value-label" data-role="value-label" data-entity-id="japan" x="1020.0" y="456.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">$4.8T</text>
+<text id="japan-label" data-role="category-label" data-entity-id="japan" x="1020.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333333">Japan</text>
+</g>
+</g>
+</svg>

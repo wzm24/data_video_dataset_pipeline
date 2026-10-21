@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_18",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how share prices can be volatile and driven by rumors rather than actual company value.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart tracks one share/company series: Taco Inc., not multiple companies.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taco Inc.",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.25,
+     "note": "First row identifies entity Taco Inc.; the same entity repeats across all observations."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Taco Inc. is the share being tracked",
+    "the series belongs to Taco Inc.",
+    "one company's share value is shown: Taco Inc."
+   ],
+   "visual_evidence_rule": "Taco Inc. must be labeled or otherwise identified as the entity for the plotted series.",
+   "temporal_anchor": "They appear in the form of share prices and tables on monitors.",
+   "reviewer_question": "Must the video identify Taco Inc., or is any company placeholder acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The relative value rises strongly over most of the clip, from about 0.25 at the start to a high near 0.95.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taco Inc.",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.25,
+     "note": "Starting value of the series."
+    },
+    {
+     "entity": "Taco Inc.",
+     "x": "796.9",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "Near-maximum value during the rise."
+    }
+   ],
+   "computation": "0.95 / 0.25 = 3.8; the high is roughly four times the starting relative level.",
+   "accepted_routes": [
+    "climbs from around a quarter of the scale to near the top of the scale",
+    "overall upward trend from 0.25 to 0.95",
+    "rises to nearly four times its starting relative level"
+   ],
+   "visual_evidence_rule": "The series must visibly increase from its early low region to a later high region.",
+   "temporal_anchor": "Such share prices can rise or fall within seconds.",
+   "reviewer_question": "Is the overall upward trend from start to peak required, or only the final crash?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The maximum relative value is 0.95, occurring at two observations near the end of the rise.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Taco Inc.",
+     "x": "796.9",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "One of two tied maximum values."
+    },
+    {
+     "entity": "Taco Inc.",
+     "x": "839.2",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "Second tied maximum value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the highest relative value is 0.95",
+    "the peak is 0.95 and appears twice",
+    "the series tops out at 0.95 before the crash"
+   ],
+   "visual_evidence_rule": "The plotted series must visibly reach its highest level of 0.95 before the later decline.",
+   "temporal_anchor": "Such share prices can rise or fall within seconds.",
+   "reviewer_question": "Should the video explicitly call out the 0.95 maximum, or is the broader rise enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "There is a sharp consecutive fall from 0.92 near the peak to 0.25, a drop of 0.67 on the 0-1 relative scale.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taco Inc.",
+     "x": "881.5",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "Value immediately before the sudden drop."
+    },
+    {
+     "entity": "Taco Inc.",
+     "x": "923.8",
+     "field": "relative_value",
+     "value": 0.25,
+     "note": "Value immediately after the sudden drop."
+    }
+   ],
+   "computation": "0.92 - 0.25 = 0.67",
+   "accepted_routes": [
+    "plummets from just below the peak to about 0.25",
+    "drops by 0.67 relative units in one step",
+    "a sudden crash from near the top to a low level"
+   ],
+   "visual_evidence_rule": "The series must visibly show a single-step collapse between two adjacent observations, from near the peak to a low value.",
+   "temporal_anchor": "Such share prices can rise or fall within seconds.",
+   "reviewer_question": "Should the video mark the sudden one-step drop as a key volatility event?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After the sudden drop and a brief post-drop rebound, the relative value continues down to 0.00 at the final two observations.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Taco Inc.",
+     "x": "966.2",
+     "field": "relative_value",
+     "value": 0.28,
+     "note": "Post-drop rebound value before the final decline."
+    },
+    {
+     "entity": "Taco Inc.",
+     "x": "1177.7",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "First of two final zero values."
+    },
+    {
+     "entity": "Taco Inc.",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "Final zero value."
+    }
+   ],
+   "computation": "0.28 - 0.00 = 0.28; the series ends at the bottom of the relative scale.",
+   "accepted_routes": [
+    "final values are 0.00 at the end",
+    "the relative value bottoms out at zero",
+    "it falls to the bottom of the relative scale by the last two observations"
+   ],
+   "visual_evidence_rule": "The series must visibly end at 0.00 and not recover by the final observation.",
+   "temporal_anchor": "Even a simple rumour can result in the demand for a share falling fast.",
+   "reviewer_question": "Must the video show the final bottom at 0.00, or is the earlier sudden drop enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A brief post-drop rebound to 0.28 before the final decline.",
+  "The maximum 0.95 is tied at two separate observations.",
+  "The first observation is 0.25 and the second is 0.28, showing early small fluctuation."
+ ],
+ "unsupported_to_avoid": [
+  "That the drop was caused by a rumour.",
+  "That the company's real or intrinsic value stayed unchanged or differed from the share price.",
+  "Absolute share prices in dollars/euros, percentage changes, trading volume, or time in seconds/minutes.",
+  "Multiple companies or comparative series beyond Taco Inc.",
+  "Shareholders acting quickly as a measured data point."
+ ],
+ "notes": "All cited quantities are relative_value on a 0-1 scale, so no percentage or currency reading is allowed. The units cover identity, overall rise, peak, sudden crash, and final bottom.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 32.7,
+  "usage": {
+   "prompt_tokens": 1750,
+   "completion_tokens": 7390,
+   "total_tokens": 9140,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5589
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1238
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

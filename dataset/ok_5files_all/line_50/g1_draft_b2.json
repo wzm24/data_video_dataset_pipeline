@@ -1,0 +1,237 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_50",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the historical improvement and progression of 100m freestyle swimming times across 116 years of Olympic history.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip presents one ordered historical series of relative values, not a set of separate unrelated categories.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1908",
+     "x": "first ordered point",
+     "field": "relative_value",
+     "value": 0.8934,
+     "note": "opening row (x_px 107)"
+    },
+    {
+     "entity": "1908",
+     "x": "last ordered point",
+     "field": "relative_value",
+     "value": 0.0202,
+     "note": "closing row (x_px 1173)"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "a single continuous series running from the opening point to the closing point",
+    "one ordered historical progression of relative values",
+    "a continuous line or path of values rather than independent bars"
+   ],
+   "visual_evidence_rule": "A single continuous series is visible across the ordered points, connecting the opening and closing values.",
+   "temporal_anchor": "the clause about gliding over Olympic history",
+   "reviewer_question": "Must the video show one continuous ordered series, rather than separate unconnected points or categories?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The relative value trends downward overall from the opening point to the closing point.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1908",
+     "x": "first ordered point",
+     "field": "relative_value",
+     "value": 0.8934,
+     "note": "opening row (x_px 107)"
+    },
+    {
+     "entity": "1908",
+     "x": "last ordered point",
+     "field": "relative_value",
+     "value": 0.0202,
+     "note": "closing row (x_px 1173)"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the series declines from 0.8934 at the opening to 0.0202 at the close",
+    "overall downward progression from near the top of the relative scale to near the bottom",
+    "the historical trend moves lower across the ordered points"
+   ],
+   "visual_evidence_rule": "The opening end of the series is visibly higher than the closing end, with an overall downward direction.",
+   "temporal_anchor": "the clause about gliding over Olympic history",
+   "reviewer_question": "Must the overall downward direction from opening to closing be explicitly conveyed, not just individual values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The opening point is the highest relative value in the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1908",
+     "x": "first ordered point",
+     "field": "relative_value",
+     "value": 0.8934,
+     "note": "maximum among table rows (x_px 107)"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the series starts at its maximum relative value, 0.8934",
+    "the highest point is the opening value",
+    "0.8934 is the top relative value shown"
+   ],
+   "visual_evidence_rule": "The first point is clearly the highest point in the series.",
+   "temporal_anchor": "the clause about swimming against every Olympic medalist",
+   "reviewer_question": "Must the opening maximum of 0.8934 be shown or called out as the series high?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The closing point is the lowest relative value in the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1908",
+     "x": "last ordered point",
+     "field": "relative_value",
+     "value": 0.0202,
+     "note": "minimum among table rows (x_px 1173)"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the series ends at its minimum relative value, 0.0202",
+    "the lowest point is the closing value",
+    "0.0202 is the bottom relative value shown"
+   ],
+   "visual_evidence_rule": "The final point is clearly the lowest point in the series.",
+   "temporal_anchor": "the freestyle swimming clause",
+   "reviewer_question": "Must the closing minimum of 0.0202 be shown or called out as the series low?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The overall change from opening to closing is a drop of 0.8732 relative units, with the closing value about 1/44 of the opening value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1908",
+     "x": "first ordered point",
+     "field": "relative_value",
+     "value": 0.8934,
+     "note": "opening row (x_px 107)"
+    },
+    {
+     "entity": "1908",
+     "x": "last ordered point",
+     "field": "relative_value",
+     "value": 0.0202,
+     "note": "closing row (x_px 1173)"
+    }
+   ],
+   "computation": "0.8934 - 0.0202 = 0.8732; 0.0202 / 0.8934 ≈ 0.0226, i.e. about 1/44",
+   "accepted_routes": [
+    "the relative value falls by 0.8732 units from start to finish",
+    "the closing value is roughly one-fortieth of the opening value",
+    "most of the initial relative level is lost by the endpoint"
+   ],
+   "visual_evidence_rule": "The difference between the opening and closing values is visible or annotated.",
+   "temporal_anchor": "the clause about gliding over Olympic history",
+   "reviewer_question": "Must the video quantify the overall drop, or is showing the downward direction sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series is not monotonic: it contains local upward reversals (e.g., 0.1489 to 0.1801, and 0.0827 to 0.1232) before continuing downward.",
+  "The relative value crosses below half of the opening maximum between 0.4559 and 0.4430 (half of 0.8934 is 0.4467).",
+  "The series includes a labeled x_value of 1988 at one point in the progression."
+ ],
+ "unsupported_to_avoid": [
+  "Any exact swimming time in seconds or minutes (not present in the table).",
+  "Any percentage improvement or percentage share (relative_value is a 0-1 normalization, not a percentage).",
+  "The long historical span as a numeric data value (not present in the table).",
+  "Causal explanations such as training, technology, or participation causing the change.",
+  "Swimmer names or medalist identities beyond the table rows.",
+  "Treating lower relative_value as an absolute time or as a proven causal measure of speed."
+ ],
+ "notes": "The table is relative-only, so all units stay in ordering, direction, endpoint, and magnitude-of-relative-change terms. Values are normalized 0-1 scores, not percentages or absolute swimming times.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 57.5,
+  "usage": {
+   "prompt_tokens": 3276,
+   "completion_tokens": 12526,
+   "total_tokens": 15802,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10793
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 2636
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

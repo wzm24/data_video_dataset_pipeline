@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#2B313A"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="320" y1="600" x2="1160" y2="600" stroke="#8a8a8a" stroke-width="3"/>
+<g id="entity-free-public-college" data-role="entity" data-entity-id="free-public-college" data-label="Free public college">
+<text data-role="category-label" x="320" y="165" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Free public college</text>
+<text data-role="sub-label" x="320" y="193" font-family="Arial, sans-serif" font-size="16" fill="#9aa5b1">Sanders plan</text>
+<rect id="free-public-college-bar" data-role="bar" data-entity-id="free-public-college" data-value="1.0" x="320" y="205" width="187" height="56" fill="#E6E7EB"/>
+</g>
+<g id="entity-food-assistance" data-role="entity" data-entity-id="food-assistance" data-label="Food assistance">
+<text data-role="category-label" x="320" y="330" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Food assistance</text>
+<text data-role="sub-label" x="320" y="358" font-family="Arial, sans-serif" font-size="16" fill="#9aa5b1">Like food stamps</text>
+<rect id="food-assistance-bar" data-role="bar" data-entity-id="food-assistance" data-value="1.5" x="320" y="370" width="280" height="56" fill="#E6E7EB"/>
+</g>
+<g id="entity-cut-child-poverty" data-role="entity" data-entity-id="cut-child-poverty-60" data-label="Cut child poverty 60%">
+<text data-role="category-label" x="320" y="495" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Cut child poverty 60%</text>
+<text data-role="sub-label" x="320" y="523" font-family="Arial, sans-serif" font-size="16" fill="#9aa5b1">Bennet-Brown plan</text>
+<rect id="cut-child-poverty-bar" data-role="bar" data-entity-id="cut-child-poverty-60" data-value="4.5" x="320" y="535" width="840" height="56" fill="#E6E7EB"/>
+<rect id="cut-child-poverty-highlight" data-role="bar-highlight" x="320" y="535" width="714" height="56" fill="none" stroke="#7FB3D5" stroke-width="3"/>
+</g>
+</g>
+</svg>

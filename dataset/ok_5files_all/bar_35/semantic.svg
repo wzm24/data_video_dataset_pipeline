@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f0f2f5"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">2017 DC Courts
+DC Pretrial Services Agency</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="516.0" y1="140" x2="516.0" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="516.0" y1="600" x2="1220" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="516.0" y1="600" x2="516.0" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="516.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">0%</text>
+<line data-role="tick" x1="655.6" y1="600" x2="655.6" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="655.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">20%</text>
+<line data-role="tick" x1="795.2" y1="600" x2="795.2" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="795.2" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">40%</text>
+<line data-role="tick" x1="934.8" y1="600" x2="934.8" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="934.8" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">60%</text>
+<line data-role="tick" x1="1074.5" y1="600" x2="1074.5" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="1074.5" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">80%</text>
+<line data-role="tick" x1="1214.1" y1="600" x2="1214.1" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="1214.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">100%</text>
+<g id="entity-released-pretrial-percentage" data-role="entity" data-entity-id="released-pretrial" data-label="Released Pretrial">
+<rect id="released-pretrial-percentage-bar" data-role="bar" data-entity-id="released-pretrial" data-value="94" x="516.0" y="268.8" width="656.2" height="36.8" fill="#FFD700" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="released-pretrial-value-label" data-role="value-label" data-entity-id="released-pretrial" x="844.1" y="295.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">94%</text>
+<text id="released-pretrial-percentage-label" data-role="category-label" data-entity-id="released-pretrial" x="502.0" y="279.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">Released Pretrial</text>
+</g>
+<g id="entity-returned-for-every-court-date-percentage" data-role="entity" data-entity-id="returned-for-every-court-date" data-label="Returned for Every Court Date">
+<rect id="returned-for-every-court-date-percentage-bar" data-role="bar" data-entity-id="returned-for-every-court-date" data-value="88" x="516.0" y="337.8" width="614.3" height="36.8" fill="#3cb44b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="returned-for-every-court-date-value-label" data-role="value-label" data-entity-id="returned-for-every-court-date" x="823.2" y="364.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">88%</text>
+<text id="returned-for-every-court-date-percentage-label" data-role="category-label" data-entity-id="returned-for-every-court-date" x="502.0" y="348.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">Returned for Every Court Date</text>
+</g>
+<g id="entity-not-arrested-pretrial-percentage" data-role="entity" data-entity-id="not-arrested-pretrial" data-label="Not Arrested Pretrial">
+<rect id="not-arrested-pretrial-percentage-bar" data-role="bar" data-entity-id="not-arrested-pretrial" data-value="86" x="516.0" y="406.8" width="600.3" height="36.8" fill="#4363d8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="not-arrested-pretrial-value-label" data-role="value-label" data-entity-id="not-arrested-pretrial" x="816.2" y="433.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">86%</text>
+<text id="not-arrested-pretrial-percentage-label" data-role="category-label" data-entity-id="not-arrested-pretrial" x="502.0" y="417.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">Not Arrested Pretrial</text>
+</g>
+</g>
+</svg>

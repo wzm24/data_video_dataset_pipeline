@@ -1,0 +1,4 @@
+﻿entity,metric,value,unit,label,role
+private schools,share_paying_business_rates,0,%,0%,bar
+state schools,share_paying_business_rates,100,%,100%,bar
+private schools,additional_revenue,105,£m,£105m,annotation

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#FDE047"/>
+<text id="chart-title" data-role="title" x="640.0" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#222222">Births Per Woman in 2017</text>
+<g id="chart-plot" data-role="plot">
+<g id="entity-sub-s-africa" data-role="entity" data-entity-id="sub-s-africa" data-label="Sub-S. Africa">
+<rect id="sub-s-africa-bar" data-role="bar" data-entity-id="sub-s-africa" data-value="4.7" x="560" y="180" width="470" height="62" fill="#4CAF50"/>
+<text id="sub-s-africa-value-label" data-role="value-label" data-entity-id="sub-s-africa" x="1040" y="222" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">4.7</text>
+<text id="sub-s-africa-label" data-role="category-label" data-entity-id="sub-s-africa" x="540" y="222" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">Sub-S. Africa</text>
+</g>
+<g id="entity-east-asia" data-role="entity" data-entity-id="east-asia" data-label="East Asia">
+<rect id="east-asia-bar" data-role="bar" data-entity-id="east-asia" data-value="1.8" x="560" y="290" width="180" height="62" fill="#F5A623"/>
+<text id="east-asia-value-label" data-role="value-label" data-entity-id="east-asia" x="750" y="332" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">1.8</text>
+<text id="east-asia-label" data-role="category-label" data-entity-id="east-asia" x="540" y="332" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">East Asia</text>
+</g>
+<g id="entity-north-america" data-role="entity" data-entity-id="north-america" data-label="North America">
+<rect id="north-america-bar" data-role="bar" data-entity-id="north-america" data-value="1.7" x="560" y="400" width="170" height="62" fill="#F5A623"/>
+<text id="north-america-value-label" data-role="value-label" data-entity-id="north-america" x="740" y="442" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">1.7</text>
+<text id="north-america-label" data-role="category-label" data-entity-id="north-america" x="540" y="442" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">North America</text>
+</g>
+<g id="entity-european-union" data-role="entity" data-entity-id="european-union" data-label="European Union">
+<rect id="european-union-bar" data-role="bar" data-entity-id="european-union" data-value="1.6" x="560" y="510" width="160" height="62" fill="#F5A623"/>
+<text id="european-union-value-label" data-role="value-label" data-entity-id="european-union" x="730" y="552" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">1.6</text>
+<text id="european-union-label" data-role="category-label" data-entity-id="european-union" x="540" y="552" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">European Union</text>
+</g>
+</g>
+</svg>

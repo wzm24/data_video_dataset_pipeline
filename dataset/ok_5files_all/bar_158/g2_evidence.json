@@ -1,0 +1,146 @@
+{
+ "clip_id": "bar_158",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 5,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All five entity labels must appear in the chart/data video."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:US-Russia Nuclear Treaties @ n/a",
+    "mark:ANTI-BALLISTIC MISSILE TREATY @ n/a",
+    "mark:INTERMEDIATE-RANGE NUCLEAR FORCES TREATY @ n/a",
+    "mark:START I @ n/a",
+    "mark:SORT @ n/a"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "US-Russia Nuclear Treaties @ n/a",
+      "value": 0.0333
+     },
+     {
+      "mark": "ANTI-BALLISTIC MISSILE TREATY @ n/a",
+      "value": 0.0333
+     },
+     {
+      "mark": "INTERMEDIATE-RANGE NUCLEAR FORCES TREATY @ n/a",
+      "value": 0.0333
+     },
+     {
+      "mark": "START I @ n/a",
+      "value": 0.0333
+     },
+     {
+      "mark": "SORT @ n/a",
+      "value": 0.0333
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative_value encoding for all listed entities must be equal (same height/length/size if encoded)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:US-Russia Nuclear Treaties @ n/a",
+    "mark:ANTI-BALLISTIC MISSILE TREATY @ n/a"
+   ],
+   "assertion": {
+    "greater": "US-Russia Nuclear Treaties @ n/a",
+    "lesser": "ANTI-BALLISTIC MISSILE TREATY @ n/a",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The parent category label and its relative_value encoding must be visible and match the treaty rows."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:ANTI-BALLISTIC MISSILE TREATY @ n/a",
+    "mark:INTERMEDIATE-RANGE NUCLEAR FORCES TREATY @ n/a"
+   ],
+   "assertion": {
+    "greater": "ANTI-BALLISTIC MISSILE TREATY @ n/a",
+    "lesser": "INTERMEDIATE-RANGE NUCLEAR FORCES TREATY @ n/a",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both ABM and INF must be identifiable and their relative_value encoding must match."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:START I @ n/a",
+    "mark:SORT @ n/a"
+   ],
+   "assertion": {
+    "greater": "START I @ n/a",
+    "lesser": "SORT @ n/a",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both START I and SORT must be identifiable and their relative_value encoding must match."
+  }
+ ]
+}

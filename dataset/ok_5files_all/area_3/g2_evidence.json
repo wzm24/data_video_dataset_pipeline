@@ -1,0 +1,147 @@
+{
+ "clip_id": "area_3",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The data trace must be identified as battle deaths per million people and must cover 1950 through 2010."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:battle deaths @ 1950",
+    "mark:battle deaths @ 2010"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "battle deaths @ 1950",
+      "value": 180.2
+     },
+     {
+      "mark": "battle deaths @ 2010",
+      "value": 12.3
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The data trace from 1950 to 2010 must show a net decrease from the first value to the last value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:battle deaths @ 1950",
+    "mark:battle deaths @ 2010"
+   ],
+   "assertion": {
+    "low": "battle deaths @ 2010",
+    "low_value": 12.3,
+    "high": "battle deaths @ 1950",
+    "high_value": 180.2,
+    "delta": 167.9,
+    "ratio": 14.6504,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 1950 and 2010 endpoints visible or annotate the derived decline."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:battle deaths @ 1950",
+    "mark:battle deaths @ 1955"
+   ],
+   "assertion": {
+    "low": "battle deaths @ 1955",
+    "low_value": 20.5,
+    "high": "battle deaths @ 1950",
+    "high_value": 180.2,
+    "delta": 159.7,
+    "ratio": 8.7902,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The data trace must show a sharp decrease between 1950 and 1955."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:battle deaths @ 1950",
+    "mark:battle deaths @ 1973",
+    "mark:battle deaths @ 1984"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "battle deaths @ 1950",
+      "value": 180.2
+     },
+     {
+      "mark": "battle deaths @ 1973",
+      "value": 48.6
+     },
+     {
+      "mark": "battle deaths @ 1984",
+      "value": 42.1
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The data trace must show local highs around 1973 and 1984 rather than a smooth uninterrupted decline."
+  }
+ ]
+}

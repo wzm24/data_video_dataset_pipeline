@@ -1,0 +1,10 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_101,public school enrollment,enroll,,1990,41.5,,million,,estimated
+line_101,public school enrollment,enroll,,1993,43.5,,million,,estimated
+line_101,public school enrollment,enroll,,1996,46,,million,,estimated
+line_101,public school enrollment,enroll,,2000,48.5,,million,,estimated
+line_101,public school enrollment,enroll,,2005,49.8,,million,,estimated
+line_101,public school enrollment,enroll,,2010,50.5,,million,,projected
+line_101,public school enrollment,enroll,,,50.5,,million,,projected
+line_101,public school enrollment,enroll,,2015,52,,million,,projected
+line_101,public school enrollment,enroll,,2020,53.5,,million,,projected

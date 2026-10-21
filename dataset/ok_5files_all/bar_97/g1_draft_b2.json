@@ -1,0 +1,271 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_97",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the sectarian power dynamic in Iraq where a Sunni minority suppressed the Shia majority.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "SHIA has the largest value among the listed groups: 63, compared with SUNNI at 20 and KURDS (SUNNI) at 17.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value is 63."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value is 20."
+    },
+    {
+     "entity": "KURDS (SUNNI)",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 17.0,
+     "note": "Kurds (Sunni) value is 17."
+    }
+   ],
+   "computation": "63 > 20 and 63 > 17",
+   "accepted_routes": [
+    "Shia is the largest group at 63.",
+    "Shia has 63, more than Sunni's 20 and Kurds' 17.",
+    "Shia is the biggest listed group with a value of 63."
+   ],
+   "visual_evidence_rule": "The Shia bar/segment must be visibly the largest and carry the value 63 or an equivalent label.",
+   "temporal_anchor": "suppressed the Shia majority",
+   "reviewer_question": "Must the video explicitly state Shia's 63 as the largest value, or is 'Shia majority/largest' enough without the number?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "SUNNI is a minority at 20, lower than Shia at 63.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value is 20."
+    },
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value is 63."
+    }
+   ],
+   "computation": "20 < 63",
+   "accepted_routes": [
+    "Sunni is a minority at 20, below Shia's 63.",
+    "Sunni has 20, which is smaller than Shia's 63.",
+    "The Sunni bar is shorter than the Shia bar."
+   ],
+   "visual_evidence_rule": "The Sunni bar/segment must be visibly shorter than the Shia bar/segment and be labeled 20 or clearly identified as Sunni minority.",
+   "temporal_anchor": "He was part of the Sunni minority",
+   "reviewer_question": "Is Sunni's specific value of 20 required, or is the minority relation to Shia sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Shia exceeds Sunni by 43 units, and Shia is about 3.15 times Sunni.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value is 63."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value is 20."
+    }
+   ],
+   "computation": "63 - 20 = 43; 63 / 20 = 3.15",
+   "accepted_routes": [
+    "Shia is 43 units/points larger than Sunni.",
+    "Shia is more than three times Sunni.",
+    "Shia leads Sunni by 43."
+   ],
+   "visual_evidence_rule": "The gap between the Shia and Sunni bars/segments must be visually large; if annotated, 43 or 3.15x must appear.",
+   "temporal_anchor": "suppressed the Shia majority",
+   "reviewer_question": "Should the video explicitly quantify the Shia-Sunni gap or ratio, or is the visual size difference enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "KURDS (SUNNI) is the smallest listed group at 17.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "KURDS (SUNNI)",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 17.0,
+     "note": "Kurds (Sunni) value is 17."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value is 20."
+    },
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value is 63."
+    }
+   ],
+   "computation": "17 < 20 and 17 < 63",
+   "accepted_routes": [
+    "Kurds (Sunni) are the smallest group at 17.",
+    "Kurds (Sunni) have 17, below Sunni's 20 and Shia's 63.",
+    "The Kurdish Sunni segment is 17."
+   ],
+   "visual_evidence_rule": "A third bar/segment labeled KURDS (SUNNI) must be visible and show value 17 or be the shortest listed segment.",
+   "temporal_anchor": "not mentioned in narration; optional chart reveal",
+   "reviewer_question": "Is the Kurds (Sunni) row required even though the narration does not mention Kurds?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The three listed groups sum to 100; Shia is 63 of that total, making it more than half.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value is 63."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value is 20."
+    },
+    {
+     "entity": "KURDS (SUNNI)",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 17.0,
+     "note": "Kurds (Sunni) value is 17."
+    }
+   ],
+   "computation": "63 + 20 + 17 = 100; 63 / 100 = 63%",
+   "accepted_routes": [
+    "Shia is 63% of the listed total.",
+    "Of 100 total, Shia is 63, Sunni is 20, and Kurds (Sunni) are 17.",
+    "The three groups add up to 100, and Shia accounts for 63 of it."
+   ],
+   "visual_evidence_rule": "The chart must show all three values as parts of a common total, or explicitly label Shia as over half / 63% of the listed total.",
+   "temporal_anchor": "suppressed the Shia majority",
+   "reviewer_question": "Must the video frame the values as shares of a 100 total, or are the raw 63 and 20 values sufficient for 'majority' and 'minority'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Ordering the bars by size as Shia > Sunni > Kurds (Sunni).",
+  "Annotating the non-Shia listed total as 20 + 17 = 37, still below Shia's 63.",
+  "Using relative_value 0.9871 only for scaling or layout, not as a semantic data value."
+ ],
+ "unsupported_to_avoid": [
+  "Saying the chart proves Sunni suppression of Shia as a causal claim.",
+  "Treating SUNNI and KURDS (SUNNI) as one unified political bloc without noting the table's separate rows.",
+  "Claiming Shia is 63% of all Iraq if the denominator is not established.",
+  "Extrapolating to current or future population shares.",
+  "Using values not in the table, such as 65% Shia or 35% Sunni."
+ ],
+ "notes": "The table has three rows with values 20, 63, and 17 that sum to 100. U5's percentage is a share of that listed total, not necessarily a national percentage unless the denominator is shown.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 63.0,
+  "usage": {
+   "prompt_tokens": 741,
+   "completion_tokens": 9751,
+   "total_tokens": 10492,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7709
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 357
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

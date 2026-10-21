@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f4f4f2"/>
+<polygon id="title-banner" data-role="title-banner" points="80,60 700,60 750,110 700,160 80,160" fill="#B33020"/>
+<text id="chart-title" data-role="title" x="120" y="122" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">STATE VS STATE WARS 1900-2000</text>
+<g id="entity-other" data-role="entity" data-entity-id="other-wars" data-label="Other wars">
+<rect id="other-bar" data-role="bar" data-entity-id="other-wars" data-value="0.78" x="180" y="300" width="720" height="110" fill="#C0504D"/>
+</g>
+<g id="entity-democracy" data-role="entity" data-entity-id="wars-between-democracies" data-label="WARS BETWEEN DEMOCRACIES">
+<rect id="democracy-bar" data-role="bar" data-entity-id="wars-between-democracies" data-value="0.22" x="900" y="300" width="200" height="110" fill="#2E8B8B"/>
+<rect id="democracy-label-box" x="850" y="440" width="310" height="50" fill="#2E8B8B"/>
+<text id="democracy-label" data-role="category-label" data-entity-id="wars-between-democracies" x="1005" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">WARS BETWEEN DEMOCRACIES</text>
+</g>
+</g>
+</svg>

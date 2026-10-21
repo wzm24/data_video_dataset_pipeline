@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_92",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that a majority of Americans had received a COVID-19 vaccine by August 2021.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The relative_value for All adults is non-decreasing over the series: it rises from 0.0000 at the start to 1.0000 at the end without any downward step.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "All adults",
+     "x": "start (first row)",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "first row has relative_value 0.0000"
+    },
+    {
+     "entity": "All adults",
+     "x": "end (last row)",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "last row has relative_value 1.0000"
+    }
+   ],
+   "computation": "none; compare start and end and use monotonic sequence",
+   "accepted_routes": [
+    "The line climbs steadily from the bottom to the top of the relative scale.",
+    "All adults' relative level increases throughout and never falls.",
+    "The series goes from 0.0000 to 1.0000 in a continuous upward trend."
+   ],
+   "visual_evidence_rule": "The animated line/curve for All adults shows an upward progression from the lowest to the highest relative value, with no downward segments.",
+   "temporal_anchor": "The narration clause describing the finding by August 2021; the animation should show the rise leading to that endpoint.",
+   "reviewer_question": "Is the monotonic upward trend required, or is only the final endpoint enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The starting relative_value for All adults is 0.0000, which is the minimum of the normalized relative scale.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "All adults",
+     "x": "start (first row)",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "first row has relative_value 0.0000; no row is lower."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series begins at 0.0000, the bottom of the relative scale.",
+    "The initial relative level is the minimum.",
+    "At the start, All adults' relative value is 0.0000."
+   ],
+   "visual_evidence_rule": "The first point of the All adults line is at the lowest relative level (0.0000).",
+   "temporal_anchor": "The opening/start of the animated progression, before the August 2021 endpoint.",
+   "reviewer_question": "Should the clip explicitly show the starting minimum, or is it enough to show the overall rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The final relative_value for All adults is 1.0000, the maximum of the normalized relative scale.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "All adults",
+     "x": "end (last row)",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "last row has relative_value 1.0000; no row is higher."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series ends at 1.0000, the top of the relative scale.",
+    "By the final point, All adults reaches the maximum relative level.",
+    "The final relative value is 1.0000."
+   ],
+   "visual_evidence_rule": "The final point/end of the All adults line is visibly at the highest relative level (1.0000).",
+   "temporal_anchor": "by August 2021 / final endpoint clause.",
+   "reviewer_question": "Must the final value be explicitly shown as 1.0000 / the maximum, or is the shape enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The series crosses above the relative midpoint 0.5 (half of the maximum 1.0000) and remains above it; the first value above the midpoint is 0.5097.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "All adults",
+     "x": "first row above midpoint",
+     "field": "relative_value",
+     "value": 0.5097,
+     "note": "first relative_value greater than 0.5; previous value is 0.4800"
+    },
+    {
+     "entity": "All adults",
+     "x": "end (last row)",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "remains above 0.5 through final row"
+    }
+   ],
+   "computation": "0.5 = 1.0000 / 2 (half of maximum relative_value)",
+   "accepted_routes": [
+    "The line passes the halfway point of the relative scale and stays above it.",
+    "By the end, the relative level is above half of the maximum.",
+    "The curve crosses above 0.5 at the row with 0.5097."
+   ],
+   "visual_evidence_rule": "The chart shows the All adults line crossing above the middle of the relative scale and remaining there until the end; a reference to 0.5 or halfway may be shown.",
+   "temporal_anchor": "The clause about the August 2021 finding; the crossing should occur before the final endpoint.",
+   "reviewer_question": "Should the relative midpoint crossing be treated as the table-supported stand-in for the narration's 'majority' claim, or is it only optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After first crossing above the relative midpoint, the series continues to increase by about 0.4903 (from 0.5097 to 1.0000), gaining nearly another half of the relative scale before the end.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "All adults",
+     "x": "first row above midpoint",
+     "field": "relative_value",
+     "value": 0.5097,
+     "note": "first value above 0.5"
+    },
+    {
+     "entity": "All adults",
+     "x": "end (last row)",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "final value"
+    }
+   ],
+   "computation": "1.0000 - 0.5097 = 0.4903",
+   "accepted_routes": [
+    "After passing the halfway mark, the line still rises by about half of the scale to reach the top.",
+    "The final gain after crossing 0.5 is about 0.4903.",
+    "From 0.5097 to 1.0000, the relative value increases by about 0.4903."
+   ],
+   "visual_evidence_rule": "The chart shows continued upward movement after the line passes the relative midpoint, ending at 1.0000.",
+   "temporal_anchor": "The later part of the animation, between the midpoint crossing and the final August 2021 endpoint.",
+   "reviewer_question": "Is the post-midpoint continued rise worth showing, or does the final endpoint already cover it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series is labeled/identified as All adults (single entity).",
+  "The non-decreasing property can be highlighted explicitly rather than only showing the start and end.",
+  "The first above-midpoint value 0.5097 can be annotated as the crossing point."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute vaccination percentage or count (e.g., more than 50%, 70%, 100 million people), because the table has only relative_value.",
+  "Interpreting relative_value 1.0000 as 100% of Americans or full vaccination coverage.",
+  "Causal claims that vaccination caused the trend.",
+  "Comparisons to other demographic groups or regions not present in the table.",
+  "Using x_px positions as real time/date labels beyond the narration's August 2021 endpoint."
+ ],
+ "notes": "Table is relative_only, so all quantitative units use relative_value and avoid absolute majority/percentage claims. The threshold unit uses 0.5 as half of the maximum 1.0000; whether that can substitute for the narration's 'majority' is left to the reviewer.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 60.7,
+  "usage": {
+   "prompt_tokens": 2160,
+   "completion_tokens": 14304,
+   "total_tokens": 16464,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12359
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1648
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

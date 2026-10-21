@@ -1,0 +1,243 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_74",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the projected severe rise in global average temperature by 2100 and warn of the catastrophic consequences of global inaction.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart tracks a single metric, 'Change in average global temperature', measured in degrees Celsius, spanning 1883 to 2019.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Change in average global temperature",
+     "x": "1883.991",
+     "field": "value",
+     "value": -0.156,
+     "note": "first row establishes series label and unit degC"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Global temperature change from 1883 to 2019",
+    "average global temperature anomaly in °C",
+    "single temperature-change series in degrees Celsius"
+   ],
+   "visual_evidence_rule": "The series name and unit must be visible or clearly labeled.",
+   "temporal_anchor": "opening narration clause introducing the warming data",
+   "reviewer_question": "Must the video display the metric name and unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "By 2019 the series reaches its highest value in the table, 0.946 °C, just under one degree of warming.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Change in average global temperature",
+     "x": "2019.977",
+     "field": "value",
+     "value": 0.946,
+     "note": "final and maximum value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "0.946 °C in 2019",
+    "about 0.95 °C by 2019",
+    "just under one degree Celsius at the end of the series"
+   ],
+   "visual_evidence_rule": "The final data point must be visibly marked or labeled with its 2019 value.",
+   "temporal_anchor": "the clause 'just one degree of warming'",
+   "reviewer_question": "Must the final value be shown as the series endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From 1883 to 2019 the series rises by about 1.10 °C, from -0.156 °C to 0.946 °C.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Change in average global temperature",
+     "x": "1883.991",
+     "field": "value",
+     "value": -0.156,
+     "note": "start value"
+    },
+    {
+     "entity": "Change in average global temperature",
+     "x": "2019.977",
+     "field": "value",
+     "value": 0.946,
+     "note": "end value"
+    }
+   ],
+   "computation": "0.946 - (-0.156) = 1.102",
+   "accepted_routes": [
+    "warming of roughly 1.1 °C since 1883",
+    "from about -0.16 °C in 1883 to about 0.95 °C in 2019",
+    "an increase of about 1.10 °C across the series"
+   ],
+   "visual_evidence_rule": "Both the first and final data points must be visible enough to show the total change.",
+   "temporal_anchor": "the clause 'just one degree of warming' or the opening trend setup",
+   "reviewer_question": "Must the total rise from start to end be conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The steepest rise occurs in recent decades: from 0.198 °C in 1980 to 0.946 °C in 2019, an increase of about 0.75 °C.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Change in average global temperature",
+     "x": "1980.975",
+     "field": "value",
+     "value": 0.198,
+     "note": "1980 value"
+    },
+    {
+     "entity": "Change in average global temperature",
+     "x": "2019.977",
+     "field": "value",
+     "value": 0.946,
+     "note": "2019 value"
+    }
+   ],
+   "computation": "0.946 - 0.198 = 0.748",
+   "accepted_routes": [
+    "most warming after 1980",
+    "the last four decades add about 0.75 °C",
+    "from about 0.2 °C in 1980 to about 0.95 °C in 2019"
+   ],
+   "visual_evidence_rule": "The upward slope must visibly steepen after 1980, with the 1980 and 2019 values identifiable.",
+   "temporal_anchor": "the clause about the world being on track to warm further",
+   "reviewer_question": "Must the video emphasize the recent acceleration in warming?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series first becomes positive in 1941 at 0.052 °C, but remains continuously positive only from 1976 onward, at 0.032 °C in 1976.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Change in average global temperature",
+     "x": "1940.998",
+     "field": "value",
+     "value": 0.052,
+     "note": "first positive value in the table"
+    },
+    {
+     "entity": "Change in average global temperature",
+     "x": "1975.986",
+     "field": "value",
+     "value": -0.002,
+     "note": "last negative value before sustained positive period"
+    },
+    {
+     "entity": "Change in average global temperature",
+     "x": "1976.984",
+     "field": "value",
+     "value": 0.032,
+     "note": "start of sustained positive values"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "first positive in 1941",
+    "sustained positive after 1976",
+    "crosses from negative to positive territory, then stays positive after the mid-1970s"
+   ],
+   "visual_evidence_rule": "The baseline crossing and later sustained positive region must be visible in the series shape.",
+   "temporal_anchor": "historical context clause before the modern warming trend",
+   "reviewer_question": "Is this baseline-crossing nuance required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Early period is below baseline with a minimum of -0.432 °C in 1911.",
+  "The series is not monotonic; it has temporary reversals and fluctuations around the baseline.",
+  "The 2100/3 °C projection from the narration is external context and, if shown, must be clearly separated from the table's historical data."
+ ],
+ "unsupported_to_avoid": [
+  "Plotting 3 °C by 2100 as a data value, since the table ends in 2019.",
+  "Encoding catastrophic consequences as data values or causal claims.",
+  "Using relative_value as a percentage, share, or count.",
+  "Extrapolating beyond the table's last year without labeling it as external narration.",
+  "Claiming the table shows the 2100 projection directly."
+ ],
+ "notes": "All numeric claims are drawn from the table's value column in degC. The 2100/3 °C projection in the narration is not present in the table and should not be encoded as a data unit.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 50.8,
+  "usage": {
+   "prompt_tokens": 8263,
+   "completion_tokens": 11732,
+   "total_tokens": 19995,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9977
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 7751
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,8 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_1,Public transportation,public-transportation,0,,5.2,0.0520,%,,estimated
+pie_1,Drive alone,drive-alone,1,,76.3,0.7630,%,,printed
+pie_1,Taxi, motorcycle, or other,,taxi-motorcycle-or-other,2,1.7,,0.0170
+pie_1,Work at home,work-at-home,3,,5.1,0.0510,%,,estimated
+pie_1,Walk,walk,4,,2.5,0.0250,%,,estimated
+pie_1,Carpool,carpool,5,,8.2,0.0820,%,,estimated
+pie_1,Bicycle,bicycle,6,,1.0,0.0100,%,,estimated

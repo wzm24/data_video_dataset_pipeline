@@ -1,0 +1,21 @@
+{
+ "clip_id": "bar_132",
+ "family": "bar",
+ "sub_type": "pictograph",
+ "orientation": "vertical",
+ "series_count": 1,
+ "category_count": 15,
+ "unit_mark": "square",
+ "has_axis": true,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 30,
+ "row_count": 15,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "medium",
+ "needs_review": true,
+ "time_behavior": "snapshot"
+}

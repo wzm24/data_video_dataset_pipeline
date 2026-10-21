@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#3b3836"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Income inequality in the United States, 1910-2010</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#555555" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#555555" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#dddddd" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="508.0" x2="1220" y2="508.0" stroke="#dddddd" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="416.0" x2="1220" y2="416.0" stroke="#dddddd" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="324.0" x2="1220" y2="324.0" stroke="#dddddd" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="232.0" x2="1220" y2="232.0" stroke="#dddddd" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="140.0" x2="1220" y2="140.0" stroke="#dddddd" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#dddddd" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">25%</text>
+<line data-role="tick" x1="112" y1="508.0" x2="120" y2="508.0" stroke="#dddddd" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="514.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">30%</text>
+<line data-role="tick" x1="112" y1="416.0" x2="120" y2="416.0" stroke="#dddddd" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="422.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">35%</text>
+<line data-role="tick" x1="112" y1="324.0" x2="120" y2="324.0" stroke="#dddddd" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="330.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">40%</text>
+<line data-role="tick" x1="112" y1="232.0" x2="120" y2="232.0" stroke="#dddddd" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="238.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">45%</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#dddddd" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">50%</text>
+<g id="entity-top-10" data-role="entity" data-entity-id="top-10" data-label="Top 10%" data-series="true">
+<polyline id="top-10-polyline" data-role="polyline" data-entity-id="top-10" points="120.0,314.8 148.6,296.4 176.1,268.8 204.7,241.2 232.2,324.0 260.8,333.2 288.3,268.8 316.9,213.6 344.4,149.2 373.0,232.0 400.5,213.6 429.1,222.8 456.6,232.0 485.2,416.0 512.7,462.0 541.3,397.6 568.8,416.0 597.4,452.8 624.9,443.6 653.5,434.4 681.0,443.6 709.6,434.4 737.1,443.6 765.7,452.8 793.2,443.6 821.8,443.6 849.3,443.6 877.9,443.6 905.4,416.0 934.0,379.2 961.5,324.0 990.1,314.8 1017.6,305.6 1046.2,250.4 1073.7,186.0 1102.3,250.4 1129.8,176.8 1158.4,186.0 1185.9,140.0 1220.0,186.0" fill="none" stroke="#e07b39" stroke-width="3" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1910</text>
+<text data-role="x-axis-label" x="230.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1920</text>
+<text data-role="x-axis-label" x="340.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1930</text>
+<text data-role="x-axis-label" x="450.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1940</text>
+<text data-role="x-axis-label" x="560.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1950</text>
+<text data-role="x-axis-label" x="670.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1960</text>
+<text data-role="x-axis-label" x="780.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1970</text>
+<text data-role="x-axis-label" x="890.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1980</text>
+<text data-role="x-axis-label" x="1000.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">1990</text>
+<text data-role="x-axis-label" x="1110.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">2000</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">2010</text>
+<line x1="920" y1="92" x2="1000" y2="92" stroke="#e07b39" stroke-width="3"/>
+<text x="1020" y="100" font-family="Arial, sans-serif" font-size="22" fill="#dddddd">Top 10%</text>
+</g>
+</svg>

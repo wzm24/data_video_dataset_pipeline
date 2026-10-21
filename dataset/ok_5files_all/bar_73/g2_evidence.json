@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_73",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both categories must be labeled as Filler and Actual content, and their values 82 and 18 must be visible or directly annotatable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Filler @ x_px=640.0",
+    "mark:Actual content @ x_px=640.0"
+   ],
+   "assertion": {
+    "greater": "Filler @ x_px=640.0",
+    "lesser": "Actual content @ x_px=640.0",
+    "expected_ratio": 4.5556,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two bars must be visibly unequal, and the difference of 64 should be shown or inferable from labels 82 and 18."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Filler @ x_px=640.0",
+    "segment:Actual content @ x_px=640.0"
+   ],
+   "assertion": {
+    "segment": "Filler @ x_px=640.0",
+    "expected_share": 0.82,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A total or percentage scale must show Filler at 82% and Actual content at 18% of the combined total."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Filler @ x_px=640.0",
+    "mark:Actual content @ x_px=640.0"
+   ],
+   "assertion": {
+    "low": "Actual content @ x_px=640.0",
+    "low_value": 18.0,
+    "high": "Filler @ x_px=640.0",
+    "high_value": 82.0,
+    "delta": 64.0,
+    "ratio": 4.5556,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio annotation or proportional visual must make the about-4.6x relationship apparent."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Filler @ x_px=640.0",
+    "mark:Actual content @ x_px=640.0"
+   ],
+   "assertion": {
+    "at": "x_px=640.0",
+    "above": "Filler",
+    "above_value": 82.0,
+    "below": "Actual content",
+    "below_value": 18.0,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 50% midpoint or majority line must be visible, with Filler above it and Actual content below it."
+  }
+ ]
+}

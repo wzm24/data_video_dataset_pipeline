@@ -1,0 +1,28 @@
+{
+ "clip_id": "donut_25",
+ "intent_en": "To demonstrate that a specific entity (represented by the skull and crossbones) has profit margins surpassing those of Apple, highlighting its exceptional financial performance.",
+ "previous_intent": "To highlight the exceptionally high profit margins of a hazardous industry, demonstrating that they are substantial enough to make even a tech giant like Apple envious.",
+ "narration_support": "And with profit margins of over 30%, even Apple should be jealous.",
+ "chart_support": "Two circular progress charts comparing a skull-and-crossbones icon (with a large red arc) and an Apple logo (with a small blue arc), visually representing a much higher value for the former.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states high profit margins and a comparison to Apple. The chart visually depicts the entity with the skull icon having a much larger progress bar (red) than the Apple icon (blue), supporting the claim of higher margins.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<rect x="1120" y="70" width="24" height="15" fill="#853333"/>
+<text x="1150" y="84" font-family="Arial" font-size="19" fill="#222">Local</text>
+<rect x="1120" y="102" width="24" height="15" fill="#2f8f8f"/>
+<text x="1150" y="116" font-family="Arial" font-size="19" fill="#222">Imported</text>
+<line x1="160" y1="450" x2="1060" y2="450" stroke="#bbb" stroke-dasharray="5,5"/>
+<text x="146" y="455" text-anchor="end" font-family="Arial" font-size="16" fill="#333">10</text>
+<line x1="160" y1="300" x2="1060" y2="300" stroke="#bbb" stroke-dasharray="5,5"/>
+<text x="146" y="305" text-anchor="end" font-family="Arial" font-size="16" fill="#333">20</text>
+<line x1="160" y1="150" x2="1060" y2="150" stroke="#bbb" stroke-dasharray="5,5"/>
+<text x="146" y="155" text-anchor="end" font-family="Arial" font-size="16" fill="#333">30</text>
+<rect x="163.94" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<rect x="192.06" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<rect x="220.19" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<text x="188" y="632" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">Feb 20</text>
+<rect x="248.31" y="570.0" width="20.25" height="30.0" fill="#853333"/>
+<rect x="276.44" y="570.0" width="20.25" height="30.0" fill="#2f8f8f"/>
+<rect x="304.56" y="570.0" width="20.25" height="30.0" fill="#2f8f8f"/>
+<rect x="332.69" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<rect x="360.81" y="540.0" width="20.25" height="60.0" fill="#853333"/>
+<text x="301" y="632" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">27 Feb 20</text>
+<rect x="388.94" y="585.0" width="20.25" height="15.0" fill="#2f8f8f"/>
+<rect x="417.06" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<rect x="445.19" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<rect x="473.31" y="585.0" width="20.25" height="15.0" fill="#2f8f8f"/>
+<rect x="501.44" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<rect x="529.56" y="525.0" width="20.25" height="75.0" fill="#2f8f8f"/>
+<rect x="557.69" y="555.0" width="20.25" height="45.0" fill="#853333"/>
+<rect x="585.81" y="525.0" width="20.25" height="75.0" fill="#2f8f8f"/>
+<text x="483" y="632" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">09 Mar 20</text>
+<rect x="613.94" y="480.0" width="20.25" height="120.0" fill="#2f8f8f"/>
+<rect x="642.06" y="555.0" width="20.25" height="45.0" fill="#2f8f8f"/>
+<rect x="670.19" y="525.0" width="20.25" height="75.0" fill="#2f8f8f"/>
+<rect x="698.31" y="375.0" width="20.25" height="225.0" fill="#2f8f8f"/>
+<rect x="726.44" y="570.0" width="20.25" height="30.0" fill="#853333"/>
+<rect x="754.56" y="345.0" width="20.25" height="255.0" fill="#2f8f8f"/>
+<rect x="782.69" y="285.0" width="20.25" height="315.0" fill="#2f8f8f"/>
+<rect x="810.81" y="195.0" width="20.25" height="405.0" fill="#2f8f8f"/>
+<rect x="838.94" y="450.0" width="20.25" height="150.0" fill="#2f8f8f"/>
+<rect x="867.06" y="585.0" width="20.25" height="15.0" fill="#853333"/>
+<text x="737" y="632" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">17 Mar 20</text>
+<rect x="895.19" y="360.0" width="20.25" height="240.0" fill="#2f8f8f"/>
+<rect x="923.31" y="480.0" width="20.25" height="120.0" fill="#853333"/>
+<rect x="951.44" y="315.0" width="20.25" height="285.0" fill="#2f8f8f"/>
+<rect x="979.56" y="165.0" width="20.25" height="435.0" fill="#2f8f8f"/>
+<rect x="1007.69" y="240.0" width="20.25" height="360.0" fill="#2f8f8f"/>
+<rect x="1035.81" y="555.0" width="20.25" height="45.0" fill="#853333"/>
+<text x="962" y="632" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">25 Mar 20</text>
+</svg>

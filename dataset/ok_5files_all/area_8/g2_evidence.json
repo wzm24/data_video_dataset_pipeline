@@ -1,0 +1,143 @@
+{
+ "clip_id": "area_8",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "world population @ 2014",
+    "extreme": "max",
+    "expected": 8.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final point/area at 2014 must align with 8.00B on the y-axis, and the chart must make clear this is the top/record level."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:world population @ 1800",
+    "mark:world population @ 2014"
+   ],
+   "assertion": {
+    "low": "world population @ 1800",
+    "low_value": 1.02,
+    "high": "world population @ 2014",
+    "high_value": 8.0,
+    "delta": 6.98,
+    "ratio": 7.8431,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 1800 start value (1.02B) and the 2014 endpoint (8.00B) must be visible or directly labeled, with the connecting growth/area making the change apparent."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:world population @ 1800",
+    "mark:world population @ 2014"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "world population @ 1800",
+      "value": 1.02
+     },
+     {
+      "mark": "world population @ 2014",
+      "value": 8.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The animated line/area must rise from left to right across the 1800-2014 x-axis, not show a decline."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:world population @ 2009",
+    "mark:world population @ 2010",
+    "mark:world population @ 2014"
+   ],
+   "assertion": {
+    "series": "world population",
+    "values": [
+     7.93,
+     8.0,
+     8.0
+    ],
+    "threshold_between": [
+     7.93,
+     8.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "An 8B gridline or callout should show the crossing at 2010 and the flat 8.00B level through 2014."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:world population @ 1900",
+    "mark:world population @ 1800"
+   ],
+   "assertion": {
+    "greater": "world population @ 1900",
+    "lesser": "world population @ 1800",
+    "expected_ratio": 1.8627,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or annotation must distinguish the 1800-1900 segment from the 1900-2014 segment, or label the two increases."
+  }
+ ]
+}

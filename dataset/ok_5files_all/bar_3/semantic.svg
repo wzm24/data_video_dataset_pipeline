@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#E5E5E5"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">compliance with traffic laws</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">0%</text>
+<line data-role="tick" x1="112" y1="508.0" x2="120" y2="508.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="514.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">20%</text>
+<line data-role="tick" x1="112" y1="416.0" x2="120" y2="416.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="422.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">40%</text>
+<line data-role="tick" x1="112" y1="324.0" x2="120" y2="324.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="330.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">60%</text>
+<line data-role="tick" x1="112" y1="232.0" x2="120" y2="232.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="238.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">80%</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">100%</text>
+<g id="entity-cyclists-drivers" data-role="entity" data-entity-id="cyclists" data-label="cyclists">
+<rect id="cyclists-drivers-bar" data-role="bar" data-entity-id="cyclists" data-value="88" x="353.8" y="195.2" width="288.8" height="404.8" fill="#F87660" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="cyclists-value-label" data-role="value-label" data-entity-id="cyclists" x="498.1" y="181.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">88%</text>
+<text id="cyclists-drivers-label" data-role="category-label" data-entity-id="cyclists" x="498.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">cyclists</text>
+</g>
+<g id="entity-drivers-drivers" data-role="entity" data-entity-id="drivers" data-label="drivers">
+<rect id="drivers-drivers-bar" data-role="bar" data-entity-id="drivers" data-value="85" x="691.5" y="209.0" width="294.8" height="391.0" fill="#F87660" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="drivers-value-label" data-role="value-label" data-entity-id="drivers" x="838.9" y="195.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">85%</text>
+<text id="drivers-drivers-label" data-role="category-label" data-entity-id="drivers" x="838.9" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">drivers</text>
+</g>
+</g>
+</svg>

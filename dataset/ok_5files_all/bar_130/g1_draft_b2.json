@@ -1,0 +1,327 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_130",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the trend of nuclear disarmament following the Cold War and explain how the reduction in nuclear arsenals lowers the potential human cost of nuclear conflict.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "DISARMAMENT's relative share rises from 0.192 in 1990 to 0.7301 in 2015, an increase of 0.5381 of the yearly total.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "DISARMAMENT",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.192,
+     "note": "earliest post-Cold-War DISARMAMENT value"
+    },
+    {
+     "entity": "DISARMAMENT",
+     "x": "1995",
+     "field": "relative_value",
+     "value": 0.36,
+     "note": "intermediate value"
+    },
+    {
+     "entity": "DISARMAMENT",
+     "x": "2000",
+     "field": "relative_value",
+     "value": 0.49,
+     "note": "intermediate value"
+    },
+    {
+     "entity": "DISARMAMENT",
+     "x": "2005",
+     "field": "relative_value",
+     "value": 0.5701,
+     "note": "intermediate value"
+    },
+    {
+     "entity": "DISARMAMENT",
+     "x": "2010",
+     "field": "relative_value",
+     "value": 0.6501,
+     "note": "intermediate value"
+    },
+    {
+     "entity": "DISARMAMENT",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.7301,
+     "note": "final year in table"
+    }
+   ],
+   "computation": "0.7301 - 0.192 = 0.5381; listed DISARMAMENT values increase at every interval: 0.192 < 0.36 < 0.49 < 0.5701 < 0.6501 < 0.7301",
+   "accepted_routes": [
+    "Disarmament's share climbs from 0.192 in 1990 to 0.7301 in 2015.",
+    "The disarmament segment grows by 0.5381 of the total across the period.",
+    "The relative weight of disarmament rises from less than one-fifth to nearly three-quarters."
+   ],
+   "visual_evidence_rule": "The chart must make DISARMAMENT's relative share visibly larger in 2015 than in 1990, with the 1990 value 0.192 and 2015 value 0.7301 recoverable from the encoding.",
+   "temporal_anchor": "Since the Soviet Union collapsed the number of bombs has been coming down",
+   "reviewer_question": "Must the full 1990-to-2015 increase in DISARMAMENT's relative share be shown, or is it enough to show that it becomes the largest segment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The largest relative segment shifts from Russia in 1990 at 0.6 to DISARMAMENT in 2015 at 0.7301.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "largest segment in 1990"
+    },
+    {
+     "entity": "DISARMAMENT",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.192,
+     "note": "not largest in 1990"
+    },
+    {
+     "entity": "DISARMAMENT",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.7301,
+     "note": "largest segment in 2015"
+    },
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.1296,
+     "note": "smaller than DISARMAMENT in 2015"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Russia is the largest segment in 1990 at 0.6, but DISARMAMENT is largest by 2015 at 0.7301.",
+    "The biggest relative share changes from Russia to DISARMAMENT between 1990 and 2015.",
+    "By 2015 DISARMAMENT at 0.7301 exceeds Russia at 0.1296 and USA at 0.135."
+   ],
+   "visual_evidence_rule": "The chart must let a viewer identify the largest segment in 1990 as Russia at 0.6 and in 2015 as DISARMAMENT at 0.7301.",
+   "temporal_anchor": "Since the Soviet Union collapsed the number of bombs has been coming down",
+   "reviewer_question": "Should the video explicitly mark the shift in which segment is largest, or only imply it through the overall trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The combined USA and Russia relative share falls from 0.8 in 1990 to 0.2646 in 2015, a decline of 0.5354 of the total.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "component of combined 1990 share"
+    },
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "component of combined 1990 share"
+    },
+    {
+     "entity": "USA",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.135,
+     "note": "component of combined 2015 share"
+    },
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.1296,
+     "note": "component of combined 2015 share"
+    }
+   ],
+   "computation": "(0.2 + 0.6) = 0.8; (0.135 + 0.1296) = 0.2646; 0.8 - 0.2646 = 0.5354",
+   "accepted_routes": [
+    "USA and Russia together drop from 0.8 of the total in 1990 to 0.2646 in 2015.",
+    "The two largest Cold War arsenal holders fall by 0.5354 in combined relative share.",
+    "Combined US-Russian share goes from 0.8 to roughly 0.265."
+   ],
+   "visual_evidence_rule": "The chart must make the combined USA plus Russia share visibly shrink from 1990 to 2015, ending at 0.2646.",
+   "temporal_anchor": "Nuclear disarmament has reduced the potential human cost of a nuclear war in a very real way",
+   "reviewer_question": "Is the combined superpower decline required, or can the video convey disarmament only through the DISARMAMENT segment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Russia's relative share falls more than USA's from 1990 to 2015: Russia declines by 0.4704 while USA declines by 0.065.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "start of Russia decline"
+    },
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.1296,
+     "note": "end of Russia decline"
+    },
+    {
+     "entity": "USA",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "start of USA decline"
+    },
+    {
+     "entity": "USA",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.135,
+     "note": "end of USA decline"
+    }
+   ],
+   "computation": "0.6 - 0.1296 = 0.4704; 0.2 - 0.135 = 0.065",
+   "accepted_routes": [
+    "Russia's share drops by 0.4704, far more than USA's 0.065 decline.",
+    "Russia falls from 0.6 to 0.1296, while USA falls from 0.2 to 0.135.",
+    "Most of the superpower reduction comes from Russia's declining relative share."
+   ],
+   "visual_evidence_rule": "If included, the chart must show Russia's 1990-to-2015 decline as larger than USA's decline.",
+   "temporal_anchor": "Since the Soviet Union collapsed the number of bombs has been coming down",
+   "reviewer_question": "Does the video need to distinguish Russia's decline from USA's, or is the combined decline sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Where Other is present, its relative share remains tiny, with a maximum of 0.0102 in 2000.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Other",
+     "x": "2000",
+     "field": "relative_value",
+     "value": 0.0102,
+     "note": "maximum Other relative_value in table"
+    },
+    {
+     "entity": "Other",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0054,
+     "note": "Other remains small at final year"
+    },
+    {
+     "entity": "Other",
+     "x": "2010",
+     "field": "relative_value",
+     "value": 0.0035,
+     "note": "low end of Other's range"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Other never exceeds 0.0102 of the total.",
+    "Other's largest relative share is 0.0102 in 2000.",
+    "Other stays a negligible relative segment, at most 0.0102."
+   ],
+   "visual_evidence_rule": "If shown, Other must be visibly much smaller than the main segments, and its maximum 0.0102 should not be overstated.",
+   "temporal_anchor": "While there isn't a direct relationship between the number of warheads and the number of deaths",
+   "reviewer_question": "Should the video include the tiny Other category, or can it focus only on USA, Russia, and DISARMAMENT?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Early USA dominance: USA relative_value is 0.92 in 1960, 0.9203 in 1955, and 1.0 in 1950.",
+  "DISARMAMENT is present as a distinct series only from 1990 onward in this table; before 1990 no DISARMAMENT row is present.",
+  "Russia's 1990 relative_value of 0.6 is the single largest segment value in that year."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute warhead counts, deaths, dollar costs, population figures, or percentages not derivable from relative_value.",
+  "Causal claim that fewer warheads directly caused fewer deaths or lower human cost; the table has no death or cost data.",
+  "Extrapolating beyond 2015 or before 1950.",
+  "Treating relative_value as a percentage or converting it to absolute counts.",
+  "Using x_px, segment_width_px, year_total_px, colors, axis ticks, chart type, or rendering choices as semantic content."
+ ],
+ "notes": "All cited numbers are relative_value shares or explicit arithmetic combinations of them. The table has no filled absolute value column, so units avoid counts, percentages, and causal claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 45.0,
+  "usage": {
+   "prompt_tokens": 2824,
+   "completion_tokens": 11428,
+   "total_tokens": 14252,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8840
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 2440
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

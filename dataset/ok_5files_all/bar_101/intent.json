@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_101",
+ "intent_en": "To illustrate that Israel has a sufficient working-age population to support its dependents and benefits from immigration.",
+ "previous_intent": "To illustrate Israel's favorable demographic structure where a substantial working-age population supports dependents, further aided by immigration.",
+ "narration_support": "Israel, meanwhile, has enough people to care for the old and young, with plenty left over. It also has some extra help, immigration.",
+ "chart_support": "Population pyramid for Israel (indicated by flag) highlighting the working-age population (colored bars) against dependent age groups (grey bars), with a checkmark indicating a positive demographic status.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly states there are enough people to care for old and young plus immigration help. The chart visualizes this with a population pyramid where the working-age cohort (colored) is emphasized and a checkmark confirms the sufficiency mentioned in the text.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

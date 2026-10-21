@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1" style="font-family:Microsoft YaHei, SimHei, sans-serif">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">ISRAEL</text>
+<g id="legend" data-role="legend" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="22"><rect id="legend-male" x="890" y="30" width="26" height="18" fill="#4C78A8"/><text id="legend-male-label" x="924" y="47" fill="#222222">Male</text><rect id="legend-female" x="1010" y="30" width="26" height="18" fill="#E45756"/><text id="legend-female-label" x="1044" y="47" fill="#222222">Female</text></g> <g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="670.0" y1="140" x2="670.0" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="670.0" y1="600" x2="1220" y2="600" stroke="#666666" stroke-width="3"/>
+<g id="entity-95-99-left" data-role="entity" data-entity-id="95-99-left" data-label="95-99">
+<rect id="95-99-left-bar" data-role="bar" data-entity-id="95-99-left" data-value="0.016" x="666.3" y="236.5" width="3.7" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-95-99-right" data-role="entity" data-entity-id="95-99-right" data-label="95-99">
+<rect id="95-99-right-bar" data-role="bar" data-entity-id="95-99-right" data-value="0.08" x="670.0" y="236.5" width="18.3" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="95-99-right-label" data-role="category-label" data-entity-id="95-99-right" x="150.0" y="249.9" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">95-99</text>
+</g>
+<g id="entity-90-95-left" data-role="entity" data-entity-id="90-95-left" data-label="90-95">
+<rect id="90-95-left-bar" data-role="bar" data-entity-id="90-95-left" data-value="0.032" x="662.7" y="250.6" width="7.3" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-90-95-right" data-role="entity" data-entity-id="90-95-right" data-label="90-95">
+<rect id="90-95-right-bar" data-role="bar" data-entity-id="90-95-right" data-value="0.128" x="670.0" y="250.6" width="29.3" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="90-95-right-label" data-role="category-label" data-entity-id="90-95-right" x="150.0" y="263.9" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">90-95</text>
+</g>
+<g id="entity-85-89-left" data-role="entity" data-entity-id="85-89-left" data-label="85-89">
+<rect id="85-89-left-bar" data-role="bar" data-entity-id="85-89-left" data-value="0.064" x="655.4" y="264.6" width="14.6" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-85-89-right" data-role="entity" data-entity-id="85-89-right" data-label="85-89">
+<rect id="85-89-right-bar" data-role="bar" data-entity-id="85-89-right" data-value="0.176" x="670.0" y="264.6" width="40.2" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="85-89-right-label" data-role="category-label" data-entity-id="85-89-right" x="150.0" y="278.0" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">85-89</text>
+</g>
+<g id="entity-80-84-left" data-role="entity" data-entity-id="80-84-left" data-label="80-84">
+<rect id="80-84-left-bar" data-role="bar" data-entity-id="80-84-left" data-value="0.096" x="648.1" y="278.7" width="21.9" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-80-84-right" data-role="entity" data-entity-id="80-84-right" data-label="80-84">
+<rect id="80-84-right-bar" data-role="bar" data-entity-id="80-84-right" data-value="0.2" x="670.0" y="278.7" width="45.7" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="80-84-right-label" data-role="category-label" data-entity-id="80-84-right" x="150.0" y="292.0" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">80-84</text>
+</g>
+<g id="entity-75-79-left" data-role="entity" data-entity-id="75-79-left" data-label="75-79">
+<rect id="75-79-left-bar" data-role="bar" data-entity-id="75-79-left" data-value="0.16" x="633.4" y="292.8" width="36.6" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-75-79-right" data-role="entity" data-entity-id="75-79-right" data-label="75-79">
+<rect id="75-79-right-bar" data-role="bar" data-entity-id="75-79-right" data-value="0.264" x="670.0" y="292.8" width="60.3" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="75-79-right-label" data-role="category-label" data-entity-id="75-79-right" x="150.0" y="306.1" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">75-79</text>
+</g>
+<g id="entity-70-74-left" data-role="entity" data-entity-id="70-74-left" data-label="70-74">
+<rect id="70-74-left-bar" data-role="bar" data-entity-id="70-74-left" data-value="0.28" x="606.0" y="306.8" width="64.0" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-70-74-right" data-role="entity" data-entity-id="70-74-right" data-label="70-74">
+<rect id="70-74-right-bar" data-role="bar" data-entity-id="70-74-right" data-value="0.384" x="670.0" y="306.8" width="87.8" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="70-74-right-label" data-role="category-label" data-entity-id="70-74-right" x="150.0" y="320.1" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">70-74</text>
+</g>
+<g id="entity-65-69-left" data-role="entity" data-entity-id="65-69-left" data-label="65-69">
+<rect id="65-69-left-bar" data-role="bar" data-entity-id="65-69-left" data-value="0.376" x="584.0" y="320.9" width="86.0" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-65-69-right" data-role="entity" data-entity-id="65-69-right" data-label="65-69">
+<rect id="65-69-right-bar" data-role="bar" data-entity-id="65-69-right" data-value="0.496" x="670.0" y="320.9" width="113.4" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="65-69-right-label" data-role="category-label" data-entity-id="65-69-right" x="150.0" y="334.2" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">65-69</text>
+</g>
+<g id="entity-60-64-left" data-role="entity" data-entity-id="60-64-left" data-label="60-64">
+<rect id="60-64-left-bar" data-role="bar" data-entity-id="60-64-left" data-value="0.376" x="584.0" y="334.9" width="86.0" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-60-64-right" data-role="entity" data-entity-id="60-64-right" data-label="60-64">
+<rect id="60-64-right-bar" data-role="bar" data-entity-id="60-64-right" data-value="0.496" x="670.0" y="334.9" width="113.4" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="60-64-right-label" data-role="category-label" data-entity-id="60-64-right" x="150.0" y="348.2" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">60-64</text>
+</g>
+<g id="entity-55-59-left" data-role="entity" data-entity-id="55-59-left" data-label="55-59">
+<rect id="55-59-left-bar" data-role="bar" data-entity-id="55-59-left" data-value="0.416" x="574.9" y="349.0" width="95.1" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-55-59-right" data-role="entity" data-entity-id="55-59-right" data-label="55-59">
+<rect id="55-59-right-bar" data-role="bar" data-entity-id="55-59-right" data-value="0.496" x="670.0" y="349.0" width="113.4" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="55-59-right-label" data-role="category-label" data-entity-id="55-59-right" x="150.0" y="362.3" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">55-59</text>
+</g>
+<g id="entity-50-54-left" data-role="entity" data-entity-id="50-54-left" data-label="50-54">
+<rect id="50-54-left-bar" data-role="bar" data-entity-id="50-54-left" data-value="0.464" x="563.9" y="363.0" width="106.1" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-50-54-right" data-role="entity" data-entity-id="50-54-right" data-label="50-54">
+<rect id="50-54-right-bar" data-role="bar" data-entity-id="50-54-right" data-value="0.544" x="670.0" y="363.0" width="124.4" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="50-54-right-label" data-role="category-label" data-entity-id="50-54-right" x="150.0" y="376.4" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">50-54</text>
+</g>
+<g id="entity-45-49-left" data-role="entity" data-entity-id="45-49-left" data-label="45-49">
+<rect id="45-49-left-bar" data-role="bar" data-entity-id="45-49-left" data-value="0.56" x="542.0" y="377.1" width="128.0" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-45-49-right" data-role="entity" data-entity-id="45-49-right" data-label="45-49">
+<rect id="45-49-right-bar" data-role="bar" data-entity-id="45-49-right" data-value="0.64" x="670.0" y="377.1" width="146.3" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="45-49-right-label" data-role="category-label" data-entity-id="45-49-right" x="150.0" y="390.4" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">45-49</text>
+</g>
+<g id="entity-40-44-left" data-role="entity" data-entity-id="40-44-left" data-label="40-44">
+<rect id="40-44-left-bar" data-role="bar" data-entity-id="40-44-left" data-value="0.624" x="527.4" y="391.1" width="142.6" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-40-44-right" data-role="entity" data-entity-id="40-44-right" data-label="40-44">
+<rect id="40-44-right-bar" data-role="bar" data-entity-id="40-44-right" data-value="0.704" x="670.0" y="391.1" width="160.9" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="40-44-right-label" data-role="category-label" data-entity-id="40-44-right" x="150.0" y="404.5" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">40-44</text>
+</g>
+<g id="entity-35-39-left" data-role="entity" data-entity-id="35-39-left" data-label="35-39">
+<rect id="35-39-left-bar" data-role="bar" data-entity-id="35-39-left" data-value="0.64" x="523.7" y="405.2" width="146.3" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-35-39-right" data-role="entity" data-entity-id="35-39-right" data-label="35-39">
+<rect id="35-39-right-bar" data-role="bar" data-entity-id="35-39-right" data-value="0.72" x="670.0" y="405.2" width="164.6" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="35-39-right-label" data-role="category-label" data-entity-id="35-39-right" x="150.0" y="418.5" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">35-39</text>
+</g>
+<g id="entity-30-34-left" data-role="entity" data-entity-id="30-34-left" data-label="30-34">
+<rect id="30-34-left-bar" data-role="bar" data-entity-id="30-34-left" data-value="0.656" x="520.0" y="419.3" width="150.0" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-30-34-right" data-role="entity" data-entity-id="30-34-right" data-label="30-34">
+<rect id="30-34-right-bar" data-role="bar" data-entity-id="30-34-right" data-value="0.704" x="670.0" y="419.3" width="160.9" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="30-34-right-label" data-role="category-label" data-entity-id="30-34-right" x="150.0" y="432.6" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">30-34</text>
+</g>
+<g id="entity-25-29-left" data-role="entity" data-entity-id="25-29-left" data-label="25-29">
+<rect id="25-29-left-bar" data-role="bar" data-entity-id="25-29-left" data-value="0.68" x="514.6" y="433.3" width="155.4" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-25-29-right" data-role="entity" data-entity-id="25-29-right" data-label="25-29">
+<rect id="25-29-right-bar" data-role="bar" data-entity-id="25-29-right" data-value="0.72" x="670.0" y="433.3" width="164.6" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="25-29-right-label" data-role="category-label" data-entity-id="25-29-right" x="150.0" y="446.6" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">25-29</text>
+</g>
+<g id="entity-20-24-left" data-role="entity" data-entity-id="20-24-left" data-label="20-24">
+<rect id="20-24-left-bar" data-role="bar" data-entity-id="20-24-left" data-value="0.736" x="501.8" y="447.4" width="168.2" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-20-24-right" data-role="entity" data-entity-id="20-24-right" data-label="20-24">
+<rect id="20-24-right-bar" data-role="bar" data-entity-id="20-24-right" data-value="0.784" x="670.0" y="447.4" width="179.2" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="20-24-right-label" data-role="category-label" data-entity-id="20-24-right" x="150.0" y="460.7" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">20-24</text>
+</g>
+<g id="entity-15-19-left" data-role="entity" data-entity-id="15-19-left" data-label="15-19">
+<rect id="15-19-left-bar" data-role="bar" data-entity-id="15-19-left" data-value="0.8" x="487.1" y="461.4" width="182.9" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-15-19-right" data-role="entity" data-entity-id="15-19-right" data-label="15-19">
+<rect id="15-19-right-bar" data-role="bar" data-entity-id="15-19-right" data-value="0.8" x="670.0" y="461.4" width="182.9" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="15-19-right-label" data-role="category-label" data-entity-id="15-19-right" x="150.0" y="474.7" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">15-19</text>
+</g>
+<g id="entity-10-14-left" data-role="entity" data-entity-id="10-14-left" data-label="10-14">
+<rect id="10-14-left-bar" data-role="bar" data-entity-id="10-14-left" data-value="0.88" x="468.8" y="475.5" width="201.2" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-10-14-right" data-role="entity" data-entity-id="10-14-right" data-label="10-14">
+<rect id="10-14-right-bar" data-role="bar" data-entity-id="10-14-right" data-value="0.88" x="670.0" y="475.5" width="201.2" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="10-14-right-label" data-role="category-label" data-entity-id="10-14-right" x="150.0" y="488.8" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">10-14</text>
+</g>
+<g id="entity-5-9-left" data-role="entity" data-entity-id="5-9-left" data-label="5-9">
+<rect id="5-9-left-bar" data-role="bar" data-entity-id="5-9-left" data-value="1" x="441.4" y="489.5" width="228.6" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-5-9-right" data-role="entity" data-entity-id="5-9-right" data-label="5-9">
+<rect id="5-9-right-bar" data-role="bar" data-entity-id="5-9-right" data-value="1" x="670.0" y="489.5" width="228.6" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="5-9-right-label" data-role="category-label" data-entity-id="5-9-right" x="150.0" y="502.9" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">5-9</text>
+</g>
+<g id="entity-0-4-left" data-role="entity" data-entity-id="0-4-left" data-label="0-4">
+<rect id="0-4-left-bar" data-role="bar" data-entity-id="0-4-left" data-value="1" x="441.4" y="503.6" width="228.6" height="12.6" fill="#4C78A8" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-0-4-right" data-role="entity" data-entity-id="0-4-right" data-label="0-4">
+<rect id="0-4-right-bar" data-role="bar" data-entity-id="0-4-right" data-value="1" x="670.0" y="503.6" width="228.6" height="12.6" fill="#E45756" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="0-4-right-label" data-role="category-label" data-entity-id="0-4-right" x="150.0" y="516.9" text-anchor="end" font-family="Microsoft YaHei, SimHei, sans-serif, Arial, sans-serif" font-size="20" fill="#333333">0-4</text>
+</g>
+</g>
+</svg>

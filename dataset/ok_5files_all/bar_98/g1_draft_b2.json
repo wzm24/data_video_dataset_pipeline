@@ -1,0 +1,229 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_98",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that cats are the most popular pet in America, outnumbering dogs, and to provide historical context of their arrival in the 1750s.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Cats are America's most popular pet, ranking ahead of dogs.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Cats",
+     "x": "x_px=350.0",
+     "field": "value",
+     "value": 88.0,
+     "note": "Cat value is 88 million; higher than the 74 million row."
+    },
+    {
+     "entity": "74 million",
+     "x": "x_px=930.0",
+     "field": "value",
+     "value": 74.0,
+     "note": "Narration identifies this row as dogs; lower than cats."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cats are America's most popular pet.",
+    "Cats rank above dogs as the top U.S. pet.",
+    "Cats outrank dogs in U.S. pet popularity."
+   ],
+   "visual_evidence_rule": "The cat bar must be taller than the dog bar, or cats must be labeled/ranked first as most popular.",
+   "temporal_anchor": "They are America's most popular pet.",
+   "reviewer_question": "Must the video explicitly rank cats above dogs, or is a taller cat bar sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "There are 88 million cats kept as pets in America.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Cats",
+     "x": "x_px=350.0",
+     "field": "value",
+     "value": 88.0,
+     "note": "Table value for Cats."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "There are 88 million cats kept as pets.",
+    "Cats: 88 million.",
+    "88M pet cats in America.",
+    "The U.S. cat population is 88 million."
+   ],
+   "visual_evidence_rule": "The cat bar endpoint or label must show 88 million.",
+   "temporal_anchor": "There are 88 million cats kept as pets...",
+   "reviewer_question": "Must 88 million be explicitly labeled, or can the cat bar height alone imply it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "There are 74 million dogs, compared with the 88 million cats.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "74 million",
+     "x": "x_px=930.0",
+     "field": "value",
+     "value": 74.0,
+     "note": "Table row is labeled '74 million'; narration identifies this comparison as dogs."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "There are 74 million dogs.",
+    "Dogs: 74 million.",
+    "74M dogs compared with cats.",
+    "The U.S. dog population is 74 million."
+   ],
+   "visual_evidence_rule": "The dog bar endpoint or label must show 74 million.",
+   "temporal_anchor": "...compared to 74 million dogs.",
+   "reviewer_question": "Must the 74 million dog value be shown explicitly, or can the comparison rely on relative bar heights?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Cats outnumber dogs by 14 million.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Cats",
+     "x": "x_px=350.0",
+     "field": "value",
+     "value": 88.0,
+     "note": "Cat value."
+    },
+    {
+     "entity": "74 million",
+     "x": "x_px=930.0",
+     "field": "value",
+     "value": 74.0,
+     "note": "Dog value as identified by narration."
+    }
+   ],
+   "computation": "88 - 74 = 14 million",
+   "accepted_routes": [
+    "Cats outnumber dogs by 14 million.",
+    "There are 14 million more cats than dogs.",
+    "Cat population exceeds dog population by 14M."
+   ],
+   "visual_evidence_rule": "A difference annotation, arrow, or label must show a 14 million gap between the cat and dog endpoints.",
+   "temporal_anchor": "There are 88 million cats kept as pets compared to 74 million dogs.",
+   "reviewer_question": "Must the 14 million gap be stated or visualized, or is the 88-vs-74 comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Cats were brought from Europe as pet controllers in the 1750s.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Cats",
+     "x": "historical context",
+     "field": "narration",
+     "value": 1750.0,
+     "note": "From original narration only; no table cell supports the 1750s date or Europe/pet-controller context."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cats were brought from Europe as pet controllers in the 1750s.",
+    "Cats arrived from Europe in the 1750s as pet controllers.",
+    "Historical origin: Europe, 1750s, as pet controllers."
+   ],
+   "visual_evidence_rule": "A timeline, annotation, or text card must indicate Europe and the 1750s as the historical origin context.",
+   "temporal_anchor": "They were brought from Europe as pet controllers in the 1750s.",
+   "reviewer_question": "Should the 1750s Europe/pet-controller context be required even though it is narration-only and has no table cell?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Cats and dogs together represent 162 million pets (88 + 74 = 162).",
+  "Cats are about 54.3% of the combined cat-plus-dog total (88 / 162), while dogs are about 45.7% (74 / 162)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as cats are most popular because they were brought as pet controllers in the 1750s.",
+  "Claims that cats are the most popular pet worldwide rather than in America.",
+  "Any value other than 88 or 74 unless it is explicitly computed, such as 14 million more cats or a 162 million combined total.",
+  "Any date other than the narration's 1750s for the historical arrival context."
+ ],
+ "notes": "The only table values are 88 for Cats and 74 for the row labeled '74 million'; the latter is treated as dogs per narration/intent. The 1750s/Europe/pet-controller context is narration-only and has no table cell, so the reviewer must decide whether it remains required despite lacking table grounding.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 39.7,
+  "usage": {
+   "prompt_tokens": 716,
+   "completion_tokens": 8897,
+   "total_tokens": 9613,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7269
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 332
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,230 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_17",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that private school participation in Britain is heavily concentrated among the highest income earners.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Private school participation reaches its highest relative level at the end of its series (x=1220.0), with relative_value 1.0332 (value 0.6199).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Private school participation",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 1.0332,
+     "note": "also value=0.6199; maximum of this series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Private school participation peaks at about 1.03 on the normalized scale at the final point.",
+    "The highest private school participation value is 1.0332 (0.6199 in the value column), occurring at x=1220.0."
+   ],
+   "visual_evidence_rule": "The Private school participation series must visibly attain its maximum at its final plotted point.",
+   "temporal_anchor": "the clause about intakes being dominated by the very wealthy",
+   "reviewer_question": "Should the video be required to show the final point as the maximum of the private school participation series?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Private school participation rises from 0.1000 to 1.0332 relative_value (0.0600 to 0.6199 value) between x=1143.3 and x=1220.0, a factor of about 10.3.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Private school participation",
+     "x": "1143.3",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "start point"
+    },
+    {
+     "entity": "Private school participation",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 1.0332,
+     "note": "end point"
+    }
+   ],
+   "computation": "1.0332 / 0.1000 = 10.332 (or 0.6199 / 0.0600 = 10.332)",
+   "accepted_routes": [
+    "The private school participation series increases roughly tenfold from its first to last plotted point.",
+    "It grows from 0.10 to 1.03 on the relative scale, about a 10.3x increase."
+   ],
+   "visual_evidence_rule": "The Private school participation series must show a steep upward trend from its first to last point, consistent with a tenfold increase.",
+   "temporal_anchor": "the clause about private school participation being dominated by the wealthy",
+   "reviewer_question": "Is the tenfold increase from start to end of the private school participation series a required takeaway?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The Richest 10% series peaks at 0.1667 relative_value (0.1000 value) at x=1117.7.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Richest 10%",
+     "x": "1117.7",
+     "field": "relative_value",
+     "value": 0.1667,
+     "note": "also value=0.1000; maximum of this series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The Richest 10% series reaches its highest relative value, 0.1667 (0.1000 in the value column), at x=1117.7.",
+    "The richest 10% line peaks at about 0.17 on the relative scale."
+   ],
+   "visual_evidence_rule": "The Richest 10% series must visibly reach its maximum at x=1117.7 before any later point.",
+   "temporal_anchor": "the clause about the very wealthy",
+   "reviewer_question": "Should the video be required to identify the peak of the Richest 10% series?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At x=1143.3, the last Richest 10% point and the first Private school participation point have the same relative_value 0.1000 (value 0.0600).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Richest 10%",
+     "x": "1143.3",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "last Richest 10% point"
+    },
+    {
+     "entity": "Private school participation",
+     "x": "1143.3",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "first Private school participation point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The two series meet at x=1143.3 with the same relative value of 0.1000 (0.0600 in the value column).",
+    "At the shared x-coordinate, both entities have equal relative_value 0.1000."
+   ],
+   "visual_evidence_rule": "At the shared x position, the Richest 10% and Private school participation series must visibly coincide or cross at the same value.",
+   "temporal_anchor": "the transition between discussing the wealthy and private school participation",
+   "reviewer_question": "Should the video explicitly show the point where the two series meet and share the same value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The maximum relative_value of Private school participation (1.0332 at x=1220.0) is about 6.2 times the maximum relative_value of Richest 10% (0.1667 at x=1117.7).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Private school participation",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 1.0332,
+     "note": "max of Private school participation"
+    },
+    {
+     "entity": "Richest 10%",
+     "x": "1117.7",
+     "field": "relative_value",
+     "value": 0.1667,
+     "note": "max of Richest 10%"
+    }
+   ],
+   "computation": "1.0332 / 0.1667 = 6.197",
+   "accepted_routes": [
+    "The peak private school participation relative value is roughly six times the peak Richest 10% relative value.",
+    "Private school participation maxes at 1.0332, while Richest 10% maxes at 0.1667, a ratio of about 6.2."
+   ],
+   "visual_evidence_rule": "The maximum of the Private school participation series must be visibly much higher than the maximum of the Richest 10% series.",
+   "temporal_anchor": "the clause about intakes being dominated by the very wealthy",
+   "reviewer_question": "Should the video compare the peak levels of the two series, or is that an invalid cross-entity comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The Richest 10% series declines from its peak 0.1667 at x=1117.7 to 0.1000 at x=1143.3.",
+  "The Private school participation series has an intermediate value 0.9167 at x=1207.2, just before its maximum.",
+  "The Richest 10% series has a local low of 0.0332 at several early points."
+ ],
+ "unsupported_to_avoid": [
+  "Stating that private school participation is a percentage, count, or dollar amount, since the unit column is blank.",
+  "Claiming that funding cuts caused the private school participation pattern.",
+  "Extrapolating the Private school participation trend beyond x=1220.0 or the Richest 10% trend before x=120.0.",
+  "Stating that the Richest 10% group has the highest private school participation, because the table does not cross-tabulate income groups with participation."
+ ],
+ "notes": "The table has no unit column, so all numbers are treated as relative/table values rather than percentages or counts. The key contrast is between the Richest 10% series peaking at 0.1667 and Private school participation rising to 1.0332.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 57.1,
+  "usage": {
+   "prompt_tokens": 2844,
+   "completion_tokens": 15019,
+   "total_tokens": 17863,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13059
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2332
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

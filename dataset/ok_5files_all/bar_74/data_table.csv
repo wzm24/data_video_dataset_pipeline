@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_74,KFC,kfc,432.0,,20000.000,0.4000,,#a50e2d,printed
+bar_74,Starbucks,starbucks,518.0,,30000.000,0.6000,,#00704a,printed
+bar_74,McDonald&#x27;s,mcdonald-x27-s,578.2,,37000.000,0.7400,,#d64541,printed
+bar_74,Subway,subway,629.8,,43000.000,0.8600,,#77b21d,printed

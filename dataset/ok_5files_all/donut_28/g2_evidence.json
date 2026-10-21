@@ -1,0 +1,140 @@
+{
+ "clip_id": "donut_28",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:INVESTORS @ investors"
+   ],
+   "assertion": {
+    "segment": "INVESTORS @ investors",
+    "expected_share": 0.3,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart segment or label for INVESTORS must show 30% or 0.30."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:PORT 'FEES' @ port_'fees"
+   ],
+   "assertion": {
+    "segment": "PORT 'FEES' @ port_'fees",
+    "expected_share": 0.1,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart segment or label for PORT 'FEES' must show 10% or 0.10."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:BOUNTIES @ bounties"
+   ],
+   "assertion": {
+    "segment": "BOUNTIES @ bounties",
+    "expected_share": 0.5,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart segment or label for BOUNTIES must show 50% or 0.50."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:$10,000 BONUS @ 10000-bonus"
+   ],
+   "assertion": {
+    "mark": "$10,000 BONUS @ 10000-bonus",
+    "field": "value",
+    "expected": 10000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If shown, the chart must link the $10,000 bonus label to the 10% bonus segment and display or derive $100,000 total."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:BOUNTIES @ bounties",
+    "mark:INVESTORS @ investors",
+    "mark:PORT 'FEES' @ port_'fees",
+    "mark:bonus share @ bonus-share"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "BOUNTIES @ bounties",
+      "value": 50.0
+     },
+     {
+      "mark": "INVESTORS @ investors",
+      "value": 30.0
+     },
+     {
+      "mark": "PORT 'FEES' @ port_'fees",
+      "value": 10.0
+     },
+     {
+      "mark": "bonus share @ bonus-share",
+      "value": 10.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If shown, segment sizes or labels must make bounties largest, investors second, and port fees plus bonus share tied smallest."
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+{
+ "clip_id": "bar_31",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Norway @ 448.7",
+    "mark:France @ 528.6",
+    "mark:United Kingdom @ 609.0",
+    "mark:Canada @ 689.4",
+    "mark:Australia @ 769.2",
+    "mark:Germany @ 849.1",
+    "mark:United States @ 929.5"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Norway @ 448.7",
+      "value": 894.602
+     },
+     {
+      "mark": "France @ 528.6",
+      "value": 956.298
+     },
+     {
+      "mark": "United Kingdom @ 609.0",
+      "value": 1149.1
+     },
+     {
+      "mark": "Canada @ 689.4",
+      "value": 1156.81
+     },
+     {
+      "mark": "Australia @ 769.2",
+      "value": 1218.51
+     },
+     {
+      "mark": "Germany @ 849.1",
+      "value": 1726.34
+     },
+     {
+      "mark": "United States @ 929.5",
+      "value": 3300.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show all seven countries with magnitudes that make the complete ranking perceptible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Norway @ 448.7",
+    "extreme": "min",
+    "expected": 894.602,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the United States and Norway must be identifiable as the maximum and minimum, with country labels attached."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:United States @ 929.5",
+    "mark:Norway @ 448.7"
+   ],
+   "assertion": {
+    "greater": "United States @ 929.5",
+    "lesser": "Norway @ 448.7",
+    "expected_ratio": 3.6888,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gap between the United States and Norway should be visibly the largest top-to-bottom spread in the series."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:United States @ 929.5",
+    "mark:Germany @ 849.1"
+   ],
+   "assertion": {
+    "greater": "United States @ 929.5",
+    "lesser": "Germany @ 849.1",
+    "expected_ratio": 1.9116,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Germany must be visibly second in magnitude, clearly below the United States but above all other countries."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:France @ 528.6",
+    "mark:Norway @ 448.7"
+   ],
+   "assertion": {
+    "greater": "France @ 528.6",
+    "lesser": "Norway @ 448.7",
+    "expected_ratio": 1.069,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The five lower-country values must appear grouped below Germany and the United States."
+  }
+ ]
+}

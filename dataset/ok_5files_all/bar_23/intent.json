@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_23",
+ "intent_en": "To present the 2016 election outcomes for each US state, illustrating the distribution of votes among candidates across different regions.",
+ "previous_intent": "To present the US election results by state, visualizing the proportional vote share distribution among parties across different regions.",
+ "narration_support": "These are the results of the 2016 election by state.",
+ "chart_support": "Stacked bar chart titled '2016 election results by state' with states on the x-axis and colored segments (blue, grey, red) representing vote shares, overlaid with a horizontal reference line.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly introduces the visual as 2016 election results by state. The chart visualizes this with a stacked bar chart showing state-by-state vote distribution (likely popular vote share) with red, grey, and blue segments.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

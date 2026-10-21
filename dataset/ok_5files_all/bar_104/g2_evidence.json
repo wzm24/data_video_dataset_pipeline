@@ -1,0 +1,124 @@
+{
+ "clip_id": "bar_104",
+ "family": "bar",
+ "chart_form": "bar/overlay_bar",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:$100k-$200k earners tax rate @ 2008",
+    "mark:400 richest tax rate @ 2008"
+   ],
+   "assertion": {
+    "greater": "$100k-$200k earners tax rate @ 2008",
+    "lesser": "400 richest tax rate @ 2008",
+    "expected_ratio": 1.3812,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Two 2008 values must be visible/labeled: $100k-$200k (or middle) at 25% and 400 richest at 18.1%, on a comparable scale or with explicit comparison labels."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:400 richest tax rate @ 2001",
+    "mark:400 richest tax rate @ 2008"
+   ],
+   "assertion": {
+    "low": "400 richest tax rate @ 2008",
+    "low_value": 18.1,
+    "high": "400 richest tax rate @ 2001",
+    "high_value": 23.0,
+    "delta": 4.9,
+    "ratio": 1.2707,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both top-400 values must be visible on a timeline or paired bars: 23% for 2001 and 18.1% for 2008, with a downward direction or change label."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:$100k-$200k earners tax rate @ 2008"
+   ],
+   "assertion": {
+    "mark": "$100k-$200k earners tax rate @ 2008",
+    "field": "value",
+    "expected": 25.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar/label for $100k-$200k or middle/high-income earners at 25% must be visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:400 richest tax rate @ 2008"
+   ],
+   "assertion": {
+    "mark": "400 richest tax rate @ 2008",
+    "field": "value",
+    "expected": 18.1,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2008 top-400 value must be labeled at 18.1% if shown as a standalone endpoint."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:400 richest tax rate @ 2001"
+   ],
+   "assertion": {
+    "mark": "400 richest tax rate @ 2001",
+    "field": "value",
+    "expected": 23.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2001 top-400 value must be labeled at 23% if shown as a standalone endpoint."
+  }
+ ]
+}

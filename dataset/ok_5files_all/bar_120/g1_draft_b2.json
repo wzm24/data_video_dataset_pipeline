@@ -1,0 +1,155 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_120",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that police reform proposals enjoy substantial support among Republicans and white Americans, even though Democrats and black Americans exhibit higher levels of favorability and intensity.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Among all entries, the Strongly series entry 'Require police to be trained' has the highest relative value (0.3008).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3008,
+     "note": "Highest relative value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Strongly support is highest for requiring police training",
+    "The strongest intensity of support is for police training",
+    "Require police to be trained has the top Strongly relative value"
+   ],
+   "visual_evidence_rule": "The visual encoding must show 'Require police to be trained' in the Strongly series as having the highest relative value compared to all other entries.",
+   "temporal_anchor": "the clause about intensity of support being higher",
+   "reviewer_question": "Must the video explicitly identify 'Require police to be trained' as the proposal with the highest Strongly relative value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Strongly series entry 'power to investigate and' has the lowest relative value (0.1039) among all entries.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.3333,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "power to investigate and",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.1039,
+     "note": "Lowest relative value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Strongly support is lowest for giving power to investigate",
+    "The least intense support is for power to investigate",
+    "power to investigate and has the bottom Strongly relative value"
+   ],
+   "visual_evidence_rule": "The visual encoding must show 'power to investigate and' in the Strongly series as having the lowest relative value compared to all other entries.",
+   "temporal_anchor": "the clause about intensity of support being higher",
+   "reviewer_question": "Is it required to show the lowest Strongly relative value, or is only the highest sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In the Somewhat series, the highest relative values are tied at 0.2242 (entities labeled '44' and '27'), and the lowest is 0.1695 (entity labeled '26').",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "44",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.2242,
+     "note": "Tied highest in Somewhat series."
+    },
+    {
+     "entity": "27",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.2242,
+     "note": "Tied highest in Somewhat series."
+    },
+    {
+     "entity": "26",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.1695,
+     "note": "Lowest in Somewhat series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Somewhat support peaks at 0.2242 for two entries and bottoms at 0.1695",
+    "The Somewhat series ranges from 0.1695 to 0.2242",
+    "The highest Somewhat relative values are tied, while 26 is the lowest"
+   ],
+   "visual_evidence_rule": "Within the Somewhat series, the marks for '44' and '27' must be the highest and the mark for '26' must be the lowest.",
+   "temporal_anchor": "the clause about fair amount of support",
+   "reviewer_question": "Should the video call out the tie at the top of the Somewhat series and the lowest Somewhat value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 3,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.69
+ },
+ "draft_cost": {
+  "sec": 66.0,
+  "usage": {
+   "prompt_tokens": 1222,
+   "completion_tokens": 16000,
+   "total_tokens": 17222,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 14661
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 710
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,328 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_99",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that 'us versus them' polarization has worsened over the past 40 years.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Two series are present: the solid curve (recorded 1973-74 through 2015-16) and the dashed curve (recorded 1979-80 through 2015-16).",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "solid curve",
+     "x": "1973-74",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "solid series begins at its maximum"
+    },
+    {
+     "entity": "solid curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "solid series ends at its maximum"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "1979-80",
+     "field": "relative_value",
+     "value": 0.0004,
+     "note": "dashed series begins near zero"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "dashed series ends near maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The animation shows two entities, a solid curve and a dashed curve, tracked over the 1970s–2010s.",
+    "Both series end in 2015-16, but the solid curve starts earlier in 1973-74 while the dashed curve starts in 1979-80.",
+    "Two relative-value series are compared across time: solid and dashed."
+   ],
+   "visual_evidence_rule": "Both table entities must be represented and tied to their time records; no third entity should be introduced.",
+   "temporal_anchor": "the clause establishing the past decades / observed period",
+   "reviewer_question": "Must the video explicitly distinguish both table entities, or can it show only one composite trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The dashed curve's relative_value rises across the observed periods, from 0.0004 in 1979-80 to 0.9600 in 2015-16, increasing at each overlapping time point.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "dashed curve",
+     "x": "1979-80",
+     "field": "relative_value",
+     "value": 0.0004,
+     "note": "dashed low"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "1985-86",
+     "field": "relative_value",
+     "value": 0.1332,
+     "note": "higher than prior point"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "1991-92",
+     "field": "relative_value",
+     "value": 0.4007,
+     "note": "higher than prior point"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "1997-98",
+     "field": "relative_value",
+     "value": 0.7328,
+     "note": "higher than prior point"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "2003-04",
+     "field": "relative_value",
+     "value": 0.7734,
+     "note": "higher than prior point"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "2009-10",
+     "field": "relative_value",
+     "value": 0.8264,
+     "note": "higher than prior point"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "dashed high/maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The dashed series climbs steadily from near its minimum in 1979-80 to near its maximum in 2015-16.",
+    "Dashed relative_value increases at every observed period, ending at 0.9600.",
+    "The dashed curve's trajectory is upward across the 1980s, 1990s, 2000s and 2010s."
+   ],
+   "visual_evidence_rule": "The dashed series must be shown as increasing across the listed periods, not flat, falling, or only shown as a single maximum.",
+   "temporal_anchor": "the 'has gotten much worse over the past 40 years' clause",
+   "reviewer_question": "Must the video show the dashed curve's full upward trajectory, or can it show only start and end values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The solid curve rises from its minimum relative_value 0.2000 in 1985-86 to 1.0000 in 2015-16, an increase of 0.8000 relative_value units (a factor of 5).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "solid curve",
+     "x": "1985-86",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "solid minimum"
+    },
+    {
+     "entity": "solid curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "solid maximum/tied maximum"
+    }
+   ],
+   "computation": "increase = 1.0000 - 0.2000 = 0.8000; factor = 1.0000 / 0.2000 = 5",
+   "accepted_routes": [
+    "After its 1985-86 low, the solid curve more than recovers, ending at 1.0000 in 2015-16.",
+    "The solid series increases by 0.8000 relative_value units from its minimum 0.2000 to 1.0000.",
+    "The solid curve ends at five times its 1985-86 relative_value."
+   ],
+   "visual_evidence_rule": "The solid series must be shown as rising substantially from the 1985-86 minimum to the 2015-16 maximum.",
+   "temporal_anchor": "the 'even the stronger us versus them polarization has gotten much worse' clause",
+   "reviewer_question": "Must the solid curve's recovery from its mid-1980s low be shown, or can the video focus only on the dashed trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "In the final period, 2015-16, both series are at or near their maximum relative_value: solid = 1.0000 and dashed = 0.9600, with solid slightly higher.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "solid curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "solid final/maximum value"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "dashed final/maximum value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At the end, solid is at 1.0000 and dashed is at 0.9600.",
+    "2015-16 shows the highest relative_value for the dashed series and ties the highest for the solid series.",
+    "Both series end at or near the top of their range, with solid just above dashed."
+   ],
+   "visual_evidence_rule": "The final 2015-16 values for both series must be visible and ordered correctly: solid 1.0000, dashed 0.9600.",
+   "temporal_anchor": "the endpoint of the 'over the past 40 years' clause",
+   "reviewer_question": "Is the final-period near-maximum comparison required, or is the dashed upward trend alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Dashed is higher than solid in 1985-86 (0.4007 vs 0.2000), but solid is higher by 1997-98 (0.7995 vs 0.7328) and at 2015-16 (1.0000 vs 0.9600), showing a crossover in relative ordering.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "dashed curve",
+     "x": "1985-86",
+     "field": "relative_value",
+     "value": 0.4007,
+     "note": "dashed above solid in this period"
+    },
+    {
+     "entity": "solid curve",
+     "x": "1985-86",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "solid below dashed in this period"
+    },
+    {
+     "entity": "solid curve",
+     "x": "1997-98",
+     "field": "relative_value",
+     "value": 0.7995,
+     "note": "solid above dashed after crossover"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "1997-98",
+     "field": "relative_value",
+     "value": 0.7328,
+     "note": "dashed below solid after crossover"
+    },
+    {
+     "entity": "solid curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "solid remains above dashed at end"
+    },
+    {
+     "entity": "dashed curve",
+     "x": "2015-16",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "dashed below solid at end"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The two series cross: dashed leads in 1985-86, but solid leads by 1997-98 and remains higher through 2015-16.",
+    "Solid overtakes dashed after the mid-1980s.",
+    "At 2015-16 the solid series is slightly above the dashed series, but earlier the dashed series had been above solid in 1985-86."
+   ],
+   "visual_evidence_rule": "The relative ordering of the two series must be shown changing from dashed > solid in 1985-86 to solid > dashed by 1997-98 and at the 2015-16 endpoint.",
+   "temporal_anchor": "optional comparison clause; if included, place near the middle-to-end of the observed period",
+   "reviewer_question": "Should the video include the cross-series ordering and crossover, or is this optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing all seven dashed time points instead of only start/end.",
+  "Showing the solid curve's initial 1973-74 value 1.0000 and its 1979-80 dip to 0.4655.",
+  "Mapping the solid/dashed series to 'us' and 'them' labels if a source provides that mapping.",
+  "Displaying the 1991-92 comparison where solid is slightly above dashed (0.4674 vs 0.4007)."
+ ],
+ "unsupported_to_avoid": [
+  "Any percentage, count, or dollar amount, because the table has no absolute value; relative_value is a 0-1 normalization.",
+  "Causal claims about why polarization worsened.",
+  "Claiming the solid series is worse in 2015-16 than in 1973-74 (both are 1.0000).",
+  "Claiming the dashed series ends above the solid series (0.9600 vs 1.0000).",
+  "Assuming the solid/dashed entities are 'us' and 'them' without a source label."
+ ],
+ "notes": "All cited numbers are relative_value from the table or explicit arithmetic combinations; no absolute unit exists. The core required units should establish the two series, the dashed upward trend, the solid recovery from its 1985-86 low, and the high 2015-16 endpoints, with crossovers optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 53.7,
+  "usage": {
+   "prompt_tokens": 1261,
+   "completion_tokens": 13291,
+   "total_tokens": 14552,
+   "prompt_tokens_details": {
+    "cached_tokens": 1024
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10634
+   },
+   "prompt_cache_hit_tokens": 1024,
+   "prompt_cache_miss_tokens": 237
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

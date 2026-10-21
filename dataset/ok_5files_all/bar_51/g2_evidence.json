@@ -1,0 +1,137 @@
+{
+ "clip_id": "bar_51",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:POOREST @ x_px=198.7",
+    "mark:RICHEST @ x_px=1171.4"
+   ],
+   "assertion": {
+    "greater": "POOREST @ x_px=198.7",
+    "lesser": "RICHEST @ x_px=1171.4",
+    "expected_ratio": 26.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars or labels for POOREST at 10.6 and RICHEST at 0.4 must be visible, with an optional gap/ratio annotation showing 10.2 points or 26.5x."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Group 2 @ x_px=295.9",
+    "mark:Group 3 @ x_px=393.1"
+   ],
+   "assertion": {
+    "greater": "Group 2 @ x_px=295.9",
+    "lesser": "Group 3 @ x_px=393.1",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Middle bars Group 2 through Group 8 must be visibly clustered near 10 to 11, with the RICHEST bar clearly at 0.4."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Group 2 @ x_px=295.9",
+    "extreme": "max",
+    "expected": 10.9,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest bars for Group 2 and Group 3 and the lowest bar for RICHEST should be identifiable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Group 9 @ x_px=976.9",
+    "mark:Group 10 @ x_px=1074.1",
+    "mark:RICHEST @ x_px=1171.4"
+   ],
+   "assertion": {
+    "low": "RICHEST @ x_px=1171.4",
+    "low_value": 0.4,
+    "high": "Group 9 @ x_px=976.9",
+    "high_value": 9.8,
+    "delta": 9.4,
+    "ratio": 24.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars for Group 9, Group 10, and RICHEST must be visible in order, showing the steep top-end decline."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Group 10 @ x_px=1074.1",
+    "mark:RICHEST @ x_px=1171.4",
+    "mark:Group 9 @ x_px=976.9"
+   ],
+   "assertion": {
+    "series": "Group 10",
+    "values": [
+     1.0,
+     0.4,
+     9.8
+    ],
+    "threshold_between": [
+     0.4,
+     9.8
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 2 threshold line or clear visual separation should show only Group 10 and RICHEST below it, with all other groups above."
+  }
+ ]
+}

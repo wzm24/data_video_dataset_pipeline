@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_6",
+ "intent_en": "To illustrate that the Bank of England base rate and average mortgage rates have fallen to historically low levels.",
+ "previous_intent": "To illustrate the long-term decline in Bank of England base rates and average mortgage rates, reaching historically low levels by 2016.",
+ "narration_support": "Ultra low interest rates... Those are historically low levels.",
+ "chart_support": "Line chart comparing the Bank of England Base Rate and Mortgage rate from 1991 to 2016, showing a general downward trend with the base rate dropping sharply near the end.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly identifies the chart as showing 'Ultra low interest rates' and 'historically low levels' for the base rate and mortgage rate, which matches the visual trend of both lines declining over the 1991-2016 period.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

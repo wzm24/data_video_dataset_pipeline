@@ -1,0 +1,273 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_145",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the unequal distribution of vaccine doses globally, highlighting that high-income countries acquired the majority of supplies while lower-income countries received very few.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "High-income countries accounted for 54.44% of the relative dose share, i.e. over half (majority).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "High income",
+     "field": "relative_value",
+     "value": 0.5444,
+     "note": "Table relative share; 0.5444 = 54.44%, above 0.5."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "High-income countries got 54.4% of doses, more than half.",
+    "Over half the doses (54.44%) went to high-income countries.",
+    "High income crossed the 50% majority threshold with a 54.44% share."
+   ],
+   "visual_evidence_rule": "The High income bar/segment must be visibly labeled 54.44% (or 54.4%) and/or shown crossing a 50% reference line.",
+   "temporal_anchor": "the narration clause that high-income/rich countries held over half / acquired the majority",
+   "reviewer_question": "Must the video explicitly show high income exceeding 50%, or is a general 'majority' label enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Lower-income countries received 270,000,000 doses, only a 3.50% relative share.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Lower income",
+     "x": "Lower income",
+     "field": "value",
+     "value": 270000000,
+     "note": "Absolute dose count for lower-income group."
+    },
+    {
+     "entity": "Lower income",
+     "x": "Lower income",
+     "field": "relative_value",
+     "value": 0.035,
+     "note": "Table relative share; 0.0350 = 3.50%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Lower-income countries received only 3.5% of doses (270 million).",
+    "Just 270 million doses went to lower-income countries, a 3.50% share.",
+    "Lower income got 270M doses, only 3.5%."
+   ],
+   "visual_evidence_rule": "The Lower income bar/segment must be labeled 270M and/or 3.5%.",
+   "temporal_anchor": "the narration clause about poor countries didn't / received very few",
+   "reviewer_question": "Is the absolute 270 million count required, or is the 3.5% share sufficient to convey 'very few'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The dose shares decline in income order: High income 54.44% > Upper middle income 13.61% > Lower middle income 5.33% > Lower income 3.50%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "High income",
+     "field": "relative_value",
+     "value": 0.5444,
+     "note": "54.44% share."
+    },
+    {
+     "entity": "Upper middle income",
+     "x": "Upper middle income",
+     "field": "relative_value",
+     "value": 0.1361,
+     "note": "13.61% share."
+    },
+    {
+     "entity": "Lower middle income",
+     "x": "Lower middle income",
+     "field": "relative_value",
+     "value": 0.0533,
+     "note": "5.33% share."
+    },
+    {
+     "entity": "Lower income",
+     "x": "Lower income",
+     "field": "relative_value",
+     "value": 0.035,
+     "note": "3.50% share."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Shares rank High 54.44% > Upper-middle 13.61% > Lower-middle 5.33% > Lower-income 3.50%.",
+    "Vaccine share falls as income group falls: 54.44%, 13.61%, 5.33%, 3.50%.",
+    "High income first with 54.44%, then upper-middle 13.61%, lower-middle 5.33%, lower-income last at 3.50%."
+   ],
+   "visual_evidence_rule": "Bars/segments must be ordered by income group and show relative-share labels in descending order.",
+   "temporal_anchor": "the overall unequal-distribution clause / rich vs poor summary",
+   "reviewer_question": "Must the animation display the full four-group ranking, or only the high-vs-low contrast?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "High-income countries received about 15.6 times as many doses as lower-income countries (4.2 billion vs 270 million).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "High income",
+     "field": "value",
+     "value": 4200000000,
+     "note": "Absolute dose count for high-income group."
+    },
+    {
+     "entity": "Lower income",
+     "x": "Lower income",
+     "field": "value",
+     "value": 270000000,
+     "note": "Absolute dose count for lower-income group."
+    }
+   ],
+   "computation": "4200000000 / 270000000 = 15.555... ≈ 15.6x",
+   "accepted_routes": [
+    "High-income countries got about 15.6 times as many doses as lower-income countries.",
+    "For every dose in lower-income countries, high-income countries got roughly 15.6.",
+    "The high-to-low dose ratio was 4.2B to 270M, or about 15.6x."
+   ],
+   "visual_evidence_rule": "Both high-income and lower-income absolute dose values must be visible and a ratio or '15.6x' annotation must connect them.",
+   "temporal_anchor": "the rich-vs-poor contrast clause",
+   "reviewer_question": "Should the animation explicitly quantify the 15.6x high-to-low dose gap, or is that optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "High-income share (54.44%) is larger than all other listed income groups combined, which total 22.44%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "High income",
+     "field": "relative_value",
+     "value": 0.5444,
+     "note": "54.44% share."
+    },
+    {
+     "entity": "Upper middle income",
+     "x": "Upper middle income",
+     "field": "relative_value",
+     "value": 0.1361,
+     "note": "13.61% share."
+    },
+    {
+     "entity": "Lower middle income",
+     "x": "Lower middle income",
+     "field": "relative_value",
+     "value": 0.0533,
+     "note": "5.33% share."
+    },
+    {
+     "entity": "Lower income",
+     "x": "Lower income",
+     "field": "relative_value",
+     "value": 0.035,
+     "note": "3.50% share."
+    }
+   ],
+   "computation": "0.1361 + 0.0533 + 0.0350 = 0.2244; 0.5444 - 0.2244 = 0.3200; 0.5444 / 0.2244 ≈ 2.43",
+   "accepted_routes": [
+    "High-income share (54.44%) exceeds the other three listed income groups combined (22.44%).",
+    "High income alone is more than twice the combined share of upper-middle, lower-middle, and lower-income groups.",
+    "The other three listed groups together have only 22.44%, versus high income's 54.44%."
+   ],
+   "visual_evidence_rule": "A combined bar/annotation for upper-middle + lower-middle + lower-income (22.44%) must be compared against the high-income bar/segment (54.44%).",
+   "temporal_anchor": "the 'held over half' / majority clause",
+   "reviewer_question": "Should the video include the high-income-vs-all-other-listed-groups comparison, or avoid it because the table's relative shares do not sum to 100%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Upper-middle-income group's relative share is 13.61%.",
+  "Lower-middle-income group received 411,000,000 doses, a 5.33% share.",
+  "High-income absolute value is 4.2 billion doses.",
+  "Lower-middle-income absolute value is 411 million doses."
+ ],
+ "unsupported_to_avoid": [
+  "16% of global population, because population data is not in the table.",
+  "Causal claims that wealth caused vaccine acquisition.",
+  "Claiming the listed relative shares sum to 100%; they sum to 76.88%.",
+  "Upper-middle-income absolute dose value, because the table leaves it blank.",
+  "Lower-income countries received zero doses; they received 270 million.",
+  "Extrapolating beyond the four listed income groups."
+ ],
+ "notes": "The strongest obligatory units are high-income majority share, lower-income low share, and the income-gradient ranking. Optional derived comparisons such as the 15.6x ratio and combined-others comparison are valid only if clearly labeled as derived from table cells.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 34.5,
+  "usage": {
+   "prompt_tokens": 733,
+   "completion_tokens": 8257,
+   "total_tokens": 8990,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6012
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 477
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

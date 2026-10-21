@@ -1,0 +1,139 @@
+{
+ "clip_id": "area_15",
+ "family": "area",
+ "chart_form": "area/overlay_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series are visibly labeled or distinguished, with a shared x/time axis and relative infection y-axis."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Fast Spread @ 31.0",
+    "extreme": "max",
+    "expected": 100.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The fast curve's peak is marked or visually readable at relative value 100 and x=31.0."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Slow Spread @ 50.0",
+    "extreme": "min",
+    "expected": 40.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The slow curve's peak is marked or visually readable at relative value 40 and x=50.0."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Fast Spread @ 31.0",
+    "mark:Slow Spread @ 50.0"
+   ],
+   "assertion": {
+    "greater": "Fast Spread @ 31.0",
+    "lesser": "Slow Spread @ 50.0",
+    "expected_ratio": 2.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both peak heights are simultaneously visible or sequentially compared on the same relative y-scale."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Fast Spread @ 31.0",
+    "mark:Slow Spread @ 50.0",
+    "mark:Fast Spread @ 62.0",
+    "mark:Slow Spread @ 100.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Fast Spread @ 31.0",
+      "value": 100.0
+     },
+     {
+      "mark": "Slow Spread @ 50.0",
+      "value": 40.0
+     },
+     {
+      "mark": "Fast Spread @ 62.0",
+      "value": 0.0
+     },
+     {
+      "mark": "Slow Spread @ 100.0",
+      "value": 0.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The x positions of both peaks and both zero endpoints are visible on the shared time axis."
+  }
+ ]
+}

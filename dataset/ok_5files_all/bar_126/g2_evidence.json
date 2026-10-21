@@ -1,0 +1,131 @@
+{
+ "clip_id": "bar_126",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1950 @ 158.5",
+    "mark:2010 @ 1171.5"
+   ],
+   "assertion": {
+    "low": "1950 @ 158.5",
+    "low_value": 150.9,
+    "high": "2010 @ 1171.5",
+    "high_value": 823.5,
+    "delta": 672.6,
+    "ratio": 5.4573,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "First bar/point (1950) is near 151 and last bar/point (2010) is near 824, with a clear overall rise."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "2010 @ 1171.5",
+    "extreme": "max",
+    "expected": 823.5,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final 2010 bar/point is the tallest and labeled with 823.5 (or rounded to 824)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2000 @ 1019.5",
+    "mark:2010 @ 1171.5"
+   ],
+   "assertion": {
+    "low": "2000 @ 1019.5",
+    "low_value": 456.0,
+    "high": "2010 @ 1171.5",
+    "high_value": 823.5,
+    "delta": 367.5,
+    "ratio": 1.8059,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible steep rise between the 2000 bar (~456) and the 2010 bar (~824)."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:2010 @ 1154.6",
+    "mark:$824 billion @ 1137.8"
+   ],
+   "assertion": {
+    "greater": "2010 @ 1154.6",
+    "lesser": "$824 billion @ 1137.8",
+    "expected_ratio": 1.0787,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final two bars/points (2010) are both taller than all previous bars; prior maximum is 742.2."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:1985 @ 766.2",
+    "mark:2000 @ 1019.5"
+   ],
+   "assertion": {
+    "greater": "1985 @ 766.2",
+    "lesser": "2000 @ 1019.5",
+    "expected_ratio": 1.4388,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bar/point around 2000 is visibly shorter than the 1985 bar/point (656.1)."
+  }
+ ]
+}

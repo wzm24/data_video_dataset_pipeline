@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#fcfcfc"/>
+<text x="640" y="62" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#222">Global carbon dioxide emissions</text>
+<text x="640" y="92" text-anchor="middle" font-family="Arial" font-size="16" fill="#555">In metric tons. Source: Our World in Data.</text>
+<rect x="370" y="588.3" width="180" height="41.7" fill="#1f6e8b"/>
+<text x="566" y="614.2" font-family="Arial" font-size="15" fill="#333">EU-28</text>
+<rect x="370" y="570.0" width="180" height="18.4" fill="#4b53a3"/>
+<text x="566" y="584.2" font-family="Arial" font-size="15" fill="#333">Europe (excluding EU-28)</text>
+<rect x="370" y="501.4" width="180" height="68.6" fill="#fde725"/>
+<text x="566" y="540.7" font-family="Arial" font-size="15" fill="#333">United States</text>
+<rect x="370" y="487.5" width="180" height="13.9" fill="#e0e1dd"/>
+<text x="566" y="499.4" font-family="Arial" font-size="15" fill="#333">North America (excluding US)</text>
+<rect x="370" y="473.5" width="180" height="13.9" fill="#1b9e77"/>
+<text x="566" y="485.5" font-family="Arial" font-size="15" fill="#333">South America</text>
+<rect x="370" y="456.4" width="180" height="17.1" fill="#2ca02c"/>
+<text x="566" y="470.0" font-family="Arial" font-size="15" fill="#333">Africa</text>
+<rect x="370" y="422.8" width="180" height="33.6" fill="#fdae6b"/>
+<text x="566" y="444.6" font-family="Arial" font-size="15" fill="#333">India</text>
+<rect x="370" y="295.4" width="180" height="127.5" fill="#d73027"/>
+<text x="566" y="364.1" font-family="Arial" font-size="15" fill="#333">China</text>
+<rect x="370" y="191.5" width="180" height="103.8" fill="#f4a582"/>
+<text x="566" y="248.4" font-family="Arial" font-size="15" fill="#333">Asia (excluding China and India)</text>
+<rect x="370" y="185.8" width="180" height="5.7" fill="#fcbba1"/>
+<text x="566" y="193.7" font-family="Arial" font-size="15" fill="#333">Oceania</text>
+<rect x="370" y="170.0" width="180" height="15.8" fill="#7f7f7f"/>
+<text x="566" y="182.9" font-family="Arial" font-size="15" fill="#333">International transport</text>
+<text x="460" y="670" text-anchor="middle" font-family="Arial" font-size="19" fill="#222">2018</text>
+<text x="356" y="168" text-anchor="end" font-family="Arial" font-size="24" font-weight="700" fill="#222">35 billion worldwide</text>
+</svg>

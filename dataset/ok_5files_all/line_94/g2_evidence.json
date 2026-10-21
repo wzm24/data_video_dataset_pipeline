@@ -1,0 +1,149 @@
+{
+ "clip_id": "line_94",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Dem/Lean Dem @ latest row (row 3)",
+    "mark:Rep/Lean Rep @ latest row (row 3)"
+   ],
+   "assertion": {
+    "greater": "Dem/Lean Dem @ latest row (row 3)",
+    "lesser": "Rep/Lean Rep @ latest row (row 3)",
+    "expected_ratio": 1.4333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both latest endpoints must be labeled or visually encoded: Dem at 86%, Rep at 60%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Dem/Lean Dem @ latest row (row 3)",
+    "mark:Rep/Lean Rep @ latest row (row 3)"
+   ],
+   "assertion": {
+    "greater": "Dem/Lean Dem @ latest row (row 3)",
+    "lesser": "Rep/Lean Rep @ latest row (row 3)",
+    "expected_ratio": 1.4333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 26-point difference at the latest point visible, e.g. by paired endpoints or a difference annotation."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Dem/Lean Dem @ earliest row (row 1)",
+    "mark:Rep/Lean Rep @ earliest row (row 1)",
+    "mark:Dem/Lean Dem @ middle row (row 2)",
+    "mark:Rep/Lean Rep @ middle row (row 2)",
+    "mark:Dem/Lean Dem @ latest row (row 3)",
+    "mark:Rep/Lean Rep @ latest row (row 3)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Dem/Lean Dem @ earliest row (row 1)",
+      "value": 23.0
+     },
+     {
+      "mark": "Rep/Lean Rep @ earliest row (row 1)",
+      "value": 16.0
+     },
+     {
+      "mark": "Dem/Lean Dem @ middle row (row 2)",
+      "value": 75.0
+     },
+     {
+      "mark": "Rep/Lean Rep @ middle row (row 2)",
+      "value": 50.0
+     },
+     {
+      "mark": "Dem/Lean Dem @ latest row (row 3)",
+      "value": 86.0
+     },
+     {
+      "mark": "Rep/Lean Rep @ latest row (row 3)",
+      "value": 60.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both party series must be shown across the row-order sequence and the gap increase must be visible, not only the final values."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Dem/Lean Dem @ earliest row (row 1)",
+    "mark:Dem/Lean Dem @ latest row (row 3)",
+    "mark:Rep/Lean Rep @ earliest row (row 1)",
+    "mark:Rep/Lean Rep @ latest row (row 3)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Dem/Lean Dem @ earliest row (row 1)",
+      "value": 23.0
+     },
+     {
+      "mark": "Dem/Lean Dem @ latest row (row 3)",
+      "value": 86.0
+     },
+     {
+      "mark": "Rep/Lean Rep @ earliest row (row 1)",
+      "value": 16.0
+     },
+     {
+      "mark": "Rep/Lean Rep @ latest row (row 3)",
+      "value": 60.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, chart must show at least earliest and latest values for both groups."
+  }
+ ]
+}

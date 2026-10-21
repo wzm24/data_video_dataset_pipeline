@@ -1,0 +1,319 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_154",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the increasing trend of very unfavorable attitudes between Democrats and Republicans towards each other from 1994 to 2016.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data contains two distinct series tracked at the same four time points: 1994, 2008, 2014, and 2016.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1492,
+     "note": "Defines Series A as the row with this 1994 relative_value."
+    },
+    {
+     "entity": "Series B",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1585,
+     "note": "Defines Series B as the row with this 1994 relative_value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Two separate series are compared across 1994, 2008, 2014, and 2016.",
+    "The chart has two party-attitude trajectories over the same four years.",
+    "Both series share the same four time points."
+   ],
+   "visual_evidence_rule": "Both series must be visibly present and aligned to the same four year labels.",
+   "temporal_anchor": "the opening comparison between the two parties' attitudes",
+   "reviewer_question": "Must the clip explicitly show or state that there are two series over the same four years, or is this implied by the chart?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Both series have a higher relative_value in 2016 than in 1994, showing an overall upward trend.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1492,
+     "note": "start point for overall change"
+    },
+    {
+     "entity": "Series A",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5129,
+     "note": "end point for overall change"
+    },
+    {
+     "entity": "Series B",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1585,
+     "note": "start point for overall change"
+    },
+    {
+     "entity": "Series B",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5408,
+     "note": "end point for overall change"
+    }
+   ],
+   "computation": "Series A change = 0.5129 - 0.1492 = 0.3637; Series B change = 0.5408 - 0.1585 = 0.3823",
+   "accepted_routes": [
+    "Both series rise from 1994 to 2016.",
+    "The 2016 relative_value is higher than the 1994 relative_value for both series.",
+    "Each series shows an upward trajectory over the full period."
+   ],
+   "visual_evidence_rule": "Both series must show an increase from the first time point to the last.",
+   "temporal_anchor": "the clause describing the 1994-to-2016 trend",
+   "reviewer_question": "Is the overall 1994-to-2016 increase for both series required, or is only one party's trend required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Within each series, relative_value increases at every successive measured year: 1994 < 2008 < 2014 < 2016.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1492,
+     "note": "first measured year in Series A"
+    },
+    {
+     "entity": "Series A",
+     "x": "2008",
+     "field": "relative_value",
+     "value": 0.345,
+     "note": "second measured year in Series A"
+    },
+    {
+     "entity": "Series A",
+     "x": "2014",
+     "field": "relative_value",
+     "value": 0.401,
+     "note": "third measured year in Series A"
+    },
+    {
+     "entity": "Series A",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5129,
+     "note": "fourth measured year in Series A"
+    },
+    {
+     "entity": "Series B",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1585,
+     "note": "first measured year in Series B"
+    },
+    {
+     "entity": "Series B",
+     "x": "2008",
+     "field": "relative_value",
+     "value": 0.2985,
+     "note": "second measured year in Series B"
+    },
+    {
+     "entity": "Series B",
+     "x": "2014",
+     "field": "relative_value",
+     "value": 0.429,
+     "note": "third measured year in Series B"
+    },
+    {
+     "entity": "Series B",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5408,
+     "note": "fourth measured year in Series B"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Values rise at each measured step for both series.",
+    "1994 < 2008 < 2014 < 2016 for both series.",
+    "No measured year is lower than the previous measured year in either series."
+   ],
+   "visual_evidence_rule": "Each series must show monotonic upward progression across the four displayed time points.",
+   "temporal_anchor": "the clauses listing 2008, 2014, and 2016 increases",
+   "reviewer_question": "Must the clip convey step-by-step monotonic increase, or is a single start-to-end upward trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "For both series, the maximum relative_value in the displayed period occurs at 2016: 0.5129 for Series A and 0.5408 for Series B.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5129,
+     "note": "maximum in Series A; earlier values are 0.1492, 0.3450, 0.4010"
+    },
+    {
+     "entity": "Series B",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5408,
+     "note": "maximum in Series B; earlier values are 0.1585, 0.2985, 0.4290"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2016 value is the highest for each series.",
+    "Both series peak in 2016.",
+    "The displayed period ends at the series highs: 0.5129 and 0.5408."
+   ],
+   "visual_evidence_rule": "The final year 2016 must be visibly the highest point in both series.",
+   "temporal_anchor": "the clause stating the current 2016 attitudes",
+   "reviewer_question": "Is it required to identify 2016 as the peak for both series, or only to show an increase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The two series have similar total increases from 1994 to 2016, but the series ending at 0.5408 has a slightly larger relative_value gain (0.3823) than the series ending at 0.5129 (0.3637).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1492,
+     "note": "start point for total gain"
+    },
+    {
+     "entity": "Series A",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5129,
+     "note": "end point for total gain"
+    },
+    {
+     "entity": "Series B",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1585,
+     "note": "start point for total gain"
+    },
+    {
+     "entity": "Series B",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5408,
+     "note": "end point for total gain"
+    }
+   ],
+   "computation": "Series A gain = 0.5129 - 0.1492 = 0.3637; Series B gain = 0.5408 - 0.1585 = 0.3823; difference = 0.0186",
+   "accepted_routes": [
+    "Both series rise by more than 0.36 relative_value units from 1994 to 2016; the 0.5408-ending series rises slightly more (0.3823 vs 0.3637).",
+    "The total 1994-to-2016 increase is similar, with the higher-2016 series gaining 0.3823 and the other 0.3637.",
+    "The series ending at 0.5408 has the larger total gain (0.3823 vs 0.3637)."
+   ],
+   "visual_evidence_rule": "The change from first to last point should be visibly comparable between the two series, with one slightly larger overall.",
+   "temporal_anchor": "the clause that says the other party followed a similar trajectory",
+   "reviewer_question": "Is the cross-series comparison of total 1994-to-2016 change required, or optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Ordering flip: Series A is higher than Series B at 2008 (0.3450 vs 0.2985), while Series B is higher at 1994 (0.1585 vs 0.1492), 2014 (0.4290 vs 0.4010), and 2016 (0.5408 vs 0.5129).",
+  "Largest annualized relative_value increase for both series occurs in the shortest final interval 2014–2016 (Series A: (0.5129 - 0.4010) / 2 = 0.05595 per year; Series B: (0.5408 - 0.4290) / 2 = 0.0559 per year)."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute percentage or count from the narration, such as 58%, 55%, 46%, or 32%, because the table has only relative_value.",
+  "Causal explanations for why very unfavorable attitudes increased.",
+  "Extrapolating the trend after 2016.",
+  "Assigning Series A or Series B to Democrats or Republicans without a party label in the table; the table identifies years only.",
+  "Any statement about colors, positions, axis ticks, chart type, or rendering."
+ ],
+ "notes": "Series A is defined by the 1994 relative_value of 0.1492 and Series B by the 1994 value 0.1585 to avoid using layout or color. All cited numbers are relative_value or arithmetic differences of relative_value.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 48.0,
+  "usage": {
+   "prompt_tokens": 1037,
+   "completion_tokens": 12252,
+   "total_tokens": 13289,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9582
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 653
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

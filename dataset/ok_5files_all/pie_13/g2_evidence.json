@@ -1,0 +1,133 @@
+{
+ "clip_id": "pie_13",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "H @ slice-1",
+    "extreme": "max",
+    "expected": 89.6,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart must show hydrogen as the largest slice/component with a label around 89.6% or 90%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:He @ slice-2"
+   ],
+   "assertion": {
+    "segment": "He @ slice-2",
+    "expected_share": 0.104,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart must show helium as a smaller slice/component with a label around 10.4% or 10%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:H @ slice-1",
+    "mark:He @ slice-2"
+   ],
+   "assertion": {
+    "greater": "H @ slice-1",
+    "lesser": "He @ slice-2",
+    "expected_ratio": 8.6154,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio annotation, relative slice-size cue, or explicit statement comparing H and He must be visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:H @ slice-1",
+    "segment:He @ slice-2"
+   ],
+   "assertion": {
+    "segment": "H @ slice-1",
+    "expected_share": 0.896,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a pie/donut is used, H and He slices together fill the chart or are labeled as summing to 100.0%; if bars, labels show the two components cover the full table."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:H @ slice-1",
+    "mark:He @ slice-2"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "H @ slice-1",
+      "value": 89.6
+     },
+     {
+      "mark": "He @ slice-2",
+      "value": 10.4
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must place hydrogen above or before helium by size, order, or explicit ranking."
+  }
+ ]
+}

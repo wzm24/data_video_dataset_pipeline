@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#111111"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="554.9" x2="1220" y2="554.9" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="509.8" x2="1220" y2="509.8" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="464.7" x2="1220" y2="464.7" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="419.6" x2="1220" y2="419.6" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="374.5" x2="1220" y2="374.5" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="329.4" x2="1220" y2="329.4" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="284.3" x2="1220" y2="284.3" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="239.2" x2="1220" y2="239.2" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="194.1" x2="1220" y2="194.1" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="149.0" x2="1220" y2="149.0" stroke="#888888" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="tick" x1="112" y1="554.9" x2="120" y2="554.9" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="560.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">1</text>
+<line data-role="tick" x1="112" y1="509.8" x2="120" y2="509.8" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="515.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">2</text>
+<line data-role="tick" x1="112" y1="464.7" x2="120" y2="464.7" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="470.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">3</text>
+<line data-role="tick" x1="112" y1="419.6" x2="120" y2="419.6" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="425.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">4</text>
+<line data-role="tick" x1="112" y1="374.5" x2="120" y2="374.5" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="380.5" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">5</text>
+<line data-role="tick" x1="112" y1="329.4" x2="120" y2="329.4" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="335.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">6</text>
+<line data-role="tick" x1="112" y1="284.3" x2="120" y2="284.3" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="290.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">7</text>
+<line data-role="tick" x1="112" y1="239.2" x2="120" y2="239.2" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="245.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">8</text>
+<line data-role="tick" x1="112" y1="194.1" x2="120" y2="194.1" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="200.1" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">9</text>
+<line data-role="tick" x1="112" y1="149.0" x2="120" y2="149.0" stroke="#888888" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="155.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#888888">10%</text>
+<g id="entity-base-rate-bank-of-england" data-role="entity" data-entity-id="base-rate-bank-of-england" data-label="Base Rate Bank of England" data-series="true">
+<polyline id="base-rate-bank-of-england-polyline" data-role="polyline" data-entity-id="base-rate-bank-of-england" points="120.0,140.0 142.0,329.4 164.0,365.5 190.4,365.5 216.8,302.4 243.2,302.4 269.6,352.0 296.0,352.0 322.4,302.4 348.8,266.3 375.2,266.3 401.6,370.0 428.0,370.0 454.4,329.4 480.8,329.4 507.2,419.6 533.6,419.6 560.0,442.2 586.4,442.2 612.8,385.8 639.2,385.8 665.6,442.2 692.0,442.2 718.4,385.8 744.8,385.8 771.2,340.7 797.6,340.7 824.0,340.7 850.4,577.5 876.8,577.5 903.2,577.5 929.6,577.5 956.0,577.5 982.4,577.5 1008.8,577.5 1035.2,577.5 1061.6,577.5 1088.0,577.5 1114.4,577.5 1140.8,577.5 1167.2,577.5 1193.6,577.5 1220.0,588.7" fill="none" stroke="#ffffff" stroke-width="3" data-animation-property="points"/>
+</g>
+<g id="entity-mortgage-rate-example-5-year-fixed-75-ltv" data-role="entity" data-entity-id="mortgage-rate-example-5-year-fixed-75-ltv" data-label="Mortgage rate (Example: 5 year fixed, 75% LTV)" data-series="true">
+<polyline id="mortgage-rate-example-5-year-fixed-75-ltv-polyline" data-role="polyline" data-entity-id="mortgage-rate-example-5-year-fixed-75-ltv" points="186.0,171.6 212.4,216.7 238.8,230.2 265.2,239.2 291.6,230.2 318.0,248.2 344.4,261.8 370.8,275.3 397.2,284.3 423.6,293.3 450.0,329.4 476.4,352.0 502.8,338.4 529.2,329.4 555.6,352.0 582.0,374.5 608.4,397.1 634.8,383.5 661.2,365.5 687.6,374.5 714.0,352.0 740.4,365.5 766.8,338.4 793.2,320.4 819.6,352.0 846.0,338.4 872.4,374.5 898.8,383.5 925.2,397.1 951.6,410.6 978.0,397.1 1004.4,410.6 1030.8,428.6 1057.2,442.2 1083.6,428.6 1110.0,455.7 1123.2,442.2 1220.0,500.8" fill="none" stroke="#e85d5d" stroke-width="3" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#d4a373">1991</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#d4a373">2016</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#ffffff" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#d4a373">Base Rate Bank of England</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#e85d5d" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#d4a373">Mortgage rate (Example: 5 year fixed, 75% LTV)</text>
+</g>
+</svg>

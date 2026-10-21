@@ -1,0 +1,377 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_75",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that music industry revenue has significantly declined since the late 1990s peak and that the transition to digital formats has not immediately replaced the revenue lost from the decline of physical media like CDs.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The dominant format in the early 1980s shifts from LP/EP/8-Track in 1982 to cassette from 1983 through 1987.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "LP/EP/8-Track",
+     "x": "1982",
+     "field": "relative_value",
+     "value": 0.5635,
+     "note": "largest in 1982"
+    },
+    {
+     "entity": "Cassette",
+     "x": "1982",
+     "field": "relative_value",
+     "value": 0.4048,
+     "note": "second in 1982"
+    },
+    {
+     "entity": "CD",
+     "x": "1982",
+     "field": "relative_value",
+     "value": 0.0317,
+     "note": "smallest in 1982"
+    },
+    {
+     "entity": "Cassette",
+     "x": "1983",
+     "field": "relative_value",
+     "value": 0.4958,
+     "note": "largest in 1983"
+    },
+    {
+     "entity": "LP/EP/8-Track",
+     "x": "1983",
+     "field": "relative_value",
+     "value": 0.4629,
+     "note": "second in 1983"
+    },
+    {
+     "entity": "Cassette",
+     "x": "1987",
+     "field": "relative_value",
+     "value": 0.48,
+     "note": "still largest in 1987"
+    },
+    {
+     "entity": "CD",
+     "x": "1987",
+     "field": "relative_value",
+     "value": 0.3769,
+     "note": "still below cassette in 1987"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "LP/EP/8-Track is the largest format in 1982; cassette becomes the largest from 1983 and stays on top through 1987.",
+    "In 1982 vinyl/8-track leads, but cassette overtakes it in 1983.",
+    "The early 1980s start with LP/EP/8-Track as the top format, then cassette takes the lead."
+   ],
+   "visual_evidence_rule": "The visual encoding must make the 1982-to-1983 crossover from LP/EP/8-Track to cassette visible, and show cassette as largest through 1987.",
+   "temporal_anchor": "If we break it down by format, first LPs, EPs, and 8 tracks, then cassettes...",
+   "reviewer_question": "Should the clip be required to show the early LP/EP/8-Track-to-cassette handoff, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "CD overtakes cassette in 1988 and remains the largest single format through 2006.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CD",
+     "x": "1987",
+     "field": "relative_value",
+     "value": 0.3769,
+     "note": "still below cassette in 1987"
+    },
+    {
+     "entity": "Cassette",
+     "x": "1987",
+     "field": "relative_value",
+     "value": 0.48,
+     "note": "largest in 1987"
+    },
+    {
+     "entity": "CD",
+     "x": "1988",
+     "field": "relative_value",
+     "value": 0.4671,
+     "note": "overtakes cassette"
+    },
+    {
+     "entity": "Cassette",
+     "x": "1988",
+     "field": "relative_value",
+     "value": 0.4488,
+     "note": "falls below CD"
+    },
+    {
+     "entity": "CD",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.5058,
+     "note": "still largest single format in 2006"
+    },
+    {
+     "entity": "Digital",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.485,
+     "note": "still below CD in 2006"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "CD becomes the largest format in 1988 and stays largest until 2006.",
+    "After 1987, CD is the top single format for nearly two decades.",
+    "CD takes over from cassette in 1988 and is still the biggest single format as late as 2006."
+   ],
+   "visual_evidence_rule": "The chart must show CD overtaking cassette around 1988 and remaining above other individual formats through 2006.",
+   "temporal_anchor": "first LPs, EPs, and 8 tracks, then cassettes, CDs, and later digital",
+   "reviewer_question": "Is the CD-dominance period from 1988 to 2006 required, or can the clip show only the later decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "CD’s relative_value peaks in 1998 at 0.96, then declines to 0.2001 by 2013, ending at about one-fifth of its peak.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CD",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "highest CD relative_value"
+    },
+    {
+     "entity": "CD",
+     "x": "1999",
+     "field": "relative_value",
+     "value": 0.9209,
+     "note": "decline begins after 1998"
+    },
+    {
+     "entity": "CD",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.2001,
+     "note": "endpoint"
+    }
+   ],
+   "computation": "2013 CD relative_value / 1998 CD relative_value = 0.2001 / 0.96 ≈ 0.2085; so 2013 is about one-fifth of the 1998 peak.",
+   "accepted_routes": [
+    "CD peaks in 1998 at 0.96 and falls to 0.2001 by 2013.",
+    "After 1998, CD’s relative_value drops to about one-fifth of its peak by 2013.",
+    "CD’s highest relative_value is 1998; by 2013 it is roughly a fifth of that level."
+   ],
+   "visual_evidence_rule": "The chart must make the 1998 CD peak and the subsequent downward path to 2013 visible.",
+   "temporal_anchor": "But then the numbers just start falling",
+   "reviewer_question": "Should the CD peak be anchored to 1998, as the table shows, rather than to the narration’s 1999 total-revenue peak?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Digital first appears in 1998 at 0.002, grows, overtakes CD in 2007, and reaches 0.7637 by 2013.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.002,
+     "note": "first appears"
+    },
+    {
+     "entity": "Digital",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.5561,
+     "note": "overtakes CD"
+    },
+    {
+     "entity": "CD",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.4349,
+     "note": "falls below digital"
+    },
+    {
+     "entity": "Digital",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.7637,
+     "note": "about three-quarters"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Digital is negligible in 1998, becomes the largest format in 2007, and is about three-quarters of the mix by 2013.",
+    "Digital emerges in 1998, passes CD in 2007, and continues rising through 2013.",
+    "The digital format starts near zero in 1998 and is the top format from 2007 onward."
+   ],
+   "visual_evidence_rule": "The chart must show digital’s first appearance in 1998, its rise, and the 2007 crossover above CD.",
+   "temporal_anchor": "later digital... Nothing replaces the CD. At least not immediately.",
+   "reviewer_question": "Is the digital rise and 2007 crossover required, or optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Digital stays below all physical formats combined through 2006 and only overtakes that combined physical total in 2007; this supports the “not immediately” replacement claim.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.485,
+     "note": "below combined physical"
+    },
+    {
+     "entity": "CD",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.5058,
+     "note": "physical component"
+    },
+    {
+     "entity": "Cassette",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.0042,
+     "note": "physical component"
+    },
+    {
+     "entity": "LP/EP/8-Track",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.0051,
+     "note": "physical component"
+    },
+    {
+     "entity": "Digital",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.5561,
+     "note": "above combined physical"
+    },
+    {
+     "entity": "CD",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.4349,
+     "note": "physical component"
+    },
+    {
+     "entity": "Cassette",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.003,
+     "note": "physical component"
+    },
+    {
+     "entity": "LP/EP/8-Track",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.006,
+     "note": "physical component"
+    }
+   ],
+   "computation": "2006 physical sum = 0.5058 + 0.0042 + 0.0051 = 0.5151; digital 0.485 < 0.5151. 2007 physical sum = 0.4349 + 0.003 + 0.006 = 0.4439; digital 0.5561 > 0.4439.",
+   "accepted_routes": [
+    "Digital is below all physical formats combined in 2006 and above them in 2007.",
+    "For 1998-2006, digital has not yet overtaken physical formats combined; the crossover is 2007.",
+    "The combined physical formats remain larger than digital until 2007."
+   ],
+   "visual_evidence_rule": "The chart must make the 2006-to-2007 threshold visible: digital moves from below the sum of physical formats to above it.",
+   "temporal_anchor": "Nothing replaces the CD. At least not immediately.",
+   "reviewer_question": "Should the benchmark require the combined-physical-vs-digital crossover, or is the simpler CD-vs-digital crossover enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Cassette’s relative_value falls from 0.566 in 1985 to 0.0008 in 2011.",
+  "LP/EP/8-Track’s relative_value falls from 0.5635 in 1982 to 0.003 in 1996.",
+  "CD remains larger than digital in every year from digital’s 1998 appearance through 2006."
+ ],
+ "unsupported_to_avoid": [
+  "Total music revenue or inflation-adjusted earnings; the table has no absolute value column.",
+  "1999 as a peak for the table’s relative values; the CD relative_value peaks in 1998.",
+  "Percentages, dollar amounts, counts, or shares of total revenue stated as absolute quantities.",
+  "Causal explanations such as piracy or streaming causing the decline.",
+  "Claims that digital fully replaced lost physical revenue.",
+  "Chart type, colors, positions, axis ticks, or scales."
+ ],
+ "notes": "The table only provides within-year relative format values, so all units focus on ordering, composition, trend, and crossovers rather than total revenue. The required core is the CD peak/decline and the delayed digital replacement, while early LP/cassette history is optional context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 52.2,
+  "usage": {
+   "prompt_tokens": 5526,
+   "completion_tokens": 13145,
+   "total_tokens": 18671,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10795
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 5014
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

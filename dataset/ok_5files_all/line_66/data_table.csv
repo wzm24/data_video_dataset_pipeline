@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_66,global deaths,global-deaths,170.0,,0.0000,0.0000,,#ff5c5c,estimated
+line_66,global deaths,global-deaths,253.3,,0.2800,0.1121,,#ff5c5c,estimated
+line_66,global deaths,global-deaths,420.0,,0.5200,0.2079,,#ff5c5c,estimated
+line_66,global deaths,global-deaths,586.7,,0.7800,0.3121,,#ff5c5c,estimated
+line_66,global deaths,global-deaths,670.0,,1.0000,0.4000,,#ff5c5c,estimated
+line_66,global deaths,global-deaths,836.7,,1.3500,0.5400,,#ff5c5c,estimated
+line_66,global deaths,global-deaths,1003.3,,1.9500,0.7800,,#ff5c5c,estimated
+line_66,global deaths,global-deaths,1170.0,,2.5000,1.0000,,#ff5c5c,printed

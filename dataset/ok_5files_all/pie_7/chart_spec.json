@@ -1,0 +1,23 @@
+{
+ "clip_id": "pie_7",
+ "family": "pie",
+ "sub_type": "multi_pie",
+ "orientation": "radial",
+ "slice_count": 4,
+ "ring_count": 1,
+ "arc_count": 4,
+ "arc_total_deg": 720,
+ "panel_count": 2,
+ "has_axis": false,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 0,
+ "row_count": 4,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "high",
+ "needs_review": true,
+ "time_behavior": "snapshot"
+}

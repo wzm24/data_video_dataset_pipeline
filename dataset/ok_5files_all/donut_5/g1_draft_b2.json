@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_5",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To emphasize the substantial scale of the independent workforce in the United States.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The U.S. independent workforce is 68 million people.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "independent workers",
+     "x": "workers",
+     "field": "value",
+     "value": 68.0,
+     "note": "printed value in millions"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "68 million independent workers in the U.S.",
+    "U.S. independent workforce: 68 million",
+    "There are 68M independent workers in the United States.",
+    "The U.S. has 68 million independent workers."
+   ],
+   "visual_evidence_rule": "The independent-worker segment must be labeled 68M/68 million or the annotation must state it.",
+   "temporal_anchor": "the narration clause 'who there are now 68 million of in the U.S. alone'",
+   "reviewer_question": "Is the absolute 68M figure mandatory to convey substantial scale?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Independent workers make up 32% of the total shown in the donut.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "independent workers",
+     "x": "workers",
+     "field": "relative_value",
+     "value": 0.32,
+     "note": "share as decimal; 32%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Independent workers are 32% of the total.",
+    "Independent workers make up about one-third of the total.",
+    "32% share for the independent workforce.",
+    "Roughly 32% of the donut is independent workers."
+   ],
+   "visual_evidence_rule": "The independent segment must be labeled 32% or be visually about one-third of the donut.",
+   "temporal_anchor": "the independent-worker clause; if narration is expanded, the '68 million' clause should carry the share label.",
+   "reviewer_question": "Should the 32% share be required, or is 68M alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The other/remainder group accounts for 68% of the total.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "other",
+     "x": "other",
+     "field": "relative_value",
+     "value": 0.68,
+     "note": "complement share as decimal; 68%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Other workers are 68% of the total.",
+    "The remaining share is 68%.",
+    "Non-independent/other is 68%.",
+    "Other accounts for about two-thirds."
+   ],
+   "visual_evidence_rule": "The other segment must be labeled 68% or complement the 32% independent segment.",
+   "temporal_anchor": "same narration clause as the 68M figure, if the chart labels both segments.",
+   "reviewer_question": "Is the complementary 68% other share optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Independent workers are a minority relative to other workers: 32% vs 68%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "independent workers",
+     "x": "workers",
+     "field": "relative_value",
+     "value": 0.32,
+     "note": "independent share"
+    },
+    {
+     "entity": "other",
+     "x": "other",
+     "field": "relative_value",
+     "value": 0.68,
+     "note": "other share"
+    }
+   ],
+   "computation": "32% vs 68% (or 0.32 vs 0.68)",
+   "accepted_routes": [
+    "Independent workers are 32%, while other workers are 68%.",
+    "The independent workforce is a minority at 32%, compared with 68% other.",
+    "32% independent vs. 68% other.",
+    "Independent workers are less than half the other group's share."
+   ],
+   "visual_evidence_rule": "Both donut segments must be visible/labeled so the 32% and 68% comparison is legible.",
+   "temporal_anchor": "the independent-worker clause if the video adds the comparative split.",
+   "reviewer_question": "Should the video explicitly compare independent vs other shares?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The implied total denominator is 212.5 million workers, computed from 68M being 32% of the whole.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "independent workers",
+     "x": "workers",
+     "field": "value",
+     "value": 68.0,
+     "note": "68 million"
+    },
+    {
+     "entity": "independent workers",
+     "x": "workers",
+     "field": "relative_value",
+     "value": 0.32,
+     "note": "32% share"
+    }
+   ],
+   "computation": "68 / 0.32 = 212.5 million",
+   "accepted_routes": [
+    "Implied total of 212.5 million workers.",
+    "68M is 32% of about 212.5M.",
+    "The denominator is roughly 213 million.",
+    "Total base for the donut is about 212.5 million."
+   ],
+   "visual_evidence_rule": "Only valid if the chart/annotation derives or shows a total; the donut must not mislabel 68M as the total.",
+   "temporal_anchor": "optional extension of the '68 million' clause; not stated in reference narration.",
+   "reviewer_question": "Should the derived total denominator be allowed or kept out as beyond the narration?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The U.S.-only scope of the 68M independent-worker figure.",
+  "The other segment's implied absolute size of about 144.5M is valid but optional, using 68 / 0.32 * 0.68.",
+  "The independent segment can be described as roughly one-third of the donut."
+ ],
+ "unsupported_to_avoid": [
+  "68 million is 68% of the workforce.",
+  "Independent workers are the majority.",
+  "The rise of remote/freelance work caused the 68M figure.",
+  "Extrapolating beyond the U.S. or to future years.",
+  "Treating the 68% other share as independent workers.",
+  "Using a denominator other than the donut total for the 32% share.",
+  "Claiming all 68M are remote or freelance workers."
+ ],
+ "notes": "The 32% and 68% shares sum to 1.00 and imply a 212.5M total (68/0.32); however, the clip intent only strictly requires conveying the 68M independent-worker scale. Reviewer should decide whether the share, complement, comparison, and derived total are required or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 33.7,
+  "usage": {
+   "prompt_tokens": 623,
+   "completion_tokens": 7829,
+   "total_tokens": 8452,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6173
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 367
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

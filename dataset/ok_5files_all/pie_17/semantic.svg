@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#2b2e33"/>
+<text x="640" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#222222">Oxygen distribution</text>
+<text x="1220" y="60" text-anchor="end" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#333333">Vox</text>
+<path d="M 429 346 L 428.8 128.0 A 217.6 217.6 0 0 1 617.2 236.8 Z" fill="#7BC686" stroke="#ffffff" stroke-width="2"/>
+<line x1="525" y1="180" x2="559" y2="121" stroke="#9a9a9a" stroke-width="2"/>
+<text x="571" y="130" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#ffffff">Medical purposes</text>
+<path d="M 429 346 L 617.2 236.8 A 217.6 217.6 0 1 1 428.8 128.0 Z" fill="#FBCB8D" stroke="#ffffff" stroke-width="2"/>
+<line x1="333" y1="511" x2="299" y2="570" stroke="#9a9a9a" stroke-width="2"/>
+<text x="287" y="579" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#ffffff">Commercial</text>
+</svg>

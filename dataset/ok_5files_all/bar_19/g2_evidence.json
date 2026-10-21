@@ -1,0 +1,112 @@
+{
+ "clip_id": "bar_19",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Temperature)"
+   ],
+   "assertion": {
+    "mark": "Max temperature @ Temperature",
+    "extreme": "max",
+    "expected": 437.0,
+    "compared_set": "Temperature",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar or label for Max temperature must show 437°C (or 437)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Temperature)"
+   ],
+   "assertion": {
+    "mark": "Min temperature @ Temperature",
+    "extreme": "min",
+    "expected": -173.0,
+    "compared_set": "Temperature",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar or label for Min temperature must show -173°C (or -173)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Max temperature @ Temperature",
+    "mark:Min temperature @ Temperature"
+   ],
+   "assertion": {
+    "low": "Min temperature @ Temperature",
+    "low_value": -173.0,
+    "high": "Max temperature @ Temperature",
+    "high_value": 437.0,
+    "delta": 610.0,
+    "ratio": -2.526,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 437°C and -173°C must be visible, and the 610°C span must be annotated or directly inferable from the axis."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Max temperature @ Temperature",
+    "mark:Min temperature @ Temperature"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Max temperature @ Temperature",
+      "value": 437.0
+     },
+     {
+      "mark": "Min temperature @ Temperature",
+      "value": -173.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must visually place Max above/greater than Min, e.g., 437°C bar/label vs -173°C bar/label."
+  }
+ ]
+}

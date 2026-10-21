@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#000000"/>
+<text x="336.0" y="238.0" text-anchor="end" font-family="Arial" font-size="34" font-weight="700" fill="#ffffff">HIROSHIMA</text>
+<rect x="360.0" y="204.0" width="258.8" height="52" fill="#d48c8c"/>
+<rect x="618.8" y="204.0" width="621.2" height="52" fill="#e0e0e0"/>
+<text x="372.0" y="237.0" font-family="Arial" font-size="20" font-weight="700" fill="#000000">100k killed</text>
+<text x="630.8" y="237.0" font-family="Arial" font-size="20" fill="#222222">survived</text>
+<text x="1224.0" y="237.0" text-anchor="end" font-family="Arial" font-size="24" font-weight="700" fill="#222222">340k</text>
+<text x="336.0" y="468.0" text-anchor="end" font-family="Arial" font-size="34" font-weight="700" fill="#ffffff">NAGASAKI</text>
+<rect x="360.0" y="434.0" width="217.5" height="52" fill="#d48c8c"/>
+<rect x="577.5" y="434.0" width="662.5" height="52" fill="#e0e0e0"/>
+<text x="372.0" y="467.0" font-family="Arial" font-size="20" font-weight="700" fill="#000000">65k killed</text>
+<text x="589.5" y="467.0" font-family="Arial" font-size="20" fill="#222222">survived</text>
+<text x="1224.0" y="467.0" text-anchor="end" font-family="Arial" font-size="24" font-weight="700" fill="#222222">263k</text>
+</svg>

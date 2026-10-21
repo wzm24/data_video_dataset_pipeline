@@ -1,0 +1,230 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_19",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the projected population growth in Sub-Saharan Africa by 2100 and the significant challenges this demographic expansion poses.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "By 2100, the lower projection for Sub-Saharan Africa is 2.70 billion people.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "population lower",
+     "x": "2100",
+     "field": "value",
+     "value": 2.7,
+     "note": "lower scenario endpoint at 2100"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lower projection reaches about 2.7 billion people by 2100",
+    "In the low scenario, Sub-Saharan Africa has 2.70 billion people in 2100",
+    "A conservative projection puts the 2100 population near 2.7 billion"
+   ],
+   "visual_evidence_rule": "The lower projection line must end at 2100 at a y-value of 2.70 billion, or be labeled with 2.70B.",
+   "temporal_anchor": "the clause about some projections expecting around 2.7 billion by 2100",
+   "reviewer_question": "Should the required 2100 lower value be 2.70 billion from the table, or may a rounded narration value be accepted?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "By 2100, the upper projection for Sub-Saharan Africa is 5.00 billion people.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "population upper",
+     "x": "2100",
+     "field": "value",
+     "value": 5.0,
+     "note": "upper scenario endpoint at 2100"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The upper projection reaches 5 billion people by 2100",
+    "Up to 5 billion by 2100",
+    "The high scenario ends at 5.00 billion in 2100"
+   ],
+   "visual_evidence_rule": "The upper projection line must end at 2100 at a y-value of 5.00 billion, or be labeled with 5.00B.",
+   "temporal_anchor": "the clause about others reckoning with up to 5 billion by 2100",
+   "reviewer_question": "Is exact 5.00 billion required, or is 'up to 5 billion' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The lower projection grows from 0.10 billion in 1950 to 2.70 billion in 2100, an increase of 2.60 billion.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "population lower",
+     "x": "1950",
+     "field": "value",
+     "value": 0.1,
+     "note": "start of lower series"
+    },
+    {
+     "entity": "population lower",
+     "x": "2100",
+     "field": "value",
+     "value": 2.7,
+     "note": "end of lower series"
+    }
+   ],
+   "computation": "2.70 - 0.10 = 2.60; 2.70 / 0.10 = 27.0",
+   "accepted_routes": [
+    "The lower scenario rises from 0.10 billion in 1950 to 2.70 billion in 2100, a 2.60 billion increase",
+    "Sub-Saharan Africa's low projection grows about 27-fold over 1950–2100",
+    "The low projection adds 2.6 billion people between 1950 and 2100"
+   ],
+   "visual_evidence_rule": "The lower projection line must visibly start near 0.10B in 1950 and rise to 2.70B in 2100, with the increase or multiple indicated.",
+   "temporal_anchor": "the opening or growth clause before the 2100 endpoints",
+   "reviewer_question": "Must the video show the full 1950–2100 growth trajectory, or are the two 2100 endpoints enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The lower projection reaches the 2.00 billion milestone in 2060.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "population lower",
+     "x": "2060",
+     "field": "value",
+     "value": 2.0,
+     "note": "lower scenario equals 2.00 billion in 2060"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lower scenario hits 2 billion people in 2060",
+    "By 2060, the low projection is 2.00 billion",
+    "The low projection crosses the 2-billion mark at 2060"
+   ],
+   "visual_evidence_rule": "The lower projection line must touch or cross the 2.00B level at the 2060 tick.",
+   "temporal_anchor": "optional mid-timeline milestone during the growth animation",
+   "reviewer_question": "Is the 2060 / 2.00B milestone worth requiring, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At 2100, the upper projection exceeds the lower projection by 2.30 billion people, and the lower is about 54% of the upper.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "population upper",
+     "x": "2100",
+     "field": "value",
+     "value": 5.0,
+     "note": "upper endpoint"
+    },
+    {
+     "entity": "population lower",
+     "x": "2100",
+     "field": "value",
+     "value": 2.7,
+     "note": "lower endpoint"
+    }
+   ],
+   "computation": "5.00 - 2.70 = 2.30; 2.70 / 5.00 = 0.54; 5.00 / 2.70 ≈ 1.85",
+   "accepted_routes": [
+    "At 2100, the high projection is 2.30 billion people above the low projection",
+    "The 2100 high scenario is nearly twice the low scenario, about 1.85x",
+    "The lower 2100 endpoint is a little over half, about 54%, of the upper endpoint"
+   ],
+   "visual_evidence_rule": "The chart must show both 2100 endpoints together, with either the gap (2.30B), ratio (about 1.85x), or share (54%) annotated.",
+   "temporal_anchor": "the contrast between the two 2100 projection values",
+   "reviewer_question": "Should the video explicitly quantify the 2100 gap or ratio between scenarios, or are the two endpoint values enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Upper projection from 2019 to 2100 rises from 1.25 to 5.00 billion, an increase of 3.75 billion (5.00 - 1.25).",
+  "Lower projection is 1.24 billion in 2024.",
+  "Upper projection reaches 2.00 billion in 2047."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that population growth itself causes specific challenges unless the narration or table supports them.",
+  "Extrapolating past 2100 or claiming continued growth beyond 5.00B.",
+  "Using the narration's rounded lower-2100 value as if it were the table's exact lower endpoint; the table says 2.70B.",
+  "Treating the upper series' constant 5.00B from 1950–2018 as real historical population or as an upper bound around the lower series.",
+  "Attributing the 5.00B endpoint to the lower projection or 2.70B to the upper projection.",
+  "Interpreting the 2.70B vs 5.00B comparison as a share of world population; the table only gives Sub-Saharan Africa scenario values."
+ ],
+ "notes": "The table's upper series is constant at 5.00B from 1950–2018 and then 1.25B in 2019, so avoid deriving pre-2019 upper trends. Main required content is the 2100 lower and upper endpoints, with growth and contrast as derived options.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 40.7,
+  "usage": {
+   "prompt_tokens": 6931,
+   "completion_tokens": 10156,
+   "total_tokens": 17087,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8223
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 6675
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

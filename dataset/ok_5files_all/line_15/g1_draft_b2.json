@@ -1,0 +1,270 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_15",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the polling dynamics between Carter and Reagan during the 1979-1980 election cycle, showing Reagan's initial deficit and eventual rise, to contextualize the campaign's shift on abortion rhetoric.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the start of the series (1979), Reagan's relative_value is 0.53 while Carter's is 0.99, so Reagan trails Carter and is roughly half Carter's relative level.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Reagan",
+     "x": "1979",
+     "field": "relative_value",
+     "value": 0.53,
+     "note": "series=Reagan row at x_value 1979"
+    },
+    {
+     "entity": "Carter",
+     "x": "1979",
+     "field": "relative_value",
+     "value": 0.99,
+     "note": "series=Carter row at x_value 1979"
+    }
+   ],
+   "computation": "0.53 / 0.99 ≈ 0.54, so Reagan is about half of Carter at 1979.",
+   "accepted_routes": [
+    "Reagan begins far behind Carter",
+    "Reagan's initial relative value is about half of Carter's",
+    "At 1979, Carter is roughly twice Reagan's relative value"
+   ],
+   "visual_evidence_rule": "The Reagan series must be visibly lower than the Carter series at the 1979 endpoint.",
+   "temporal_anchor": "the opening / 1979 / initial polling clause",
+   "reviewer_question": "Is the initial Reagan deficit (Reagan about half of Carter at 1979) required, or is the later rise enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Reagan's relative_value rises from 0.53 at 1979 to 0.86 at 1980, an increase of 0.33 in relative-value terms.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Reagan",
+     "x": "1979",
+     "field": "relative_value",
+     "value": 0.53,
+     "note": "series=Reagan start"
+    },
+    {
+     "entity": "Reagan",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "series=Reagan end"
+    }
+   ],
+   "computation": "0.86 - 0.53 = 0.33; 0.86 / 0.53 ≈ 1.62, so Reagan ends at about 1.6 times his starting relative value.",
+   "accepted_routes": [
+    "Reagan climbs from 0.53 to 0.86 over the cycle",
+    "Reagan's relative value increases by 0.33",
+    "Reagan ends at roughly one-and-a-half times his starting relative value"
+   ],
+   "visual_evidence_rule": "The Reagan series must show a net upward trend from the 1979 endpoint to the 1980 endpoint.",
+   "temporal_anchor": "the eventual rise / by 1980 clause",
+   "reviewer_question": "Is Reagan's overall rise from 0.53 to 0.86 required, and should the magnitude (0.33) be stated?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Carter's relative_value falls from 0.99 at 1979 to 0.54 at 1980, a decrease of 0.45 in relative-value terms.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Carter",
+     "x": "1979",
+     "field": "relative_value",
+     "value": 0.99,
+     "note": "series=Carter start"
+    },
+    {
+     "entity": "Carter",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.54,
+     "note": "series=Carter end"
+    }
+   ],
+   "computation": "0.99 - 0.54 = 0.45; 0.54 / 0.99 ≈ 0.55, so Carter ends at about half his starting relative value.",
+   "accepted_routes": [
+    "Carter declines from 0.99 to 0.54",
+    "Carter's relative value drops by 0.45",
+    "Carter ends at about half his initial relative value"
+   ],
+   "visual_evidence_rule": "The Carter series must show a net downward trend from the 1979 endpoint to the 1980 endpoint.",
+   "temporal_anchor": "the Carter polling dynamics / by 1980 clause",
+   "reviewer_question": "Is Carter's decline required as the counterpart to Reagan's rise, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The relative ordering reverses over the cycle: Carter leads at 1979 (0.99 vs Reagan 0.53), but Reagan leads at 1980 (0.86 vs Carter 0.54).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Carter",
+     "x": "1979",
+     "field": "relative_value",
+     "value": 0.99,
+     "note": "series=Carter"
+    },
+    {
+     "entity": "Reagan",
+     "x": "1979",
+     "field": "relative_value",
+     "value": 0.53,
+     "note": "series=Reagan"
+    },
+    {
+     "entity": "Reagan",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "series=Reagan"
+    },
+    {
+     "entity": "Carter",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.54,
+     "note": "series=Carter"
+    }
+   ],
+   "computation": "1979: Carter 0.99 > Reagan 0.53; 1980: Reagan 0.86 > Carter 0.54, so the leader flips.",
+   "accepted_routes": [
+    "Carter is ahead in 1979 but Reagan is ahead in 1980",
+    "The lines cross between 1979 and 1980",
+    "Reagan overtakes Carter by the end of the cycle"
+   ],
+   "visual_evidence_rule": "The two series must show Carter above Reagan at the 1979 endpoint and Reagan above Carter at the 1980 endpoint, with an intersection between them.",
+   "temporal_anchor": "the overtaking / campaign shift clause",
+   "reviewer_question": "Must the order reversal be explicitly shown, or is it enough to show Reagan rising and Carter falling?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Reagan's rise is not a straight line: he dips to 0.49 early, stays around 0.51 through the middle of the series, then climbs steadily to 0.86 by 1980.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Reagan",
+     "x": "second point (x_px 230)",
+     "field": "relative_value",
+     "value": 0.49,
+     "note": "series=Reagan"
+    },
+    {
+     "entity": "Reagan",
+     "x": "middle (x_px 670)",
+     "field": "relative_value",
+     "value": 0.51,
+     "note": "series=Reagan; also 0.51 at other middle points"
+    },
+    {
+     "entity": "Reagan",
+     "x": "1980",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "series=Reagan end"
+    }
+   ],
+   "computation": "none; describes shape using table values.",
+   "accepted_routes": [
+    "Reagan's climb is concentrated late in the series",
+    "Reagan spends the middle of the series around 0.51-0.54 before rising",
+    "Reagan's early dip to 0.49 precedes his later climb to 0.86"
+   ],
+   "visual_evidence_rule": "The Reagan series should show a non-monotonic shape: an early dip, a flat middle, then a late rise.",
+   "temporal_anchor": "the 'still losing rather badly' / early fall clause",
+   "reviewer_question": "Is the shape of Reagan's rise (dip then late climb) required, or is only the net rise mandatory?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Carter's steepest early decline from 0.91 to 0.66 between the third and fourth data points",
+  "Reagan's early dip to 0.49 before the sustained later rise"
+ ],
+ "unsupported_to_avoid": [
+  "No absolute poll percentages, vote counts, or dollar amounts are in the table; do not state them.",
+  "Do not claim abortion rhetoric caused polling changes.",
+  "Do not infer the election outcome or future values beyond 1980.",
+  "Do not treat relative_value as a percentage.",
+  "Do not use colors, positions, axis ticks, or chart type as semantic content."
+ ],
+ "notes": "Entity and series columns are swapped relative to the intent/narration; I treat the `series` column as the candidate label (Reagan rising from 0.53 to 0.86, Carter falling from 0.99 to 0.54). All units use only relative_value and avoid absolute polling quantities.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 55.7,
+  "usage": {
+   "prompt_tokens": 1580,
+   "completion_tokens": 13915,
+   "total_tokens": 15495,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11843
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 940
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

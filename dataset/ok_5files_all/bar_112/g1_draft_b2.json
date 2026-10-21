@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_112",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that low economic status is prevalent among a large segment of the population, extending well beyond the absolute poorest group.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Top 10% (Dewi's Family) has the highest relative value, about 0.625, far above all other groups.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 10% (Dewi's Family)",
+     "x": "195.0",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Highest relative_value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Top 10% (Dewi's Family) is the tallest bar at about 0.625",
+    "The top decile has a relative value of roughly 0.63, the highest in the series",
+    "Dewi's family group stands far above all other groups at about 0.625"
+   ],
+   "visual_evidence_rule": "The bar for Top 10% (Dewi's Family) is the tallest and clearly identified as the top group.",
+   "temporal_anchor": "when contrasting the top group with the low-status groups, e.g., 'the top 10% is far above...'",
+   "reviewer_question": "Is the top group's extreme relative value required as a contrast, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The series generally declines from the Top 10% (0.625) through the lower groups to the Bottom 10% (0.0375), with a steep drop after the top group.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 10% (Dewi's Family)",
+     "x": "195.0",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Start of the descending series"
+    },
+    {
+     "entity": "Income group 2 (descending)",
+     "x": "305.0",
+     "field": "relative_value",
+     "value": 0.2188,
+     "note": "First lower group"
+    },
+    {
+     "entity": "Income group 6 (descending)",
+     "x": "745.0",
+     "field": "relative_value",
+     "value": 0.0625,
+     "note": "Mid-low group"
+    },
+    {
+     "entity": "Bottom 10% (Putri's Family)",
+     "x": "1185.0",
+     "field": "relative_value",
+     "value": 0.0375,
+     "note": "End of the descending series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The bars step down from about 0.625 at the top to about 0.0375 at the bottom",
+    "There is a clear descending order from the top decile to the bottom decile",
+    "The series shows a steep drop after the top group, then a gradual decline to the lowest values"
+   ],
+   "visual_evidence_rule": "The bars are ordered left-to-right and show a descending staircase from the Top 10% to the Bottom 10%.",
+   "temporal_anchor": "during the overall distribution reveal",
+   "reviewer_question": "Must the video show the full descending gradient across groups, or is it enough to highlight the top and bottom extremes?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The Bottom 40% groups (g7, g8, g9) have relative values of 0.0625, 0.05, and 0.0375, which are at or near the Bottom 10% value of 0.0375—showing low status extends beyond the poorest decile.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bottom 40% group 7",
+     "x": "855.0",
+     "field": "relative_value",
+     "value": 0.0625,
+     "note": "Lowest among Bottom 40% groups"
+    },
+    {
+     "entity": "Bottom 40% group 8",
+     "x": "965.0",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "Middle Bottom 40% group"
+    },
+    {
+     "entity": "Bottom 40% group 9",
+     "x": "1075.0",
+     "field": "relative_value",
+     "value": 0.0375,
+     "note": "Tied with Bottom 10% for lowest"
+    },
+    {
+     "entity": "Bottom 10% (Putri's Family)",
+     "x": "1185.0",
+     "field": "relative_value",
+     "value": 0.0375,
+     "note": "Reference lowest group"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Groups 7, 8, and 9 are all in the same low range as the Bottom 10% (about 0.04–0.06 relative value)",
+    "The Bottom 40% groups sit just above the Bottom 10% group, not far above it",
+    "Low relative values continue from the Bottom 10% through the Bottom 40% groups"
+   ],
+   "visual_evidence_rule": "The bars for g7, g8, g9, and g10 are all among the shortest, clustered at the low end.",
+   "temporal_anchor": "the clause saying Putri's story doesn't only apply to the bottom 10%",
+   "reviewer_question": "Should the video explicitly compare the Bottom 40% groups to the Bottom 10%, or is it sufficient to show them as low bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Bottom 10% (Putri's Family) has a relative value of 0.0375, tied with group 9 for the lowest value in the series.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bottom 10% (Putri's Family)",
+     "x": "1185.0",
+     "field": "relative_value",
+     "value": 0.0375,
+     "note": "Lowest relative value, tied with group 9"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The bottom 10% group has a relative value of about 0.0375",
+    "Putri's family group is at the lowest relative value, about 0.04",
+    "The bottom decile sits at the floor of the chart, around 0.0375"
+   ],
+   "visual_evidence_rule": "The bar for Bottom 10% (Putri's Family) is at the lowest level, labelled or identified.",
+   "temporal_anchor": "the opening mention of Putri's story and the bottom 10%",
+   "reviewer_question": "Must the video state the exact low relative value for the bottom 10%, or is showing it as the lowest bar sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The Top 10% has a relative value about 16.7 times the Bottom 10% (0.625 / 0.0375 ≈ 16.7), illustrating extreme inequality.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Top 10% (Dewi's Family)",
+     "x": "195.0",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Numerator of ratio"
+    },
+    {
+     "entity": "Bottom 10% (Putri's Family)",
+     "x": "1185.0",
+     "field": "relative_value",
+     "value": 0.0375,
+     "note": "Denominator of ratio"
+    }
+   ],
+   "computation": "0.625 / 0.0375 = 16.666...",
+   "accepted_routes": [
+    "The top group's value is roughly 17 times the bottom group's value",
+    "There is a roughly 16.7:1 ratio between the highest and lowest relative values",
+    "The Top 10% is about 16.7 times the Bottom 10%"
+   ],
+   "visual_evidence_rule": "The height difference between the tallest and shortest bars is shown or annotated as a large ratio.",
+   "temporal_anchor": "when highlighting the contrast between the top and the bottom",
+   "reviewer_question": "Is the top-to-bottom ratio an optional emphasis, or is it required to convey inequality?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Income group 6 also has a low relative value of 0.0625, equal to group 7, showing low values extend above the Bottom 40% groups.",
+  "The drop from the Top 10% (0.625) to Income group 2 (0.2188) is about 0.4062, a steep initial decline.",
+  "The Bottom 40% group 7 (0.0625) is about 1.67 times the Bottom 10% (0.0375)."
+ ],
+ "unsupported_to_avoid": [
+  "68 million Indonesians (absolute population count not in table)",
+  "absolute income, poverty line, or dollar amounts",
+  "causal explanations for why these groups have low economic status",
+  "extrapolation to groups or time periods beyond the 10 listed income groups",
+  "interpreting relative_value as a percentage share of total household income"
+ ],
+ "notes": "All cited values are relative_value entries from the table; ratios and differences are arithmetic combinations of those entries. Avoid absolute quantities and causal claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 46.5,
+  "usage": {
+   "prompt_tokens": 1438,
+   "completion_tokens": 13105,
+   "total_tokens": 14543,
+   "prompt_tokens_details": {
+    "cached_tokens": 128
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10874
+   },
+   "prompt_cache_hit_tokens": 128,
+   "prompt_cache_miss_tokens": 1310
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

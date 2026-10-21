@@ -1,0 +1,137 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_129",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the correlation between the escalating nuclear arms race and the corresponding increase in potential casualties during a worst-case scenario.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The largest relative value in the table belongs to the Russia / Red series, at about 0.42, and is slightly above the next-highest Russia / Red value of about 0.41.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.5,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Russia / Red",
+     "x": "58,761",
+     "field": "relative_value",
+     "value": 0.4182,
+     "note": "highest overall relative_value in the table"
+    },
+    {
+     "entity": "Russia / Red",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4134,
+     "note": "second highest overall relative_value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The largest relative value in the table is the Russia / Red value labeled 58,761, at about 0.42.",
+    "The highest overall normalized value belongs to the Russia / Red series.",
+    "Russia / Red contains the top relative value, slightly above its next highest value of about 0.41."
+   ],
+   "visual_evidence_rule": "The chart must show the Russia / Red value labeled 58,761 as the maximum relative value among all displayed points.",
+   "temporal_anchor": "so did the death count in a worst case scenario",
+   "reviewer_question": "Should the video explicitly identify the single highest relative value and its Russia / Red series?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "For the Russia / Red series, the year-coded relative values increase steadily from 1955 to 2010; the 2010 value is about 50 times the 1955 value.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.5,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Russia / Red",
+     "x": "1955",
+     "field": "relative_value",
+     "value": 0.0038,
+     "note": "start of year-coded Russia / Red series"
+    },
+    {
+     "entity": "Russia / Red",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.0191,
+     "note": "intermediate point"
+    },
+    {
+     "entity": "Russia / Red",
+     "x": "2000",
+     "field": "relative_value",
+     "value": 0.0593,
+     "note": "intermediate point"
+    },
+    {
+     "entity": "Russia / Red",
+     "x": "2010",
+     "field": "relative_value",
+     "value": 0.1913,
+     "note": "end of year-coded Russia / Red series"
+    }
+   ],
+   "computation": "0.1913 / 0.0038 ≈ 50.3",
+   "accepted_routes": [
+    "For Russia / Red, the relative value rises from 0.0038 in 1955 to 0.1913 in 2010.",
+    "The Russia / Red year-coded values increase steadily, ending about 50 times higher than the 1955 value.",
+    "Russia / Red shows a clear upward trend across its year-coded points."
+   ],
+   "visual_evidence_rule": "The chart must show Russia / Red points for 1955, 1990, 2000, and 2010 in increasing order.",
+   "temporal_anchor": "As the number of warheads increased during the arms race",
+   "reviewer_question": "Must the Russia / Red series be shown as monotonically increasing over time, or is a general upward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 2,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.47
+ },
+ "draft_cost": {
+  "sec": 63.5,
+  "usage": {
+   "prompt_tokens": 1659,
+   "completion_tokens": 16000,
+   "total_tokens": 17659,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 14976
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1147
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

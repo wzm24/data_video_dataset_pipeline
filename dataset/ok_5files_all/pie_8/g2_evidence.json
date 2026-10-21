@@ -1,0 +1,127 @@
+{
+ "clip_id": "pie_8",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Expats @ 0"
+   ],
+   "assertion": {
+    "segment": "Expats @ 0",
+    "expected_share": 0.833,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart slice, bar, or callout for Expats must show 83.3% or a rounded 83% and be visually dominant."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Native citizens @ 1"
+   ],
+   "assertion": {
+    "segment": "Native citizens @ 1",
+    "expected_share": 0.167,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The smaller slice/bar must be labeled Native citizens with 16.7% or a rounded 17%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Expats @ 0",
+    "mark:Native citizens @ 1"
+   ],
+   "assertion": {
+    "greater": "Expats @ 0",
+    "lesser": "Native citizens @ 1",
+    "expected_ratio": 4.988,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A ratio annotation or side-by-side visual must make the expat-to-citizen contrast roughly 5:1, not merely show two pie slices."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Expats @ 0",
+    "mark:Native citizens @ 1"
+   ],
+   "assertion": {
+    "series": "Expats",
+    "values": [
+     83.3,
+     16.7
+    ],
+    "threshold_between": [
+     16.7,
+     83.3
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A threshold line at 80%/20% or an annotation such as 'over 80%' / 'under 20%' must be visible if this unit is conveyed."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show exactly two categories partitioning the whole, or include a 100% total label."
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "clip_id": "line_5",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Democrats @ 2000",
+    "mark:Democrats @ 2010",
+    "mark:Democrats @ 2020"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Democrats @ 2000",
+      "value": 44.0
+     },
+     {
+      "mark": "Democrats @ 2010",
+      "value": 52.0
+     },
+     {
+      "mark": "Democrats @ 2020",
+      "value": 23.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animated data marks must move upward from 2000 to 2010 and downward to 2020 for both parties."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Democrats @ 2010",
+    "extreme": "max",
+    "expected": 52.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2010 mark must be shown as the highest point on the value series."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Democrats @ 2010",
+    "mark:Democrats @ 2015"
+   ],
+   "assertion": {
+    "low": "Democrats @ 2015",
+    "low_value": 25.0,
+    "high": "Democrats @ 2010",
+    "high_value": 52.0,
+    "delta": 27.0,
+    "ratio": 2.08,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a steep decline between the 2010 peak and the 2015 value."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Democrats @ 2020",
+    "extreme": "min",
+    "expected": 23.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2020 mark must be shown as the lowest point on the value series."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Democrats @ 2000",
+    "mark:Republicans @ 2000"
+   ],
+   "assertion": {
+    "greater": "Democrats @ 2000",
+    "lesser": "Republicans @ 2000",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If both parties are visualized, their data marks must coincide at each year; the video must not depict one party as higher."
+  }
+ ]
+}

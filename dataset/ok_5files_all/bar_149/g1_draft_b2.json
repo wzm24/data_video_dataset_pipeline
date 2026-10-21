@@ -1,0 +1,279 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_149",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the projected tax revenue of Biden's proposal over a ten-year period, highlighting a range of estimates from different organizations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip compares four organizations' relative estimates for the same projected tax-revenue proposal, not a composition of parts.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Tax Foundation",
+     "x": "Tax Foundation",
+     "field": "relative_value",
+     "value": 0.2829,
+     "note": "alternative estimate source"
+    },
+    {
+     "entity": "Penn Wharton",
+     "x": "Penn Wharton",
+     "field": "relative_value",
+     "value": 0.3984,
+     "note": "alternative estimate source"
+    },
+    {
+     "entity": "Tax Policy Center",
+     "x": "Tax Policy Center",
+     "field": "relative_value",
+     "value": 0.4994,
+     "note": "alternative estimate source"
+    },
+    {
+     "entity": "Americans for Tax Fairness",
+     "x": "Americans for Tax Fairness",
+     "field": "relative_value",
+     "value": 0.5312,
+     "note": "alternative estimate source"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The four bars are alternative estimates from Tax Foundation, Penn Wharton, Tax Policy Center, and Americans for Tax Fairness.",
+    "The chart compares different organizations' estimates of the same proposal rather than summing them into one total."
+   ],
+   "visual_evidence_rule": "All four organization labels are visible as separate estimate sources; no total or stacked composition is shown.",
+   "temporal_anchor": "the narration clause introducing estimates from different organizations",
+   "reviewer_question": "Must the clip make clear these are alternative estimates of the same proposal rather than parts of a total?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complete ordering of the four relative estimates from lowest to highest is Tax Foundation, Penn Wharton, Tax Policy Center, Americans for Tax Fairness.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Tax Foundation",
+     "x": "Tax Foundation",
+     "field": "relative_value",
+     "value": 0.2829,
+     "note": "lowest"
+    },
+    {
+     "entity": "Penn Wharton",
+     "x": "Penn Wharton",
+     "field": "relative_value",
+     "value": 0.3984,
+     "note": "second-lowest"
+    },
+    {
+     "entity": "Tax Policy Center",
+     "x": "Tax Policy Center",
+     "field": "relative_value",
+     "value": 0.4994,
+     "note": "second-highest"
+    },
+    {
+     "entity": "Americans for Tax Fairness",
+     "x": "Americans for Tax Fairness",
+     "field": "relative_value",
+     "value": 0.5312,
+     "note": "highest"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "From lowest to highest: Tax Foundation, Penn Wharton, Tax Policy Center, Americans for Tax Fairness.",
+    "Penn Wharton ranks second-lowest and Tax Policy Center ranks second-highest among the four.",
+    "The rank order is Tax Foundation < Penn Wharton < Tax Policy Center < Americans for Tax Fairness."
+   ],
+   "visual_evidence_rule": "The four bars must be visibly ordered by their relative values, with no rank reversals.",
+   "temporal_anchor": "the clause about a range of estimates from different organizations",
+   "reviewer_question": "Should the animation show the full rank order of all four organizations, or only the extremes?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Tax Foundation gives the lowest relative estimate (0.2829) and Americans for Tax Fairness gives the highest (0.5312).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Tax Foundation",
+     "x": "Tax Foundation",
+     "field": "relative_value",
+     "value": 0.2829,
+     "note": "lowest relative estimate"
+    },
+    {
+     "entity": "Americans for Tax Fairness",
+     "x": "Americans for Tax Fairness",
+     "field": "relative_value",
+     "value": 0.5312,
+     "note": "highest relative estimate"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lowest estimate is Tax Foundation at 0.2829; the highest is Americans for Tax Fairness at 0.5312.",
+    "Estimates run from 0.2829 for Tax Foundation up to 0.5312 for Americans for Tax Fairness."
+   ],
+   "visual_evidence_rule": "The lowest and highest bars must be labeled with their organizations and relative values.",
+   "temporal_anchor": "the narration clause contrasting more conservative estimates with the higher end",
+   "reviewer_question": "Should the clip explicitly name and label both the lowest and highest estimate?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The span between the highest and lowest relative estimates is 0.2483 relative units, and the highest is about 1.88 times the lowest.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Tax Foundation",
+     "x": "Tax Foundation",
+     "field": "relative_value",
+     "value": 0.2829,
+     "note": "lowest endpoint"
+    },
+    {
+     "entity": "Americans for Tax Fairness",
+     "x": "Americans for Tax Fairness",
+     "field": "relative_value",
+     "value": 0.5312,
+     "note": "highest endpoint"
+    }
+   ],
+   "computation": "0.5312 - 0.2829 = 0.2483; 0.5312 / 0.2829 ≈ 1.88",
+   "accepted_routes": [
+    "The estimates span 0.2483 relative units from lowest to highest.",
+    "The highest relative estimate is about 1.88 times the lowest.",
+    "The gap between Tax Foundation and Americans for Tax Fairness is about 0.25 relative units."
+   ],
+   "visual_evidence_rule": "The difference or ratio between the lowest and highest bars must be visibly annotated or otherwise derivable.",
+   "temporal_anchor": "the narration clause 'from more conservative estimates ... to double that'",
+   "reviewer_question": "Should the clip quantify the range as a difference, as a ratio, or both, and should it correct the 'double' impression with the 1.88x ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The top two estimates are close: Tax Policy Center is 0.4994 and Americans for Tax Fairness is 0.5312, a difference of 0.0318 relative units.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Tax Policy Center",
+     "x": "Tax Policy Center",
+     "field": "relative_value",
+     "value": 0.4994,
+     "note": "second-highest"
+    },
+    {
+     "entity": "Americans for Tax Fairness",
+     "x": "Americans for Tax Fairness",
+     "field": "relative_value",
+     "value": 0.5312,
+     "note": "highest"
+    }
+   ],
+   "computation": "0.5312 - 0.4994 = 0.0318",
+   "accepted_routes": [
+    "Americans for Tax Fairness is only 0.0318 relative units above Tax Policy Center.",
+    "The top two organizations are nearly tied, with Tax Policy Center at 0.4994 and Americans for Tax Fairness at 0.5312.",
+    "Tax Policy Center and Americans for Tax Fairness form the high end of the range and differ by a small amount."
+   ],
+   "visual_evidence_rule": "The two highest bars should be shown close together, with their relative values or difference readable.",
+   "temporal_anchor": "the narration clause about the range of estimates reaching the higher end",
+   "reviewer_question": "Is the near-tie between the two highest estimates important enough to be an optional highlight?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Penn Wharton as the middle estimate at 0.3984 relative value.",
+  "Tax Policy Center and Americans for Tax Fairness being the two highest estimates."
+ ],
+ "unsupported_to_avoid": [
+  "absolute revenue amounts",
+  "percentages",
+  "counts",
+  "shares of a total",
+  "causal claims about stock market behavior",
+  "extrapolation beyond the listed organizations",
+  "exact doubling",
+  "treating relative values as shares of a whole",
+  "rendering a total or stacked composition"
+ ],
+ "notes": "All numeric claims are relative_value or arithmetic on relative_value; no absolute revenue amount is supported by the table. The narration's dollar and doubling language should not be rendered as absolute dollars or an exact doubling.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 41.8,
+  "usage": {
+   "prompt_tokens": 916,
+   "completion_tokens": 10231,
+   "total_tokens": 11147,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8256
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 532
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

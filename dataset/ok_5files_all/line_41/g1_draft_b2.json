@@ -1,0 +1,274 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_41",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant growth in college enrollments over the decades.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "College enrollments rise substantially over the labeled decades from 1950 through 2010.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "College enrollments",
+     "x": "1950",
+     "field": "value",
+     "value": 2.5272,
+     "note": "first labeled year in x_value"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "2010",
+     "field": "value",
+     "value": 20.5272,
+     "note": "last labeled year in x_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Enrollment climbs from 2.5272 in 1950 to 20.5272 in 2010",
+    "The series shows a long-term upward trend over the decades",
+    "College enrollments increase from the first labeled year to the last labeled year"
+   ],
+   "visual_evidence_rule": "The plotted series must be visibly higher at the 2010-labeled point than at the 1950-labeled point, with intervening labeled points also above the 1950 level.",
+   "temporal_anchor": "the growth-over-decades intent, especially the 'skyrocketed' phrase",
+   "reviewer_question": "Must the video show the overall upward trend from 1950 to 2010, or is the final endpoint/growth multiple enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 2010 value is about 8.1 times the 1950 value, showing an approximately eightfold increase.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "College enrollments",
+     "x": "1950",
+     "field": "value",
+     "value": 2.5272,
+     "note": "base value"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "2010",
+     "field": "value",
+     "value": 20.5272,
+     "note": "comparison value"
+    }
+   ],
+   "computation": "20.5272 / 2.5272 ≈ 8.12",
+   "accepted_routes": [
+    "Enrollment in 2010 is roughly 8 times the 1950 level",
+    "The value rose from 2.5272 in 1950 to 20.5272 in 2010, an approximately eightfold increase",
+    "2010 enrollment is about 8.1x that of 1950"
+   ],
+   "visual_evidence_rule": "The chart must make the 1950 and 2010 values visible or otherwise explicitly compare them so the roughly eightfold relationship can be inferred.",
+   "temporal_anchor": "the 'skyrocketed' / significant-growth clause",
+   "reviewer_question": "Should the video explicitly quantify the growth as roughly eightfold, or is showing the rising curve sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series reaches its highest value 20.8261 near the end, after the 2010-labeled point, then declines to a final value of 19.9239.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "College enrollments",
+     "x": "after 2010, near end",
+     "field": "value",
+     "value": 20.8261,
+     "note": "maximum value in the table"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "final point",
+     "field": "value",
+     "value": 19.9239,
+     "note": "last value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series peaks at 20.8261 near the end and ends at 19.9239",
+    "The highest value is 20.8261, slightly above the final value 19.9239",
+    "After its maximum, the final point dips to 19.9239"
+   ],
+   "visual_evidence_rule": "The chart must show the last segment reaching a high around 20.8261 and the final point at 19.9239, making the slight decline visible.",
+   "temporal_anchor": "late in the timeline, if the video covers the final segment",
+   "reviewer_question": "Is the final peak/decline required, or may the video end its story at the maximum or at 2010?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among the labeled years 1950, 1960, 1970, 2000, and 2010, each successive labeled value is higher than the previous one.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "College enrollments",
+     "x": "1950",
+     "field": "value",
+     "value": 2.5272,
+     "note": "first labeled year"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "1960",
+     "field": "value",
+     "value": 4.2283,
+     "note": "second labeled year"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "1970",
+     "field": "value",
+     "value": 7.9239,
+     "note": "third labeled year"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "2000",
+     "field": "value",
+     "value": 15.9239,
+     "note": "fourth labeled year"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "2010",
+     "field": "value",
+     "value": 20.5272,
+     "note": "last labeled year"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Every labeled decade from 1950 to 2010 is higher than the prior labeled decade",
+    "The labeled years increase in order: 1950 < 1960 < 1970 < 2000 < 2010",
+    "There is no decade-to-decade decline among the labeled years 1950-2010"
+   ],
+   "visual_evidence_rule": "The plotted values at the labeled years must appear in ascending order, with no labeled-year dip.",
+   "temporal_anchor": "the 'over the decades' clause",
+   "reviewer_question": "Must the video explicitly preserve the stepwise increase across labeled decades, or is the overall slope enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By 1970, enrollment had more than tripled from its 1950 level.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "College enrollments",
+     "x": "1950",
+     "field": "value",
+     "value": 2.5272,
+     "note": "base value"
+    },
+    {
+     "entity": "College enrollments",
+     "x": "1970",
+     "field": "value",
+     "value": 7.9239,
+     "note": "later value"
+    }
+   ],
+   "computation": "7.9239 / 2.5272 ≈ 3.14",
+   "accepted_routes": [
+    "By 1970, enrollment was more than three times the 1950 level",
+    "The 1970 value is about 3.1 times the 1950 value",
+    "Enrollment had more than tripled between 1950 and 1970"
+   ],
+   "visual_evidence_rule": "The chart must show the 1950 and 1970 values or provide a comparison that supports the roughly threefold increase.",
+   "temporal_anchor": "the early decades portion of the growth story",
+   "reviewer_question": "Should the video highlight the early tripling by 1970, or focus only on the full-period growth?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series peaks at 20.8261 after the 2010-labeled point and ends at 19.9239.",
+  "The final value is slightly below the maximum.",
+  "The 2000 value 15.9239 is about 6.3 times the 1950 value 2.5272.",
+  "The relative_value rises from 0.0880 at 1950 to 0.8200 at its maximum."
+ ],
+ "unsupported_to_avoid": [
+  "Causal explanations for enrollment growth such as policy, war, or economic changes.",
+  "Extrapolating beyond the final table point or predicting future enrollment.",
+  "Absolute units not present in the table, such as millions, dollars, or percentages.",
+  "Treating relative_value 0.0880-0.8200 as a percentage.",
+  "Claiming a specific year for points whose x_value is blank, such as 2020 for the final point.",
+  "Stating that growth is monotonic through the final point, since 19.9239 is below the peak 20.8261.",
+  "Requirements about chart type, colors, axis ticks, positions, or layout."
+ ],
+ "notes": "The core story is the long-term rise from 2.5272 in 1950 to 20.5272 in 2010, with a later maximum of 20.8261 and a final dip to 19.9239. Optional units capture the peak/final decline and the early tripling by 1970.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 43.6,
+  "usage": {
+   "prompt_tokens": 2757,
+   "completion_tokens": 10240,
+   "total_tokens": 12997,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8053
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2245
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

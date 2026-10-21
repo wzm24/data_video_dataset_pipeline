@@ -1,0 +1,146 @@
+{
+ "clip_id": "line_15",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Carter @ 1979",
+    "mark:Reagan @ 1979"
+   ],
+   "assertion": {
+    "greater": "Carter @ 1979",
+    "lesser": "Reagan @ 1979",
+    "expected_ratio": 1.8679,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Reagan series must be visibly lower than the Carter series at the 1979 endpoint."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Reagan @ 1979",
+    "mark:Reagan @ 1980"
+   ],
+   "assertion": {
+    "low": "Reagan @ 1979",
+    "low_value": 0.53,
+    "high": "Reagan @ 1980",
+    "high_value": 0.86,
+    "delta": 0.33,
+    "ratio": 1.6226,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Reagan series must show a net upward trend from the 1979 endpoint to the 1980 endpoint."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Carter @ 1979",
+    "mark:Carter @ 1980"
+   ],
+   "assertion": {
+    "low": "Carter @ 1980",
+    "low_value": 0.54,
+    "high": "Carter @ 1979",
+    "high_value": 0.99,
+    "delta": 0.45,
+    "ratio": 1.8333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Carter series must show a net downward trend from the 1979 endpoint to the 1980 endpoint."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Carter @ 1979",
+    "mark:Reagan @ 1979"
+   ],
+   "assertion": {
+    "at": "1979",
+    "above": "Carter",
+    "above_value": 0.99,
+    "below": "Reagan",
+    "below_value": 0.53,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two series must show Carter above Reagan at the 1979 endpoint and Reagan above Carter at the 1980 endpoint, with an intersection between them."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Reagan @ 1980",
+    "mark:Reagan @ second point (x_px 230)",
+    "mark:Reagan @ middle (x_px 670)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Reagan @ 1980",
+      "value": 0.86
+     },
+     {
+      "mark": "Reagan @ second point (x_px 230)",
+      "value": 0.49
+     },
+     {
+      "mark": "Reagan @ middle (x_px 670)",
+      "value": 0.51
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Reagan series should show a non-monotonic shape: an early dip, a flat middle, then a late rise."
+  }
+ ]
+}

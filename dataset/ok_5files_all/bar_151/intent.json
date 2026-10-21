@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_151",
+ "intent_en": "To demonstrate that the recent increase in public confidence in scientists is uneven, driven primarily by Democrats while Republican confidence has remained stagnant or declined, highlighting a widening political divide.",
+ "previous_intent": "To demonstrate the widening political divide in trust toward scientists, highlighting that Democrats have experienced a growing sense of confidence while Republicans have remained relatively stagnant.",
+ "narration_support": "public confidence has ticked up but there's a big caveat to that and that the uptick has not been uniform across Americans. We're seeing primarily Democrats have a growing sense of confidence in scientists to act in the best interests of the public whereas Republicans have stayed about the same.",
+ "chart_support": "Grouped stacked bar chart displaying confidence levels in scientists and medical scientists for U.S. adults, Republicans, and Democrats across three time points, illustrating a divergence where Democratic confidence (especially 'great deal') increases significantly while Republican confidence decreases or stays flat.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the uptick is not uniform and identifies Democrats as the growing group while Republicans stay the same. The chart title 'political differences widen' and the data (rising blue bars for Democrats vs falling/stable red bars for Republicans) strongly support this divergence narrative.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

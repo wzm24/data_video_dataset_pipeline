@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs><pattern id="sq" width="34" height="34" patternUnits="userSpaceOnUse"><rect x="3" y="3" width="28" height="28" rx="7" fill="#e5e5e5"/></pattern></defs>
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<rect width="1280" height="720" fill="url(#sq)"/>
+<circle cx="639.5" cy="359.5" r="218.2" fill="none" stroke="#b3b3b3" stroke-width="80.0"/>
+<path d="M 639.5 141.3 A 218.2 218.2 0 0 1 818.3 484.7" fill="none" stroke="#e34244" stroke-width="80.0" stroke-linecap="butt"/>
+<circle cx="818.3" cy="484.7" r="22.4" fill="#ffffff"/>
+<g fill="#1a1a1a">
+<circle cx="230" cy="300" r="34"/><rect x="196" y="342" width="68" height="150" rx="26"/>
+<circle cx="330" cy="360" r="46"/><rect x="284" y="416" width="92" height="190" rx="34"/>
+<circle cx="1050" cy="300" r="34"/><rect x="1016" y="342" width="68" height="150" rx="26"/>
+<circle cx="950" cy="360" r="46"/><rect x="904" y="416" width="92" height="190" rx="34"/>
+</g>
+<text x="639.5" y="403.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="118" font-weight="700" fill="#222222">30<tspan font-size="64" font-weight="400" fill="#aaaaaa">%</tspan></text>
+</svg>

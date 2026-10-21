@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_94,South Korea,south-korea,680.0,,0.950,0.5938,,#222222,printed
+bar_94,Israel,israel,660.0,,0.900,0.5625,,#4169E1,printed
+bar_94,Japan,japan,600.0,,0.750,0.4688,,#C0392B,printed
+bar_94,Finland,finland,560.0,,0.650,0.4062,,#1F3A5F,printed

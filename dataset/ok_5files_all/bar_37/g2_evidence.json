@@ -1,0 +1,163 @@
+{
+ "clip_id": "bar_37",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series monthly price)"
+   ],
+   "assertion": {
+    "mark": "United States @ monthly price",
+    "extreme": "max",
+    "expected": 359.492,
+    "compared_set": "monthly price",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The U.S. bar must be visibly the tallest and labeled with a value near $359."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:United States @ monthly price",
+    "mark:Canada @ monthly price"
+   ],
+   "assertion": {
+    "greater": "United States @ monthly price",
+    "lesser": "Canada @ monthly price",
+    "expected_ratio": 4.8601,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A U.S.-vs-Canada comparison must be shown, e.g., side-by-side bars or an annotation of the 4.86x ratio or 20.6% share."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:United States @ monthly price",
+    "mark:Canada @ monthly price"
+   ],
+   "assertion": {
+    "low": "Canada @ monthly price",
+    "low_value": 73.9679,
+    "high": "United States @ monthly price",
+    "high_value": 359.492,
+    "delta": 285.5241,
+    "ratio": 4.8601,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible gap or annotation between U.S. and Canada bars equivalent to roughly $286."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Canada @ monthly price",
+    "mark:United Kingdom @ monthly price"
+   ],
+   "assertion": {
+    "at": "monthly price",
+    "above": "Canada",
+    "above_value": 73.9679,
+    "below": "United Kingdom",
+    "below_value": 71.2156,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All non-U.S. bars must sit below a $75 reference line or be labeled with values below $75."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:United States @ monthly price",
+    "mark:Canada @ monthly price",
+    "mark:United Kingdom @ monthly price",
+    "mark:Germany @ monthly price",
+    "mark:Australia @ monthly price",
+    "mark:France @ monthly price",
+    "mark:Norway @ monthly price"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "United States @ monthly price",
+      "value": 359.492
+     },
+     {
+      "mark": "Canada @ monthly price",
+      "value": 73.9679
+     },
+     {
+      "mark": "United Kingdom @ monthly price",
+      "value": 71.2156
+     },
+     {
+      "mark": "Germany @ monthly price",
+      "value": 68.4633
+     },
+     {
+      "mark": "Australia @ monthly price",
+      "value": 63.6468
+     },
+     {
+      "mark": "France @ monthly price",
+      "value": 58.1422
+     },
+     {
+      "mark": "Norway @ monthly price",
+      "value": 55.3899
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars should be ordered descending or otherwise labeled so the full ranking is recoverable."
+  }
+ ]
+}

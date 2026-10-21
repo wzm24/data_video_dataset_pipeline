@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<line x1="160.0" y1="600.0" x2="1120.0" y2="600.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="160.0" y1="390.0" x2="1120.0" y2="390.0" stroke="#999999" stroke-width="1.5" stroke-dasharray="8 6"/>
+<text x="148.0" y="396.0" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#444444">50</text>
+<text x="160.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2001</text>
+<text x="280.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2003</text>
+<text x="400.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2005</text>
+<text x="520.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2007</text>
+<text x="640.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2009</text>
+<text x="760.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2011</text>
+<text x="880.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2013</text>
+<text x="1000.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2015</text>
+<text x="1120.0" y="628.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#444444">2017</text>
+<polyline points="160.0,360.6 280.0,360.6 400.0,377.4 520.0,385.8 640.0,373.2 760.0,394.2 880.0,419.4 1000.0,440.4 1120.0,465.6" fill="none" stroke="#c9a64b" stroke-width="3.2"/>
+<circle cx="160.0" cy="360.6" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<text x="160.0" y="348.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#c9a64b">57</text>
+<circle cx="280.0" cy="360.6" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<circle cx="400.0" cy="377.4" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<text x="400.0" y="365.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#c9a64b">53</text>
+<circle cx="520.0" cy="385.8" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<circle cx="640.0" cy="373.2" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<text x="640.0" y="361.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#c9a64b">54</text>
+<circle cx="760.0" cy="394.2" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<circle cx="880.0" cy="419.4" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<text x="880.0" y="407.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#c9a64b">43</text>
+<circle cx="1000.0" cy="440.4" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<circle cx="1120.0" cy="465.6" r="5.5" fill="#ffffff" stroke="#c9a64b" stroke-width="2.5"/>
+<text x="1120.0" y="453.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#c9a64b">32</text>
+<polyline points="160.0,453.0 280.0,457.2 400.0,448.8 520.0,440.4 640.0,444.6 760.0,394.2 880.0,390.0 1000.0,364.8 1120.0,339.6" fill="none" stroke="#8f9b65" stroke-width="3.2"/>
+<circle cx="160.0" cy="453.0" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<text x="160.0" y="441.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9b65">35</text>
+<circle cx="280.0" cy="457.2" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<circle cx="400.0" cy="448.8" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<text x="400.0" y="436.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9b65">36</text>
+<circle cx="520.0" cy="440.4" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<circle cx="640.0" cy="444.6" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<text x="640.0" y="432.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9b65">37</text>
+<circle cx="760.0" cy="394.2" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<circle cx="880.0" cy="390.0" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<text x="880.0" y="378.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9b65">50</text>
+<circle cx="1000.0" cy="364.8" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<circle cx="1120.0" cy="339.6" r="5.5" fill="#ffffff" stroke="#8f9b65" stroke-width="2.5"/>
+<text x="1120.0" y="327.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9b65">62</text>
+<text x="1138" y="210" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#c9a64b">Oppose</text>
+<text x="1138" y="590" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9b65">Favor</text>
+<text x="1138" y="612" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9b65">same-sex marriage</text>
+<text x="160" y="680" font-family="Arial, sans-serif" font-size="16" fill="#666666">Source: Pew Research Center</text>
+</svg>

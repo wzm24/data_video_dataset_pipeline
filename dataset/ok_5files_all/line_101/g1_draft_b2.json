@@ -1,0 +1,346 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_101",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the continuous increase in public school student enrollment from 1990 to 2020.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Public school enrollment was 41.5 million in 1990 and reached 53.5 million by 2020.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "public school enrollment",
+     "x": "1990",
+     "field": "value",
+     "value": 41.5,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2020",
+     "field": "value",
+     "value": 53.5,
+     "note": "million"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Public school enrollment began at 41.5 million in 1990 and ended at 53.5 million in 2020.",
+    "The 1990 enrollment level was 41.5 million; the 2020 level was 53.5 million.",
+    "Enrollment rose from 41.5 million to 53.5 million over 1990–2020."
+   ],
+   "visual_evidence_rule": "The enrollment series must make the 1990 and 2020 endpoints identifiable and associate them with 41.5 and 53.5 million.",
+   "temporal_anchor": "the 'keeps growing' clause, tied to the 1990–2020 window in the intent",
+   "reviewer_question": "Are both endpoint values required, or is one endpoint enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Enrollment increased by 12.0 million over 1990–2020, an average of about 0.4 million per year across the 30-year span.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "public school enrollment",
+     "x": "1990",
+     "field": "value",
+     "value": 41.5,
+     "note": "start value for net change"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2020",
+     "field": "value",
+     "value": 53.5,
+     "note": "end value for net change"
+    }
+   ],
+   "computation": "53.5 - 41.5 = 12.0 million total increase; 12.0 / 30 = 0.4 million per year average",
+   "accepted_routes": [
+    "Enrollment increased by 12.0 million from 1990 to 2020.",
+    "The series gained about 12 million students over 30 years, or about 0.4 million per year on average.",
+    "Total growth was 12.0 million, averaging 0.4 million per year."
+   ],
+   "visual_evidence_rule": "A net-change annotation or visual comparison must show the full 1990-to-2020 rise corresponding to 12.0 million total, or about 0.4 million per year on average.",
+   "temporal_anchor": "the 'keeps growing' clause",
+   "reviewer_question": "Must the video state the total increase or average rate, or is an unlabeled upward trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Enrollment rose at every listed period: 1990 41.5, 1993 43.5, 1996 46.0, 2000 48.5, 2005 49.8, 2010 50.5, 2015 52.0, and 2020 53.5 million; no listed value is lower than the previous one.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "public school enrollment",
+     "x": "1990",
+     "field": "value",
+     "value": 41.5,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "1993",
+     "field": "value",
+     "value": 43.5,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "1996",
+     "field": "value",
+     "value": 46.0,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2000",
+     "field": "value",
+     "value": 48.5,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2005",
+     "field": "value",
+     "value": 49.8,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2010",
+     "field": "value",
+     "value": 50.5,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2015",
+     "field": "value",
+     "value": 52.0,
+     "note": "million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2020",
+     "field": "value",
+     "value": 53.5,
+     "note": "million"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Enrollment increased at every listed year from 1990 to 2020.",
+    "The series is strictly rising: 41.5 → 43.5 → 46.0 → 48.5 → 49.8 → 50.5 → 52.0 → 53.5 million.",
+    "No listed year has lower enrollment than the previous listed year."
+   ],
+   "visual_evidence_rule": "The enrollment series must visibly rise across the listed years without any downward segment; labels or annotations must make the monotonic order evident.",
+   "temporal_anchor": "the 'keeps growing' clause",
+   "reviewer_question": "Must the video demonstrate monotonicity across all listed years, or is a general upward impression acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among the listed intervals, the largest increases were 2.5 million in 1993–1996 and 1996–2000; the smallest was 0.7 million in 2005–2010.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "public school enrollment",
+     "x": "1990",
+     "field": "value",
+     "value": 41.5,
+     "note": "1990–1993: 43.5 - 41.5 = 2.0 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "1993",
+     "field": "value",
+     "value": 43.5,
+     "note": "start of 1993–1996 interval"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "1996",
+     "field": "value",
+     "value": 46.0,
+     "note": "46.0 - 43.5 = 2.5 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2000",
+     "field": "value",
+     "value": 48.5,
+     "note": "48.5 - 46.0 = 2.5 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2005",
+     "field": "value",
+     "value": 49.8,
+     "note": "start of 2005–2010 interval"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2010",
+     "field": "value",
+     "value": 50.5,
+     "note": "50.5 - 49.8 = 0.7 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2015",
+     "field": "value",
+     "value": 52.0,
+     "note": "2010–2015: 52.0 - 50.5 = 1.5 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2020",
+     "field": "value",
+     "value": 53.5,
+     "note": "2015–2020: 53.5 - 52.0 = 1.5 million"
+    }
+   ],
+   "computation": "interval increases: 43.5-41.5=2.0; 46.0-43.5=2.5; 48.5-46.0=2.5; 49.8-48.5=1.3; 50.5-49.8=0.7; 52.0-50.5=1.5; 53.5-52.0=1.5; max=2.5, min=0.7 million",
+   "accepted_routes": [
+    "The largest listed interval increases were 2.5 million in both 1993–1996 and 1996–2000; the smallest was 0.7 million in 2005–2010.",
+    "Growth was fastest in the mid-1990s and slowest in 2005–2010 among the listed intervals.",
+    "Listed interval increases range from 0.7 million to 2.5 million."
+   ],
+   "visual_evidence_rule": "The intervals 1993–1996/1996–2000 and 2005–2010 must be distinguishable as the largest and smallest listed increases.",
+   "temporal_anchor": "the 'keeps growing' clause (optional detail)",
+   "reviewer_question": "Should the video call out fastest/slowest periods, or is that optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Decade-scale growth was not uniform: 1990–2000 increased by 7.0 million; 2000–2010 increased by 2.0 million; 2010–2020 increased by 3.0 million.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "public school enrollment",
+     "x": "1990",
+     "field": "value",
+     "value": 41.5,
+     "note": "1990–2000: 48.5 - 41.5 = 7.0 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2000",
+     "field": "value",
+     "value": 48.5,
+     "note": "2000–2010: 50.5 - 48.5 = 2.0 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2010",
+     "field": "value",
+     "value": 50.5,
+     "note": "2010–2020: 53.5 - 50.5 = 3.0 million"
+    },
+    {
+     "entity": "public school enrollment",
+     "x": "2020",
+     "field": "value",
+     "value": 53.5,
+     "note": "endpoint for decade comparisons"
+    }
+   ],
+   "computation": "1990–2000: 48.5-41.5=7.0; 2000–2010: 50.5-48.5=2.0; 2010–2020: 53.5-50.5=3.0 million",
+   "accepted_routes": [
+    "From 1990 to 2000 enrollment rose by 7.0 million; from 2000 to 2010 it rose by 2.0 million; from 2010 to 2020 it rose by 3.0 million.",
+    "Decade gains were 7.0 million, 2.0 million, and 3.0 million in successive decades.",
+    "Growth by decade: +7.0 million (1990–2000), +2.0 million (2000–2010), +3.0 million (2010–2020)."
+   ],
+   "visual_evidence_rule": "The video should make the decade-level differences in growth visible, not just a single overall rise.",
+   "temporal_anchor": "the 'keeps growing' clause (optional detail)",
+   "reviewer_question": "Should the video compare decade-scale gains, or is the overall trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Source-type distinction: 1990–2005 values are estimated; 2010–2020 values are projected."
+ ],
+ "unsupported_to_avoid": [
+  "The teacher-supply shrinking claim from the narration is not in the table.",
+  "Causal claims that student enrollment growth affects teacher supply.",
+  "Percentages or percentage growth rates; the table's unit is million.",
+  "Any enrollment values before 1990 or after 2020.",
+  "Any exact annual values between listed years unless explicitly derived or interpolated."
+ ],
+ "notes": "The table supports only public school enrollment; teacher-supply content from the narration is out of scope. Units use absolute million values and derived million differences; no percentages are proposed.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 52.4,
+  "usage": {
+   "prompt_tokens": 1035,
+   "completion_tokens": 13155,
+   "total_tokens": 14190,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10331
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 523
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

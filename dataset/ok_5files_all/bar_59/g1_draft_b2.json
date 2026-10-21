@@ -1,0 +1,396 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_59",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the widespread geographic distribution of black population loss across major United States cities, reinforcing the narration's claim that this migration trend affects northern, southern, and western regions.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart covers nine major U.S. cities, establishing that Black population loss is shown in many cities, not only two or three.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "all listed cities",
+     "x": "",
+     "field": "entity_count",
+     "value": 9,
+     "note": "Count of city rows: Detroit, Chicago, New Orleans, New York, Los Angeles, Washington, DC, Oakland, Cleveland, Atlanta."
+    }
+   ],
+   "computation": "COUNT(entity rows) = 9",
+   "accepted_routes": [
+    "Nine major U.S. cities are shown.",
+    "The chart lists nine cities with Black population loss.",
+    "Detroit, Chicago, New Orleans, New York, Los Angeles, Washington DC, Oakland, Cleveland, and Atlanta all appear."
+   ],
+   "visual_evidence_rule": "All nine city labels or bars are visible, or the chart explicitly states that nine cities are included.",
+   "temporal_anchor": "It's not just in two or three cities, but it's in a lot of cities across the country.",
+   "reviewer_question": "Must the video show or state that nine cities are included to convey the widespread distribution?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The listed cities span northern, southern, and western regions, so the loss is not confined to one region.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Detroit",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Northern/other region example."
+    },
+    {
+     "entity": "Chicago",
+     "x": "718.5",
+     "field": "value",
+     "value": 0.921,
+     "note": "Northern/other region example."
+    },
+    {
+     "entity": "New Orleans",
+     "x": "596.5",
+     "field": "value",
+     "value": 0.616,
+     "note": "Southern region example."
+    },
+    {
+     "entity": "Los Angeles",
+     "x": "462.8",
+     "field": "value",
+     "value": 0.282,
+     "note": "Western region example."
+    },
+    {
+     "entity": "Oakland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Western region example."
+    },
+    {
+     "entity": "Atlanta",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Southern region example."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Loss appears in northern, southern, and western cities.",
+    "The bars include northern cities like Detroit and Chicago, southern cities like New Orleans and Atlanta, and western cities like Los Angeles and Oakland.",
+    "The geographic spread is not limited to one region."
+   ],
+   "visual_evidence_rule": "City labels include at least one northern/other city, one southern city, and one western city; optional region grouping or color makes the regional spread explicit.",
+   "temporal_anchor": "Northern cities, southern cities, western cities.",
+   "reviewer_question": "Must the video explicitly group or label cities by region to support the north/south/west claim?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Beyond Detroit and Chicago, seven additional cities are shown with positive loss values, from New Orleans (0.616) down to Oakland/Cleveland/Atlanta (0.154).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "New Orleans",
+     "x": "596.5",
+     "field": "value",
+     "value": 0.616,
+     "note": "Third-highest city."
+    },
+    {
+     "entity": "New York",
+     "x": "554.6",
+     "field": "value",
+     "value": 0.511,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Los Angeles",
+     "x": "462.8",
+     "field": "value",
+     "value": 0.282,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Washington, DC",
+     "x": "422.1",
+     "field": "value",
+     "value": 0.18,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Oakland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Cleveland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Atlanta",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Detroit",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Top city excluded from the seven-additional count."
+    },
+    {
+     "entity": "Chicago",
+     "x": "718.5",
+     "field": "value",
+     "value": 0.921,
+     "note": "Second city excluded from the seven-additional count."
+    }
+   ],
+   "computation": "COUNT(rows excluding Detroit and Chicago) = 7",
+   "accepted_routes": [
+    "Seven other cities also show loss beyond Detroit and Chicago.",
+    "The loss is not just in two or three cities: New Orleans, New York, Los Angeles, Washington DC, Oakland, Cleveland, and Atlanta are also listed.",
+    "Additional city values range from 0.616 down to 0.154."
+   ],
+   "visual_evidence_rule": "At least seven city bars beyond Detroit and Chicago are visible, with values or labels for New Orleans through the 0.154 tie.",
+   "temporal_anchor": "It's not just in two or three cities, but it's in a lot of cities across the country.",
+   "reviewer_question": "Must the video show cities beyond the top two to support the claim that the trend is widespread?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The top-ranked city is Detroit at value 1.000, followed by Chicago at 0.921 and New Orleans at 0.616; the lowest listed value is a three-way tie at 0.154 for Oakland, Cleveland, and Atlanta.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Detroit",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Highest value."
+    },
+    {
+     "entity": "Chicago",
+     "x": "718.5",
+     "field": "value",
+     "value": 0.921,
+     "note": "Second-highest value."
+    },
+    {
+     "entity": "New Orleans",
+     "x": "596.5",
+     "field": "value",
+     "value": 0.616,
+     "note": "Third-highest value."
+    },
+    {
+     "entity": "Oakland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Tied lowest value."
+    },
+    {
+     "entity": "Cleveland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Tied lowest value."
+    },
+    {
+     "entity": "Atlanta",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Tied lowest value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Detroit is highest at 1.000, then Chicago at 0.921, then New Orleans at 0.616.",
+    "Detroit and Chicago are the top two; New Orleans is third.",
+    "Oakland, Cleveland, and Atlanta tie for the lowest value at 0.154."
+   ],
+   "visual_evidence_rule": "Bars are ordered by value or labeled so Detroit 1.000, Chicago 0.921, New Orleans 0.616, and the 0.154 tie are identifiable.",
+   "temporal_anchor": "It's not just in two or three cities, but it's in a lot of cities across the country.",
+   "reviewer_question": "Is the exact ranking and the lowest-value tie important enough to require, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Relative values show Detroit (0.6250) and Chicago (0.5758) as the highest relative losses, above New Orleans (0.3852), New York (0.3197), Los Angeles (0.1762), Washington, DC (0.1127), and the 0.0963 shared by Oakland, Cleveland, and Atlanta.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Detroit",
+     "x": "750.0",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Highest relative_value."
+    },
+    {
+     "entity": "Chicago",
+     "x": "718.5",
+     "field": "relative_value",
+     "value": 0.5758,
+     "note": "Second-highest relative_value."
+    },
+    {
+     "entity": "New Orleans",
+     "x": "596.5",
+     "field": "relative_value",
+     "value": 0.3852,
+     "note": "Third-highest relative_value."
+    },
+    {
+     "entity": "New York",
+     "x": "554.6",
+     "field": "relative_value",
+     "value": 0.3197,
+     "note": "Fourth-highest relative_value."
+    },
+    {
+     "entity": "Los Angeles",
+     "x": "462.8",
+     "field": "relative_value",
+     "value": 0.1762,
+     "note": "Fifth-highest relative_value."
+    },
+    {
+     "entity": "Washington, DC",
+     "x": "422.1",
+     "field": "relative_value",
+     "value": 0.1127,
+     "note": "Sixth-highest relative_value."
+    },
+    {
+     "entity": "Oakland",
+     "x": "411.6",
+     "field": "relative_value",
+     "value": 0.0963,
+     "note": "Tied lowest relative_value."
+    },
+    {
+     "entity": "Cleveland",
+     "x": "411.6",
+     "field": "relative_value",
+     "value": 0.0963,
+     "note": "Tied lowest relative_value."
+    },
+    {
+     "entity": "Atlanta",
+     "x": "411.6",
+     "field": "relative_value",
+     "value": 0.0963,
+     "note": "Tied lowest relative_value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Detroit's relative value is 0.6250, the highest; Chicago follows at 0.5758.",
+    "Relative loss is highest in Detroit and Chicago, then New Orleans at 0.3852.",
+    "Oakland, Cleveland, and Atlanta tie at 0.0963 on relative_value."
+   ],
+   "visual_evidence_rule": "If relative_value is visualized, labels or encoding show Detroit 0.6250 and Chicago 0.5758 above New Orleans 0.3852, with the 0.0963 tie visible if discussed.",
+   "temporal_anchor": "No direct narration clause; optional relative-value supplement to the city-comparison segment.",
+   "reviewer_question": "Is relative_value content optional context rather than required for the widespread-distribution message?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "New York is fourth at 0.511, ahead of Los Angeles at 0.282.",
+  "Los Angeles is the highest western city by value at 0.282.",
+  "Oakland, Cleveland, and Atlanta tie at 0.154 on value and 0.0963 on relative_value."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim these values are national totals or that relative_value sums to 100%.",
+  "Do not assert causes such as jobs, housing, or reverse migration.",
+  "Do not state exact time periods or migration destinations unless they appear in the narration.",
+  "Do not treat x_px as a data value; it is a pixel position."
+ ],
+ "notes": "The core required content is likely the nine-city breadth and the north/south/west spread; ranking and relative_value are valid but optional unless the video chooses to emphasize them. Region labels come from the intent/narration, not from the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 54.4,
+  "usage": {
+   "prompt_tokens": 931,
+   "completion_tokens": 13195,
+   "total_tokens": 14126,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10145
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 675
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

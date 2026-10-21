@@ -1,0 +1,138 @@
+{
+ "clip_id": "line_82",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:oxygen need @ Mar 2020",
+    "mark:oxygen need @ Sep 2020"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "oxygen need @ Mar 2020",
+      "value": 200751.011
+     },
+     {
+      "mark": "oxygen need @ Sep 2020",
+      "value": 4501733.1023
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The series must visibly rise from the Mar 2020 start to the Sep 2020 point, with both values identifiable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:oxygen need @ Sep 2020",
+    "mark:oxygen need @ Feb 2021"
+   ],
+   "assertion": {
+    "low": "oxygen need @ Feb 2021",
+    "low_value": 1500577.7008,
+    "high": "oxygen need @ Sep 2020",
+    "high_value": 4501733.1023,
+    "delta": 3001155.4015,
+    "ratio": 3.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series must show a downward segment from Sep 2020 to Feb 2021, with the Sep peak and Feb value distinguishable."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "oxygen need @ Mar 2021",
+    "extreme": "max",
+    "expected": 10501155.4015,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Mar 2021 value must be shown as the maximum of the series."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:oxygen need @ Feb 2021",
+    "mark:oxygen need @ Mar 2021"
+   ],
+   "assertion": {
+    "low": "oxygen need @ Feb 2021",
+    "low_value": 1500577.7008,
+    "high": "oxygen need @ Mar 2021",
+    "high_value": 10501155.4015,
+    "delta": 9000577.7007,
+    "ratio": 6.9981,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Mar 2021 value must be visibly much larger than the Feb 2021 value, with the ratio or both values identifiable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:oxygen need @ Mar 2021",
+    "mark:oxygen need @ Sep 2020"
+   ],
+   "assertion": {
+    "greater": "oxygen need @ Mar 2021",
+    "lesser": "oxygen need @ Sep 2020",
+    "expected_ratio": 2.3327,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Mar 2021 maximum must be shown as more than twice the Sep 2020 value."
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "clip_id": "bar_163",
+ "family": "bar",
+ "chart_form": "bar/pyramid",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make male and female values distinguishable for the same age."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:male @ 1",
+    "mark:female @ 50",
+    "mark:male @ 100"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "male @ 1",
+      "value": 73.0
+     },
+     {
+      "mark": "female @ 50",
+      "value": 51.0
+     },
+     {
+      "mark": "male @ 100",
+      "value": 3.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show or label an age progression spanning 1 to 100, not just a few aggregated age bands."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:male @ 1",
+    "mark:female @ 1",
+    "mark:female @ 97",
+    "mark:male @ 100"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "male @ 1",
+      "value": 73.0
+     },
+     {
+      "mark": "female @ 1",
+      "value": 73.0
+     },
+     {
+      "mark": "female @ 97",
+      "value": 3.0
+     },
+     {
+      "mark": "male @ 100",
+      "value": 3.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a clear overall gradient from high values at the young end to low values at the old end."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "male @ 1",
+    "extreme": "max",
+    "expected": 73.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or narration must make the largest value identifiable as 73 squares."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:male @ 35",
+    "mark:female @ 35"
+   ],
+   "assertion": {
+    "greater": "male @ 35",
+    "lesser": "female @ 35",
+    "expected_ratio": 1.0167,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow comparing male and female values at the same ages, showing that the two series are close and often slightly female-heavy."
+  }
+ ]
+}

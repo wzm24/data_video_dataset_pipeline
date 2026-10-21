@@ -1,0 +1,140 @@
+{
+ "clip_id": "bar_117",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 4,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four group labels appear in the chart."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Black adults @ Black adults",
+    "extreme": "max",
+    "expected": 0.5972,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Black adults mark is visibly the highest among the four groups."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Black adults @ Black adults",
+    "mark:Hispanic adults @ Hispanic adults",
+    "mark:Asian adults* @ Asian adults*",
+    "mark:White adults @ White adults"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Black adults @ Black adults",
+      "value": 0.5972
+     },
+     {
+      "mark": "Hispanic adults @ Hispanic adults",
+      "value": 0.2522
+     },
+     {
+      "mark": "Asian adults* @ Asian adults*",
+      "value": 0.2124
+     },
+     {
+      "mark": "White adults @ White adults",
+      "value": 0.1194
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The four groups appear in descending order from highest to lowest relative_value."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Black adults @ Black adults",
+    "mark:Hispanic adults @ Hispanic adults"
+   ],
+   "assertion": {
+    "greater": "Black adults @ Black adults",
+    "lesser": "Hispanic adults @ Hispanic adults",
+    "expected_ratio": 2.368,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Black adults mark is visibly at least twice as high as the Hispanic and Asian marks."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Black adults @ Black adults",
+    "mark:White adults @ White adults"
+   ],
+   "assertion": {
+    "greater": "Black adults @ Black adults",
+    "lesser": "White adults @ White adults",
+    "expected_ratio": 5.0017,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Black adults mark is visibly about five times as high as the White adults mark."
+  }
+ ]
+}

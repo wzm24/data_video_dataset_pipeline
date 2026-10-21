@@ -1,0 +1,137 @@
+{
+ "clip_id": "bar_39",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:First $50M of wealth @ 0-50000000"
+   ],
+   "assertion": {
+    "series": "First $50M of wealth",
+    "values": [
+     0.0
+    ],
+    "threshold_between": [
+     0.0,
+     0.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 0% rate for the first $50M bracket visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:$50M to $500M @ 50000000-500000000"
+   ],
+   "assertion": {
+    "mark": "$50M to $500M @ 50000000-500000000",
+    "field": "value",
+    "expected": 2.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly associate the 2% marginal rate with the $50M–$500M bracket."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Above $500M @ 500000000+"
+   ],
+   "assertion": {
+    "mark": "Above $500M @ 500000000+",
+    "field": "value",
+    "expected": 3.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly associate the 3% marginal rate with the above-$500M bracket."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:First $50M of wealth @ 0-50000000",
+    "mark:$50M to $500M @ 50000000-500000000",
+    "mark:Above $500M @ 500000000+"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "First $50M of wealth @ 0-50000000",
+      "value": 0.0
+     },
+     {
+      "mark": "$50M to $500M @ 50000000-500000000",
+      "value": 2.0
+     },
+     {
+      "mark": "Above $500M @ 500000000+",
+      "value": 3.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the three bracket rates visible in an ordered progression from 0% to 2% to 3%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:$2 billion estate @ 2000000000"
+   ],
+   "assertion": {
+    "mark": "$2 billion estate @ 2000000000",
+    "field": "value",
+    "expected": 49000000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The $49M tax-due figure must be visible in association with the $2B estate."
+  }
+ ]
+}

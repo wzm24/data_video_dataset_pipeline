@@ -1,0 +1,129 @@
+{
+ "clip_id": "donut_38",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:blue share @ 1"
+   ],
+   "assertion": {
+    "mark": "blue share @ 1",
+    "field": "value",
+    "expected": 38.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The blue slice/segment must be labeled or visually annotated with 38% (or 0.38 share)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:grey share @ 0"
+   ],
+   "assertion": {
+    "mark": "grey share @ 0",
+    "field": "value",
+    "expected": 62.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The grey slice/segment must be labeled or visually annotated with 62% (or 0.62 share)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:grey share @ 0",
+    "mark:blue share @ 1"
+   ],
+   "assertion": {
+    "greater": "grey share @ 0",
+    "lesser": "blue share @ 1",
+    "expected_ratio": 1.6316,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 62% and 38% labels must be visible, or an annotation must show the difference/size contrast."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:grey share @ 0",
+    "mark:blue share @ 1"
+   ],
+   "assertion": {
+    "series": "grey share",
+    "values": [
+     62.0,
+     38.0
+    ],
+    "threshold_between": [
+     38.0,
+     62.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A half-line or clear size distinction must show grey above 50% and blue below 50%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:grey share @ 0",
+    "segment:blue share @ 1"
+   ],
+   "assertion": {
+    "segment": "grey share @ 0",
+    "expected_share": 0.62,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The donut must show only two segments filling the full circle, with no unexplained gap or extra category."
+  }
+ ]
+}

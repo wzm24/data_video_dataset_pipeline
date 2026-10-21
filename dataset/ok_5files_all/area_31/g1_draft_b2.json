@@ -1,0 +1,233 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_31",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how a company's reputation and performance influence its share value and investor backing.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data contrasts YouTube and TV on the Revenue metric.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "Revenue",
+     "field": "value",
+     "value": 120,
+     "note": "YouTube revenue row"
+    },
+    {
+     "entity": "TV",
+     "x": "Revenue",
+     "field": "value",
+     "value": 57,
+     "note": "TV revenue row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart compares revenue for YouTube and TV.",
+    "YouTube and TV are the two entities in the revenue data.",
+    "Revenue is shown for YouTube versus TV."
+   ],
+   "visual_evidence_rule": "Both entity labels 'YouTube' and 'TV' must be visible with the Revenue metric identified.",
+   "temporal_anchor": "The clause introducing company performance or revenue comparison.",
+   "reviewer_question": "Must the clip explicitly identify YouTube and TV as the compared entities for Revenue?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "YouTube's revenue endpoint is 120 euro.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "Revenue",
+     "field": "value",
+     "value": 120,
+     "note": "YouTube revenue value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "YouTube is shown at 120 euro revenue.",
+    "YouTube revenue reaches 120 euro.",
+    "The YouTube revenue value is 120 euro."
+   ],
+   "visual_evidence_rule": "YouTube's revenue amount must be readable as 120 euro.",
+   "temporal_anchor": "The clause about a company with good reputation or performance being backed.",
+   "reviewer_question": "Should the exact YouTube revenue value of 120 euro be mandatory?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "TV's revenue endpoint is 57 euro.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "TV",
+     "x": "Revenue",
+     "field": "value",
+     "value": 57,
+     "note": "TV revenue value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "TV is shown at 57 euro revenue.",
+    "TV revenue reaches 57 euro.",
+    "The TV revenue value is 57 euro."
+   ],
+   "visual_evidence_rule": "TV's revenue amount must be readable as 57 euro.",
+   "temporal_anchor": "The clause about poor reputation or poor performance making shares difficult to sell.",
+   "reviewer_question": "Should the exact TV revenue value of 57 euro be mandatory?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "YouTube's revenue is higher than TV's; YouTube is the larger of the two and TV is the smaller.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "Revenue",
+     "field": "value",
+     "value": 120,
+     "note": "higher value"
+    },
+    {
+     "entity": "TV",
+     "x": "Revenue",
+     "field": "value",
+     "value": 57,
+     "note": "lower value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "YouTube revenue is greater than TV revenue.",
+    "YouTube has the larger revenue and TV the smaller.",
+    "TV has less revenue than YouTube."
+   ],
+   "visual_evidence_rule": "The visual comparison must make YouTube's 120 euro revenue appear larger than TV's 57 euro revenue.",
+   "temporal_anchor": "The contrast between good and poor reputation or performance.",
+   "reviewer_question": "Is the ordering/comparison YouTube > TV required, or are the two endpoint values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "YouTube's revenue is more than twice TV's revenue; equivalently, TV's revenue is about half of YouTube's.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "YouTube",
+     "x": "Revenue",
+     "field": "value",
+     "value": 120,
+     "note": "base for ratio"
+    },
+    {
+     "entity": "TV",
+     "x": "Revenue",
+     "field": "value",
+     "value": 57,
+     "note": "comparison value"
+    }
+   ],
+   "computation": "120 / 57 = 2.105; 57 / 120 = 0.475",
+   "accepted_routes": [
+    "YouTube revenue is about twice TV revenue.",
+    "TV revenue is about half of YouTube revenue.",
+    "YouTube revenue is more than double TV revenue."
+   ],
+   "visual_evidence_rule": "The relative magnitudes must be visually consistent with a roughly 2:1 ratio, YouTube about twice TV.",
+   "temporal_anchor": "The clause about investors backing a well-performing company.",
+   "reviewer_question": "Should the roughly two-to-one revenue ratio be a required takeaway?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Absolute revenue difference: YouTube exceeds TV by 63 euro (120 - 57 = 63)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that reputation or performance caused the 120 euro or 57 euro revenue values.",
+  "Any mention of investor backing, share price, or share value quantities not in the table.",
+  "Treating relative_value 0.475 as 47.5% or as a percentage of the whole.",
+  "Extrapolating to other companies, time periods, or revenue totals beyond the two table rows."
+ ],
+ "notes": "The table only supports revenue values for YouTube and TV; the reputation/investor/backing framing in the intent is not data-backed. Required candidates focus on entity identity, endpoints, and the YouTube > TV ordering, with the ~2:1 ratio offered as optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 43.7,
+  "usage": {
+   "prompt_tokens": 895,
+   "completion_tokens": 9912,
+   "total_tokens": 10807,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8487
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 255
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

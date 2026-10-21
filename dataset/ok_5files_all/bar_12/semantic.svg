@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#DCDCDC"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="580" x2="1120" y2="580" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="160" x2="120" y2="580" stroke="#666666" stroke-width="3"/>
+<g id="entity-july-2018" data-role="entity" data-entity-id="july-2018" data-label="July 2018">
+<rect id="july-2018-bar" data-role="bar" data-entity-id="july-2018" data-value="1.0" x="380" y="232.2" width="200" height="347.8" fill="#000000"/>
+<text id="july-2018-label" data-role="category-label" data-entity-id="july-2018" x="480" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">July 2018</text>
+</g>
+<g id="entity-aug-2018" data-role="entity" data-entity-id="aug-2018" data-label="Aug 2018">
+<rect id="aug-2018-bar" data-role="bar" data-entity-id="aug-2018" data-value="1.15" x="700" y="180" width="200" height="400" fill="#E45756"/>
+<text id="aug-2018-plus" data-role="value-label" data-entity-id="aug-2018" x="800" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#C0392B">+15%</text>
+<text id="aug-2018-note" data-role="annotation-label" x="800" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">3,200 new members</text>
+<text id="aug-2018-label" data-role="category-label" data-entity-id="aug-2018" x="800" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#C0392B">Aug 2018</text>
+</g>
+<rect id="title-strip" data-role="title-box" x="0" y="650" width="1280" height="70" fill="#D93025"/>
+<text id="chart-title" data-role="title" x="640.0" y="694" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Ukip membership</text>
+</g>
+</svg>

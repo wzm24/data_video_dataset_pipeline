@@ -1,0 +1,300 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_75",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate how different policy scenarios, ranging from free market approaches to direct government mandates, influence the speed of market adoption for electric machines over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart compares seven policy scenarios: Free market, Low market subsidy, Low carbon tax, High carbon tax, Production ramp, 100% replacement at end of life, and Early retirement of worst emitters.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "All scenarios",
+     "x": "150.0-920.0",
+     "field": "entity_id",
+     "value": null,
+     "note": "Table contains seven scenario entity_ids: free-market, low-market-subsidy, low-carbon-tax, high-carbon-tax, production-ramp, 100-replacement-at-end-of-life, early-retirement-of-worst-emitters."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Seven policy scenarios are modeled: Free market, Low market subsidy, Low carbon tax, High carbon tax, Production ramp, 100% replacement at end of life, and Early retirement of worst emitters.",
+    "The comparison includes market-driven, carbon-tax, production-ramp, and direct-replacement scenarios.",
+    "Scenarios range from Free market and Low market subsidy to Low/High carbon tax and direct replacement/early retirement approaches."
+   ],
+   "visual_evidence_rule": "Legend or labels must identify the seven scenario series shown in the table.",
+   "temporal_anchor": "Opening clause listing the modeled policy scenarios.",
+   "reviewer_question": "Must all seven scenario names be shown, or is it enough to show grouped market, tax, and direct-replacement families?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "At the final x=920, High carbon tax has the highest endpoint among market/tax scenarios at 83.1905% value (relative_value 0.8200), followed by Low market subsidy 73.1905% (0.7200), Low carbon tax 61.1905% (0.6000), and Free market 56.1905% (0.5500); direct-replacement scenarios all reach 101.1905% value (relative_value 1.0000).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High carbon tax",
+     "x": "920.0",
+     "field": "value",
+     "value": 83.1905,
+     "note": "Final endpoint; relative_value is 0.8200."
+    },
+    {
+     "entity": "Low market subsidy",
+     "x": "920.0",
+     "field": "value",
+     "value": 73.1905,
+     "note": "Final endpoint; relative_value is 0.7200."
+    },
+    {
+     "entity": "Low carbon tax",
+     "x": "920.0",
+     "field": "value",
+     "value": 61.1905,
+     "note": "Final endpoint; relative_value is 0.6000."
+    },
+    {
+     "entity": "Free market",
+     "x": "920.0",
+     "field": "value",
+     "value": 56.1905,
+     "note": "Final endpoint; relative_value is 0.5500."
+    },
+    {
+     "entity": "100% replacement at end of life",
+     "x": "920.0",
+     "field": "value",
+     "value": 101.1905,
+     "note": "Final endpoint; relative_value is 1.0000."
+    },
+    {
+     "entity": "Production ramp",
+     "x": "920.0",
+     "field": "value",
+     "value": 101.1905,
+     "note": "Final endpoint; relative_value is 1.0000."
+    },
+    {
+     "entity": "Early retirement of worst emitters",
+     "x": "920.0",
+     "field": "value",
+     "value": 101.1905,
+     "note": "Final endpoint; relative_value is 1.0000."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At the end, High carbon tax reaches about 83.19%, Low market subsidy 73.19%, Low carbon tax 61.19%, and Free market 56.19%; direct-replacement scenarios reach full normalized adoption.",
+    "Final ranking: High carbon tax > Low market subsidy > Low carbon tax > Free market, while the mandate/replacement scenarios top out at relative 1.00.",
+    "High carbon tax ends at 83.19%, much higher than Free market's 56.19%; replacement scenarios reach 101.19% on the value scale."
+   ],
+   "visual_evidence_rule": "Right-edge endpoint values or labels must be visible for at least High carbon tax, Low market subsidy, Low carbon tax, Free market, and one direct-replacement series; direct-replacement series must visibly hit the top of the normalized scale.",
+   "temporal_anchor": "Closing summary of how the scenarios influence final adoption.",
+   "reviewer_question": "Must the final ranking of all four market/tax scenarios be explicit, or is it enough to show High carbon tax vs Free market plus direct replacement at the top?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "High carbon tax is the first of the market/tax scenarios to cross 50% adoption (relative_value > 0.50), reaching 0.5314 by x=612.0; then Low market subsidy reaches 0.5005 by x=637.7, Low carbon tax reaches 0.5062 by x=727.5, and Free market reaches 0.5014 by x=778.8.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High carbon tax",
+     "x": "612.0",
+     "field": "relative_value",
+     "value": 0.5314,
+     "note": "First table point above 0.50; previous x=586.3 is 0.4914, so crossing is between these points."
+    },
+    {
+     "entity": "Low market subsidy",
+     "x": "637.7",
+     "field": "relative_value",
+     "value": 0.5005,
+     "note": "First table point above 0.50."
+    },
+    {
+     "entity": "Low carbon tax",
+     "x": "727.5",
+     "field": "relative_value",
+     "value": 0.5062,
+     "note": "First table point above 0.50."
+    },
+    {
+     "entity": "Free market",
+     "x": "778.8",
+     "field": "relative_value",
+     "value": 0.5014,
+     "note": "First table point above 0.50."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "High carbon tax reaches 50% first, around x=612; Low market subsidy next at x=637.7; Low carbon tax at x=727.5; Free market last at x=778.8.",
+    "The 50% crossing order is High carbon tax < Low market subsidy < Low carbon tax < Free market.",
+    "Free market is slowest to 50%, crossing by x=778.8, while High carbon tax crosses by x=612.0."
+   ],
+   "visual_evidence_rule": "A visible 50% threshold line and crossing points or order for High carbon tax, Low market subsidy, Low carbon tax, and Free market.",
+   "temporal_anchor": "Clause contrasting carbon taxes with a market-driven transition.",
+   "reviewer_question": "Must the exact 50% crossing order be conveyed, or is a qualitative faster/slower comparison sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "100% replacement at end of life reaches full normalized adoption (relative_value 1.0000; value 101.1905%) by x=573.5, before High carbon tax even crosses 50% by x=612.0 and far before Free market crosses 50% by x=778.8.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "100% replacement at end of life",
+     "x": "573.5",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Reaches full normalized adoption; value at this x is 101.1905."
+    },
+    {
+     "entity": "High carbon tax",
+     "x": "612.0",
+     "field": "relative_value",
+     "value": 0.5314,
+     "note": "Still below 50% at x=573.5, since x=573.5 relative_value is 0.4712."
+    },
+    {
+     "entity": "Free market",
+     "x": "778.8",
+     "field": "relative_value",
+     "value": 0.5014,
+     "note": "Crosses 50% much later."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "100% replacement at end of life jumps to full adoption by x=573.5, earlier than any tax/market scenario reaches 50%.",
+    "The direct replacement scenario is fully adopted at x=573.5, while High carbon tax is still below 50% at that point and Free market does not reach 50% until x=778.8.",
+    "Direct mandate reaches 100% (relative 1.00) by x=573.5; carbon tax and free market lag behind."
+   ],
+   "visual_evidence_rule": "The 100% replacement at end of life series must visibly hit the top of the normalized scale at x=573.5, left of the 50% crossings for High carbon tax and Free market.",
+   "temporal_anchor": "Clause about the much more direct and heavy-handed replacement approach.",
+   "reviewer_question": "Must the early full-adoption point for 100% replacement at end of life be explicitly stated, or is its visual position enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At the final x=920, High carbon tax ends 27.0000 percentage points above Free market on the value scale (83.1905 - 56.1905 = 27.0000), or about 1.48 times Free market (83.1905 / 56.1905 = 1.4805).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "High carbon tax",
+     "x": "920.0",
+     "field": "value",
+     "value": 83.1905,
+     "note": "Final endpoint."
+    },
+    {
+     "entity": "Free market",
+     "x": "920.0",
+     "field": "value",
+     "value": 56.1905,
+     "note": "Final endpoint."
+    }
+   ],
+   "computation": "83.1905 - 56.1905 = 27.0000; 83.1905 / 56.1905 = 1.4805",
+   "accepted_routes": [
+    "High carbon tax finishes about 27 percentage points higher than Free market (83.19% vs 56.19%).",
+    "High carbon tax ends at roughly 1.48 times Free market's value.",
+    "The endpoint gap between High carbon tax and Free market is 27.00 points."
+   ],
+   "visual_evidence_rule": "Both endpoint values, High carbon tax and Free market, must be visible or labeled so the gap or ratio can be checked.",
+   "temporal_anchor": "Clause contrasting carbon taxes with the market-driven transition.",
+   "reviewer_question": "Should this specific gap or ratio be mandatory, or is it optional once the endpoint ranking is shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Average change over x_px: Free market gains 55.0000 value points from x=150 to x=920 (56.1905 - 1.1905 = 55.0000), about 0.0714 points per x_px over 770 x_px; High carbon tax gains 82.0000 points (83.1905 - 1.1905 = 82.0000), about 0.1065 points per x_px.",
+  "Production ramp reaches full normalized adoption (relative_value 1.0000; value 101.1905%) by x=781.4.",
+  "High carbon tax endpoint is 83.1905% (relative_value 0.8200) versus Low market subsidy endpoint 73.1905% (relative_value 0.7200)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that a specific policy causes a specific adoption level.",
+  "Extrapolating curves beyond x=920 or before x=150.",
+  "Calling x_px a calendar year or imposing real-world time units.",
+  "Treating 101.1905% as a true adoption share above 100% without noting it is the table's value scale / normalized top.",
+  "Claiming exact 50% crossing times that are not bracketed by table points, e.g., saying Free market crosses exactly at x=778.8 rather than between x=753.2 and x=778.8.",
+  "Comparing to external scenarios, policies, or technologies not present in the table."
+ ],
+ "notes": "The strongest required signals are the scenario set, final endpoint ranking, 50% crossing order, and the early full adoption of 100% replacement. Optional ratios and rates are valid if computed from table endpoints.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 60.0,
+  "usage": {
+   "prompt_tokens": 8367,
+   "completion_tokens": 14966,
+   "total_tokens": 23333,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11905
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 8111
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

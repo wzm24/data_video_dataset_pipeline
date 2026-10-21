@@ -1,0 +1,237 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "donut_1",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the contrast in music sales formats between the United States and Japan.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In the United States, digital accounted for 66% of music sales.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "digital",
+     "field": "value",
+     "value": 66.0,
+     "note": "Table value for digital share in the donut."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "66% of US music sales were digital.",
+    "The US digital share was 66%.",
+    "Digital made up about two-thirds of US music sales."
+   ],
+   "visual_evidence_rule": "A label or slice for Digital must show 66% in the US/overall donut.",
+   "temporal_anchor": "first narration clause: '66% of US music sales were digital'",
+   "reviewer_question": "Must the clip explicitly state the US digital share as 66%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In the United States, physical accounted for 34% of music sales.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Physical",
+     "x": "physical",
+     "field": "value",
+     "value": 34.0,
+     "note": "Table value for physical share, derived as the complement of digital."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "34% of US music sales were physical.",
+    "The US physical share was 34%.",
+    "Physical made up about one-third of US music sales."
+   ],
+   "visual_evidence_rule": "A label or slice for Physical must show 34% in the US/overall donut.",
+   "temporal_anchor": "first narration clause / complement of the 66% digital statement",
+   "reviewer_question": "Must the clip explicitly state the US physical share as 34%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The US format mix is fully split between digital and physical, and the two shares sum to 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "digital",
+     "field": "value",
+     "value": 66.0,
+     "note": "Digital share."
+    },
+    {
+     "entity": "Physical",
+     "x": "physical",
+     "field": "value",
+     "value": 34.0,
+     "note": "Physical share; complement."
+    }
+   ],
+   "computation": "66 + 34 = 100",
+   "accepted_routes": [
+    "Digital and physical together make up 100% of US music sales.",
+    "Physical is the complement of digital: 34% + 66% = 100%.",
+    "The US format mix is split entirely between digital and physical."
+   ],
+   "visual_evidence_rule": "The two labeled slices must be presented as the complete split and visibly sum to 100%.",
+   "temporal_anchor": "first narration clause: US music sales composition",
+   "reviewer_question": "Must the clip make clear that digital and physical are complementary parts of one 100% whole?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Digital exceeded physical in the US by 32 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "digital",
+     "field": "value",
+     "value": 66.0,
+     "note": "Digital share."
+    },
+    {
+     "entity": "Physical",
+     "x": "physical",
+     "field": "value",
+     "value": 34.0,
+     "note": "Physical share."
+    }
+   ],
+   "computation": "66 - 34 = 32 percentage points",
+   "accepted_routes": [
+    "Digital exceeded physical by 32 percentage points.",
+    "Digital share was 32 points higher than physical.",
+    "The gap between digital and physical was 32 percentage points.",
+    "Digital was almost twice physical (66% vs 34%, or 66/34 ≈ 1.94×)."
+   ],
+   "visual_evidence_rule": "A callout, annotation, or visual difference must make the 32-point gap or the roughly 2× relationship visible.",
+   "temporal_anchor": "first narration clause: comparison of 66% digital with 34% physical",
+   "reviewer_question": "Must the clip explicitly quantify the digital-vs-physical gap rather than only showing the two shares?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Japan is presented as nearly the opposite of the US format mix, without adding exact Japan percentages from outside the table.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "digital",
+     "field": "value",
+     "value": 66.0,
+     "note": "US digital-heavy reference value."
+    },
+    {
+     "entity": "Physical",
+     "x": "physical",
+     "field": "value",
+     "value": 34.0,
+     "note": "US physical-minority reference value; no Japan row is present in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In Japan, the format mix is nearly the opposite of the US.",
+    "The US is digital-heavy, while Japan is near the reverse.",
+    "Japan is close to opposite: if the US is 66% digital / 34% physical, Japan is near the inverse."
+   ],
+   "visual_evidence_rule": "The Japan contrast must appear as near-opposite; if a Japan donut or value is shown, it must not introduce a precise share absent from the table.",
+   "temporal_anchor": "second narration clause: 'In Japan, it's nearly the opposite'",
+   "reviewer_question": "Should the Japan near-opposite contrast be required even though the table contains no Japan row?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Digital was the majority format in the US because 66% is above 50%.",
+  "The year 2015 is valid as the clip's stated time context if it appears in narration or labels.",
+  "US digital share was approximately two-thirds of sales."
+ ],
+ "unsupported_to_avoid": [
+  "Exact Japan shares such as 34% digital / 66% physical unless clearly marked as illustrative, because no Japan row is in the table.",
+  "Causal claims about why digital displaced physical.",
+  "Extrapolation to other years or countries not present in the table.",
+  "Adding streaming, vinyl, CD, or other format categories not in the table.",
+  "Treating revenue shares and unit shares as interchangeable or using a wrong denominator."
+ ],
+ "notes": "The table supports only the US digital/physical split; the Japan clause is narration-level and has no numeric row. The key derived quantities are the 34% complement, the 100% composition, and the 32-point gap.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 34.3,
+  "usage": {
+   "prompt_tokens": 677,
+   "completion_tokens": 7538,
+   "total_tokens": 8215,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5944
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 165
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

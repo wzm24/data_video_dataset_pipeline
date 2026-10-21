@@ -1,0 +1,127 @@
+{
+ "clip_id": "line_63",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:reported cases @ 1977"
+   ],
+   "assertion": {
+    "mark": "reported cases @ 1977",
+    "field": "value",
+    "expected": 20000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final plotted point(s) for 1977 and 1980 must be visible at or labeled with 20,000 on the y-axis, with no plotted point below that."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:reported cases @ 1920"
+   ],
+   "assertion": {
+    "mark": "reported cases @ 1920",
+    "field": "value",
+    "expected": 400000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The first plotted point for 1920 must be visible at or labeled with 400,000 on a shared y-axis."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:reported cases @ 1920",
+    "mark:reported cases @ 1980"
+   ],
+   "assertion": {
+    "low": "reported cases @ 1980",
+    "low_value": 20000.0,
+    "high": "reported cases @ 1920",
+    "high_value": 400000.0,
+    "delta": 380000.0,
+    "ratio": 20.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 1920 value (400,000) and the 1980 value (20,000) must be readable, or an annotation must state the 95% / 5% relationship."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "reported cases @ 1949",
+    "extreme": "max",
+    "expected": 620000.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A local maximum at 1949 must be visible and labeled or readable as 620,000."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:reported cases @ 1949",
+    "mark:reported cases @ 1980"
+   ],
+   "assertion": {
+    "low": "reported cases @ 1980",
+    "low_value": 20000.0,
+    "high": "reported cases @ 1949",
+    "high_value": 620000.0,
+    "delta": 600000.0,
+    "ratio": 31.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the 1949 peak (620,000) and the 1980 endpoint (20,000) must be readable, or an annotation must state the 96.8% / 3.2% relationship."
+  }
+ ]
+}

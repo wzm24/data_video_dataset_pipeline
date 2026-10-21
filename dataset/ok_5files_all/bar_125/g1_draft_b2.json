@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_125",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the historical trend of annual military spending and highlight the significant peak reached in 1985.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The highlighted 1985 bar has value 615.4.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1985",
+     "x": "1985",
+     "field": "value",
+     "value": 615.4,
+     "note": "row color #2f7dff"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "1985 highlighted value is 615.4",
+    "blue 1985 bar shows 615.4",
+    "the 1985 peak is about 615"
+   ],
+   "visual_evidence_rule": "Blue 1985 bar is labeled or tooltip shows 615.4.",
+   "temporal_anchor": "1985 clause in narration",
+   "reviewer_question": "Should the 1985 value be the highlighted 615.4?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "1985 full-series value 656.1 is a local peak above 1980 and 1990.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1985",
+     "x": "1985",
+     "field": "value",
+     "value": 656.1,
+     "note": "rel_value 1.0"
+    },
+    {
+     "entity": "1980",
+     "x": "1980",
+     "field": "value",
+     "value": 472.6,
+     "note": "rel_value 1.0"
+    },
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "value",
+     "value": 631.7,
+     "note": "rel_value 1.0"
+    }
+   ],
+   "computation": "656.1 > 472.6 and 656.1 > 631.7",
+   "accepted_routes": [
+    "1985 peak at 656.1 tops 1980 and 1990",
+    "spending peaks in 1985 before easing",
+    "1985 is higher than adjacent years"
+   ],
+   "visual_evidence_rule": "1985 bar appears taller than 1980 and 1990 bars.",
+   "temporal_anchor": "reached a new high in 1985",
+   "reviewer_question": "Is the local peak based on 656.1 rather than 615.4?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "After 1985 the main series declines: 656.1, 631.7, 505.7 by 1995.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1985",
+     "x": "1985",
+     "field": "value",
+     "value": 656.1,
+     "note": "rel_value 1.0"
+    },
+    {
+     "entity": "1990",
+     "x": "1990",
+     "field": "value",
+     "value": 631.7,
+     "note": "rel_value 1.0"
+    },
+    {
+     "entity": "1995",
+     "x": "1995",
+     "field": "value",
+     "value": 505.7,
+     "note": "rel_value 1.0"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Spending falls after the 1985 peak",
+    "1990 to 1995 decline is 631.7 to 505.7",
+    "post-1985 downward trend"
+   ],
+   "visual_evidence_rule": "Sequence after 1985 visibly descends to 1995.",
+   "temporal_anchor": "1985 new-high clause",
+   "reviewer_question": "Must the video show the post-1985 decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Long-term main series rises from 323.0 in 1950 to 823.5 in 2010.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1950",
+     "x": "1950",
+     "field": "value",
+     "value": 323.0,
+     "note": "rel_value 1.0"
+    },
+    {
+     "entity": "2010",
+     "x": "2010",
+     "field": "value",
+     "value": 823.5,
+     "note": "rel_value 1.0"
+    }
+   ],
+   "computation": "823.5 - 323.0 = 500.5; 823.5 / 323.0 = 2.55x",
+   "accepted_routes": [
+    "1950 to 2010 grows from 323.0 to 823.5",
+    "overall increase of 500.5",
+    "about 2.55 times higher by 2010"
+   ],
+   "visual_evidence_rule": "First and last main bars are labeled 323.0 and 823.5.",
+   "temporal_anchor": "annual military spending clause",
+   "reviewer_question": "Is the full 1950-2010 trend required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "1985 is not all-time maximum: 2010 main value 823.5 exceeds 656.1.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1985",
+     "x": "1985",
+     "field": "value",
+     "value": 656.1,
+     "note": "rel_value 1.0"
+    },
+    {
+     "entity": "2010",
+     "x": "2010",
+     "field": "value",
+     "value": 823.5,
+     "note": "rel_value 1.0"
+    }
+   ],
+   "computation": "823.5 > 656.1",
+   "accepted_routes": [
+    "2010 surpasses the 1985 peak",
+    "later value reaches 823.5",
+    "all-time high occurs in 2010"
+   ],
+   "visual_evidence_rule": "2010 bar is visibly taller than 1985 bar.",
+   "temporal_anchor": "new high in 1985 clause",
+   "reviewer_question": "Must the animation note later higher values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "1985 highlighted row has relative_value 0.9380.",
+  "1985 bar-58 row value 691.8 if that series is used.",
+  "2010 main value 823.5 is overall maximum."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims linking spending to historical events.",
+  "Using narration figure without table support.",
+  "Claiming 1985 all-time maximum while 2010 823.5 shown.",
+  "Extrapolating before 1950 or after 2010.",
+  "Treating duplicate 1985 rows as separate years."
+ ],
+ "notes": "Table has multiple 1985 rows; U1 uses highlighted 615.4, U2/U3 use rel_value 1.0 series. U5 keeps later 2010 exceedance visible as optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 44.2,
+  "usage": {
+   "prompt_tokens": 3006,
+   "completion_tokens": 11150,
+   "total_tokens": 14156,
+   "prompt_tokens_details": {
+    "cached_tokens": 2816
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9464
+   },
+   "prompt_cache_hit_tokens": 2816,
+   "prompt_cache_miss_tokens": 190
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

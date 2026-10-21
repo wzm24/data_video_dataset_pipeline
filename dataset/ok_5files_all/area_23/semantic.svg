@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs><radialGradient id="bg23" cx="50%" cy="50%" r="70%"><stop offset="0" stop-color="#e6e6e6"/><stop offset="1" stop-color="#9c9c9c"/></radialGradient></defs>
+<rect width="1280" height="720" fill="url(#bg23)"/>
+<circle cx="512" cy="360" r="340" fill="#4b86b8"/>
+<line x1="212" y1="360" x2="812" y2="360" stroke="#ffffff" stroke-width="3"/><polygon points="212,360 224,353 224,367" fill="#ffffff"/><polygon points="812,360 800,353 800,367" fill="#ffffff"/>
+<text x="512" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">12,700 KM</text>
+<circle cx="985" cy="360" r="94" fill="#a9a9a9"/>
+<line x1="911" y1="360" x2="1059" y2="360" stroke="#ffffff" stroke-width="3"/><polygon points="911,360 923,353 923,367" fill="#ffffff"/><polygon points="1059,360 1047,353 1047,367" fill="#ffffff"/>
+<text x="985" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">3500 KM</text>
+</svg>

@@ -1,0 +1,129 @@
+{
+ "clip_id": "bar_113",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:A great deal @ a-great-deal",
+    "segment:A fair amount @ a-fair-amount"
+   ],
+   "assertion": {
+    "segment": "A great deal @ a-great-deal",
+    "expected_share": 0.3514,
+    "total_of": "%",
+    "total": 74.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show both the 26% and 48% components or a combined 74% 'at least some' segment."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:A great deal @ a-great-deal"
+   ],
+   "assertion": {
+    "mark": "A great deal @ a-great-deal",
+    "field": "value",
+    "expected": 26.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 'A great deal' bar/segment must be labeled or readable as 26%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:A fair amount @ a-fair-amount"
+   ],
+   "assertion": {
+    "mark": "A fair amount @ a-fair-amount",
+    "field": "value",
+    "expected": 48.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 'A fair amount' bar/segment must be labeled or readable as 48%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:A fair amount @ a-fair-amount",
+    "mark:A great deal @ a-great-deal"
+   ],
+   "assertion": {
+    "greater": "A fair amount @ a-fair-amount",
+    "lesser": "A great deal @ a-great-deal",
+    "expected_ratio": 1.8462,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both bars or segments must be visible so the 22-point gap can be inferred or labeled."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:A great deal @ a-great-deal",
+    "mark:A fair amount @ a-fair-amount"
+   ],
+   "assertion": {
+    "series": "A great deal",
+    "values": [
+     26.0,
+     48.0
+    ],
+    "threshold_between": [
+     26.0,
+     48.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the combined 74% or the two components summing past the halfway point."
+  }
+ ]
+}

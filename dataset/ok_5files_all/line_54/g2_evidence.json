@@ -1,0 +1,156 @@
+{
+ "clip_id": "line_54",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Israel (cases/1000) @ 180.0",
+    "mark:United States (cases/1000) @ 180.0",
+    "mark:Israel (cases/1000) @ 1120.0",
+    "mark:United States (cases/1000) @ 1120.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Israel (cases/1000) @ 180.0",
+      "value": 1.5769
+     },
+     {
+      "mark": "United States (cases/1000) @ 180.0",
+      "value": 0.5769
+     },
+     {
+      "mark": "Israel (cases/1000) @ 1120.0",
+      "value": 3.6769
+     },
+     {
+      "mark": "United States (cases/1000) @ 1120.0",
+      "value": 5.2769
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series' final markers must be visibly higher on the y-axis than their first markers."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Israel (cases/1000) @ 180.0",
+    "mark:United States (cases/1000) @ 180.0",
+    "mark:Israel (cases/1000) @ 1120.0",
+    "mark:United States (cases/1000) @ 1120.0"
+   ],
+   "assertion": {
+    "low": "United States (cases/1000) @ 180.0",
+    "low_value": 0.5769,
+    "high": "United States (cases/1000) @ 1120.0",
+    "high_value": 5.2769,
+    "delta": 4.7,
+    "ratio": 9.147,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The US line's net vertical change from first to last point must appear visibly larger than Israel's."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Israel (cases/1000) @ 885.0",
+    "mark:United States (cases/1000) @ 885.0"
+   ],
+   "assertion": {
+    "at": "885.0",
+    "above": "Israel (cases/1000)",
+    "above_value": 3.3769,
+    "below": "United States (cases/1000)",
+    "below_value": 2.7769,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Israel and US lines must visibly cross or the final point must show US above Israel while earlier points show Israel above US."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:United States (cases/1000) @ 1120.0"
+   ],
+   "assertion": {
+    "mark": "United States (cases/1000) @ 1120.0",
+    "field": "value",
+    "expected": 5.2769,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final markers or labels must show US ≈5.28 and Israel ≈3.68 on the y-axis."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Israel (cases/1000) @ 180.0",
+    "mark:Israel (cases/1000) @ 415.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Israel (cases/1000) @ 180.0",
+      "value": 1.5769
+     },
+     {
+      "mark": "Israel (cases/1000) @ 415.0",
+      "value": 1.4769
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The Israel line must show a slight downward step from the first to second point."
+  }
+ ]
+}

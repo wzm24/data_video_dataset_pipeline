@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_145,High income,high-income,345.0,,4200000000.000,0.5444,,#FAD6C5,vision
+bar_145,Upper middle income,upper-middle-income,595.0,,,0.1361,,#F5923E,svg_geometry
+bar_145,Lower middle income,lower-middle-income,845.0,,411000000.000,0.0533,,#D95D46,vision
+bar_145,Lower income,lower-income,1095.0,,270000000.000,0.0350,,#8B1C10,vision

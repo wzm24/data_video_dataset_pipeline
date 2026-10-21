@@ -1,0 +1,158 @@
+{
+ "clip_id": "line_41",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:College enrollments @ 1950",
+    "mark:College enrollments @ 2010"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "College enrollments @ 1950",
+      "value": 2.5272
+     },
+     {
+      "mark": "College enrollments @ 2010",
+      "value": 20.5272
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The plotted series must be visibly higher at the 2010-labeled point than at the 1950-labeled point, with intervening labeled points also above the 1950 level."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:College enrollments @ 2010",
+    "mark:College enrollments @ 1950"
+   ],
+   "assertion": {
+    "greater": "College enrollments @ 2010",
+    "lesser": "College enrollments @ 1950",
+    "expected_ratio": 8.1225,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 1950 and 2010 values visible or otherwise explicitly compare them so the roughly eightfold relationship can be inferred."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "College enrollments @ after 2010, near end",
+    "extreme": "max",
+    "expected": 20.8261,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the last segment reaching a high around 20.8261 and the final point at 19.9239, making the slight decline visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:College enrollments @ 1950",
+    "mark:College enrollments @ 1960",
+    "mark:College enrollments @ 1970",
+    "mark:College enrollments @ 2000",
+    "mark:College enrollments @ 2010"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "College enrollments @ 1950",
+      "value": 2.5272
+     },
+     {
+      "mark": "College enrollments @ 1960",
+      "value": 4.2283
+     },
+     {
+      "mark": "College enrollments @ 1970",
+      "value": 7.9239
+     },
+     {
+      "mark": "College enrollments @ 2000",
+      "value": 15.9239
+     },
+     {
+      "mark": "College enrollments @ 2010",
+      "value": 20.5272
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plotted values at the labeled years must appear in ascending order, with no labeled-year dip."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:College enrollments @ 1950",
+    "mark:College enrollments @ 1970"
+   ],
+   "assertion": {
+    "low": "College enrollments @ 1950",
+    "low_value": 2.5272,
+    "high": "College enrollments @ 1970",
+    "high_value": 7.9239,
+    "delta": 5.3967,
+    "ratio": 3.1354,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the 1950 and 1970 values or provide a comparison that supports the roughly threefold increase."
+  }
+ ]
+}

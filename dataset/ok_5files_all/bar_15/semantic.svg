@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#E8E8E8"/>
+<rect id="chart-title-box" data-role="title-box" x="300" y="28" width="680" height="56" rx="6" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#D93025">People flagged for far-right activity</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1120" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="180" x2="120" y2="600" stroke="#666666" stroke-width="3"/>
+<g id="entity-2016-17" data-role="entity" data-entity-id="2016-17" data-label="2016-17">
+<rect id="2016-17-bar" data-role="bar" data-entity-id="2016-17" data-value="1.0" x="380" y="348" width="200" height="252" fill="#1A1A1A"/>
+<text id="2016-17-label" data-role="category-label" data-entity-id="2016-17" x="480" y="636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">2016-17</text>
+</g>
+<g id="entity-2017-18" data-role="entity" data-entity-id="2017-18" data-label="2017-18">
+<rect id="2017-18-bar" data-role="bar" data-entity-id="2017-18" data-value="1.4" x="700" y="247" width="200" height="353" fill="#E45756"/>
+<text id="2017-18-label" data-role="category-label" data-entity-id="2017-18" x="800" y="636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#C0392B">2017-18</text>
+</g>
+</g>
+</svg>

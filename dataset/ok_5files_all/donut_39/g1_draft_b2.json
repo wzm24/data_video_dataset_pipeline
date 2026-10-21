@@ -1,0 +1,191 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_39",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers about the prevalence of cat ownership among American households.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "30.4% of American households own a cat.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "own a cat",
+     "x": "own a cat",
+     "field": "value",
+     "value": 30.4,
+     "note": "Table value for the 'own a cat' category is 30.4 percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "30.4% of American households own a cat",
+    "the cat-ownership rate among U.S. households is 30.4%",
+    "about 30% of American households have a cat",
+    "just over 3 in 10 American households own a cat"
+   ],
+   "visual_evidence_rule": "A chart mark labeled 'own a cat' must show 30.4% or a clearly rounded 30% with percent/share context.",
+   "temporal_anchor": "the narration clause stating the cat-ownership statistic",
+   "reviewer_question": "Must the video state the 30.4% cat-ownership share as the core message?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 30.4% is a share of American households, not of people or of cats.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "own a cat",
+     "x": "own a cat",
+     "field": "value",
+     "value": 30.4,
+     "note": "The table unit is percent and the intent/narration identifies the denominator as American households."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "30.4% of American households own a cat",
+    "households, not individuals, are the denominator",
+    "the rate applies to U.S. households"
+   ],
+   "visual_evidence_rule": "The chart title or label must name households as the population base; avoid replacing with 'Americans' or 'cats'.",
+   "temporal_anchor": "the subject/denominator phrase attached to the ownership statistic",
+   "reviewer_question": "Must the denominator 'American households' be explicit and non-negotiable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "69.6% of American households do not own a cat.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "own a cat",
+     "x": "own a cat",
+     "field": "value",
+     "value": 30.4,
+     "note": "Complement formula uses the table's 30.4% cat-ownership share."
+    }
+   ],
+   "computation": "100 - 30.4 = 69.6",
+   "accepted_routes": [
+    "69.6% of American households do not own a cat",
+    "about 70% of U.S. households do not have a cat",
+    "the remaining 69.6% is non-cat-owning households"
+   ],
+   "visual_evidence_rule": "If shown, the donut remainder or comparison mark must represent 69.6% or rounded 70% and be labeled as not owning a cat.",
+   "temporal_anchor": "optional clause or visual label following the 30.4% ownership statement",
+   "reviewer_question": "Should the complement be explicitly stated, or is it enough to show the remaining donut slice visually?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "30.4% is equivalent to the table's relative value 0.3040.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "own a cat",
+     "x": "own a cat",
+     "field": "relative_value",
+     "value": 0.304,
+     "note": "relative_value equals 30.4 percent when expressed as a proportion."
+    },
+    {
+     "entity": "own a cat",
+     "x": "own a cat",
+     "field": "value",
+     "value": 30.4,
+     "note": "Percent representation from the same row."
+    }
+   ],
+   "computation": "0.3040 × 100 = 30.4",
+   "accepted_routes": [
+    "30.4% (0.3040) of households own a cat",
+    "the proportion is 0.3040, or 30.4%",
+    "cat ownership is 0.3040 as a decimal share"
+   ],
+   "visual_evidence_rule": "Only needed if the chart uses a decimal/proportion label; otherwise the percent label is sufficient.",
+   "temporal_anchor": "optional technical label or annotation on the same ownership statistic",
+   "reviewer_question": "Does the video need to preserve the decimal/proportion form 0.3040, or is percent-only acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The chart may show only the single category 'own a cat' because that is the only row in the table.",
+  "A one-slice donut or single-share visual is valid; no multi-pet breakdown is supported by the table."
+ ],
+ "unsupported_to_avoid": [
+  "84% of cats are spayed or neutered, because that number is not in the table.",
+  "Raw counts of households, people, or cats, because the table only provides a percent.",
+  "Dog ownership or other pet ownership comparisons, because they are not in the table.",
+  "Year, source, geography beyond 'American households' if not supplied by the table or intent.",
+  "Causal explanations for cat ownership prevalence.",
+  "Extrapolation to future trends or to all Americans as individuals rather than households."
+ ],
+ "notes": "The only table-backed statistic is 30.4% for 'own a cat'; the complement is arithmetic from it. The 84% spay/neuter narration is outside this table and should not be treated as ground truth.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.74
+ },
+ "draft_cost": {
+  "sec": 25.2,
+  "usage": {
+   "prompt_tokens": 601,
+   "completion_tokens": 5702,
+   "total_tokens": 6303,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4314
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 345
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

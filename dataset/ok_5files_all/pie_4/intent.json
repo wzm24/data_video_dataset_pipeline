@@ -1,0 +1,28 @@
+{
+ "clip_id": "pie_4",
+ "intent_en": "To explore the potential changes or scenarios required to increase public transit usage by reducing the dominance of driving alone.",
+ "previous_intent": "To explore the potential strategies and changes required to reduce the dominance of solo driving and increase public transit usage among American commuters.",
+ "narration_support": "So what would it take to shrink this part of the chart to get more Americans to use public transit?",
+ "chart_support": "Pie chart displaying commute modes by percentage, showing 'Drive alone' as the overwhelming majority compared to 'Public transportation' and other modes.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly asks about the conditions needed to shrink a part of the chart (implied to be the large 'Drive alone' segment) to boost public transit usage. The chart visualizes this disparity, showing 'Drive alone' as the vast majority of commute modes.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

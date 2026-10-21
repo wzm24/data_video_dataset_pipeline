@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#e2e2e2"/>
+<path d="M 950.0 195.0 A 165.0 165.0 0 1 1 822.9 254.8" fill="none" stroke="#8c8c8c" stroke-width="40.0"/>
+<path d="M 822.9 254.8 A 165.0 165.0 0 0 1 950.0 195.0" fill="none" stroke="#fce000" stroke-width="40.0"/>
+<text x="70" y="330" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">New York City residents able to</text>
+<text x="70" y="374" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">pay bail at their initial hearing</text>
+<text x="70" y="414" font-family="Arial, sans-serif" font-size="20" font-style="italic" fill="#555555">Center for Court Innovation, 2014</text>
+<text x="1210" y="60" text-anchor="end" font-family="Georgia, serif" font-size="38" font-style="italic" fill="#111111">Vox</text>
+<text x="950.0" y="374.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#111111">14%</text>
+</svg>

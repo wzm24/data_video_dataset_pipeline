@@ -1,0 +1,9 @@
+﻿entity,series,metric,value,unit,label
+Car,National average,share_of_trips,90,%,90%
+Car,Transit-oriented developments,share_of_trips,45,%,45%
+Public transit,National average,share_of_trips,6,%,6%
+Public transit,Transit-oriented developments,share_of_trips,30,%,30%
+Bike,National average,share_of_trips,1,%,1%
+Bike,Transit-oriented developments,share_of_trips,3,%,3%
+Walk,National average,share_of_trips,3,%,3%
+Walk,Transit-oriented developments,share_of_trips,22,%,22%

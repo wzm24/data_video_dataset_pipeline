@@ -1,0 +1,320 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_1",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the critical consequences of an outbreak overwhelming healthcare resources, specifically how infection rates exceeding system capacity lead to untreated deaths and further system collapse.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Infections exceed healthcare capacity during the outbreak: at x=10 infections are 55.8 vs capacity 45.0, and at x=37.5 infections are 67.2 vs capacity 33.0; by x=55 infections are 0.0 while capacity is back at 45.0.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "10",
+     "field": "value",
+     "value": 55.8,
+     "note": "above capacity at same x"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "10",
+     "field": "value",
+     "value": 45.0,
+     "note": "capacity at x=10"
+    },
+    {
+     "entity": "Infections",
+     "x": "37.5",
+     "field": "value",
+     "value": 67.2,
+     "note": "still above capacity at capacity minimum"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "37.5",
+     "field": "value",
+     "value": 33.0,
+     "note": "capacity minimum"
+    },
+    {
+     "entity": "Infections",
+     "x": "55",
+     "field": "value",
+     "value": 0.0,
+     "note": "below capacity by x=55"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "55",
+     "field": "value",
+     "value": 45.0,
+     "note": "capacity recovered"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Infections exceed capacity at x=10 and x=37.5, then fall below by x=55.",
+    "The infection curve is above the capacity line during the middle of the outbreak.",
+    "At x=10, infections are 55.8 vs capacity 45.0; at x=37.5, infections are 67.2 vs capacity 33.0; by x=55 infections are 0.0 vs capacity 45.0."
+   ],
+   "visual_evidence_rule": "Both infection and capacity curves must be visible with a marked or visually clear overcapacity interval around x=10 through at least x=37.5.",
+   "temporal_anchor": "the clause 'people will die untreated'",
+   "reviewer_question": "Must the video explicitly mark the overcapacity interval/crossing, or are the two curves with labeled peak and minimum enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Healthcare capacity falls from 45.0 at x=10 and x=20 to a minimum of 33.0 at x=37.5, a 12.0-point or about 26.7% drop, before returning to 45.0 by x=55.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Healthcare capacity",
+     "x": "10",
+     "field": "value",
+     "value": 45.0,
+     "note": "initial capacity"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "20",
+     "field": "value",
+     "value": 45.0,
+     "note": "capacity unchanged from x=10"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "37.5",
+     "field": "value",
+     "value": 33.0,
+     "note": "minimum capacity"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "55",
+     "field": "value",
+     "value": 45.0,
+     "note": "capacity returns to initial level"
+    }
+   ],
+   "computation": "decline = 45.0 - 33.0 = 12.0; percent decline = (33.0 - 45.0) / 45.0 = -0.2666667 = -26.7%",
+   "accepted_routes": [
+    "Capacity drops from 45 to 33, a 12-point decline.",
+    "Capacity falls about 27% from 45 to 33.",
+    "At x=37.5 capacity hits its lowest point, 33.0, then recovers to 45.0 by x=55."
+   ],
+   "visual_evidence_rule": "The capacity line must visibly dip from 45.0 to 33.0 at x=37.5 and show recovery toward 45.0 by x=55.",
+   "temporal_anchor": "the clause 'the capacity of health care systems falls even further'",
+   "reviewer_question": "Must the video quantify the capacity drop as 12 points or about 27%, or is showing the line dip to 33.0 enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the capacity minimum x=37.5, infections are 67.2 compared with capacity 33.0, so infections exceed capacity by 34.2 and are just over 2.0 times capacity.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "37.5",
+     "field": "value",
+     "value": 67.2,
+     "note": "infection level at capacity minimum"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "37.5",
+     "field": "value",
+     "value": 33.0,
+     "note": "capacity minimum"
+    }
+   ],
+   "computation": "excess = 67.2 - 33.0 = 34.2; ratio = 67.2 / 33.0 = 2.03636...; excess as percent of capacity = 34.2 / 33.0 = 103.6%",
+   "accepted_routes": [
+    "At x=37.5, infections are 67.2 vs capacity 33.0, just over double capacity.",
+    "Infections exceed capacity by 34.2 at the capacity low.",
+    "Even at the lowest capacity, infections remain about 2.0 times capacity."
+   ],
+   "visual_evidence_rule": "The chart must show the infection value and capacity value at x=37.5, or otherwise mark the >2x overcapacity at the capacity minimum.",
+   "temporal_anchor": "the clause 'people will die untreated'",
+   "reviewer_question": "Must the video compute the >2x ratio or 34.2 excess at the capacity minimum, or is visual overcapacity sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Infections peak at 90.4 at x=20 and x=30, which is about 2.01 times the 45.0 capacity and an excess of 45.4 points over capacity.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "20",
+     "field": "value",
+     "value": 90.4,
+     "note": "peak infection value"
+    },
+    {
+     "entity": "Infections",
+     "x": "30",
+     "field": "value",
+     "value": 90.4,
+     "note": "peak plateau continues"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "20",
+     "field": "value",
+     "value": 45.0,
+     "note": "capacity during infection peak"
+    }
+   ],
+   "computation": "ratio = 90.4 / 45.0 = 2.008888...; excess = 90.4 - 45.0 = 45.4; percent over capacity = 45.4 / 45.0 = 100.888...%",
+   "accepted_routes": [
+    "Infections peak at 90.4 at x=20-30, about 2.01 times the 45.0 capacity.",
+    "Peak infections exceed capacity by 45.4 points.",
+    "At peak, infections are just over double capacity."
+   ],
+   "visual_evidence_rule": "The chart must show the infection curve peaking at 90.4 near x=20-30 against the capacity line at 45.0.",
+   "temporal_anchor": "the clause 'people will die untreated' or the opening overcapacity warning",
+   "reviewer_question": "Must the video explicitly state the peak infection is about double capacity, or is the peak value alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After peaking at 90.4 at x=20-30, infections fall to 67.2 at x=37.5, 29.4 at x=45, and 0.0 by x=55.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "20",
+     "field": "value",
+     "value": 90.4,
+     "note": "peak value"
+    },
+    {
+     "entity": "Infections",
+     "x": "30",
+     "field": "value",
+     "value": 90.4,
+     "note": "peak plateau"
+    },
+    {
+     "entity": "Infections",
+     "x": "37.5",
+     "field": "value",
+     "value": 67.2,
+     "note": "declining infection level"
+    },
+    {
+     "entity": "Infections",
+     "x": "45",
+     "field": "value",
+     "value": 29.4,
+     "note": "further decline"
+    },
+    {
+     "entity": "Infections",
+     "x": "55",
+     "field": "value",
+     "value": 0.0,
+     "note": "infection curve reaches zero"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "After a peak of 90.4 at x=20-30, infections fall to 67.2 at x=37.5, 29.4 at x=45, and 0.0 by x=55.",
+    "The infection curve declines after the plateau and reaches zero by x=55.",
+    "Infections drop from 90.4 to 0.0 between x=20-30 and x=55."
+   ],
+   "visual_evidence_rule": "The chart must show the post-peak infection decline ending at 0.0 by x=55.",
+   "temporal_anchor": "optional background across the narration, especially after 'falls even further'",
+   "reviewer_question": "Is the post-peak infection decline required, or is it optional background once the overcapacity story is shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Healthcare capacity has intermediate values of 36.54 at x=28 and x=47, between the 45.0 baseline and the 33.0 minimum.",
+  "Capacity is flat at 45.0 from x=10 to x=20 and again from x=55 to x=80.",
+  "Infections are 0.0 at x=0 and remain 0.0 at x=55, x=65, and x=75."
+ ],
+ "unsupported_to_avoid": [
+  "Any numeric count or rate of untreated deaths; the table has no deaths entity.",
+  "Claiming healthcare worker sickness caused the capacity drop; the table has no worker-sickness field.",
+  "Claiming capacity falls to zero or the system fully collapses to zero; the observed capacity minimum is 33.0.",
+  "Using a population denominator for overcapacity share; no population or total-cases denominator is present.",
+  "Extrapolating infection or capacity values beyond x=80 or beyond the table values."
+ ],
+ "notes": "The table supports overcapacity, capacity drop, and infection decline, but not death counts or worker-sickness causality. Primary reviewer decisions are whether the exact overcapacity interval and the peak/min ratios must be explicitly shown.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 39.2,
+  "usage": {
+   "prompt_tokens": 956,
+   "completion_tokens": 9372,
+   "total_tokens": 10328,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6773
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 700
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

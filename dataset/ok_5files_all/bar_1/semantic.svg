@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#E3DCD7"/>
+<rect id="chart-title-box" data-role="title-box" x="390" y="26" width="500" height="60" rx="8" fill="#9CA3A8"/>
+<text id="chart-title" data-role="title" x="640.0" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff">FLY ME TO THE MOON</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="170" x2="120" y2="600" stroke="#8a8a8a" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="600" x2="1120" y2="600" stroke="#8a8a8a" stroke-width="3"/>
+<g id="entity-car-value" data-role="entity" data-entity-id="car" data-label="CAR">
+<rect id="car-value-label-box" data-role="category-box" data-entity-id="car" x="120" y="208" width="110" height="36" rx="4" fill="#E88D35"/>
+<text id="car-value-label" data-role="category-label" data-entity-id="car" x="128" y="233" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">CAR</text>
+<rect id="car-value-bar" data-role="bar" data-entity-id="car" data-value="1" x="120" y="252" width="1000" height="48" fill="#F98E3D" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-boing-747-value" data-role="entity" data-entity-id="boing-747" data-label="BOING 747">
+<rect id="boing-747-value-label-box" data-role="category-box" data-entity-id="boing-747" x="120" y="336" width="180" height="36" rx="4" fill="#AEDBF5"/>
+<text id="boing-747-value-label" data-role="category-label" data-entity-id="boing-747" x="128" y="361" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">BOING 747</text>
+<rect id="boing-747-value-bar" data-role="bar" data-entity-id="boing-747" data-value="0.087" x="120" y="380" width="87" height="48" fill="#89D4F5" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-spaceship-value" data-role="entity" data-entity-id="spaceship" data-label="SPACESHIP">
+<rect id="spaceship-value-label-box" data-role="category-box" data-entity-id="spaceship" x="120" y="464" width="170" height="36" rx="4" fill="#D94036"/>
+<text id="spaceship-value-label" data-role="category-label" data-entity-id="spaceship" x="128" y="489" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">SPACESHIP</text>
+<rect id="spaceship-value-bar" data-role="bar" data-entity-id="spaceship" data-value="0.029" x="120" y="508" width="29" height="48" fill="#E85D3A" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+</g>
+</svg>

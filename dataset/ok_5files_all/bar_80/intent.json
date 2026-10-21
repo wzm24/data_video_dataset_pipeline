@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_80",
+ "intent_en": "To establish the millennial demographic as a mature generation of adults transitioning from education to the workforce and career paths.",
+ "previous_intent": "To introduce the millennial generation (born ~1980-1996) as a significant demographic cohort now entering adulthood, the workforce, and the business environment.",
+ "narration_support": "And millennials are now officially full grown adults. The youngest are graduating college and entering the job market. The oldest are well into their careers.",
+ "chart_support": "Population pyramid chart titled 'MILLENNIALS ~1980-1996' highlighting the millennial age range (approx. 18-39) with blue and pink bars, accompanied by icons of a graduation cap and briefcase representing education and employment.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly describes millennials as adults graduating and entering careers. The chart visualizes this by highlighting the corresponding age cohort in a population pyramid and using icons (graduation cap, briefcase) to symbolize the life stages mentioned.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

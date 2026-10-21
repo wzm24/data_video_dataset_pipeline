@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#EAEAEA"/>
+<path d="M 640 324 L 640.0 138.4 A 185.6 185.6 0 0 1 643.2 138.4 Z" fill="#222222" stroke="#ffffff" stroke-width="2"/>
+<path d="M 640 324 L 643.2 138.4 A 185.6 185.6 0 1 1 640.0 138.4 Z" fill="#B3B3B3" stroke="#ffffff" stroke-width="2"/>
+</svg>

@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_146",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To compare the number of vaccine doses procured per person across different countries, highlighting that Canada secured a significantly higher amount relative to its population than the United States as of March 2021.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Chart compares relative vaccine doses procured per person across seven entities as of March 2021.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "8.7",
+     "x": "867.1",
+     "field": "relative_value",
+     "value": 0.4486,
+     "note": "example row"
+    }
+   ],
+   "computation": "count rows = 7",
+   "accepted_routes": [
+    "Seven entities are compared",
+    "Seven bars show relative vaccine doses per person",
+    "Seven-country comparison as of March 2021"
+   ],
+   "visual_evidence_rule": "Seven bars with relative_value labels must be visible.",
+   "temporal_anchor": "As of March 2021 clause",
+   "reviewer_question": "Must the video show all seven entities, not just top two?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Entity 8.7 has the highest relative vaccine doses per person at 0.4486.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "8.7",
+     "x": "867.1",
+     "field": "relative_value",
+     "value": 0.4486,
+     "note": "maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Top bar is 0.4486",
+    "Highest relative value is about 0.45",
+    "Entity 8.7 leads at 0.449"
+   ],
+   "visual_evidence_rule": "Top bar labeled 8.7 reaches 0.4486 relative_value.",
+   "temporal_anchor": "As of March 2021 clause",
+   "reviewer_question": "Is identifying the top entity/value required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Top relative value 0.4486 exceeds second 0.3764 by 0.0722.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "8.7",
+     "x": "867.1",
+     "field": "relative_value",
+     "value": 0.4486,
+     "note": "top"
+    },
+    {
+     "entity": "7.3",
+     "x": "820.9",
+     "field": "relative_value",
+     "value": 0.3764,
+     "note": "second"
+    }
+   ],
+   "computation": "0.4486 - 0.3764 = 0.0722",
+   "accepted_routes": [
+    "Top is 0.072 higher than second",
+    "Gap of about 0.07",
+    "Top exceeds next by 0.0722"
+   ],
+   "visual_evidence_rule": "Top and second bars visible with gap.",
+   "temporal_anchor": "Canada vs U.S. comparison clause",
+   "reviewer_question": "Must the video quantify the top-vs-second gap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Relative values rank downward from 0.4486 to 0.2062 across entities.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "8.7",
+     "x": "867.1",
+     "field": "relative_value",
+     "value": 0.4486,
+     "note": "highest"
+    },
+    {
+     "entity": "4.0",
+     "x": "712.0",
+     "field": "relative_value",
+     "value": 0.2062,
+     "note": "lowest"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Bars descend from 0.449 to 0.206",
+    "Highest to lowest order",
+    "Ranking falls across all seven bars"
+   ],
+   "visual_evidence_rule": "Bars ordered by descending relative_value heights.",
+   "temporal_anchor": "overall comparison clause",
+   "reviewer_question": "Must the video show full ranking order, not just top?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Only entity 8.7 exceeds 0.4 relative value; second is 0.3764.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "8.7",
+     "x": "867.1",
+     "field": "relative_value",
+     "value": 0.4486,
+     "note": "above 0.4"
+    },
+    {
+     "entity": "7.3",
+     "x": "820.9",
+     "field": "relative_value",
+     "value": 0.3764,
+     "note": "below 0.4"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Top clears 0.40",
+    "Only one bar above 0.4",
+    "Second stays below 0.4 at 0.376"
+   ],
+   "visual_evidence_rule": "0.4 reference line or threshold cue visible.",
+   "temporal_anchor": "optional threshold clause",
+   "reviewer_question": "Is the 0.4 threshold worth showing?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Lowest relative value is 0.2062 for entity 4.0",
+  "Entity 5.7 is fourth at 0.2939",
+  "Entity 4.6 is sixth at 0.2372"
+ ],
+ "unsupported_to_avoid": [
+  "Mapping Canada or U.S. to specific rows",
+  "300 million doses, five times, twice from narration",
+  "AstraZeneca 300 million doses",
+  "Causal claims that deals worked out",
+  "Extrapolating beyond March 2021"
+ ],
+ "notes": "Table lacks country names; units use entity labels. Top/second gap is derived from relative_value cells.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 31.7,
+  "usage": {
+   "prompt_tokens": 882,
+   "completion_tokens": 7759,
+   "total_tokens": 8641,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6415
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 242
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,222 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_20",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers about the rate of college diploma attainment among adults in Israel.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The college-diploma attainment rate among adults over 25 is about 47%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 47,
+     "note": "Table's printed share value is 47 percent."
+    },
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "relative_value",
+     "value": 0.47,
+     "note": "Equivalent proportion 0.4700."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "About 47% of adults over 25 have a college diploma.",
+    "The college-diploma attainment rate for people aged 25+ is roughly 47%.",
+    "Roughly 47 out of every 100 over-25s hold a college diploma."
+   ],
+   "visual_evidence_rule": "The central donut share or label must show 47% for college-diploma attainment, with the over-25 population qualifier present in narration/on-screen text.",
+   "temporal_anchor": "The main clause stating 'About 47% of those over 25 have a college diploma.'",
+   "reviewer_question": "Should the 47% college-diploma share among over-25s be treated as the required central claim?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complementary share without a college diploma is 53%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 47,
+     "note": "Complement derived from the table's 47% share."
+    }
+   ],
+   "computation": "100 - 47 = 53; equivalently 1 - 0.4700 = 0.5300",
+   "accepted_routes": [
+    "About 53% of adults over 25 do not have a college diploma.",
+    "The remaining share without a college diploma is roughly 53%.",
+    "If 47% have a diploma, about 53% do not."
+   ],
+   "visual_evidence_rule": "If shown, the chart or on-screen text must make clear the complementary segment is 53% and is derived from 100% minus 47%.",
+   "temporal_anchor": "Optional follow-on to the main 47% clause; should not replace the main 47% statement.",
+   "reviewer_question": "Should the 53% complement be explicitly visualized or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 47% rate is below half, so it is not a majority.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 47,
+     "note": "47% is compared to the half threshold."
+    }
+   ],
+   "computation": "47 < 50, where 50 = 100/2; equivalently 0.4700 < 0.5",
+   "accepted_routes": [
+    "At about 47%, this is below half.",
+    "Less than half of adults over 25 have a college diploma.",
+    "The rate is not a majority; it is 47%."
+   ],
+   "visual_evidence_rule": "If this claim is made, the chart or narration must support reading 47% as less than 50%; a half/majority reference must not imply 47% is above half.",
+   "temporal_anchor": "The main 'about 47%' clause, potentially with a contrasting phrase about half.",
+   "reviewer_question": "Should the below-half/not-a-majority framing be required or left optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The same rate can be expressed as the proportion 0.47.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "relative_value",
+     "value": 0.47,
+     "note": "Table's relative_value is 0.4700, equivalent to 47%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The share is 0.47 of the over-25 population.",
+    "As a proportion, the rate is 0.47.",
+    "The relative value is 0.4700, or 47%."
+   ],
+   "visual_evidence_rule": "If shown, the decimal 0.47 must be presented as the same quantity as 47%, not as an additional or different rate.",
+   "temporal_anchor": "Optional on-screen numeric variant accompanying the main 47% clause.",
+   "reviewer_question": "Should the decimal/proportion form 0.47 be accepted as an optional representation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The percentage applies to adults over 25 in Israel, not to all adults, all ages, or another country.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 47,
+     "note": "Table supplies the 47% share; the over-25 and Israel scope comes from the narration/intent and is needed for the denominator."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Among adults over 25 in Israel, about 47% have a college diploma.",
+    "For Israelis aged 25 and older, the college-diploma rate is 47%.",
+    "The 47% share is for the over-25 adult population in Israel."
+   ],
+   "visual_evidence_rule": "Narration or on-screen text must identify the over-25 population and Israel context; the chart must not imply the 47% is for all ages or another country.",
+   "temporal_anchor": "The clause 'those over 25' in the main narration sentence, plus any Israel context title.",
+   "reviewer_question": "Should the over-25 denominator and Israel scope be treated as required context rather than optional footnote?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The chart is a single-share donut, so the video need not show a trend or ranking.",
+  "The value is approximately 47%, allowing rounded phrasing such as 'about 47%'.",
+  "If visually useful, the 47% can be described as close to but below half, without saying it is exactly half."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim 47% of all Israelis or all adults have a college diploma; the narration specifies over 25.",
+  "Do not invent trend, causal, or demographic breakdowns not present in the table.",
+  "Do not treat 53% as a table value; it is only a derived complement.",
+  "Do not claim 47% is exactly half or a majority.",
+  "Do not use counts of people unless a population total is provided."
+ ],
+ "notes": "The table has only one printed share: 47%, with relative_value 0.4700. The main required content is the 47% rate plus the over-25/Israel scope; complements and threshold framings are valid but optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.94
+ },
+ "draft_cost": {
+  "sec": 39.6,
+  "usage": {
+   "prompt_tokens": 581,
+   "completion_tokens": 9000,
+   "total_tokens": 9581,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7269
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 325
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,281 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_4",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explore the potential changes or scenarios required to increase public transit usage by reducing the dominance of driving alone.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Public transportation accounts for 5.2% of commuters in the baseline pie.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Public transportation",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.2,
+     "note": "baseline public transit share"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Public transportation is 5.2% of commuters.",
+    "Public transit makes up about 5% (one in twenty) of the chart.",
+    "The public transportation slice is 5.2%."
+   ],
+   "visual_evidence_rule": "Public transportation slice must be labeled or directly annotated with 5.2% (or clearly rounded to 5%).",
+   "temporal_anchor": "The narration clause asking about getting more Americans to use public transit.",
+   "reviewer_question": "Must the video state the baseline public transit share before proposing any increase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Drive alone is the largest commute mode, at 76.3%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "largest category"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Drive alone is 76.3% of commuters.",
+    "About three in four commuters drive alone.",
+    "Drive alone dominates at roughly 76%."
+   ],
+   "visual_evidence_rule": "Drive-alone slice must be visually dominant and labeled/annotated with 76.3% (or clearly rounded to 76%).",
+   "temporal_anchor": "The narration clause about reducing the dominance of driving alone / shrinking this part of the chart.",
+   "reviewer_question": "Must the video explicitly identify drive alone as the largest mode and give its 76.3% share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The drive-alone share exceeds public transportation by 71.1 percentage points, and is about 14.7 times the public transit share.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "larger share"
+    },
+    {
+     "entity": "Public transportation",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.2,
+     "note": "smaller share"
+    }
+   ],
+   "computation": "difference = 76.3 - 5.2 = 71.1 percentage points; ratio = 76.3 / 5.2 ≈ 14.67, rounded to 14.7",
+   "accepted_routes": [
+    "Drive alone is 71.1 points higher than public transit.",
+    "The gap is about 71 percentage points.",
+    "Drive alone is nearly 15 times public transit (76.3% vs 5.2%).",
+    "Drive alone is more than 14 times public transit."
+   ],
+   "visual_evidence_rule": "A direct comparison or callout must relate the 76.3% drive-alone slice to the 5.2% public-transit slice; exact ratio may be shown or stated.",
+   "temporal_anchor": "The narration clause contrasting public transit with the dominant drive-alone share.",
+   "reviewer_question": "Must the video quantify the drive-alone/public-transit gap or ratio, or is showing both shares enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "All non-drive-alone commute modes combined sum to 23.7%, representing the total non-drive-alone share in the baseline.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Public transportation",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.2,
+     "note": "non-drive-alone component"
+    },
+    {
+     "entity": "Taxi, motorcycle, or other",
+     "x": "mode share",
+     "field": "value",
+     "value": 1.7,
+     "note": "non-drive-alone component"
+    },
+    {
+     "entity": "Work at home",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.1,
+     "note": "non-drive-alone component"
+    },
+    {
+     "entity": "Walk",
+     "x": "mode share",
+     "field": "value",
+     "value": 2.5,
+     "note": "non-drive-alone component"
+    },
+    {
+     "entity": "Carpool",
+     "x": "mode share",
+     "field": "value",
+     "value": 8.2,
+     "note": "non-drive-alone component"
+    },
+    {
+     "entity": "Bicycle",
+     "x": "mode share",
+     "field": "value",
+     "value": 1.0,
+     "note": "non-drive-alone component"
+    }
+   ],
+   "computation": "sum of all non-drive-alone values = 5.2 + 1.7 + 5.1 + 2.5 + 8.2 + 1.0 = 23.7; equivalently 100 - 76.3 = 23.7",
+   "accepted_routes": [
+    "All other modes together are 23.7% of commuters.",
+    "Non-drive-alone modes make up about 24% combined.",
+    "If drive alone is 76.3%, the remaining modes sum to 23.7%."
+   ],
+   "visual_evidence_rule": "The chart must show the non-drive-alone slices as a group or a callout stating their combined 23.7% share.",
+   "temporal_anchor": "The narration clause about shrinking the drive-alone part of the chart / alternatives to driving.",
+   "reviewer_question": "Should the video explicitly group all non-drive-alone modes into their 23.7% combined share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Public transportation is the third-largest mode at 5.2%, behind drive alone (76.3%) and carpool (8.2%), slightly ahead of work at home (5.1%).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "mode share",
+     "field": "value",
+     "value": 76.3,
+     "note": "rank 1"
+    },
+    {
+     "entity": "Carpool",
+     "x": "mode share",
+     "field": "value",
+     "value": 8.2,
+     "note": "rank 2"
+    },
+    {
+     "entity": "Public transportation",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.2,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Work at home",
+     "x": "mode share",
+     "field": "value",
+     "value": 5.1,
+     "note": "rank 4"
+    }
+   ],
+   "computation": "rank order: 76.3 > 8.2 > 5.2 > 5.1",
+   "accepted_routes": [
+    "Public transit is the third-biggest commute mode, after drive alone and carpool.",
+    "Public transportation ranks third at 5.2%, just above work at home at 5.1%.",
+    "Carpool is second at 8.2%, public transit third at 5.2%."
+   ],
+   "visual_evidence_rule": "The chart or labels must make the ranking among the top modes visible, especially public transit vs carpool and work at home.",
+   "temporal_anchor": "The narration clause introducing public transit's current position in the overall composition.",
+   "reviewer_question": "Must the video establish public transit's rank relative to carpool and work at home, or is that optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Carpool is the second-largest mode at 8.2%.",
+  "Work at home is 5.1%, nearly tied with public transportation at 5.2%.",
+  "Bicycle is the smallest mode at 1.0%.",
+  "Taxi, motorcycle, or other is 1.7%.",
+  "All categories sum to 100% (76.3 + 5.2 + 1.7 + 5.1 + 2.5 + 8.2 + 1.0 = 100.0)."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim that a specific scenario, such as a given percentage shift from driving to transit, is in the data; no target or policy effect is provided.",
+  "Do not say reducing drive-alone causes public transit to rise by a specific amount unless framed as hypothetical and not attributed to the table.",
+  "Do not claim public transit is the second-largest mode; carpool is 8.2%, larger than public transit at 5.2%.",
+  "Do not use a wrong denominator or compare to all Americans rather than the commute-mode pie.",
+  "Do not extrapolate that drive-alone can be shrunk to a specific percentage; the table only gives baseline shares."
+ ],
+ "notes": "The core baseline is a 100% commute-mode pie where drive alone is 76.3% and public transit is 5.2%; any 'what would it take' must be framed as a hypothetical because the table has no scenario targets. Optional context includes mode ranking and combined shares.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 30.2,
+  "usage": {
+   "prompt_tokens": 773,
+   "completion_tokens": 7660,
+   "total_tokens": 8433,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5396
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 517
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

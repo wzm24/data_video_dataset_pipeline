@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#181c21"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">A better way to tax the rich</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="531.0" x2="1220" y2="531.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="204.0" x2="120" y2="531.0" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="531.0" x2="120" y2="531.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="537.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0%</text>
+<line data-role="tick" x1="112" y1="522.8" x2="120" y2="522.8" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="702.0" y="528.8" text-anchor="start" font-family="Arial, sans-serif" font-size="20" fill="#c9c9c9">50M</text>
+<line data-role="tick" x1="112" y1="449.2" x2="120" y2="449.2" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="455.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">500M</text>
+<line data-role="tick" x1="112" y1="204.0" x2="120" y2="204.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="210.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">$2 billion</text>
+<g id="entity-2-billion" data-role="entity" data-entity-id="2-billion" data-label="$2 billion">
+<rect id="2-billion-bar" data-role="bar" data-entity-id="2-billion" data-value="2e+09" x="590.0" y="204.0" width="100.0" height="327.0" fill="#b8b8b8" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<line data-role="bar-marker" x1="590.0" y1="522.8" x2="690.0" y2="522.8" stroke="#ffffff" stroke-width="2" stroke-dasharray="6,4"/>
+<line data-role="bar-marker" x1="590.0" y1="449.2" x2="690.0" y2="449.2" stroke="#ffffff" stroke-width="2" stroke-dasharray="6,4"/>
+<text id="2-billion-value-label" data-role="category-label" data-entity-id="2-billion" x="640.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5"><tspan x="640.0" dy="0.0">$2</tspan><tspan x="640.0" dy="20.0">billion</tspan></text>
+</g>
+<line x1="860" y1="92" x2="896" y2="92" stroke="#ffffff" stroke-width="5"/>
+<text x="904" y="100" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">3%</text>
+<line x1="860" y1="122" x2="896" y2="122" stroke="#ffffff" stroke-width="5"/>
+<text x="904" y="130" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">2%</text>
+</g>
+</svg>

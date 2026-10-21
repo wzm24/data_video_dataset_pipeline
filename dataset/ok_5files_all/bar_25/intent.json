@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_25",
+ "intent_en": "To compare the highest level of mathematics taken by high school graduates in 1982 and 2004, highlighting a discrepancy between the narrative of increasing rigor and the visual data.",
+ "previous_intent": "To compare the highest level of mathematics taken by students in 1982 and 2004, highlighting the divergence between rising curriculum expectations (towards trigonometry) and the actual decline in average student achievement (from algebra II to algebra I).",
+ "narration_support": "In 1982, the average high school graduate completed algebra, or maybe algebra 2. By 2004, the average student was closer to trigonometry.",
+ "chart_support": "Bar chart titled 'Highest level of math taken' showing the 1982 level (near Algebra II) is higher than the 2004 level (near Algebra I), indicating a decrease.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.85,
+ "evidence_note": "The narration claims an increase in average math level from algebra to trigonometry, while the chart shows a decrease from near Algebra II to near Algebra I, suggesting the clip aims to contrast perception with data or correct a misconception.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

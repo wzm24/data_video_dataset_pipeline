@@ -1,0 +1,7 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,name_source,entity_original
+bar_17,Housing,housing,740.0,,33.000,1.0000,,#8FB4C4,printed,,svg_text,Housing
+bar_17,Transportation,transportation,536.5,,17.000,0.5155,,#4B7BA8,printed,,svg_text,Transportation
+bar_17,Food,food,472.5,,12.000,0.3631,,#8FB4C4,printed,,svg_text,Food
+bar_17,Personal insurance,personal-insurance,460.0,,11.000,0.3333,,#8FB4C4,printed,,svg_text,Personal insurance
+bar_17,Health care,health-care,434.5,,9.000,0.2726,,#8FB4C4,printed,,svg_text,Health care
+bar_17,Clothes,clothes,358.0,,3.000,0.0905,,#8FB4C4,printed,,svg_text,Clothes

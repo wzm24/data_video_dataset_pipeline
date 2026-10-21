@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_133",
+ "intent_en": "To illustrate that the perceived risk of full-scale war is currently lower than it was during the Cold War.",
+ "previous_intent": "To demonstrate the assertion that the risk of full-scale war is lower today than at the height of the Cold War, highlighting the historical trend where risk levels were significantly higher during the Cold War period compared to recent times.",
+ "narration_support": "risk of a full -scale war is less today than it was at the height of the Cold War",
+ "chart_support": "Horizontal stacked bar chart with blue and red segments across multiple rows, showing a peak in total bar length in the middle rows and significantly shorter bars in the bottom rows, visually supporting the comparison between a high-risk period (Cold War) and the present.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly compares risk levels between today and the Cold War. The chart visualizes this with bar lengths peaking in the middle (likely representing the Cold War era with high values) and tapering at the bottom (representing today with lower values), consistent with the narration's claim of reduced risk.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

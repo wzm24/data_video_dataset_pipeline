@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_28",
+ "intent_en": "To explain the tax structure and revenue potential of Senator Warren's proposed wealth tax.",
+ "previous_intent": "To demonstrate the potential revenue and narrow tax base of Senator Warren's proposed wealth tax.",
+ "narration_support": "So what would happen if we imposed Senator Warren's tax? Well, only the richest 0 .05 % of Americans would pay this tax. But in 2016, the government could have raised about $200 billion from it.",
+ "chart_support": "Bar chart displaying tax rates (2%, 3%) corresponding to wealth thresholds ($60 million, $1 billion) with a value of $1.9 billion.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "Narration discusses the overall revenue ($200 billion) and affected population (top 0.05%), while the chart visualizes the specific tax brackets (rates of 2% and 3% at wealth thresholds of ~$50-60 million and $1 billion) which define the mechanism of the tax.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

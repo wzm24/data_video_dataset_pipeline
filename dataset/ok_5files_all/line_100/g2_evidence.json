@@ -1,0 +1,147 @@
+{
+ "clip_id": "line_100",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "new teacher supply @ 2005",
+    "extreme": "min",
+    "expected": 175000.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2008 value must be visible as the highest among the shown years."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:new teacher supply @ 2008",
+    "mark:new teacher supply @ 2017"
+   ],
+   "assertion": {
+    "low": "new teacher supply @ 2017",
+    "low_value": 90000.0,
+    "high": "new teacher supply @ 2008",
+    "high_value": 195000.0,
+    "delta": 105000.0,
+    "ratio": 2.1667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 2008 and 2017 values must be readable or labeled, and the net decrease should be indicated."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:new teacher supply @ 2008",
+    "mark:new teacher supply @ 2009",
+    "mark:new teacher supply @ 2013",
+    "mark:new teacher supply @ 2017"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "new teacher supply @ 2008",
+      "value": 195000.0
+     },
+     {
+      "mark": "new teacher supply @ 2009",
+      "value": 185000.0
+     },
+     {
+      "mark": "new teacher supply @ 2013",
+      "value": 110000.0
+     },
+     {
+      "mark": "new teacher supply @ 2017",
+      "value": 90000.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2008, 2009, 2013, and 2017 values must be available in chronological order for comparison."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2017 value must be annotated or labeled as projected, not estimated."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:new teacher supply @ 2005",
+    "mark:new teacher supply @ 2013"
+   ],
+   "assertion": {
+    "series": "new teacher supply",
+    "values": [
+     175000.0,
+     110000.0
+    ],
+    "threshold_between": [
+     110000.0,
+     175000.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2005 and 2013 values must be visible together so the crossing below the starting level can be compared."
+  }
+ ]
+}

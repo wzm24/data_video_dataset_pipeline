@@ -1,0 +1,266 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_69",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the Sahm unemployment index is a reliable indicator of economic recessions.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip plots a single Sahm index series over time, spanning from the 1990 label to the 2010 label.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sahm index",
+     "x": "1990",
+     "field": "value",
+     "value": 0.1767,
+     "note": "first labeled point"
+    },
+    {
+     "entity": "Sahm index",
+     "x": "2010",
+     "field": "value",
+     "value": 2.6167,
+     "note": "2010-labeled point before the final decline"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart shows the Sahm index from 1990 to 2010.",
+    "It is a single Sahm unemployment index time series.",
+    "The line tracks the Sahm index across the labeled years 1990, 1995, 2000, 2005, and 2010."
+   ],
+   "visual_evidence_rule": "A single line labeled as the Sahm index must be visible with time labels spanning at least 1990 to 2010.",
+   "temporal_anchor": "Opening clause or first part of narration introducing the Sahm index.",
+   "reviewer_question": "Must the video explicitly identify the plotted series and its 1990–2010 span?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Sahm index has three major upward spikes, one in each of the table's inter-year periods: between 1990 and 1995, between 2000 and 2005, and between 2005 and 2010.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sahm index",
+     "x": "between 1990 and 1995",
+     "field": "value",
+     "value": 1.5767,
+     "note": "first major peak"
+    },
+    {
+     "entity": "Sahm index",
+     "x": "between 2000 and 2005",
+     "field": "value",
+     "value": 1.6763,
+     "note": "second major peak"
+    },
+    {
+     "entity": "Sahm index",
+     "x": "between 2005 and 2010",
+     "field": "value",
+     "value": 3.946,
+     "note": "third and largest peak"
+    },
+    {
+     "entity": "Sahm index",
+     "x": "between 1990 and 1995",
+     "field": "value",
+     "value": -0.1237,
+     "note": "low/negative reading between spikes"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The line shows three major spikes separated by low or negative periods.",
+    "The Sahm index repeatedly surges and then falls back.",
+    "There are three prominent humps in the series."
+   ],
+   "visual_evidence_rule": "Three prominent upward peaks must be visible along the line, with lower or negative values between them.",
+   "temporal_anchor": "The clause about the rate of change in unemployment correlating with recessions.",
+   "reviewer_question": "Should the video explicitly link the three spikes to recessions, or just present the Sahm-index spike pattern?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The highest Sahm index value in the clip is 3.9460, reached between the 2005 and 2010 year markers.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sahm index",
+     "x": "between 2005 and 2010",
+     "field": "value",
+     "value": 3.946,
+     "note": "maximum value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The largest spike reaches 3.9460.",
+    "The peak is about 3.95.",
+    "The highest Sahm index reading is the one between the 2005 and 2010 labels."
+   ],
+   "visual_evidence_rule": "The highest point on the line must be visibly marked or labeled with a value near 3.9460.",
+   "temporal_anchor": "The clause about the rate of change in unemployment correlating with recessions, especially the largest spike.",
+   "reviewer_question": "Is the exact maximum value of 3.9460 required, or is showing the highest peak enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The largest spike is more than twice as high as the earlier major spikes: about 2.4 times the second-largest and about 2.5 times the first major peak.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Sahm index",
+     "x": "between 2005 and 2010",
+     "field": "value",
+     "value": 3.946,
+     "note": "largest peak"
+    },
+    {
+     "entity": "Sahm index",
+     "x": "between 2000 and 2005",
+     "field": "value",
+     "value": 1.6763,
+     "note": "second-largest peak"
+    },
+    {
+     "entity": "Sahm index",
+     "x": "between 1990 and 1995",
+     "field": "value",
+     "value": 1.5767,
+     "note": "first major peak"
+    }
+   ],
+   "computation": "3.9460 / 1.6763 = 2.35; 3.9460 / 1.5767 = 2.50",
+   "accepted_routes": [
+    "The largest spike is more than twice the second-largest spike.",
+    "It is about 2.4 times the next-highest peak and about 2.5 times the first peak.",
+    "The biggest spike dwarfs the earlier spikes by a factor of more than two."
+   ],
+   "visual_evidence_rule": "The highest peak must be visibly at least twice as tall as the two earlier major peaks.",
+   "temporal_anchor": "The clause contrasting the largest spike with earlier recession signals.",
+   "reviewer_question": "Should the video compare the largest spike's magnitude to the earlier spikes?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The largest surge rises by about 4.0 on the Sahm index scale, from a pre-spike reading of -0.0540 to the peak of 3.9460.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Sahm index",
+     "x": "after 2005 marker",
+     "field": "value",
+     "value": -0.054,
+     "note": "pre-spike low in the 2005–2010 segment"
+    },
+    {
+     "entity": "Sahm index",
+     "x": "between 2005 and 2010",
+     "field": "value",
+     "value": 3.946,
+     "note": "largest peak"
+    }
+   ],
+   "computation": "3.9460 - (-0.0540) = 4.0000",
+   "accepted_routes": [
+    "The largest spike climbs about 4.0 on the Sahm index scale.",
+    "It rises from -0.0540 to 3.9460.",
+    "The strongest surge is roughly a 4-unit move."
+   ],
+   "visual_evidence_rule": "A visibly steep rise from near zero/negative to the highest peak must be shown, with the magnitude of the rise made explicit if this unit is used.",
+   "temporal_anchor": "The clause about the rate of change in unemployment.",
+   "reviewer_question": "Should the video quantify the largest rise, not only the peak value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2010 labeled point is 2.6167, showing the index is still elevated at that year marker.",
+  "The lowest reading in the table is -0.1237, reached multiple times.",
+  "The first labeled point in 1990 is 0.1767.",
+  "The series falls to 0.1470 by the final table row."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as the Sahm index causes recessions.",
+  "Exact recession dates or shaded recession periods not present in the table.",
+  "Any specific threshold such as 0.5 or 0.50 percentage points, because it is not in the table.",
+  "Percentages, unemployment rates, counts, or dollar amounts not in the table.",
+  "Extrapolation before 1990 or after 2010.",
+  "Chart type, color, axis tick, or layout prescriptions."
+ ],
+ "notes": "The table is one Sahm-index series with a value column and sparse year labels; all numeric claims are drawn from value cells or simple differences/ratios. Values are described on the Sahm index scale, not as percentages or unemployment rates.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 64.9,
+  "usage": {
+   "prompt_tokens": 8510,
+   "completion_tokens": 15568,
+   "total_tokens": 24078,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13866
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 7998
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

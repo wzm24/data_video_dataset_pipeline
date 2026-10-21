@@ -1,0 +1,140 @@
+{
+ "clip_id": "line_23",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Ship cargo value @ first shown row"
+   ],
+   "assertion": {
+    "mark": "Ship cargo value @ first shown row",
+    "field": "value",
+    "expected": 0.75,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plot must clearly establish the starting relative level as 0.75."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Ship cargo value @ last shown row"
+   ],
+   "assertion": {
+    "mark": "Ship cargo value @ last shown row",
+    "field": "value",
+    "expected": 0.09,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plot must make the ending relative level visible as 0.09."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Ship cargo value @ first shown row",
+    "mark:Ship cargo value @ last shown row"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Ship cargo value @ first shown row",
+      "value": 0.75
+     },
+     {
+      "mark": "Ship cargo value @ last shown row",
+      "value": 0.09
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The plotted values must visibly decline from the first to the last shown point and must not show any upward reversal."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Ship cargo value @ first shown row",
+    "mark:Ship cargo value @ last shown row"
+   ],
+   "assertion": {
+    "low": "Ship cargo value @ last shown row",
+    "low_value": 0.09,
+    "high": "Ship cargo value @ first shown row",
+    "high_value": 0.75,
+    "delta": 0.66,
+    "ratio": 8.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart should make the total drop between the first and last relative values evident."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Ship cargo value @ row at the 0.10 threshold",
+    "mark:Ship cargo value @ first row below 0.10",
+    "mark:Ship cargo value @ last shown row"
+   ],
+   "assertion": {
+    "series": "Ship cargo value",
+    "values": [
+     0.1,
+     0.098,
+     0.09
+    ],
+    "threshold_between": [
+     0.09,
+     0.1
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plot should show the series dropping below 0.10 and then staying in a low or flat range through the endpoint."
+  }
+ ]
+}

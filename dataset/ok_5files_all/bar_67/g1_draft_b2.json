@@ -1,0 +1,305 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_67",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the financial impact of pirate attacks on shipping companies between 2013 and 2018.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data cover annual values for 2013 through 2018, with the main value metric starting at 1.000 in 2013, ending at 0.778 in 2018, and the relative metric starting at 0.5278 and ending at 0.4106.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 1.0,
+     "note": "first-year value"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.778,
+     "note": "last-year value"
+    },
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.5278,
+     "note": "first-year relative value"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.4106,
+     "note": "last-year relative value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "2013–2018 series: 1.000, 0.952, 0.905, 0.746, 0.698, 0.778",
+    "Relative series: 0.5278, 0.5026, 0.4775, 0.3937, 0.3686, 0.4106",
+    "Six annual data points from 2013 to 2018"
+   ],
+   "visual_evidence_rule": "The chart must show all six years on the x-axis and encode the annual value and relative_value series.",
+   "temporal_anchor": "the 2013–2018 period specified by the intent",
+   "reviewer_question": "Must the video present both the main value series and the relative_value series, or is one of them sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The main trend is a general decline from 2013 to 2017, followed by a rebound in 2018; 2017 is the lowest year in the series.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 1.0,
+     "note": "start of decline"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 0.952,
+     "note": "lower than 2013"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 0.905,
+     "note": "lower than 2014"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 0.746,
+     "note": "lower than 2015"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 0.698,
+     "note": "lowest value"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.778,
+     "note": "higher than 2017"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Values generally fall from 2013 to 2017, then rise in 2018",
+    "2013 is highest at 1.000 and 2017 is lowest at 0.698",
+    "The series declines for four consecutive years before an uptick in 2018"
+   ],
+   "visual_evidence_rule": "The chart must show a descending sequence from 2013 to 2017 and a visible uptick in 2018.",
+   "temporal_anchor": "the 2013–2018 trend span",
+   "reviewer_question": "Is the 2017 minimum and 2018 rebound required, or can a simplified decline-only trend be accepted?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From 2013 to 2018, the main value declines by 0.222 (about 22.2%), and the relative value declines by 0.1172 (also about 22.2%).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 1.0,
+     "note": "baseline"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.778,
+     "note": "endpoint"
+    },
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.5278,
+     "note": "baseline"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.4106,
+     "note": "endpoint"
+    }
+   ],
+   "computation": "value change = 0.778 - 1.000 = -0.222; percent = (0.778 - 1.000) / 1.000 = -0.222 = -22.2%. relative_value change = 0.4106 - 0.5278 = -0.1172; percent = (0.4106 - 0.5278) / 0.5278 ≈ -0.222 = -22.2%.",
+   "accepted_routes": [
+    "2018 is 0.222 lower than 2013, a 22.2% decrease",
+    "From 1.000 to 0.778 is about a 22% drop",
+    "Relative value falls from 0.5278 to 0.4106, down about 22%"
+   ],
+   "visual_evidence_rule": "The chart must make it possible to compare the 2013 and 2018 endpoints and show the net change over the full period.",
+   "temporal_anchor": "the full 2013–2018 period",
+   "reviewer_question": "Is the full-period net change required, or is the year-by-year trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The largest single-year drop in the main value is from 2015 to 2016: it falls from 0.905 to 0.746, a drop of 0.159 (about 17.6% relative to 2015).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 0.905,
+     "note": "pre-drop year"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 0.746,
+     "note": "post-drop year"
+    }
+   ],
+   "computation": "change = 0.746 - 0.905 = -0.159; percent = (0.746 - 0.905) / 0.905 ≈ -0.1757 = -17.6%.",
+   "accepted_routes": [
+    "2015 to 2016 shows the steepest annual decline, 0.905 to 0.746",
+    "The metric drops by 0.159 between 2015 and 2016",
+    "The biggest one-year fall is about 18% from 2015 to 2016"
+   ],
+   "visual_evidence_rule": "The chart must show the 2015 and 2016 bars/points and enough scale to see this as the largest annual step down.",
+   "temporal_anchor": "the 2015–2016 year-to-year transition",
+   "reviewer_question": "Should the video explicitly call out the steepest annual decline, or leave it as an implied detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After reaching the minimum in 2017, the main value rebounds in 2018 from 0.698 to 0.778, an increase of 0.080 (about 11.5% relative to 2017).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 0.698,
+     "note": "minimum year"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.778,
+     "note": "rebound year"
+    }
+   ],
+   "computation": "change = 0.778 - 0.698 = 0.080; percent = (0.778 - 0.698) / 0.698 ≈ 0.1146 = 11.5%.",
+   "accepted_routes": [
+    "2018 rises from 2017, 0.698 to 0.778",
+    "The 2017-to-2018 rebound is +0.080, about +11.5%",
+    "The metric increases by about 11% in the final year"
+   ],
+   "visual_evidence_rule": "The chart must show the 2017 low point and the 2018 uptick relative to it.",
+   "temporal_anchor": "the 2017–2018 final-year transition",
+   "reviewer_question": "Should the final-year rebound be a named takeaway, or is it enough that the 2018 bar is higher?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The relative_value series follows the same overall shape: 0.5278, 0.5026, 0.4775, 0.3937, 0.3686, 0.4106.",
+  "2012 is not in the table, so the video should not imply a value before 2013.",
+  "The main value in 2014 is 0.952 and in 2015 is 0.905; each is lower than the prior year."
+ ],
+ "unsupported_to_avoid": [
+  "Annual cost of $4.9 billion to $8.3 billion is not in the table and should not be cited as a chart value.",
+  "Causal claims that pirate attacks directly caused the metric changes are not supported by the table.",
+  "Dollar-denominated financial impact cannot be derived from the table's unitless value or relative_value.",
+  "Extrapolating beyond 2018 or before 2013 is unsupported."
+ ],
+ "notes": "The table supplies annual index-like values and relative values, not dollar costs; keep the video tied to those series. The most likely reviewer trade-off is whether to require only the overall trend or also the 2015–2016 steepest drop and 2018 rebound.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 32.1,
+  "usage": {
+   "prompt_tokens": 758,
+   "completion_tokens": 8485,
+   "total_tokens": 9243,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6414
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 502
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

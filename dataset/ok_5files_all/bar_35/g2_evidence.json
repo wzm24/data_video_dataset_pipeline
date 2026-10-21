@@ -1,0 +1,137 @@
+{
+ "clip_id": "bar_35",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Released Pretrial @ released-pretrial"
+   ],
+   "assertion": {
+    "segment": "Released Pretrial @ released-pretrial",
+    "expected_share": 0.3507,
+    "total_of": "unknown",
+    "total": 268.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A bar or label for Released Pretrial must be visible with value 94 or 94%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Returned for Every Court Date @ returned-for-every-court-date"
+   ],
+   "assertion": {
+    "segment": "Returned for Every Court Date @ returned-for-every-court-date",
+    "expected_share": 0.3284,
+    "total_of": "unknown",
+    "total": 268.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show Returned for Every Court Date with 88 or 88% and, if possible, label it as conditional on released defendants."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Not Arrested Pretrial @ not-arrested-pretrial"
+   ],
+   "assertion": {
+    "segment": "Not Arrested Pretrial @ not-arrested-pretrial",
+    "expected_share": 0.3209,
+    "total_of": "unknown",
+    "total": 268.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show Not Arrested Pretrial with 86 or 86% and avoid implying it is a rate for all defendants unless stated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Released Pretrial @ released-pretrial",
+    "mark:Returned for Every Court Date @ returned-for-every-court-date",
+    "mark:Not Arrested Pretrial @ not-arrested-pretrial"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Released Pretrial @ released-pretrial",
+      "value": 94.0
+     },
+     {
+      "mark": "Returned for Every Court Date @ returned-for-every-court-date",
+      "value": 88.0
+     },
+     {
+      "mark": "Not Arrested Pretrial @ not-arrested-pretrial",
+      "value": 86.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the descending order of the three bars or labels visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Returned for Every Court Date @ returned-for-every-court-date",
+    "mark:Not Arrested Pretrial @ not-arrested-pretrial"
+   ],
+   "assertion": {
+    "greater": "Returned for Every Court Date @ returned-for-every-court-date",
+    "lesser": "Not Arrested Pretrial @ not-arrested-pretrial",
+    "expected_ratio": 1.0233,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If called out, the chart must show both 88% and 86% with comparable denominators (released defendants)."
+  }
+ ]
+}

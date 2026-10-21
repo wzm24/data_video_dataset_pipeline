@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#1a1a1a"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">Black migration rates by education</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="480.8" y1="140" x2="480.8" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="480.8" y1="600" x2="1220" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="480.8" y1="600" x2="480.8" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="480.8" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0%</text>
+<line data-role="tick" x1="570.1" y1="600" x2="570.1" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="570.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">5%</text>
+<line data-role="tick" x1="659.4" y1="600" x2="659.4" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="659.4" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">10%</text>
+<line data-role="tick" x1="748.8" y1="600" x2="748.8" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="748.8" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">15%</text>
+<line data-role="tick" x1="838.1" y1="600" x2="838.1" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="838.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">20%</text>
+<line data-role="tick" x1="927.4" y1="600" x2="927.4" y2="608" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="927.4" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">25%</text>
+<g id="entity-less-than-high-school" data-role="entity" data-entity-id="less-than-high-school" data-label="Less than high school">
+<rect id="less-than-high-school-bar" data-role="bar" data-entity-id="less-than-high-school" data-value="3" x="480.8" y="312.5" width="53.6" height="31.7" fill="#dcdcdc" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="less-than-high-school-value-label" data-role="value-label" data-entity-id="less-than-high-school" x="548.4" y="336.4" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">3%</text>
+<text id="less-than-high-school-label" data-role="category-label" data-entity-id="less-than-high-school" x="466.8" y="320.4" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Less than high school</text>
+</g>
+<g id="entity-high-school-graduate" data-role="entity" data-entity-id="high-school-graduate" data-label="High school graduate">
+<rect id="high-school-graduate-bar" data-role="bar" data-entity-id="high-school-graduate" data-value="9" x="480.8" y="350.7" width="160.8" height="31.7" fill="#dcdcdc" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="high-school-graduate-value-label" data-role="value-label" data-entity-id="high-school-graduate" x="655.6" y="374.6" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">9%</text>
+<text id="high-school-graduate-label" data-role="category-label" data-entity-id="high-school-graduate" x="466.8" y="358.6" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">High school graduate</text>
+</g>
+<g id="entity-some-college" data-role="entity" data-entity-id="some-college" data-label="Some college">
+<rect id="some-college-bar" data-role="bar" data-entity-id="some-college" data-value="27" x="480.8" y="389.3" width="482.3" height="31.7" fill="#fcee0a" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="some-college-value-label" data-role="value-label" data-entity-id="some-college" x="977.1" y="413.2" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">27%</text>
+<text id="some-college-label" data-role="category-label" data-entity-id="some-college" x="466.8" y="397.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Some college</text>
+</g>
+<g id="entity-college-graduate" data-role="entity" data-entity-id="college-graduate" data-label="College graduate">
+<rect id="college-graduate-bar" data-role="bar" data-entity-id="college-graduate" data-value="20" x="480.8" y="427.5" width="357.3" height="31.7" fill="#dcdcdc" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="college-graduate-value-label" data-role="value-label" data-entity-id="college-graduate" x="852.1" y="451.4" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f2f2f2">20%</text>
+<text id="college-graduate-label" data-role="category-label" data-entity-id="college-graduate" x="466.8" y="435.4" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">College graduate</text>
+</g>
+</g>
+</svg>

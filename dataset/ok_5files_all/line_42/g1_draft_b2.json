@@ -1,0 +1,289 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_42",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the drastic increase in tuition costs relative to inflation, highlighting the financial pressure on students that drives the push toward high-paying computer programming careers.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Tuition rises dramatically from near zero at the first time point to 1390.0781 at the final point.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Tuition",
+     "x": "1972 (first point, x_px=120.0)",
+     "field": "value",
+     "value": 0.0,
+     "note": "start value (-0.0000 in table)"
+    },
+    {
+     "entity": "Tuition",
+     "x": "final point (x_px=1220.0)",
+     "field": "value",
+     "value": 1390.0781,
+     "note": "end value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Tuition climbs steeply from about 0 to roughly 1390 over the period",
+    "Tuition shows a dramatic upward trend, ending near 1390",
+    "Tuition rises from its 1972 baseline to a final value of about 1390"
+   ],
+   "visual_evidence_rule": "The tuition line must be visible rising from near the bottom to the top over the x-axis.",
+   "temporal_anchor": "The clause about tuition costs increasing drastically.",
+   "reviewer_question": "Must the video explicitly show the tuition line's full rise from start to final value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Inflation (CPI) rises much more slowly over the same period, from near zero at the first point to 420.0453 at the final point.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Inflation (CPI)",
+     "x": "1972 (first point, x_px=120.0)",
+     "field": "value",
+     "value": 0.0,
+     "note": "start value (-0.0000 in table)"
+    },
+    {
+     "entity": "Inflation (CPI)",
+     "x": "final point (x_px=1220.0)",
+     "field": "value",
+     "value": 420.0453,
+     "note": "end value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "CPI increases from about 0 to roughly 420 over the period",
+    "Inflation grows to about 420 by the end",
+    "Inflation rises modestly, ending near 420"
+   ],
+   "visual_evidence_rule": "The CPI line must be visible rising but staying much lower than the tuition line.",
+   "temporal_anchor": "The clause about inflation as the comparison baseline.",
+   "reviewer_question": "Must the video explicitly show the CPI line's rise from start to final value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "By the final point, tuition is about 3.3 times inflation: 1390.0781 divided by 420.0453.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Tuition",
+     "x": "final point (x_px=1220.0)",
+     "field": "value",
+     "value": 1390.0781,
+     "note": "final tuition"
+    },
+    {
+     "entity": "Inflation (CPI)",
+     "x": "final point (x_px=1220.0)",
+     "field": "value",
+     "value": 420.0453,
+     "note": "final CPI"
+    }
+   ],
+   "computation": "1390.0781 / 420.0453 = 3.31",
+   "accepted_routes": [
+    "Final tuition is about 3.3 times the CPI level",
+    "Tuition ends at over three times inflation",
+    "Tuition is roughly 3.3× higher than inflation at the end"
+   ],
+   "visual_evidence_rule": "At the final x, the tuition point must be visibly above the CPI point, with a gap consistent with a roughly 3.3:1 ratio.",
+   "temporal_anchor": "The clause highlighting tuition relative to inflation.",
+   "reviewer_question": "Must the video explicitly state or visually emphasize the final tuition-to-inflation ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The gap between tuition and inflation widens over time: they start equal (0 at 1972 and both 54.0922 at x=237.9), but by the final point tuition is 970.0328 higher than CPI.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Tuition",
+     "x": "1972 (x_px=120.0)",
+     "field": "value",
+     "value": 0.0,
+     "note": "start equal"
+    },
+    {
+     "entity": "Inflation (CPI)",
+     "x": "1972 (x_px=120.0)",
+     "field": "value",
+     "value": 0.0,
+     "note": "start equal"
+    },
+    {
+     "entity": "Tuition",
+     "x": "x_px=237.9",
+     "field": "value",
+     "value": 54.0922,
+     "note": "early equal point"
+    },
+    {
+     "entity": "Inflation (CPI)",
+     "x": "x_px=237.9",
+     "field": "value",
+     "value": 54.0922,
+     "note": "early equal point"
+    },
+    {
+     "entity": "Tuition",
+     "x": "final point (x_px=1220.0)",
+     "field": "value",
+     "value": 1390.0781,
+     "note": "final tuition"
+    },
+    {
+     "entity": "Inflation (CPI)",
+     "x": "final point (x_px=1220.0)",
+     "field": "value",
+     "value": 420.0453,
+     "note": "final CPI"
+    }
+   ],
+   "computation": "1390.0781 - 420.0453 = 970.0328",
+   "accepted_routes": [
+    "Tuition and inflation start together but separate dramatically",
+    "The gap grows from zero to about 970 value units",
+    "Tuition pulls away from CPI over time, ending about 970 higher"
+   ],
+   "visual_evidence_rule": "The two lines must start together and the distance between them must increase toward the right.",
+   "temporal_anchor": "The clause about the growing financial pressure or the drastic relative increase.",
+   "reviewer_question": "Must the video explicitly show the divergence gap growing over time, rather than just the final ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Computer $cience appears as a high/rising value: its table values are 392.1387 at x=520 and 516.9392 at x=600, which are about 1.94× and 2.27× the paired Tuition-entity values at the same x positions (202.3038 and 227.6948).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Computer $cience",
+     "x": "x_px=520.0",
+     "field": "value",
+     "value": 392.1387,
+     "note": "Computer $cience value"
+    },
+    {
+     "entity": "Tuition",
+     "x": "x_px=520.0",
+     "field": "value",
+     "value": 202.3038,
+     "note": "paired Tuition-entity row"
+    },
+    {
+     "entity": "Computer $cience",
+     "x": "x_px=600.0",
+     "field": "value",
+     "value": 516.9392,
+     "note": "Computer $cience value"
+    },
+    {
+     "entity": "Tuition",
+     "x": "x_px=600.0",
+     "field": "value",
+     "value": 227.6948,
+     "note": "paired Tuition-entity row"
+    }
+   ],
+   "computation": "392.1387 / 202.3038 = 1.94; 516.9392 / 227.6948 = 2.27",
+   "accepted_routes": [
+    "Computer $cience values are about twice the paired Tuition-series values at the same x positions",
+    "Computer $cience is higher than the compared series at x=520 and x=600",
+    "The Computer $cience row values (392 and 517) exceed the paired Tuition row values (202 and 228)"
+   ],
+   "visual_evidence_rule": "If Computer $cience is shown, its values must appear higher than the paired values at the same x positions.",
+   "temporal_anchor": "The clause about high-paying computer programming careers.",
+   "reviewer_question": "Is the Computer $cience comparison required to support the push toward high-paying programming careers, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Computer $cience values increase from 392.1387 to 516.9392 (difference 124.8005) across the two plotted points."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that tuition increases directly cause students to choose computer programming.",
+  "Absolute dollar amounts or percentages not present in the table (unit column is empty).",
+  "Extrapolating beyond the final x=1220.0 point.",
+  "Treating relative_value as a percentage (it is a 0-1 normalization, and some values exceed 1)."
+ ],
+ "notes": "The table's value column has no unit, so units refer to table values without dollar or percent claims. The Computer $cience rows are treated as an optional comparison because their entity/series labels are inconsistent.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 62.2,
+  "usage": {
+   "prompt_tokens": 1753,
+   "completion_tokens": 15771,
+   "total_tokens": 17524,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13629
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1241
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

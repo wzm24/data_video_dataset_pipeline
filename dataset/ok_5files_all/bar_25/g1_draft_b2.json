@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_25",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To compare the highest level of mathematics taken by high school graduates in 1982 and 2004, highlighting a discrepancy between the narrative of increasing rigor and the visual data.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 1982, the table value for the highest-level mathematics measure is 2.700.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1982",
+     "x": "1982",
+     "field": "value",
+     "value": 2.7,
+     "note": "1982 endpoint from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1982 the value was 2.700.",
+    "The 1982 data point is 2.7.",
+    "For 1982, the table lists 2.700."
+   ],
+   "visual_evidence_rule": "The 1982 value must be visually readable and tied to the 1982 category.",
+   "temporal_anchor": "In 1982, the average high school graduate completed algebra, or maybe algebra 2.",
+   "reviewer_question": "Should the 1982 endpoint value 2.700 be mandatory in the video?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In 2004, the table value for the highest-level mathematics measure is 1.650.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2004",
+     "x": "2004",
+     "field": "value",
+     "value": 1.65,
+     "note": "2004 endpoint from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2004 the value was 1.650.",
+    "The 2004 data point is 1.65.",
+    "For 2004, the table lists 1.650."
+   ],
+   "visual_evidence_rule": "The 2004 value must be visually readable and tied to the 2004 category.",
+   "temporal_anchor": "By 2004, the average student was closer to trigonometry.",
+   "reviewer_question": "Should the 2004 endpoint value 1.650 be mandatory in the video?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 2004 value is lower than the 1982 value by 1.050, based on 2.700 minus 1.650.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1982",
+     "x": "1982",
+     "field": "value",
+     "value": 2.7,
+     "note": "starting value for subtraction"
+    },
+    {
+     "entity": "2004",
+     "x": "2004",
+     "field": "value",
+     "value": 1.65,
+     "note": "ending value for subtraction"
+    }
+   ],
+   "computation": "2.700 - 1.650 = 1.050",
+   "accepted_routes": [
+    "2004 is 1.050 below 1982.",
+    "The drop from 1982 to 2004 is 1.05.",
+    "1982 exceeds 2004 by 1.050."
+   ],
+   "visual_evidence_rule": "The chart must expose both endpoints so the 1.050 gap or decrease from 1982 to 2004 is inferable.",
+   "temporal_anchor": "By 2004, the average student was closer to trigonometry.",
+   "reviewer_question": "Is the 1.050 decrease from 1982 to 2004 required, or is it enough to state the two endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 1982 value is about 1.64 times the 2004 value; equivalently, 2004 is about 61.1% of 1982.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1982",
+     "x": "1982",
+     "field": "value",
+     "value": 2.7,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "2004",
+     "x": "2004",
+     "field": "value",
+     "value": 1.65,
+     "note": "denominator for ratio"
+    }
+   ],
+   "computation": "2.700 / 1.650 = 1.6364; 1.650 / 2.700 = 0.6111",
+   "accepted_routes": [
+    "1982 is roughly 1.64 times 2004.",
+    "2004 is roughly 61% of the 1982 value.",
+    "The ratio 1982:2004 is about 1.64:1."
+   ],
+   "visual_evidence_rule": "Both endpoint values must be visible so a viewer can compare them as a ratio.",
+   "temporal_anchor": "By 2004, the average student was closer to trigonometry.",
+   "reviewer_question": "Is the 1982-to-2004 ratio optional or required for the comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The data direction from 1982 to 2004 is downward: 2004 is lower than 1982, cutting against an increasing-rigor reading.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1982",
+     "x": "1982",
+     "field": "value",
+     "value": 2.7,
+     "note": "higher value in the order comparison"
+    },
+    {
+     "entity": "2004",
+     "x": "2004",
+     "field": "value",
+     "value": 1.65,
+     "note": "lower value in the order comparison"
+    }
+   ],
+   "computation": "2.700 > 1.650",
+   "accepted_routes": [
+    "The visual data decreases from 1982 to 2004.",
+    "2004 is lower than 1982, not higher.",
+    "The 1982-to-2004 trajectory is downward."
+   ],
+   "visual_evidence_rule": "The chart must make the 1982-to-2004 direction clearly downward or otherwise show that 2004 is below 1982.",
+   "temporal_anchor": "By 2004, the average student was closer to trigonometry.",
+   "reviewer_question": "Must the video explicitly convey that the 1982-to-2004 data direction is downward rather than upward?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The two categories or series labels are 1982 and 2004.",
+  "The table's relative_value fields are 0.6750 for 1982 and 0.4125 for 2004, if shown as table-relative values rather than absolute quantities."
+ ],
+ "unsupported_to_avoid": [
+  "Course names such as algebra, algebra 2, or trigonometry, because they are not in the table.",
+  "Claims that 2004 graduates actually took a lower-level course, because that requires mapping the numeric scale to course names.",
+  "Any causal explanation for the change.",
+  "Extrapolating to years other than 1982 and 2004.",
+  "Assuming the unit is years, grade levels, course counts, or percentage points.",
+  "Treating relative_value as a share of a whole unless a denominator is stated."
+ ],
+ "notes": "Only two table rows exist, so all numeric claims should trace to 2.700 and 1.650 or arithmetic from them. The most review-worthy tension is whether the video must state the downward direction/drop, or merely show the two endpoint values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 31.3,
+  "usage": {
+   "prompt_tokens": 837,
+   "completion_tokens": 7777,
+   "total_tokens": 8614,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6022
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 453
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

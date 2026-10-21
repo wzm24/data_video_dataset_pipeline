@@ -1,0 +1,128 @@
+{
+ "clip_id": "pie_11",
+ "family": "pie",
+ "chart_form": "pie/multi_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:pieslice-yellow @ 1"
+   ],
+   "assertion": {
+    "segment": "pieslice-yellow @ 1",
+    "expected_share": 0.5182,
+    "total_of": "%",
+    "total": 112.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The yellow pie slice must be visible and labeled or annotated as 58.3% / approximately 58%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:pieslice-yellow @ 1",
+    "segment:pieslice-white @ 2"
+   ],
+   "assertion": {
+    "segment": "pieslice-yellow @ 1",
+    "expected_share": 0.5182,
+    "total_of": "%",
+    "total": 112.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The white pie slice must be visible and labeled or annotated as 41.7% / approximately 42%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:pieslice-yellow @ 1",
+    "mark:pieslice-white @ 2"
+   ],
+   "assertion": {
+    "greater": "pieslice-yellow @ 1",
+    "lesser": "pieslice-white @ 2",
+    "expected_ratio": 1.3981,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both slices must be labeled or otherwise the 16.6-point difference must be annotated."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:pieslice-yellow @ 1",
+    "mark:pieslice-white @ 2"
+   ],
+   "assertion": {
+    "series": "pieslice-yellow",
+    "values": [
+     58.3,
+     41.7
+    ],
+    "threshold_between": [
+     41.7,
+     58.3
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make clear that the unplanned share is greater than half, e.g. by a 50% reference line or majority callout."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gauge arc must be visible and labeled or annotated as 12.5% if this element is included."
+  }
+ ]
+}

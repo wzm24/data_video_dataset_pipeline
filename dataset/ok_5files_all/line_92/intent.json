@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_92",
+ "intent_en": "To demonstrate that a majority of Americans had received a COVID-19 vaccine by August 2021.",
+ "previous_intent": "To illustrate the substantial increase in the percentage of U.S. adults who have received at least one dose of a COVID-19 vaccine, reaching a majority by August 2021.",
+ "narration_support": "Our data from August, 2021 finds a majority of Americans say they've received a vaccine for COVID -19.",
+ "chart_support": "Line chart showing the percentage of U.S. adults who received at least one dose of a vaccine increasing from February 2021 to August 2021.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the finding of a majority receiving the vaccine in August 2021, which aligns with the chart's title and upward trend from Feb '21 to Aug '21.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

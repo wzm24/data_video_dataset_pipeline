@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f0f0f0"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#b0b0b0">TEST-OPTIONAL</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#999999" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#999999" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">1500</text>
+<line data-role="tick" x1="112" y1="424.8" x2="120" y2="424.8" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="430.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">2300</text>
+<line data-role="tick" x1="112" y1="161.9" x2="120" y2="161.9" stroke="#999999" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="167.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#999999">3500</text>
+<g id="entity-test-optional" data-role="entity" data-entity-id="test-optional" data-label="TEST-OPTIONAL" data-series="true">
+<polyline id="test-optional-polyline" data-role="polyline" data-entity-id="test-optional" points="120.0,589.0 179.5,578.1 238.9,567.1 357.8,534.3 476.8,501.4 595.7,468.6 655.1,435.7 714.6,424.8 833.5,402.9 893.0,391.9 952.4,326.2 1011.9,315.2 1071.4,315.2 1130.8,227.6 1190.3,140.0 1220.0,161.9" fill="none" stroke="#3178b6" stroke-width="4" data-animation-property="points"/>
+</g>
+<g id="entity-test-required" data-role="entity" data-entity-id="test-required" data-label="TEST-REQUIRED" data-series="true">
+<polyline id="test-required-polyline" data-role="polyline" data-entity-id="test-required" points="120.0,611.0 179.5,600.0 238.9,589.0 357.8,567.1 476.8,545.2 595.7,545.2 655.1,523.3 714.6,512.4 833.5,490.5 893.0,468.6 952.4,424.8 1071.4,381.0 1190.3,271.4 1220.0,271.4" fill="none" stroke="#b0b0b0" stroke-width="4" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="238.9" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1994</text>
+<text data-role="x-axis-label" x="476.8" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">1998</text>
+<text data-role="x-axis-label" x="714.6" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2002</text>
+<text data-role="x-axis-label" x="952.4" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2006</text>
+<text data-role="x-axis-label" x="1190.3" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">2010</text>
+<text data-role="y-axis-name" transform="translate(34, 370.0) rotate(-90)" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#999999">APPLICATIONS</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#3178b6" stroke-width="4"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#999999">TEST-OPTIONAL</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#b0b0b0" stroke-width="4"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#999999">TEST-REQUIRED</text>
+</g>
+</svg>

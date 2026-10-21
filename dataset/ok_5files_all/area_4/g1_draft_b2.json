@@ -1,0 +1,251 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_4",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the historical trend of increasing democratic governance from autocracy between 1900 and 2000.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Democracy share starts low at 14.7% in 1900 and ends high at 97.1% in 2000, showing the century-long shift from low to high democratic governance.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "democracy share",
+     "x": "1900",
+     "field": "value",
+     "value": 14.7,
+     "note": "start value"
+    },
+    {
+     "entity": "democracy share",
+     "x": "2000",
+     "field": "value",
+     "value": 97.1,
+     "note": "end value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Democracy share rises from 14.7% in 1900 to 97.1% in 2000.",
+    "The series starts near 15% and ends near 97%.",
+    "By 2000, democracy share reaches 97.1%, up from 14.7% at the start of the century."
+   ],
+   "visual_evidence_rule": "The chart must show the line or area at 1900 near 14.7% and at 2000 near 97.1%, with visible overall upward trajectory.",
+   "temporal_anchor": "opening/closing narration around 'from autocracy' and 'to democracy'.",
+   "reviewer_question": "Must the video state both 1900 and 2000 endpoint values, or is showing the overall upward trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The net century-long increase in democracy share is 82.4 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "democracy share",
+     "x": "1900",
+     "field": "value",
+     "value": 14.7,
+     "note": "start value used in difference"
+    },
+    {
+     "entity": "democracy share",
+     "x": "2000",
+     "field": "value",
+     "value": 97.1,
+     "note": "end value used in difference"
+    }
+   ],
+   "computation": "97.1 - 14.7 = 82.4 percentage points",
+   "accepted_routes": [
+    "Democracy share increases by 82.4 percentage points over the century.",
+    "The 1900-to-2000 gain is about 82 points.",
+    "Net change equals +82.4 percentage points from 14.7% to 97.1%."
+   ],
+   "visual_evidence_rule": "A visible annotation or vertical difference between the start and end values must support the +82.4 percentage-point gain.",
+   "temporal_anchor": "the 'development' or overall trend narration.",
+   "reviewer_question": "Is the net +82.4 percentage-point increase required, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Democracy share crosses the 50% majority threshold around 1970, first exceeding half at 50.2% after being 48.7% in 1968.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "democracy share",
+     "x": "1968",
+     "field": "value",
+     "value": 48.7,
+     "note": "last shown value below 50% before crossing"
+    },
+    {
+     "entity": "democracy share",
+     "x": "1970",
+     "field": "value",
+     "value": 50.2,
+     "note": "first shown value above 50%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Democracy share crosses the 50% line in 1970, reaching 50.2%.",
+    "It is still below half in 1968 at 48.7% and first exceeds half in 1970 at 50.2%.",
+    "The series passes the majority threshold between 1968 and 1970.",
+    "By 1970, democracy share is just over half."
+   ],
+   "visual_evidence_rule": "A 50% horizontal reference line must be visible, with the series crossing it between 1968 and 1970.",
+   "temporal_anchor": "mid-clip narration around the transition to democracy, before the late-century rise.",
+   "reviewer_question": "Must the video explicitly mark the 50% majority threshold crossing, or can it omit that milestone?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 1980s show a steep late-century acceleration: democracy share rises from 55.2% in 1980 to 88.8% in 1990, a gain of 33.6 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "democracy share",
+     "x": "1980",
+     "field": "value",
+     "value": 55.2,
+     "note": "start of 1980s rise"
+    },
+    {
+     "entity": "democracy share",
+     "x": "1990",
+     "field": "value",
+     "value": 88.8,
+     "note": "end of 1980s rise"
+    }
+   ],
+   "computation": "88.8 - 55.2 = 33.6 percentage points",
+   "accepted_routes": [
+    "Between 1980 and 1990, democracy share jumps from 55.2% to 88.8%, adding 33.6 percentage points.",
+    "The 1980s show a steep acceleration from just over 55% to nearly 89%.",
+    "A rapid late-century climb adds 33.6 percentage points in the 1980-1990 interval."
+   ],
+   "visual_evidence_rule": "The chart must show a visibly steeper slope or expanded area between 1980 and 1990, with those years labeled or traceable.",
+   "temporal_anchor": "late-clip narration if it emphasizes rapid development after 1980.",
+   "reviewer_question": "Should the 1980s acceleration be included as essential, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The long-term rise is not monotonic: democracy share falls from a local 1924 peak of 28.3% to 13.2% by 1936, a drop of 15.1 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "democracy share",
+     "x": "1924",
+     "field": "value",
+     "value": 28.3,
+     "note": "local peak before interwar decline"
+    },
+    {
+     "entity": "democracy share",
+     "x": "1936",
+     "field": "value",
+     "value": 13.2,
+     "note": "trough after decline"
+    }
+   ],
+   "computation": "28.3 - 13.2 = 15.1 percentage points decline",
+   "accepted_routes": [
+    "After rising early, democracy share falls from 28.3% in 1924 to 13.2% in 1936.",
+    "The trend is not monotonic: it loses 15.1 percentage points between 1924 and 1936.",
+    "A visible early reversal interrupts the long-term upward trend."
+   ],
+   "visual_evidence_rule": "The chart must show a local peak around 1924 and a trough around 1936, making the reversal visible.",
+   "temporal_anchor": "early/mid-clip narration if it acknowledges setbacks or non-monotonic history.",
+   "reviewer_question": "Should the video show the 1924-1936 reversal, or may it present only the net upward trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Democracy share is flat at 14.7% from 1900 through 1908.",
+  "Democracy share first reaches 40% in 1954 at 40.8%.",
+  "By 1996 democracy share reaches 94.1%, and by 2000 it reaches 97.1%."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that specific wars, institutions, or events caused democratic expansion.",
+  "Extrapolating beyond 2000 or claiming democracy share will reach 100%.",
+  "Calling the trend perfectly steady or monotonic despite the 1924-1936 decline.",
+  "Using an unstated denominator such as countries or population unless the table explicitly supports it.",
+  "Stating autocracy share values unless explicitly computed as 100 - democracy share and labeled as derived."
+ ],
+ "notes": "The table contains one estimated series, democracy share, so all numeric claims must be temporal or arithmetic from that series. U3-U5 are the main trade-offs: the 50% threshold, the 1980s acceleration, and the interwar reversal.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 42.6,
+  "usage": {
+   "prompt_tokens": 2039,
+   "completion_tokens": 9512,
+   "total_tokens": 11551,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7514
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 1783
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

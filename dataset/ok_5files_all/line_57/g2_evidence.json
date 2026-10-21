@@ -1,0 +1,175 @@
+{
+ "clip_id": "line_57",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Pfizer/BioNTech)"
+   ],
+   "assertion": {
+    "mark": "65+ @ AUGUST",
+    "extreme": "min",
+    "expected": 83.0,
+    "compared_set": "Pfizer/BioNTech",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the overall minimum and maximum data points readable across the age-group, brand, and month values."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:65+ @ AUGUST",
+    "mark:65+ @ AUGUST"
+   ],
+   "assertion": {
+    "greater": "65+ @ AUGUST",
+    "lesser": "65+ @ AUGUST",
+    "expected_ratio": 1.0723,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "All three brand series must be visible for each age group and month so the lowest brand can be compared."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:65+ @ AUGUST",
+    "mark:18-49 @ AUGUST",
+    "mark:50-64 @ AUGUST",
+    "mark:65+ @ AUGUST",
+    "mark:18-49 @ AUGUST",
+    "mark:50-64 @ AUGUST",
+    "mark:65+ @ AUGUST",
+    "mark:18-49 @ AUGUST",
+    "mark:50-64 @ AUGUST"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "65+ @ AUGUST",
+      "value": 89.0
+     },
+     {
+      "mark": "18-49 @ AUGUST",
+      "value": 96.5
+     },
+     {
+      "mark": "50-64 @ AUGUST",
+      "value": 95.5
+     },
+     {
+      "mark": "65+ @ AUGUST",
+      "value": 94.0
+     },
+     {
+      "mark": "18-49 @ AUGUST",
+      "value": 97.5
+     },
+     {
+      "mark": "50-64 @ AUGUST",
+      "value": 97.0
+     },
+     {
+      "mark": "65+ @ AUGUST",
+      "value": 83.0
+     },
+     {
+      "mark": "18-49 @ AUGUST",
+      "value": 93.5
+     },
+     {
+      "mark": "50-64 @ AUGUST",
+      "value": 93.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "For each brand, the August values for 18-49, 50-64, and 65+ must be visible and comparable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST",
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST",
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST"
+   ],
+   "assertion": {
+    "low": "65+ @ AUGUST",
+    "low_value": 83.0,
+    "high": "65+ @ MAY",
+    "high_value": 97.0,
+    "delta": 14.0,
+    "ratio": 1.1687,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The May and August endpoints for the 65+ group must be visible for each brand, or the change must be directly shown."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:18-49 @ AUGUST",
+    "mark:18-49 @ AUGUST"
+   ],
+   "assertion": {
+    "greater": "18-49 @ AUGUST",
+    "lesser": "18-49 @ AUGUST",
+    "expected_ratio": 1.0104,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The August values for all brands within each age group must be visible to confirm Moderna is highest."
+  }
+ ]
+}

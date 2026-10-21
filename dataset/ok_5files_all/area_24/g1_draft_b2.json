@@ -1,0 +1,313 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_24",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the relative size of Earth's Moon compared to other large moons and Pluto, emphasizing its substantial size.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Moon ranks fifth by diameter among the six bodies shown, behind Ganymede, Titan, Callisto, and Io, and ahead of Pluto.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "GANYMED",
+     "x": "GANYMED",
+     "field": "value",
+     "value": 5300,
+     "note": "largest listed diameter"
+    },
+    {
+     "entity": "TITAN",
+     "x": "TITAN",
+     "field": "value",
+     "value": 5200,
+     "note": "second largest listed diameter"
+    },
+    {
+     "entity": "KALLISTO",
+     "x": "KALLISTO",
+     "field": "value",
+     "value": 4800,
+     "note": "third largest listed diameter"
+    },
+    {
+     "entity": "IO",
+     "x": "IO",
+     "field": "value",
+     "value": 3600,
+     "note": "fourth largest listed diameter"
+    },
+    {
+     "entity": "MOON",
+     "x": "MOON",
+     "field": "value",
+     "value": 3500,
+     "note": "fifth in the six-body order"
+    },
+    {
+     "entity": "PLUTO",
+     "x": "PLUTO",
+     "field": "value",
+     "value": 2300,
+     "note": "smallest in the six-body order"
+    }
+   ],
+   "computation": "ranking from the six value cells: 5300 > 5200 > 4800 > 3600 > 3500 > 2300",
+   "accepted_routes": [
+    "Moon is fifth in the size order of the six bodies shown",
+    "Only Ganymede, Titan, Callisto, and Io are larger than the Moon; Pluto is smaller",
+    "Moon sits after Io and before Pluto in a descending size ranking"
+   ],
+   "visual_evidence_rule": "All six diameter values must be presented on a common comparison so the sequence Ganymede > Titan > Callisto > Io > Moon > Pluto is visible.",
+   "temporal_anchor": "the fifth largest Moon in the solar system clause",
+   "reviewer_question": "Must the ranking be against all six table bodies, or only against the five moons shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Moon is substantially larger than Pluto: about 1.5 times Pluto's diameter, or about 1,200 km wider.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "MOON",
+     "x": "MOON",
+     "field": "value",
+     "value": 3500,
+     "note": "Moon diameter in km"
+    },
+    {
+     "entity": "PLUTO",
+     "x": "PLUTO",
+     "field": "value",
+     "value": 2300,
+     "note": "Pluto diameter in km"
+    }
+   ],
+   "computation": "3500 / 2300 ≈ 1.52; 3500 - 2300 = 1200 km",
+   "accepted_routes": [
+    "Moon's diameter is about 1.5 times Pluto's",
+    "Moon is roughly 1,200 km wider than Pluto",
+    "Moon at 3,500 km is clearly larger than Pluto at 2,300 km"
+   ],
+   "visual_evidence_rule": "Both Moon and Pluto must be shown on the same scale with Moon visibly larger by about half again.",
+   "temporal_anchor": "quite a bit bigger than the dwarf planet Pluto clause",
+   "reviewer_question": "Should the video quantify the Moon-Pluto difference, or is showing Moon > Pluto sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The Moon is only slightly smaller than Io: 3,500 km versus 3,600 km, a difference of 100 km, or about 0.97 of Io's diameter.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "MOON",
+     "x": "MOON",
+     "field": "value",
+     "value": 3500,
+     "note": "Moon diameter in km"
+    },
+    {
+     "entity": "IO",
+     "x": "IO",
+     "field": "value",
+     "value": 3600,
+     "note": "Io diameter in km"
+    }
+   ],
+   "computation": "3600 - 3500 = 100 km; 3500 / 3600 ≈ 0.97",
+   "accepted_routes": [
+    "Moon is almost as wide as Io, only about 100 km smaller",
+    "Moon's diameter is about 0.97 of Io's",
+    "Io is only slightly larger than the Moon"
+   ],
+   "visual_evidence_rule": "Moon and Io must be shown at the same scale so their nearly equal diameters are apparent.",
+   "temporal_anchor": "fifth largest Moon or relative-size comparison clause",
+   "reviewer_question": "Is the near-tie with Io required, or optional context beyond Moon's fifth-place rank?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Moon is about two-thirds the diameter of Ganymede, the largest moon shown: 3,500 km vs 5,300 km, or a relative size of 0.6604 of the maximum.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "MOON",
+     "x": "MOON",
+     "field": "value",
+     "value": 3500,
+     "note": "Moon diameter in km"
+    },
+    {
+     "entity": "GANYMED",
+     "x": "GANYMED",
+     "field": "value",
+     "value": 5300,
+     "note": "Ganymede diameter in km"
+    },
+    {
+     "entity": "MOON",
+     "x": "MOON",
+     "field": "relative_value",
+     "value": 0.6604,
+     "note": "normalized to the largest listed diameter"
+    }
+   ],
+   "computation": "3500 / 5300 = 0.6604; Moon is about 0.66 of Ganymede's diameter",
+   "accepted_routes": [
+    "Moon is about two-thirds as wide as Ganymede",
+    "Moon's diameter is roughly 0.66 of the largest moon's",
+    "Ganymede is about 1.5 times wider than the Moon"
+   ],
+   "visual_evidence_rule": "Ganymede and Moon must be compared on the same scale so Moon appears about two-thirds of Ganymede.",
+   "temporal_anchor": "relative size compared to other large moons clause",
+   "reviewer_question": "Is the Moon-to-Ganymede ratio required, or is the rank/order sufficient for the relative-size intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Pluto is the smallest of the six bodies shown, with a diameter of 2,300 km, below the Moon and all listed moons.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "PLUTO",
+     "x": "PLUTO",
+     "field": "value",
+     "value": 2300,
+     "note": "smallest listed diameter"
+    },
+    {
+     "entity": "MOON",
+     "x": "MOON",
+     "field": "value",
+     "value": 3500,
+     "note": "larger than Pluto"
+    },
+    {
+     "entity": "IO",
+     "x": "IO",
+     "field": "value",
+     "value": 3600,
+     "note": "larger than Pluto"
+    },
+    {
+     "entity": "KALLISTO",
+     "x": "KALLISTO",
+     "field": "value",
+     "value": 4800,
+     "note": "larger than Pluto"
+    },
+    {
+     "entity": "TITAN",
+     "x": "TITAN",
+     "field": "value",
+     "value": 5200,
+     "note": "larger than Pluto"
+    },
+    {
+     "entity": "GANYMED",
+     "x": "GANYMED",
+     "field": "value",
+     "value": 5300,
+     "note": "larger than Pluto"
+    }
+   ],
+   "computation": "minimum of {5300, 5200, 4800, 3600, 3500, 2300} = 2300",
+   "accepted_routes": [
+    "Pluto is the smallest body in the set",
+    "Only Pluto is smaller than the Moon among the six",
+    "Pluto's 2,300 km diameter is below all five listed moons"
+   ],
+   "visual_evidence_rule": "The six diameters must be shown on a common scale so Pluto's smallest size is visible.",
+   "temporal_anchor": "the dwarf planet Pluto clause",
+   "reviewer_question": "Is Pluto's smallest-place status worth stating explicitly, or is it only background for the Moon comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Ganymede is the largest listed moon at 5,300 km.",
+  "Titan and Callisto are both larger than the Moon, at 5,200 km and 4,800 km versus 3,500 km.",
+  "The Moon is larger than Pluto but smaller than each of the four larger listed moons."
+ ],
+ "unsupported_to_avoid": [
+  "The Moon is the biggest moon relative to its planet: the table has no planet-size or moon-to-planet ratio data.",
+  "The Moon is fifth largest in the entire solar system as a complete census: the table only supplies five moons plus Pluto.",
+  "Moon is 3,500 km in radius: the table unit is km_diameter.",
+  "Pluto is a moon or larger than the Moon: the table contradicts that.",
+  "Any percentage phrasing such as 66% of Ganymede from relative_value 0.6604; describe it as about two-thirds or 0.66."
+ ],
+ "notes": "Use absolute km diameters for Moon-Pluto and Moon-Ganymede ratios; relative_value is a 0-1 normalization, not a percentage. The table supports ranking among the six bodies shown, not a full solar-system census.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 42.4,
+  "usage": {
+   "prompt_tokens": 1017,
+   "completion_tokens": 10248,
+   "total_tokens": 11265,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8018
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 505
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,269 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_82",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the exceptionally low nominal GDP of Somalia relative to countries like Ghana and Madagascar.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Among the listed entities, Ghana has the highest value (1.000), followed by Madagascar (0.303).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Ghana",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "highest listed value"
+    },
+    {
+     "entity": "Madagascar",
+     "x": "",
+     "field": "value",
+     "value": 0.303,
+     "note": "second-highest listed value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Ghana is highest at 1.000, Madagascar second at 0.303",
+    "Ghana ranks first (1.000) and Madagascar second (0.303)",
+    "Ghana's bar is the tallest; Madagascar is next at 0.303"
+   ],
+   "visual_evidence_rule": "Ghana bar is tallest and Madagascar bar is second tallest among the four entities.",
+   "temporal_anchor": "the clause 'makes Ghana and Madagascar look rich'",
+   "reviewer_question": "Is the ranking of Ghana above Madagascar required to be shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Ghana's value is about 3.3 times Madagascar's value (1.000 / 0.303 = 3.30).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Ghana",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "numerator"
+    },
+    {
+     "entity": "Madagascar",
+     "x": "",
+     "field": "value",
+     "value": 0.303,
+     "note": "denominator"
+    }
+   ],
+   "computation": "1.000 / 0.303 = 3.30",
+   "accepted_routes": [
+    "Ghana is roughly 3.3 times Madagascar",
+    "Madagascar is about 30% of Ghana",
+    "Ghana is over three times Madagascar"
+   ],
+   "visual_evidence_rule": "Ghana bar length is about 3.3 times the Madagascar bar length, or an explicit ratio label is shown.",
+   "temporal_anchor": "the clause 'makes Ghana and Madagascar look rich'",
+   "reviewer_question": "Should the quantitative ratio between Ghana and Madagascar be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Madagascar's value (0.303) is about 5 times Saint Lucia's (0.061) and about 10 times Antigua and Barbuda's (0.030).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Madagascar",
+     "x": "",
+     "field": "value",
+     "value": 0.303,
+     "note": "reference"
+    },
+    {
+     "entity": "Saint Lucia",
+     "x": "",
+     "field": "value",
+     "value": 0.061,
+     "note": "compare 0.303/0.061"
+    },
+    {
+     "entity": "Antigua and Barbuda",
+     "x": "",
+     "field": "value",
+     "value": 0.03,
+     "note": "compare 0.303/0.030"
+    }
+   ],
+   "computation": "0.303 / 0.061 = 4.97; 0.303 / 0.030 = 10.1",
+   "accepted_routes": [
+    "Madagascar is roughly 5x Saint Lucia and 10x Antigua",
+    "Saint Lucia is about 20% of Madagascar; Antigua is about 10%",
+    "Madagascar is much larger than both Saint Lucia and Antigua"
+   ],
+   "visual_evidence_rule": "Madagascar bar is about 5x Saint Lucia bar and 10x Antigua bar.",
+   "temporal_anchor": "not explicitly in the narration; optional comparative context",
+   "reviewer_question": "Is the comparison of Madagascar to the two smallest entities optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Saint Lucia (0.061) and Antigua and Barbuda (0.030) are the two lowest values, with Antigua about half of Saint Lucia (0.030 / 0.061 = 0.492).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Saint Lucia",
+     "x": "",
+     "field": "value",
+     "value": 0.061,
+     "note": "higher of the two smallest"
+    },
+    {
+     "entity": "Antigua and Barbuda",
+     "x": "",
+     "field": "value",
+     "value": 0.03,
+     "note": "lowest listed value"
+    }
+   ],
+   "computation": "0.030 / 0.061 = 0.492",
+   "accepted_routes": [
+    "Saint Lucia (0.061) and Antigua (0.030) are the smallest; Antigua is about half of Saint Lucia",
+    "Antigua is the lowest at 0.030, about half of Saint Lucia's 0.061",
+    "The two smallest values are 0.061 and 0.030"
+   ],
+   "visual_evidence_rule": "Saint Lucia and Antigua bars are the shortest; Antigua is about half the length of Saint Lucia.",
+   "temporal_anchor": "not explicitly in the narration; optional",
+   "reviewer_question": "Should the two smallest values and their relative size be shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The four listed countries have a combined value of 1.394. Ghana accounts for about 71.7% of this total (1.000/1.394), Madagascar 21.7% (0.303/1.394), Saint Lucia 4.4% (0.061/1.394), and Antigua 2.2% (0.030/1.394).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Ghana",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "numerator for share"
+    },
+    {
+     "entity": "Madagascar",
+     "x": "",
+     "field": "value",
+     "value": 0.303,
+     "note": "numerator for share"
+    },
+    {
+     "entity": "Saint Lucia",
+     "x": "",
+     "field": "value",
+     "value": 0.061,
+     "note": "numerator for share"
+    },
+    {
+     "entity": "Antigua and Barbuda",
+     "x": "",
+     "field": "value",
+     "value": 0.03,
+     "note": "numerator for share"
+    }
+   ],
+   "computation": "total = 1.000+0.303+0.061+0.030 = 1.394; shares: 1.000/1.394=0.7174, 0.303/1.394=0.2174, 0.061/1.394=0.0438, 0.030/1.394=0.0215",
+   "accepted_routes": [
+    "Ghana is about 72% of the four-country total, Madagascar 22%, Saint Lucia 4%, Antigua 2%",
+    "The four-country total is 1.394, with Ghana contributing 1.000 (71.7%), Madagascar 0.303 (21.7%), Saint Lucia 0.061 (4.4%), Antigua 0.030 (2.2%)",
+    "Ghana plus Madagascar make up about 93.4% of the total"
+   ],
+   "visual_evidence_rule": "A share chart or stacked bar shows these proportions, or labels indicate percentages of the four-country total.",
+   "temporal_anchor": "not explicitly in the narration; optional compositional context",
+   "reviewer_question": "Should the composition of the four-country total be shown, given the table also provides a separate relative_value column?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Use of the table's relative_value column (0.7333, 0.2222, 0.0444, 0.0222) as provided, without interpreting it as a share of the four-country total.",
+  "Highlighting that Ghana and Madagascar are both much larger than Saint Lucia and Antigua."
+ ],
+ "unsupported_to_avoid": [
+  "Any specific Somali GDP value or comparison involving Somalia, because Somalia is not present in the table.",
+  "Any specific Ethiopian GDP or agricultural production claim, because Ethiopia is not in the table.",
+  "Interpreting the table's relative_value column as shares of the four-country total, since those values sum to 1.0221 and do not match the value-derived shares.",
+  "Causal claims about coffee, potatoes, or cereals driving GDP."
+ ],
+ "notes": "The table lacks Somalia and Ethiopia, so the intent's core comparison cannot be quantified from the provided data. The supported units focus on the listed comparator countries and flag the mismatch.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 60.4,
+  "usage": {
+   "prompt_tokens": 721,
+   "completion_tokens": 15542,
+   "total_tokens": 16263,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13505
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 465
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

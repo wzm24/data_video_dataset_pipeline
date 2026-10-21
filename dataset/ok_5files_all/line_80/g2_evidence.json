@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_80",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:daily cases 7dma @ 628.9",
+    "mark:daily cases 7dma @ 977.1",
+    "mark:daily cases 7dma @ 1150.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "daily cases 7dma @ 628.9",
+      "value": 97.7863
+     },
+     {
+      "mark": "daily cases 7dma @ 977.1",
+      "value": 15.7921
+     },
+     {
+      "mark": "daily cases 7dma @ 1150.0",
+      "value": 369.5175
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Line must show at least one local maximum before a clear trough and a later, higher maximum near the right edge."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:daily cases 7dma @ 628.9",
+    "mark:daily cases 7dma @ 977.1"
+   ],
+   "assertion": {
+    "low": "daily cases 7dma @ 977.1",
+    "low_value": 15.7921,
+    "high": "daily cases 7dma @ 628.9",
+    "high_value": 97.7863,
+    "delta": 81.9942,
+    "ratio": 6.1921,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A clear descending segment from the first peak to a low point, with the low visibly far below the first peak."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:daily cases 7dma @ 977.1",
+    "mark:daily cases 7dma @ 1150.0"
+   ],
+   "assertion": {
+    "low": "daily cases 7dma @ 977.1",
+    "low_value": 15.7921,
+    "high": "daily cases 7dma @ 1150.0",
+    "high_value": 369.5175,
+    "delta": 353.7254,
+    "ratio": 23.3989,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A steep rising segment from the trough to the final high endpoint, with the final point near the top of the y-axis."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:daily cases 7dma @ 1150.0",
+    "mark:daily cases 7dma @ 628.9"
+   ],
+   "assertion": {
+    "greater": "daily cases 7dma @ 1150.0",
+    "lesser": "daily cases 7dma @ 628.9",
+    "expected_ratio": 3.7788,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "First peak and final endpoint must both be identifiable on the same y-scale, with the final visibly much higher."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:daily cases 7dma @ 1150.0"
+   ],
+   "assertion": {
+    "mark": "daily cases 7dma @ 1150.0",
+    "field": "value",
+    "expected": 369.5175,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Final plotted point must be visible and labeled or annotated as ~370."
+  }
+ ]
+}

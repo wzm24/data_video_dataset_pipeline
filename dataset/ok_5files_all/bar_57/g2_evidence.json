@@ -1,0 +1,102 @@
+{
+ "clip_id": "bar_57",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Poorest-Corporate and property taxes @ Poorest"
+   ],
+   "assertion": {
+    "mark": "Poorest-Corporate and property taxes @ Poorest",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A Poorest total value/label of 1.0% must be visibly represented or recoverable from the visual encoding."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Richest-Income taxes @ Richest"
+   ],
+   "assertion": {
+    "mark": "Richest-Income taxes @ Richest",
+    "field": "value",
+    "expected": 10.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A Richest combined total of 21.3% must be visibly represented or labeled, with all three components contributing."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Richest-Corporate and property taxes @ Richest",
+    "mark:Richest-Income taxes @ Richest"
+   ],
+   "assertion": {
+    "greater": "Richest-Corporate and property taxes @ Richest",
+    "lesser": "Richest-Income taxes @ Richest",
+    "expected_ratio": 1.05,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A direct Richest-vs-Poorest comparison must be visible, whether as side-by-side totals, a difference label, or a ratio."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Richest-Income taxes @ Richest",
+    "segment:Richest-Corporate and property taxes @ Richest",
+    "segment:Richest-Estate taxes @ Richest"
+   ],
+   "assertion": {
+    "segment": "Richest-Income taxes @ Richest",
+    "expected_share": null,
+    "total_of": "the same category's stacked series",
+    "total": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The Richest total must be decomposable into income, corporate/property, and estate components, with their relative sizes visible or labeled."
+  }
+ ]
+}

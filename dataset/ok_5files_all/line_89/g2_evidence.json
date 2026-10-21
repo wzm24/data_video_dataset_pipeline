@@ -1,0 +1,148 @@
+{
+ "clip_id": "line_89",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:capital gains tax @ 2021"
+   ],
+   "assertion": {
+    "mark": "capital gains tax @ 2021",
+    "field": "value",
+    "expected": 20.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Historical line must continue through x=2021 and its final point must be visibly at 20% on the y-axis."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:capital gains tax proposed @ 2022"
+   ],
+   "assertion": {
+    "mark": "capital gains tax proposed @ 2022",
+    "field": "value",
+    "expected": 39.6,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A distinct proposed marker or dashed extension at x=2022, y=39.6 must be visible and distinguishable from the real historical line."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:capital gains tax @ 2021",
+    "mark:capital gains tax proposed @ 2022"
+   ],
+   "assertion": {
+    "low": "capital gains tax @ 2021",
+    "low_value": 20.0,
+    "high": "capital gains tax proposed @ 2022",
+    "high_value": 39.6,
+    "delta": 19.6,
+    "ratio": 1.98,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or annotation must show both 20% and 39.6% and the transition/gap between them so the 19.6 pp or ~2x change can be inferred."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:capital gains tax @ 1972",
+    "mark:capital gains tax proposed @ 2022"
+   ],
+   "assertion": {
+    "series": "capital gains tax",
+    "values": [
+     35.0,
+     39.6
+    ],
+    "threshold_between": [
+     35.0,
+     39.6
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The historical line's highest point at 35% in the 1972–1977 region and the 39.6% proposed point above it must both be visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:capital gains tax @ 1972",
+    "mark:capital gains tax @ 2003",
+    "mark:capital gains tax @ 2013",
+    "mark:capital gains tax @ 2021"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "capital gains tax @ 1972",
+      "value": 35.0
+     },
+     {
+      "mark": "capital gains tax @ 2003",
+      "value": 15.0
+     },
+     {
+      "mark": "capital gains tax @ 2013",
+      "value": 23.8
+     },
+     {
+      "mark": "capital gains tax @ 2021",
+      "value": 20.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The historical line should visibly show the 35% high in the 1970s, the 15% low in 2003–2012, the 23.8% segment in 2013–2020, and 20% at 2021."
+  }
+ ]
+}

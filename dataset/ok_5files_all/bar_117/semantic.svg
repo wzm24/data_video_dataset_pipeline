@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640.0" y="52" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">Black adults much more likely than</text>
+<text x="640.0" y="89" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">other racial or ethnic groups to say</text>
+<text x="640.0" y="126" text-anchor="middle" font-family="Arial" font-size="29" font-weight="700" fill="#222">they've been unfairly stopped by the</text>
+<rect x="210.8" y="150.0" width="148.5" height="430.0" fill="#3b3b3b"/>
+<text x="285.0" y="138.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">45%</text>
+<text x="285.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">Black adults</text>
+<rect x="480.8" y="398.4" width="148.5" height="181.6" fill="#d3d3d3"/>
+<text x="555.0" y="386.4" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">19%</text>
+<text x="555.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">Hispanic adults</text>
+<rect x="750.8" y="427.1" width="148.5" height="152.9" fill="#d3d3d3"/>
+<text x="825.0" y="415.1" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">16%</text>
+<text x="825.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">Asian adults*</text>
+<rect x="1020.8" y="494.0" width="148.5" height="86.0" fill="#d3d3d3"/>
+<text x="1095.0" y="482.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">9%</text>
+<text x="1095.0" y="606.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#222">White adults</text>
+</svg>

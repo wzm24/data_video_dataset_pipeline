@@ -1,0 +1,305 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_83",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the financial motivation behind the alcohol industry's opposition to marijuana by contrasting the current market revenues of alcohol and marijuana.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The visual compares two revenue categories: Beer and Cannabis, not a generic 'alcohol vs marijuana' pair.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "value",
+     "value": 0.049,
+     "note": "Cannabis row exists in the table"
+    },
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "value",
+     "value": 1.0,
+     "note": "Beer row exists in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Beer vs Cannabis market revenue",
+    "two bars labeled Beer and Cannabis",
+    "compare cannabis revenue with beer revenue"
+   ],
+   "visual_evidence_rule": "Both categories must be labeled on the chart so Beer is distinguishable from Cannabis.",
+   "temporal_anchor": "clause 1: 'The beer and alcohol industries are two of the biggest anti-marijuana advocates'",
+   "reviewer_question": "Must the chart explicitly label Beer and Cannabis rather than only saying alcohol vs marijuana?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The endpoint values on the table's scale are Beer = 1.000 and Cannabis = 0.049; using the relative_value field gives Beer = 1.0000 and Cannabis = 0.0485.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "value",
+     "value": 1.0,
+     "note": "Beer endpoint on table scale"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "value",
+     "value": 0.049,
+     "note": "Cannabis endpoint on table scale"
+    },
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Beer relative value"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "relative_value",
+     "value": 0.0485,
+     "note": "Cannabis relative value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Beer = 1.000; Cannabis = 0.049",
+    "Cannabis = 0.0485 relative to Beer = 1.0000",
+    "Beer baseline is 1.000; cannabis is about 0.049"
+   ],
+   "visual_evidence_rule": "The endpoint values or clear value labels for both Beer and Cannabis must be visible.",
+   "temporal_anchor": "clause 2: 'Obviously, marijuana is a serious threat to alcohol sales' during the revenue comparison reveal",
+   "reviewer_question": "Should exact endpoint values be shown, or are approximate bar heights enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Beer revenue is roughly 20 times Cannabis revenue; equivalently, Cannabis is about one-twentieth of Beer.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "value",
+     "value": 1.0,
+     "note": "Numerator for Beer/Cannabis multiple"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "value",
+     "value": 0.049,
+     "note": "Denominator for Beer/Cannabis multiple"
+    },
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Numerator using relative_value"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "relative_value",
+     "value": 0.0485,
+     "note": "Denominator using relative_value"
+    }
+   ],
+   "computation": "1.000 / 0.049 = 20.408; 1.0000 / 0.0485 = 20.619",
+   "accepted_routes": [
+    "Beer is about 20x Cannabis",
+    "Cannabis is roughly one-twentieth of Beer",
+    "Beer revenue is more than 20 times Cannabis revenue"
+   ],
+   "visual_evidence_rule": "A direct comparison such as side-by-side bars, an annotation, or a ratio label must make Beer's dominance over Cannabis visible.",
+   "temporal_anchor": "clause 2: 'Obviously, marijuana is a serious threat to alcohol sales' when the revenue contrast is made",
+   "reviewer_question": "Should the video state the approximate 20x multiple, or is the visual bar contrast enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Cannabis revenue is below 5% of Beer revenue: about 4.9% using value=0.049 or 4.85% using relative_value=0.0485.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "value",
+     "value": 1.0,
+     "note": "Beer denominator"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "value",
+     "value": 0.049,
+     "note": "Cannabis numerator"
+    },
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Beer denominator using relative_value"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "relative_value",
+     "value": 0.0485,
+     "note": "Cannabis numerator using relative_value"
+    }
+   ],
+   "computation": "0.049 / 1.000 * 100 = 4.9%; 0.0485 / 1.0000 * 100 = 4.85%",
+   "accepted_routes": [
+    "Cannabis is under 5% of Beer",
+    "Cannabis is about 4.85% of Beer",
+    "Cannabis is less than one-twentieth of Beer"
+   ],
+   "visual_evidence_rule": "A 5% threshold line or annotation must be visible if this framing is used.",
+   "temporal_anchor": "clause 2: 'Obviously, marijuana is a serious threat to alcohol sales' if the video adds a threshold framing",
+   "reviewer_question": "Should the video highlight the under-5% threshold, or leave it as an implication of the ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The absolute gap on the table scale is 0.951 (or 0.9515 using relative values): Beer exceeds Cannabis by that amount.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "value",
+     "value": 1.0,
+     "note": "Beer value for difference"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "value",
+     "value": 0.049,
+     "note": "Cannabis value for difference"
+    },
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Beer relative value for difference"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "relative_value",
+     "value": 0.0485,
+     "note": "Cannabis relative value for difference"
+    }
+   ],
+   "computation": "1.000 - 0.049 = 0.951; 1.0000 - 0.0485 = 0.9515",
+   "accepted_routes": [
+    "Beer exceeds Cannabis by 0.951 on the table scale",
+    "the gap is about 0.95 normalized units",
+    "Beer is 0.951 above Cannabis"
+   ],
+   "visual_evidence_rule": "The gap or difference between the Beer and Cannabis bars must be visually indicated if this unit is used.",
+   "temporal_anchor": "clause 2: 'Obviously, marijuana is a serious threat to alcohol sales' during the data comparison",
+   "reviewer_question": "Should the video show the absolute gap, or is the ratio comparison sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Using the relative_value fields as the primary comparison: Beer = 1.0000, Cannabis = 0.0485.",
+  "Annotating that Beer is more than 20 times Cannabis revenue without stating an exact multiple."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that these revenue figures caused alcohol-industry opposition",
+  "Total alcohol industry revenue, because the table contains only Beer",
+  "Cannabis as a share of total alcohol-plus-cannabis market, because the table does not give that denominator",
+  "Future sales decline or marijuana legalization impact claims",
+  "Exact dollar units or monetary denominations, because the table's unit field is blank"
+ ],
+ "notes": "The table has only Beer and Cannabis, with Beer normalized to 1.000 and Cannabis at 0.049 (relative_value 0.0485). Keep all ratios tied to Beer as the denominator, not to total alcohol.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 30.1,
+  "usage": {
+   "prompt_tokens": 650,
+   "completion_tokens": 7109,
+   "total_tokens": 7759,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4953
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 394
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

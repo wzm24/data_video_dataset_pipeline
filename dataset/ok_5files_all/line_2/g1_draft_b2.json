@@ -1,0 +1,322 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_2",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain how an increase in supply and a decrease in demand leads to falling prices and subsequent driver protests.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "SUPPLY increases from its minimum relative value at the left endpoint to its maximum relative value at the right endpoint.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "SUPPLY starts at the minimum of the relative scale."
+    },
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "SUPPLY ends at the maximum of the relative scale."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Supply rises from 0 to 1 on the relative scale.",
+    "Supply line climbs from its lowest to its highest relative value.",
+    "Supply increases steadily across the clip.",
+    "Supply goes from minimum to maximum relative value."
+   ],
+   "visual_evidence_rule": "The SUPPLY series must be visibly increasing from the leftmost to the rightmost sampled point, starting at the bottom of the relative scale and ending at the top.",
+   "temporal_anchor": "when this line goes up",
+   "reviewer_question": "Is the overall upward SUPPLY trend required, or are the endpoints enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "DEMAND decreases from its maximum relative value at the left endpoint to its minimum relative value at the right endpoint.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "DEMAND",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "DEMAND starts at the maximum of the relative scale."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "DEMAND ends at the minimum of the relative scale."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Demand falls from 1 down to 0 on the relative scale.",
+    "Demand line descends from its highest to its lowest relative value.",
+    "Demand decreases steadily across the clip.",
+    "Demand goes from maximum to minimum relative value."
+   ],
+   "visual_evidence_rule": "The DEMAND series must be visibly decreasing from the leftmost to the rightmost sampled point, starting at the top of the relative scale and ending at the bottom.",
+   "temporal_anchor": "this one goes down",
+   "reviewer_question": "Is the overall downward DEMAND trend required, or are the endpoints enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The two series move in opposite directions: SUPPLY increases while DEMAND decreases over the same x_px range.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "SUPPLY begins at the bottom."
+    },
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "SUPPLY ends at the top."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "DEMAND begins at the top."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "DEMAND ends at the bottom."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Supply and demand move in opposite directions.",
+    "Supply rises while demand falls.",
+    "The two lines diverge.",
+    "One line goes up as the other goes down."
+   ],
+   "visual_evidence_rule": "The SUPPLY and DEMAND series must have opposite slopes across the clip: SUPPLY visibly rising while DEMAND visibly falling.",
+   "temporal_anchor": "when this line goes up and this one goes down",
+   "reviewer_question": "Must the video show the opposite movement simultaneously, or can it establish the two directions in separate beats?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The relative ordering of the two series flips: DEMAND starts above SUPPLY and ends below SUPPLY; the first sampled point where SUPPLY exceeds DEMAND is x_px=881.5 (SUPPLY 0.5170, DEMAND 0.4830), after SUPPLY was below DEMAND at x_px=853.3 (SUPPLY 0.4789, DEMAND 0.5211).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "DEMAND",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "DEMAND is above SUPPLY at the start."
+    },
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "SUPPLY is below DEMAND at the start."
+    },
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=853.3",
+     "field": "relative_value",
+     "value": 0.4789,
+     "note": "SUPPLY is still below DEMAND here."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=853.3",
+     "field": "relative_value",
+     "value": 0.5211,
+     "note": "DEMAND is still above SUPPLY here."
+    },
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=881.5",
+     "field": "relative_value",
+     "value": 0.517,
+     "note": "SUPPLY first exceeds DEMAND at this sampled point."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=881.5",
+     "field": "relative_value",
+     "value": 0.483,
+     "note": "DEMAND first falls below SUPPLY at this sampled point."
+    },
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "SUPPLY is above DEMAND at the end."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "DEMAND is below SUPPLY at the end."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Supply overtakes demand around the middle of the clip.",
+    "Demand is higher than supply at the start, but supply is higher at the end.",
+    "The lines cross between the x_px=853.3 and x_px=881.5 samples.",
+    "The ordering flips from demand>supply to supply>demand."
+   ],
+   "visual_evidence_rule": "The chart must show DEMAND above SUPPLY early on and SUPPLY above DEMAND later, including a visible crossing or change in relative order between the x_px=853.3 and x_px=881.5 samples.",
+   "temporal_anchor": "when this line goes up and this one goes down",
+   "reviewer_question": "Is the crossing/ordering flip required, or is it enough to show SUPPLY rising and DEMAND falling?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At the left endpoint, DEMAND is at its maximum relative value 1.0000 while SUPPLY is at its minimum 0.0000; at the right endpoint, SUPPLY is at its maximum 1.0000 while DEMAND is at its minimum 0.0000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "SUPPLY is at the bottom at the start."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=120.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "DEMAND is at the top at the start."
+    },
+    {
+     "entity": "SUPPLY",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "SUPPLY is at the top at the end."
+    },
+    {
+     "entity": "DEMAND",
+     "x": "x_px=1220.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "DEMAND is at the bottom at the end."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Demand starts at the top and supply at the bottom, then they swap.",
+    "At the beginning demand is highest and supply lowest; at the end supply is highest and demand lowest.",
+    "The start and end are mirror opposites on the relative scale.",
+    "The two series exchange their relative extreme positions."
+   ],
+   "visual_evidence_rule": "The leftmost sampled position must show DEMAND at the maximum and SUPPLY at the minimum; the rightmost sampled position must show SUPPLY at the maximum and DEMAND at the minimum.",
+   "temporal_anchor": "when this line goes up and this one goes down",
+   "reviewer_question": "Is an explicit start/end extreme comparison needed, or do the trend lines alone suffice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The narration may mention falling prices and driver protests as contextual consequences, but the table contains no price or protest data. If used, keep them verbal/contextual rather than table-derived."
+ ],
+ "unsupported_to_avoid": [
+  "Any numeric price value or price change, since the table has no price column.",
+  "Any claim that supply and demand caused prices to fall or drivers to protest, because the table only contains relative supply and demand series.",
+  "Percentages, counts, or absolute quantities for SUPPLY or DEMAND, since their unit is relative and values are 0-1 normalizations.",
+  "Treating relative_value as a percentage (e.g., 'demand falls 100%') instead of as a 0-1 relative scale."
+ ],
+ "notes": "The table contains only relative 0-1 SUPPLY and DEMAND series, so all units are relative. Price and protest mentions are narration-only and should not be given table-derived numbers.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 30.3,
+  "usage": {
+   "prompt_tokens": 4686,
+   "completion_tokens": 7685,
+   "total_tokens": 12371,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5011
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 4174
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,144 @@
+{
+ "clip_id": "line_36",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:61% @ x_px=1135.4"
+   ],
+   "assertion": {
+    "series": "61%",
+    "values": [
+     51.0
+    ],
+    "threshold_between": [
+     51.0,
+     51.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must stay above a horizontal majority-threshold reference line across all data points; the lowest point should be visible at value 51."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "61% @ x_px=204.6",
+    "extreme": "max",
+    "expected": 80.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must reach its highest point at value 80."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "61% @ x_px=1135.4",
+    "extreme": "min",
+    "expected": 51.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The minimum y-value of the line is 51."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:61% @ x_px=120.0",
+    "mark:61% @ x_px=204.6",
+    "mark:61% @ x_px=1135.4",
+    "mark:61% @ x_px=1220.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "61% @ x_px=120.0",
+      "value": 55.0
+     },
+     {
+      "mark": "61% @ x_px=204.6",
+      "value": 80.0
+     },
+     {
+      "mark": "61% @ x_px=1135.4",
+      "value": 51.0
+     },
+     {
+      "mark": "61% @ x_px=1220.0",
+      "value": 61.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line must visibly move up and down, showing at least the rise to 80, the drop to 51, and the final point at 61."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:61% @ x_px=1220.0"
+   ],
+   "assertion": {
+    "mark": "61% @ x_px=1220.0",
+    "field": "value",
+    "expected": 61.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The last data point on the line must be at value 61."
+  }
+ ]
+}

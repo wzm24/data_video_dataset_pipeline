@@ -1,0 +1,8 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,entity_source
+bar_32,United States,united-states,897.7,,230.946,1.0,$,#4b8cc4,svg_data_value,monthly price,svg_data_value
+bar_32,Germany,germany,817.8,,37.7892,0.1636,$,#466974,svg_data_value,monthly price,svg_data_value
+bar_32,Canada,canada,737.9,,32.3907,0.1403,$,#466974,svg_data_value,monthly price,svg_data_value
+bar_32,United Kingdom,united-kingdom,658.0,,26.2211,0.1135,$,#466974,svg_data_value,monthly price,svg_data_value
+bar_32,France,france,497.3,,20.0514,0.0868,$,#466974,svg_data_value,monthly price,svg_data_value
+bar_32,Norway,norway,577.2,,20.0514,0.0868,$,#466974,svg_data_value,monthly price,svg_data_value
+bar_32,Australia,australia,417.3,,7.71208,0.0334,$,#466974,svg_data_value,monthly price,svg_data_value

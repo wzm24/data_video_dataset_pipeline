@@ -1,0 +1,133 @@
+{
+ "clip_id": "line_59",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Remain @ 1160"
+   ],
+   "assertion": {
+    "mark": "Remain @ 1160",
+    "field": "value",
+    "expected": 46.075,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the final time point with both entities at approximately 46.1%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Remain @ 140",
+    "mark:Leave @ 140"
+   ],
+   "assertion": {
+    "greater": "Remain @ 140",
+    "lesser": "Leave @ 140",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show Remain and Leave values as equal at each time point, with no visible gap between them."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Remain/Leave @ 715",
+    "extreme": "min",
+    "expected": 38.2167,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the low point around 38.2% and the high point around 46.1%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Remain/Leave @ 140",
+    "mark:Remain/Leave @ 1160"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Remain/Leave @ 140",
+      "value": 39.2833
+     },
+     {
+      "mark": "Remain/Leave @ 1160",
+      "value": 46.075
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show a general upward movement from the first to the last time point."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Remain/Leave @ 140 -> 1160"
+   ],
+   "assertion": {
+    "low": "Remain/Leave @ 140 -> 1160",
+    "low_value": 6.7917,
+    "high": "Remain/Leave @ 140 -> 1160",
+    "high_value": 6.7917,
+    "delta": null,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the first-to-last increase of about 6.8 percentage points apparent."
+  }
+ ]
+}

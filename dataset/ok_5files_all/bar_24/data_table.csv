@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_source,series
+bar_24,1941,1941,210.0,,10000,0.0049,students,#4296D6,narration_printed,narration_printed,Students taking the SAT
+bar_24,1950,1950,455.0,,80000.000,0.0400,students,#4296D6,printed,visual_frame_align,Students taking the SAT
+bar_24,1960,1960,700.0,,800000.000,0.4000,students,#4296D6,printed,visual_frame_align,Students taking the SAT
+bar_24,1974,1974,945.0,,1000000.000,0.5000,students,#4296D6,printed,visual_frame_align,Students taking the SAT
+bar_24,Now,now,1190.0,,2000000.000,1.0000,students,#4296D6,printed,visual_frame_align,Students taking the SAT

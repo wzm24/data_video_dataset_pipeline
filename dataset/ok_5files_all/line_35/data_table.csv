@@ -1,0 +1,63 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+line_35,S&P 500,s-p-500,120.0,2007,150.0000,0.5000,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,176.6,,165.0033,0.6072,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,233.1,,165.0033,0.6072,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,277.1,2008,150.0000,0.5000,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,333.7,,150.0000,0.5000,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,390.3,,139.9877,0.4285,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,434.3,2009,90.0174,0.0715,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,490.9,,99.9993,0.1428,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,547.4,,125.0149,0.3215,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,591.4,2010,125.0149,0.3215,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,648.0,,119.9935,0.2857,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,704.6,,145.0091,0.4643,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,748.6,2011,145.0091,0.4643,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,805.1,,134.9967,0.3928,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,861.7,,147.9914,0.4857,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,905.7,2012,150.0000,0.5000,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,962.3,,152.0086,0.5143,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,1018.9,,154.9909,0.5357,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,1062.9,2013,180.0065,0.7143,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,1119.4,,189.9884,0.7857,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,1176.0,,200.0007,0.8572,,#c85a28,svg_geometry,S&amp;P 500
+line_35,S&P 500,s-p-500,1220.0,2014,204.9917,0.8928,,#c85a28,svg_geometry,S&amp;P 500
+line_35,Wages,wages,120.0,2007,95.0083,0.1072,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,148.3,,97.9907,0.1285,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,176.6,,99.9993,0.1428,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,204.9,,101.0036,0.1500,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,233.1,,102.0078,0.1572,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,261.4,,103.0121,0.1643,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,291.3,,103.0121,0.1643,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,319.6,,103.0121,0.1643,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,347.9,,103.0121,0.1643,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,376.1,,102.0078,0.1572,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,404.4,,99.9993,0.1428,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,434.3,2009,97.9907,0.1285,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,462.6,,97.9907,0.1285,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,490.9,,97.9907,0.1285,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,519.1,,98.9950,0.1357,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,547.4,,99.9993,0.1428,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,575.7,,101.0036,0.1500,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,605.6,,101.0036,0.1500,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,633.9,,102.0078,0.1572,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,662.1,,103.0121,0.1643,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,690.4,,104.0164,0.1715,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,718.7,,104.9902,0.1785,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,748.6,2011,105.9945,0.1857,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,776.9,,105.9945,0.1857,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,805.1,,106.9988,0.1928,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,833.4,,106.9988,0.1928,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,861.7,,108.0030,0.2000,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,890.0,,108.0030,0.2000,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,919.9,,109.0073,0.2072,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,948.1,,110.0116,0.2143,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,976.4,,111.0159,0.2215,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1004.7,,111.9897,0.2285,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1033.0,,111.9897,0.2285,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1062.9,2013,112.9940,0.2357,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1091.1,,112.9940,0.2357,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1119.4,,113.9983,0.2428,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1147.7,,113.9983,0.2428,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1176.0,,115.0025,0.2500,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1204.3,,115.0025,0.2500,,#8da392,svg_geometry,Wages
+line_35,Wages,wages,1220.0,2014,116.0068,0.2572,,#8da392,svg_geometry,Wages

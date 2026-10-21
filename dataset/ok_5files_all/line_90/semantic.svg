@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#243424"/>
+<text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#d8f0d8" letter-spacing="6">TROOPS</text>
+<text x="158.0" y="595.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#d8f0d8">0</text>
+<text x="158.0" y="490.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#d8f0d8">50,000</text>
+<text x="158.0" y="385.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#d8f0d8">100,000</text>
+<text x="158.0" y="280.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#d8f0d8">150,000</text>
+<text x="158.0" y="175.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#d8f0d8">200,000</text>
+<text x="170" y="616.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#d8f0d8">2003</text>
+<text x="415" y="616.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#d8f0d8">2005</text>
+<text x="660" y="616.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#d8f0d8">2007</text>
+<text x="1028" y="616.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#d8f0d8">2010</text>
+<polyline points="170.0,590.0 210.3,275.0 220.7,275.0 230.7,277.1 241.1,298.1 251.5,312.8 261.6,314.9 272.0,331.7 282.1,333.8 292.5,333.8 302.9,348.5 312.6,317.0 323.0,302.3 333.1,300.2 343.5,300.2 353.5,296.0 363.9,300.2 374.3,300.2 384.4,300.2 394.8,300.2 404.9,300.2 415.3,300.2 425.7,279.2 435.0,279.2 445.4,279.2 455.5,275.0 465.9,275.0 476.0,275.0 486.4,275.0 496.8,275.0 506.8,275.0 517.2,264.5 527.3,264.5 537.7,285.5 548.1,285.5 557.5,285.5 567.9,285.5 578.0,285.5 588.4,285.5 598.4,296.0 608.8,296.0 619.2,296.0 629.3,296.0 639.7,296.0 649.8,296.0 660.2,306.5 670.6,312.8 680.0,293.9 690.4,279.2 700.4,270.8 710.8,264.5 720.9,258.2 731.3,249.8 741.7,241.4 751.8,233.0 762.2,228.8 772.2,228.8 782.6,249.8 793.0,258.2 802.8,264.5 813.2,270.8 823.2,275.0 833.6,279.2 843.7,283.4 854.1,287.6 864.5,291.8 874.6,296.0 885.0,300.2 895.0,304.4 956.1,305.2 1078.5,404.6 1150.0,590.0" fill="none" stroke="#c22f2f" stroke-width="2.5"/>
+<circle cx="230.7" cy="277.1" r="5" fill="#ffffff"/>
+<text x="212.7" y="259.1" text-anchor="end" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#d8f0d8">INVASION</text>
+<circle cx="476.0" cy="275.0" r="5" fill="#ffffff"/>
+<text x="494.0" y="303.0" text-anchor="start" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#d8f0d8">INSURGENCY GROWS</text>
+<circle cx="772.2" cy="228.8" r="5" fill="#ffffff"/>
+<text x="754.2" y="210.8" text-anchor="end" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#d8f0d8">SURGE PEAKS</text>
+<circle cx="956.1" cy="305.2" r="5" fill="#ffffff"/>
+<text x="974.1" y="333.2" text-anchor="start" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#d8f0d8">US FORCES LEAVE CITIES</text>
+</svg>

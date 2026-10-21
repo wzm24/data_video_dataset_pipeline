@@ -1,0 +1,270 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_94",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the top countries' expenditure on research and development as a percentage of GDP, highlighting a nation that ranks just below South Korea.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The four listed countries carry these R&D expenditure metric values: South Korea 0.950, Israel 0.900, Japan 0.750, Finland 0.650.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "South Korea",
+     "x": "680.0",
+     "field": "value",
+     "value": 0.95,
+     "note": "listed value for South Korea"
+    },
+    {
+     "entity": "Israel",
+     "x": "660.0",
+     "field": "value",
+     "value": 0.9,
+     "note": "listed value for Israel"
+    },
+    {
+     "entity": "Japan",
+     "x": "600.0",
+     "field": "value",
+     "value": 0.75,
+     "note": "listed value for Japan"
+    },
+    {
+     "entity": "Finland",
+     "x": "560.0",
+     "field": "value",
+     "value": 0.65,
+     "note": "listed value for Finland"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "South Korea 0.950, Israel 0.900, Japan 0.750, Finland 0.650",
+    "The values are 0.95 for South Korea, 0.90 for Israel, 0.75 for Japan, and 0.65 for Finland.",
+    "Values: South Korea = 0.950; Israel = 0.900; Japan = 0.750; Finland = 0.650."
+   ],
+   "visual_evidence_rule": "Bars or labels must show these four entities and their corresponding values, or a clearly readable data table must be present.",
+   "temporal_anchor": "opening data display before/around the first-place South Korea narration",
+   "reviewer_question": "Must the video show all four numerical values, or only the two countries in the highlighted comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Descending order among the listed countries: South Korea is first (0.950), Israel second (0.900), Japan third (0.750), Finland fourth (0.650).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "South Korea",
+     "x": "680.0",
+     "field": "value",
+     "value": 0.95,
+     "note": "highest listed value"
+    },
+    {
+     "entity": "Israel",
+     "x": "660.0",
+     "field": "value",
+     "value": 0.9,
+     "note": "second-highest listed value"
+    },
+    {
+     "entity": "Japan",
+     "x": "600.0",
+     "field": "value",
+     "value": 0.75,
+     "note": "third-highest listed value"
+    },
+    {
+     "entity": "Finland",
+     "x": "560.0",
+     "field": "value",
+     "value": 0.65,
+     "note": "fourth-highest listed value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "South Korea ranks first, followed by Israel, Japan, and Finland.",
+    "Order: South Korea > Israel > Japan > Finland.",
+    "Israel is second behind South Korea; Japan and Finland follow."
+   ],
+   "visual_evidence_rule": "Bars must be ordered or labeled so the rank order South Korea > Israel > Japan > Finland is unambiguous.",
+   "temporal_anchor": "the clause establishing South Korea as first place and Israel as just below",
+   "reviewer_question": "Is the full rank order of all four countries required, or only that South Korea is first and Israel second?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Israel is the country immediately below South Korea in the ranking, with a lower value than South Korea: 0.900 vs 0.950.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "South Korea",
+     "x": "680.0",
+     "field": "value",
+     "value": 0.95,
+     "note": "South Korea value for comparison"
+    },
+    {
+     "entity": "Israel",
+     "x": "660.0",
+     "field": "value",
+     "value": 0.9,
+     "note": "Israel value for comparison"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Israel is just below South Korea: 0.900 vs 0.950.",
+    "South Korea is first and Israel second, just below South Korea.",
+    "Israel ranks immediately behind South Korea."
+   ],
+   "visual_evidence_rule": "The Israel bar must be adjacent to and lower than the South Korea bar, with both entities identifiable.",
+   "temporal_anchor": "which is just barely less than first place South Korea",
+   "reviewer_question": "Should Israel be explicitly identified as the nation immediately below South Korea?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The gap between South Korea and Israel is 0.050 metric points (0.950 - 0.900 = 0.050), so Israel is about 5.3% lower than South Korea ((0.950 - 0.900) / 0.950 = 0.0526).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "South Korea",
+     "x": "680.0",
+     "field": "value",
+     "value": 0.95,
+     "note": "minuend in difference calculation"
+    },
+    {
+     "entity": "Israel",
+     "x": "660.0",
+     "field": "value",
+     "value": 0.9,
+     "note": "subtrahend in difference calculation"
+    }
+   ],
+   "computation": "0.950 - 0.900 = 0.050; (0.950 - 0.900) / 0.950 = 0.0526",
+   "accepted_routes": [
+    "South Korea leads Israel by 0.050 points.",
+    "Israel trails South Korea by 0.050.",
+    "Israel is about 5.3% below South Korea."
+   ],
+   "visual_evidence_rule": "A difference annotation or side-by-side values 0.950 and 0.900 must make the 0.050 gap visible.",
+   "temporal_anchor": "just barely less",
+   "reviewer_question": "Must the video quantify the small gap between South Korea and Israel, or is rank order alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "South Korea is the highest listed value at 0.950.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "South Korea",
+     "x": "680.0",
+     "field": "value",
+     "value": 0.95,
+     "note": "highest value among the four listed countries"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "South Korea has the top value: 0.950.",
+    "South Korea is first with 0.95.",
+    "Highest among the listed countries: South Korea, 0.950."
+   ],
+   "visual_evidence_rule": "South Korea bar must be the tallest bar.",
+   "temporal_anchor": "first place South Korea",
+   "reviewer_question": "Is the exact highest value 0.950 required, or is 'South Korea first' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Japan is third at 0.750 and Finland is fourth at 0.650.",
+  "Relative_value column values if the animation uses that scale: South Korea 0.5938, Israel 0.5625, Japan 0.4688, Finland 0.4062."
+ ],
+ "unsupported_to_avoid": [
+  "4.5% from the narration is not directly in the table and should not be cited unless an external scale factor is supplied.",
+  "Causal claims about why countries spend more or less on R&D.",
+  "Extrapolation to countries, years, or time trends not present in the table.",
+  "GDP amounts or actual currency spending.",
+  "Claiming Israel is the highest; the table shows South Korea at 0.950 above Israel at 0.900."
+ ],
+ "notes": "The table's unit field is blank, so units are treated as the table's metric values; the narration's 4.5% is not used because it is not derivable from listed cells without an external scale factor. The core G1 trade-off is whether the small numeric gap between South Korea and Israel is required beyond rank order.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 37.8,
+  "usage": {
+   "prompt_tokens": 712,
+   "completion_tokens": 9507,
+   "total_tokens": 10219,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7570
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 456
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

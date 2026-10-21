@@ -1,0 +1,241 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_118",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the widespread public support for various proposed reforms to policing practices in the United States.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Require police to be trained has the highest Strongly relative support value.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3883,
+     "note": "largest Strongly value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Police training leads Strongly support at relative 0.3883.",
+    "Highest Strongly value is for police training, 0.3883.",
+    "Training reform tops the Strongly series at 0.3883."
+   ],
+   "visual_evidence_rule": "The relative value for 'Require police to be trained' must appear as the largest Strongly value.",
+   "temporal_anchor": "requiring training in nonviolent alternatives to deadly force",
+   "reviewer_question": "Must the video state that police training has the highest Strongly support?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Create a federal government has the second-highest Strongly relative support value.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Create a federal government",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3391,
+     "note": "second-largest Strongly value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Federal government proposal is second in Strongly support at 0.3391.",
+    "Strongly support for federal government is 0.3391, behind training.",
+    "Federal government ranks second in the Strongly series."
+   ],
+   "visual_evidence_rule": "The relative value for 'Create a federal government' must be shown as second-largest in Strongly.",
+   "temporal_anchor": "broad base of support for a number of proposals about policing",
+   "reviewer_question": "Should the video specify the second-highest Strongly supported proposal?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Make it a crime for police to Strongly value exceeds investigate and live-in.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Make it a crime for police to",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.268,
+     "note": "highest of three"
+    },
+    {
+     "entity": "power to investigate and",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.2352,
+     "note": "middle of three"
+    },
+    {
+     "entity": "Require officers to live in",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.1914,
+     "note": "lowest of three"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Crime proposal Strongly value 0.2680 exceeds investigate 0.2352 and live-in 0.1914.",
+    "Strongly support is higher for crime proposal than investigate or live-in.",
+    "Crime proposal outranks investigate and live-in in Strongly series."
+   ],
+   "visual_evidence_rule": "The three named Strongly values must be visibly ordered 0.2680 > 0.2352 > 0.1914.",
+   "temporal_anchor": "broad base of support for a number of proposals about policing",
+   "reviewer_question": "Must the video show the mid-tier Strongly ranking among these proposals?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Somewhat relative support values range from 0.1203 to 0.2133 across the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "71",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.1203,
+     "note": "lowest Somewhat value"
+    },
+    {
+     "entity": "35",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.2133,
+     "note": "highest Somewhat value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Somewhat values span 0.1203 to 0.2133.",
+    "Somewhat support lowest is 0.1203, highest is 0.2133.",
+    "Somewhat series ranges between 0.1203 and 0.2133."
+   ],
+   "visual_evidence_rule": "The smallest and largest Somewhat relative values must be visible.",
+   "temporal_anchor": "broad base of support for a number of proposals about policing",
+   "reviewer_question": "Should the video mention the range of Somewhat support values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Combined Strongly plus Somewhat support is highest for police training at 0.5086.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3883,
+     "note": "Strongly part"
+    },
+    {
+     "entity": "71",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.1203,
+     "note": "Somewhat part, paired by row order"
+    }
+   ],
+   "computation": "(0.3883 + 0.1203) = 0.5086",
+   "accepted_routes": [
+    "Training proposal combined relative support is 0.5086.",
+    "Strongly plus Somewhat for training totals 0.5086.",
+    "Training reform has the highest combined relative support at 0.5086."
+   ],
+   "visual_evidence_rule": "Both training Strongly and Somewhat segments must be visible to support the sum.",
+   "temporal_anchor": "requiring training in nonviolent alternatives to deadly force",
+   "reviewer_question": "Should the video show combined Strongly plus Somewhat support for police training?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Mentioning that both Strongly and Somewhat categories exist for each proposal.",
+  "Showing the relative order of all five Strongly support values."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why public support exists.",
+  "Absolute percentages, counts, or dollars from relative-only values.",
+  "Extrapolating to public opinion beyond the listed proposals.",
+  "Treating numeric entity labels 71, 62, etc. as percentages."
+ ],
+ "notes": "All units use only relative_value. U5 assumes adjacent Strongly and Somewhat rows pair by proposal order.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 50.8,
+  "usage": {
+   "prompt_tokens": 1270,
+   "completion_tokens": 12029,
+   "total_tokens": 13299,
+   "prompt_tokens_details": {
+    "cached_tokens": 1024
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10402
+   },
+   "prompt_cache_hit_tokens": 1024,
+   "prompt_cache_miss_tokens": 246
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

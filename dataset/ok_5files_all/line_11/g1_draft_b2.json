@@ -1,0 +1,306 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_11",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that test-optional colleges attract more applicants than test-required colleges and that application volumes have increased over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The TEST-OPTIONAL series value increases over the labeled period from 1994 to 2010, starting at 1650.2643 and ending at 3600.0240, an increase of 1949.7597 (about 2.18 times the 1994 value).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "1994",
+     "field": "value",
+     "value": 1650.2643,
+     "note": "1994 labeled point"
+    },
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 3600.024,
+     "note": "2010 labeled point"
+    }
+   ],
+   "computation": "3600.0240 - 1650.2643 = 1949.7597; 3600.0240 / 1650.2643 ≈ 2.18",
+   "accepted_routes": [
+    "TEST-OPTIONAL rises from about 1,650 in 1994 to about 3,600 in 2010.",
+    "The TEST-OPTIONAL series has a clear upward trend over the period.",
+    "TEST-OPTIONAL more than doubles from 1994 to 2010, going from about 1,650 to about 3,600."
+   ],
+   "visual_evidence_rule": "The chart must show TEST-OPTIONAL values at 1994 and 2010 with the 2010 value higher and the series following an overall upward path.",
+   "temporal_anchor": "First more students apply / more will",
+   "reviewer_question": "Should the upward TEST-OPTIONAL trend be mandatory, or is the cross-entity comparison alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The TEST-REQUIRED series value also increases over the labeled period from 1994 to 2010, starting at 1550.2883 and ending at 3000.1682, an increase of 1449.8799 (about 1.94 times the 1994 value).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "1994",
+     "field": "value",
+     "value": 1550.2883,
+     "note": "1994 labeled point"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 3000.1682,
+     "note": "2010 labeled point"
+    }
+   ],
+   "computation": "3000.1682 - 1550.2883 = 1449.8799; 3000.1682 / 1550.2883 ≈ 1.94",
+   "accepted_routes": [
+    "TEST-REQUIRED rises from about 1,550 in 1994 to about 3,000 in 2010.",
+    "The TEST-REQUIRED series has an upward trend over the period.",
+    "TEST-REQUIRED nearly doubles from 1994 to 2010, going from about 1,550 to about 3,000."
+   ],
+   "visual_evidence_rule": "The chart must show TEST-REQUIRED values at 1994 and 2010 with the 2010 value higher and the series following an overall upward path.",
+   "temporal_anchor": "First more students apply / more will",
+   "reviewer_question": "Should the upward TEST-REQUIRED trend be mandatory, or can the clip focus on TEST-OPTIONAL only?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At each labeled year with both series, TEST-OPTIONAL is higher than TEST-REQUIRED: 1994 1650.2643 > 1550.2883; 1998 1950.1922 > 1750.2403; 2002 2299.8799 > 1899.9760; 2010 3600.0240 > 3000.1682.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "1994",
+     "field": "value",
+     "value": 1650.2643,
+     "note": "optional 1994"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "1994",
+     "field": "value",
+     "value": 1550.2883,
+     "note": "required 1994"
+    },
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "1998",
+     "field": "value",
+     "value": 1950.1922,
+     "note": "optional 1998"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "1998",
+     "field": "value",
+     "value": 1750.2403,
+     "note": "required 1998"
+    },
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "2002",
+     "field": "value",
+     "value": 2299.8799,
+     "note": "optional 2002"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "2002",
+     "field": "value",
+     "value": 1899.976,
+     "note": "required 2002"
+    },
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 3600.024,
+     "note": "optional 2010"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 3000.1682,
+     "note": "required 2010"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At all labeled years, TEST-OPTIONAL is above TEST-REQUIRED.",
+    "TEST-OPTIONAL is consistently higher than TEST-REQUIRED, e.g. 2010: about 3,600 vs about 3,000.",
+    "The two series never cross; TEST-OPTIONAL exceeds TEST-REQUIRED at each comparable time point."
+   ],
+   "visual_evidence_rule": "Both series must be shown at the same labeled years, and TEST-OPTIONAL must be visibly above TEST-REQUIRED at each of those years.",
+   "temporal_anchor": "when universities make it easier to do so, whether by using the common application or removing requirements like test scores, more will",
+   "reviewer_question": "Should the clip be required to show TEST-OPTIONAL above TEST-REQUIRED at multiple labeled years, or is one endpoint comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At 2010, TEST-OPTIONAL exceeds TEST-REQUIRED by 599.8558 value units and is about 1.20 times TEST-REQUIRED (3600.0240 vs 3000.1682).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 3600.024,
+     "note": "optional 2010"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 3000.1682,
+     "note": "required 2010"
+    }
+   ],
+   "computation": "3600.0240 - 3000.1682 = 599.8558; 3600.0240 / 3000.1682 ≈ 1.20",
+   "accepted_routes": [
+    "By 2010, TEST-OPTIONAL leads TEST-REQUIRED by about 600 value units.",
+    "In 2010, TEST-OPTIONAL is about 1.2 times TEST-REQUIRED.",
+    "The 2010 endpoint gap is roughly 600 in favor of TEST-OPTIONAL."
+   ],
+   "visual_evidence_rule": "At the 2010 point, the TEST-OPTIONAL value must be shown above the TEST-REQUIRED value, with the gap or ratio made legible.",
+   "temporal_anchor": "more will / removing requirements like test scores",
+   "reviewer_question": "Is the 2010 optional–required lead by about 600, or about 1.2 times, a required endpoint detail or optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The TEST-OPTIONAL advantage over TEST-REQUIRED widens from 1994 to 2010: the gap rises from 99.976 (1650.2643 - 1550.2883) to 599.8558 (3600.0240 - 3000.1682).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "1994",
+     "field": "value",
+     "value": 1650.2643,
+     "note": "optional 1994"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "1994",
+     "field": "value",
+     "value": 1550.2883,
+     "note": "required 1994"
+    },
+    {
+     "entity": "TEST-OPTIONAL",
+     "x": "2010",
+     "field": "value",
+     "value": 3600.024,
+     "note": "optional 2010"
+    },
+    {
+     "entity": "TEST-REQUIRED",
+     "x": "2010",
+     "field": "value",
+     "value": 3000.1682,
+     "note": "required 2010"
+    }
+   ],
+   "computation": "gap_1994 = 1650.2643 - 1550.2883 = 99.976; gap_2010 = 3600.0240 - 3000.1682 = 599.8558; gap_change = 499.8798",
+   "accepted_routes": [
+    "The optional–required gap widens over time, from about 100 in 1994 to about 600 in 2010.",
+    "TEST-OPTIONAL pulls further ahead of TEST-REQUIRED between 1994 and 2010.",
+    "The difference between the two series grows across the labeled period."
+   ],
+   "visual_evidence_rule": "The chart must show the optional–required gap at 1994 and 2010, with the 2010 gap visibly larger than the 1994 gap.",
+   "temporal_anchor": "more will / when universities make it easier to do so",
+   "reviewer_question": "Is the widening gap an expected semantic beat, or optional extra detail beyond the required trend and comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "TEST-OPTIONAL reaches its highest labeled value at 2010 (3600.0240).",
+  "TEST-REQUIRED reaches its highest labeled value at 2010 (3000.1682).",
+  "The optional series has a larger total gain than the required series from 1994 to 2010 (1949.7597 vs 1449.8799)."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim that making tests optional caused the increase; the table and narration do not establish causation.",
+  "Do not say schools accepted more applicants; the narration explicitly says they are not accepting more.",
+  "Do not treat relative_value as a percentage or as an absolute applicant count.",
+  "Do not cite values outside the table or extrapolate beyond 2010.",
+  "Do not describe chart type, colors, axis ticks, or pixel positions as semantic units."
+ ],
+ "notes": "All cited numbers are from the table's value column; relative_value is not used as a percentage. Causal explanations for the increase are not supported by the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 55.3,
+  "usage": {
+   "prompt_tokens": 2422,
+   "completion_tokens": 13795,
+   "total_tokens": 16217,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10997
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1910
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

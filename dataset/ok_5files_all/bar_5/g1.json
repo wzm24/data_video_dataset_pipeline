@@ -1,0 +1,82 @@
+{
+ "clip_id": "bar_5",
+ "version": "g1_r_u_v1",
+ "intent": "Compare private and state schools on paying business rates, and convey the potential annual revenue from requiring private schools to pay as state schools do.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How do private and state schools compare on paying business rates?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "private schools",
+     "state schools"
+    ],
+    "measure": "share paying business rates / additional revenue",
+    "time": "annual"
+   }
+  },
+  {
+   "id": "R2",
+   "question": "What additional annual revenue could come from private schools paying as state schools do?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ],
+   "scope": {
+    "entities": [
+     "private schools",
+     "state schools"
+    ],
+    "measure": "share paying business rates / additional revenue",
+    "time": "annual"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Private schools pay 0% of business rates, while state schools pay 100%.",
+   "accept": [
+    "0% vs 100%",
+    "private schools pay none; state schools pay in full",
+    "an empty bar beside a full bar"
+   ],
+   "reject": [
+    "swapped (private 100%, state 0%)",
+    "missing one of the two groups",
+    "saying both pay the same"
+   ],
+   "evidence": "Two bars: private at 0% and state at 100%."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "claim": "Requiring private schools to pay as state schools do could raise an additional £105m per year.",
+   "accept": [
+    "£105m additional revenue",
+    "£105 million per year",
+    "1.05亿英镑/年"
+   ],
+   "reject": [
+    "£105",
+    "£105bn",
+    "£105k",
+    "a revenue figure without the £105m value"
+   ],
+   "evidence": "The £105m annotation is visible (not a bar)."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21"
+}

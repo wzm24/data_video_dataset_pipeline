@@ -1,0 +1,7 @@
+{
+ "clip_id": "bar_2",
+ "family": "bar",
+ "sub_type": "simple",
+ "orientation": "horizontal",
+ "time_behavior": "frame"
+}

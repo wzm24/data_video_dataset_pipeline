@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#32363f"/>
+<circle cx="520" cy="360" r="165" fill="#e3dc78"/>
+<polyline points="685,360 880,360 880,210" fill="none" stroke="#ffffff" stroke-width="4"/>
+<circle cx="880" cy="200" r="6" fill="#ffffff"/>
+<text x="900" y="170" font-family="Arial, sans-serif" font-size="26" fill="#ffffff">Average person with student debt</text>
+<text x="900" y="215" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">$30,000</text>
+<text x="1210" y="60" text-anchor="end" font-family="Georgia, serif" font-size="40" font-style="italic" fill="#ffffff">Vox</text>
+</svg>

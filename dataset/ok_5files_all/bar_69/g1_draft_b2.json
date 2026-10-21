@@ -1,0 +1,252 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_69",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To compare the gross domestic product (GDP) of major global economies including the United States, the European Union, China, and Japan.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The four listed economies are ordered by GDP as USA > European Union > China > Japan.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "300.0",
+     "field": "value",
+     "value": 18.5,
+     "note": "highest value in table"
+    },
+    {
+     "entity": "European Union",
+     "x": "540.0",
+     "field": "value",
+     "value": 15.4,
+     "note": "second-highest value in table"
+    },
+    {
+     "entity": "China",
+     "x": "780.0",
+     "field": "value",
+     "value": 11.8,
+     "note": "third-highest value in table"
+    },
+    {
+     "entity": "Japan",
+     "x": "1020.0",
+     "field": "value",
+     "value": 4.8,
+     "note": "lowest value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "USA first, EU second, China third, Japan fourth",
+    "Descending GDP order is United States, European Union, China, Japan",
+    "European Union ranks between the USA and China, with Japan last"
+   ],
+   "visual_evidence_rule": "The chart must show a descending order by bar height or an explicit ranked list: USA tallest, EU second, China third, Japan shortest.",
+   "temporal_anchor": "the narration clauses that list the economies in the comparison",
+   "reviewer_question": "Must the video enforce the table's USA→EU→China→Japan order even though the original spoken narration lists China right after the USA?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The USA has the largest GDP among the four listed economies, at 18.5 trillion.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "300.0",
+     "field": "value",
+     "value": 18.5,
+     "note": "largest value in table; narration states trillion"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "USA is highest at about $18.5 trillion",
+    "United States leads with a GDP of 18.5 trillion",
+    "USA tops the comparison at 18.5"
+   ],
+   "visual_evidence_rule": "USA bar must be tallest and labeled 18.5 (or $18.5T).",
+   "temporal_anchor": "the first GDP clause about the USA",
+   "reviewer_question": "Should the video explicitly state the USA's 18.5 trillion value, not only show it as the tallest bar?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The European Union is second at 15.4 trillion, ahead of China's 11.8 trillion.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "European Union",
+     "x": "540.0",
+     "field": "value",
+     "value": 15.4,
+     "note": "second-highest value in table"
+    },
+    {
+     "entity": "China",
+     "x": "780.0",
+     "field": "value",
+     "value": 11.8,
+     "note": "lower than EU"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "EU ranks second with about 15.4 trillion, ahead of China's 11.8 trillion",
+    "European Union is the runner-up at 15.4T, with China third at 11.8T",
+    "EU's GDP of 15.4 is above China's 11.8 and below only the USA"
+   ],
+   "visual_evidence_rule": "EU bar/label must be 15.4 and visibly taller than China's 11.8; EU should appear second in the order.",
+   "temporal_anchor": "The European Union would take second place... or the corrected ranking clause",
+   "reviewer_question": "Must the video include the EU as second place and compare it directly to China?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Japan has the smallest GDP among the four at 4.8 trillion.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Japan",
+     "x": "1020.0",
+     "field": "value",
+     "value": 4.8,
+     "note": "lowest value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Japan is lowest/fourth at about 4.8 trillion",
+    "Japan has the smallest GDP of the four at 4.8T",
+    "Japan's GDP is 4.8, the minimum in this comparison"
+   ],
+   "visual_evidence_rule": "Japan bar must be shortest and labeled 4.8 (or $4.8T).",
+   "temporal_anchor": "the Japan GDP clause",
+   "reviewer_question": "Should the video explicitly mark Japan as the lowest of the four?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The USA's GDP is 6.7 trillion larger than China's (18.5 − 11.8 = 6.7).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "300.0",
+     "field": "value",
+     "value": 18.5,
+     "note": "larger value"
+    },
+    {
+     "entity": "China",
+     "x": "780.0",
+     "field": "value",
+     "value": 11.8,
+     "note": "smaller value"
+    }
+   ],
+   "computation": "18.5 - 11.8 = 6.7",
+   "accepted_routes": [
+    "USA is 6.7 trillion larger than China",
+    "USA leads China by about 6.7 trillion",
+    "Difference between USA and China is 6.7 trillion"
+   ],
+   "visual_evidence_rule": "If included, chart must annotate or encode a gap of 6.7 between the USA and China bars/labels.",
+   "temporal_anchor": "optional; could attach to the USA/China comparison clauses",
+   "reviewer_question": "Should the video include the USA–China gap as an optional derived comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "USA vs EU gap: 18.5 − 15.4 = 3.1 trillion (USA larger).",
+  "EU vs China gap: 15.4 − 11.8 = 3.6 trillion (EU larger).",
+  "China vs Japan gap: 11.8 − 4.8 = 7.0 trillion (China larger).",
+  "Share of combined four-economy GDP (sum = 18.5+15.4+11.8+4.8 = 50.5): USA 18.5/50.5 ≈ 36.6%, EU 15.4/50.5 ≈ 30.5%, China 11.8/50.5 ≈ 23.4%, Japan 4.8/50.5 ≈ 9.5%."
+ ],
+ "unsupported_to_avoid": [
+  "World GDP ranking beyond the four listed economies (e.g., 'USA has the world's highest GDP' cannot be proven from this table alone).",
+  "Per-capita GDP or any per-capita comparison (not in table).",
+  "Causal claims about economic prosperity or historical trends (not in table).",
+  "EU as a combination of 28 states or any political composition claim (not in table).",
+  "Using relative_value as world share or total-GDP share without a defined denominator; the table does not define it.",
+  "Extrapolating future growth or growth rates."
+ ],
+ "notes": "The table's order places the European Union second, whereas the original narration lists China immediately after the USA; the reviewer should decide whether correcting that order is required. Derived gaps and within-four shares are optional valid additions, not core comparison units.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 50.2,
+  "usage": {
+   "prompt_tokens": 783,
+   "completion_tokens": 12463,
+   "total_tokens": 13246,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10617
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 527
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

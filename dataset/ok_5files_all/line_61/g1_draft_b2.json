@@ -1,0 +1,298 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_61",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that telephone survey results for partisan identification are consistent with those from established federal surveys like the General Social Survey.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip compares two survey sources—Pew Research Center and General Social Survey—on partisan identification, with separate Democratic and Republican entities.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Democratic - Pew Research Center",
+     "x": "2010",
+     "field": "value",
+     "value": 35.11,
+     "note": "Example value from the Pew Democratic series"
+    },
+    {
+     "entity": "Democratic - General Social Survey",
+     "x": "2010",
+     "field": "value",
+     "value": 33.11,
+     "note": "Example value from the GSS Democratic series"
+    },
+    {
+     "entity": "Republican - Pew Research Center",
+     "x": "2010",
+     "field": "value",
+     "value": 24.13,
+     "note": "Example value from the Pew Republican series"
+    },
+    {
+     "entity": "Republican - General Social Survey",
+     "x": "2010",
+     "field": "value",
+     "value": 21.63,
+     "note": "Example value from the GSS Republican series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The video compares Pew Research Center telephone surveys with the General Social Survey for Democratic and Republican identification.",
+    "Two sources (Pew and GSS) are shown for each party (Democratic and Republican).",
+    "Partisan identification is broken out by survey source: Pew vs GSS, Democrats vs Republicans."
+   ],
+   "visual_evidence_rule": "Labels or legend identify Pew Research Center and General Social Survey, and both Democratic and Republican entities are present.",
+   "temporal_anchor": "the narration clause about 'telephone surveys' and 'federal surveys'",
+   "reviewer_question": "Must the video name both source series and both partisan groups, or can it show only the comparison numerically?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "At the aligned 2010 comparison, Pew and GSS give very similar Democratic identification values: Pew 35.11% vs GSS 33.11%, a gap of about 2 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Democratic - Pew Research Center",
+     "x": "2010",
+     "field": "value",
+     "value": 35.11,
+     "note": "Pew Democratic identification at aligned 2010 tick"
+    },
+    {
+     "entity": "Democratic - General Social Survey",
+     "x": "2010",
+     "field": "value",
+     "value": 33.11,
+     "note": "GSS Democratic identification at aligned 2010 tick"
+    }
+   ],
+   "computation": "35.11 - 33.11 = 2.00 percentage points",
+   "accepted_routes": [
+    "At 2010, Pew puts Democratic identification at 35.11% and GSS at 33.11%, a gap of about 2 points.",
+    "Democratic identification is roughly 35% in Pew and 33% in GSS in 2010.",
+    "Both sources give nearly the same Democratic share in 2010 (about 33–35%)."
+   ],
+   "visual_evidence_rule": "The Democratic Pew and GSS series are shown at the same 2010 time point with close values (about 35.11% vs 33.11%).",
+   "temporal_anchor": "the narration clause about 'very similar numbers' or 'Democrats'",
+   "reviewer_question": "Is the 2010 Democratic cross-source closeness required, or can the video convey consistency only at a general level?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the aligned 2010 comparison, Pew and GSS give very similar Republican identification values: Pew 24.13% vs GSS 21.63%, a gap of about 2.5 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Republican - Pew Research Center",
+     "x": "2010",
+     "field": "value",
+     "value": 24.13,
+     "note": "Pew Republican identification at aligned 2010 tick"
+    },
+    {
+     "entity": "Republican - General Social Survey",
+     "x": "2010",
+     "field": "value",
+     "value": 21.63,
+     "note": "GSS Republican identification at aligned 2010 tick"
+    }
+   ],
+   "computation": "24.13 - 21.63 = 2.50 percentage points",
+   "accepted_routes": [
+    "At 2010, Pew puts Republican identification at 24.13% and GSS at 21.63%, a gap of about 2.5 points.",
+    "Republican identification is roughly 24% in Pew and 22% in GSS in 2010.",
+    "Both sources give similar Republican shares in 2010 (low 20s)."
+   ],
+   "visual_evidence_rule": "The Republican Pew and GSS series are shown at the same 2010 time point with close values (about 24.13% vs 21.63%).",
+   "temporal_anchor": "the narration clause about 'very similar numbers' or 'Republicans'",
+   "reviewer_question": "Is the 2010 Republican cross-source closeness required, or is it enough to show overall similarity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "For Republican identification, both Pew and GSS show a downward trend from 1990 to 2010, with GSS also ending at 21.24% in 2016.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Republican - Pew Research Center",
+     "x": "1990",
+     "field": "value",
+     "value": 30.12,
+     "note": "Pew Republican identification at 1990"
+    },
+    {
+     "entity": "Republican - Pew Research Center",
+     "x": "2010",
+     "field": "value",
+     "value": 24.13,
+     "note": "Pew Republican identification at 2010"
+    },
+    {
+     "entity": "Republican - General Social Survey",
+     "x": "1990",
+     "field": "value",
+     "value": 32.12,
+     "note": "GSS Republican identification at 1990"
+    },
+    {
+     "entity": "Republican - General Social Survey",
+     "x": "2010",
+     "field": "value",
+     "value": 21.63,
+     "note": "GSS Republican identification at 2010"
+    },
+    {
+     "entity": "Republican - General Social Survey",
+     "x": "2016",
+     "field": "value",
+     "value": 21.24,
+     "note": "GSS Republican identification at 2016"
+    }
+   ],
+   "computation": "Pew decline: 30.12 - 24.13 = 5.99 percentage points; GSS decline: 32.12 - 21.63 = 10.49 percentage points (GSS 1990 to 2016: 32.12 - 21.24 = 10.88)",
+   "accepted_routes": [
+    "Republican identification falls in both surveys: Pew 30.12% in 1990 to 24.13% in 2010; GSS 32.12% in 1990 to 21.63% in 2010, and 21.24% in 2016.",
+    "Both Pew and GSS trend downward for Republicans, though the GSS drop is steeper.",
+    "From 1990 onward, both sources show a decline in Republican identification."
+   ],
+   "visual_evidence_rule": "Republican Pew and GSS series are shown sloping downward from 1990 to later years (2010/2016).",
+   "temporal_anchor": "the time-series portion of the clip, if the animation shows multiple years",
+   "reviewer_question": "Is the shared downward Republican trend required, or optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At the aligned 2010 comparison, both sources show Democratic identification exceeding Republican identification by about 11 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Democratic - Pew Research Center",
+     "x": "2010",
+     "field": "value",
+     "value": 35.11,
+     "note": "Pew Democratic identification at 2010"
+    },
+    {
+     "entity": "Republican - Pew Research Center",
+     "x": "2010",
+     "field": "value",
+     "value": 24.13,
+     "note": "Pew Republican identification at 2010"
+    },
+    {
+     "entity": "Democratic - General Social Survey",
+     "x": "2010",
+     "field": "value",
+     "value": 33.11,
+     "note": "GSS Democratic identification at 2010"
+    },
+    {
+     "entity": "Republican - General Social Survey",
+     "x": "2010",
+     "field": "value",
+     "value": 21.63,
+     "note": "GSS Republican identification at 2010"
+    }
+   ],
+   "computation": "Pew: 35.11 - 24.13 = 10.98 percentage points; GSS: 33.11 - 21.63 = 11.48 percentage points",
+   "accepted_routes": [
+    "At 2010, both sources show Democratic identification about 11 percentage points higher than Republican identification.",
+    "Pew: Democrats 35.11% vs Republicans 24.13%; GSS: Democrats 33.11% vs Republicans 21.63%.",
+    "Democrats lead Republicans in both survey sources at 2010."
+   ],
+   "visual_evidence_rule": "At 2010, Democratic series values are visibly above Republican series values for both Pew and GSS.",
+   "temporal_anchor": "the narration clause about 'what share of Americans identify as Republicans versus Democrats'",
+   "reviewer_question": "Is the Democratic-over-Republican comparison at the aligned 2010 point required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Democratic series stability/range: Pew Democratic values run from 28.13% to 38.11%; GSS Democratic values run from 30.92% to 34.91%, both generally in the low 30s.",
+  "1990 Republican cross-source gap: Pew 30.12% vs GSS 32.12%, difference 2.0 percentage points."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming the telephone survey is accurate or representative because it matches GSS (causal claim).",
+  "Saying the two sources are identical or that every year matches exactly.",
+  "Summing Democratic and Republican shares to 100% or referring to Independents, since the table only has Democratic and Republican percentages.",
+  "Extrapolating beyond 2016 or asserting a national total.",
+  "Using chart positions, colors, axis ticks, or line styles as semantic content."
+ ],
+ "notes": "The core G1 content is cross-source consistency at aligned 2010 and the Democratic-over-Republican ordering. Trend and the 1990 Republican comparison are valid but optional relative to the narration.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 39.3,
+  "usage": {
+   "prompt_tokens": 4267,
+   "completion_tokens": 9732,
+   "total_tokens": 13999,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7140
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 3755
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

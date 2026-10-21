@@ -1,0 +1,133 @@
+{
+ "clip_id": "pie_9",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Pearl industry @ Pearl industry"
+   ],
+   "assertion": {
+    "segment": "Pearl industry @ Pearl industry",
+    "expected_share": 0.917,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the Pearl industry as the large majority portion of the composition."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Other @ Other"
+   ],
+   "assertion": {
+    "segment": "Other @ Other",
+    "expected_share": 0.083,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the Other segment as the small remainder of the composition."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Pearl industry @ Pearl industry",
+    "mark:Other @ Other"
+   ],
+   "assertion": {
+    "greater": "Pearl industry @ Pearl industry",
+    "lesser": "Other @ Other",
+    "expected_ratio": 11.0482,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the large magnitude gap between Pearl industry and Other apparent."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Pearl industry @ Pearl industry",
+    "segment:Other @ Other"
+   ],
+   "assertion": {
+    "segment": "Pearl industry @ Pearl industry",
+    "expected_share": 0.917,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must present Pearl industry and Other as the complete composition, with no missing or extra segment."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Pearl industry @ Pearl industry",
+    "mark:Other @ Other"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Pearl industry @ Pearl industry",
+      "value": 91.7
+     },
+     {
+      "mark": "Other @ Other",
+      "value": 8.3
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must allow viewers to identify Pearl industry as the larger segment and Other as the smaller segment."
+  }
+ ]
+}

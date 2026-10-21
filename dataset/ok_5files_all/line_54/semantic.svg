@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#222222">Case rate per 1,000 people after two doses, <tspan fill="#c24636">Israel</tspan> &amp; <tspan fill="#4e7ab5">United States</tspan></text>
+<text x="640" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-style="italic" fill="#666666">NEJM study on effectiveness of Pfizer/BioNTech vaccine in Israel, Goldberg et al, October 2021, ages 16+</text>
+<text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-style="italic" fill="#666666">Lancet study on effectiveness of Pfizer/BioNTech COVID-19 vaccine in US, Tartof et al, October 2021, ages 16+</text>
+<line x1="180.0" y1="610.0" x2="1120.0" y2="610.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="180.0" y1="220.0" x2="180.0" y2="610.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="180.0" y1="610.0" x2="1120.0" y2="610.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="170.0" y="615.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">0</text>
+<line x1="180.0" y1="545.0" x2="1120.0" y2="545.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="170.0" y="550.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">1</text>
+<line x1="180.0" y1="480.0" x2="1120.0" y2="480.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="170.0" y="485.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">2</text>
+<line x1="180.0" y1="415.0" x2="1120.0" y2="415.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="170.0" y="420.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">3</text>
+<line x1="180.0" y1="350.0" x2="1120.0" y2="350.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="170.0" y="355.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">4</text>
+<line x1="180.0" y1="285.0" x2="1120.0" y2="285.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="170.0" y="290.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">5</text>
+<line x1="180.0" y1="220.0" x2="1120.0" y2="220.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="170.0" y="225.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">6</text>
+<text x="180.0" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">TWO MONTHS</text>
+<text x="415.0" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">THREE MONTHS</text>
+<text x="650.0" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">FOUR MONTHS</text>
+<text x="885.0" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">FIVE MONTHS</text>
+<text x="1120.0" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">SIX MONTHS</text>
+<polyline points="180.0,512.5 415.0,519.0 650.0,460.5 885.0,395.5 1120.0,376.0" fill="none" stroke="#c24636" stroke-width="3.2"/>
+<polyline points="180.0,577.5 415.0,551.5 650.0,486.5 885.0,434.5 1120.0,272.0" fill="none" stroke="#4e7ab5" stroke-width="3.2"/>
+</svg>

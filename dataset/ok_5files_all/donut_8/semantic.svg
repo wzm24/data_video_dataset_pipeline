@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<circle cx="433.0" cy="399.0" r="160.0" fill="none" stroke="#E8E8E8" stroke-width="21.0"/>
+<circle cx="433.0" cy="399.0" r="181.0" fill="none" stroke="#E8E8E8" stroke-width="21.0"/>
+<path d="M 433.0 239.0 A 160.0 160.0 0 1 1 288.2 467.1" fill="none" stroke-width="21.0" stroke-linecap="butt" stroke="#2F5457"/>
+<path d="M 433.0 218.0 A 181.0 181.0 0 1 1 253.4 376.3" fill="none" stroke-width="21.0" stroke-linecap="butt" stroke="#609193"/>
+<text x="227" y="129" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#111111">American voters who support a licensing system</text>
+<text x="227" y="163" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#111111">Quinnipiac University Poll, May 2019</text>
+<text x="411" y="429" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="79" font-weight="700" fill="#111111">77</text>
+<text x="484" y="415" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#111111">%</text>
+<line x1="624" y1="322" x2="748" y2="310" stroke="#575757" stroke-width="2"/>
+<text x="755" y="322" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#575757">Live in a house with a gun</text>
+<line x1="624" y1="350" x2="748" y2="356" stroke="#575757" stroke-width="2"/>
+<text x="755" y="365" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#5D8583">All American voters</text>
+<text x="1261" y="70" text-anchor="end" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="700" fill="#F0F0F0">Vox</text>
+</svg>

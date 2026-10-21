@@ -1,0 +1,125 @@
+{
+ "clip_id": "bar_85",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Orbital period"
+   ],
+   "assertion": {
+    "mark": "Orbital period",
+    "field": "value",
+    "expected": 88.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The value 88 days must be shown for Orbital period."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Rotation period"
+   ],
+   "assertion": {
+    "mark": "Rotation period",
+    "field": "value",
+    "expected": 59.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The value 59 days must be shown for Rotation period."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Orbital period",
+    "mark:Rotation period"
+   ],
+   "assertion": {
+    "greater": "Orbital period",
+    "lesser": "Rotation period",
+    "expected_ratio": 1.4915,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both labeled quantities, 88 days and 59 days, must be visible so the ordering can be compared."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Orbital period",
+    "mark:Rotation period"
+   ],
+   "assertion": {
+    "low": "Rotation period",
+    "low_value": 59.0,
+    "high": "Orbital period",
+    "high_value": 88.0,
+    "delta": 29.0,
+    "ratio": 1.4915,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 88-day and 59-day values must be visible; the 29-day difference may be shown as a derived callout."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Rotation period"
+   ],
+   "assertion": {
+    "segment": "Rotation period",
+    "expected_share": 0.0046,
+    "total_of": "days",
+    "total": 147.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Both period values must be visible; any proportional comparison must be relative to the orbital period."
+  }
+ ]
+}

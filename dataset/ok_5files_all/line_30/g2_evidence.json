@@ -1,0 +1,149 @@
+{
+ "clip_id": "line_30",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 3,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The VW series or mark must stay at or near zero across all years and visibly below GM and Toyota."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:GM @ 2012",
+    "mark:Toyota @ 2012"
+   ],
+   "assertion": {
+    "greater": "GM @ 2012",
+    "lesser": "Toyota @ 2012",
+    "expected_ratio": 13.6838,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "GM's series must be visibly above Toyota's and VW's in most years, with the 2016 exception not contradicted."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Toyota @ 2013",
+    "mark:Toyota @ 2014",
+    "mark:Toyota @ 2015",
+    "mark:Toyota @ 2016",
+    "mark:Toyota @ 2017"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Toyota @ 2013",
+      "value": 0.0035
+     },
+     {
+      "mark": "Toyota @ 2014",
+      "value": 19.9923
+     },
+     {
+      "mark": "Toyota @ 2015",
+      "value": 35.0144
+     },
+     {
+      "mark": "Toyota @ 2016",
+      "value": 39.0073
+     },
+     {
+      "mark": "Toyota @ 2017",
+      "value": 18.9941
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Toyota's series must show a rise to its maximum at 2016 and a decline in 2017."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Toyota @ 2016",
+    "mark:GM @ 2016"
+   ],
+   "assertion": {
+    "greater": "Toyota @ 2016",
+    "lesser": "GM @ 2016",
+    "expected_ratio": 1.393,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Toyota's 2016 point must be visible as higher than GM's 2016 point, and GM's 2016 point should be identifiable as its lowest."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:GM @ 2017"
+   ],
+   "assertion": {
+    "series": "GM",
+    "values": [
+     111.9996
+    ],
+    "threshold_between": [
+     111.9996,
+     111.9996
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "GM's 2017 point must be visibly the highest and should read as exceeding 100%."
+  }
+ ]
+}

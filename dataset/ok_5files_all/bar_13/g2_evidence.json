@@ -1,0 +1,102 @@
+{
+ "clip_id": "bar_13",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 1,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both values (1.000 and 3.200) must be visible as distinct bars, labels, or legend entries; if only one value appears, this unit fails."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1 @ 750.0",
+    "mark:1 @ 750.0"
+   ],
+   "assertion": {
+    "low": "1 @ 750.0",
+    "low_value": 1.0,
+    "high": "1 @ 750.0",
+    "high_value": 3.2,
+    "delta": 2.2,
+    "ratio": 3.2,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A difference/gap annotation, or both values visible with enough labeling to derive 2.200, must be shown."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:1 @ 750.0",
+    "mark:1 @ 750.0"
+   ],
+   "assertion": {
+    "greater": "1 @ 750.0",
+    "lesser": "1 @ 750.0",
+    "expected_ratio": 3.2,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both values must be visible, and a ratio or percent-change annotation (3.2x or 220%) should be shown to make this explicit."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:1 @ 750.0"
+   ],
+   "assertion": {
+    "segment": "1 @ 750.0",
+    "expected_share": 0.0244,
+    "total_of": "unknown",
+    "total": 3.2,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The relative_value 0.0781 must appear as a label or annotation for both series; otherwise this unit is not conveyed."
+  }
+ ]
+}

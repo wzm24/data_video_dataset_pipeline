@@ -1,0 +1,240 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_99",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that wars between democratic nations are rare compared to other state-on-state conflicts.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart separates the conflict breakdown into two categories: other state-on-state wars and wars between democracies.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Other wars",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.78,
+     "note": "category labeled as other state-on-state wars"
+    },
+    {
+     "entity": "Wars between democracies",
+     "x": "1000.0",
+     "field": "relative_value",
+     "value": 0.22,
+     "note": "category labeled as wars between democracies"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Two categories: other wars and wars between democracies",
+    "A breakdown of state-on-state wars into two groups",
+    "Other state-on-state wars vs. wars between democracies"
+   ],
+   "visual_evidence_rule": "Both category labels must be visible: one for other state-on-state wars and one for wars between democracies.",
+   "temporal_anchor": "the general clause about state-against-state wars and democracies fighting each other",
+   "reviewer_question": "Must the video explicitly label both conflict categories, or is a single minority/majority contrast enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Wars between democracies have a relative value/share of 0.22, i.e., about 22%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Wars between democracies",
+     "x": "1000.0",
+     "field": "relative_value",
+     "value": 0.22,
+     "note": "printed relative share"
+    }
+   ],
+   "computation": "0.22 × 100 = 22% when expressed as a percent",
+   "accepted_routes": [
+    "22%",
+    "0.22",
+    "about one-fifth",
+    "just over 20%"
+   ],
+   "visual_evidence_rule": "The wars-between-democracies bar or segment must show 0.22 or 22%, or a length matching 0.22 on a 0-1 scale.",
+   "temporal_anchor": "the clause 'only a minority were fought between democracies'",
+   "reviewer_question": "Should the exact 22% value be required, or does 'minority/rare' suffice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Other state-on-state wars have a relative value/share of 0.78, i.e., about 78%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Other wars",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.78,
+     "note": "printed relative share"
+    }
+   ],
+   "computation": "0.78 × 100 = 78% when expressed as a percent",
+   "accepted_routes": [
+    "78%",
+    "0.78",
+    "nearly four-fifths",
+    "more than three-quarters"
+   ],
+   "visual_evidence_rule": "The other-wars bar or segment must show 0.78 or 78%, or a length matching 0.78 on a 0-1 scale.",
+   "temporal_anchor": "the clause about all state-against-state wars or other state-on-state wars",
+   "reviewer_question": "Should the exact 78% value be required, or can it be left unlabeled as the complement of 22%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Wars between democracies are a minority while other state-on-state wars are the majority: 0.22 is below half and 0.78 is above half.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Wars between democracies",
+     "x": "1000.0",
+     "field": "relative_value",
+     "value": 0.22,
+     "note": "below-half share"
+    },
+    {
+     "entity": "Other wars",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.78,
+     "note": "above-half share"
+    }
+   ],
+   "computation": "0.22 + 0.78 = 1.00; half = 0.50; 0.22 < 0.50 < 0.78",
+   "accepted_routes": [
+    "Only a minority were between democracies",
+    "Other wars were the majority",
+    "Wars between democracies were less than half of the total",
+    "Other wars exceeded the 50% threshold"
+   ],
+   "visual_evidence_rule": "Both shares must be visible or inferable from a normalized 0-1/100% scale so the viewer can see 0.22 below and 0.78 above the halfway point.",
+   "temporal_anchor": "the clause 'only a minority were fought between democracies'",
+   "reviewer_question": "Is the majority/minority threshold claim required in addition to the raw shares?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The other-wars share is about 3.5 times the wars-between-democracies share.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Other wars",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.78,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "Wars between democracies",
+     "x": "1000.0",
+     "field": "relative_value",
+     "value": 0.22,
+     "note": "denominator for ratio"
+    }
+   ],
+   "computation": "0.78 / 0.22 = 3.545..., rounded to about 3.5",
+   "accepted_routes": [
+    "about 3.5 times",
+    "roughly 3.5x",
+    "more than three times",
+    "the other-wars share is about 3.5 times the democratic-wars share"
+   ],
+   "visual_evidence_rule": "Both 0.78 and 0.22 values must be visible or labeled so the ratio can be derived.",
+   "temporal_anchor": "the comparison between other wars and wars between democracies",
+   "reviewer_question": "Should the 3.5x ratio be treated as optional derived context or required comparative framing?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The gap between the shares is 0.56, i.e., 56 percentage points: 0.78 - 0.22 = 0.56.",
+  "The two shares sum to 1.00, so together they make the full state-on-state war breakdown.",
+  "The other-wars share is about 28% of the democratic-wars share? No: 0.22 / 0.78 = 0.282..., so this is not an intended comparison."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute numbers of wars or absolute counts, because the table gives only relative shares.",
+  "Since 1900 as a table-backed time period, because the table does not include a time variable.",
+  "Democracies never fight each other or have zero wars, because the table gives 0.22, not zero.",
+  "Causal claims that democracy causes peace or prevents war.",
+  "Extrapolation to all conflicts, all countries, or all time periods beyond the shown breakdown."
+ ],
+ "notes": "The values 0.22 and 0.78 are treated as shares of the state-on-state-war breakdown because they sum to 1.00; exact percentages are derived by multiplying by 100. The ratio and gap units are derived comparisons from those same two table values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.04
+ },
+ "draft_cost": {
+  "sec": 40.0,
+  "usage": {
+   "prompt_tokens": 729,
+   "completion_tokens": 9456,
+   "total_tokens": 10185,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7631
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 345
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

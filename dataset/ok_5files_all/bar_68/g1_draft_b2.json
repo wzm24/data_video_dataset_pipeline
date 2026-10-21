@@ -1,0 +1,337 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_68",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the decline in pirate attacks from 2013 to 2018, supporting the assertion that anti-piracy solutions are effective at reducing incidents.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "From 2013 to 2018 the table value decreases in every consecutive year, so the series is monotonically descending: 1.000, 0.952, 0.903, 0.759, 0.711, 0.550.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 1.0,
+     "note": "series start"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 0.952,
+     "note": "lower than 2013"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 0.903,
+     "note": "lower than 2014"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 0.759,
+     "note": "lower than 2015"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 0.711,
+     "note": "lower than 2016"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.55,
+     "note": "series end, lowest value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Pirate attacks decline every year from 2013 through 2018.",
+    "The 2013-2018 series is monotonically lower year by year: 1.000, 0.952, 0.903, 0.759, 0.711, 0.550.",
+    "Each later bar is lower than the previous one, ending at 0.550 in 2018."
+   ],
+   "visual_evidence_rule": "Six year bars must be shown left-to-right in chronological order, with heights descending from 2013 to 2018; the year labels and values should be visible or available.",
+   "temporal_anchor": "the narration clause establishing the 2013-to-2018 decline",
+   "reviewer_question": "Must the video show the full year-by-year ordering, or is the 2013-vs-2018 endpoint enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The value falls from 1.000 in 2013 to 0.550 in 2018, a decline of 0.450 value units, equivalent to a 45.0% drop relative to the 2013 value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 1.0,
+     "note": "start value"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.55,
+     "note": "end value"
+    }
+   ],
+   "computation": "(1.000 - 0.550) = 0.450; (1.000 - 0.550) / 1.000 = 0.450 = 45.0%",
+   "accepted_routes": [
+    "Attacks fell 45% from 2013 to 2018.",
+    "The 2018 value is 0.450 lower than the 2013 value.",
+    "2018 is at 55.0% of the 2013 level, down 45.0%.",
+    "A 0.450-unit drop occurred between the 2013 and 2018 endpoints."
+   ],
+   "visual_evidence_rule": "The 2013 and 2018 bars/values must be visible or labeled; any annotation stating the total drop must correctly use 0.450 or 45.0%.",
+   "temporal_anchor": "the clause stating the decline from 2013 to 2018",
+   "reviewer_question": "Is the exact total percentage/point change required, or only the direction of decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The start endpoint is 2013 with value 1.000 and relative_value 0.5278; the end endpoint is 2018 with value 0.550 and relative_value 0.2903, making 2018 the lowest endpoint.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 1.0,
+     "note": "start value"
+    },
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.5278,
+     "note": "start relative_value"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.55,
+     "note": "end value"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "relative_value",
+     "value": 0.2903,
+     "note": "end relative_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "2013 starts at 1.000 and 2018 ends at 0.550.",
+    "The first bar is 1.000 for 2013; the final bar is 0.550 for 2018.",
+    "2018's endpoint value is 0.550, with relative_value 0.2903.",
+    "The series runs from 1.000 in 2013 down to 0.550 in 2018."
+   ],
+   "visual_evidence_rule": "The first and last bars must be visually identifiable and labeled 2013 and 2018 with values 1.000 and 0.550; relative_value may be shown but is optional.",
+   "temporal_anchor": "the narration phrase 'from 2013 to 2018'",
+   "reviewer_question": "Are both endpoint labels required, or is one endpoint plus the trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The largest consecutive-year decrease is from 2017 to 2018: 0.711 to 0.550, a drop of 0.161; the next largest is 2015 to 2016: 0.903 to 0.759, a drop of 0.144.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 0.711,
+     "note": "pre-drop year for largest YoY decline"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.55,
+     "note": "post-drop year for largest YoY decline"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 0.903,
+     "note": "pre-drop year for second-largest YoY decline"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 0.759,
+     "note": "post-drop year for second-largest YoY decline"
+    }
+   ],
+   "computation": "2017→2018: 0.711 - 0.550 = 0.161; 2015→2016: 0.903 - 0.759 = 0.144; 0.161 > 0.144",
+   "accepted_routes": [
+    "The sharpest one-year drop is 2017 to 2018, down 0.161.",
+    "2017→2018 falls by 0.161, the largest annual decrease in the series.",
+    "The 2015→2016 drop is also large, 0.144, but smaller than 2017→2018's 0.161."
+   ],
+   "visual_evidence_rule": "If highlighted, the 2017 and 2018 bars must be visible; any 'largest drop' label must match 0.161.",
+   "temporal_anchor": "the part of the narration discussing the decline's progression; optional detail within the decline clause",
+   "reviewer_question": "Should the video call out the steepest annual drop, or keep only the overall 2013-2018 decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The average value for 2016-2018, about 0.673, is lower than the average for 2013-2015, about 0.952, by about 0.278 value units, roughly a 29.2% drop relative to the earlier period average.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 1.0,
+     "note": "2013-2015 average component"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 0.952,
+     "note": "2013-2015 average component"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 0.903,
+     "note": "2013-2015 average component"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 0.759,
+     "note": "2016-2018 average component"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 0.711,
+     "note": "2016-2018 average component"
+    },
+    {
+     "entity": "2018",
+     "x": "2018",
+     "field": "value",
+     "value": 0.55,
+     "note": "2016-2018 average component"
+    }
+   ],
+   "computation": "2013-2015 average = (1.000 + 0.952 + 0.903) / 3 = 0.9516667 ≈ 0.952; 2016-2018 average = (0.759 + 0.711 + 0.550) / 3 = 0.6733333 ≈ 0.673; difference = 0.9516667 - 0.6733333 = 0.2783333; relative drop = 0.2783333 / 0.9516667 ≈ 0.2925 = 29.2%",
+   "accepted_routes": [
+    "The 2016-2018 average (about 0.673) is about 0.278 lower than the 2013-2015 average (about 0.952).",
+    "The later three-year period is down about 29% from the earlier three-year period.",
+    "Average value drops from roughly 0.952 in 2013-2015 to roughly 0.673 in 2016-2018."
+   ],
+   "visual_evidence_rule": "If shown, the chart or annotation must indicate the two 3-year periods and the computed averages; not just two arbitrary bars.",
+   "temporal_anchor": "optional comparison clause during the overall decline explanation",
+   "reviewer_question": "Is a period-average comparison worth including, or is it extra detail beyond the intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "relative_value also declines from 0.5278 in 2013 to 0.2903 in 2018, a drop of 0.2375, about 45.0% relative to the 2013 relative_value.",
+  "2016 is a notable break: value falls to 0.759 from 0.903 in 2015, a drop of 0.144.",
+  "2014 and 2015 values are close at 0.952 and 0.903, while the larger declines occur in 2016 and 2018."
+ ],
+ "unsupported_to_avoid": [
+  "Claims that anti-piracy solutions or ransom payments caused the 2013-2018 decline; the table contains no causal variables.",
+  "Extrapolating beyond 2018 or predicting future pirate attacks.",
+  "Assigning a share/denominator to relative_value unless explicitly given; do not call 0.2903 '29.03% of all pirate attacks'.",
+  "Using the wrong denominator for the total decline, such as 0.450/0.550 or 45% of 2018 rather than relative to 2013.",
+  "Values not in the table, such as 2019 figures, regional breakdowns, or absolute incident counts.",
+  "Claiming piracy was solved or reduced to zero."
+ ],
+ "notes": "The core required story is the monotonically declining 2013-2018 series and its 2013-to-2018 endpoint change. Causal effectiveness of anti-piracy solutions is not established by the table and should be treated as narration/context, not a data unit.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 37.2,
+  "usage": {
+   "prompt_tokens": 775,
+   "completion_tokens": 9758,
+   "total_tokens": 10533,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6822
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 519
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,312 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_35",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the stock market is growing faster than wages, illustrating how capital returns outpace labor income and contribute to wealth concentration.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The S&P 500 grows substantially more than wages from 2007 to 2014: the stock series rises by 54.9917 units (from 150.0000 to 204.9917), while wages rise by 20.9985 units (from 95.0083 to 116.0068), so the S&P 500 gain is about 2.6 times the wage gain.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "S&P 500",
+     "x": "2007",
+     "field": "value",
+     "value": 150.0,
+     "note": "start of S&P 500 series"
+    },
+    {
+     "entity": "S&P 500",
+     "x": "2014",
+     "field": "value",
+     "value": 204.9917,
+     "note": "end of S&P 500 series"
+    },
+    {
+     "entity": "Wages",
+     "x": "2007",
+     "field": "value",
+     "value": 95.0083,
+     "note": "start of wage series"
+    },
+    {
+     "entity": "Wages",
+     "x": "2014",
+     "field": "value",
+     "value": 116.0068,
+     "note": "end of wage series"
+    }
+   ],
+   "computation": "S&P change = 204.9917 - 150.0000 = 54.9917; Wages change = 116.0068 - 95.0083 = 20.9985; ratio = 54.9917 / 20.9985 ≈ 2.62",
+   "accepted_routes": [
+    "From 2007 to 2014, the S&P 500 gained about 55 units while wages gained about 21 units.",
+    "The S&P 500 rose by roughly 2.6 times as much as wages over the period.",
+    "Stock market growth from 2007 to 2014 was much faster than wage growth."
+   ],
+   "visual_evidence_rule": "Both series must be visible from 2007 to 2014, and the S&P 500 trajectory must end visibly farther above its starting level than the wage trajectory ends above its starting level.",
+   "temporal_anchor": "The narration clause about the stock market growing faster than wages.",
+   "reviewer_question": "Should the video explicitly compare the two end-to-end changes, rather than only showing both trends?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The S&P 500's lead over wages widens from 2007 to 2014: the gap is 54.9917 units in 2007 (150.0000 - 95.0083) and 88.9849 units in 2014 (204.9917 - 116.0068), an increase of 33.9932 units.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "S&P 500",
+     "x": "2007",
+     "field": "value",
+     "value": 150.0,
+     "note": "2007 S&P 500 level"
+    },
+    {
+     "entity": "Wages",
+     "x": "2007",
+     "field": "value",
+     "value": 95.0083,
+     "note": "2007 wage level"
+    },
+    {
+     "entity": "S&P 500",
+     "x": "2014",
+     "field": "value",
+     "value": 204.9917,
+     "note": "2014 S&P 500 level"
+    },
+    {
+     "entity": "Wages",
+     "x": "2014",
+     "field": "value",
+     "value": 116.0068,
+     "note": "2014 wage level"
+    }
+   ],
+   "computation": "gap_2007 = 150.0000 - 95.0083 = 54.9917; gap_2014 = 204.9917 - 116.0068 = 88.9849; gap_change = 88.9849 - 54.9917 = 33.9932",
+   "accepted_routes": [
+    "The S&P 500's lead over wages grew from about 55 units in 2007 to about 89 units in 2014.",
+    "The gap between the two series widened by about 34 units over the period.",
+    "In 2014 the S&P 500 was farther ahead of wages than it was in 2007."
+   ],
+   "visual_evidence_rule": "The separation between the S&P 500 series and the wage series must be visibly larger at 2014 than at 2007.",
+   "temporal_anchor": "The narration clause about capital returns outpacing labor income.",
+   "reviewer_question": "Is the widening gap an obligatory takeaway, or is it enough to show faster S&P growth?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 2014 endpoint values are 204.9917 for the S&P 500 and 116.0068 for wages, making the S&P 500 endpoint about 1.77 times the wage endpoint.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "S&P 500",
+     "x": "2014",
+     "field": "value",
+     "value": 204.9917,
+     "note": "final S&P 500 value"
+    },
+    {
+     "entity": "Wages",
+     "x": "2014",
+     "field": "value",
+     "value": 116.0068,
+     "note": "final wage value"
+    }
+   ],
+   "computation": "ratio = 204.9917 / 116.0068 ≈ 1.77",
+   "accepted_routes": [
+    "In 2014 the S&P 500 finished at about 205 while wages finished at about 116.",
+    "The final S&P 500 level is roughly 1.77 times the final wage level.",
+    "At the end of the period, the stock index stands far higher than wages."
+   ],
+   "visual_evidence_rule": "The final 2014 values for both series must be visible, and the S&P 500 final level must be clearly above the wage final level.",
+   "temporal_anchor": "The narration clause about people with wealth getting wealthier.",
+   "reviewer_question": "Must the 2014 endpoint comparison be explicitly stated, or is it implied by the trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The S&P 500 falls below wages in 2009 — S&P 500 at 90.0174 versus wages at 97.9907 — but by 2011 it is above wages again — 145.0091 versus 105.9945.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "S&P 500",
+     "x": "2009",
+     "field": "value",
+     "value": 90.0174,
+     "note": "2009 S&P 500 level"
+    },
+    {
+     "entity": "Wages",
+     "x": "2009",
+     "field": "value",
+     "value": 97.9907,
+     "note": "2009 wage level"
+    },
+    {
+     "entity": "S&P 500",
+     "x": "2011",
+     "field": "value",
+     "value": 145.0091,
+     "note": "2011 S&P 500 level"
+    },
+    {
+     "entity": "Wages",
+     "x": "2011",
+     "field": "value",
+     "value": 105.9945,
+     "note": "2011 wage level"
+    }
+   ],
+   "computation": "2009 gap = 97.9907 - 90.0174 = 7.9733 (wages above S&P 500); 2011 gap = 145.0091 - 105.9945 = 39.0146 (S&P 500 above wages)",
+   "accepted_routes": [
+    "In 2009 the S&P 500 dropped below wages before recovering above them by 2011.",
+    "The stock index temporarily fell behind wages around 2009.",
+    "After a 2009 dip below wages, the S&P 500 reclaimed a lead by 2011."
+   ],
+   "visual_evidence_rule": "The two series must visibly cross or exchange order around 2009–2011, with the S&P 500 below wages in 2009 and above wages in 2011.",
+   "temporal_anchor": "The narration clause about capital returns outpacing labor income, if the video includes the crash and recovery.",
+   "reviewer_question": "Should the temporary 2009 S&P 500 shortfall be included, or does it distract from the main growth comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Wages rise gradually across the period from 95.0083 in 2007 to 116.0068 in 2014, while the S&P 500 is more volatile: it drops from 150.0000 in 2007 to 90.0174 in 2009 and then climbs to 204.9917 in 2014.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Wages",
+     "x": "2007",
+     "field": "value",
+     "value": 95.0083,
+     "note": "2007 wage level"
+    },
+    {
+     "entity": "Wages",
+     "x": "2014",
+     "field": "value",
+     "value": 116.0068,
+     "note": "2014 wage level"
+    },
+    {
+     "entity": "S&P 500",
+     "x": "2007",
+     "field": "value",
+     "value": 150.0,
+     "note": "2007 S&P 500 level"
+    },
+    {
+     "entity": "S&P 500",
+     "x": "2009",
+     "field": "value",
+     "value": 90.0174,
+     "note": "2009 S&P 500 low"
+    },
+    {
+     "entity": "S&P 500",
+     "x": "2014",
+     "field": "value",
+     "value": 204.9917,
+     "note": "2014 S&P 500 level"
+    }
+   ],
+   "computation": "Wage change = 116.0068 - 95.0083 = 20.9985; S&P 500 drop 2007–2009 = 150.0000 - 90.0174 = 59.9826; S&P 500 recovery 2009–2014 = 204.9917 - 90.0174 = 114.9743",
+   "accepted_routes": [
+    "Wages climb steadily while the S&P 500 first drops sharply and then surges.",
+    "The wage trend is smoother and slower; the stock trend is more volatile but ends much higher.",
+    "The S&P 500 has a large 2009 dip before recovering to a much higher 2014 level, whereas wages mostly edge upward."
+   ],
+   "visual_evidence_rule": "The wage series must appear as a gradual upward path, while the S&P 500 series must show a sharp 2009 low followed by a strong recovery to 2014.",
+   "temporal_anchor": "The narration clause about wealth growing unless interrupted by war or tax, if the video contrasts volatility with steady wages.",
+   "reviewer_question": "Is the volatility contrast an obligatory part of the message, or optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The S&P 500 2009 value (90.0174) is its lowest value in the table.",
+  "In the labeled years, wages never drop below their 2007 value; their lowest labeled post-2007 value is 97.9907 in 2009."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state currency or percent amounts for either series because the table's unit column is blank; use table units or ratios instead.",
+  "Do not claim wealth-concentration statistics, tax effects, or war effects; the table has no such data.",
+  "Do not extrapolate beyond 2014 or infer an unlabeled 2008 wage value.",
+  "Do not treat relative_value as a percentage or as an absolute amount.",
+  "Do not claim wages fell over the labeled period; they rise from 95.0083 in 2007 to 116.0068 in 2014."
+ ],
+ "notes": "All cited numbers are from the value column; because the unit column is blank, phrasing uses table units and ratios rather than money or percent. The main required contrast is faster S&P 500 growth and a widening lead over wages; crash/recovery and volatility contrast are optional context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 53.5,
+  "usage": {
+   "prompt_tokens": 3172,
+   "completion_tokens": 13759,
+   "total_tokens": 16931,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10968
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 2660
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

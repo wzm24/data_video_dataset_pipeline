@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_53",
+ "intent_en": "To demonstrate that lower-income individuals pay a larger share of their income in consumption taxes compared to higher-income individuals.",
+ "previous_intent": "To demonstrate that consumption taxes take a significantly larger portion of income for the poorest individuals compared to the richest, highlighting the regressive nature of such taxes.",
+ "narration_support": "poor people pay a much larger portion",
+ "chart_support": "Bar chart showing consumption taxes as a percentage of income, with bars decreasing in height from the poorest to the richest individuals",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states that poor people pay a larger portion, which is visually confirmed by the bar chart showing the highest tax percentages for the 'poorest' group on the left and the lowest for the 'richest' on the right.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,312 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_14",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the birth rate in Sub-Saharan Africa remains significantly higher than in other global regions.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Sub-Saharan Africa has the highest birth-rate value among the four regions shown: 4.7 versus East Asia 1.8, North America 1.7, and European Union 1.6.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sub-S. Africa",
+     "x": "",
+     "field": "value",
+     "value": 4.7,
+     "note": "highest value in the table"
+    },
+    {
+     "entity": "East Asia",
+     "x": "",
+     "field": "value",
+     "value": 1.8,
+     "note": "lower than Sub-Saharan Africa"
+    },
+    {
+     "entity": "North America",
+     "x": "",
+     "field": "value",
+     "value": 1.7,
+     "note": "lower than Sub-Saharan Africa"
+    },
+    {
+     "entity": "European Union",
+     "x": "",
+     "field": "value",
+     "value": 1.6,
+     "note": "lower than Sub-Saharan Africa"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Sub-Saharan Africa is the highest of the four regions",
+    "Sub-Saharan Africa tops the list at 4.7",
+    "Sub-Saharan Africa's value is greater than each other region's value"
+   ],
+   "visual_evidence_rule": "Sub-Saharan Africa's encoded value must be visibly the largest among the four regions.",
+   "temporal_anchor": "the 'it's still much higher than in the rest of the world' clause",
+   "reviewer_question": "Does the video need to explicitly state that Sub-Saharan Africa is highest, or is the visible maximum sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Sub-Saharan Africa's value is more than double every other shown region: about 2.6 times East Asia (4.7 / 1.8), 2.8 times North America (4.7 / 1.7), and 2.9 times European Union (4.7 / 1.6).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sub-S. Africa",
+     "x": "",
+     "field": "value",
+     "value": 4.7,
+     "note": "numerator in ratio comparisons"
+    },
+    {
+     "entity": "East Asia",
+     "x": "",
+     "field": "value",
+     "value": 1.8,
+     "note": "4.7 / 1.8 ≈ 2.6"
+    },
+    {
+     "entity": "North America",
+     "x": "",
+     "field": "value",
+     "value": 1.7,
+     "note": "4.7 / 1.7 ≈ 2.8"
+    },
+    {
+     "entity": "European Union",
+     "x": "",
+     "field": "value",
+     "value": 1.6,
+     "note": "4.7 / 1.6 ≈ 2.9"
+    }
+   ],
+   "computation": "4.7 / 1.8 ≈ 2.6; 4.7 / 1.7 ≈ 2.8; 4.7 / 1.6 ≈ 2.9",
+   "accepted_routes": [
+    "more than twice each other region",
+    "roughly 2.6 to 2.9 times each other region",
+    "at least 2.6 times the next highest region"
+   ],
+   "visual_evidence_rule": "Sub-Saharan Africa's encoded value must be visibly more than twice as large as each of the other three values.",
+   "temporal_anchor": "the 'much higher than in the rest of the world' clause",
+   "reviewer_question": "Is the 'more than double' ratio required, or is a simpler 'higher than' comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The gap between Sub-Saharan Africa and each other region is 2.9 to 3.1 value units: 4.7 − 1.8 = 2.9 vs East Asia, 4.7 − 1.7 = 3.0 vs North America, and 4.7 − 1.6 = 3.1 vs European Union.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Sub-S. Africa",
+     "x": "",
+     "field": "value",
+     "value": 4.7,
+     "note": "minuend in difference calculations"
+    },
+    {
+     "entity": "East Asia",
+     "x": "",
+     "field": "value",
+     "value": 1.8,
+     "note": "4.7 − 1.8 = 2.9"
+    },
+    {
+     "entity": "North America",
+     "x": "",
+     "field": "value",
+     "value": 1.7,
+     "note": "4.7 − 1.7 = 3.0"
+    },
+    {
+     "entity": "European Union",
+     "x": "",
+     "field": "value",
+     "value": 1.6,
+     "note": "4.7 − 1.6 = 3.1"
+    }
+   ],
+   "computation": "4.7 - 1.8 = 2.9; 4.7 - 1.7 = 3.0; 4.7 - 1.6 = 3.1",
+   "accepted_routes": [
+    "Sub-Saharan Africa leads East Asia by 2.9, North America by 3.0, and the European Union by 3.1 value units",
+    "the gap is about 3 value units in each case",
+    "Sub-Saharan Africa is about 3 units above each other region"
+   ],
+   "visual_evidence_rule": "The gaps between Sub-Saharan Africa and each other region must be visible or labeled.",
+   "temporal_anchor": "the 'much higher than in the rest of the world' clause",
+   "reviewer_question": "Must the video quantify the gap, or is the ratio/highest-value statement sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among the non-Sub-Saharan regions, the order is East Asia (1.8), then North America (1.7), then European Union (1.6).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "East Asia",
+     "x": "",
+     "field": "value",
+     "value": 1.8,
+     "note": "highest of the non-Sub-Saharan regions"
+    },
+    {
+     "entity": "North America",
+     "x": "",
+     "field": "value",
+     "value": 1.7,
+     "note": "second of the non-Sub-Saharan regions"
+    },
+    {
+     "entity": "European Union",
+     "x": "",
+     "field": "value",
+     "value": 1.6,
+     "note": "lowest of the non-Sub-Saharan regions"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "East Asia is the highest of the other three regions",
+    "the other regions rank East Asia > North America > European Union",
+    "the non-Sub-Saharan values descend 1.8, 1.7, 1.6"
+   ],
+   "visual_evidence_rule": "The three non-Sub-Saharan values must be visibly ordered East Asia highest, North America next, European Union lowest.",
+   "temporal_anchor": "optional, if the narration expands on 'the rest of the world'",
+   "reviewer_question": "Should the video explicitly rank the three non-Sub-Saharan regions, or is only the Sub-Saharan Africa comparison needed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The three non-Sub-Saharan regions are close together, spanning only 0.2 value units (East Asia 1.8 minus European Union 1.6 = 0.2), while Sub-Saharan Africa is 4.7.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "East Asia",
+     "x": "",
+     "field": "value",
+     "value": 1.8,
+     "note": "highest of the non-Sub-Saharan cluster"
+    },
+    {
+     "entity": "North America",
+     "x": "",
+     "field": "value",
+     "value": 1.7,
+     "note": "inside the non-Sub-Saharan cluster"
+    },
+    {
+     "entity": "European Union",
+     "x": "",
+     "field": "value",
+     "value": 1.6,
+     "note": "lowest of the non-Sub-Saharan cluster"
+    },
+    {
+     "entity": "Sub-S. Africa",
+     "x": "",
+     "field": "value",
+     "value": 4.7,
+     "note": "far above the non-Sub-Saharan cluster"
+    }
+   ],
+   "computation": "1.8 - 1.6 = 0.2",
+   "accepted_routes": [
+    "the other three regions are clustered within 0.2 of each other",
+    "East Asia, North America, and European Union are all close (1.6–1.8)",
+    "only the European Union-to-East Asia span is 0.2"
+   ],
+   "visual_evidence_rule": "The three non-Sub-Saharan encoded values must appear close together compared with the much larger Sub-Saharan Africa value.",
+   "temporal_anchor": "the 'rest of the world' clause",
+   "reviewer_question": "Is it important to convey that the other regions cluster tightly, or can they be shown as separate lower values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Sub-Saharan Africa's normalized relative_value is 0.3672, the highest relative_value in the table.",
+  "The three non-Sub-Saharan values are all below the Sub-Saharan Africa value of 4.7."
+ ],
+ "unsupported_to_avoid": [
+  "Any claim that birth rate has slowed over recent decades, because the table has no time dimension.",
+  "Any specific unit such as births per woman or percent per year, because the unit column is blank.",
+  "Treating relative_value 0.3672 as 36.72%.",
+  "Causal claims explaining why Sub-Saharan Africa's value is higher.",
+  "Comparisons to regions or entities not listed in the table."
+ ],
+ "notes": "The table supports cross-sectional comparison only; no time trend is available. The required core is Sub-Saharan Africa's maximum/dominance, with ratio and difference as alternative ways to express 'significantly higher'.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 41.4,
+  "usage": {
+   "prompt_tokens": 1010,
+   "completion_tokens": 9843,
+   "total_tokens": 10853,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7539
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 498
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

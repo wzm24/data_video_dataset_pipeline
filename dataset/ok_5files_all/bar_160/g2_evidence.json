@@ -1,0 +1,133 @@
+{
+ "clip_id": "bar_160",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 8,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Labels or identifiers for the compared entities must be visible, including USA and multiple non-US contexts/OECD."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:DEU @ DEU",
+    "mark:USA @ USA"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "DEU @ DEU",
+      "value": 0.6667
+     },
+     {
+      "mark": "USA @ USA",
+      "value": 0.4333
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The ordering must visibly place DEU at or near the top and USA at the bottom."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:NZL @ NZL",
+    "mark:USA @ USA"
+   ],
+   "assertion": {
+    "greater": "NZL @ NZL",
+    "lesser": "USA @ USA",
+    "expected_ratio": 1.354,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The USA mark must be visibly lower than every other listed entity, including NZL and OECD."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:USA @ USA",
+    "mark:OECD @ OECD"
+   ],
+   "assertion": {
+    "low": "USA @ USA",
+    "low_value": 0.4333,
+    "high": "OECD @ OECD",
+    "high_value": 0.5867,
+    "delta": 0.1534,
+    "ratio": 1.354,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A comparison or gap annotation between USA and OECD must be visible, or the two values must be directly comparable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:NZL @ NZL",
+    "mark:OECD @ OECD"
+   ],
+   "assertion": {
+    "greater": "NZL @ NZL",
+    "lesser": "OECD @ OECD",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The non-US entities must visibly sit in a higher band above the USA."
+  }
+ ]
+}

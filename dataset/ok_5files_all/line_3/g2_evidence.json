@@ -1,0 +1,135 @@
+{
+ "clip_id": "line_3",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:top 1% @ 1980",
+    "mark:top 1% @ 2010"
+   ],
+   "assertion": {
+    "low": "top 1% @ 1980",
+    "low_value": 16.0,
+    "high": "top 1% @ 2010",
+    "high_value": 21.0,
+    "delta": 5.0,
+    "ratio": 1.3125,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The top 1% series must visibly start near 16% and end near 21% across the period."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:bottom 50% @ 1980",
+    "mark:bottom 50% @ 2010"
+   ],
+   "assertion": {
+    "low": "bottom 50% @ 1980",
+    "low_value": 8.0,
+    "high": "bottom 50% @ 2010",
+    "high_value": 9.5,
+    "delta": 1.5,
+    "ratio": 1.1875,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bottom 50% series must visibly start near 8% and end near 9.5%, remaining far below the top 1% series."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:top 1% @ 1980",
+    "mark:bottom 50% @ 1980",
+    "mark:top 1% @ 2010",
+    "mark:bottom 50% @ 2010"
+   ],
+   "assertion": {
+    "low": "bottom 50% @ 1980",
+    "low_value": 8.0,
+    "high": "top 1% @ 2010",
+    "high_value": 21.0,
+    "delta": 13.0,
+    "ratio": 2.625,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The numeric difference between the top 1% and bottom 50% values must visibly increase from 8 points in 1980 to 11.5 points in 2010."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:top 1% @ 1980",
+    "mark:bottom 50% @ 1980"
+   ],
+   "assertion": {
+    "greater": "top 1% @ 1980",
+    "lesser": "bottom 50% @ 1980",
+    "expected_ratio": 2.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The top 1% series must visibly remain more than twice the bottom 50% series at both 1980 and 2010."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series top 1%)"
+   ],
+   "assertion": {
+    "mark": "top 1% @ 2010",
+    "extreme": "min",
+    "expected": 21.0,
+    "compared_set": "top 1%",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The top 1% series must visibly show a mid-series high near 22.5% that is above the 2010 endpoint of 21.0%."
+  }
+ ]
+}

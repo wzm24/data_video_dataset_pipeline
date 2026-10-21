@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f8f6f1"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Average voter registration in Southern states, 1963</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="160.0" y1="600.0" x2="1220.0" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="160.0" y1="140.0" x2="160.0" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="152.0" y1="600.0" x2="160.0" y2="600.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="144.0" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">0%</text>
+<line data-role="tick" x1="152.0" y1="370.0" x2="160.0" y2="370.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="144.0" y="376.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">50%</text>
+<line data-role="tick" x1="152.0" y1="140.0" x2="160.0" y2="140.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="144.0" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">100%</text>
+<g id="entity-white" data-role="entity" data-entity-id="white" data-label="White">
+<rect id="white-registered-bar" data-role="bar" data-entity-id="white-registered" data-value="74" x="360.0" y="259.6" width="240.0" height="340.4" fill="#4A9A9A" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<rect id="white-unregistered-bar" data-role="bar" data-entity-id="white-unregistered" data-value="26" x="360.0" y="140.0" width="240.0" height="119.6" fill="#d9d9d9" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="white-label" data-role="category-label" data-entity-id="white" x="480.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">White</text>
+</g>
+<g id="entity-nonwhite" data-role="entity" data-entity-id="nonwhite" data-label="Nonwhite">
+<rect id="nonwhite-registered-bar" data-role="bar" data-entity-id="nonwhite-registered" data-value="40" x="700.0" y="416.0" width="240.0" height="184.0" fill="#C65B4E" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<rect id="nonwhite-unregistered-bar" data-role="bar" data-entity-id="nonwhite-unregistered" data-value="60" x="700.0" y="140.0" width="240.0" height="276.0" fill="#E8B84B" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="nonwhite-unregistered-label" data-role="segment-label" data-entity-id="nonwhite-unregistered" x="820.0" y="286.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#3d2f00">Couldn't vote</text>
+<text id="nonwhite-label" data-role="category-label" data-entity-id="nonwhite" x="820.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">Nonwhite</text>
+</g>
+</g>
+</svg>

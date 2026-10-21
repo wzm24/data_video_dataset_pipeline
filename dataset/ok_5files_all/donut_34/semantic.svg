@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#333a45"/>
+<text x="1220" y="60" text-anchor="end" font-family="Georgia, serif" font-size="38" font-style="italic" fill="#e3e6ea">Vox</text>
+<path d="M 430.0 160.0 A 230.0 230.0 0 1 1 211.3 318.9" fill="none" stroke="#6b9999" stroke-width="48" stroke-linecap="round"/>
+<path d="M 216.7 303.8 A 230.0 230.0 0 0 1 414.0 160.6" fill="none" stroke="#c4c0b6" stroke-width="48" stroke-linecap="round"/>
+<rect x="560" y="210" width="640" height="150" rx="10" fill="#2b2f36"/>
+<text x="600" y="270" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Americans bothered that some wealthy</text>
+<text x="600" y="320" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">don’t pay their fair share of taxes</text>
+<text x="600" y="380" font-family="Arial, sans-serif" font-size="22" font-style="italic" fill="#c9d1dd">Pew Research Center, 2021</text>
+<rect x="700" y="600" width="150" height="64" rx="12" fill="#5d8a8a"/>
+<text x="775" y="643" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#2c3539">80%</text>
+</svg>

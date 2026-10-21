@@ -1,0 +1,117 @@
+{
+ "clip_id": "bar_15",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2016-17 @ 480.0"
+   ],
+   "assertion": {
+    "mark": "2016-17 @ 480.0",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both period bars/endpoints are visible with their numeric labels 1.0 and 1.4 (or equivalent table units)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:2016-17 @ 480.0",
+    "mark:2017-18 @ 800.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "2016-17 @ 480.0",
+      "value": 1.0
+     },
+     {
+      "mark": "2017-18 @ 800.0",
+      "value": 1.4
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The 2017-18 bar/endpoint is visibly taller/higher than the 2016-17 bar/endpoint."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2016-17 @ 480.0",
+    "mark:2017-18 @ 800.0"
+   ],
+   "assertion": {
+    "low": "2016-17 @ 480.0",
+    "low_value": 1.0,
+    "high": "2017-18 @ 800.0",
+    "high_value": 1.4,
+    "delta": 0.4,
+    "ratio": 1.4,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A change annotation or label shows +0.4 and/or +40% between the two bars."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:2016-17 @ 480.0",
+    "mark:2017-18 @ 800.0"
+   ],
+   "assertion": {
+    "series": "2016-17",
+    "values": [
+     1.0,
+     1.4
+    ],
+    "threshold_between": [
+     1.0,
+     1.4
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "An annotation or threshold marker calls out that the rise is more than one third."
+  }
+ ]
+}

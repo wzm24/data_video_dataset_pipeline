@@ -1,0 +1,320 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_24",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the reduction in road casualties in Britain has primarily benefited car drivers, while cyclists have not experienced similar safety improvements and continue to face significant danger.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Car drivers' value rises from 85.0087 at the first point to 109.9826 at the last point (relative_value 0.5313 to 0.6874).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "car drivers",
+     "x": "120.0",
+     "field": "value",
+     "value": 85.0087,
+     "note": "first data point"
+    },
+    {
+     "entity": "car drivers",
+     "x": "1220.0",
+     "field": "value",
+     "value": 109.9826,
+     "note": "last data point"
+    },
+    {
+     "entity": "car drivers",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.5313,
+     "note": "first data point relative"
+    },
+    {
+     "entity": "car drivers",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.6874,
+     "note": "last data point relative"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Car drivers' value increases across the series",
+    "Car drivers start at 85.0087 and end at 109.9826",
+    "Car drivers' relative value goes from 0.5313 to 0.6874"
+   ],
+   "visual_evidence_rule": "The car drivers line must be visible rising from its first to last point.",
+   "temporal_anchor": "the clause about the bulk of the safety benefit being felt by people in cars",
+   "reviewer_question": "Must the video show car drivers' value increasing?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Cyclists' value falls from 142.9913 at the first point to 61.0087 at the last point (relative_value 0.8937 to 0.3813).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "cyclists",
+     "x": "120.0",
+     "field": "value",
+     "value": 142.9913,
+     "note": "first data point"
+    },
+    {
+     "entity": "cyclists",
+     "x": "1220.0",
+     "field": "value",
+     "value": 61.0087,
+     "note": "last data point"
+    },
+    {
+     "entity": "cyclists",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.8937,
+     "note": "first data point relative"
+    },
+    {
+     "entity": "cyclists",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.3813,
+     "note": "last data point relative"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cyclists' value decreases across the series",
+    "Cyclists start at 142.9913 and end at 61.0087",
+    "Cyclists' relative value drops from 0.8937 to 0.3813"
+   ],
+   "visual_evidence_rule": "The cyclists line must be visible falling from its first to last point.",
+   "temporal_anchor": "the clause about cyclists not having similar safety improvements",
+   "reviewer_question": "Must the video show cyclists' value declining?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the first point, cyclists have a higher value than car drivers (142.9913 vs 85.0087; relative_value 0.8937 vs 0.5313).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "cyclists",
+     "x": "120.0",
+     "field": "value",
+     "value": 142.9913,
+     "note": "first data point"
+    },
+    {
+     "entity": "car drivers",
+     "x": "120.0",
+     "field": "value",
+     "value": 85.0087,
+     "note": "first data point"
+    },
+    {
+     "entity": "cyclists",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.8937,
+     "note": "first data point relative"
+    },
+    {
+     "entity": "car drivers",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.5313,
+     "note": "first data point relative"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cyclists begin above car drivers",
+    "At the start, cyclists have the higher value",
+    "The first point shows cyclists at 142.9913 vs car drivers at 85.0087"
+   ],
+   "visual_evidence_rule": "At the leftmost data point, the cyclists line must be above the car drivers line.",
+   "temporal_anchor": "the opening clause about the last decade",
+   "reviewer_question": "Must the video establish that cyclists began with a higher value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the last point, car drivers have a higher value than cyclists (109.9826 vs 61.0087; relative_value 0.6874 vs 0.3813).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "car drivers",
+     "x": "1220.0",
+     "field": "value",
+     "value": 109.9826,
+     "note": "last data point"
+    },
+    {
+     "entity": "cyclists",
+     "x": "1220.0",
+     "field": "value",
+     "value": 61.0087,
+     "note": "last data point"
+    },
+    {
+     "entity": "car drivers",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.6874,
+     "note": "last data point relative"
+    },
+    {
+     "entity": "cyclists",
+     "x": "1220.0",
+     "field": "relative_value",
+     "value": 0.3813,
+     "note": "last data point relative"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Car drivers finish above cyclists",
+    "At the end, car drivers have the higher value",
+    "The last point shows car drivers at 109.9826 vs cyclists at 61.0087"
+   ],
+   "visual_evidence_rule": "At the rightmost data point, the car drivers line must be above the cyclists line.",
+   "temporal_anchor": "the clause about cyclists facing danger or not improving",
+   "reviewer_question": "Must the video show car drivers ending above cyclists?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The two series cross between x=486.7 and x=608.9: at x=486.7 cyclists (106.9913) are above car drivers (105.0087), and at x=608.9 car drivers (113.0087) are above cyclists (100.0000).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "cyclists",
+     "x": "486.7",
+     "field": "value",
+     "value": 106.9913,
+     "note": "before apparent crossover"
+    },
+    {
+     "entity": "car drivers",
+     "x": "486.7",
+     "field": "value",
+     "value": 105.0087,
+     "note": "before apparent crossover"
+    },
+    {
+     "entity": "car drivers",
+     "x": "608.9",
+     "field": "value",
+     "value": 113.0087,
+     "note": "after apparent crossover"
+    },
+    {
+     "entity": "cyclists",
+     "x": "608.9",
+     "field": "value",
+     "value": 100.0,
+     "note": "after apparent crossover"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lines cross between the fifth and sixth data points",
+    "Cyclists lose the lead to car drivers between x=486.7 and x=608.9",
+    "The order reverses mid-series"
+   ],
+   "visual_evidence_rule": "The chart must show the cyclists line crossing from above to below the car drivers line between these two x positions.",
+   "temporal_anchor": "the contrast between car drivers benefiting and cyclists not improving",
+   "reviewer_question": "Is the crossover itself required, or is it enough to show the start and end orders?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The crossover point itself (U5) is optional if the divergence trends are clear.",
+  "Cyclists' end value (61.0087) is below car drivers' start value (85.0087).",
+  "The gap between the series reverses direction over the series."
+ ],
+ "unsupported_to_avoid": [
+  "Overall road casualties almost halved (not present in the table).",
+  "Absolute counts of killed or seriously injured (no unit given).",
+  "Percentages or percentage-point changes.",
+  "Causal claims such as 'car drivers benefited because of policy'.",
+  "Extrapolation beyond the first and last data points."
+ ],
+ "notes": "The table has both value and relative_value with no unit column filled; use table values as relative/raw indicators. The key contrast is car drivers rising while cyclists fall, with an order reversal.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 66.6,
+  "usage": {
+   "prompt_tokens": 1919,
+   "completion_tokens": 15984,
+   "total_tokens": 17903,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13876
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1407
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

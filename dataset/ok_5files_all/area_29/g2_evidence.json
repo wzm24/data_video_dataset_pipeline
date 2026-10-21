@@ -1,0 +1,127 @@
+{
+ "clip_id": "area_29",
+ "family": "area",
+ "chart_form": "area/pictograph_blocks",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:what it feels like @ 24.0"
+   ],
+   "assertion": {
+    "mark": "what it feels like @ 24.0",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly show the 'what it feels like' measure at relative value 1.0 and at relative value 0.0, e.g. full height versus baseline."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:what it feels like @ 24.0",
+    "mark:what it feels like @ 540.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "what it feels like @ 24.0",
+      "value": 1.0
+     },
+     {
+      "mark": "what it feels like @ 540.0",
+      "value": 0.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must support a direct perceptual ordering, e.g. one category clearly higher or larger than the other."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Axis or label must indicate relative/feelings/perception, not absolute deaths or counts."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The clip should label or narratively frame the difference as perception bias, not as a factual risk ranking."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:what it feels like @ 24.0",
+    "mark:what it feels like @ 540.0"
+   ],
+   "assertion": {
+    "low": "what it feels like @ 540.0",
+    "low_value": 0.0,
+    "high": "what it feels like @ 24.0",
+    "high_value": 1.0,
+    "delta": 1.0,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the gap between the 1.0 and 0.0 values visually apparent."
+  }
+ ]
+}

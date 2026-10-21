@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_72",
+ "intent_en": "To illustrate the recent sharp rise in global average temperatures and attribute it to human fossil fuel consumption, contrasting it with long-term historical stability.",
+ "previous_intent": "To illustrate the significant rise in average global temperatures over the last century, highlighting the sharp acceleration in warming since the mid-20th century linked to fossil fuel consumption.",
+ "narration_support": "For more than 10 ,000 years, the average global temperature didn't change by more than one degree Celsius. But then humans started burning fossil fuels around here. Today global temperatures have risen about one degree Celsius since pre -",
+ "chart_support": "Line chart titled 'Change in average global temperature' showing a sharp upward trend in temperature anomaly from 1880 to 2020, though it does not display the 10,000-year historical context mentioned in the narration.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration provides the context of long-term stability and the cause (fossil fuels), while the chart visualizes the recent temperature rise from 1880 to 2020. The chart supports the 'rise' aspect but not the '10,000 years stability' or 'fossil fuels' aspect directly.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#a8c6ea"/>
+<text x="862" y="72" text-anchor="end" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#222222">Estimated vaccine effectiveness against </text>
+<rect x="870" y="42" width="300" height="36" fill="#ffe08a"/>
+<text x="876" y="66" text-anchor="start" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#222222">hospitalization</text>
+<text x="640" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="#444444">NEJM study on the effectiveness of vaccines in New York, Rosenberg et al, December 2021</text>
+<rect x="60.0" y="150" width="350.0" height="38" fill="#2e6da4" rx="5"/>
+<text x="235" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Pfizer/BioNTech</text>
+<rect x="60.0" y="188" width="350.0" height="430" fill="#ffffff"/>
+<line x1="100.0" y1="560.0" x2="370.0" y2="560.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="100.0" y1="220.0" x2="100.0" y2="560.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="100.0" y1="560.0" x2="370.0" y2="560.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="90.0" y="565.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">70</text>
+<line x1="100.0" y1="446.7" x2="370.0" y2="446.7" stroke="#e2ddd2" stroke-width="1"/>
+<text x="90.0" y="451.7" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">80</text>
+<line x1="100.0" y1="333.3" x2="370.0" y2="333.3" stroke="#e2ddd2" stroke-width="1"/>
+<text x="90.0" y="338.3" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">90</text>
+<line x1="100.0" y1="220.0" x2="370.0" y2="220.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="90.0" y="225.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">100%</text>
+<text x="100.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">MAY</text>
+<text x="190.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">JUNE</text>
+<text x="280.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">JULY</text>
+<text x="370.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">AUGUST</text>
+<line x1="100.0" y1="248.3" x2="370.0" y2="259.7" stroke="#555555" stroke-width="3"/>
+<text x="370.0" y="251.7" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#555555">18-49</text>
+<line x1="100.0" y1="259.7" x2="370.0" y2="271.0" stroke="#222222" stroke-width="3"/>
+<text x="370.0" y="263.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#222222">50-64</text>
+<line x1="100.0" y1="276.7" x2="370.0" y2="344.7" stroke="#d98a8a" stroke-width="3"/>
+<text x="370.0" y="336.7" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#c0392b" opacity="1">65+</text>
+<rect x="450.0" y="150" width="380.0" height="38" fill="#2e6da4" rx="5"/>
+<text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Moderna</text>
+<rect x="450.0" y="188" width="380.0" height="430" fill="#ffffff"/>
+<line x1="490.0" y1="560.0" x2="790.0" y2="560.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="490.0" y1="220.0" x2="490.0" y2="560.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="490.0" y1="560.0" x2="790.0" y2="560.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="480.0" y="565.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">70</text>
+<line x1="490.0" y1="446.7" x2="790.0" y2="446.7" stroke="#e2ddd2" stroke-width="1"/>
+<text x="480.0" y="451.7" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">80</text>
+<line x1="490.0" y1="333.3" x2="790.0" y2="333.3" stroke="#e2ddd2" stroke-width="1"/>
+<text x="480.0" y="338.3" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">90</text>
+<line x1="490.0" y1="220.0" x2="790.0" y2="220.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="480.0" y="225.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">100%</text>
+<text x="490.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">MAY</text>
+<text x="590.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">JUNE</text>
+<text x="690.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">JULY</text>
+<text x="790.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">AUGUST</text>
+<line x1="490.0" y1="259.7" x2="790.0" y2="248.3" stroke="#555555" stroke-width="3"/>
+<text x="790.0" y="240.3" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#555555">18-49</text>
+<line x1="490.0" y1="259.7" x2="790.0" y2="254.0" stroke="#222222" stroke-width="3"/>
+<text x="790.0" y="246.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#222222">50-64</text>
+<line x1="490.0" y1="254.0" x2="790.0" y2="288.0" stroke="#d98a8a" stroke-width="3"/>
+<text x="790.0" y="280.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#c0392b" opacity="1">65+</text>
+<rect x="860.0" y="150" width="390.0" height="38" fill="#2e6da4" rx="5"/>
+<text x="1055" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Johnson &amp; Johnson</text>
+<rect x="860.0" y="188" width="390.0" height="430" fill="#ffffff"/>
+<line x1="900.0" y1="560.0" x2="1210.0" y2="560.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="900.0" y1="220.0" x2="900.0" y2="560.0" stroke="#1d1d1d" stroke-width="2"/>
+<line x1="900.0" y1="560.0" x2="1210.0" y2="560.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="890.0" y="565.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">70</text>
+<line x1="900.0" y1="446.7" x2="1210.0" y2="446.7" stroke="#e2ddd2" stroke-width="1"/>
+<text x="890.0" y="451.7" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">80</text>
+<line x1="900.0" y1="333.3" x2="1210.0" y2="333.3" stroke="#e2ddd2" stroke-width="1"/>
+<text x="890.0" y="338.3" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">90</text>
+<line x1="900.0" y1="220.0" x2="1210.0" y2="220.0" stroke="#e2ddd2" stroke-width="1"/>
+<text x="890.0" y="225.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#1d1d1d">100%</text>
+<text x="900.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">MAY</text>
+<text x="1003.3" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">JUNE</text>
+<text x="1106.7" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">JULY</text>
+<text x="1210.0" y="586.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d1d1d">AUGUST</text>
+<line x1="900.0" y1="271.0" x2="1210.0" y2="293.7" stroke="#555555" stroke-width="3"/>
+<text x="1210.0" y="285.7" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#555555">18-49</text>
+<line x1="900.0" y1="356.0" x2="1210.0" y2="299.3" stroke="#222222" stroke-width="3"/>
+<text x="1210.0" y="291.3" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#222222">50-64</text>
+<line x1="900.0" y1="390.0" x2="1210.0" y2="412.7" stroke="#d98a8a" stroke-width="3"/>
+<text x="1210.0" y="404.7" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#c0392b" opacity="1">65+</text>
+</svg>

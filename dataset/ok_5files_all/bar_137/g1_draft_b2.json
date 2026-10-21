@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_137",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To clarify that the United States is not the largest emitter of carbon dioxide globally.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The United States has a relative CO2 value of 0.1406 in the table.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "United States row: relative_value=0.1406."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The United States is at 0.1406 on the relative scale",
+    "United States relative_value = 0.1406",
+    "The US has a relative_value of 0.1406"
+   ],
+   "visual_evidence_rule": "The chart must show the United States with relative_value 0.1406 (or a rounded 0.14).",
+   "temporal_anchor": "doesn't currently emit the most carbon dioxide of any country",
+   "reviewer_question": "Is stating the United States' own relative_value required, or only its comparison with other entities?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "China's relative CO2 value equals the United States' relative CO2 value at 0.1406.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "US row."
+    },
+    {
+     "entity": "China",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "China row."
+    }
+   ],
+   "computation": "United States relative_value - China relative_value = 0.1406 - 0.1406 = 0.0",
+   "accepted_routes": [
+    "China and the United States are tied at 0.1406",
+    "The United States is not ahead of China; both are 0.1406",
+    "China has the same relative_value as the United States (0.1406)"
+   ],
+   "visual_evidence_rule": "Both the United States and China must be shown with equal relative_value 0.1406.",
+   "temporal_anchor": "doesn't currently emit the most carbon dioxide of any country",
+   "reviewer_question": "Is the US-China equality required to establish that the US is not uniquely largest?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "India's relative CO2 value equals the United States' relative CO2 value at 0.1406.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "US row."
+    },
+    {
+     "entity": "India",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "India row."
+    }
+   ],
+   "computation": "United States relative_value - India relative_value = 0.1406 - 0.1406 = 0.0",
+   "accepted_routes": [
+    "India and the United States are tied at 0.1406",
+    "India has the same relative_value as the US",
+    "The US is not separated from India at 0.1406"
+   ],
+   "visual_evidence_rule": "If India is shown, its relative_value must equal the United States' 0.1406.",
+   "temporal_anchor": "of any country",
+   "reviewer_question": "Should India be shown as an additional tied comparator, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "No listed entity has a relative_value greater than the United States' 0.1406; the table's maximum relative_value is 0.1406.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "US row."
+    },
+    {
+     "entity": "China",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "China row."
+    },
+    {
+     "entity": "India",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "India row."
+    },
+    {
+     "entity": "EU-28",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "EU-28 row; all other table rows also have relative_value=0.1406."
+    }
+   ],
+   "computation": "max(relative_value over all table rows) - United States relative_value = 0.1406 - 0.1406 = 0.0",
+   "accepted_routes": [
+    "No listed entity is above the United States at 0.1406",
+    "The maximum relative_value in the table is 0.1406, tied with the United States",
+    "The United States is not surpassed by any listed country or region"
+   ],
+   "visual_evidence_rule": "The chart must not show any entity with a relative_value larger than the United States' 0.1406; the top value must be shared at 0.1406.",
+   "temporal_anchor": "doesn't currently emit the most carbon dioxide of any country",
+   "reviewer_question": "Does the intent require showing that no listed entity exceeds the US, or only that the US is tied with at least one other?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The United States is not the unique largest emitter among the listed entities; at least China matches its relative_value at 0.1406.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "US row."
+    },
+    {
+     "entity": "China",
+     "x": "entity",
+     "field": "relative_value",
+     "value": 0.1406,
+     "note": "China row."
+    }
+   ],
+   "computation": "United States relative_value - China relative_value = 0.1406 - 0.1406 = 0.0",
+   "accepted_routes": [
+    "The United States does not stand alone at the top; China matches it at 0.1406",
+    "The US is tied, not uniquely largest, at 0.1406",
+    "China's relative_value equals the US's, so the US is not the sole largest"
+   ],
+   "visual_evidence_rule": "The chart must show at least one other entity tied with the United States at 0.1406.",
+   "temporal_anchor": "doesn't currently emit the most carbon dioxide of any country",
+   "reviewer_question": "Does 'not the largest' mean 'not uniquely largest' in this dataset, where all listed values are equal?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "EU-28 and Europe also have relative_value 0.1406, tying the United States.",
+  "Asia, Oceania, South America, and North America are all at relative_value 0.1406 in the table."
+ ],
+ "unsupported_to_avoid": [
+  "United States emits 14.06% of global carbon dioxide.",
+  "United States emits 0.1406 billion tonnes of carbon dioxide.",
+  "China emits more carbon dioxide than the United States.",
+  "United States is the second-largest emitter.",
+  "United States is the largest emitter.",
+  "The worldwide total is 35 billion tonnes of carbon dioxide."
+ ],
+ "notes": "All table rows have relative_value 0.1406, so the table supports equality/tie, not a strictly higher emitter. These units frame 'not largest' as 'not uniquely largest' unless the reviewer decides otherwise.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 42.5,
+  "usage": {
+   "prompt_tokens": 1077,
+   "completion_tokens": 10854,
+   "total_tokens": 11931,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8946
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 693
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

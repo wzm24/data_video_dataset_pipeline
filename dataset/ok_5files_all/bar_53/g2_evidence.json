@@ -1,0 +1,178 @@
+{
+ "clip_id": "bar_53",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:POOREST @ income group: POOREST"
+   ],
+   "assertion": {
+    "mark": "POOREST @ income group: POOREST",
+    "field": "value",
+    "expected": 12.5,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bar labeled POOREST must be visible and its height/value must be readable as 12.5, preferably with an endpoint label."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:RICHEST @ income group: RICHEST"
+   ],
+   "assertion": {
+    "mark": "RICHEST @ income group: RICHEST",
+    "field": "value",
+    "expected": 2.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The bar labeled RICHEST must be visible and its height/value must be readable as 2.0, preferably with an endpoint label."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:POOREST @ income group 1",
+    "mark:Group 2 @ income group 2",
+    "mark:Group 3 @ income group 3",
+    "mark:Group 4 @ income group 4",
+    "mark:Group 5 @ income group 5",
+    "mark:Group 6 @ income group 6",
+    "mark:Group 7 @ income group 7",
+    "mark:Group 8 @ income group 8",
+    "mark:Group 9 @ income group 9",
+    "mark:Group 10 @ income group 10",
+    "mark:RICHEST @ income group 11"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "POOREST @ income group 1",
+      "value": 12.5
+     },
+     {
+      "mark": "Group 2 @ income group 2",
+      "value": 11.0
+     },
+     {
+      "mark": "Group 3 @ income group 3",
+      "value": 9.5
+     },
+     {
+      "mark": "Group 4 @ income group 4",
+      "value": 8.0
+     },
+     {
+      "mark": "Group 5 @ income group 5",
+      "value": 7.0
+     },
+     {
+      "mark": "Group 6 @ income group 6",
+      "value": 6.5
+     },
+     {
+      "mark": "Group 7 @ income group 7",
+      "value": 6.0
+     },
+     {
+      "mark": "Group 8 @ income group 8",
+      "value": 5.0
+     },
+     {
+      "mark": "Group 9 @ income group 9",
+      "value": 4.5
+     },
+     {
+      "mark": "Group 10 @ income group 10",
+      "value": 3.0
+     },
+     {
+      "mark": "RICHEST @ income group 11",
+      "value": 2.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All eleven income-group bars must appear in order or the chart must clearly show a downward sequence from POOREST to RICHEST."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:POOREST @ income group: POOREST",
+    "mark:RICHEST @ income group: RICHEST"
+   ],
+   "assertion": {
+    "greater": "POOREST @ income group: POOREST",
+    "lesser": "RICHEST @ income group: RICHEST",
+    "expected_ratio": 6.25,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The POOREST and RICHEST bars, or a clear low-vs-high grouping, must be simultaneously visible enough to compare heights."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:POOREST @ income group: POOREST",
+    "mark:RICHEST @ income group: RICHEST"
+   ],
+   "assertion": {
+    "low": "RICHEST @ income group: RICHEST",
+    "low_value": 2.0,
+    "high": "POOREST @ income group: POOREST",
+    "high_value": 12.5,
+    "delta": 10.5,
+    "ratio": 6.25,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The endpoint values 12.5 and 2.0 must be visible or labeled if the video states the gap or ratio."
+  }
+ ]
+}

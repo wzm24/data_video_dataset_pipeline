@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_3",
+ "intent_en": "To demonstrate that global income inequality has worsened over recent decades, highlighting the growing disparity between the top earners and the bottom half of the population.",
+ "previous_intent": "To illustrate the significant increase in global income inequality from the 1980s to 2015, highlighting the widening gap between the rising income share of the wealthiest individuals and the stagnant share of the bottom half of the population.",
+ "narration_support": "income inequality is at its worst for decades.",
+ "chart_support": "Line chart tracking the share of global income for the top 1% and bottom 50% from 1980 to 2015, showing a widening gap where the top group's share increases while the bottom group's share remains relatively flat.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly claims inequality is at its worst, and the chart visualizes this by plotting the income share of the top 1% (rising) against the bottom 50% (stagnant) over the period 1980-2015.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

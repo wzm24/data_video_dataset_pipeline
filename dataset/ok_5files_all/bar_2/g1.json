@@ -1,0 +1,85 @@
+{
+ "clip_id": "bar_2",
+ "version": "g1_r_u_v1",
+ "intent": "Show that between 1990 and 2017, Sub-Saharan Africa's illiteracy rate fell more slowly, in proportional terms, than in Latin America & Caribbean, East Asia & Pacific, and the European Union.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How did the illiteracy rate change from 1990 to 2017 in the four regions?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Sub-Saharan Africa",
+     "Latin America & Caribbean",
+     "East Asia & Pacific",
+     "European Union"
+    ],
+    "measure": "illiteracy rate",
+    "time": "1990-2017"
+   }
+  },
+  {
+   "id": "R2",
+   "question": "Which region improved least in relative terms?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ],
+   "scope": {
+    "entities": [
+     "Sub-Saharan Africa",
+     "Latin America & Caribbean",
+     "East Asia & Pacific",
+     "European Union"
+    ],
+    "measure": "illiteracy rate",
+    "time": "1990-2017"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "From 1990 to 2017 the illiteracy rate fell in all four regions: Sub-Saharan Africa 48%→36.1%, Latin America & Caribbean 15.5%→6.9%, East Asia & Pacific 18%→5.1%, European Union 2%→1%.",
+   "accept": [
+    "all four endpoint pairs",
+    "all four absolute declines (11.9, 8.6, 12.9, 1 percentage points)",
+    "all four relative declines (about 25%, 55%, 72%, 50%)"
+   ],
+   "reject": [
+    "missing any region",
+    "reversing any direction",
+    "any wrong value"
+   ],
+   "evidence": "Four endpoint pairs or four declines are visible."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "claim": "Sub-Saharan Africa's proportional decline is the smallest (about 25%), below Latin America & Caribbean (55%), the European Union (50%) and East Asia & Pacific (72%), so its illiteracy rate improved more slowly.",
+   "accept": [
+    "relative-decline ranking: East Asia & Pacific > Latin America & Caribbean > European Union > Sub-Saharan Africa",
+    "Sub-Saharan Africa improved least in proportional terms",
+    "about 25% vs 50-72%"
+   ],
+   "reject": [
+    "Sub-Saharan Africa declined the least in percentage points (the EU's absolute drop is the smallest)",
+    "Sub-Saharan Africa improved fastest",
+    "reversing the relative ranking"
+   ],
+   "evidence": "Four relative declines, or a visual that shows Sub-Saharan Africa improved proportionally least."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21"
+}

@@ -1,0 +1,155 @@
+{
+ "clip_id": "bar_22",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Accountant @ N/A",
+    "extreme": "max",
+    "expected": 110000.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Accountant bar must be visibly the longest and labeled 110,000."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Accountant @ N/A",
+    "mark:Cashier @ N/A"
+   ],
+   "assertion": {
+    "greater": "Accountant @ N/A",
+    "lesser": "Cashier @ N/A",
+    "expected_ratio": -27.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show a comparison between Accountant and the sum or stacked total of the other five bars, totaling 57,000."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Accountant @ N/A",
+    "segment:Teacher @ N/A",
+    "segment:Nurse @ N/A"
+   ],
+   "assertion": {
+    "segment": "Accountant @ N/A",
+    "expected_share": 0.0,
+    "total_of": "unknown",
+    "total": 167000.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Show Accountant's relative share label as 0.5093 or 50.9%, with Teacher/Nurse shares for contrast."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Accountant @ N/A",
+    "mark:Teacher @ N/A"
+   ],
+   "assertion": {
+    "greater": "Accountant @ N/A",
+    "lesser": "Teacher @ N/A",
+    "expected_ratio": 3.4375,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Show Accountant and Teacher/Nurse bars with a ratio or multiplier callout."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Accountant @ N/A",
+    "mark:Teacher @ N/A",
+    "mark:Nurse @ N/A",
+    "mark:Office clerk @ N/A",
+    "mark:Working mom @ N/A",
+    "mark:Cashier @ N/A"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Accountant @ N/A",
+      "value": 110000.0
+     },
+     {
+      "mark": "Teacher @ N/A",
+      "value": 32000.0
+     },
+     {
+      "mark": "Nurse @ N/A",
+      "value": 26000.0
+     },
+     {
+      "mark": "Office clerk @ N/A",
+      "value": 2000.0
+     },
+     {
+      "mark": "Working mom @ N/A",
+      "value": 1000.0
+     },
+     {
+      "mark": "Cashier @ N/A",
+      "value": -4000.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All six bars must be ordered, and Cashier's bar must extend below zero or show -4,000."
+  }
+ ]
+}

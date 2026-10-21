@@ -1,0 +1,341 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_52",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how the inclusion of payroll taxes reduces the progressivity of the total tax burden across different income levels.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Payroll tax burden is high and nearly flat across lower/middle income groups, then drops sharply for the top groups.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Poorest",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 10.6,
+     "note": "bottom-group payroll tax level"
+    },
+    {
+     "entity": "2nd",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 10.9,
+     "note": "near-flat lower-income payroll tax level"
+    },
+    {
+     "entity": "4th",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 10.4,
+     "note": "middle-income payroll tax level"
+    },
+    {
+     "entity": "8th",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 10.4,
+     "note": "upper-middle payroll tax level"
+    },
+    {
+     "entity": "9th",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 9.8,
+     "note": "payroll tax begins to edge down"
+    },
+    {
+     "entity": "10th",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 1.0,
+     "note": "sharp drop at top decile"
+    },
+    {
+     "entity": "Richest",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 0.4,
+     "note": "lowest payroll tax level"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Payroll taxes stay near 10–11% from the Poorest through the 9th group, then fall to 1.0% for the 10th and 0.4% for the Richest.",
+    "Payroll tax burden is roughly flat at about 10.4–10.9% for most income groups but collapses to 1.0% and 0.4% at the top.",
+    "Unlike the other taxes, payroll taxes do not rise steadily with income; they plateau around 10% and then drop sharply."
+   ],
+   "visual_evidence_rule": "Payroll tax bars or stacked payroll segments must visibly form a high plateau across the left/middle income groups and a sharp drop for 10th and Richest.",
+   "temporal_anchor": "Add payroll taxes onto this chart...",
+   "reviewer_question": "Must the clip show the payroll-tax plateau and top-end drop, or is mentioning one low/middle rate sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Adding payroll taxes raises total tax burden much more for lower/middle groups than for the top, which flattens the total tax burden.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2nd",
+     "x": "Income taxes",
+     "field": "value",
+     "value": 1.0,
+     "note": "2nd group income-tax component"
+    },
+    {
+     "entity": "2nd",
+     "x": "Corporate and property taxes",
+     "field": "value",
+     "value": 1.3,
+     "note": "2nd group corporate/property component"
+    },
+    {
+     "entity": "2nd",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 10.9,
+     "note": "2nd group payroll component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Income taxes",
+     "field": "value",
+     "value": 10.0,
+     "note": "Richest income-tax component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Corporate and property taxes",
+     "field": "value",
+     "value": 10.5,
+     "note": "Richest corporate/property component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Estate taxes",
+     "field": "value",
+     "value": 0.8,
+     "note": "Richest estate-tax component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 0.4,
+     "note": "Richest payroll component"
+    }
+   ],
+   "computation": "2nd without payroll = 1.0 + 1.3 = 2.3; 2nd with payroll = 2.3 + 10.9 = 13.2; increase = 10.9. Richest without payroll = 10.0 + 10.5 + 0.8 = 21.3; Richest with payroll = 21.3 + 0.4 = 21.7; increase = 0.4.",
+   "accepted_routes": [
+    "Payroll taxes add 10.9 points to the 2nd group's total tax burden but only 0.4 points to the Richest group's.",
+    "Adding payroll lifts the 2nd group from 2.3% to 13.2%, while the Richest barely moves from 21.3% to 21.7%.",
+    "Payroll is a big addition for lower/middle incomes and a negligible addition for the top, so the total tax curve flattens."
+   ],
+   "visual_evidence_rule": "A before/after or stacked-total view must show the payroll segment adding a large amount to the 2nd group's bar and a tiny sliver to the Richest group's bar.",
+   "temporal_anchor": "it starts to flatten out",
+   "reviewer_question": "Should the clip quantify the payroll-tax increase for at least one lower/middle group and one top group?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The top-to-low gap in total tax burden narrows when payroll taxes are included.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2nd",
+     "x": "Income taxes",
+     "field": "value",
+     "value": 1.0,
+     "note": "2nd group income-tax component"
+    },
+    {
+     "entity": "2nd",
+     "x": "Corporate and property taxes",
+     "field": "value",
+     "value": 1.3,
+     "note": "2nd group corporate/property component"
+    },
+    {
+     "entity": "2nd",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 10.9,
+     "note": "2nd group payroll component"
+    },
+    {
+     "entity": "10th",
+     "x": "Income taxes",
+     "field": "value",
+     "value": 18.0,
+     "note": "10th group income-tax component"
+    },
+    {
+     "entity": "10th",
+     "x": "Corporate and property taxes",
+     "field": "value",
+     "value": 9.2,
+     "note": "10th group corporate/property component"
+    },
+    {
+     "entity": "10th",
+     "x": "Estate taxes",
+     "field": "value",
+     "value": 0.3,
+     "note": "10th group estate-tax component"
+    },
+    {
+     "entity": "10th",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 1.0,
+     "note": "10th group payroll component"
+    }
+   ],
+   "computation": "2nd without = 1.0 + 1.3 = 2.3; 2nd with = 2.3 + 10.9 = 13.2. 10th without = 18.0 + 9.2 + 0.3 = 27.5; 10th with = 27.5 + 1.0 = 28.5. Without-payroll gap = 27.5 - 2.3 = 25.2; with-payroll gap = 28.5 - 13.2 = 15.3; gap narrows by 9.9 points.",
+   "accepted_routes": [
+    "The 10th-vs-2nd total tax gap shrinks from 25.2 points before payroll to 15.3 points after payroll.",
+    "Payroll inclusion cuts the spread between the 10th and 2nd total tax burdens by 9.9 percentage points.",
+    "Before payroll, the 10th group pays 25.2 points more than the 2nd; after payroll, the difference is 15.3 points."
+   ],
+   "visual_evidence_rule": "The chart must allow comparison of total tax burden for the 2nd and 10th groups with and without payroll, or explicitly show the gap shrinking.",
+   "temporal_anchor": "it starts to flatten out",
+   "reviewer_question": "Should the clip explicitly quantify the narrowing top-to-low total tax gap, not just show flatter bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Payroll taxes dominate the total tax stack for lower/middle groups but are a tiny fraction of the total for top groups.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2nd",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 10.9,
+     "note": "2nd group payroll component"
+    },
+    {
+     "entity": "2nd",
+     "x": "Income taxes",
+     "field": "value",
+     "value": 1.0,
+     "note": "2nd group income-tax component"
+    },
+    {
+     "entity": "2nd",
+     "x": "Corporate and property taxes",
+     "field": "value",
+     "value": 1.3,
+     "note": "2nd group corporate/property component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Payroll taxes",
+     "field": "value",
+     "value": 0.4,
+     "note": "Richest payroll component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Income taxes",
+     "field": "value",
+     "value": 10.0,
+     "note": "Richest income-tax component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Corporate and property taxes",
+     "field": "value",
+     "value": 10.5,
+     "note": "Richest corporate/property component"
+    },
+    {
+     "entity": "Richest",
+     "x": "Estate taxes",
+     "field": "value",
+     "value": 0.8,
+     "note": "Richest estate-tax component"
+    }
+   ],
+   "computation": "2nd payroll share = 10.9 / (1.0 + 1.3 + 10.9) = 82.6%. Richest payroll share = 0.4 / (10.0 + 10.5 + 0.8 + 0.4) = 1.8%.",
+   "accepted_routes": [
+    "Payroll is about 83% of the 2nd group's total tax burden but only about 2% for the Richest.",
+    "For the 2nd group, payroll dominates the stack (10.9 of 13.2 points); for the Richest it is a tiny 0.4 of 21.7 points.",
+    "Payroll forms most of the low/middle tax stack and almost none of the top tax stack."
+   ],
+   "visual_evidence_rule": "Stacked bars must show the payroll segment taking most of the total for low/middle groups and a very small slice for top groups.",
+   "temporal_anchor": "Add payroll taxes onto this chart...",
+   "reviewer_question": "Should the video show payroll as a share/composition of total tax burden, not just its standalone rate?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.97
+ },
+ "draft_cost": {
+  "sec": 58.0,
+  "usage": {
+   "prompt_tokens": 1953,
+   "completion_tokens": 16000,
+   "total_tokens": 17953,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13144
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 1569
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

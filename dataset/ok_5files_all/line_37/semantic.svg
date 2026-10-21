@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f0ece6"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Percentage of African Americans living in the South</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="554.0" x2="1220" y2="554.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="508.0" x2="1220" y2="508.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="462.0" x2="1220" y2="462.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="416.0" x2="1220" y2="416.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="370.0" x2="1220" y2="370.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="324.0" x2="1220" y2="324.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="278.0" x2="1220" y2="278.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="232.0" x2="1220" y2="232.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="186.0" x2="1220" y2="186.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="140.0" x2="1220" y2="140.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">0</text>
+<line data-role="tick" x1="112" y1="554.0" x2="120" y2="554.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="560.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">10</text>
+<line data-role="tick" x1="112" y1="508.0" x2="120" y2="508.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="514.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">20</text>
+<line data-role="tick" x1="112" y1="462.0" x2="120" y2="462.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="468.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">30</text>
+<line data-role="tick" x1="112" y1="416.0" x2="120" y2="416.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="422.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">40</text>
+<line data-role="tick" x1="112" y1="370.0" x2="120" y2="370.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="376.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">50</text>
+<line data-role="tick" x1="112" y1="324.0" x2="120" y2="324.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="330.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">60</text>
+<line data-role="tick" x1="112" y1="278.0" x2="120" y2="278.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="284.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">70</text>
+<line data-role="tick" x1="112" y1="232.0" x2="120" y2="232.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="238.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">80</text>
+<line data-role="tick" x1="112" y1="186.0" x2="120" y2="186.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="192.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">90</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">100</text>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,181.4 170.0,176.8 220.0,172.2 270.0,172.2 320.0,172.2 370.0,176.8 420.0,176.8 470.0,176.8 520.0,181.4 570.0,181.4 620.0,181.4 670.0,186.0 720.0,186.0 770.0,209.0 820.0,236.6 870.0,245.8 920.0,287.2 970.0,324.0 1020.0,356.2 1070.0,356.2 1120.0,360.8 1170.0,351.6 1220.0,337.8" fill="none" stroke="#c95c5c" stroke-width="2" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="120.0" cy="181.4" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="170.0" cy="176.8" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="220.0" cy="172.2" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="270.0" cy="172.2" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="320.0" cy="172.2" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="370.0" cy="176.8" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="420.0" cy="176.8" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="470.0" cy="176.8" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="520.0" cy="181.4" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="570.0" cy="181.4" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="620.0" cy="181.4" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="670.0" cy="186.0" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="720.0" cy="186.0" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="770.0" cy="209.0" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="820.0" cy="236.6" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="870.0" cy="245.8" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="920.0" cy="287.2" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="970.0" cy="324.0" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1020.0" cy="356.2" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1070.0" cy="356.2" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1120.0" cy="360.8" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1170.0" cy="351.6" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="337.8" r="6" fill="#c95c5c" stroke="#ffffff" stroke-width="2"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1790</text>
+<text data-role="x-axis-label" x="220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1810</text>
+<text data-role="x-axis-label" x="320.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1830</text>
+<text data-role="x-axis-label" x="420.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1850</text>
+<text data-role="x-axis-label" x="520.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1870</text>
+<text data-role="x-axis-label" x="620.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1890</text>
+<text data-role="x-axis-label" x="720.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1910</text>
+<text data-role="x-axis-label" x="820.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1930</text>
+<text data-role="x-axis-label" x="920.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1950</text>
+<text data-role="x-axis-label" x="1020.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1970</text>
+<text data-role="x-axis-label" x="1120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">1990</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">2010</text>
+</g>
+</svg>

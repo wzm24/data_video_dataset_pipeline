@@ -1,0 +1,135 @@
+{
+ "clip_id": "bar_128",
+ "family": "bar",
+ "chart_form": "bar/pictograph",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The three timing categories must be distinguishable and labeled for each city or in a combined series."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Hiroshima @ within 3 weeks",
+    "segment:Hiroshima @ within 3 weeks",
+    "segment:Nagasaki @ within 3 weeks",
+    "segment:Nagasaki @ within 3 weeks"
+   ],
+   "assertion": {
+    "segment": "Hiroshima @ within 3 weeks",
+    "expected_share": 4.25,
+    "total_of": "dots",
+    "total": 48.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The within-3-weeks category must be visibly the largest of the three timing categories for each city or for the combined total."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Hiroshima @ instantly",
+    "mark:Hiroshima @ instantly"
+   ],
+   "assertion": {
+    "greater": "Hiroshima @ instantly",
+    "lesser": "Hiroshima @ instantly",
+    "expected_ratio": 323.9741,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The instant category must appear smaller than the within-3-weeks category and less than half of the total."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Hiroshima @ 3+ weeks",
+    "mark:Hiroshima @ 3+ weeks"
+   ],
+   "assertion": {
+    "greater": "Hiroshima @ 3+ weeks",
+    "lesser": "Hiroshima @ 3+ weeks",
+    "expected_ratio": 323.9741,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 3+ weeks category must be visibly the smallest among the timing categories."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Hiroshima @ instantly",
+    "mark:Hiroshima @ within 3 weeks",
+    "mark:Nagasaki @ instantly",
+    "mark:Nagasaki @ within 3 weeks"
+   ],
+   "assertion": {
+    "series": "Hiroshima",
+    "values": [
+     90.0,
+     204.0,
+     60.0,
+     132.0
+    ],
+    "threshold_between": [
+     60.0,
+     204.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the combined first-three-weeks share apparent, not only the separate instant and within-3-weeks buckets."
+  }
+ ]
+}

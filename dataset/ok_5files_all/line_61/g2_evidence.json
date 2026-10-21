@@ -1,0 +1,129 @@
+{
+ "clip_id": "line_61",
+ "family": "line",
+ "chart_form": "line/multi_panel",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Labels or legend identify Pew Research Center and General Social Survey, and both Democratic and Republican entities are present."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Democratic - Pew Research Center @ 2010",
+    "mark:Democratic - General Social Survey @ 2010"
+   ],
+   "assertion": {
+    "greater": "Democratic - Pew Research Center @ 2010",
+    "lesser": "Democratic - General Social Survey @ 2010",
+    "expected_ratio": 1.0604,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Democratic Pew and GSS series are shown at the same 2010 time point with close values (about 35.11% vs 33.11%)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Republican - Pew Research Center @ 2010",
+    "mark:Republican - General Social Survey @ 2010"
+   ],
+   "assertion": {
+    "greater": "Republican - Pew Research Center @ 2010",
+    "lesser": "Republican - General Social Survey @ 2010",
+    "expected_ratio": 1.1156,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Republican Pew and GSS series are shown at the same 2010 time point with close values (about 24.13% vs 21.63%)."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Republican - Pew Research Center @ 1990",
+    "mark:Republican - General Social Survey @ 1990",
+    "mark:Republican - Pew Research Center @ 2010",
+    "mark:Republican - General Social Survey @ 2010",
+    "mark:Republican - General Social Survey @ 2016"
+   ],
+   "assertion": {
+    "low": "Republican - General Social Survey @ 2016",
+    "low_value": 21.24,
+    "high": "Republican - General Social Survey @ 1990",
+    "high_value": 32.12,
+    "delta": 10.88,
+    "ratio": 1.5122,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Republican Pew and GSS series are shown sloping downward from 1990 to later years (2010/2016)."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Democratic - Pew Research Center @ 2010",
+    "mark:Republican - Pew Research Center @ 2010"
+   ],
+   "assertion": {
+    "greater": "Democratic - Pew Research Center @ 2010",
+    "lesser": "Republican - Pew Research Center @ 2010",
+    "expected_ratio": 1.455,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At 2010, Democratic series values are visibly above Republican series values for both Pew and GSS."
+  }
+ ]
+}

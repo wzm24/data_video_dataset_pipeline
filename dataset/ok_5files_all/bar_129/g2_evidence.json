@@ -1,0 +1,75 @@
+{
+ "clip_id": "bar_129",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Other)"
+   ],
+   "assertion": {
+    "mark": "Russia / Red @ 58,761",
+    "extreme": "min",
+    "expected": 0.4182,
+    "compared_set": "Other",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the Russia / Red value labeled 58,761 as the maximum relative value among all displayed points."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Russia / Red @ 1955",
+    "mark:Russia / Red @ 1990",
+    "mark:Russia / Red @ 2000",
+    "mark:Russia / Red @ 2010"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Russia / Red @ 1955",
+      "value": 0.0038
+     },
+     {
+      "mark": "Russia / Red @ 1990",
+      "value": 0.0191
+     },
+     {
+      "mark": "Russia / Red @ 2000",
+      "value": 0.0593
+     },
+     {
+      "mark": "Russia / Red @ 2010",
+      "value": 0.1913
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show Russia / Red points for 1955, 1990, 2000, and 2010 in increasing order."
+  }
+ ]
+}

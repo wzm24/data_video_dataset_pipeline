@@ -1,0 +1,22 @@
+{
+ "clip_id": "line_51",
+ "family": "line",
+ "sub_type": "multi_panel",
+ "orientation": "cartesian",
+ "series_count": 3,
+ "panel_count": 3,
+ "has_markers": false,
+ "has_dashed_segment": false,
+ "has_axis": true,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 30,
+ "row_count": 15,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "medium",
+ "needs_review": true,
+ "time_behavior": "snapshot"
+}

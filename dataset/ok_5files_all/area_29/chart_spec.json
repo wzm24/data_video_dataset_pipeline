@@ -1,0 +1,22 @@
+{
+ "clip_id": "area_29",
+ "family": "area",
+ "sub_type": "pictograph_blocks",
+ "orientation": "cartesian",
+ "series_count": 1,
+ "has_reference_line": false,
+ "panel_count": 1,
+ "has_axis": false,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 3,
+ "row_count": 4,
+ "derived_from": [
+  "manual_review",
+  "semantic.svg"
+ ],
+ "confidence": "high",
+ "needs_review": false,
+ "note": "two solid blocks, perceived risk",
+ "time_behavior": "snapshot"
+}

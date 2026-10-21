@@ -1,0 +1,221 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_40",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers that the majority of domestic cats are spayed or neutered.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The spayed/neutered share of domestic cats is 84%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "spayed or neutered",
+     "x": "spayed or neutered",
+     "field": "value",
+     "value": 84,
+     "note": "Table value is 84 percent; relative_value is 0.8400, equivalent to 84%. Row x_px=0."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "84% of domestic cats are spayed or neutered.",
+    "The spayed/neutered share is 84%.",
+    "About 84 out of every 100 domestic cats are spayed or neutered.",
+    "The chart value is 84%."
+   ],
+   "visual_evidence_rule": "A single-slice/donut or bar labeled 'spayed or neutered' must display 84% or 0.84 as its value.",
+   "temporal_anchor": "the clause stating the 84% spayed/neutered figure",
+   "reviewer_question": "Must the video state the 84% value itself, or is a visual-only display enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 84% spayed/neutered share is a majority, so most domestic cats are spayed or neutered.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "spayed or neutered",
+     "x": "spayed or neutered",
+     "field": "value",
+     "value": 84,
+     "note": "84% is on the majority side of the conventional half threshold; no separate threshold cell is present in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "84% is a majority.",
+    "Most domestic cats are spayed or neutered.",
+    "Spayed/neutered cats are the majority.",
+    "The data shows that more cats are spayed or neutered than not."
+   ],
+   "visual_evidence_rule": "The visual must make the 84% share read as majority-scale, e.g., a mostly filled donut or a bar clearly above the halfway mark.",
+   "temporal_anchor": "the same 84% clause, or a summarizing clause immediately after it",
+   "reviewer_question": "Does the video need to explicitly frame 84% as a majority, or is reporting 84% sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The remaining share of domestic cats not spayed or neutered is 16%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "spayed or neutered",
+     "x": "spayed or neutered",
+     "field": "value",
+     "value": 84,
+     "note": "Complement computed as 100 - 84 = 16 percent; also 1 - 0.8400 = 0.1600."
+    }
+   ],
+   "computation": "100 - 84 = 16 percent (or 1 - 0.8400 = 0.1600)",
+   "accepted_routes": [
+    "16% of domestic cats are not spayed or neutered.",
+    "The remaining share is 16%.",
+    "About 16% are not spayed or neutered.",
+    "The non-spayed/neutered portion is 16%."
+   ],
+   "visual_evidence_rule": "If shown, the remaining donut slice or bar segment must be 16% or labeled as not spayed/neutered.",
+   "temporal_anchor": "optional follow-up after the 84% clause",
+   "reviewer_question": "Should the video show or state the 16% complement, or focus only on the 84% majority?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 84% figure refers to domestic cats and their spayed/neutered status, not to households.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "spayed or neutered",
+     "x": "spayed or neutered",
+     "field": "value",
+     "value": 84,
+     "note": "The table entity is 'spayed or neutered'; the intent specifies domestic cats as the population being described."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "84% of domestic cats are spayed or neutered.",
+    "Among cats, 84% are spayed or neutered.",
+    "The 84% figure describes cats, not households.",
+    "For cats, the spayed/neutered rate is 84%."
+   ],
+   "visual_evidence_rule": "The chart label or on-screen context must identify the denominator as cats or spayed/neutered status, not households.",
+   "temporal_anchor": "the clause introducing the 84% figure, especially if the narration mentions cats or households",
+   "reviewer_question": "Must the video explicitly identify cats as the denominator, or can '84% are spayed or neutered' stand without a noun?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The same 84% value can be expressed as the proportion 0.84.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "spayed or neutered",
+     "x": "spayed or neutered",
+     "field": "relative_value",
+     "value": 0.84,
+     "note": "relative_value is 0.8400, equivalent to 84 percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The proportion is 0.84.",
+    "0.84 as a decimal equals 84%.",
+    "The chart could display 0.84 instead of 84%.",
+    "The relative value is 0.84."
+   ],
+   "visual_evidence_rule": "If decimal form is used, it must be 0.84 or 0.8400, not 0.084 or 8.4.",
+   "temporal_anchor": "optional chart-label or formatting moment, not a separate narration clause",
+   "reviewer_question": "Should the video be allowed to show 0.84 instead of 84%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A donut chart with one highlighted slice labeled 'spayed or neutered'.",
+  "Using decimal formatting 0.84 in place of 84%.",
+  "Showing the complement as an unlabeled remaining slice, without a 16% claim.",
+  "Visual cat icons or spay/neuter symbols that do not add numeric claims."
+ ],
+ "unsupported_to_avoid": [
+  "30.4% of American households own a cat (not in the table).",
+  "84% of households have spayed or neutered cats (wrong denominator).",
+  "Causal claim that spaying/neutering causes household cat ownership.",
+  "Extrapolation to all cats worldwide or to unprovided years.",
+  "Any numeric value other than 84%, 0.84, or the computed complement 16%."
+ ],
+ "notes": "Only 84 and 0.8400 are directly in the table; the 16% complement is allowed only as 100 - 84. The original narration's 30.4% household figure has no table support and should not be treated as a required semantic unit.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.94
+ },
+ "draft_cost": {
+  "sec": 28.6,
+  "usage": {
+   "prompt_tokens": 606,
+   "completion_tokens": 6546,
+   "total_tokens": 7152,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4803
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 350
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

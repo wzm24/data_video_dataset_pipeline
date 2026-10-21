@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_2",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the increase in contraceptive use in sub-Saharan Africa from 1990 to 2000, contrasting it with slower educational improvements.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 1990, contraceptive use in the region was 16%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "contraceptive use",
+     "x": "1990",
+     "field": "value",
+     "value": 16,
+     "note": "Table cell for contraceptive use in 1990."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1990, contraceptive use was 16%.",
+    "The starting value in 1990 was 16%.",
+    "Contraceptive use stood at 16% at the start of the period."
+   ],
+   "visual_evidence_rule": "A visible data mark or label for contraceptive use in 1990 must show 16%.",
+   "temporal_anchor": "The narration clause establishing the 1990 starting point.",
+   "reviewer_question": "Must the video explicitly show the 1990 starting value of 16%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "By 2000, contraceptive use had reached 22%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "contraceptive use",
+     "x": "2000",
+     "field": "value",
+     "value": 22,
+     "note": "Table cell for contraceptive use in 2000."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "By 2000, contraceptive use had reached 22%.",
+    "The 2000 value was 22%.",
+    "Contraceptive use ended the 1990-2000 period at 22%."
+   ],
+   "visual_evidence_rule": "A visible data mark or label for contraceptive use in 2000 must show 22%.",
+   "temporal_anchor": "The narration clause establishing the 2000 endpoint.",
+   "reviewer_question": "Must the video explicitly show the 2000 endpoint value of 22%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Between 1990 and 2000, contraceptive use rose by 6 percentage points, from 16% to 22%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "contraceptive use",
+     "x": "1990",
+     "field": "value",
+     "value": 16,
+     "note": "Subtracted from the 2000 value."
+    },
+    {
+     "entity": "contraceptive use",
+     "x": "2000",
+     "field": "value",
+     "value": 22,
+     "note": "Used with the 1990 value to derive the absolute change."
+    }
+   ],
+   "computation": "22 - 16 = 6 percentage points",
+   "accepted_routes": [
+    "Between 1990 and 2000, contraceptive use rose by 6 percentage points.",
+    "The gain from 1990 to 2000 was 6 points (16% to 22%).",
+    "Contraceptive use increased from 16% to 22%, a 6-percentage-point rise."
+   ],
+   "visual_evidence_rule": "Both the 1990 value and the 2000 value must be visible, or the 6-percentage-point difference must be explicitly labelled.",
+   "temporal_anchor": "The narration clause describing the 1990-to-2000 increase.",
+   "reviewer_question": "Must the video state the absolute increase as 6 percentage points?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 1990-to-2000 increase was about 37.5% relative to the 1990 level.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "contraceptive use",
+     "x": "1990",
+     "field": "value",
+     "value": 16,
+     "note": "Denominator for the relative increase."
+    },
+    {
+     "entity": "contraceptive use",
+     "x": "2000",
+     "field": "value",
+     "value": 22,
+     "note": "Numerator comparison value."
+    }
+   ],
+   "computation": "((22 - 16) / 16) * 100 = 37.5",
+   "accepted_routes": [
+    "The 1990-2000 increase was about 37.5% relative to the 1990 level.",
+    "Contraceptive use was roughly 38% higher in 2000 than in 1990.",
+    "The relative gain from 1990 to 2000 was a little over one third."
+   ],
+   "visual_evidence_rule": "The 1990 and 2000 values must be visible enough to support the relative comparison; if only one is shown, the 37.5% claim is unsupported.",
+   "temporal_anchor": "An optional narration clause adding the relative-size comparison for 1990-2000.",
+   "reviewer_question": "Is the derived relative increase of about 37.5% required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 1990-2000 rise is part of an upward trend across all available years: 16%, 19%, 22%, 23.5%, 27.5%, and 30% from 1990 to 2014.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "contraceptive use",
+     "x": "1990",
+     "field": "value",
+     "value": 16,
+     "note": "First value in the available series."
+    },
+    {
+     "entity": "contraceptive use",
+     "x": "1995",
+     "field": "value",
+     "value": 19,
+     "note": "Intermediate value."
+    },
+    {
+     "entity": "contraceptive use",
+     "x": "2000",
+     "field": "value",
+     "value": 22,
+     "note": "Intermediate value."
+    },
+    {
+     "entity": "contraceptive use",
+     "x": "2005",
+     "field": "value",
+     "value": 23.5,
+     "note": "Later value."
+    },
+    {
+     "entity": "contraceptive use",
+     "x": "2010",
+     "field": "value",
+     "value": 27.5,
+     "note": "Later value."
+    },
+    {
+     "entity": "contraceptive use",
+     "x": "2014",
+     "field": "value",
+     "value": 30,
+     "note": "Final value in the available series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Every measured year from 1990 to 2014 is higher than the previous one: 16%, 19%, 22%, 23.5%, 27.5%, 30%.",
+    "Contraceptive use follows an upward trend across all available years, not just 1990-2000.",
+    "The series rises from 16% in 1990 to 30% in 2014 without any measured decline."
+   ],
+   "visual_evidence_rule": "The full sequence of values must be visible or labelled if the video claims a no-decline trend beyond 2000.",
+   "temporal_anchor": "An optional post-2000 or full-series narration clause.",
+   "reviewer_question": "Should the video include the longer 1990-2014 upward trend, or stay strictly within 1990-2000?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 1995 midpoint value of 19% may be shown as an intermediate step within the 1990-2000 rise.",
+  "The later values 2005=23.5%, 2010=27.5%, and 2014=30% may be shown as extra post-2000 context.",
+  "The 1990-2014 increase of 14 percentage points (30 - 16 = 14) may be shown as optional context."
+ ],
+ "unsupported_to_avoid": [
+  "Any claim about education improving slower or faster, or by any amount, because the table contains no education data.",
+  "Saying contraceptive use doubled from 1990 to 2000; 22% is 1.375 times 16%, not double.",
+  "Saying it exactly doubled from 1990 to 2014; 30% is 1.875 times 16%, not exactly double.",
+  "Causal explanations for why contraceptive use rose.",
+  "Values or regions not present in the table."
+ ],
+ "notes": "The table contains only contraceptive-use percentages, so no education-contrast unit is proposed. The core 1990-2000 endpoint and 6-percentage-point change are required; the relative increase and longer trend are optional context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 24.7,
+  "usage": {
+   "prompt_tokens": 1014,
+   "completion_tokens": 5918,
+   "total_tokens": 6932,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3862
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 502
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

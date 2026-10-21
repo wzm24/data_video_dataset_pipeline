@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_24",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the dramatic increase in the number of students taking the SAT from 1941 to the present day.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The 1941 baseline is 10,000 SAT takers.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1941",
+     "x": "1941",
+     "field": "value",
+     "value": 10000,
+     "note": "Starting year value in the SAT takers series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1941, 10,000 students took the SAT.",
+    "The 1941 starting point was 10,000 SAT takers.",
+    "SAT participation began at 10,000 students in 1941."
+   ],
+   "visual_evidence_rule": "A 1941 bar or labeled point must be visible at 10,000 on the value scale.",
+   "temporal_anchor": "The opening clause: 'In 1941, just 10,000 students took the SAT.'",
+   "reviewer_question": "Is the 1941 baseline value required, or may the video start later without losing the intended contrast?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The present-day endpoint is 2,000,000 SAT takers.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Now",
+     "x": "Now",
+     "field": "value",
+     "value": 2000000,
+     "note": "Present-day value in the SAT takers series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Now, 2,000,000 students take the SAT.",
+    "The present-day value is 2 million SAT takers.",
+    "The latest count shown is 2,000,000 students."
+   ],
+   "visual_evidence_rule": "A 'Now' bar or endpoint must be visible at 2,000,000 on the same value scale as the earlier years.",
+   "temporal_anchor": "The final value clause: 'And now... take the exam.'",
+   "reviewer_question": "Is the present-day 2,000,000 endpoint required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The overall increase from 1941 to Now is a 200-fold rise, or an increase of 1,990,000 students.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1941",
+     "x": "1941",
+     "field": "value",
+     "value": 10000,
+     "note": "Starting value."
+    },
+    {
+     "entity": "Now",
+     "x": "Now",
+     "field": "value",
+     "value": 2000000,
+     "note": "Ending value."
+    }
+   ],
+   "computation": "2,000,000 / 10,000 = 200x; 2,000,000 - 10,000 = 1,990,000 additional students.",
+   "accepted_routes": [
+    "SAT takers increased 200-fold from 1941 to now.",
+    "The number grew by 1,990,000 students over the period.",
+    "There were 200 times as many SAT takers now as in 1941."
+   ],
+   "visual_evidence_rule": "Both 1941 and Now values must be visible together or through persistent labels so the 200x or +1,990,000 comparison can be made.",
+   "temporal_anchor": "The overall takeaway or final comparison after the Now value appears.",
+   "reviewer_question": "Must the video explicitly quantify the overall growth, not merely show rising bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The SAT-taker counts increase at every listed year: 10,000 in 1941, 80,000 in 1950, 800,000 in 1960, 1,000,000 in 1974, and 2,000,000 Now.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1941",
+     "x": "1941",
+     "field": "value",
+     "value": 10000,
+     "note": "First listed point."
+    },
+    {
+     "entity": "1950",
+     "x": "1950",
+     "field": "value",
+     "value": 80000,
+     "note": "Second listed point."
+    },
+    {
+     "entity": "1960",
+     "x": "1960",
+     "field": "value",
+     "value": 800000,
+     "note": "Third listed point."
+    },
+    {
+     "entity": "1974",
+     "x": "1974",
+     "field": "value",
+     "value": 1000000,
+     "note": "Fourth listed point."
+    },
+    {
+     "entity": "Now",
+     "x": "Now",
+     "field": "value",
+     "value": 2000000,
+     "note": "Final listed point."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The counts rise at every listed point: 10k, 80k, 800k, 1M, and 2M.",
+    "Each later listed year has more SAT takers than the previous listed year.",
+    "The trend is a steady increase across 1941, 1950, 1960, 1974, and Now."
+   ],
+   "visual_evidence_rule": "Bars or points for all five listed years must appear in chronological left-to-right order with increasing heights.",
+   "temporal_anchor": "Across the sequence of year clauses from 1941 through Now.",
+   "reviewer_question": "Must the video explicitly preserve the monotonic order of all five table points?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By 1974, SAT takers reached 1,000,000, crossing the million mark after being 800,000 in 1960.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1960",
+     "x": "1960",
+     "field": "value",
+     "value": 800000,
+     "note": "Value before the 1974 million milestone."
+    },
+    {
+     "entity": "1974",
+     "x": "1974",
+     "field": "value",
+     "value": 1000000,
+     "note": "Value at the million-taker milestone."
+    }
+   ],
+   "computation": "1,000,000 - 800,000 = 200,000; (200,000 / 800,000) * 100 = 25%.",
+   "accepted_routes": [
+    "By 1974, SAT takers reached 1,000,000, crossing the million mark.",
+    "The exam hit 1 million takers in 1974.",
+    "Between 1960 and 1974, takers rose from 800,000 to 1,000,000, a 200,000 increase."
+   ],
+   "visual_evidence_rule": "If included, a 1974 bar or point at 1,000,000 must be visible, with 1960 at 800,000 if showing the crossing or change.",
+   "temporal_anchor": "The milestone clause around 'By the next decade, it rose to a million.'",
+   "reviewer_question": "Is the 1974 million-taker milestone required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "1950: 80,000 SAT takers.",
+  "1960: 800,000 SAT takers.",
+  "Relative-to-Now index values are 0.0049 in 1941, 0.04 in 1950, 0.4 in 1960, 0.5 in 1974, and 1.0 Now."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that competition caused stronger applications.",
+  "SAT participation rate among all students or any denominator not in the table.",
+  "Extrapolating beyond the Now value or asserting future growth.",
+  "Asserting 'more than 2,000,000' if the chart only supports the table value 2,000,000.",
+  "Assuming every interval is exactly one decade, since 1960 to 1974 is 14 years."
+ ],
+ "notes": "The core mandatory story is the baseline-to-Now contrast and its 200x growth; intermediate years are valid milestones but not strictly required by the intent alone. Use only table values or stated arithmetic.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 25.8,
+  "usage": {
+   "prompt_tokens": 881,
+   "completion_tokens": 6692,
+   "total_tokens": 7573,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4709
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 497
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

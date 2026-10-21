@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_15",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that carbon dioxide is the primary source of global greenhouse gas emissions, thereby justifying the necessity of stopping its release to limit climate change.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Carbon dioxide accounts for 76% of global greenhouse gas emissions.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Carbon dioxide",
+     "x": "slice-1",
+     "field": "value",
+     "value": 76,
+     "note": "CO2 share is printed as 76%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Carbon dioxide accounts for 76% of global greenhouse gas emissions.",
+    "CO2 makes up just over three-quarters of global greenhouse gas emissions.",
+    "Carbon dioxide is 76% of the total."
+   ],
+   "visual_evidence_rule": "The carbon dioxide pie slice must be labeled with 76% and must be visually the largest slice.",
+   "temporal_anchor": "narration clause: 'Carbon dioxide ... accounts for most of the world's greenhouse gas emissions.'",
+   "reviewer_question": "Is the exact 76% share required, or is showing CO2 as 'most/largest' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Carbon dioxide is the largest source, ranking ahead of methane (16%), nitrous oxide (6%), and other gases (2%); CO2 is about 4.75 times methane and 60 percentage points higher than methane.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Carbon dioxide",
+     "x": "slice-1",
+     "field": "value",
+     "value": 76,
+     "note": "CO2 share"
+    },
+    {
+     "entity": "Methane",
+     "x": "slice-2",
+     "field": "value",
+     "value": 16,
+     "note": "methane share"
+    },
+    {
+     "entity": "Nitrous oxide",
+     "x": "slice-3",
+     "field": "value",
+     "value": 6,
+     "note": "nitrous oxide share"
+    },
+    {
+     "entity": "Other",
+     "x": "slice-4",
+     "field": "value",
+     "value": 2,
+     "note": "other share"
+    }
+   ],
+   "computation": "76 - 16 = 60 percentage points; 76 / 16 = 4.75x",
+   "accepted_routes": [
+    "CO2 is the largest source, far ahead of methane at 16%, nitrous oxide at 6%, and other at 2%.",
+    "CO2's share is about 4.75 times methane's and 60 percentage points higher than methane's.",
+    "CO2 ranks first, with methane second at 16%."
+   ],
+   "visual_evidence_rule": "The chart must show CO2 as the largest slice and should label at least methane at 16%; ideally all four slices are labeled so the ranking is visible.",
+   "temporal_anchor": "narration clause: 'It's the main culprit behind climate change.' or 'accounts for most ...'",
+   "reviewer_question": "Must the video explicitly compare CO2 to methane/others, or is the largest CO2 slice alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Carbon dioxide is a majority of global greenhouse gas emissions because its 76% share is above the 50% threshold.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Carbon dioxide",
+     "x": "slice-1",
+     "field": "value",
+     "value": 76,
+     "note": "76% exceeds a 50% majority threshold"
+    }
+   ],
+   "computation": "76 > 50",
+   "accepted_routes": [
+    "Carbon dioxide is a majority of global greenhouse gas emissions (76% > 50%).",
+    "More than half of global greenhouse gas emissions are carbon dioxide.",
+    "CO2 crosses the 50% majority threshold."
+   ],
+   "visual_evidence_rule": "The CO2 slice must visibly occupy more than half of the pie; a 50% reference line or explicit word 'majority' can support this.",
+   "temporal_anchor": "narration clause: 'accounts for most of the world's greenhouse gas emissions.'",
+   "reviewer_question": "Should the video explicitly state CO2 is a majority (>50%), or is showing 76% sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "All non-CO2 greenhouse gases together make up 24% of emissions, so CO2 is more than three times the combined share of all other gases.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Methane",
+     "x": "slice-2",
+     "field": "value",
+     "value": 16,
+     "note": "methane share"
+    },
+    {
+     "entity": "Nitrous oxide",
+     "x": "slice-3",
+     "field": "value",
+     "value": 6,
+     "note": "nitrous oxide share"
+    },
+    {
+     "entity": "Other",
+     "x": "slice-4",
+     "field": "value",
+     "value": 2,
+     "note": "other share"
+    },
+    {
+     "entity": "Carbon dioxide",
+     "x": "slice-1",
+     "field": "value",
+     "value": 76,
+     "note": "CO2 share for comparison with combined non-CO2 total"
+    }
+   ],
+   "computation": "16 + 6 + 2 = 24%; 76 / 24 ≈ 3.17x",
+   "accepted_routes": [
+    "All non-CO2 gases together are 24% of emissions.",
+    "CO2 is more than three times the combined share of all other gases.",
+    "Non-CO2 gases are less than a quarter of the total."
+   ],
+   "visual_evidence_rule": "The three non-CO2 slices should be visible and their labels should allow the viewer to see they sum to 24%, or an explicit combined callout should show 24%.",
+   "temporal_anchor": "optional supporting clause around 'accounts for most ...' or a secondary comparison in the chart labels.",
+   "reviewer_question": "Should the combined non-CO2 24% / >3x comparison be included, or is it optional beyond the main CO2 share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "CO2 is identified as the main culprit behind climate change and therefore as the necessary target for stopping emissions to limit global warming.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Carbon dioxide",
+     "x": "slice-1",
+     "field": "value",
+     "value": 76,
+     "note": "Intent/narration draws the action conclusion from CO2's dominant 76% share; no additional table number is used."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Stopping carbon dioxide release is necessary to limit global warming.",
+    "To limit warming to the level scientists call for, we must stop releasing CO2.",
+    "Because CO2 is the primary greenhouse gas, cutting CO2 emissions is central to climate action."
+   ],
+   "visual_evidence_rule": "Closing text, callout, or icon should connect the dominant CO2 slice (76%) to the action of stopping CO2 release; no extra numeric claim is required.",
+   "temporal_anchor": "final narration clause: 'And to limit global warming ... we have to stop releasing it.'",
+   "reviewer_question": "Should the video include the normative/action conclusion (stopping CO2 release is necessary), or only present the data-supported CO2 share and ranking?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Ordering of non-CO2 gases: methane > nitrous oxide > other (16% > 6% > 2%).",
+  "Displaying relative values as decimals (0.76, 0.16, 0.06, 0.02) instead of percentages.",
+  "Including the non-numeric phrase 'main culprit' if attributed to the narration rather than to the table data.",
+  "Using the table's per-entity color legend to distinguish the pie slices."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that CO2 alone causes all climate change or that stopping CO2 will immediately reverse warming; the table only gives emission shares.",
+  "Saying fossil fuel combustion is the source of CO2 or adding country, sector, or industry breakdowns not present in the table.",
+  "Using a denominator other than total global greenhouse gas emissions; the pie values sum to 100%.",
+  "Extrapolating future temperature or policy outcomes beyond the intent's stated framing."
+ ],
+ "notes": "The core data units are the 76% CO2 share, its ranking, majority threshold, and non-CO2 total. The action conclusion is included as a candidate because the intent calls for it, but it is not directly numeric in the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.04
+ },
+ "draft_cost": {
+  "sec": 47.6,
+  "usage": {
+   "prompt_tokens": 735,
+   "completion_tokens": 10714,
+   "total_tokens": 11449,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8653
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 479
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,130 @@
+{
+ "clip_id": "line_18",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Taco Inc. must be labeled or otherwise identified as the entity for the plotted series."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Taco Inc. @ 120.0",
+    "mark:Taco Inc. @ 796.9"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Taco Inc. @ 120.0",
+      "value": 0.25
+     },
+     {
+      "mark": "Taco Inc. @ 796.9",
+      "value": 0.95
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The series must visibly increase from its early low region to a later high region."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Taco Inc.)"
+   ],
+   "assertion": {
+    "mark": "Taco Inc. @ 796.9",
+    "extreme": "max",
+    "expected": 0.95,
+    "compared_set": "Taco Inc.",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plotted series must visibly reach its highest level of 0.95 before the later decline."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Taco Inc. @ 881.5",
+    "mark:Taco Inc. @ 923.8"
+   ],
+   "assertion": {
+    "low": "Taco Inc. @ 923.8",
+    "low_value": 0.25,
+    "high": "Taco Inc. @ 881.5",
+    "high_value": 0.92,
+    "delta": 0.67,
+    "ratio": 3.68,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series must visibly show a single-step collapse between two adjacent observations, from near the peak to a low value."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Taco Inc. @ 966.2"
+   ],
+   "assertion": {
+    "mark": "Taco Inc. @ 966.2",
+    "field": "value",
+    "expected": 0.28,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series must visibly end at 0.00 and not recover by the final observation."
+  }
+ ]
+}

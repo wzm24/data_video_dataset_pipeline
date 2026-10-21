@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_2",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:SUPPLY @ x_px=120.0",
+    "mark:SUPPLY @ x_px=1220.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "SUPPLY @ x_px=120.0",
+      "value": 0.0
+     },
+     {
+      "mark": "SUPPLY @ x_px=1220.0",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The SUPPLY series must be visibly increasing from the leftmost to the rightmost sampled point, starting at the bottom of the relative scale and ending at the top."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:DEMAND @ x_px=120.0",
+    "mark:DEMAND @ x_px=1220.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "DEMAND @ x_px=120.0",
+      "value": 1.0
+     },
+     {
+      "mark": "DEMAND @ x_px=1220.0",
+      "value": 0.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The DEMAND series must be visibly decreasing from the leftmost to the rightmost sampled point, starting at the top of the relative scale and ending at the bottom."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:SUPPLY @ x_px=1220.0",
+    "mark:SUPPLY @ x_px=120.0"
+   ],
+   "assertion": {
+    "greater": "SUPPLY @ x_px=1220.0",
+    "lesser": "SUPPLY @ x_px=120.0",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The SUPPLY and DEMAND series must have opposite slopes across the clip: SUPPLY visibly rising while DEMAND visibly falling."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:DEMAND @ x_px=120.0",
+    "mark:SUPPLY @ x_px=120.0"
+   ],
+   "assertion": {
+    "at": "x_px=120.0",
+    "above": "DEMAND",
+    "above_value": 1.0,
+    "below": "SUPPLY",
+    "below_value": 0.0,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show DEMAND above SUPPLY early on and SUPPLY above DEMAND later, including a visible crossing or change in relative order between the x_px=853.3 and x_px=881.5 samples."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:SUPPLY @ x_px=120.0"
+   ],
+   "assertion": {
+    "mark": "SUPPLY @ x_px=120.0",
+    "field": "value",
+    "expected": 0.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The leftmost sampled position must show DEMAND at the maximum and SUPPLY at the minimum; the rightmost sampled position must show SUPPLY at the maximum and DEMAND at the minimum."
+  }
+ ]
+}

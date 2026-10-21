@@ -1,0 +1,143 @@
+{
+ "clip_id": "line_13",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Deaths (line-1) @ x_px=120",
+    "mark:Deaths (line-1) @ x_px=560"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Deaths (line-1) @ x_px=120",
+      "value": 0.75
+     },
+     {
+      "mark": "Deaths (line-1) @ x_px=560",
+      "value": 0.64
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A visible series trace for the first Deaths series must start near 0.75 and end near 0.64, with an overall downward displacement."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Deaths (line-2) @ x_px=560",
+    "mark:Deaths (line-2) @ x_px=1110"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Deaths (line-2) @ x_px=560",
+      "value": 0.64
+     },
+     {
+      "mark": "Deaths (line-2) @ x_px=1110",
+      "value": 0.4
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A visible series trace for the second Deaths series must start near 0.64 and descend to the 0.40 minimum."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Deaths (line-2) @ x_px=1110",
+    "extreme": "min",
+    "expected": 0.4,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The lowest point of the second series must be identifiable at 0.40."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Deaths (line-2) @ x_px=1110",
+    "mark:Deaths (line-2) @ x_px=1220"
+   ],
+   "assertion": {
+    "low": "Deaths (line-2) @ x_px=1110",
+    "low_value": 0.4,
+    "high": "Deaths (line-2) @ x_px=1220",
+    "high_value": 0.45,
+    "delta": 0.05,
+    "ratio": 1.125,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "After the 0.40 point, the same series trace must rise to 0.45 by the final point."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Deaths (line-1) @ x_px=560",
+    "mark:Deaths (line-2) @ x_px=560"
+   ],
+   "assertion": {
+    "greater": "Deaths (line-1) @ x_px=560",
+    "lesser": "Deaths (line-2) @ x_px=560",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the shared x-point, both series traces must sit at the same relative level 0.64."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_40",
+ "intent_en": "To illustrate the disparity in wealth between two individuals with the same income to highlight a flaw in the tax system.",
+ "previous_intent": "To illustrate the disparity in wealth between two individuals with similar incomes, highlighting that equal income is taxed equally despite significant differences in accumulated assets.",
+ "narration_support": "because both of us have the same job and earn about the same amount of money our income gets taxed about the same... this bar represents my wealth and this is my friend's wealth",
+ "chart_support": "Bar chart showing a short bar labeled 'MY WEALTH' and a much taller bar representing the friend's wealth, visualizing a large wealth gap.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly sets up a scenario where two people have the same income but different wealth (referencing Warren). The chart visualizes this with a short bar for 'MY WEALTH' and a tall bar for the friend's wealth, supporting the intent to show wealth disparity.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,221 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "donut_17",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant shift in American public opinion regarding marijuana legalization from the 1969 baseline to the present.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data point is anchored to the year 1969, the baseline year for the comparison.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "1969",
+     "field": "x_value",
+     "value": 1969,
+     "note": "year anchor from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "1969 is the baseline year",
+    "the data point is from 1969",
+    "Gallup's 1969 measurement is the starting point"
+   ],
+   "visual_evidence_rule": "The year 1969 must be visible as the time anchor for the data point.",
+   "temporal_anchor": "since 1969",
+   "reviewer_question": "Must the clip label 1969 as the baseline year?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In 1969, 12% of respondents favored legalizing marijuana.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "1969",
+     "field": "value",
+     "value": 12,
+     "note": "percent favor legalization"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "12% favored legalization in 1969",
+    "the 1969 legalization share was 12 percent",
+    "just 12 percent supported legalizing marijuana in 1969"
+   ],
+   "visual_evidence_rule": "The 1969 legalization share must be displayed or labeled as 12%.",
+   "temporal_anchor": "when Gallup first asked the question and found that just 12% favor legalizing marijuana use",
+   "reviewer_question": "Is the exact 1969 value of 12% required, or is a rounded approximation acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 1969 legalization share was a minority, smaller than the rest of the respondents.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "1969",
+     "field": "value",
+     "value": 12,
+     "note": "percent favor legalization; used to indicate minority status"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "12% was a minority share",
+    "a minority favored legalization",
+    "the legalization share was smaller than the non-legalization share"
+   ],
+   "visual_evidence_rule": "The 1969 legalization segment must appear as the smaller part, not the majority.",
+   "temporal_anchor": "just 12% favor legalizing marijuana use",
+   "reviewer_question": "Should the clip explicitly frame 12% as a minority share, or is the raw number sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 1969 value is a percentage share of respondents, not a raw count of people.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "1969",
+     "field": "value",
+     "value": 12,
+     "note": "unit column says percent; this is a share, not a count"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "12 percent of respondents",
+    "a percentage share",
+    "not a count of people"
+   ],
+   "visual_evidence_rule": "The value must be labeled with percent or an equivalent share unit, not as a count.",
+   "temporal_anchor": "just 12% favor legalizing marijuana use",
+   "reviewer_question": "Must the clip make clear that 12% is a percentage of respondents rather than a count?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 1969 value is the historical baseline for later opinion change, not the current level.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "1969",
+     "field": "x_value",
+     "value": 1969,
+     "note": "year anchor"
+    },
+    {
+     "entity": "share",
+     "x": "1969",
+     "field": "value",
+     "value": 12,
+     "note": "baseline legalization share"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "1969 is the baseline for later comparison",
+    "this is the starting point, not today's number",
+    "the clip contrasts the 1969 level with later opinion"
+   ],
+   "visual_evidence_rule": "The 1969 value must be framed as a baseline, not as the current value.",
+   "temporal_anchor": "since 1969",
+   "reviewer_question": "Must the clip explicitly frame 1969 as the baseline for change rather than the current state?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The clip may note that opinions have changed drastically since 1969, as long as it does not assign a specific present-day number not present in the table.",
+  "The clip may mention that 1969 was when Gallup first asked the question, using the narration context."
+ ],
+ "unsupported_to_avoid": [
+  "Any present-day legalization percentage (e.g., a current value not in the table).",
+  "The 45% illegal figure from the narration, because it is not in the table.",
+  "Any exact change amount or growth rate from 1969 to the present, since the table has only the 1969 row.",
+  "Causal explanations for the opinion shift.",
+  "Chart-type, axis, color, or position prescriptions."
+ ],
+ "notes": "The table contains only the 1969 baseline value of 12% with unit percent; present-day and change values are not in the table. Units focus on the baseline year, the 12% value, its share/minority framing, its percent unit, and its baseline role.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.87
+ },
+ "draft_cost": {
+  "sec": 47.4,
+  "usage": {
+   "prompt_tokens": 895,
+   "completion_tokens": 11051,
+   "total_tokens": 11946,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9612
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 383
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

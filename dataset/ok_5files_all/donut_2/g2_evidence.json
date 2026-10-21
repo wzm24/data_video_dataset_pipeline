@@ -1,0 +1,132 @@
+{
+ "clip_id": "donut_2",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Physical @ 0"
+   ],
+   "assertion": {
+    "segment": "Physical @ 0",
+    "expected_share": 0.771,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Physical ring segment must be visible and labeled or directly text-labeled with 77.1% or a rounded equivalent such as 77%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Digital @ 1"
+   ],
+   "assertion": {
+    "segment": "Digital @ 1",
+    "expected_share": 0.125,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Digital ring segment must be visible and labeled or directly text-labeled with 12.5% or a rounded equivalent such as 13%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Physical @ 0",
+    "mark:Digital @ 1"
+   ],
+   "assertion": {
+    "low": "Digital @ 1",
+    "low_value": 12.5,
+    "high": "Physical @ 0",
+    "high_value": 77.1,
+    "delta": 64.6,
+    "ratio": 6.168,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both Physical and Digital segments or values must be visible in the same chart so the gap or ratio can be compared."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Physical @ 0"
+   ],
+   "assertion": {
+    "series": "Physical",
+    "values": [
+     77.1
+    ],
+    "threshold_between": [
+     77.1,
+     77.1
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Physical segment must appear larger than half of the ring, or the text must state that its 77.1% share is more than half."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Physical @ 0",
+    "segment:Digital @ 1",
+    "segment:Unlabelled ring segment @ 2"
+   ],
+   "assertion": {
+    "segment": "Physical @ 0",
+    "expected_share": 0.771,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The unlabelled ring segment must be visible and distinguishable, or the chart must otherwise account for the remaining 10.4%."
+  }
+ ]
+}

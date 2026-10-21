@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<g>
+<line x1="330.0" y1="130.0" x2="330.0" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="330.0" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">0</text>
+<line x1="451.4" y1="130.0" x2="451.4" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="451.4" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">1</text>
+<line x1="572.9" y1="130.0" x2="572.9" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="572.9" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">2</text>
+<line x1="694.3" y1="130.0" x2="694.3" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="694.3" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">3</text>
+<line x1="815.7" y1="130.0" x2="815.7" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="815.7" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">4</text>
+<line x1="937.1" y1="130.0" x2="937.1" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="937.1" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">5</text>
+<line x1="1058.6" y1="130.0" x2="1058.6" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="1058.6" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">6</text>
+<line x1="1180.0" y1="130.0" x2="1180.0" y2="580.0" stroke="#e0e0e0" stroke-width="1"/>
+<text x="1180.0" y="604.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333333">7</text>
+<rect x="330.0" y="104" width="26" height="14" fill="#ffff00"/>
+<text x="366.0" y="116" font-family="Arial, sans-serif" font-size="17" fill="#333333">two weeks until fully effective</text>
+<text x="314.0" y="204.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">Pfizer/BioNTech</text>
+<rect x="330.0" y="182.2" width="728.6" height="30" fill="#8faad6"/>
+<circle cx="1058.6" cy="197.2" r="16.5" fill="#8faad6"/>
+<rect x="1075.1" y="182.2" width="66.8" height="30" fill="#ffff00"/>
+<line x1="1141.9" y1="175.2" x2="1141.9" y2="219.2" stroke="#222222" stroke-width="3"/>
+<text x="314.0" y="309.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">Moderna</text>
+<rect x="330.0" y="287.2" width="728.6" height="30" fill="#5c7eb3"/>
+<circle cx="1058.6" cy="302.2" r="16.5" fill="#5c7eb3"/>
+<rect x="1075.1" y="287.2" width="66.8" height="30" fill="#ffff00"/>
+<line x1="1141.9" y1="280.2" x2="1141.9" y2="324.2" stroke="#222222" stroke-width="3"/>
+<text x="314.0" y="414.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">Johnson &amp; Johnson</text>
+<rect x="330.0" y="392.2" width="242.9" height="30" fill="#d96060"/>
+<rect x="556.4" y="390.8" width="33.0" height="33.0" fill="#d96060"/>
+<rect x="589.4" y="392.2" width="85.0" height="30" fill="#ffff00"/>
+<line x1="674.4" y1="385.2" x2="674.4" y2="429.2" stroke="#222222" stroke-width="3"/>
+<text x="314.0" y="519.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#222222">AstraZeneca</text>
+<rect x="330.0" y="497.2" width="728.6" height="30" fill="#b04b4b"/>
+<rect x="1042.1" y="495.8" width="33.0" height="33.0" fill="#b04b4b"/>
+<rect x="1075.1" y="497.2" width="66.8" height="30" fill="#ffff00"/>
+<line x1="1141.9" y1="490.2" x2="1141.9" y2="534.2" stroke="#222222" stroke-width="3"/>
+<text x="755.0" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#222222">Months since last shot</text>
+</g></svg>

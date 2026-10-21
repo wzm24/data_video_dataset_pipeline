@@ -1,0 +1,153 @@
+{
+ "clip_id": "pie_2",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Transportation 28% @ 0",
+    "extreme": "max",
+    "expected": 30.8,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Transportation must be visibly the largest wedge/bar and be labeled with its 30.8% share or an equivalent rounded 31% label."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Transportation 28% @ 0",
+    "mark:Electricity 23% @ 1"
+   ],
+   "assertion": {
+    "greater": "Transportation 28% @ 0",
+    "lesser": "Electricity 23% @ 1",
+    "expected_ratio": 1.2833,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both Transportation and Electricity must be visible with their values or a delta annotation must show the 6.8-point lead."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Transportation 28% @ 0",
+    "mark:Electricity 23% @ 1",
+    "mark:Industry 22% @ 2",
+    "mark:Commercial and residential 12% @ 3",
+    "mark:Agriculture 10% @ 4"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Transportation 28% @ 0",
+      "value": 30.8
+     },
+     {
+      "mark": "Electricity 23% @ 1",
+      "value": 24.0
+     },
+     {
+      "mark": "Industry 22% @ 2",
+      "value": 21.2
+     },
+     {
+      "mark": "Commercial and residential 12% @ 3",
+      "value": 13.2
+     },
+     {
+      "mark": "Agriculture 10% @ 4",
+      "value": 10.9
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All five sector labels must be visible, with slices or bars arranged/readable in descending order or otherwise clearly comparable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Transportation 28% @ 0",
+    "segment:Electricity 23% @ 1",
+    "segment:Industry 22% @ 2"
+   ],
+   "assertion": {
+    "segment": "Transportation 28% @ 0",
+    "expected_share": 0.3077,
+    "total_of": "%",
+    "total": 100.1,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The top three wedges/bars must be identifiable, or a combined annotation must show the three-sector total of 76.0%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Transportation 28% @ 0",
+    "segment:Electricity 23% @ 1",
+    "segment:Industry 22% @ 2",
+    "segment:Commercial and residential 12% @ 3",
+    "segment:Agriculture 10% @ 4"
+   ],
+   "assertion": {
+    "segment": "Transportation 28% @ 0",
+    "expected_share": 0.3077,
+    "total_of": "%",
+    "total": 100.1,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The pie/whole-chart structure must imply a complete breakdown, or a total annotation may show the rounded 100% sum."
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "clip_id": "bar_96",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:SHIA @ x_px=640.0"
+   ],
+   "assertion": {
+    "mark": "SHIA @ x_px=640.0",
+    "field": "value",
+    "expected": 63.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar labeled SHIA must be visible and its value/annotation must show 63."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:SUNNI @ x_px=640.0"
+   ],
+   "assertion": {
+    "mark": "SUNNI @ x_px=640.0",
+    "field": "value",
+    "expected": 20.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A bar labeled SUNNI must be visible and its value/annotation must show 20."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:SHIA @ x_px=640.0",
+    "mark:SUNNI @ x_px=640.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "SHIA @ x_px=640.0",
+      "value": 63.0
+     },
+     {
+      "mark": "SUNNI @ x_px=640.0",
+      "value": 20.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The SHIA bar must be visibly taller than the SUNNI bar."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:SHIA @ x_px=640.0",
+    "mark:SUNNI @ x_px=640.0"
+   ],
+   "assertion": {
+    "greater": "SHIA @ x_px=640.0",
+    "lesser": "SUNNI @ x_px=640.0",
+    "expected_ratio": 3.15,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A difference annotation or bar-length gap must make the 43-unit separation visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:SHIA @ x_px=640.0",
+    "segment:SUNNI @ x_px=640.0"
+   ],
+   "assertion": {
+    "segment": "SHIA @ x_px=640.0",
+    "expected_share": 0.759,
+    "total_of": "unknown",
+    "total": 83.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If shown, a stacked/combined bar or percentage labels must display roughly 76% Shia and 24% Sunni of the 63+20 total."
+  }
+ ]
+}

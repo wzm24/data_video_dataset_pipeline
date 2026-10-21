@@ -1,0 +1,174 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_36",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the company's business model, clarifying that while the majority of restaurants are franchised, the company retains ownership of the real estate.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Franchised restaurants account for 20% of the total restaurant mix.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "franchised",
+     "x": "franchised",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "printed as 20%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Franchised restaurants make up 20% of the total.",
+    "One-fifth of restaurants are franchised.",
+    "The franchised share is 20%."
+   ],
+   "visual_evidence_rule": "A donut slice, bar, or label must show 'franchised' at 20% of the whole.",
+   "temporal_anchor": "the clause introducing the restaurant mix, e.g. while the company only owns and operates...",
+   "reviewer_question": "Should the video present franchised restaurants as 20% from the table even though the intent says a majority are franchised?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The remaining non-franchised restaurants account for 80%, derived as the complement of the printed 20% franchised share.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "franchised",
+     "x": "franchised",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "complement derived: 1 - 0.2000 = 0.8000 (80%)"
+    }
+   ],
+   "computation": "1 - 0.2000 = 0.8000 (80%)",
+   "accepted_routes": [
+    "The remaining 80% are non-franchised.",
+    "Company-owned or operated restaurants account for 80%.",
+    "Non-franchised share is 80%, derived as 100% minus 20%."
+   ],
+   "visual_evidence_rule": "A complementary slice or bar must show non-franchised at 80%, or the chart must clearly partition 20% versus 80%.",
+   "temporal_anchor": "the clause contrasting owned/operated versus franchised restaurants",
+   "reviewer_question": "Is the derived 80% non-franchised share required to explain the restaurant mix?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The company retains ownership of the buildings and land beneath the restaurants, even when restaurant operations are franchised.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [],
+   "computation": "none",
+   "accepted_routes": [
+    "The company owns the buildings and land even when restaurants are franchised.",
+    "Real estate ownership stays with the company.",
+    "It retains the real estate beneath franchised restaurants."
+   ],
+   "visual_evidence_rule": "An icon or label must link the company to ownership of buildings/land, even for franchised restaurants.",
+   "temporal_anchor": "the clause clarifying real estate ownership, e.g. it owns almost all of their buildings and the land beneath them",
+   "reviewer_question": "Is the qualitative real-estate ownership claim required even though the table has no real-estate metric?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The franchised share (20%) is smaller than the derived non-franchised share (80%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "franchised",
+     "x": "franchised",
+     "field": "relative_value",
+     "value": 0.2,
+     "note": "compare with derived non-franchised 0.8000 from 1 - 0.2000"
+    }
+   ],
+   "computation": "0.2000 < 0.8000, where 0.8000 = 1 - 0.2000",
+   "accepted_routes": [
+    "Franchised (20%) is smaller than non-franchised (80%).",
+    "Non-franchised restaurants outnumber franchised restaurants 80% to 20%.",
+    "Franchising covers one-fifth, while non-franchising covers four-fifths."
+   ],
+   "visual_evidence_rule": "Both the 20% and 80% marks must be visible together so their relative size is clear.",
+   "temporal_anchor": "the clause contrasting franchised and non-franchised shares",
+   "reviewer_question": "Should the video highlight that non-franchised (80%) is larger than franchised (20%), correcting the intent's majority-franchised framing?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the 20% franchised share as one-fifth of a whole.",
+  "Using a donut or stacked bar to make the 20%/80% partition visible."
+ ],
+ "unsupported_to_avoid": [
+  "Claim that franchised restaurants are the majority: the table shows 20% franchised, and the derived non-franchised share is 80%.",
+  "State that the company owns and operates 15% of restaurants: 15 is not in the table.",
+  "State that 85% of restaurants are franchised: 85 is not in the table.",
+  "Give a quantified real-estate ownership share such as 'almost all buildings/land': no real-estate values are in the table.",
+  "Causal claim that franchising causes the company to retain real estate."
+ ],
+ "notes": "The table contains only franchised=20%, so the derived non-franchised share is 80%; this conflicts with the intent's majority-franchised and the narration's 15%/85%. The real-estate ownership point comes from the intent/narration but has no table metric.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.84
+ },
+ "draft_cost": {
+  "sec": 43.6,
+  "usage": {
+   "prompt_tokens": 615,
+   "completion_tokens": 10035,
+   "total_tokens": 10650,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8700
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 359
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

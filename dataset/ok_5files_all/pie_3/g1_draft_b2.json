@@ -1,0 +1,307 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_3",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that driving alone is the predominant mode of commuting for Americans, highlighting the minimal share of public transportation usage to explain the low reliance on transit.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Drive alone is the largest commuting mode, accounting for 76.3% of commuters.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "1",
+     "field": "value",
+     "value": 76.3,
+     "note": "percent of commuting mode share; printed source"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Drive alone accounts for 76.3% of commuting.",
+    "About 76% of Americans drive alone to work.",
+    "Drive alone is the predominant mode at 76.3%."
+   ],
+   "visual_evidence_rule": "Drive-alone slice must be clearly the largest and labeled or implied at 76.3% or about 76%.",
+   "temporal_anchor": "Predominant-mode/title clause implied by intent; if narration only has the transit clause, use the chart title or annotation.",
+   "reviewer_question": "Should 76.3% be the headline share for drive alone, or is it enough to show it as the largest slice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Public transportation accounts for only 5.2% of commuting mode share.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Public transportation",
+     "x": "0",
+     "field": "value",
+     "value": 5.2,
+     "note": "percent of commuting mode share; estimated"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Public transportation accounts for 5.2% of commutes.",
+    "Only about 5% use public transportation.",
+    "Public transportation is a small 5.2% slice."
+   ],
+   "visual_evidence_rule": "Public-transportation slice must be visibly small and labeled or implied at 5.2% or about 5%.",
+   "temporal_anchor": "Narration clause: 'most Americans don't rely on public transit'.",
+   "reviewer_question": "Should public transportation's 5.2% be shown as an exact label, rounded to about 5%, or only visually small?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Drive alone (76.3%) exceeds all other commuting modes combined, which total 23.7%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "1",
+     "field": "value",
+     "value": 76.3,
+     "note": "base for complement calculation"
+    },
+    {
+     "entity": "Public transportation",
+     "x": "0",
+     "field": "value",
+     "value": 5.2,
+     "note": "part of non-drive-alone total"
+    },
+    {
+     "entity": "Carpool",
+     "x": "5",
+     "field": "value",
+     "value": 8.2,
+     "note": "part of non-drive-alone total"
+    },
+    {
+     "entity": "Work at home",
+     "x": "3",
+     "field": "value",
+     "value": 5.1,
+     "note": "part of non-drive-alone total"
+    },
+    {
+     "entity": "Walk",
+     "x": "4",
+     "field": "value",
+     "value": 2.5,
+     "note": "part of non-drive-alone total"
+    },
+    {
+     "entity": "Taxi, motorcycle, or other",
+     "x": "2",
+     "field": "value",
+     "value": 1.7,
+     "note": "part of non-drive-alone total"
+    },
+    {
+     "entity": "Bicycle",
+     "x": "6",
+     "field": "value",
+     "value": 1.0,
+     "note": "part of non-drive-alone total"
+    }
+   ],
+   "computation": "100 - 76.3 = 23.7; 5.2 + 8.2 + 5.1 + 2.5 + 1.7 + 1.0 = 23.7",
+   "accepted_routes": [
+    "Drive alone (76.3%) is more than all other modes combined (23.7%).",
+    "Non-drive-alone modes total 23.7%.",
+    "76.3% drive alone, leaving 23.7% for everything else."
+   ],
+   "visual_evidence_rule": "Either a single drive-alone wedge versus combined rest, or an annotation that non-drive-alone modes total 23.7%.",
+   "temporal_anchor": "Predominant-mode clause implied by intent; if narration only has the transit clause, use the chart annotation.",
+   "reviewer_question": "Should the video explicitly state that drive alone exceeds all other modes combined?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Public transportation is only about 6.8% as common as driving alone; driving alone is about 14.7 times public transportation.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Public transportation",
+     "x": "0",
+     "field": "value",
+     "value": 5.2,
+     "note": "numerator for share-of-drive-alone ratio"
+    },
+    {
+     "entity": "Drive alone",
+     "x": "1",
+     "field": "value",
+     "value": 76.3,
+     "note": "denominator for ratio; also numerator for multiplier"
+    }
+   ],
+   "computation": "5.2 / 76.3 = 0.06815 (about 6.8%); 76.3 / 5.2 = 14.67 (about 14.7x)",
+   "accepted_routes": [
+    "Public transportation is only about 7% as common as driving alone.",
+    "Driving alone is nearly 15 times public transportation.",
+    "For every public-transit commuter, about 15 drive alone."
+   ],
+   "visual_evidence_rule": "A ratio annotation or side-by-side comparison showing transit is about 1/15 of drive alone, or drive alone is about 14.7 times transit.",
+   "temporal_anchor": "Narration clause: 'low reliance on transit' phrase.",
+   "reviewer_question": "Should the video include a ratio or multiplier between public transit and drive alone, or just separate percentages?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Ranking of modes: drive alone is 1st at 76.3%, carpool 2nd at 8.2%, public transportation 3rd at 5.2% just above work at home at 5.1%, then walk, taxi/motorcycle/other, and bicycle at 1.0%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Drive alone",
+     "x": "1",
+     "field": "value",
+     "value": 76.3,
+     "note": "rank 1"
+    },
+    {
+     "entity": "Carpool",
+     "x": "5",
+     "field": "value",
+     "value": 8.2,
+     "note": "rank 2"
+    },
+    {
+     "entity": "Public transportation",
+     "x": "0",
+     "field": "value",
+     "value": 5.2,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Work at home",
+     "x": "3",
+     "field": "value",
+     "value": 5.1,
+     "note": "rank 4, just below public transportation"
+    },
+    {
+     "entity": "Walk",
+     "x": "4",
+     "field": "value",
+     "value": 2.5,
+     "note": "rank 5"
+    },
+    {
+     "entity": "Taxi, motorcycle, or other",
+     "x": "2",
+     "field": "value",
+     "value": 1.7,
+     "note": "rank 6"
+    },
+    {
+     "entity": "Bicycle",
+     "x": "6",
+     "field": "value",
+     "value": 1.0,
+     "note": "rank 7, smallest"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Drive alone > carpool > public transportation > work at home > walk > taxi/motorcycle/other > bicycle.",
+    "Public transportation is third at 5.2%, just above work at home at 5.1%, and is not the absolute smallest.",
+    "Bicycle is the smallest listed mode at 1.0%."
+   ],
+   "visual_evidence_rule": "All slices must be sized or ordered correctly; public transit must not be shown as the smallest slice; bicycle should be the smallest if distinguished.",
+   "temporal_anchor": "Narration clause: 'most Americans don't rely on public transit' or chart legend.",
+   "reviewer_question": "Should the video explicitly avoid calling public transportation the smallest mode, given bicycle is 1.0%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Public transportation (5.2%) and work at home (5.1%) are nearly identical.",
+  "Carpool is the second-largest mode at 8.2%.",
+  "Bicycle is the smallest listed mode at 1.0%.",
+  "Taxi, motorcycle, or other is 1.7% of commuting mode share."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as people drive alone because public transit is 5.2%.",
+  "Calling public transportation the absolute smallest mode; bicycle is smaller at 1.0%.",
+  "Extrapolating to all trips, non-commute travel, or other years or geographies.",
+  "Using a denominator other than commuting mode share, e.g., '5.2% of Americans'.",
+  "Implying shares sum to more than 100% or omitting that the table is mode share."
+ ],
+ "notes": "All listed shares sum to 100%; drive alone is printed, others estimated. Avoid treating public transit as the absolute minimum because bicycle is 1.0%.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 41.7,
+  "usage": {
+   "prompt_tokens": 756,
+   "completion_tokens": 10044,
+   "total_tokens": 10800,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7674
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 500
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

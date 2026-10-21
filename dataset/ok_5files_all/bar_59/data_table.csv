@@ -1,0 +1,10 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_59,Detroit,detroit,750.0,,1.000,0.6250,,#d3d3d3,printed
+bar_59,Chicago,chicago,718.5,,0.921,0.5758,,#d3d3d3,printed
+bar_59,New Orleans,new-orleans,596.5,,0.616,0.3852,,#d3d3d3,printed
+bar_59,New York,new-york,554.6,,0.511,0.3197,,#d3d3d3,printed
+bar_59,Los Angeles,los-angeles,462.8,,0.282,0.1762,,#d3d3d3,printed
+bar_59,"Washington, DC",washington-dc,422.1,,0.180,0.1127,,#d3d3d3,printed
+bar_59,Oakland,oakland,411.6,,0.154,0.0963,,#d3d3d3,printed
+bar_59,Cleveland,cleveland,411.6,,0.154,0.0963,,#d3d3d3,printed
+bar_59,Atlanta,atlanta,411.6,,0.154,0.0963,,#d3d3d3,printed

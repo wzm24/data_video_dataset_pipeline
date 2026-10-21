@@ -1,0 +1,121 @@
+{
+ "clip_id": "donut_40",
+ "family": "donut",
+ "chart_form": "donut/full_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:spayed or neutered @ spayed or neutered"
+   ],
+   "assertion": {
+    "segment": "spayed or neutered @ spayed or neutered",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 84.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A single-slice/donut or bar labeled 'spayed or neutered' must display 84% or 0.84 as its value."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:spayed or neutered @ spayed or neutered"
+   ],
+   "assertion": {
+    "series": "spayed or neutered",
+    "values": [
+     84.0
+    ],
+    "threshold_between": [
+     84.0,
+     84.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual must make the 84% share read as majority-scale, e.g., a mostly filled donut or a bar clearly above the halfway mark."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:spayed or neutered @ spayed or neutered"
+   ],
+   "assertion": {
+    "segment": "spayed or neutered @ spayed or neutered",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 84.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If shown, the remaining donut slice or bar segment must be 16% or labeled as not spayed/neutered."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart label or on-screen context must identify the denominator as cats or spayed/neutered status, not households."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If decimal form is used, it must be 0.84 or 0.8400, not 0.084 or 8.4."
+  }
+ ]
+}

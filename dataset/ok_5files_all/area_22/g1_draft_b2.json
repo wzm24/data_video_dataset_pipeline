@@ -1,0 +1,228 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_22",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the relative volume of all water on Earth compared to the total volume of the planet.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The comparison has two entities: Earth (the whole planet) and all water on Earth.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "",
+     "field": "value",
+     "value": 12742,
+     "note": "Earth is the reference planet"
+    },
+    {
+     "entity": "All the water on Earth",
+     "x": "",
+     "field": "value",
+     "value": 1385,
+     "note": "All water is the compared entity"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Earth and all water on Earth are the two compared entities",
+    "The clip compares the whole planet with all water on Earth",
+    "Two entities: Earth and all water on Earth"
+   ],
+   "visual_evidence_rule": "Both entities must be identifiable as the compared subjects.",
+   "temporal_anchor": "entire narration, especially 'All the water on Earth' and 'Earth'",
+   "reviewer_question": "Does the video explicitly identify both Earth and all water on Earth as the compared entities?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Earth's diameter is 12,742 km, the larger/reference value in the table.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "",
+     "field": "value",
+     "value": 12742,
+     "note": "unit km_diameter; also relative_value 1.0000"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Earth is 12,742 km across",
+    "Earth's diameter is about 12,700 km",
+    "Earth's diameter is 12,742 km (the maximum value in the table)"
+   ],
+   "visual_evidence_rule": "The Earth reference size must be readable or encoded as the 12,742 km value.",
+   "temporal_anchor": "the word 'Earth' in the narration",
+   "reviewer_question": "Must the video state Earth's 12,742 km diameter, or is the visual reference enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "All water on Earth has an equivalent-sphere diameter of 1,385 km.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "All the water on Earth",
+     "x": "",
+     "field": "value",
+     "value": 1385,
+     "note": "unit km_diameter; relative_value 0.1087"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "All water would form a sphere 1,385 km across",
+    "The water sphere's diameter is about 1,400 km",
+    "All water on Earth is represented by a 1,385 km diameter sphere"
+   ],
+   "visual_evidence_rule": "The water body must be labelled or encoded with its 1,385 km diameter.",
+   "temporal_anchor": "the phrase 'All the water on Earth'",
+   "reviewer_question": "Must the video state the 1,385 km diameter for all water, or can it only show the relative size?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "All water's diameter is about 0.1087 of Earth's diameter, roughly one-ninth.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "All the water on Earth",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1087,
+     "note": "relative to Earth's diameter; table normalization"
+    }
+   ],
+   "computation": "1385 / 12742 ≈ 0.1087 (matches table relative_value)",
+   "accepted_routes": [
+    "The water sphere is about one-ninth as wide as Earth",
+    "All water's diameter is about 0.109 times Earth's diameter",
+    "The water diameter is roughly 1/9 of Earth's diameter"
+   ],
+   "visual_evidence_rule": "The rendered sizes must make the water sphere visibly about one-ninth of Earth's diameter, not about one-ninth of its volume.",
+   "temporal_anchor": "the phrase 'compared to Earth'",
+   "reviewer_question": "Is the diameter comparison required, or is only the volume comparison needed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "All water's volume is only about 0.0013 of Earth's volume, roughly one part in 780, derived by cubing the diameter ratio.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "All the water on Earth",
+     "x": "",
+     "field": "value",
+     "value": 1385,
+     "note": "water equivalent-sphere diameter in km"
+    },
+    {
+     "entity": "Earth",
+     "x": "",
+     "field": "value",
+     "value": 12742,
+     "note": "Earth diameter in km"
+    }
+   ],
+   "computation": "(1385 / 12742)^3 ≈ 0.00128",
+   "accepted_routes": [
+    "All water is about one-thousandth of Earth's volume",
+    "The water volume is roughly 1/780 of Earth's volume",
+    "All water's volume is about 0.0013 times Earth's volume"
+   ],
+   "visual_evidence_rule": "The chart must convey a volume share much smaller than the diameter share; if stated, it must be tied to the cube of the displayed diameters.",
+   "temporal_anchor": "the phrase 'about this volume' in the narration",
+   "reviewer_question": "Must the video state the derived volume share (about 0.0013), or is the visual sphere comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The comparison is a static two-entity size comparison, not a time trend.",
+  "The water sphere is qualitatively much smaller than Earth, even without exact numbers."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state that all water is 0.1087 of Earth's volume; 0.1087 is the diameter ratio from the table's relative_value.",
+  "Do not call the 0.1087 relative_value a percentage or a volume share.",
+  "Do not claim the water is liquid, fresh, accessible, or a surface layer unless separately supported.",
+  "Do not give exact volume in km^3 unless the sphere-volume formula is explicitly stated.",
+  "Do not infer causation or environmental consequences."
+ ],
+ "notes": "The table's unit is km_diameter, so the direct table values are diameters; the intent's volume comparison requires cubing the diameter ratio. The table's relative_value 0.1087 must not be confused with the volume share.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.04
+ },
+ "draft_cost": {
+  "sec": 64.4,
+  "usage": {
+   "prompt_tokens": 873,
+   "completion_tokens": 14941,
+   "total_tokens": 15814,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13332
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 361
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Share of profits spent on stock buybacks</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#d3d3d3" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#d3d3d3" stroke-width="3"/>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,590.8 151.4,531.0 182.9,462.0 214.3,485.0 245.7,439.0 277.1,508.0 308.6,485.0 340.0,531.0 371.4,554.0 402.9,544.8 434.3,517.2 465.7,498.8 497.1,462.0 528.6,439.0 560.0,416.0 591.4,425.2 622.9,406.8 654.3,393.0 685.7,416.0 717.1,370.0 748.6,324.0 937.1,158.4 968.6,278.0 1000.0,416.0 1031.4,370.0 1062.9,393.0 1094.3,347.0 1125.7,301.0 1157.1,278.0 1188.6,255.0 1220.0,268.8" fill="none" stroke="#c97b88" stroke-width="3" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="268.8" r="6" fill="#c97b88" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="268.8" r="6" fill="#c97b88" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="268.8" r="6" fill="#c97b88" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="120.0" y="554.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333"><tspan x="120.0" dy="0">1982</tspan><tspan x="120.0" dy="18">0.5%</tspan></text>
+<text data-role="point-label" x="937.1" y="122.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333"><tspan x="937.1" dy="0">2008</tspan><tspan x="937.1" dy="18">77%</tspan></text>
+<text data-role="point-label" x="1220.0" y="232.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333"><tspan x="1220.0" dy="0">2018</tspan><tspan x="1220.0" dy="18">65%</tspan></text>
+</g>
+</g>
+</svg>

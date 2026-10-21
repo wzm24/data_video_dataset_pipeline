@@ -1,0 +1,37 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,name_source,entity_original
+bar_151,Jan '19,jan-19,282.8,,,0.0924,relative,#7b1fa2,relative_only,A great deal,vlm_axis,Jan '19
+bar_151,Jan '19,jan-19,282.8,,,0.1372,relative,#a396b8,relative_only,A fair amount,vlm_axis,Jan '19
+bar_151,Apr '20,apr-20,368.3,,,0.1135,relative,#7b1fa2,relative_only,A great deal,vlm_axis,Apr '20
+bar_151,Apr '20,apr-20,368.3,,,0.1214,relative,#a396b8,relative_only,A fair amount,vlm_axis,Apr '20
+bar_151,Nov '20,nov-20,453.9,,,0.1056,relative,#7b1fa2,relative_only,A great deal,vlm_axis,Nov '20
+bar_151,Nov '20,nov-20,453.9,,,0.1187,relative,#a396b8,relative_only,A fair amount,vlm_axis,Nov '20
+bar_151,Jan '19,jan-19,539.5,,,0.0844,relative,#d32f2f,relative_only,,vlm_axis,Jan '19
+bar_151,Jan '19,jan-19,539.5,,,0.1478,relative,#f0bcb8,relative_only,,vlm_axis,Jan '19
+bar_151,Apr '20,apr-20,625.0,,,0.0818,relative,#d32f2f,relative_only,,vlm_axis,Apr '20
+bar_151,Apr '20,apr-20,625.0,,,0.1425,relative,#f0bcb8,relative_only,,vlm_axis,Apr '20
+bar_151,Nov '20,nov-20,710.6,,,0.0686,relative,#d32f2f,relative_only,,vlm_axis,Nov '20
+bar_151,Nov '20,nov-20,710.6,,,0.1451,relative,#f0bcb8,relative_only,,vlm_axis,Nov '20
+bar_151,Jan '19,jan-19,796.1,,,0.0976,relative,#455a64,relative_only,,vlm_axis,Jan '19
+bar_151,Jan '19,jan-19,796.1,,,0.1319,relative,#42a5f5,relative_only,,vlm_axis,Jan '19
+bar_151,Apr '20,apr-20,881.7,,,0.1399,relative,#455a64,relative_only,,vlm_axis,Apr '20
+bar_151,Apr '20,apr-20,881.7,,,0.1029,relative,#42a5f5,relative_only,,vlm_axis,Apr '20
+bar_151,Nov '20,nov-20,967.2,,,0.1425,relative,#455a64,relative_only,,vlm_axis,Nov '20
+bar_151,Nov '20,nov-20,967.2,,,0.0950,relative,#42a5f5,relative_only,,vlm_axis,Nov '20
+bar_151,Jan '19,jan-19,282.8,,,0.0924,relative,#7b1fa2,relative_only,A great deal,vlm_axis,Jan '19
+bar_151,Jan '19,jan-19,282.8,,,0.1346,relative,#a396b8,relative_only,A fair amount,vlm_axis,Jan '19
+bar_151,Apr '20,apr-20,368.3,,,0.1029,relative,#7b1fa2,relative_only,A great deal,vlm_axis,Apr '20
+bar_151,Apr '20,apr-20,368.3,,,0.1267,relative,#a396b8,relative_only,A fair amount,vlm_axis,Apr '20
+bar_151,Nov '20,nov-20,453.9,,,0.1029,relative,#7b1fa2,relative_only,A great deal,vlm_axis,Nov '20
+bar_151,Nov '20,nov-20,453.9,,,0.1187,relative,#a396b8,relative_only,A fair amount,vlm_axis,Nov '20
+bar_151,Jan '19,jan-19,539.5,,,0.0712,relative,#d32f2f,relative_only,,vlm_axis,Jan '19
+bar_151,Jan '19,jan-19,539.5,,,0.1451,relative,#f0bcb8,relative_only,,vlm_axis,Jan '19
+bar_151,Apr '20,apr-20,625.0,,,0.0712,relative,#d32f2f,relative_only,,vlm_axis,Apr '20
+bar_151,Apr '20,apr-20,625.0,,,0.1531,relative,#f0bcb8,relative_only,,vlm_axis,Apr '20
+bar_151,Nov '20,nov-20,710.6,,,0.0581,relative,#d32f2f,relative_only,,vlm_axis,Nov '20
+bar_151,Nov '20,nov-20,710.6,,,0.1451,relative,#f0bcb8,relative_only,,vlm_axis,Nov '20
+bar_151,Jan '19,jan-19,796.1,,,0.1135,relative,#455a64,relative_only,,vlm_axis,Jan '19
+bar_151,Jan '19,jan-19,796.1,,,0.1267,relative,#42a5f5,relative_only,,vlm_axis,Jan '19
+bar_151,Apr '20,apr-20,881.7,,,0.1372,relative,#455a64,relative_only,,vlm_axis,Apr '20
+bar_151,Apr '20,apr-20,881.7,,,0.1029,relative,#42a5f5,relative_only,,vlm_axis,Apr '20
+bar_151,Nov '20,nov-20,967.2,,,0.1451,relative,#455a64,relative_only,,vlm_axis,Nov '20
+bar_151,Nov '20,nov-20,967.2,,,0.0976,relative,#42a5f5,relative_only,,vlm_axis,Nov '20

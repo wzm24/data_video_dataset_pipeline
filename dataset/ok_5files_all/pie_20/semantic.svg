@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#efefef"/>
+<text x="320" y="179" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="700" fill="#111111">&lt;MIN WAGE</text>
+<path d="M 320 390 L 320.0 200.8 A 189.4 189.4 0 1 1 271.0 573.2 Z" fill="#d18397" stroke="#ffffff" stroke-width="2"/>
+<path d="M 320 390 L 271.0 573.2 A 189.4 189.4 0 0 1 320.0 200.8 Z" fill="#bfbfbf" stroke="#ffffff" stroke-width="2"/>
+<text x="960" y="179" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="700" fill="#111111">OTHER INCOME</text>
+<path d="M 960 390 L 960.0 200.8 A 189.4 189.4 0 1 1 844.7 540.5 Z" fill="#d18397" stroke="#ffffff" stroke-width="2"/>
+<path d="M 960 390 L 844.7 540.5 A 189.4 189.4 0 0 1 960.0 200.8 Z" fill="#bfbfbf" stroke="#ffffff" stroke-width="2"/>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#111111"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">Causes of wrongful convictions</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="200.0" y1="560.0" x2="1080.0" y2="560.0" stroke="#cccccc" stroke-width="3"/>
+<line data-role="axis" x1="200.0" y1="150.0" x2="200.0" y2="560.0" stroke="#cccccc" stroke-width="3"/>
+<line data-role="tick" x1="192.0" y1="560.0" x2="200.0" y2="560.0" stroke="#cccccc" stroke-width="2"/>
+<text data-role="tick-label" x="184.0" y="566.0" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#e5e5e5">0%</text>
+<line data-role="gridline" x1="200.0" y1="457.5" x2="1080.0" y2="457.5" stroke="#ffffff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+<line data-role="tick" x1="192.0" y1="457.5" x2="200.0" y2="457.5" stroke="#cccccc" stroke-width="2"/>
+<text data-role="tick-label" x="184.0" y="463.5" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#e5e5e5">25%</text>
+<line data-role="gridline" x1="200.0" y1="355.0" x2="1080.0" y2="355.0" stroke="#ffffff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+<line data-role="tick" x1="192.0" y1="355.0" x2="200.0" y2="355.0" stroke="#cccccc" stroke-width="2"/>
+<text data-role="tick-label" x="184.0" y="361.0" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#e5e5e5">50%</text>
+<line data-role="gridline" x1="200.0" y1="252.5" x2="1080.0" y2="252.5" stroke="#ffffff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+<line data-role="tick" x1="192.0" y1="252.5" x2="200.0" y2="252.5" stroke="#cccccc" stroke-width="2"/>
+<text data-role="tick-label" x="184.0" y="258.5" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#e5e5e5">75%</text>
+<line data-role="gridline" x1="200.0" y1="150.0" x2="1080.0" y2="150.0" stroke="#ffffff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+<line data-role="tick" x1="192.0" y1="150.0" x2="200.0" y2="150.0" stroke="#cccccc" stroke-width="2"/>
+<text data-role="tick-label" x="184.0" y="156.0" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#e5e5e5">100%</text>
+<g id="entity-eyewitness-misinterpretation" data-role="entity" data-entity-id="eyewitness-misinterpretation" data-label="Eyewitness misinterpretation">
+<rect id="eyewitness-misinterpretation-bar" data-role="bar" data-entity-id="eyewitness-misinterpretation" data-value="72" x="244.0" y="264.8" width="132.0" height="295.2" fill="#F05040" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="eyewitness-misinterpretation-value-label" data-role="value-label" data-entity-id="eyewitness-misinterpretation" x="310.0" y="252.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#f2f2f2">72%</text>
+<text id="eyewitness-misinterpretation-label" data-role="category-label" data-entity-id="eyewitness-misinterpretation" x="310.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#e5e5e5">Eyewitness misinterpretation</text>
+</g>
+<g id="entity-improper-forensics" data-role="entity" data-entity-id="improper-forensics" data-label="Improper forensics">
+<rect id="improper-forensics-bar" data-role="bar" data-entity-id="improper-forensics" data-value="47" x="464.0" y="367.3" width="132.0" height="192.7" fill="#4668A3" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="improper-forensics-value-label" data-role="value-label" data-entity-id="improper-forensics" x="530.0" y="355.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#f2f2f2">47%</text>
+<text id="improper-forensics-label" data-role="category-label" data-entity-id="improper-forensics" x="530.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#e5e5e5">Improper forensics</text>
+</g>
+<g id="entity-false-confessions" data-role="entity" data-entity-id="false-confessions" data-label="False confessions">
+<rect id="false-confessions-bar" data-role="bar" data-entity-id="false-confessions" data-value="27" x="684.0" y="449.3" width="132.0" height="110.7" fill="#4668A3" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="false-confessions-value-label" data-role="value-label" data-entity-id="false-confessions" x="750.0" y="437.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#f2f2f2">27%</text>
+<text id="false-confessions-label" data-role="category-label" data-entity-id="false-confessions" x="750.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#e5e5e5">False confessions</text>
+</g>
+<g id="entity-informant" data-role="entity" data-entity-id="informant" data-label="Informant">
+<rect id="informant-bar" data-role="bar" data-entity-id="informant" data-value="15" x="904.0" y="498.5" width="132.0" height="61.5" fill="#4668A3" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="informant-value-label" data-role="value-label" data-entity-id="informant" x="970.0" y="486.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#f2f2f2">15%</text>
+<text id="informant-label" data-role="category-label" data-entity-id="informant" x="970.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#e5e5e5">Informant</text>
+</g>
+</g>
+</svg>

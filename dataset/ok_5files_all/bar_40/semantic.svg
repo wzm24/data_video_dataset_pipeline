@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#222529"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">A better way to tax the rich</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600.0" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0</text>
+<line data-role="tick" x1="112" y1="534.9" x2="120" y2="534.9" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="540.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.2</text>
+<line data-role="tick" x1="112" y1="469.7" x2="120" y2="469.7" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="475.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.4</text>
+<line data-role="tick" x1="112" y1="404.6" x2="120" y2="404.6" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="410.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.6</text>
+<line data-role="tick" x1="112" y1="339.4" x2="120" y2="339.4" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="345.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.8</text>
+<line data-role="tick" x1="112" y1="274.3" x2="120" y2="274.3" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="280.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">1</text>
+<g id="entity-my-wealth" data-role="entity" data-entity-id="my-wealth" data-label="MY WEALTH">
+<rect id="my-wealth-bar" data-role="bar" data-entity-id="my-wealth" data-value="0.3729" x="532.5" y="478.6" width="112.2" height="121.4" fill="#d4d4d4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="my-wealth-label" data-role="category-label" data-entity-id="my-wealth" x="588.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">MY WEALTH</text>
+</g>
+<g id="entity-friend-s-wealth" data-role="entity" data-entity-id="friend-s-wealth" data-label="FRIEND&#x27;S WEALTH">
+<rect id="friend-s-wealth-bar" data-role="bar" data-entity-id="friend-s-wealth" data-value="1" x="1022.0" y="274.3" width="112.2" height="325.7" fill="#d4d4d4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="friend-s-wealth-label" data-role="category-label" data-entity-id="friend-s-wealth" x="1078.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">FRIEND&#x27;S WEALTH</text>
+</g>
+</g>
+</svg>

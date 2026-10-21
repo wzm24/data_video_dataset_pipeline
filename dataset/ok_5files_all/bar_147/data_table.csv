@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_147,High income,high-income,302.1,,,0.5353,relative,#FADCD3,relative_only
+bar_147,Upper middle income,upper-middle-income,506.1,,,0.1367,relative,#F49D46,relative_only
+bar_147,Lower middle income,lower-middle-income,710.0,,,0.0535,relative,#D96456,relative_only
+bar_147,Lower income,lower-income,914.0,,,0.0353,relative,#8B1E14,relative_only
+bar_147,Covax,covax,1118.0,,,0.1253,relative,#5D8A8A,relative_only

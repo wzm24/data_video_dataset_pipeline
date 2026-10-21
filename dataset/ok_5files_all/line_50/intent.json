@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_50",
+ "intent_en": "To illustrate the historical improvement and progression of 100m freestyle swimming times across 116 years of Olympic history.",
+ "previous_intent": "To illustrate the historical improvement in Olympic freestyle swimming performance across Games from 1896 to 2012.",
+ "narration_support": "What if we were swimming not just against the other swimmers in London, but against every Olympic medalist ever in a 100 meter freestyle? Here we're gliding over 116 years of Olympic history.",
+ "chart_support": "Timeline chart (scatter plot with icons) displaying a downward trend of data points from 1896 to 2012, indicating decreasing times (improvement) over successive Olympic Games.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly mentions comparing against every medalist in a 100m freestyle over 116 years. The chart visualizes this with an x-axis of Olympic years (1896-2012) and a downward curve of data points, representing the reduction in race times (improvement in performance) over that period.",
+ "gate_failed": "value_leak",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

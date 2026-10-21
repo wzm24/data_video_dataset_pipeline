@@ -1,0 +1,271 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_25",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the long-term decline in interest rates from 1991 to 2016 and explain its contribution to high house prices, while questioning the future outlook.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart should distinguish two interest-rate series: Bank of England base rate and a 5-year fixed mortgage rate.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "1991",
+     "field": "value",
+     "value": 10.1996,
+     "note": "earliest base-rate value"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "earliest mortgage-rate point",
+     "field": "value",
+     "value": 9.4989,
+     "note": "first mortgage-rate value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Two series are shown: the Bank of England base rate and a 5-year fixed mortgage rate.",
+    "The chart compares the base rate with a 5-year fixed mortgage rate.",
+    "Viewers can tell which line is the base rate and which is the mortgage rate."
+   ],
+   "visual_evidence_rule": "Both entity series must be identifiable and matchable to their data paths.",
+   "temporal_anchor": "continually falling interest rates",
+   "reviewer_question": "Should identifying both rate series be mandatory, or can the clip show only the base rate?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Bank of England base rate falls from 10.1996% in 1991 to 0.3991% in 2016, a decline of 9.8005 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "1991",
+     "field": "value",
+     "value": 10.1996,
+     "note": "start year"
+    },
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "2016",
+     "field": "value",
+     "value": 0.3991,
+     "note": "end year"
+    }
+   ],
+   "computation": "0.3991 - 10.1996 = -9.8005 percentage points",
+   "accepted_routes": [
+    "Base rate fell from about 10.2% in 1991 to about 0.4% in 2016.",
+    "The base rate dropped by roughly 9.8 percentage points over the period.",
+    "The base rate ended near zero after starting above 10%."
+   ],
+   "visual_evidence_rule": "The base-rate path visibly starts high in 1991 and ends low in 2016.",
+   "temporal_anchor": "continually falling interest rates",
+   "reviewer_question": "Must the 1991 and 2016 base-rate endpoints and their decline be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 5-year fixed mortgage rate falls from 9.4989% at the first mortgage-rate point to 2.1996% in 2016, a decline of 7.2993 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "earliest mortgage-rate point",
+     "field": "value",
+     "value": 9.4989,
+     "note": "first mortgage-rate value"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "2016",
+     "field": "value",
+     "value": 2.1996,
+     "note": "end year"
+    }
+   ],
+   "computation": "2.1996 - 9.4989 = -7.2993 percentage points",
+   "accepted_routes": [
+    "The 5-year fixed mortgage rate fell from about 9.5% to about 2.2% by 2016.",
+    "Mortgage rates dropped by roughly 7.3 percentage points.",
+    "The mortgage rate ended at 2.1996% in 2016 after starting near 9.5%."
+   ],
+   "visual_evidence_rule": "The mortgage-rate path visibly starts near 9.5% and ends at 2.1996% in 2016.",
+   "temporal_anchor": "continually falling interest rates",
+   "reviewer_question": "Should the mortgage-rate decline be required alongside the base-rate decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At 2016 the mortgage rate, 2.1996%, is higher than the base rate, 0.3991%, by about 1.8005 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "2016",
+     "field": "value",
+     "value": 0.3991,
+     "note": "base rate at 2016"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "2016",
+     "field": "value",
+     "value": 2.1996,
+     "note": "mortgage rate at 2016"
+    }
+   ],
+   "computation": "2.1996 - 0.3991 = 1.8005 percentage points",
+   "accepted_routes": [
+    "By 2016 the mortgage rate was about 1.8 points above the base rate.",
+    "The mortgage rate remained above the base rate at the 2016 endpoint.",
+    "At the end, the two rates are 2.1996% and 0.3991%."
+   ],
+   "visual_evidence_rule": "At the 2016 endpoint, the mortgage-rate path is visibly above the base-rate path.",
+   "temporal_anchor": "where does this leave us?",
+   "reviewer_question": "Should the 2016 gap between mortgage and base rates be mandatory or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Both rates show an overall long-term decline from the early-1990s start to 2016, but the path is not a straight line; there are temporary increases.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "early fluctuation point",
+     "field": "value",
+     "value": 5.0998,
+     "note": "base rate dips before later rising"
+    },
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "later temporary high",
+     "field": "value",
+     "value": 7.4989,
+     "note": "base-rate temporary high before eventual fall"
+    },
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "2016",
+     "field": "value",
+     "value": 0.3991,
+     "note": "final low"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "early high",
+     "field": "value",
+     "value": 8.4989,
+     "note": "mortgage-rate early high"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "2016",
+     "field": "value",
+     "value": 2.1996,
+     "note": "final low"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The rates trend downward over the long run despite ups and downs.",
+    "The fall is not monotonic; there are temporary rises before the 2016 lows.",
+    "Both series generally decline from high early values to lower 2016 values."
+   ],
+   "visual_evidence_rule": "The chart must show an overall downward trajectory with visible fluctuations, not a perfectly smooth monotonic line.",
+   "temporal_anchor": "continually falling interest rates",
+   "reviewer_question": "Must the animation convey non-monotonic fluctuations, or is a simplified downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Optional emphasis: the base rate's later collapse to roughly 0.5% (e.g., 6.0000% then 0.4989% before 0.3991%).",
+  "Narration-only link from falling interest rates to expensive houses, if clearly framed as interpretation and not as a data-backed causal estimate.",
+  "An open question about the future path of rates or house prices, without forecasting numbers."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming the rate data alone proves falling interest rates caused high house prices; no house price series is in the table.",
+  "Any house-price values, percentages, or forecasts not present in the table.",
+  "Using relative_value as a percentage; it is a 0-1 normalization.",
+  "Predicting future interest rates.",
+  "Semantic units about colors, positions, axis ticks, chart type, or layout."
+ ],
+ "notes": "The table supports two rate series and their 1991-2016 decline; house-price causality is not in the data. Required units should prioritize endpoint declines, cross-series comparison, and the non-monotonic trend.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 57.0,
+  "usage": {
+   "prompt_tokens": 4790,
+   "completion_tokens": 13637,
+   "total_tokens": 18427,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11512
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 4150
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

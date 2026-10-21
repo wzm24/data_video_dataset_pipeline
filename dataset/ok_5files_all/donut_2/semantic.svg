@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs><pattern id="sq" width="30" height="30" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="26" height="26" rx="6" fill="#e8e8ec"/></pattern></defs>
+<rect width="1280" height="720" fill="#f4f4f6"/>
+<rect width="1280" height="720" fill="url(#sq)"/>
+<path d="M 675.4 90.3 A 271.0 271.0 0 1 1 378.2 288.9" fill="none" stroke="#262626" stroke-width="100.0"/>
+<path d="M 378.2 288.9 A 271.0 271.0 0 0 1 504.5 124.3" fill="none" stroke="#cccccc" stroke-width="100.0"/>
+<path d="M 504.5 124.3 A 271.0 271.0 0 0 1 675.4 90.3" fill="none" stroke="#ffffff" stroke-width="100.0"/>
+<circle cx="504" cy="124" r="26" fill="#88b4b8"/><circle cx="504" cy="124" r="11" fill="#ffffff"/>
+<circle cx="378" cy="289" r="26" fill="#a80030"/><circle cx="378" cy="289" r="11" fill="#ffffff"/>
+<circle cx="675" cy="90" r="26" fill="#262626"/><circle cx="675" cy="90" r="11" fill="#ffffff"/>
+<rect x="90" y="200" width="200" height="64" rx="32" fill="#88b4b8"/>
+<text x="190" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">DIGITAL</text>
+<rect x="535" y="600" width="210" height="64" rx="32" fill="#a80030"/>
+<text x="640" y="644" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">PHYSICAL</text>
+<rect x="490.0" y="275.0" width="165.0" height="168.0" fill="#ffffff" stroke="#e2e2e2" stroke-width="1"/><circle cx="572.5" cy="359.0" r="50.4" fill="#b00030"/><polygon points="655.0,275.0 830.0,275.0 784.0,359.0 830.0,443.0 655.0,443.0" fill="#ffffff" stroke="#e2e2e2" stroke-width="1"/><polygon points="655.0,275.0 681.0,275.0 681.0,443.0 655.0,443.0" fill="#ededed"/>
+</svg>

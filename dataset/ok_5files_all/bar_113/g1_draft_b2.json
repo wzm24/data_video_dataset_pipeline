@@ -1,0 +1,235 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_113",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that a majority of U.S. adults expressed at least some confidence in police officers to act in the public's best interests in late 2020.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Combining the two reported confidence levels, 74% of U.S. adults expressed at least some confidence in police to act in the public's best interests.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "A great deal",
+     "x": "a-great-deal",
+     "field": "value",
+     "value": 26.0,
+     "note": "Great-deal share"
+    },
+    {
+     "entity": "A fair amount",
+     "x": "a-fair-amount",
+     "field": "value",
+     "value": 48.0,
+     "note": "Fair-amount share"
+    }
+   ],
+   "computation": "26.0 + 48.0 = 74.0%",
+   "accepted_routes": [
+    "74% had at least some confidence",
+    "about three-quarters said a great deal or a fair amount",
+    "26% great deal plus 48% fair amount equals 74% at least some confidence"
+   ],
+   "visual_evidence_rule": "The chart must show both the 26% and 48% components or a combined 74% 'at least some' segment.",
+   "temporal_anchor": "the narration clause 'most said they have at least some confidence'",
+   "reviewer_question": "Is the combined 74% at-least-some figure obligatory even though it is derived rather than printed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "26% of U.S. adults said they had a great deal of confidence in police to act in the public's best interests.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "A great deal",
+     "x": "a-great-deal",
+     "field": "value",
+     "value": 26.0,
+     "note": "Printed great-deal percentage"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "26% said a great deal",
+    "about one-quarter reported a great deal of confidence",
+    "26 percent had a great deal"
+   ],
+   "visual_evidence_rule": "The 'A great deal' bar/segment must be labeled or readable as 26%.",
+   "temporal_anchor": "the clause 'with 26 % saying they have a great deal'",
+   "reviewer_question": "Must the exact 26% great-deal value be shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "48% of U.S. adults said they had a fair amount of confidence in police to act in the public's best interests.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "A fair amount",
+     "x": "a-fair-amount",
+     "field": "value",
+     "value": 48.0,
+     "note": "Printed fair-amount percentage"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "48% said a fair amount",
+    "about half reported a fair amount of confidence",
+    "48 percent had a fair amount"
+   ],
+   "visual_evidence_rule": "The 'A fair amount' bar/segment must be labeled or readable as 48%.",
+   "temporal_anchor": "the narration clause 'most said they have at least some confidence' or the supporting data reveal",
+   "reviewer_question": "Must the exact 48% fair-amount value be shown even though the narration does not name it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 'fair amount' share was 22 percentage points larger than the 'great deal' share (48% vs. 26%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "A fair amount",
+     "x": "a-fair-amount",
+     "field": "value",
+     "value": 48.0,
+     "note": "Larger share"
+    },
+    {
+     "entity": "A great deal",
+     "x": "a-great-deal",
+     "field": "value",
+     "value": 26.0,
+     "note": "Smaller share"
+    }
+   ],
+   "computation": "48.0 - 26.0 = 22.0 percentage points",
+   "accepted_routes": [
+    "fair amount was 22 points higher than great deal",
+    "great deal was 22 percentage points lower than fair amount",
+    "48% vs. 26%, a 22-point difference"
+   ],
+   "visual_evidence_rule": "Both bars or segments must be visible so the 22-point gap can be inferred or labeled.",
+   "temporal_anchor": "the clause contrasting 'at least some confidence' with '26% saying they have a great deal'",
+   "reviewer_question": "Should the video explicitly state the 22-point gap, or is showing both bars enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The combined at-least-some share (74%) is more than half, so it represents a majority of U.S. adults.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "A great deal",
+     "x": "a-great-deal",
+     "field": "value",
+     "value": 26.0,
+     "note": "Great-deal component"
+    },
+    {
+     "entity": "A fair amount",
+     "x": "a-fair-amount",
+     "field": "value",
+     "value": 48.0,
+     "note": "Fair-amount component"
+    }
+   ],
+   "computation": "26.0 + 48.0 = 74.0%; 74.0% exceeds a simple majority",
+   "accepted_routes": [
+    "74% is a majority",
+    "more than half had at least some confidence",
+    "the majority said they had at least some confidence"
+   ],
+   "visual_evidence_rule": "The chart must show the combined 74% or the two components summing past the halfway point.",
+   "temporal_anchor": "the clause 'most said they have at least some confidence'",
+   "reviewer_question": "Is the majority interpretation of the 74% figure required separately from the 74% share itself?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A fair amount was the most common of the two shown confidence levels (48%).",
+  "The great-deal share (26%) is about one-quarter of adults.",
+  "The fair-amount share (48%) is roughly half of adults."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why confidence was high or low or how policing experiences affected it.",
+  "Breakdowns by political or demographic groups not present in the table.",
+  "Any third confidence category such as 'not much' or 'none at all' values not in the table.",
+  "Using relative_value 0.2573 + 0.4750 = 0.7323 as the at-least-some share if it contradicts the printed 26% + 48% = 74% route."
+ ],
+ "notes": "The key required content is the 74% at-least-some composition and its majority interpretation, with 26% and 48% as components; the 22-point gap and ranking are optional trade-offs. Keep the video focused on these reported confidence levels and avoid unsupported external breakdowns or causes.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 41.4,
+  "usage": {
+   "prompt_tokens": 774,
+   "completion_tokens": 10143,
+   "total_tokens": 10917,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8410
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 518
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

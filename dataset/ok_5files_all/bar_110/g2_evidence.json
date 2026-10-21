@@ -1,0 +1,168 @@
+{
+ "clip_id": "bar_110",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Dewi's Family (richest) @ bar_110-g1",
+    "extreme": "max",
+    "expected": 0.5972,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show Dewi's Family as the maximum relative_value among the household groups."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Putri's Family (poorest) @ bar_110-g9",
+    "extreme": "min",
+    "expected": 0.0896,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show Putri's Family as the minimum relative_value among the household groups."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Dewi's Family (richest) @ bar_110-g1",
+    "mark:Putri's Family (poorest) @ bar_110-g9"
+   ],
+   "assertion": {
+    "greater": "Dewi's Family (richest) @ bar_110-g1",
+    "lesser": "Putri's Family (poorest) @ bar_110-g9",
+    "expected_ratio": 6.6652,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the ratio between the highest and lowest relative values apparent or directly labeled."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Dewi's Family (richest) @ bar_110-g1",
+    "mark:Putri's Family (poorest) @ bar_110-g9"
+   ],
+   "assertion": {
+    "greater": "Dewi's Family (richest) @ bar_110-g1",
+    "lesser": "Putri's Family (poorest) @ bar_110-g9",
+    "expected_ratio": 6.6652,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the gap between the highest and lowest relative values visible or labeled."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Dewi's Family (richest) @ bar_110-g1",
+    "mark:2nd @ bar_110-g2",
+    "mark:3rd @ bar_110-g3",
+    "mark:4th @ bar_110-g4",
+    "mark:5th @ bar_110-g5",
+    "mark:6th @ bar_110-g6",
+    "mark:7th @ bar_110-g7",
+    "mark:8th @ bar_110-g8",
+    "mark:Putri's Family (poorest) @ bar_110-g9"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Dewi's Family (richest) @ bar_110-g1",
+      "value": 0.5972
+     },
+     {
+      "mark": "2nd @ bar_110-g2",
+      "value": 0.4778
+     },
+     {
+      "mark": "3rd @ bar_110-g3",
+      "value": 0.3882
+     },
+     {
+      "mark": "4th @ bar_110-g4",
+      "value": 0.3285
+     },
+     {
+      "mark": "5th @ bar_110-g5",
+      "value": 0.2986
+     },
+     {
+      "mark": "6th @ bar_110-g6",
+      "value": 0.2389
+     },
+     {
+      "mark": "7th @ bar_110-g7",
+      "value": 0.209
+     },
+     {
+      "mark": "8th @ bar_110-g8",
+      "value": 0.1493
+     },
+     {
+      "mark": "Putri's Family (poorest) @ bar_110-g9",
+      "value": 0.0896
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the nine household groups in descending relative_value order with no reversal."
+  }
+ ]
+}

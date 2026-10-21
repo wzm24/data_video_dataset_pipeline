@@ -1,0 +1,215 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_19",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the Sun's overwhelming dominance in mass within the solar system.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Sun makes up 99.86% of the mass in the solar system.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 99.86,
+     "note": "Table row is entity 'share'; intent/narration identifies this as the Sun's mass share. Unit is percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The Sun accounts for 99.86% of the solar system's mass.",
+    "The Sun makes up 99.86% of the mass in our solar system.",
+    "99.86% of the solar system's mass is the Sun."
+   ],
+   "visual_evidence_rule": "A labeled 99.86% value must appear on or for the Sun's mass-share mark.",
+   "temporal_anchor": "final narration clause: 'It makes up 99.86% of the mass in our solar system.'",
+   "reviewer_question": "Is the exact 99.86% value required, or may the video round it to 'almost 100%'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Sun's mass share can be expressed as the proportion 0.9986, equivalent to 99.86%.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.9986,
+     "note": "Table relative_value; equivalent to 99.86%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The Sun's mass share is 0.9986 of the total.",
+    "As a proportion, the Sun accounts for 0.9986 of solar system mass.",
+    "0.9986 (or 99.86%) of the mass is the Sun."
+   ],
+   "visual_evidence_rule": "If a normalized whole is used, the Sun segment must either be labeled 0.9986 or visually fill 99.86% of the whole.",
+   "temporal_anchor": "same final narration clause, only if the video presents the share as a decimal/proportion.",
+   "reviewer_question": "Should the decimal/proportion form 0.9986 be treated as required, or is the percent form enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "All non-Sun solar system mass combined is only 0.14%, the arithmetic complement of the Sun's 99.86% share.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 99.86,
+     "note": "Used to derive complement: 100 - 99.86 = 0.14. Equivalent using relative_value: 1 - 0.9986 = 0.0014 = 0.14%."
+    }
+   ],
+   "computation": "100 - 99.86 = 0.14",
+   "accepted_routes": [
+    "Everything except the Sun is only 0.14% of the mass.",
+    "The non-Sun share is 0.14%.",
+    "All other solar system objects combined account for only 0.14%."
+   ],
+   "visual_evidence_rule": "The chart or annotation must show a tiny non-Sun remainder labeled 0.14% or explicitly identify it as all remaining objects.",
+   "temporal_anchor": "same final clause, as the implied remainder after the 99.86% share.",
+   "reviewer_question": "Must the video quantify the non-Sun remainder at 0.14%, or is a visually tiny remainder enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Sun's 99.86% share is vastly larger than all other solar system mass combined, which is only 0.14%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 99.86,
+     "note": "Compared against derived complement: 100 - 99.86 = 0.14."
+    }
+   ],
+   "computation": "99.86% vs. (100 - 99.86)% = 99.86% vs. 0.14%",
+   "accepted_routes": [
+    "The Sun outweighs the rest of the solar system combined.",
+    "The Sun's share (99.86%) is vastly larger than everything else combined (0.14%).",
+    "Sun mass is greater than all other solar system mass put together."
+   ],
+   "visual_evidence_rule": "A Sun segment must be visibly contrasted against a much smaller non-Sun segment, not just shown as a standalone 99.86% label.",
+   "temporal_anchor": "final clause, supported by the preceding contrast with Jupiter and the claim that the Sun is massive.",
+   "reviewer_question": "Must the video explicitly compare the Sun against all other mass combined, or is the 99.86% share alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The Sun is about 713 times as massive as all other solar system objects combined.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 99.86,
+     "note": "Ratio uses 99.86 and derived complement 0.14. Equivalent using relative_value: 0.9986 / (1 - 0.9986) = 713.2857."
+    }
+   ],
+   "computation": "99.86 / (100 - 99.86) = 713.2857",
+   "accepted_routes": [
+    "The Sun is about 713 times all other solar system mass combined.",
+    "Sun mass is roughly 713x the rest.",
+    "For every unit of non-Sun mass, there are about 713 units of Sun mass."
+   ],
+   "visual_evidence_rule": "If included, a comparison annotation or scale must display the ~713x ratio; otherwise this unit is optional and should not be required.",
+   "temporal_anchor": "after the 99.86% clause, only if the video adds a dominance comparison beyond the raw share.",
+   "reviewer_question": "Is the ~713x ratio a valid optional emphasis, or does it overstate content not present in the narration?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Rounding the Sun's 99.86% share to 100% for dramatic emphasis, provided the exact 99.86% is also available.",
+  "Calling the non-Sun mass a tiny rounding-error remainder, without adding new numeric claims.",
+  "Saying the Sun is the overwhelming majority of solar system mass."
+ ],
+ "unsupported_to_avoid": [
+  "Jupiter's specific mass, mass share, or numeric comparison to the Sun; the table has no Jupiter row.",
+  "Sun mass in kilograms or Earth-mass equivalents; not in the table.",
+  "Claiming 99.86% refers to volume, diameter, or mass outside the solar system.",
+  "Causal claims that this mass dominance explains planetary formation, orbits, or fusion.",
+  "Saying all planets alone are 0.14%; the table's remainder is all non-Sun mass, not a planet-only breakdown."
+ ],
+ "notes": "Only one table row is provided: the Sun's 99.86% mass share and its decimal equivalent. Derived units use arithmetic on that row; avoid Jupiter-specific numbers because the table has no Jupiter row.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 37.9,
+  "usage": {
+   "prompt_tokens": 610,
+   "completion_tokens": 7887,
+   "total_tokens": 8497,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6365
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 354
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

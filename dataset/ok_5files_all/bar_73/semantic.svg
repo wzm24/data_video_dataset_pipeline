@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f2f2f0"/>
+<g id="chart-plot" data-role="plot">
+<g id="entity-filler" data-role="entity" data-entity-id="filler" data-label="Filler">
+<rect id="filler-bar" data-role="bar" data-entity-id="filler" data-value="82" x="560.0" y="180.0" width="160.0" height="328.0" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text data-role="category-label" x="640.0" y="352.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f2f2f2">FILLER</text>
+</g>
+<g id="entity-actual-content" data-role="entity" data-entity-id="actual-content" data-label="Actual content">
+<rect id="actual-content-bar" data-role="bar" data-entity-id="actual-content" data-value="18" x="560.0" y="508.0" width="160.0" height="72.0" fill="#4a90d9" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text data-role="category-label" x="640.0" y="552.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#f2f2f2">ACTUAL CONTENT</text>
+</g>
+</g>
+</svg>

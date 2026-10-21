@@ -1,0 +1,6 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_158,US-Russia Nuclear Treaties,bar-1,853.3,,,0.0333,relative,#5b8fa8,relative_only,bar-1,semantic_svg_order_backfill
+bar_158,ANTI-BALLISTIC MISSILE TREATY,bar-2,1016.4,,,0.0333,relative,#5b8fa8,relative_only,bar-2,semantic_svg_order_backfill
+bar_158,INTERMEDIATE-RANGE NUCLEAR FORCES TREATY,bar-3,985.9,,,0.0333,relative,#5b8fa8,relative_only,bar-3,semantic_svg_order_backfill
+bar_158,START I,bar-4,1057.3,,,0.0333,relative,#5b8fa8,relative_only,bar-4,semantic_svg_order_backfill
+bar_158,SORT,bar-5,1143.9,,,0.0333,relative,#5b8fa8,relative_only,bar-5,semantic_svg_order_backfill

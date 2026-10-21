@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_78",
+ "intent_en": "To explain the factors driving WeWork's high valuation in contrast to the traditional profitability of Regus.",
+ "previous_intent": "To contrast the steady profitability of Regus between 2013 and 2017 with the significantly higher valuation of WeWork, questioning the rationale behind the latter's market worth.",
+ "narration_support": "Regis actually makes a profit... The question is, what makes WeWork worth that extra",
+ "chart_support": "Bar chart showing Regus profit increasing from 2013 to 2017",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "Narration (with typo 'Regis' for Regus) highlights Regus's profitability and questions WeWork's extra valuation. Chart visualizes Regus profit growth over the period 2013-2017, supporting the claim of profitability.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

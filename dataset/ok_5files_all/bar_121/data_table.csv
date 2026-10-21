@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+bar_121,In person at polling places,in-person-at-polling-places,671.5,,,0.2680,relative,#9adfe4,relative_only,Very
+bar_121,49,49,986.5,,,0.2242,relative,#4dcdc4,relative_only,Somewhat
+bar_121,By absentee or mail-in ballot,by-absentee-or-mail-in-ballot,570.0,,,0.1094,relative,#9adfe4,relative_only,Very
+bar_121,20,20,773.0,,,0.2078,relative,#4dcdc4,relative_only,Somewhat

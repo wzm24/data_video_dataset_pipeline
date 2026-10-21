@@ -1,0 +1,241 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_33",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that the United States has the highest per capita spending on retail prescription drugs compared to other nations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The United States has the highest per capita retail prescription drug spending among all listed countries.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "United States",
+     "field": "value",
+     "value": 1012.85,
+     "note": "highest table value"
+    },
+    {
+     "entity": "Switzerland",
+     "x": "Switzerland",
+     "field": "value",
+     "value": 776.923,
+     "note": "next-highest table value, still below the United States"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Americans spend more on prescription drugs than anyone else in the comparison",
+    "The United States is the top country for per capita retail prescription drug spending",
+    "United States ranks first, above every other listed nation"
+   ],
+   "visual_evidence_rule": "The United States' magnitude must be visibly greater than every other entity's magnitude in the chart.",
+   "temporal_anchor": "the clause 'Americans spend more on prescription drugs than anyone else'",
+   "reviewer_question": "Must the video explicitly present the United States as the highest-spending country?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The US lead over the next-highest country, Switzerland, is large: the US value is about 1.30 times Switzerland's value, or about 235.927 value units higher.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "United States",
+     "field": "value",
+     "value": 1012.85,
+     "note": "highest value"
+    },
+    {
+     "entity": "Switzerland",
+     "x": "Switzerland",
+     "field": "value",
+     "value": 776.923,
+     "note": "second-highest value"
+    }
+   ],
+   "computation": "1012.850 / 776.923 = 1.3037...; 1012.850 - 776.923 = 235.927",
+   "accepted_routes": [
+    "The US spends about 1.3 times as much as Switzerland, the runner-up",
+    "US spending is roughly a third higher than Switzerland's",
+    "The gap to second place is about 236 value units"
+   ],
+   "visual_evidence_rule": "The gap between the United States and Switzerland must be visible enough to read the US as substantially above the runner-up.",
+   "temporal_anchor": "the clause 'more than anyone else in the world'",
+   "reviewer_question": "Should the video show the size of the US lead over the runner-up, not just the top rank?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Switzerland is the highest non-US country and second overall.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Switzerland",
+     "x": "Switzerland",
+     "field": "value",
+     "value": 776.923,
+     "note": "second-highest value after the United States"
+    },
+    {
+     "entity": "United States",
+     "x": "United States",
+     "field": "value",
+     "value": 1012.85,
+     "note": "highest value, above Switzerland"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Switzerland ranks second behind the United States",
+    "The runner-up is Switzerland",
+    "Switzerland is the top country other than the US"
+   ],
+   "visual_evidence_rule": "Switzerland must be visibly the second-highest magnitude, below only the United States.",
+   "temporal_anchor": "the phrase 'other nations' if the video names a runner-up",
+   "reviewer_question": "Should the runner-up country be explicitly identified?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Sweden is the lowest-spending listed country, with Norway just above it.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Sweden",
+     "x": "Sweden",
+     "field": "value",
+     "value": 347.938,
+     "note": "lowest table value"
+    },
+    {
+     "entity": "Norway",
+     "x": "Norway",
+     "field": "value",
+     "value": 396.907,
+     "note": "next-lowest table value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Sweden is the lowest-spending country in the chart",
+    "Norway is just above Sweden at the bottom of the comparison",
+    "Sweden ranks last and Norway is second to last"
+   ],
+   "visual_evidence_rule": "Sweden must be visibly the smallest magnitude among all entities, with Norway next smallest.",
+   "temporal_anchor": "the 'other nations' comparison portion if lows are shown",
+   "reviewer_question": "Should the lowest country or lowest pair be shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The United States' table value is 1012.85, the maximum endpoint in the series.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "United States",
+     "field": "value",
+     "value": 1012.85,
+     "note": "maximum value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The United States value is 1012.85",
+    "The maximum value is 1012.850",
+    "United States is at just over 1012.85"
+   ],
+   "visual_evidence_rule": "The United States' magnitude must be visibly at the maximum; if a value label is used, it should read 1012.85.",
+   "temporal_anchor": "the final US highlight in 'than anyone else in the world'",
+   "reviewer_question": "Should the exact US value be displayed, or is rank alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The US value is more than twice Sweden's value (1012.850 / 347.938 = 2.91...).",
+  "The full listed order from low to high is Sweden, Norway, Netherlands, Australia, United Kingdom, France, Canada, Germany, Switzerland, United States."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state dollars, currency, or percentages because the table's unit column is blank.",
+  "Do not claim the US is highest globally beyond the listed countries.",
+  "Do not explain causes for US spending differences.",
+  "Do not extrapolate future spending or add values not present in the table."
+ ],
+ "notes": "Only U1 is obligatory from the intent; the remaining units are optional comparison and ranking details. Units use table values or explicit arithmetic and avoid chart layout, colour, axis, or rendering claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.11
+ },
+ "draft_cost": {
+  "sec": 40.3,
+  "usage": {
+   "prompt_tokens": 1300,
+   "completion_tokens": 8764,
+   "total_tokens": 10064,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7114
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 788
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

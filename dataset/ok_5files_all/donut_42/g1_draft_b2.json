@@ -1,0 +1,198 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_42",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers that cat owners are more likely to be introverted.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Cat owners are more likely to be introverted than a reference/comparison group.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to be introverted",
+     "x": "more-likely-to-be-introverted",
+     "field": "value",
+     "value": 11,
+     "note": "Table row encodes a positive comparative likelihood; baseline group is not specified in the table. Subject 'cat owners' comes from intent/narration."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cat owners are more likely to be introverted.",
+    "Cat people tend to be more introverted.",
+    "People who own cats have a higher likelihood of introversion."
+   ],
+   "visual_evidence_rule": "A comparison cue must show cat owners as higher/more likely on introversion, not lower or equal.",
+   "temporal_anchor": "The main clause 'more likely to be introverted' should carry this direction.",
+   "reviewer_question": "Must the video explicitly show or state the comparison direction rather than only displaying an 11% number?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The size of the relative likelihood difference is 11%, or 0.11 as a decimal.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to be introverted",
+     "x": "more-likely-to-be-introverted",
+     "field": "value",
+     "value": 11,
+     "note": "Table value is 11 with unit percent."
+    },
+    {
+     "entity": "more likely to be introverted",
+     "x": "more-likely-to-be-introverted",
+     "field": "relative_value",
+     "value": 0.11,
+     "note": "Table relative_value is 0.1100."
+    }
+   ],
+   "computation": "relative_value = value / 100 = 0.11",
+   "accepted_routes": [
+    "11% more likely",
+    "11 percent higher likelihood",
+    "by 11%",
+    "0.11 as a decimal"
+   ],
+   "visual_evidence_rule": "The chart must display the 11% value or its 0.11 decimal equivalent as the magnitude of the effect.",
+   "temporal_anchor": "The narration clause '11% more likely' should carry this magnitude.",
+   "reviewer_question": "Must the exact 11%/0.11 magnitude appear, or is an approximate or rounded magnitude acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 11% is a relative likelihood increase, not an absolute prevalence of introversion among cat owners.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to be introverted",
+     "x": "more-likely-to-be-introverted",
+     "field": "value",
+     "value": 11,
+     "note": "Unit is percent and entity is comparative 'more likely', supporting a relative difference."
+    },
+    {
+     "entity": "more likely to be introverted",
+     "x": "more-likely-to-be-introverted",
+     "field": "relative_value",
+     "value": 0.11,
+     "note": "relative_value 0.1100 corresponds to 11/100."
+    }
+   ],
+   "computation": "relative_value = value / 100 = 0.11",
+   "accepted_routes": [
+    "11% more likely, not 11% of cat owners are introverted",
+    "a relative 11% increase in likelihood",
+    "11 percent higher likelihood, not an 11 percentage-point prevalence difference"
+   ],
+   "visual_evidence_rule": "The label must include 'more likely'/'higher likelihood' or another explicit relative-change cue; it must not label the 11% as a share of cat owners.",
+   "temporal_anchor": "The clause 'more likely to be introverted' or '11% more likely' should carry this relative-vs-absolute distinction.",
+   "reviewer_question": "Must the video disambiguate relative likelihood from absolute prevalence?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The statistic concerns cat owners/cat people and the trait introversion.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "more likely to be introverted",
+     "x": "more-likely-to-be-introverted",
+     "field": "value",
+     "value": 11,
+     "note": "Outcome 'introverted' is in the table entity; subject 'cat owners' comes from intent/narration, not the table row."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cat owners/cat people are the group.",
+    "The outcome is introversion.",
+    "This is about cat people and being introverted."
+   ],
+   "visual_evidence_rule": "Cat-related labeling and introversion labeling must appear or be unambiguously implied.",
+   "temporal_anchor": "The phrase 'Cat people ... introverted' should carry both the group and outcome.",
+   "reviewer_question": "Must the video name both cat owners and introversion, or can one be supplied by context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The single data point can be rendered as a donut/percent graphic rather than a bar chart.",
+  "The source type is printed, so the video may cite it as a printed statistic."
+ ],
+ "unsupported_to_avoid": [
+  "Owning cats causes introversion.",
+  "11% of cat owners are introverted.",
+  "Cat owners are 11 percentage points more introverted than non-cat owners.",
+  "Cat owners are more introverted than dog owners.",
+  "The 11% will grow or decline.",
+  "Any named comparison baseline, such as non-cat owners or dog owners, unless supplied by broader context."
+ ],
+ "notes": "Only one table row exists, so the main trade-off is whether the 11% is the required quantitative payload or only supports the qualitative direction. The table does not specify the comparison baseline, so any named baseline must be treated as unsupported unless supplied by broader context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.85
+ },
+ "draft_cost": {
+  "sec": 34.9,
+  "usage": {
+   "prompt_tokens": 593,
+   "completion_tokens": 7592,
+   "total_tokens": 8185,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6143
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 337
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

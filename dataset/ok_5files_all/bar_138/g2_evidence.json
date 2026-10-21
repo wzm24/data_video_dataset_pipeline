@@ -1,0 +1,181 @@
+{
+ "clip_id": "bar_138",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:27 Feb 20 @ 27 Feb 20-Imported",
+    "mark:09 Mar 20 @ 09 Mar 20-Imported",
+    "mark:17 Mar 20 @ 17 Mar 20-Imported",
+    "mark:25 Mar 20 @ 25 Mar 20-Imported"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "27 Feb 20 @ 27 Feb 20-Imported",
+      "value": 2.0
+     },
+     {
+      "mark": "09 Mar 20 @ 09 Mar 20-Imported",
+      "value": 8.0
+     },
+     {
+      "mark": "17 Mar 20 @ 17 Mar 20-Imported",
+      "value": 27.0
+     },
+     {
+      "mark": "25 Mar 20 @ 25 Mar 20-Imported",
+      "value": 29.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Imported bars visibly grow from low early values to 27 and 29 in late March."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible (series Local)"
+   ],
+   "assertion": {
+    "mark": "09 Mar 20 @ 09 Mar 20-Local",
+    "extreme": "min",
+    "expected": 1.0,
+    "compared_set": "Local",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Local bars stay low and never exceed height 8 on the chart."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:25 Mar 20 @ 25 Mar 20-Imported",
+    "mark:25 Mar 20 @ 25 Mar 20-Imported"
+   ],
+   "assertion": {
+    "greater": "25 Mar 20 @ 25 Mar 20-Imported",
+    "lesser": "25 Mar 20 @ 25 Mar 20-Imported",
+    "expected_ratio": 1.5263,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In the 25 Mar section, imported bars are much taller than the local bars."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:17 Mar 20 @ 17 Mar 20-Imported",
+    "segment:17 Mar 20 @ 17 Mar 20-Imported",
+    "segment:17 Mar 20 @ 17 Mar 20-Imported",
+    "segment:17 Mar 20 @ 17 Mar 20-Imported",
+    "segment:17 Mar 20 @ 17 Mar 20-Imported",
+    "segment:17 Mar 20 @ 17 Mar 20-Imported",
+    "segment:17 Mar 20 @ 17 Mar 20-Local",
+    "segment:17 Mar 20 @ 17 Mar 20-Local"
+   ],
+   "assertion": {
+    "segment": "17 Mar 20 @ 17 Mar 20-Imported",
+    "expected_share": 0.2679,
+    "total_of": "unknown",
+    "total": 56.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "In the 17 Mar section, imported bars visually dominate and local bars are tiny."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:27 Feb 20 @ 27 Feb 20-Imported",
+    "mark:27 Feb 20 @ 27 Feb 20-Imported",
+    "mark:27 Feb 20 @ 27 Feb 20-Imported",
+    "mark:27 Feb 20 @ 27 Feb 20-Local",
+    "mark:27 Feb 20 @ 27 Feb 20-Local",
+    "mark:27 Feb 20 @ 27 Feb 20-Local",
+    "mark:09 Mar 20 @ 09 Mar 20-Imported",
+    "mark:09 Mar 20 @ 09 Mar 20-Imported",
+    "mark:09 Mar 20 @ 09 Mar 20-Imported",
+    "mark:09 Mar 20 @ 09 Mar 20-Imported",
+    "mark:09 Mar 20 @ 09 Mar 20-Imported",
+    "mark:09 Mar 20 @ 09 Mar 20-Imported",
+    "mark:09 Mar 20 @ 09 Mar 20-Local",
+    "mark:09 Mar 20 @ 09 Mar 20-Local",
+    "mark:09 Mar 20 @ 09 Mar 20-Local"
+   ],
+   "assertion": {
+    "series": "27 Feb 20",
+    "values": [
+     2.0,
+     2.0,
+     1.0,
+     1.0,
+     4.0,
+     1.0,
+     1.0,
+     5.0,
+     5.0,
+     8.0,
+     3.0,
+     5.0,
+     1.0,
+     1.0,
+     3.0
+    ],
+    "threshold_between": [
+     1.0,
+     8.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "By the 09 Mar section, imported bars clearly exceed local bars."
+  }
+ ]
+}

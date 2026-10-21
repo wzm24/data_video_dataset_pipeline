@@ -1,0 +1,234 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_86",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the long-term decline and persistently low levels of public trust in the federal government, highlighting a tension with public desires for government action on economic inequality.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Trust in the federal government has declined over the long term, from a historical high in the 70s to the latest low around the 20s.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trust percentage",
+     "x": "historical peak (row 108)",
+     "field": "value",
+     "value": 77,
+     "note": "maximum value in table"
+    },
+    {
+     "entity": "trust percentage",
+     "x": "latest/low endpoint (row 1)",
+     "field": "value",
+     "value": 24,
+     "note": "first row; implied latest low value"
+    },
+    {
+     "entity": "trust percentage",
+     "x": "oldest/high endpoint (row 109)",
+     "field": "value",
+     "value": 73,
+     "note": "last row; alternative start value"
+    }
+   ],
+   "computation": "77 - 24 = 53 percentage points peak-to-latest drop; 73 - 24 = 49 percentage points earliest-to-latest drop",
+   "accepted_routes": [
+    "Trust in the federal government fell from a high of 77% to about 24%.",
+    "Public trust dropped from the 70s to the low 20s over the long term.",
+    "The series shows a long-term decline of roughly 50 percentage points from its peak.",
+    "Trust declined from about 73%–77% historically to roughly 24% recently."
+   ],
+   "visual_evidence_rule": "A line chart must show a downward trend from the high end of the series to the low end, with the peak near 77% and the latest point near 24%.",
+   "temporal_anchor": "the trust clause 'trust in the federal government is low' / chart reveal of the trust series",
+   "reviewer_question": "Must the video explicitly quantify the peak-to-latest drop, or is a visible downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The latest reported trust level is about 24%, near the low end of the series.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trust percentage",
+     "x": "first row (latest/low endpoint)",
+     "field": "value",
+     "value": 24,
+     "note": "first row of table; implied latest value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Latest trust is 24%.",
+    "Currently, about 24% of the public trusts the federal government.",
+    "The most recent value is around one-quarter.",
+    "Trust stands at about 24% at the latest point."
+   ],
+   "visual_evidence_rule": "The latest/current point on the time axis must be visible and marked or read at 24%.",
+   "temporal_anchor": "the phrase 'trust in the federal government is low'",
+   "reviewer_question": "Should the video state the exact latest value 24%, or is a qualitative 'low' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Trust reached a historical high of 77%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trust percentage",
+     "x": "row 108 (peak)",
+     "field": "value",
+     "value": 77,
+     "note": "maximum value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Trust peaked at 77%.",
+    "The historical high is 77%.",
+    "At its highest, 77% of people trusted the federal government.",
+    "The series reaches a maximum of 77%."
+   ],
+   "visual_evidence_rule": "The highest point on the line must be marked or read at 77%.",
+   "temporal_anchor": "the chart reveal of the trust series before the 'is low' clause",
+   "reviewer_question": "Must the video call out the 77% peak, or can it simply show a high starting point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "In the most recent cluster of observations, trust remains persistently low, with the highest recent value at 29%.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "trust percentage",
+     "x": "rows 1-20 (recent cluster)",
+     "field": "value",
+     "value": 29,
+     "note": "maximum of first 20 rows; all first 20 values are ≤29"
+    }
+   ],
+   "computation": "max(rows 1-20) = 29; all rows 1-20 ≤ 29",
+   "accepted_routes": [
+    "Recent trust never exceeds 29%.",
+    "The latest cluster maxes out at 29%.",
+    "In the recent period, trust stays at or below 29%.",
+    "Recent values are persistently low, with a ceiling of 29%."
+   ],
+   "visual_evidence_rule": "The recent segment of the line must sit at or below 29%, without spikes above it.",
+   "temporal_anchor": "the phrase 'trust in the federal government is low'",
+   "reviewer_question": "Does the video need to show the recent cluster's ceiling (29%) to establish persistence, or is the latest point enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The lowest trust value in the series is 10%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "trust percentage",
+     "x": "row 16 (minimum)",
+     "field": "value",
+     "value": 10,
+     "note": "minimum value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lowest trust value is 10%.",
+    "Trust hit its minimum of 10%.",
+    "At one point, only 10% trusted the federal government.",
+    "The series bottom is 10%."
+   ],
+   "visual_evidence_rule": "The minimum point on the line must be marked or read at 10%.",
+   "temporal_anchor": "optional chart detail during the trust series reveal",
+   "reviewer_question": "Is the 10% minimum required, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series is not monotonic; it has rebounds and plateaus, including values in the 40s–50s and a 10% minimum.",
+  "The peak-to-latest drop is 53 percentage points (77 - 24).",
+  "The older half of the series contains values around 50–56%."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why trust declined or why it matters for inequality.",
+  "Any inequality-responsibility percentage or 'most' as a precise number, since the table only contains trust percentages.",
+  "Saying trust fell every year or is currently at 10%/20% instead of the latest table value 24%.",
+  "Extrapolating future trust levels.",
+  "Claiming all trust values are low; many older values are above 30% and reach 77%."
+ ],
+ "notes": "Assumes table order is newest-first: row 1 is the latest/low endpoint and row 109 is the oldest/high endpoint, consistent with the intent's decline. All numeric claims are drawn from the table or simple arithmetic on table cells.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 66.3,
+  "usage": {
+   "prompt_tokens": 2779,
+   "completion_tokens": 15665,
+   "total_tokens": 18444,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13915
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 2523
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

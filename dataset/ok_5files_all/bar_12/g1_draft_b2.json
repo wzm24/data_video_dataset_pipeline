@@ -1,0 +1,210 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_12",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the surge in UKIP membership from July to August 2018.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "UKIP membership has two endpoint data points: July 2018 at table value 1.000 and August 2018 at table value 1.150.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "July 2018",
+     "x": "480.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "July 2018 row, value field"
+    },
+    {
+     "entity": "Aug 2018",
+     "x": "800.0",
+     "field": "value",
+     "value": 1.15,
+     "note": "Aug 2018 row, value field"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "July 2018 value is 1.000; August 2018 value is 1.150",
+    "the series runs from 1.000 in July 2018 to 1.150 in August 2018",
+    "August's table value is 1.150 versus July's 1.000"
+   ],
+   "visual_evidence_rule": "Both July 2018 and Aug 2018 bars/points must be visible, with heights or labels corresponding to 1.000 and 1.150, or to the normalized relative values 0.8281 and 0.9524.",
+   "temporal_anchor": "from July to August 2018; 'in just one month' supports the adjacent endpoints.",
+   "reviewer_question": "Must the animation show both endpoint values, or is the 15% increase alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "UKIP membership increased by 15% from July 2018 to August 2018, i.e. a 0.150 increase relative to July's 1.000.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "July 2018",
+     "x": "480.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "baseline for formula"
+    },
+    {
+     "entity": "Aug 2018",
+     "x": "800.0",
+     "field": "value",
+     "value": 1.15,
+     "note": "endpoint for formula"
+    }
+   ],
+   "computation": "(1.150 - 1.000) / 1.000 = 0.150 = 15%",
+   "accepted_routes": [
+    "membership surged by 15%",
+    "a 15% month-on-month increase",
+    "the increase is +0.150 on the table value scale, which is 15% of July's 1.000"
+   ],
+   "visual_evidence_rule": "A visible callout, annotation, or arrow between the two bars must indicate +15% or 1.15x, not merely the two bar heights.",
+   "temporal_anchor": "'surge by 15%' and 'in just one month'",
+   "reviewer_question": "Should 15% be treated as the relative increase, not an absolute 0.150 or 15 percentage points?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "August 2018 is higher than July 2018; the direction is upward.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "July 2018",
+     "x": "480.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "lower point"
+    },
+    {
+     "entity": "Aug 2018",
+     "x": "800.0",
+     "field": "value",
+     "value": 1.15,
+     "note": "higher point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "August 2018 is higher than July 2018",
+    "membership moves upward from July to August",
+    "the July-to-August trend is positive"
+   ],
+   "visual_evidence_rule": "The August bar/point is visibly taller or higher than the July bar/point, or the line slopes upward.",
+   "temporal_anchor": "'surge'",
+   "reviewer_question": "Is the upward ordering independently required, or subsumed by the 15% increase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The comparison is over one month: July 2018 followed by August 2018 as adjacent monthly points.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "July 2018",
+     "x": "480.0",
+     "field": "x_px",
+     "value": 480.0,
+     "note": "first time point"
+    },
+    {
+     "entity": "Aug 2018",
+     "x": "800.0",
+     "field": "x_px",
+     "value": 800.0,
+     "note": "second time point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the change is from July 2018 to August 2018",
+    "the two points are adjacent months, covering one month",
+    "the time axis has July 2018 then Aug 2018"
+   ],
+   "visual_evidence_rule": "The x-axis/time labels must show July 2018 followed by Aug 2018, with no intervening month.",
+   "temporal_anchor": "'in just one month' and 'from July to August 2018'",
+   "reviewer_question": "Must the video explicitly label July 2018 and Aug 2018 as adjacent months?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Normalized relative_value endpoints: July 2018 = 0.8281, Aug 2018 = 0.9524; their ratio gives (0.9524 / 0.8281) - 1 ≈ 15.0%, so a normalized-scale animation still supports the same 15% increase.",
+  "The July 2018 point is at x_px 480.0 and the Aug 2018 point is at x_px 800.0 in the source table."
+ ],
+ "unsupported_to_avoid": [
+  "Associations caused or helped the UKIP membership surge.",
+  "UKIP membership was a specific number of members not derivable from the table.",
+  "The increase was 15 percentage points rather than a 15% relative increase.",
+  "The surge continued after August 2018.",
+  "relative_value is a share of total UKIP membership unless separately defined."
+ ],
+ "notes": "The core required signal is the 15% month-on-month increase from July 2018 to Aug 2018. Endpoint and interval units are candidate requirements because the intent names July and August 2018; relative_value is optional normalized-scale support.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.85
+ },
+ "draft_cost": {
+  "sec": 45.6,
+  "usage": {
+   "prompt_tokens": 620,
+   "completion_tokens": 10612,
+   "total_tokens": 11232,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9008
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 364
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

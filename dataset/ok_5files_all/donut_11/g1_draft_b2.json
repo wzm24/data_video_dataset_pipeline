@@ -1,0 +1,252 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_11",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that Amazon's cloud services division is the primary source of its profitability, effectively masking the financial losses of its retail business.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "AWS accounts for 66% (about two-thirds) of the charted profitability split.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "AWS",
+     "x": "0",
+     "field": "value",
+     "value": 66,
+     "note": "AWS percent value in table"
+    },
+    {
+     "entity": "AWS",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.66,
+     "note": "AWS share as decimal"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "AWS is 66% of this profit split.",
+    "AWS accounts for about two-thirds of the charted total.",
+    "AWS's slice is 66%."
+   ],
+   "visual_evidence_rule": "The AWS slice must be visibly labeled or annotated as 66% (or about two-thirds) within a 100% composition.",
+   "temporal_anchor": "The clause that first quantifies AWS's contribution or share.",
+   "reviewer_question": "Must the exact 66% be shown or labeled, or is rounded 'about two-thirds' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "All other businesses combined make up the remaining 34% (about one-third) of the charted total.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "total (all other business)",
+     "x": "1",
+     "field": "value",
+     "value": 34,
+     "note": "non-AWS percent value in table"
+    },
+    {
+     "entity": "total (all other business)",
+     "x": "1",
+     "field": "relative_value",
+     "value": 0.34,
+     "note": "non-AWS share as decimal"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Everything except AWS is 34%.",
+    "All other business is about one-third of the total.",
+    "The non-AWS slice is 34%."
+   ],
+   "visual_evidence_rule": "The non-AWS portion must be labeled or annotated as 34% (or about one-third).",
+   "temporal_anchor": "The clause contrasting AWS with the rest of the business.",
+   "reviewer_question": "Is the 34% non-AWS share required as its own unit, or only as context for the AWS comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "AWS is the primary or largest source of profitability: its 66% share is larger than all other businesses combined at 34%, a 32-percentage-point gap.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "AWS",
+     "x": "0",
+     "field": "value",
+     "value": 66,
+     "note": "AWS share"
+    },
+    {
+     "entity": "total (all other business)",
+     "x": "1",
+     "field": "value",
+     "value": 34,
+     "note": "all other share"
+    }
+   ],
+   "computation": "66 - 34 = 32 percentage points",
+   "accepted_routes": [
+    "AWS is the main profit source, 66% versus 34% for everything else.",
+    "AWS exceeds all other businesses combined by 32 percentage points.",
+    "AWS's share is larger than the entire non-AWS remainder."
+   ],
+   "visual_evidence_rule": "The chart must make AWS's slice visibly larger than the non-AWS slice, with the 66% and 34% labels readable or the 32-point gap annotated.",
+   "temporal_anchor": "The concluding or headline clause that identifies AWS as the primary profit source.",
+   "reviewer_question": "Must the video explicitly state the 32-point gap, or is showing AWS > all other business enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "AWS's share is roughly 1.94 times the non-AWS share (about double), based on 66% divided by 34%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "AWS",
+     "x": "0",
+     "field": "value",
+     "value": 66,
+     "note": "AWS share"
+    },
+    {
+     "entity": "total (all other business)",
+     "x": "1",
+     "field": "value",
+     "value": 34,
+     "note": "non-AWS share"
+    }
+   ],
+   "computation": "66 / 34 = 1.941...",
+   "accepted_routes": [
+    "AWS is about 1.9 times the rest.",
+    "AWS is nearly double all other business combined.",
+    "The AWS-to-other ratio is roughly 2:1."
+   ],
+   "visual_evidence_rule": "If this unit is used, the chart or narration must show or state a near-2x ratio derived from 66 vs 34; no separate chart label is required.",
+   "temporal_anchor": "An optional emphasis clause after the main AWS-versus-rest comparison.",
+   "reviewer_question": "Is the near-2x ratio framing required, or is it optional extra context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The two categories sum to a full 100% composition: AWS 66% plus all other business 34%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "AWS",
+     "x": "0",
+     "field": "value",
+     "value": 66,
+     "note": "AWS share"
+    },
+    {
+     "entity": "total (all other business)",
+     "x": "1",
+     "field": "value",
+     "value": 34,
+     "note": "non-AWS share"
+    }
+   ],
+   "computation": "66 + 34 = 100",
+   "accepted_routes": [
+    "The donut shows a complete 100% split.",
+    "AWS 66% plus the rest 34% equals the whole.",
+    "Together the slices total 100%."
+   ],
+   "visual_evidence_rule": "The chart must be a complete donut or pie composition with both slices accounted for.",
+   "temporal_anchor": "Any clause introducing the composition or the donut chart.",
+   "reviewer_question": "Does the video need to state that the split totals 100%, or is the complete chart enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The non-AWS category is labeled as including all other business, not broken out by retail, ads, or other segments.",
+  "AWS's majority position is visually emphasized by color or size.",
+  "The chart is a donut or pie composition rather than a bar chart."
+ ],
+ "unsupported_to_avoid": [
+  "The original narration's 58% Q4 2018 operating-income figure, which is not in the table.",
+  "The claim that AWS alone made more money than McDonald's.",
+  "Any specific retail loss amount or claim that retail loses money, since the table only shows a 34% non-AWS share.",
+  "A causal claim that AWS is the only reason Amazon is profitable or that it directly masks retail losses.",
+  "Extrapolation to other quarters or future periods.",
+  "Using 34% as AWS's share or otherwise reversing the two entities.",
+  "Treating the percentages as revenue shares, margins, or dollar amounts unless the table labels them as such."
+ ],
+ "notes": "The table only supports a two-part composition: AWS 66% and all other business 34%. The intent's masking-losses narrative goes beyond the table, so retail-loss causality should be treated as unsupported unless additional data are allowed.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.16
+ },
+ "draft_cost": {
+  "sec": 39.4,
+  "usage": {
+   "prompt_tokens": 690,
+   "completion_tokens": 8682,
+   "total_tokens": 9372,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6958
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 434
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

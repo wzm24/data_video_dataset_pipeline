@@ -1,0 +1,135 @@
+{
+ "clip_id": "bar_142",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:66",
+    "mark:62"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "66",
+      "value": 0.3197
+     },
+     {
+      "mark": "62",
+      "value": 0.3003
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The relative magnitudes of the top two categories must be visibly higher than those of the other three."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:66",
+    "mark:62"
+   ],
+   "assertion": {
+    "greater": "66",
+    "lesser": "62",
+    "expected_ratio": 1.0646,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two tallest relative magnitudes must appear close to each other, with a small visible gap."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:66",
+    "mark:62"
+   ],
+   "assertion": {
+    "greater": "66",
+    "lesser": "62",
+    "expected_ratio": 1.0646,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The combined encoded magnitude of the top two categories must appear larger than the combined encoded magnitude of the other three."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:66",
+    "mark:13"
+   ],
+   "assertion": {
+    "greater": "66",
+    "lesser": "13",
+    "expected_ratio": 5.0746,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The shortest relative magnitude must appear much smaller than the tallest."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:66",
+    "mark:62"
+   ],
+   "assertion": {
+    "greater": "66",
+    "lesser": "62",
+    "expected_ratio": 1.0646,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual gap between the second and third magnitudes must be larger than the gap between the first and second."
+  }
+ ]
+}

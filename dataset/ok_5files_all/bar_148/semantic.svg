@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#2b323f"/>
+<text x="640" y="56" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#fff">Type of income</text>
+<rect x="1000" y="74" width="20" height="13" fill="#769696"/>
+<text x="1026" y="87" font-family="Arial" font-size="15" fill="#fff">Labor income</text>
+<rect x="1130" y="74" width="20" height="13" fill="#6b7280"/>
+<text x="1156" y="87" font-family="Arial" font-size="15" fill="#fff">Federal income tax</text>
+<line x1="220" y1="620" x2="1180" y2="620" stroke="#55606e" stroke-dasharray="3,4"/>
+<text x="210" y="625" text-anchor="end" font-family="Arial" font-size="15" fill="#bbb">0</text>
+<line x1="220" y1="508" x2="1180" y2="508" stroke="#55606e" stroke-dasharray="3,4"/>
+<text x="210" y="512" text-anchor="end" font-family="Arial" font-size="15" fill="#bbb">25</text>
+<line x1="220" y1="395" x2="1180" y2="395" stroke="#55606e" stroke-dasharray="3,4"/>
+<text x="210" y="400" text-anchor="end" font-family="Arial" font-size="15" fill="#bbb">50</text>
+<line x1="220" y1="282" x2="1180" y2="282" stroke="#55606e" stroke-dasharray="3,4"/>
+<text x="210" y="288" text-anchor="end" font-family="Arial" font-size="15" fill="#bbb">75</text>
+<line x1="220" y1="170" x2="1180" y2="170" stroke="#55606e" stroke-dasharray="3,4"/>
+<text x="210" y="175" text-anchor="end" font-family="Arial" font-size="15" fill="#bbb">100</text>
+<rect x="252.0" y="170.0" width="96.0" height="81.0" fill="#6b7280"/>
+<rect x="252.0" y="251.0" width="96.0" height="369.0" fill="#769696"/>
+<text x="300.0" y="650.0" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">Bottom fifth</text>
+<rect x="412.0" y="170.0" width="96.0" height="67.5" fill="#6b7280"/>
+<rect x="412.0" y="237.5" width="96.0" height="382.5" fill="#769696"/>
+<text x="460.0" y="650.0" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">Second fifth</text>
+<rect x="572.0" y="170.0" width="96.0" height="81.0" fill="#6b7280"/>
+<rect x="572.0" y="251.0" width="96.0" height="369.0" fill="#769696"/>
+<text x="620.0" y="650.0" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">Third fifth</text>
+<rect x="732.0" y="170.0" width="96.0" height="85.5" fill="#6b7280"/>
+<rect x="732.0" y="255.5" width="96.0" height="364.5" fill="#769696"/>
+<text x="780.0" y="650.0" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">Fourth fifth</text>
+<rect x="892.0" y="170.0" width="96.0" height="171.0" fill="#6b7280"/>
+<rect x="892.0" y="341.0" width="96.0" height="279.0" fill="#769696"/>
+<text x="940.0" y="650.0" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">Top fifth</text>
+<rect x="1052.0" y="170.0" width="96.0" height="292.5" fill="#6b7280"/>
+<rect x="1052.0" y="462.5" width="96.0" height="157.5" fill="#769696"/>
+<text x="1100.0" y="650.0" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">Top 1%</text>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F4F4F4"/>
+<text id="chart-title" data-role="title" x="640.0" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#D93025">business rates</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1160" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="150" x2="120" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">0%</text>
+<line data-role="tick" x1="112" y1="510.0" x2="120" y2="510.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="516.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">20%</text>
+<line data-role="tick" x1="112" y1="420.0" x2="120" y2="420.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="426.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">40%</text>
+<line data-role="tick" x1="112" y1="330.0" x2="120" y2="330.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="336.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">60%</text>
+<line data-role="tick" x1="112" y1="240.0" x2="120" y2="240.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="246.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">80%</text>
+<line data-role="tick" x1="112" y1="150.0" x2="120" y2="150.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="156.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">100%</text>
+<g id="entity-private-schools" data-role="entity" data-entity-id="private-schools" data-label="private schools">
+<rect id="private-schools-bar" data-role="bar" data-entity-id="private-schools" data-value="100" x="280" y="150" width="220" height="450" fill="#4472C4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="private-schools-label" data-role="category-label" data-entity-id="private-schools" x="390" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#D93025">private schools</text>
+</g>
+<g id="entity-state-schools" data-role="entity" data-entity-id="state-schools" data-label="state schools">
+<rect id="state-schools-bar" data-role="bar" data-entity-id="state-schools" data-value="100" x="780" y="150" width="220" height="450" fill="#4472C4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="state-schools-label" data-role="category-label" data-entity-id="state-schools" x="890" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#D93025">state schools</text>
+</g>
+<rect id="extra-income-strip" data-role="annotation" x="220" y="318" width="840" height="64" rx="8" fill="#E85D3A"/>
+<text id="extra-income-label" data-role="annotation-label" x="640" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">£105m</text>
+</g>
+</svg>

@@ -1,0 +1,318 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_23",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To present the 2016 election outcomes for each US state, illustrating the distribution of votes among candidates across different regions.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Each state's result is a three-part composition of Clinton, Trump, and Other shares that together total the full state outcome (sum 100 in the value column).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Alabama",
+     "x": "Clinton",
+     "field": "value",
+     "value": 34,
+     "note": "Alabama Clinton share"
+    },
+    {
+     "entity": "Alabama",
+     "x": "Other",
+     "field": "value",
+     "value": 4,
+     "note": "Alabama Other share"
+    },
+    {
+     "entity": "Alabama",
+     "x": "Trump",
+     "field": "value",
+     "value": 62,
+     "note": "Alabama Trump share; 34 + 4 + 62 = 100"
+    }
+   ],
+   "computation": "34+4+62=100; the same three-series structure applies to every state, with relative_value summing to 1.00",
+   "accepted_routes": [
+    "Each state's vote is split into Clinton, Trump, and Other shares that total 100.",
+    "Every state has three candidate shares — Clinton, Trump, Other — that together make the full state result.",
+    "Clinton + Trump + Other equals 100 in every state (e.g., Alabama 34+4+62)."
+   ],
+   "visual_evidence_rule": "At least one state must show all three candidate shares individually and their total as the full state result.",
+   "temporal_anchor": "These are the results of the 2016 election by state.",
+   "reviewer_question": "Must the video establish that each state's result is a three-part Clinton/Trump/Other composition summing to 100?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Trump's vote share exceeds Clinton's in 28 of the 50 states.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Alabama",
+     "x": "Trump",
+     "field": "value",
+     "value": 62,
+     "note": "Trump 62 > Clinton 34"
+    },
+    {
+     "entity": "Wyoming",
+     "x": "Trump",
+     "field": "value",
+     "value": 68,
+     "note": "Trump 68 > Clinton 22"
+    },
+    {
+     "entity": "50-state count",
+     "x": "Trump > Clinton",
+     "field": "value",
+     "value": 28,
+     "note": "derived count of states where Trump value > Clinton value"
+    }
+   ],
+   "computation": "count states where Trump value > Clinton value = 28 of 50 total state entities",
+   "accepted_routes": [
+    "Trump's share is larger than Clinton's in 28 of the 50 states.",
+    "In 28 states, Trump beats Clinton on vote share.",
+    "Trump outpolled Clinton across 28 states."
+   ],
+   "visual_evidence_rule": "The video must make the Trump-vs-Clinton comparison readable across states and present or derive the count 28.",
+   "temporal_anchor": "These are the results of the 2016 election by state.",
+   "reviewer_question": "Should the video state or clearly derive the count that Trump's share exceeds Clinton's in 28 states?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Clinton's vote share exceeds Trump's in 19 of the 50 states.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "California",
+     "x": "Clinton",
+     "field": "value",
+     "value": 62,
+     "note": "Clinton 62 > Trump 32"
+    },
+    {
+     "entity": "Hawaii",
+     "x": "Clinton",
+     "field": "value",
+     "value": 62,
+     "note": "Clinton 62 > Trump 30"
+    },
+    {
+     "entity": "50-state count",
+     "x": "Clinton > Trump",
+     "field": "value",
+     "value": 19,
+     "note": "derived count of states where Clinton value > Trump value"
+    }
+   ],
+   "computation": "count states where Clinton value > Trump value = 19 of 50 total state entities",
+   "accepted_routes": [
+    "Clinton's share is larger than Trump's in 19 of the 50 states.",
+    "In 19 states, Clinton beats Trump on vote share.",
+    "Clinton outpolled Trump across 19 states."
+   ],
+   "visual_evidence_rule": "The video must make the Clinton-vs-Trump comparison readable across states and present or derive the count 19.",
+   "temporal_anchor": "These are the results of the 2016 election by state.",
+   "reviewer_question": "Should the video state or clearly derive the count that Clinton's share exceeds Trump's in 19 states?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Michigan, New Hampshire, and Wisconsin each have a Clinton-Trump tie at 47, with Other at 6.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Michigan",
+     "x": "Clinton",
+     "field": "value",
+     "value": 47,
+     "note": "Michigan Clinton share"
+    },
+    {
+     "entity": "Michigan",
+     "x": "Trump",
+     "field": "value",
+     "value": 47,
+     "note": "Michigan Trump share"
+    },
+    {
+     "entity": "Michigan",
+     "x": "Other",
+     "field": "value",
+     "value": 6,
+     "note": "Michigan Other share"
+    },
+    {
+     "entity": "New Hampshire",
+     "x": "Clinton",
+     "field": "value",
+     "value": 47,
+     "note": "New Hampshire Clinton share"
+    },
+    {
+     "entity": "New Hampshire",
+     "x": "Trump",
+     "field": "value",
+     "value": 47,
+     "note": "New Hampshire Trump share"
+    },
+    {
+     "entity": "New Hampshire",
+     "x": "Other",
+     "field": "value",
+     "value": 6,
+     "note": "New Hampshire Other share"
+    },
+    {
+     "entity": "Wisconsin",
+     "x": "Clinton",
+     "field": "value",
+     "value": 47,
+     "note": "Wisconsin Clinton share"
+    },
+    {
+     "entity": "Wisconsin",
+     "x": "Trump",
+     "field": "value",
+     "value": 47,
+     "note": "Wisconsin Trump share"
+    },
+    {
+     "entity": "Wisconsin",
+     "x": "Other",
+     "field": "value",
+     "value": 6,
+     "note": "Wisconsin Other share"
+    }
+   ],
+   "computation": "count states with Clinton value = Trump value = 47 and Other value = 6 = 3 states",
+   "accepted_routes": [
+    "Michigan, New Hampshire, and Wisconsin are tied at 47-47 between Clinton and Trump.",
+    "Three states have Clinton and Trump level at 47 each, with Other at 6.",
+    "Clinton and Trump tie in Michigan, New Hampshire, and Wisconsin, each 47 to 47."
+   ],
+   "visual_evidence_rule": "Michigan, New Hampshire, and Wisconsin must be identifiable as 47 Clinton, 47 Trump, and 6 Other.",
+   "temporal_anchor": "These are the results of the 2016 election by state.",
+   "reviewer_question": "Should the three 47-47 Clinton-Trump ties in Michigan, New Hampshire, and Wisconsin be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Utah has the largest Other-category share at 26, while Mississippi has the smallest at 2.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Utah",
+     "x": "Other",
+     "field": "value",
+     "value": 26,
+     "note": "largest Other value in the table"
+    },
+    {
+     "entity": "Mississippi",
+     "x": "Other",
+     "field": "value",
+     "value": 2,
+     "note": "smallest Other value in the table"
+    }
+   ],
+   "computation": "max(Other value) = 26 at Utah; min(Other value) = 2 at Mississippi",
+   "accepted_routes": [
+    "Utah has the largest Other share at 26; Mississippi has the smallest at 2.",
+    "Other peaks in Utah at 26 and bottoms out in Mississippi at 2.",
+    "The Other category ranges from 26 in Utah down to 2 in Mississippi."
+   ],
+   "visual_evidence_rule": "Utah's Other value of 26 and Mississippi's Other value of 2 must be readable as the high and low endpoints for the Other series.",
+   "temporal_anchor": "These are the results of the 2016 election by state.",
+   "reviewer_question": "Should the Other-category extremes, Utah at 26 and Mississippi at 2, be included as part of the distribution story?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Largest Trump share is West Virginia at 69; largest Clinton share is California and Hawaii at 62.",
+  "Largest Trump margin is Wyoming at 46 (68 vs 22); largest Clinton margin is Hawaii at 32 (62 vs 30)."
+ ],
+ "unsupported_to_avoid": [
+  "Regional groupings or regional trends, because the table has no region column.",
+  "Electoral college votes, raw vote counts, turnout, party affiliation, or causal explanations.",
+  "Calling a winner in Michigan, New Hampshire, or Wisconsin where Clinton and Trump are tied at 47.",
+  "Using color alone as the carrier of candidate identity."
+ ],
+ "notes": "The table has 50 state entities and three candidate series: Clinton, Trump, and Other; candidate values sum to 100 per state. No region column exists, so regional claims are unsupported.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 49.3,
+  "usage": {
+   "prompt_tokens": 7894,
+   "completion_tokens": 11876,
+   "total_tokens": 19770,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9528
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 7510
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

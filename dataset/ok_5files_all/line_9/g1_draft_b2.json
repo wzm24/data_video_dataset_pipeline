@@ -1,0 +1,261 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_9",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain that test-optional colleges report higher average test scores than test-required colleges because students selectively submit their higher scores, inflating the school's statistics.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Test-optional reported average scores exceed test-required at every sampled year.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "TEST-OPTIONAL (series)",
+     "x": "1994",
+     "field": "value",
+     "value": 990.0,
+     "note": "vs TEST-REQUIRED 980"
+    },
+    {
+     "entity": "TEST-OPTIONAL (series)",
+     "x": "2010",
+     "field": "value",
+     "value": 1130.0,
+     "note": "vs TEST-REQUIRED 1100"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Test-optional is consistently above test-required.",
+    "Reported averages are higher for test-optional than test-required.",
+    "At each shown year, test-optional scores are slightly to clearly higher."
+   ],
+   "visual_evidence_rule": "Both series visible; test-optional line stays above test-required at labeled years.",
+   "temporal_anchor": "Second, their average test scores are higher.",
+   "reviewer_question": "Should the higher series be labeled TEST-OPTIONAL despite the entity column swap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Both series rise from 1994 to 2010; test-optional increases by 140.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "TEST-OPTIONAL (series)",
+     "x": "1994",
+     "field": "value",
+     "value": 990.0,
+     "note": "start"
+    },
+    {
+     "entity": "TEST-OPTIONAL (series)",
+     "x": "2010",
+     "field": "value",
+     "value": 1130.0,
+     "note": "end; 1130-990=140"
+    },
+    {
+     "entity": "TEST-REQUIRED (series)",
+     "x": "1994",
+     "field": "value",
+     "value": 980.0,
+     "note": "start"
+    },
+    {
+     "entity": "TEST-REQUIRED (series)",
+     "x": "2010",
+     "field": "value",
+     "value": 1100.0,
+     "note": "end; 1100-980=120"
+    }
+   ],
+   "computation": "2010 value minus 1994 value for each series.",
+   "accepted_routes": [
+    "Both averages trend upward over the period.",
+    "Test-optional climbs from 990 to 1130; test-required from 980 to 1100.",
+    "Scores increase over the sixteen-year window."
+   ],
+   "visual_evidence_rule": "Start and end values visible for both lines.",
+   "temporal_anchor": "Second, their average test scores are higher.",
+   "reviewer_question": "Must the video show the overall upward trend, or only the level difference?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The gap is largest at 2010: test-optional 1130 vs test-required 1100.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "TEST-OPTIONAL (series)",
+     "x": "2010",
+     "field": "value",
+     "value": 1130.0,
+     "note": "higher"
+    },
+    {
+     "entity": "TEST-REQUIRED (series)",
+     "x": "2010",
+     "field": "value",
+     "value": 1100.0,
+     "note": "lower; gap 30"
+    }
+   ],
+   "computation": "1130 - 1100 = 30",
+   "accepted_routes": [
+    "The two series diverge most at the final year.",
+    "At 2010, test-optional leads by 30.",
+    "The 2010 gap is wider than earlier gaps."
+   ],
+   "visual_evidence_rule": "Endpoint 2010 values and separation visible.",
+   "temporal_anchor": "In theory, this shouldn't matter.",
+   "reviewer_question": "Is highlighting the largest endpoint gap optional or required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Test-required drops from 1125 in 2006 to 1100 in 2010, while test-optional holds at 1130.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "TEST-REQUIRED (series)",
+     "x": "2006",
+     "field": "value",
+     "value": 1125.0,
+     "note": "start"
+    },
+    {
+     "entity": "TEST-REQUIRED (series)",
+     "x": "2010",
+     "field": "value",
+     "value": 1100.0,
+     "note": "end; 1100-1125=-25"
+    },
+    {
+     "entity": "TEST-OPTIONAL (series)",
+     "x": "2006",
+     "field": "value",
+     "value": 1130.0,
+     "note": "start"
+    },
+    {
+     "entity": "TEST-OPTIONAL (series)",
+     "x": "2010",
+     "field": "value",
+     "value": 1130.0,
+     "note": "end; no change"
+    }
+   ],
+   "computation": "2010 minus 2006 for each series.",
+   "accepted_routes": [
+    "Test-required declines in the final period.",
+    "Test-optional stays flat while test-required falls.",
+    "The late drop in required scores widens the gap."
+   ],
+   "visual_evidence_rule": "2006 and 2010 values for both series visible.",
+   "temporal_anchor": "In theory, this shouldn't matter.",
+   "reviewer_question": "Should the video call out the late test-required drop?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Selective submission: higher-scoring students submit, inflating test-optional reported averages.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [],
+   "computation": "none",
+   "accepted_routes": [
+    "Students self-select which scores to submit.",
+    "Only higher scores are sent, raising reported averages.",
+    "Selective submission inflates the school's average statistics."
+   ],
+   "visual_evidence_rule": "Narration or on-screen text explains selective submission mechanism.",
+   "temporal_anchor": "Each student knows all of his or her scores and individually decides whether to submit them.",
+   "reviewer_question": "Is the causal mechanism required even though the table has no submission data?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Show the 1998, 2002 and 2006 sampled years as intermediate confirmation.",
+  "Note that the two lines remain close until 2010."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming the gap grows every year; it does not.",
+  "Extrapolating beyond 2010.",
+  "Using percentages, counts or submission rates absent from the table.",
+  "Stating the selective-submission mechanism is proven by the chart data."
+ ],
+ "notes": "Entity column appears swapped; units use series column to match intent. Values are cited from table rows with matching series.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 49.6,
+  "usage": {
+   "prompt_tokens": 2867,
+   "completion_tokens": 12001,
+   "total_tokens": 14868,
+   "prompt_tokens_details": {
+    "cached_tokens": 2688
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10485
+   },
+   "prompt_cache_hit_tokens": 2688,
+   "prompt_cache_miss_tokens": 179
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

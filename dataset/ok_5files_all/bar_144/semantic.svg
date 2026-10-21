@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#eef3f2"/>
+<text x="100" y="90" font-family="Arial" font-size="26" fill="#333">2021</text>
+<text x="320" y="260.0" font-family="Arial" font-size="30" font-weight="700" fill="#222">Moderna</text>
+<rect x="300.0" y="300.0" width="900" height="90" fill="#588181"/>
+<text x="1184" y="358.0" text-anchor="end" font-family="Arial" font-size="34" font-weight="700" fill="#fff">100%</text>
+<text x="450" y="450" text-anchor="middle" font-family="Arial" font-size="20" fill="#777">JAN</text>
+<text x="750" y="450" text-anchor="middle" font-family="Arial" font-size="20" fill="#777">FEB</text>
+<text x="1050" y="450" text-anchor="middle" font-family="Arial" font-size="20" fill="#777">MAR</text>
+</svg>

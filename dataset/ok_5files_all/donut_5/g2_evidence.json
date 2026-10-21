@@ -1,0 +1,122 @@
+{
+ "clip_id": "donut_5",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:independent workers @ workers"
+   ],
+   "assertion": {
+    "mark": "independent workers @ workers",
+    "field": "value",
+    "expected": 68.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The independent-worker segment must be labeled 68M/68 million or the annotation must state it."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:independent workers @ workers"
+   ],
+   "assertion": {
+    "segment": "independent workers @ workers",
+    "expected_share": 0.0047,
+    "total_of": "million",
+    "total": 68.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The independent segment must be labeled 32% or be visually about one-third of the donut."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:other @ other"
+   ],
+   "assertion": {
+    "segment": "other @ other",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 0.68,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The other segment must be labeled 68% or complement the 32% independent segment."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:other @ other",
+    "mark:independent workers @ workers"
+   ],
+   "assertion": {
+    "greater": "other @ other",
+    "lesser": "independent workers @ workers",
+    "expected_ratio": 2.125,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both donut segments must be visible/labeled so the 32% and 68% comparison is legible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:independent workers @ workers"
+   ],
+   "assertion": {
+    "mark": "independent workers @ workers",
+    "field": "value",
+    "expected": 68.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Only valid if the chart/annotation derives or shows a total; the donut must not mislabel 68M as the total."
+  }
+ ]
+}

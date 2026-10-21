@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f2f2f2"/>
+<polygon id="title-banner" data-role="title-banner" points="80,60 420,60 470,110 420,160 80,160" fill="#555555"/>
+<text id="chart-title" data-role="title" x="120" y="122" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">MUSLIM FAITHS</text>
+<g id="entity-sunni" data-role="entity" data-entity-id="sunni" data-label="SUNNI">
+<rect id="sunni-bar" data-role="bar" data-entity-id="sunni" data-value="80" x="280" y="190" width="720" height="320" fill="#2E8B57"/>
+<text id="sunni-value-label" data-role="value-label" data-entity-id="sunni" x="300" y="246" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">SUNNI ≈ 80%</text>
+</g>
+<g id="entity-shia" data-role="entity" data-entity-id="shia" data-label="SHIA">
+<rect id="shia-bar" data-role="bar" data-entity-id="shia" data-value="20" x="280" y="510" width="720" height="80" fill="#C0392B"/>
+<text id="shia-value-label" data-role="value-label" data-entity-id="shia" x="300" y="566" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">SHIA = 20%</text>
+</g>
+</g>
+</svg>

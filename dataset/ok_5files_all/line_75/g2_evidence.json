@@ -1,0 +1,133 @@
+{
+ "clip_id": "line_75",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 7,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Legend or labels must identify the seven scenario series shown in the table."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:High carbon tax @ 920.0",
+    "mark:Low market subsidy @ 920.0"
+   ],
+   "assertion": {
+    "greater": "High carbon tax @ 920.0",
+    "lesser": "Low market subsidy @ 920.0",
+    "expected_ratio": 1.1366,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Right-edge endpoint values or labels must be visible for at least High carbon tax, Low market subsidy, Low carbon tax, Free market, and one direct-replacement series; direct-replacement series must visibly hit the top of the normalized scale."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:High carbon tax @ 612.0",
+    "mark:Low market subsidy @ 637.7",
+    "mark:Low carbon tax @ 727.5",
+    "mark:Free market @ 778.8"
+   ],
+   "assertion": {
+    "series": "High carbon tax",
+    "values": [
+     0.5314,
+     0.5005,
+     0.5062,
+     0.5014
+    ],
+    "threshold_between": [
+     0.5005,
+     0.5314
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible 50% threshold line and crossing points or order for High carbon tax, Low market subsidy, Low carbon tax, and Free market."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:100% replacement at end of life @ 573.5",
+    "mark:High carbon tax @ 612.0"
+   ],
+   "assertion": {
+    "greater": "100% replacement at end of life @ 573.5",
+    "lesser": "High carbon tax @ 612.0",
+    "expected_ratio": 1.8818,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 100% replacement at end of life series must visibly hit the top of the normalized scale at x=573.5, left of the 50% crossings for High carbon tax and Free market."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:High carbon tax @ 920.0",
+    "mark:Free market @ 920.0"
+   ],
+   "assertion": {
+    "greater": "High carbon tax @ 920.0",
+    "lesser": "Free market @ 920.0",
+    "expected_ratio": 1.4805,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both endpoint values, High carbon tax and Free market, must be visible or labeled so the gap or ratio can be checked."
+  }
+ ]
+}

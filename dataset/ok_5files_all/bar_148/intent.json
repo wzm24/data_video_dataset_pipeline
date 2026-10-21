@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_148",
+ "intent_en": "To demonstrate that high-income earners rely primarily on investment income taxed at lower rates, whereas the majority of the population relies on labor income taxed at higher rates, highlighting a disparity in tax treatment based on income source.",
+ "previous_intent": "To illustrate the divergence in income composition between the middle class and the wealthy, showing that the top earners rely heavily on investments taxed at lower rates while the majority rely on labor income taxed at higher rates.",
+ "narration_support": "Most people have a normal job. They get a paycheck and pay income tax... But people like Morris, they make a lot of their income from investments... These investments are taxed as capital gains and things like long -term stock have a maximum tax rate of just 20%.",
+ "chart_support": "Stacked bar chart titled 'Type of income' showing that 'Labor income' constitutes the vast majority of income for the bottom four fifths of earners, while the 'Top 1%' has a significantly smaller share of labor income and a larger share of the remaining category (implying non-labor/investment income), illustrating the shift in income sources.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly contrasts the tax rates on labor income (10-37%) versus investment income (20%). The chart visually supports the premise that the wealthy (Top 1%) derive most of their income from non-labor sources (the grey portion, which is large for Top 1% and small for bottom groups), while the middle class relies on labor income (teal portion). Although the legend labels the grey portion 'Federal income tax', the chart title 'Type of income' and the narration context indicate it represents non-labor/investment income composition.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

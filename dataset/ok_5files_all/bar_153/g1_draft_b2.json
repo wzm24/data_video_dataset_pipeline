@@ -1,0 +1,252 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_153",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the increasing proportion of voters residing in landslide counties from 1976 to 2016.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip must identify the three election years in the data series: 1976, 2012, and 2016.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1976",
+     "x": "1976",
+     "field": "relative_value",
+     "value": 0.2787,
+     "note": "first year in the series"
+    },
+    {
+     "entity": "2012",
+     "x": "2012",
+     "field": "relative_value",
+     "value": 0.4976,
+     "note": "middle year in the series"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "final year in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Names 1976, 2012, and 2016 as the series years",
+    "Shows the three years in chronological order",
+    "Identifies the three data points by election year"
+   ],
+   "visual_evidence_rule": "The labels 1976, 2012, and 2016 must be legible and associated with the three data points.",
+   "temporal_anchor": "The three year clauses: 1976, 2012, and 2016.",
+   "reviewer_question": "Must all three years be named, or are the endpoints sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The relative value is higher in each later year than in the previous year, establishing an increasing trend/order: 1976 < 2012 < 2016.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1976",
+     "x": "1976",
+     "field": "relative_value",
+     "value": 0.2787,
+     "note": "lowest value in the ordered series"
+    },
+    {
+     "entity": "2012",
+     "x": "2012",
+     "field": "relative_value",
+     "value": 0.4976,
+     "note": "middle value in the ordered series"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "highest value in the ordered series"
+    }
+   ],
+   "computation": "ordering/comparison: 0.2787 < 0.4976 < 0.5972",
+   "accepted_routes": [
+    "The relative share rises in each successive year",
+    "Later years have higher relative values than earlier years",
+    "1976 is lowest, 2012 is middle, 2016 is highest",
+    "The proportion increases from 1976 to 2012 to 2016"
+   ],
+   "visual_evidence_rule": "A viewer must be able to compare the three relative values and see the monotonic increase.",
+   "temporal_anchor": "The overall increase narrative across the 1976, 2012, and 2016 clauses.",
+   "reviewer_question": "Must the video explicitly convey monotonic increase across all three years?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The starting endpoint in 1976 has relative value 0.2787.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1976",
+     "x": "1976",
+     "field": "relative_value",
+     "value": 0.2787,
+     "note": "1976 relative_value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1976 the relative value is 0.2787",
+    "The starting relative share is 0.2787",
+    "1976 begins at a relative value of 0.2787"
+   ],
+   "visual_evidence_rule": "The 1976 data point's relative value must be visible or readable as 0.2787.",
+   "temporal_anchor": "The 1976 clause.",
+   "reviewer_question": "Is the 1976 starting relative value required as a specific starting endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The ending endpoint in 2016 has relative value 0.5972.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "2016 relative_value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2016 the relative value is 0.5972",
+    "The ending relative share is 0.5972",
+    "2016 ends at a relative value of 0.5972"
+   ],
+   "visual_evidence_rule": "The 2016 data point's relative value must be visible or readable as 0.5972.",
+   "temporal_anchor": "The 2016 clause.",
+   "reviewer_question": "Is the 2016 ending relative value required as a specific ending endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The total 1976-to-2016 increase is 0.3185 in relative value, and the 2016 relative value is about 2.14 times the 1976 relative value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1976",
+     "x": "1976",
+     "field": "relative_value",
+     "value": 0.2787,
+     "note": "start value"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "end value"
+    }
+   ],
+   "computation": "0.5972 - 0.2787 = 0.3185 relative-value increase; 0.5972 / 0.2787 = 2.1428 approximate ratio",
+   "accepted_routes": [
+    "The relative value increases by 0.3185 from 1976 to 2016",
+    "2016 relative value is about 2.14 times the 1976 relative value",
+    "The 1976-to-2016 rise is 0.5972 minus 0.2787 = 0.3185 relative units",
+    "The endpoint relative share is more than double the starting relative share"
+   ],
+   "visual_evidence_rule": "The visual must allow seeing the magnitude of the 1976-to-2016 increase, not just its direction.",
+   "temporal_anchor": "The overall clause describing change from 1976 to 2016.",
+   "reviewer_question": "Must the video quantify the total 1976-to-2016 increase, or is direction alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2012 relative_value 0.4976 lies between the 1976 and 2016 values.",
+  "The 2012 relative_value 0.4976 is closer to the 2016 value than to the 1976 value: differences are 0.0996 versus 0.2189.",
+  "The 2012 relative_value 0.4976 is above the midpoint of the 1976 and 2016 endpoints: midpoint 0.43795."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute percentage, count, or dollar value, including the narration's 28%, 50%, and 60%.",
+  "Causal explanations for why voters moved or why landslide counties changed.",
+  "Extrapolation before 1976 or after 2016.",
+  "Claims about party, geography, polarization, or other topics not present in the table.",
+  "Layout or rendering claims about bar positions, colors, axis ticks, or chart type."
+ ],
+ "notes": "All numeric content is relative-only; decimals are table relative_value, not percentages. The units separate three-year identity, monotonic ordering, endpoints, and derived total change so reviewers can decide what is mandatory.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 28.0,
+  "usage": {
+   "prompt_tokens": 870,
+   "completion_tokens": 7008,
+   "total_tokens": 7878,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5167
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 486
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

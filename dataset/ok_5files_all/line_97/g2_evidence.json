@@ -1,0 +1,154 @@
+{
+ "clip_id": "line_97",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:More than 10 years @ 1995",
+    "mark:More than 10 years @ 2017"
+   ],
+   "assertion": {
+    "low": "More than 10 years @ 1995",
+    "low_value": 33.0,
+    "high": "More than 10 years @ 2017",
+    "high_value": 66.0,
+    "delta": 33.0,
+    "ratio": 2.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the More than 10 years series at 1995 (33%) and 2017 (66%), or annotate the 33-point rise."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:5 years or less @ 1995",
+    "mark:5 years or less @ 2017"
+   ],
+   "assertion": {
+    "low": "5 years or less @ 2017",
+    "low_value": 20.0,
+    "high": "5 years or less @ 1995",
+    "high_value": 36.0,
+    "delta": 16.0,
+    "ratio": 1.8,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the 5 years or less series at 1995 (36%) and 2017 (20%), or annotate the 16-point decline."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:More than 10 years @ 2017",
+    "mark:5 years or less @ 2017"
+   ],
+   "assertion": {
+    "greater": "More than 10 years @ 2017",
+    "lesser": "5 years or less @ 2017",
+    "expected_ratio": 3.3,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both 2017 values (66% and 20%) together or annotate the 46-point gap."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:More than 10 years @ 1995",
+    "mark:5 years or less @ 1995",
+    "mark:More than 10 years @ 2005",
+    "mark:5 years or less @ 2005"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "More than 10 years @ 1995",
+      "value": 33.0
+     },
+     {
+      "mark": "5 years or less @ 1995",
+      "value": 36.0
+     },
+     {
+      "mark": "More than 10 years @ 2005",
+      "value": 38.0
+     },
+     {
+      "mark": "5 years or less @ 2005",
+      "value": 36.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both series across 1995-2005 such that the crossing/order reversal is visible, or annotate the 1995 and 2005 comparisons."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:More than 10 years @ 2007",
+    "mark:More than 10 years @ 2010"
+   ],
+   "assertion": {
+    "series": "More than 10 years",
+    "values": [
+     41.0,
+     50.0
+    ],
+    "threshold_between": [
+     41.0,
+     50.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show or annotate the 2010 value at 50%, plus the 2007 value at 41% or a 50% reference line."
+  }
+ ]
+}

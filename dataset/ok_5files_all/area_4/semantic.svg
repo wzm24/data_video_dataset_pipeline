@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#e8e8e8"/><stop offset="1" stop-color="#f7f7f7"/>
+</linearGradient></defs>
+<rect width="1280" height="720" fill="url(#bg)"/>
+<rect x="24" y="26" width="700" height="72" rx="14" fill="#4a9c9c"/>
+<text x="374" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">DEMOCRACY SINCE 1900</text>
+<polygon points="100.0,561.8 121.6,561.8 143.2,561.8 164.8,561.8 186.4,561.8 208.0,557.5 229.6,525.6 251.2,497.4 272.8,493.2 294.4,499.6 316.0,493.2 337.6,493.2 359.2,489.4 380.8,507.5 402.4,505.4 424.0,525.6 445.6,529.3 467.2,535.7 488.8,569.8 510.4,537.3 532.0,501.1 553.6,481.5 575.2,477.2 596.8,454.9 618.4,453.3 640.0,443.2 661.6,433.1 683.2,422.9 704.8,422.9 726.4,435.2 748.0,427.2 769.6,417.1 791.2,400.6 812.8,409.1 834.4,380.9 856.0,372.9 877.6,368.7 899.2,372.9 920.8,358.6 942.4,354.8 964.0,346.3 985.6,300.6 1007.2,247.9 1028.8,211.7 1050.4,203.8 1072.0,167.6 1093.6,195.8 1115.2,183.5 1136.8,139.4 1158.4,131.4 1180.0,123.4 1180.0,640.0 100.0,640.0" fill="#56b8b2"/>
+<line x1="100.0" y1="640.0" x2="1180.0" y2="640.0" stroke="#666666" stroke-width="2"/>
+<text x="100" y="682.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222">1900</text>
+<text x="1180" y="682.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222">2000</text>
+</svg>

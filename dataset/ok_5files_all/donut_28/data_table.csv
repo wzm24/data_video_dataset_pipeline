@@ -1,0 +1,6 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,note
+donut_28,INVESTORS,investors,0,,30,0.300,%,,estimated,
+donut_28,PORT 'FEES',port_'fees',1,,10,0.100,%,,estimated,
+donut_28,BOUNTIES,bounties,2,,50,0.500,%,,estimated,
+donut_28,"$10,000 BONUS",10000-bonus,3,,10000,,usd,,printed,"flat bonus amount, not a ring share"
+donut_28,bonus share,bonus-share,4,,10,0.1000,%,,estimated,ring share of the bonus segment

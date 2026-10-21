@@ -1,0 +1,77 @@
+{
+ "clip_id": "donut_31",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:VEGANS WHO ARE FEMALE: 79% @ donut_value"
+   ],
+   "assertion": {
+    "segment": "VEGANS WHO ARE FEMALE: 79% @ donut_value",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 79.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A donut/percentage segment or label must show the 79% female share."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:VEGANS WHO ARE FEMALE: 79% @ donut_value"
+   ],
+   "assertion": {
+    "segment": "VEGANS WHO ARE FEMALE: 79% @ donut_value",
+    "expected_share": 1.0,
+    "total_of": "percent",
+    "total": 79.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If a full split is shown, the nonfemale residual must be 21%, not another value."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "VEGANS WHO ARE FEMALE: 79% @ donut_value",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Any ratio callout must show 79 versus 21 or approximately 3.8:1, not an unsupported exact 4:1."
+  }
+ ]
+}

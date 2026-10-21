@@ -1,0 +1,214 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_134",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how the presence of peacekeepers significantly reduces the likelihood of war reoccurring during the period 1989-2004.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The likelihood of war reoccurring is 24%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Likelihood of war reoccurring",
+     "x": "",
+     "field": "value",
+     "value": 24.0,
+     "note": "Table value is 24 with unit %."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "24%",
+    "24 percent",
+    "a 24-percent likelihood"
+   ],
+   "visual_evidence_rule": "A visible numeral 24% (or 24 percent) is shown as the likelihood of war reoccurring.",
+   "temporal_anchor": "The main narration clause 'War was about a quarter as likely to reoccur...'",
+   "reviewer_question": "Must the video state the 24% likelihood, or can it omit the exact value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 24% likelihood is the value when peacekeepers are present.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Likelihood of war reoccurring",
+     "x": "",
+     "field": "value",
+     "value": 24.0,
+     "note": "The table row is the likelihood of war reoccurring; intent/narration supplies the peacekeeper-present context."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "when peacekeepers were present",
+    "with peacekeepers",
+    "in the peacekeeper-present case"
+   ],
+   "visual_evidence_rule": "The chart or its labels visibly place the 24% likelihood in the peacekeeper-present context.",
+   "temporal_anchor": "The narration phrase 'when peacekeepers were present.'",
+   "reviewer_question": "Is the peacekeeper-present context obligatory, or can the video show the likelihood without that qualifier?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 24% is a percentage likelihood, not a count of wars or missions.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Likelihood of war reoccurring",
+     "x": "",
+     "field": "value",
+     "value": 24.0,
+     "note": "The unit column is '%', so 24 is a percentage."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "24%",
+    "24 percent",
+    "a 24-percent likelihood"
+   ],
+   "visual_evidence_rule": "The numeral 24 is visibly accompanied by a percent sign or the word 'percent'.",
+   "temporal_anchor": "The same value phrase in narration.",
+   "reviewer_question": "Is conveying the percentage unit mandatory, or can the video show 24 with context alone?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 24% likelihood is approximately one quarter.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Likelihood of war reoccurring",
+     "x": "",
+     "field": "value",
+     "value": 24.0,
+     "note": "24% = 0.24, which rounds to about 0.25 = 1/4."
+    }
+   ],
+   "computation": "24 / 100 = 0.24, approximately 1/4",
+   "accepted_routes": [
+    "about one quarter",
+    "roughly 25%",
+    "about a fourth"
+   ],
+   "visual_evidence_rule": "The video visibly equates the 24% value with about one quarter (e.g., text or narration pairing '24%' and 'about a quarter').",
+   "temporal_anchor": "The narration phrase 'about a quarter as likely'.",
+   "reviewer_question": "Must the video state 'about a quarter', or is showing 24% sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 24% is a likelihood level, not a 24% reduction from a baseline.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Likelihood of war reoccurring",
+     "x": "",
+     "field": "value",
+     "value": 24.0,
+     "note": "Table entity is 'Likelihood of war reoccurring'; value is 24%, not a reduction amount."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "24% likelihood of recurrence",
+    "not a 24% reduction",
+    "the remaining likelihood is 24%"
+   ],
+   "visual_evidence_rule": "The video must not label the 24% as the amount by which recurrence is reduced.",
+   "temporal_anchor": "Any narration clause describing the peacekeeper effect.",
+   "reviewer_question": "Should the video explicitly distinguish '24% likelihood' from '24% reduction', or is that optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may note that war recurrence is not eliminated; a 24% likelihood remains.",
+  "The video may frame the value as about a quarter, as in the narration.",
+  "The video may include the historical period as context, but it is not a table data value."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim an exact no-peacekeeper baseline or exact percentage reduction; the table only gives the 24% likelihood.",
+  "Do not say 24 wars, 24 missions, or 24 peacekeeping operations.",
+  "Do not claim peacekeepers eliminate war recurrence.",
+  "Do not present the 24% as a share of a pie/donut unless the table supports that share."
+ ],
+ "notes": "The table contains a single absolute value: 24% for likelihood of war reoccurring. The main risks are mistaking it for a reduction amount, a count, or a no-peacekeeper baseline.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.9
+ },
+ "draft_cost": {
+  "sec": 70.2,
+  "usage": {
+   "prompt_tokens": 869,
+   "completion_tokens": 15427,
+   "total_tokens": 16296,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 14017
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 357
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

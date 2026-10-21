@@ -1,0 +1,5 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,entity_original,entity_source
+bar_43,White,white-registered,480.0,,74.0,0.7400,,#4A9A9A,printed,Registered,bar-1,semantic_svg_series_backfill
+bar_43,White,white-unregistered,480.0,,26.0,0.2600,,#d9d9d9,printed,Couldn't vote,bar-2,semantic_svg_series_backfill
+bar_43,Nonwhite,nonwhite-registered,820.0,,40.0,0.4000,,#C65B4E,printed,Registered,bar-3,semantic_svg_series_backfill
+bar_43,Nonwhite,nonwhite-unregistered,820.0,,60.0,0.6000,,#E8B84B,printed,Couldn't vote,bar-4,semantic_svg_series_backfill

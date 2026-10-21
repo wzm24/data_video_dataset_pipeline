@@ -1,0 +1,191 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_37",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the low survival rate of family businesses across generations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The second-generation survival share for family businesses is 30% (0.30 of the whole).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 30.0,
+     "note": "Table row gives value=30 and unit=percent."
+    },
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "Table relative_value=0.3000, equivalent to 30%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "About 30% of family businesses survive to the second generation.",
+    "Roughly three in ten family businesses survive the second generation.",
+    "The second-generation survival share is 0.30."
+   ],
+   "visual_evidence_rule": "A donut/ring chart must visibly mark one segment as 30% or 0.30 for second-generation survival.",
+   "temporal_anchor": "First clause: 'Only about a third of family businesses survive the second generation'.",
+   "reviewer_question": "Must the exact 30% value be shown, or is an approximate three-in-ten wording sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complement of the 30% survival share is 70%, meaning most family businesses do not survive to the second generation.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "Derived complement uses the table relative_value=0.3000."
+    }
+   ],
+   "computation": "1 - relative_value = 1 - 0.3000 = 0.7000",
+   "accepted_routes": [
+    "About 70% do not survive to the second generation.",
+    "Roughly seven in ten family businesses do not make it to generation two.",
+    "The non-survival share is 0.70, while survival is 0.30."
+   ],
+   "visual_evidence_rule": "The complement of the highlighted 30% segment must be visible as 70% or as the remaining unhighlighted portion of the donut.",
+   "temporal_anchor": "First clause: 'Only about a third of family businesses survive the second generation'.",
+   "reviewer_question": "Must the video explicitly show the 70% complement, or is highlighting only the 30% survival slice enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The non-survival share exceeds the survival share by 40 percentage points: 70% versus 30%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "Derived comparison: complement minus original share."
+    }
+   ],
+   "computation": "(1 - relative_value) - relative_value = (1 - 0.3000) - 0.3000 = 0.4000",
+   "accepted_routes": [
+    "Non-survival exceeds survival by 40 percentage points.",
+    "The gap is 40 points: 70% do not survive versus 30% who do.",
+    "Survival is 30%, non-survival is 70%; the difference is 40 percentage points."
+   ],
+   "visual_evidence_rule": "Both the 30% survival segment and 70% remainder should be visible or labeled so their 40-point gap can be compared.",
+   "temporal_anchor": "First clause: 'Only about a third of family businesses survive the second generation'.",
+   "reviewer_question": "Is the 40 percentage-point gap between survival and non-survival required, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The displayed metric is a percentage/share of family businesses, not a raw count or absolute number.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "unit",
+     "value": "percent",
+     "note": "The table unit is percent and the entity is labelled 'share'."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "This is a survival share/rate, not a count.",
+    "The value is 30 percent of all family businesses.",
+    "The chart shows a percentage share rather than an absolute number of businesses."
+   ],
+   "visual_evidence_rule": "The chart must be a share/percentage visualization, such as a donut/ring, not a count bar or raw-count axis.",
+   "temporal_anchor": "First clause: 'Only about a third of family businesses survive the second generation'.",
+   "reviewer_question": "Must the video identify the metric as a percentage/share, or can it simply display the number?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 30% survival share can be described as approximately three in ten family businesses.",
+  "The 30% value is the only table-supported survival figure for this clip.",
+  "The donut chart may visually de-emphasize the 70% remainder while highlighting the 30% survival slice."
+ ],
+ "unsupported_to_avoid": [
+  "The narration's 50% figure for not lasting until the third generation, because it is not in the table.",
+  "Any third-generation, fourth-generation, 12%, or 3% survival values.",
+  "Raw counts of family businesses instead of the 30% share.",
+  "Causal explanations for why family businesses fail.",
+  "Calculating 15% as 50% of 30%, because the 50% is not table-supported.",
+  "Claiming the table proves exactly one-third (33.3%) rather than 30%."
+ ],
+ "notes": "Only one table cell exists: share = 30% / 0.3000. The 70% complement and 40-point gap are arithmetic derivations; the narration's 50% third-generation claim is outside the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.84
+ },
+ "draft_cost": {
+  "sec": 30.2,
+  "usage": {
+   "prompt_tokens": 587,
+   "completion_tokens": 6579,
+   "total_tokens": 7166,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5133
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 331
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

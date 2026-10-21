@@ -1,0 +1,24 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,120.0,1990,294.9891,0.8428,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,170.0,,285.0217,0.8143,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,220.0,,335.0109,0.9572,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,270.0,,300.0109,0.8572,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,320.0,,289.9674,0.8285,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,370.0,,265.0109,0.7572,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,420.0,,235.0326,0.6715,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,470.0,,204.9783,0.5857,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,520.0,,189.9891,0.5428,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,570.0,,149.9674,0.4285,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,620.0,,105.0000,0.3000,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,670.0,,70.0000,0.2000,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,720.0,,44.9674,0.1285,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,770.0,,79.9674,0.2285,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,820.0,,60.0326,0.1715,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,870.0,,70.0000,0.2000,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,920.0,,64.9783,0.1857,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,970.0,,49.9891,0.1428,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,1020.0,,70.0000,0.2000,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,1070.0,,44.9674,0.1285,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,1120.0,,70.0000,0.2000,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,1170.0,,35.0000,0.1000,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill
+line_1,Inflation-adjusted chair price,line-1-1f6cb5,1220.0,2015,25.0326,0.0715,$,#1f6cb5,svg_geometry,line-1,intent_based_backfill

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#F4F4F4"/>
+<text x="640" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#222222">US carbon dioxide emissions by sector</text>
+<text x="640" y="84" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#555555">Source: US Energy Information Administration, 2019.</text>
+<text x="1220" y="60" text-anchor="end" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#333333">Vox</text>
+<path d="M 634 421 L 633.6 248.4 A 172.8 172.8 0 0 1 770.7 316.0 Z" fill="#E84B4B" stroke="#ffffff" stroke-width="2"/>
+<text x="681" y="337" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">14%</text>
+<path d="M 634 421 L 770.7 316.0 A 172.8 172.8 0 0 1 805.7 436.3 Z" fill="#F2B5C2" stroke="#ffffff" stroke-width="2"/>
+<text x="736" y="403" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">12%</text>
+<path d="M 634 421 L 805.7 436.3 A 172.8 172.8 0 0 1 663.6 591.4 Z" fill="#136A8A" stroke="#ffffff" stroke-width="2"/>
+<text x="713" y="506" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">21%</text>
+<path d="M 634 421 L 663.6 591.4 A 172.8 172.8 0 0 1 460.8 421.2 Z" fill="#ED8F56" stroke="#ffffff" stroke-width="2"/>
+<text x="565" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">28%</text>
+<path d="M 634 421 L 460.8 421.2 A 172.8 172.8 0 0 1 633.6 248.4 Z" fill="#8AB4C4" stroke="#ffffff" stroke-width="2"/>
+<text x="558" y="357" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">28%</text>
+<line x1="701" y1="285" x2="729" y2="229" stroke="#9a9a9a" stroke-width="2"/>
+<text x="741" y="238" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Residential 14%</text>
+<line x1="780" y1="379" x2="840" y2="361" stroke="#9a9a9a" stroke-width="2"/>
+<text x="852" y="370" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Commercial 12%</text>
+<line x1="746" y1="524" x2="792" y2="566" stroke="#9a9a9a" stroke-width="2"/>
+<text x="804" y="575" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Industrial 21%</text>
+<line x1="536" y1="538" x2="496" y2="586" stroke="#9a9a9a" stroke-width="2"/>
+<text x="484" y="595" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Transportation 28%</text>
+<line x1="526" y1="314" x2="482" y2="269" stroke="#9a9a9a" stroke-width="2"/>
+<text x="470" y="278" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#222222">Electricity generation 28%</text>
+</svg>

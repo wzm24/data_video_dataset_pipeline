@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#FDFBF7"/>
+<text id="chart-title" data-role="title" x="640.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#222222">2016 election results by state</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="60.0" y1="600.0" x2="1160.0" y2="600.0" stroke="#444444" stroke-width="3"/>
+<line data-role="axis" x1="60.0" y1="180.0" x2="60.0" y2="600.0" stroke="#444444" stroke-width="3"/>
+<g id="state-0" data-role="entity" data-entity-id="alabama" data-label="Alabama">
+<rect data-role="bar" data-entity-id="alabama-clinton" data-value="34" x="60.0" y="457.2" width="17.0" height="142.8" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="alabama-other" data-value="4" x="60.0" y="440.4" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="alabama-trump" data-value="62" x="60.0" y="180.0" width="17.0" height="260.4" fill="#B23A2E"/>
+<text data-role="category-label" x="68.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 68.5 624)">Alabama</text>
+</g>
+<g id="state-1" data-role="entity" data-entity-id="alaska" data-label="Alaska">
+<rect data-role="bar" data-entity-id="alaska-clinton" data-value="37" x="82.0" y="444.6" width="17.0" height="155.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="alaska-other" data-value="12" x="82.0" y="394.2" width="17.0" height="50.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="alaska-trump" data-value="51" x="82.0" y="180.0" width="17.0" height="214.2" fill="#B23A2E"/>
+<text data-role="category-label" x="90.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 90.5 624)">Alaska</text>
+</g>
+<g id="state-2" data-role="entity" data-entity-id="arizona" data-label="Arizona">
+<rect data-role="bar" data-entity-id="arizona-clinton" data-value="45" x="104.0" y="411.0" width="17.0" height="189.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="arizona-other" data-value="6" x="104.0" y="385.8" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="arizona-trump" data-value="49" x="104.0" y="180.0" width="17.0" height="205.8" fill="#B23A2E"/>
+<text data-role="category-label" x="112.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 112.5 624)">Arizona</text>
+</g>
+<g id="state-3" data-role="entity" data-entity-id="arkansas" data-label="Arkansas">
+<rect data-role="bar" data-entity-id="arkansas-clinton" data-value="34" x="126.0" y="457.2" width="17.0" height="142.8" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="arkansas-other" data-value="6" x="126.0" y="432.0" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="arkansas-trump" data-value="60" x="126.0" y="180.0" width="17.0" height="252.0" fill="#B23A2E"/>
+<text data-role="category-label" x="134.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 134.5 624)">Arkansas</text>
+</g>
+<g id="state-4" data-role="entity" data-entity-id="california" data-label="California">
+<rect data-role="bar" data-entity-id="california-clinton" data-value="62" x="148.0" y="339.6" width="17.0" height="260.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="california-other" data-value="6" x="148.0" y="314.4" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="california-trump" data-value="32" x="148.0" y="180.0" width="17.0" height="134.4" fill="#B23A2E"/>
+<text data-role="category-label" x="156.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 156.5 624)">California</text>
+</g>
+<g id="state-5" data-role="entity" data-entity-id="colorado" data-label="Colorado">
+<rect data-role="bar" data-entity-id="colorado-clinton" data-value="48" x="170.0" y="398.4" width="17.0" height="201.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="colorado-other" data-value="9" x="170.0" y="360.6" width="17.0" height="37.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="colorado-trump" data-value="43" x="170.0" y="180.0" width="17.0" height="180.6" fill="#B23A2E"/>
+<text data-role="category-label" x="178.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 178.5 624)">Colorado</text>
+</g>
+<g id="state-6" data-role="entity" data-entity-id="connecticut" data-label="Connecticut">
+<rect data-role="bar" data-entity-id="connecticut-clinton" data-value="54" x="192.0" y="373.2" width="17.0" height="226.8" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="connecticut-other" data-value="5" x="192.0" y="352.2" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="connecticut-trump" data-value="41" x="192.0" y="180.0" width="17.0" height="172.2" fill="#B23A2E"/>
+<text data-role="category-label" x="200.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 200.5 624)">Connecticut</text>
+</g>
+<g id="state-7" data-role="entity" data-entity-id="delaware" data-label="Delaware">
+<rect data-role="bar" data-entity-id="delaware-clinton" data-value="53" x="214.0" y="377.4" width="17.0" height="222.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="delaware-other" data-value="5" x="214.0" y="356.4" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="delaware-trump" data-value="42" x="214.0" y="180.0" width="17.0" height="176.4" fill="#B23A2E"/>
+<text data-role="category-label" x="222.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 222.5 624)">Delaware</text>
+</g>
+<g id="state-8" data-role="entity" data-entity-id="florida" data-label="Florida">
+<rect data-role="bar" data-entity-id="florida-clinton" data-value="47" x="236.0" y="402.6" width="17.0" height="197.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="florida-other" data-value="4" x="236.0" y="385.8" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="florida-trump" data-value="49" x="236.0" y="180.0" width="17.0" height="205.8" fill="#B23A2E"/>
+<text data-role="category-label" x="244.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 244.5 624)">Florida</text>
+</g>
+<g id="state-9" data-role="entity" data-entity-id="georgia" data-label="Georgia">
+<rect data-role="bar" data-entity-id="georgia-clinton" data-value="46" x="258.0" y="406.8" width="17.0" height="193.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="georgia-other" data-value="3" x="258.0" y="394.2" width="17.0" height="12.6" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="georgia-trump" data-value="51" x="258.0" y="180.0" width="17.0" height="214.2" fill="#B23A2E"/>
+<text data-role="category-label" x="266.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 266.5 624)">Georgia</text>
+</g>
+<g id="state-10" data-role="entity" data-entity-id="hawaii" data-label="Hawaii">
+<rect data-role="bar" data-entity-id="hawaii-clinton" data-value="62" x="280.0" y="339.6" width="17.0" height="260.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="hawaii-other" data-value="8" x="280.0" y="306.0" width="17.0" height="33.6" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="hawaii-trump" data-value="30" x="280.0" y="180.0" width="17.0" height="126.0" fill="#B23A2E"/>
+<text data-role="category-label" x="288.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 288.5 624)">Hawaii</text>
+</g>
+<g id="state-11" data-role="entity" data-entity-id="idaho" data-label="Idaho">
+<rect data-role="bar" data-entity-id="idaho-clinton" data-value="27" x="302.0" y="486.6" width="17.0" height="113.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="idaho-other" data-value="14" x="302.0" y="427.8" width="17.0" height="58.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="idaho-trump" data-value="59" x="302.0" y="180.0" width="17.0" height="247.8" fill="#B23A2E"/>
+<text data-role="category-label" x="310.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 310.5 624)">Idaho</text>
+</g>
+<g id="state-12" data-role="entity" data-entity-id="illinois" data-label="Illinois">
+<rect data-role="bar" data-entity-id="illinois-clinton" data-value="56" x="324.0" y="364.8" width="17.0" height="235.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="illinois-other" data-value="5" x="324.0" y="343.8" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="illinois-trump" data-value="39" x="324.0" y="180.0" width="17.0" height="163.8" fill="#B23A2E"/>
+<text data-role="category-label" x="332.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 332.5 624)">Illinois</text>
+</g>
+<g id="state-13" data-role="entity" data-entity-id="indiana" data-label="Indiana">
+<rect data-role="bar" data-entity-id="indiana-clinton" data-value="38" x="346.0" y="440.4" width="17.0" height="159.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="indiana-other" data-value="5" x="346.0" y="419.4" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="indiana-trump" data-value="57" x="346.0" y="180.0" width="17.0" height="239.4" fill="#B23A2E"/>
+<text data-role="category-label" x="354.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 354.5 624)">Indiana</text>
+</g>
+<g id="state-14" data-role="entity" data-entity-id="iowa" data-label="Iowa">
+<rect data-role="bar" data-entity-id="iowa-clinton" data-value="42" x="368.0" y="423.6" width="17.0" height="176.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="iowa-other" data-value="7" x="368.0" y="394.2" width="17.0" height="29.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="iowa-trump" data-value="51" x="368.0" y="180.0" width="17.0" height="214.2" fill="#B23A2E"/>
+<text data-role="category-label" x="376.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 376.5 624)">Iowa</text>
+</g>
+<g id="state-15" data-role="entity" data-entity-id="kansas" data-label="Kansas">
+<rect data-role="bar" data-entity-id="kansas-clinton" data-value="36" x="390.0" y="448.8" width="17.0" height="151.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="kansas-other" data-value="7" x="390.0" y="419.4" width="17.0" height="29.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="kansas-trump" data-value="57" x="390.0" y="180.0" width="17.0" height="239.4" fill="#B23A2E"/>
+<text data-role="category-label" x="398.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 398.5 624)">Kansas</text>
+</g>
+<g id="state-16" data-role="entity" data-entity-id="kentucky" data-label="Kentucky">
+<rect data-role="bar" data-entity-id="kentucky-clinton" data-value="33" x="412.0" y="461.4" width="17.0" height="138.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="kentucky-other" data-value="4" x="412.0" y="444.6" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="kentucky-trump" data-value="63" x="412.0" y="180.0" width="17.0" height="264.6" fill="#B23A2E"/>
+<text data-role="category-label" x="420.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 420.5 624)">Kentucky</text>
+</g>
+<g id="state-17" data-role="entity" data-entity-id="louisiana" data-label="Louisiana">
+<rect data-role="bar" data-entity-id="louisiana-clinton" data-value="38" x="434.0" y="440.4" width="17.0" height="159.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="louisiana-other" data-value="4" x="434.0" y="423.6" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="louisiana-trump" data-value="58" x="434.0" y="180.0" width="17.0" height="243.6" fill="#B23A2E"/>
+<text data-role="category-label" x="442.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 442.5 624)">Louisiana</text>
+</g>
+<g id="state-18" data-role="entity" data-entity-id="maine" data-label="Maine">
+<rect data-role="bar" data-entity-id="maine-clinton" data-value="48" x="456.0" y="398.4" width="17.0" height="201.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="maine-other" data-value="7" x="456.0" y="369.0" width="17.0" height="29.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="maine-trump" data-value="45" x="456.0" y="180.0" width="17.0" height="189.0" fill="#B23A2E"/>
+<text data-role="category-label" x="464.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 464.5 624)">Maine</text>
+</g>
+<g id="state-19" data-role="entity" data-entity-id="maryland" data-label="Maryland">
+<rect data-role="bar" data-entity-id="maryland-clinton" data-value="60" x="478.0" y="348.0" width="17.0" height="252.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="maryland-other" data-value="6" x="478.0" y="322.8" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="maryland-trump" data-value="34" x="478.0" y="180.0" width="17.0" height="142.8" fill="#B23A2E"/>
+<text data-role="category-label" x="486.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 486.5 624)">Maryland</text>
+</g>
+<g id="state-20" data-role="entity" data-entity-id="massachusetts" data-label="Massachusetts">
+<rect data-role="bar" data-entity-id="massachusetts-clinton" data-value="60" x="500.0" y="348.0" width="17.0" height="252.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="massachusetts-other" data-value="7" x="500.0" y="318.6" width="17.0" height="29.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="massachusetts-trump" data-value="33" x="500.0" y="180.0" width="17.0" height="138.6" fill="#B23A2E"/>
+<text data-role="category-label" x="508.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 508.5 624)">Massachusetts</text>
+</g>
+<g id="state-21" data-role="entity" data-entity-id="michigan" data-label="Michigan">
+<rect data-role="bar" data-entity-id="michigan-clinton" data-value="47" x="522.0" y="402.6" width="17.0" height="197.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="michigan-other" data-value="6" x="522.0" y="377.4" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="michigan-trump" data-value="47" x="522.0" y="180.0" width="17.0" height="197.4" fill="#B23A2E"/>
+<text data-role="category-label" x="530.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 530.5 624)">Michigan</text>
+</g>
+<g id="state-22" data-role="entity" data-entity-id="minnesota" data-label="Minnesota">
+<rect data-role="bar" data-entity-id="minnesota-clinton" data-value="47" x="544.0" y="402.6" width="17.0" height="197.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="minnesota-other" data-value="8" x="544.0" y="369.0" width="17.0" height="33.6" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="minnesota-trump" data-value="45" x="544.0" y="180.0" width="17.0" height="189.0" fill="#B23A2E"/>
+<text data-role="category-label" x="552.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 552.5 624)">Minnesota</text>
+</g>
+<g id="state-23" data-role="entity" data-entity-id="mississippi" data-label="Mississippi">
+<rect data-role="bar" data-entity-id="mississippi-clinton" data-value="40" x="566.0" y="432.0" width="17.0" height="168.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="mississippi-other" data-value="2" x="566.0" y="423.6" width="17.0" height="8.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="mississippi-trump" data-value="58" x="566.0" y="180.0" width="17.0" height="243.6" fill="#B23A2E"/>
+<text data-role="category-label" x="574.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 574.5 624)">Mississippi</text>
+</g>
+<g id="state-24" data-role="entity" data-entity-id="missouri" data-label="Missouri">
+<rect data-role="bar" data-entity-id="missouri-clinton" data-value="38" x="588.0" y="440.4" width="17.0" height="159.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="missouri-other" data-value="5" x="588.0" y="419.4" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="missouri-trump" data-value="57" x="588.0" y="180.0" width="17.0" height="239.4" fill="#B23A2E"/>
+<text data-role="category-label" x="596.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 596.5 624)">Missouri</text>
+</g>
+<g id="state-25" data-role="entity" data-entity-id="montana" data-label="Montana">
+<rect data-role="bar" data-entity-id="montana-clinton" data-value="36" x="610.0" y="448.8" width="17.0" height="151.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="montana-other" data-value="8" x="610.0" y="415.2" width="17.0" height="33.6" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="montana-trump" data-value="56" x="610.0" y="180.0" width="17.0" height="235.2" fill="#B23A2E"/>
+<text data-role="category-label" x="618.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 618.5 624)">Montana</text>
+</g>
+<g id="state-26" data-role="entity" data-entity-id="nebraska" data-label="Nebraska">
+<rect data-role="bar" data-entity-id="nebraska-clinton" data-value="34" x="632.0" y="457.2" width="17.0" height="142.8" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="nebraska-other" data-value="7" x="632.0" y="427.8" width="17.0" height="29.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="nebraska-trump" data-value="59" x="632.0" y="180.0" width="17.0" height="247.8" fill="#B23A2E"/>
+<text data-role="category-label" x="640.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 640.5 624)">Nebraska</text>
+</g>
+<g id="state-27" data-role="entity" data-entity-id="nevada" data-label="Nevada">
+<rect data-role="bar" data-entity-id="nevada-clinton" data-value="48" x="654.0" y="398.4" width="17.0" height="201.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="nevada-other" data-value="6" x="654.0" y="373.2" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="nevada-trump" data-value="46" x="654.0" y="180.0" width="17.0" height="193.2" fill="#B23A2E"/>
+<text data-role="category-label" x="662.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 662.5 624)">Nevada</text>
+</g>
+<g id="state-28" data-role="entity" data-entity-id="new-hampshire" data-label="New Hampshire">
+<rect data-role="bar" data-entity-id="new-hampshire-clinton" data-value="47" x="676.0" y="402.6" width="17.0" height="197.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="new-hampshire-other" data-value="6" x="676.0" y="377.4" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="new-hampshire-trump" data-value="47" x="676.0" y="180.0" width="17.0" height="197.4" fill="#B23A2E"/>
+<text data-role="category-label" x="684.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 684.5 624)">New Hampshire</text>
+</g>
+<g id="state-29" data-role="entity" data-entity-id="new-jersey" data-label="New Jersey">
+<rect data-role="bar" data-entity-id="new-jersey-clinton" data-value="55" x="698.0" y="369.0" width="17.0" height="231.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="new-jersey-other" data-value="4" x="698.0" y="352.2" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="new-jersey-trump" data-value="41" x="698.0" y="180.0" width="17.0" height="172.2" fill="#B23A2E"/>
+<text data-role="category-label" x="706.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 706.5 624)">New Jersey</text>
+</g>
+<g id="state-30" data-role="entity" data-entity-id="new-mexico" data-label="New Mexico">
+<rect data-role="bar" data-entity-id="new-mexico-clinton" data-value="48" x="720.0" y="398.4" width="17.0" height="201.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="new-mexico-other" data-value="12" x="720.0" y="348.0" width="17.0" height="50.4" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="new-mexico-trump" data-value="40" x="720.0" y="180.0" width="17.0" height="168.0" fill="#B23A2E"/>
+<text data-role="category-label" x="728.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 728.5 624)">New Mexico</text>
+</g>
+<g id="state-31" data-role="entity" data-entity-id="new-york" data-label="New York">
+<rect data-role="bar" data-entity-id="new-york-clinton" data-value="59" x="742.0" y="352.2" width="17.0" height="247.8" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="new-york-other" data-value="4" x="742.0" y="335.4" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="new-york-trump" data-value="37" x="742.0" y="180.0" width="17.0" height="155.4" fill="#B23A2E"/>
+<text data-role="category-label" x="750.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 750.5 624)">New York</text>
+</g>
+<g id="state-32" data-role="entity" data-entity-id="north-carolina" data-label="North Carolina">
+<rect data-role="bar" data-entity-id="north-carolina-clinton" data-value="46" x="764.0" y="406.8" width="17.0" height="193.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="north-carolina-other" data-value="4" x="764.0" y="390.0" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="north-carolina-trump" data-value="50" x="764.0" y="180.0" width="17.0" height="210.0" fill="#B23A2E"/>
+<text data-role="category-label" x="772.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 772.5 624)">North Carolina</text>
+</g>
+<g id="state-33" data-role="entity" data-entity-id="north-dakota" data-label="North Dakota">
+<rect data-role="bar" data-entity-id="north-dakota-clinton" data-value="27" x="786.0" y="486.6" width="17.0" height="113.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="north-dakota-other" data-value="10" x="786.0" y="444.6" width="17.0" height="42.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="north-dakota-trump" data-value="63" x="786.0" y="180.0" width="17.0" height="264.6" fill="#B23A2E"/>
+<text data-role="category-label" x="794.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 794.5 624)">North Dakota</text>
+</g>
+<g id="state-34" data-role="entity" data-entity-id="ohio" data-label="Ohio">
+<rect data-role="bar" data-entity-id="ohio-clinton" data-value="43" x="808.0" y="419.4" width="17.0" height="180.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="ohio-other" data-value="5" x="808.0" y="398.4" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="ohio-trump" data-value="52" x="808.0" y="180.0" width="17.0" height="218.4" fill="#B23A2E"/>
+<text data-role="category-label" x="816.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 816.5 624)">Ohio</text>
+</g>
+<g id="state-35" data-role="entity" data-entity-id="oklahoma" data-label="Oklahoma">
+<rect data-role="bar" data-entity-id="oklahoma-clinton" data-value="29" x="830.0" y="478.2" width="17.0" height="121.8" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="oklahoma-other" data-value="6" x="830.0" y="453.0" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="oklahoma-trump" data-value="65" x="830.0" y="180.0" width="17.0" height="273.0" fill="#B23A2E"/>
+<text data-role="category-label" x="838.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 838.5 624)">Oklahoma</text>
+</g>
+<g id="state-36" data-role="entity" data-entity-id="oregon" data-label="Oregon">
+<rect data-role="bar" data-entity-id="oregon-clinton" data-value="50" x="852.0" y="390.0" width="17.0" height="210.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="oregon-other" data-value="11" x="852.0" y="343.8" width="17.0" height="46.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="oregon-trump" data-value="39" x="852.0" y="180.0" width="17.0" height="163.8" fill="#B23A2E"/>
+<text data-role="category-label" x="860.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 860.5 624)">Oregon</text>
+</g>
+<g id="state-37" data-role="entity" data-entity-id="pennsylvania" data-label="Pennsylvania">
+<rect data-role="bar" data-entity-id="pennsylvania-clinton" data-value="47" x="874.0" y="402.6" width="17.0" height="197.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="pennsylvania-other" data-value="5" x="874.0" y="381.6" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="pennsylvania-trump" data-value="48" x="874.0" y="180.0" width="17.0" height="201.6" fill="#B23A2E"/>
+<text data-role="category-label" x="882.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 882.5 624)">Pennsylvania</text>
+</g>
+<g id="state-38" data-role="entity" data-entity-id="rhode-island" data-label="Rhode Island">
+<rect data-role="bar" data-entity-id="rhode-island-clinton" data-value="55" x="896.0" y="369.0" width="17.0" height="231.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="rhode-island-other" data-value="6" x="896.0" y="343.8" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="rhode-island-trump" data-value="39" x="896.0" y="180.0" width="17.0" height="163.8" fill="#B23A2E"/>
+<text data-role="category-label" x="904.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 904.5 624)">Rhode Island</text>
+</g>
+<g id="state-39" data-role="entity" data-entity-id="south-carolina" data-label="South Carolina">
+<rect data-role="bar" data-entity-id="south-carolina-clinton" data-value="41" x="918.0" y="427.8" width="17.0" height="172.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="south-carolina-other" data-value="4" x="918.0" y="411.0" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="south-carolina-trump" data-value="55" x="918.0" y="180.0" width="17.0" height="231.0" fill="#B23A2E"/>
+<text data-role="category-label" x="926.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 926.5 624)">South Carolina</text>
+</g>
+<g id="state-40" data-role="entity" data-entity-id="south-dakota" data-label="South Dakota">
+<rect data-role="bar" data-entity-id="south-dakota-clinton" data-value="32" x="940.0" y="465.6" width="17.0" height="134.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="south-dakota-other" data-value="6" x="940.0" y="440.4" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="south-dakota-trump" data-value="62" x="940.0" y="180.0" width="17.0" height="260.4" fill="#B23A2E"/>
+<text data-role="category-label" x="948.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 948.5 624)">South Dakota</text>
+</g>
+<g id="state-41" data-role="entity" data-entity-id="tennessee" data-label="Tennessee">
+<rect data-role="bar" data-entity-id="tennessee-clinton" data-value="35" x="962.0" y="453.0" width="17.0" height="147.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="tennessee-other" data-value="4" x="962.0" y="436.2" width="17.0" height="16.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="tennessee-trump" data-value="61" x="962.0" y="180.0" width="17.0" height="256.2" fill="#B23A2E"/>
+<text data-role="category-label" x="970.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 970.5 624)">Tennessee</text>
+</g>
+<g id="state-42" data-role="entity" data-entity-id="texas" data-label="Texas">
+<rect data-role="bar" data-entity-id="texas-clinton" data-value="43" x="984.0" y="419.4" width="17.0" height="180.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="texas-other" data-value="5" x="984.0" y="398.4" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="texas-trump" data-value="52" x="984.0" y="180.0" width="17.0" height="218.4" fill="#B23A2E"/>
+<text data-role="category-label" x="992.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 992.5 624)">Texas</text>
+</g>
+<g id="state-43" data-role="entity" data-entity-id="utah" data-label="Utah">
+<rect data-role="bar" data-entity-id="utah-clinton" data-value="28" x="1006.0" y="482.4" width="17.0" height="117.6" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="utah-other" data-value="26" x="1006.0" y="373.2" width="17.0" height="109.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="utah-trump" data-value="46" x="1006.0" y="180.0" width="17.0" height="193.2" fill="#B23A2E"/>
+<text data-role="category-label" x="1014.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 1014.5 624)">Utah</text>
+</g>
+<g id="state-44" data-role="entity" data-entity-id="vermont" data-label="Vermont">
+<rect data-role="bar" data-entity-id="vermont-clinton" data-value="61" x="1028.0" y="343.8" width="17.0" height="256.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="vermont-other" data-value="9" x="1028.0" y="306.0" width="17.0" height="37.8" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="vermont-trump" data-value="30" x="1028.0" y="180.0" width="17.0" height="126.0" fill="#B23A2E"/>
+<text data-role="category-label" x="1036.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 1036.5 624)">Vermont</text>
+</g>
+<g id="state-45" data-role="entity" data-entity-id="virginia" data-label="Virginia">
+<rect data-role="bar" data-entity-id="virginia-clinton" data-value="50" x="1050.0" y="390.0" width="17.0" height="210.0" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="virginia-other" data-value="6" x="1050.0" y="364.8" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="virginia-trump" data-value="44" x="1050.0" y="180.0" width="17.0" height="184.8" fill="#B23A2E"/>
+<text data-role="category-label" x="1058.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 1058.5 624)">Virginia</text>
+</g>
+<g id="state-46" data-role="entity" data-entity-id="washington" data-label="Washington">
+<rect data-role="bar" data-entity-id="washington-clinton" data-value="54" x="1072.0" y="373.2" width="17.0" height="226.8" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="washington-other" data-value="8" x="1072.0" y="339.6" width="17.0" height="33.6" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="washington-trump" data-value="38" x="1072.0" y="180.0" width="17.0" height="159.6" fill="#B23A2E"/>
+<text data-role="category-label" x="1080.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 1080.5 624)">Washington</text>
+</g>
+<g id="state-47" data-role="entity" data-entity-id="west-virginia" data-label="West Virginia">
+<rect data-role="bar" data-entity-id="west-virginia-clinton" data-value="26" x="1094.0" y="490.8" width="17.0" height="109.2" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="west-virginia-other" data-value="5" x="1094.0" y="469.8" width="17.0" height="21.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="west-virginia-trump" data-value="69" x="1094.0" y="180.0" width="17.0" height="289.8" fill="#B23A2E"/>
+<text data-role="category-label" x="1102.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 1102.5 624)">West Virginia</text>
+</g>
+<g id="state-48" data-role="entity" data-entity-id="wisconsin" data-label="Wisconsin">
+<rect data-role="bar" data-entity-id="wisconsin-clinton" data-value="47" x="1116.0" y="402.6" width="17.0" height="197.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="wisconsin-other" data-value="6" x="1116.0" y="377.4" width="17.0" height="25.2" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="wisconsin-trump" data-value="47" x="1116.0" y="180.0" width="17.0" height="197.4" fill="#B23A2E"/>
+<text data-role="category-label" x="1124.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 1124.5 624)">Wisconsin</text>
+</g>
+<g id="state-49" data-role="entity" data-entity-id="wyoming" data-label="Wyoming">
+<rect data-role="bar" data-entity-id="wyoming-clinton" data-value="22" x="1138.0" y="507.6" width="17.0" height="92.4" fill="#3B6FB6"/>
+<rect data-role="bar" data-entity-id="wyoming-other" data-value="10" x="1138.0" y="465.6" width="17.0" height="42.0" fill="#C9C9C9"/>
+<rect data-role="bar" data-entity-id="wyoming-trump" data-value="68" x="1138.0" y="180.0" width="17.0" height="285.6" fill="#B23A2E"/>
+<text data-role="category-label" x="1146.5" y="624" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#555555" transform="rotate(55 1146.5 624)">Wyoming</text>
+</g>
+</g>
+</svg>

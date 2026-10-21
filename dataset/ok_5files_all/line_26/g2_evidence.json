@@ -1,0 +1,149 @@
+{
+ "clip_id": "line_26",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:PRODUCTIVITY @ 120",
+    "mark:WAGES @ 120",
+    "mark:PRODUCTIVITY @ 642.5",
+    "mark:WAGES @ 642.5"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "PRODUCTIVITY @ 120",
+      "value": -0.0047
+     },
+     {
+      "mark": "WAGES @ 120",
+      "value": -0.0047
+     },
+     {
+      "mark": "PRODUCTIVITY @ 642.5",
+      "value": 69.9758
+     },
+     {
+      "mark": "WAGES @ 642.5",
+      "value": 69.9758
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both named series and make clear that their values coincide through x=642.5 before separating."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:PRODUCTIVITY @ 642.5",
+    "mark:WAGES @ 642.5"
+   ],
+   "assertion": {
+    "at": "642.5",
+    "above": "PRODUCTIVITY",
+    "above_value": 69.9758,
+    "below": "WAGES",
+    "below_value": 69.9758,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the two series separating and productivity moving above wages at or around x=670."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:WAGES @ 670",
+    "mark:PRODUCTIVITY @ 670",
+    "mark:WAGES @ 1220",
+    "mark:PRODUCTIVITY @ 1220"
+   ],
+   "assertion": {
+    "low": "WAGES @ 670",
+    "low_value": 71.9976,
+    "high": "PRODUCTIVITY @ 1220",
+    "high_value": 225.0023,
+    "delta": 153.0047,
+    "ratio": 3.1251,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show that after x=670 the wage series rises much less steeply than the productivity series."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:PRODUCTIVITY @ 1220"
+   ],
+   "assertion": {
+    "mark": "PRODUCTIVITY @ 1220",
+    "field": "value",
+    "expected": 225.0023,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the final endpoint values for both productivity and wages."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:PRODUCTIVITY @ 1220",
+    "mark:WAGES @ 1220"
+   ],
+   "assertion": {
+    "greater": "PRODUCTIVITY @ 1220",
+    "lesser": "WAGES @ 1220",
+    "expected_ratio": 2.0451,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the final vertical gap and ratio between productivity and wages apparent."
+  }
+ ]
+}

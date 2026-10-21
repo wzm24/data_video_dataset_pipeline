@@ -1,0 +1,271 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_37",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant demographic shift of African Americans leaving the South starting in the early 20th century.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the start of the series in 1910, the African-American share in the South is high, at table value 90 (relative value 0.90).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "African-American share in South",
+     "x": "1910",
+     "field": "value",
+     "value": 90.0,
+     "note": "x_value=1910 row has value 90; relative_value is 0.90"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 1910 the South's African-American share is 90 on the table's value scale.",
+    "The series starts at a high of 90 in 1910.",
+    "At the 1910 endpoint the relative share is 0.90."
+   ],
+   "visual_evidence_rule": "The 1910 data point must be visibly high on the series, at table value 90.",
+   "temporal_anchor": "Starting in the early 20th century",
+   "reviewer_question": "Is the 1910 starting level required, or is the downward direction alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The African-American share in the South falls substantially over the long run, from table value 90 in 1910 to 52 in 1990, a decline of 38 table-value units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "African-American share in South",
+     "x": "1910",
+     "field": "value",
+     "value": 90.0,
+     "note": "Start value"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "1970",
+     "field": "value",
+     "value": 53.0,
+     "note": "Intermediate value for alternative phrasing"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "1990",
+     "field": "value",
+     "value": 52.0,
+     "note": "End value for the long decline"
+    }
+   ],
+   "computation": "90 - 52 = 38; 90 - 53 = 37",
+   "accepted_routes": [
+    "The share drops from 90 in 1910 to 52 in 1990, a fall of 38 table-value units.",
+    "By 1970 the share is 53, down 37 from 1910.",
+    "The long-run movement is a large decline from 90 in 1910 to 52 in 1990."
+   ],
+   "visual_evidence_rule": "The series must visibly decline from the 1910 value 90 to the 1990 value 52.",
+   "temporal_anchor": "nearly half of the African-American population left this region",
+   "reviewer_question": "Should the clip require the full 1910-1990 decline, or is the 1910-1970 decline enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The lowest measured African-American share in the South is 52 in 1990, below the 1970 value of 53 and the 2010 value of 57.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "African-American share in South",
+     "x": "1970",
+     "field": "value",
+     "value": 53.0,
+     "note": "Comparison value before the minimum"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "1990",
+     "field": "value",
+     "value": 52.0,
+     "note": "Series minimum among measured x_value rows"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "2010",
+     "field": "value",
+     "value": 57.0,
+     "note": "Comparison value after the minimum"
+    }
+   ],
+   "computation": "52 is the lowest value among the measured x_value rows: 90, 79, 68, 53, 52, 57",
+   "accepted_routes": [
+    "The lowest measured share is 52 in 1990.",
+    "1990 marks the series minimum at 52.",
+    "The share bottoms out at 52 in 1990, below 53 in 1970 and 57 in 2010."
+   ],
+   "visual_evidence_rule": "The 1990 point must visibly be the lowest point in the series, at table value 52.",
+   "temporal_anchor": "left this region",
+   "reviewer_question": "Is the 1990 minimum obligatory, or is the general downward trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After 1990, the decline reverses: the share rises from 52 in 1990 to 57 in 2010, an increase of 5 table-value units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "African-American share in South",
+     "x": "1990",
+     "field": "value",
+     "value": 52.0,
+     "note": "Starting value of the late uptick"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "2010",
+     "field": "value",
+     "value": 57.0,
+     "note": "Ending value of the late uptick"
+    }
+   ],
+   "computation": "57 - 52 = 5",
+   "accepted_routes": [
+    "After 1990, the share rises from 52 to 57 by 2010.",
+    "The series turns upward at the end, gaining 5 table-value units from 1990 to 2010.",
+    "2010 is higher than the 1990 low, at 57 versus 52."
+   ],
+   "visual_evidence_rule": "The segment from 1990 to 2010 must visibly turn upward from 52 to 57.",
+   "temporal_anchor": "Not in original narration; optional post-departure extension after the leaving-the-South clause",
+   "reviewer_question": "Should the post-1990 uptick be included even though the narration only describes leaving the South?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The steepest measured 20-year drop is from 1950 to 1970, when the share falls from 68 to 53 (15 table-value units), larger than the 1930-1950 drop (79 to 68 = 11) and the 1970-1990 drop (53 to 52 = 1).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "African-American share in South",
+     "x": "1930",
+     "field": "value",
+     "value": 79.0,
+     "note": "Start of 1930-1950 interval"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "1950",
+     "field": "value",
+     "value": 68.0,
+     "note": "Start of steepest interval"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "1970",
+     "field": "value",
+     "value": 53.0,
+     "note": "End of steepest interval"
+    },
+    {
+     "entity": "African-American share in South",
+     "x": "1990",
+     "field": "value",
+     "value": 52.0,
+     "note": "End of 1970-1990 interval"
+    }
+   ],
+   "computation": "68 - 53 = 15; 79 - 68 = 11; 53 - 52 = 1",
+   "accepted_routes": [
+    "The largest interval decline runs from 68 in 1950 to 53 in 1970, a drop of 15 table-value units.",
+    "1950-1970 falls by 15, more than 1930-1950's 11 and 1970-1990's 1.",
+    "The steepest measured 20-year decline is 1950 to 1970."
+   ],
+   "visual_evidence_rule": "The 1950-to-1970 segment must visibly have the largest downward drop among measured intervals.",
+   "temporal_anchor": "nearly half of the African-American population left this region",
+   "reviewer_question": "Is the steepest 1950-1970 interval required, or is the overall decline enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Intermediate milestone values along the decline, such as 1930=79, 1950=68, and 1970=53, may be shown as optional context.",
+  "The 2010 rebound to 57 is optional and should not be forced by the original narration."
+ ],
+ "unsupported_to_avoid": [
+  "Stating 'nearly half of the African-American population left the South' as a table-derived number; the table shows share in the South, not out-migration counts.",
+  "Calling 90, 52, or 57 a percentage, since the unit column is blank.",
+  "Causal claims that Northern or Western cities caused the decline; the table does not contain destination data.",
+  "Extrapolating before 1910 or after 2010.",
+  "Claiming the share fell by half from 1910 to 1990; 90 to 52 is not a 50% drop.",
+  "Using absolute population counts, migration totals, or destination shares that are not in the table."
+ ],
+ "notes": "Values are cited from the value column and described as table-value units because the unit column is blank; avoid % or count language. The supported story is a long decline in the African-American share in the South, with a late uptick.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 47.3,
+  "usage": {
+   "prompt_tokens": 2120,
+   "completion_tokens": 11423,
+   "total_tokens": 13543,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9140
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1608
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

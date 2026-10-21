@@ -1,0 +1,341 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_17",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that transportation is a significant and costly component of household expenditures.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Transportation is the second-largest listed household expenditure category, after Housing and ahead of Food, Personal insurance, Health care, and Clothes.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Housing",
+     "x": "Housing",
+     "field": "value",
+     "value": 33.0,
+     "note": "largest value"
+    },
+    {
+     "entity": "Transportation",
+     "x": "Transportation",
+     "field": "value",
+     "value": 17.0,
+     "note": "second value"
+    },
+    {
+     "entity": "Food",
+     "x": "Food",
+     "field": "value",
+     "value": 12.0,
+     "note": "third value"
+    },
+    {
+     "entity": "Personal insurance",
+     "x": "Personal insurance",
+     "field": "value",
+     "value": 11.0,
+     "note": "fourth value"
+    },
+    {
+     "entity": "Health care",
+     "x": "Health care",
+     "field": "value",
+     "value": 9.0,
+     "note": "fifth value"
+    },
+    {
+     "entity": "Clothes",
+     "x": "Clothes",
+     "field": "value",
+     "value": 3.0,
+     "note": "sixth value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Transportation is the second biggest household expense after Housing.",
+    "Housing ranks first, Transportation second, Food third.",
+    "Transportation sits below Housing but above all other listed categories."
+   ],
+   "visual_evidence_rule": "The category labels and values/order for Housing, Transportation, and the lower categories must be visible or directly inferable so the second-place ranking is clear.",
+   "temporal_anchor": "The second biggest household expense for Americans.",
+   "reviewer_question": "Is explicitly establishing Transportation as second-ranked, rather than merely a large category, required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Housing is the largest listed category with value 33 and relative_value 1.0, providing the reference above Transportation.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Housing",
+     "x": "Housing",
+     "field": "value",
+     "value": 33.0,
+     "note": "highest value"
+    },
+    {
+     "entity": "Housing",
+     "x": "Housing",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "largest on relative scale"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Housing is the biggest listed household expense at 33.",
+    "Housing has the top value, with a relative_value of 1.0.",
+    "Housing is the only category larger than Transportation."
+   ],
+   "visual_evidence_rule": "Housing's category label and value 33 (or relative_value 1.0) must be visible as the top-ranked category.",
+   "temporal_anchor": "The second biggest household expense for Americans.",
+   "reviewer_question": "Must the video show Housing as the first/largest category to anchor Transportation's second place?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Transportation's value is 17, about half of Housing's 33 (17/33 ≈ 0.515; Transportation relative_value 0.5155 vs Housing 1.0), making it a major but smaller-than-Housing cost.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Transportation",
+     "x": "Transportation",
+     "field": "value",
+     "value": 17.0,
+     "note": "Transportation value"
+    },
+    {
+     "entity": "Housing",
+     "x": "Housing",
+     "field": "value",
+     "value": 33.0,
+     "note": "Housing value"
+    },
+    {
+     "entity": "Transportation",
+     "x": "Transportation",
+     "field": "relative_value",
+     "value": 0.5155,
+     "note": "Transportation relative to largest"
+    },
+    {
+     "entity": "Housing",
+     "x": "Housing",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Housing relative to largest"
+    }
+   ],
+   "computation": "17 / 33 = 0.515; table relative_value 0.5155 vs 1.0",
+   "accepted_routes": [
+    "Transportation is about half as large as Housing.",
+    "Housing is roughly twice Transportation (33 vs 17).",
+    "Transportation's relative value is just over half of Housing's (0.5155 vs 1.0)."
+   ],
+   "visual_evidence_rule": "Transportation and Housing must both be visible with their values 17 and 33 (or relative_values 0.5155 and 1.0) so the half-size comparison can be made.",
+   "temporal_anchor": "And that's expensive.",
+   "reviewer_question": "Must the video explicitly compare Transportation to Housing's size, or is the second-place ranking enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Transportation's value (17) is greater than Food (12), Personal insurance (11), Health care (9), and Clothes (3); it leads all listed categories except Housing.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Transportation",
+     "x": "Transportation",
+     "field": "value",
+     "value": 17.0,
+     "note": "higher than all non-Housing categories"
+    },
+    {
+     "entity": "Food",
+     "x": "Food",
+     "field": "value",
+     "value": 12.0,
+     "note": "lower than Transportation"
+    },
+    {
+     "entity": "Personal insurance",
+     "x": "Personal insurance",
+     "field": "value",
+     "value": 11.0,
+     "note": "lower than Transportation"
+    },
+    {
+     "entity": "Health care",
+     "x": "Health care",
+     "field": "value",
+     "value": 9.0,
+     "note": "lower than Transportation"
+    },
+    {
+     "entity": "Clothes",
+     "x": "Clothes",
+     "field": "value",
+     "value": 3.0,
+     "note": "lower than Transportation"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Transportation exceeds Food, Personal insurance, Health care, and Clothes.",
+    "Only Housing is larger than Transportation.",
+    "Transportation is larger than all remaining listed categories."
+   ],
+   "visual_evidence_rule": "Transportation's value 17 and the lower values 12, 11, 9, and 3 must be visible or directly inferable for the dominance over non-Housing categories.",
+   "temporal_anchor": "The second biggest household expense for Americans.",
+   "reviewer_question": "Should the video show Transportation outweighing all non-Housing categories, or is second place sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Across the six listed categories, the summed value is 85, and Transportation's value 17 is about 0.20 of that total (17 of 85).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Housing",
+     "x": "Housing",
+     "field": "value",
+     "value": 33.0,
+     "note": "sum component"
+    },
+    {
+     "entity": "Transportation",
+     "x": "Transportation",
+     "field": "value",
+     "value": 17.0,
+     "note": "share numerator"
+    },
+    {
+     "entity": "Food",
+     "x": "Food",
+     "field": "value",
+     "value": 12.0,
+     "note": "sum component"
+    },
+    {
+     "entity": "Personal insurance",
+     "x": "Personal insurance",
+     "field": "value",
+     "value": 11.0,
+     "note": "sum component"
+    },
+    {
+     "entity": "Health care",
+     "x": "Health care",
+     "field": "value",
+     "value": 9.0,
+     "note": "sum component"
+    },
+    {
+     "entity": "Clothes",
+     "x": "Clothes",
+     "field": "value",
+     "value": 3.0,
+     "note": "sum component"
+    }
+   ],
+   "computation": "17 / (33+17+12+11+9+3) = 17/85 ≈ 0.20",
+   "accepted_routes": [
+    "Transportation is 17 of the 85 total listed value.",
+    "Transportation's share is about 0.20 of the summed listed values.",
+    "Transportation accounts for about one-fifth of the summed listed categories."
+   ],
+   "visual_evidence_rule": "The six listed values must be visible or directly inferable, and the total or Transportation's share of it must be derivable.",
+   "temporal_anchor": "The second biggest household expense for Americans.",
+   "reviewer_question": "Is the share-of-total framing required, or optional context beyond the intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Transportation is 5 table-value units above Food (17 − 12 = 5).",
+  "Transportation is about 1.4 times Food (17 / 12 ≈ 1.4167).",
+  "The full relative_value ordering: Housing 1.0000, Transportation 0.5155, Food 0.3631, Personal insurance 0.3333, Health care 0.2726, Clothes 0.0905."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state dollar amounts or percentages; the table's unit column is blank and no row uses %.",
+  "Do not claim that car ownership is required for work or any causal reason for the expense.",
+  "Do not claim Transportation is the largest category; Housing is larger (33 vs 17).",
+  "Do not invent a total household expenditure beyond the sum of the six listed categories.",
+  "Do not extrapolate to all Americans beyond what the table categories show."
+ ],
+ "notes": "All numeric claims use the table's value/relative_value columns; no $ or % is asserted because the unit column is blank. The required core is the second-place ranking plus the half-of-Housing and over-lower-categories comparisons.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 48.6,
+  "usage": {
+   "prompt_tokens": 1076,
+   "completion_tokens": 11654,
+   "total_tokens": 12730,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9357
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 564
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

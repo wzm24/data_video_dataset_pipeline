@@ -1,0 +1,307 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_79",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the massive scale of the Vision Fund relative to other major venture capital firms.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart compares the Vision Fund with four other major VC funds; their normalized relative scales are Vision Fund 1.000, VC Fund 1 0.300, VC Fund 2 0.280, VC Fund 3 0.260, and VC Fund 4 0.240.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Vision Fund",
+     "x": "690.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "normalized scale"
+    },
+    {
+     "entity": "VC Fund 1",
+     "x": "389.0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "normalized scale"
+    },
+    {
+     "entity": "VC Fund 2",
+     "x": "380.4",
+     "field": "relative_value",
+     "value": 0.28,
+     "note": "normalized scale"
+    },
+    {
+     "entity": "VC Fund 3",
+     "x": "371.8",
+     "field": "relative_value",
+     "value": 0.26,
+     "note": "normalized scale"
+    },
+    {
+     "entity": "VC Fund 4",
+     "x": "363.2",
+     "field": "relative_value",
+     "value": 0.24,
+     "note": "normalized scale"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Vision Fund is shown at 1.000 while the four other VC funds range from 0.300 down to 0.240 on the relative scale.",
+    "The five funds are Vision Fund (1.000), VC Fund 1 (0.300), VC Fund 2 (0.280), VC Fund 3 (0.260), and VC Fund 4 (0.240).",
+    "Vision Fund is the 1.000 benchmark; the comparison funds are all between 0.300 and 0.240."
+   ],
+   "visual_evidence_rule": "Five labeled bars must be visible: Vision Fund, VC Fund 1, VC Fund 2, VC Fund 3, VC Fund 4, with relative heights/values matching 1.000, 0.300, 0.280, 0.260, 0.240.",
+   "temporal_anchor": "The clause introducing 'these are the other biggest venture capital firms' should establish the five-fund comparison.",
+   "reviewer_question": "Must the video explicitly include all four comparison VC funds and their relative values, or is it enough to show a generic set of smaller VC funds?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Vision Fund is the extreme/largest in the comparison, exceeding the largest other shown VC fund by 0.700 normalized units.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Vision Fund",
+     "x": "690.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "maximum"
+    },
+    {
+     "entity": "VC Fund 1",
+     "x": "389.0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "largest non-Vision fund"
+    }
+   ],
+   "computation": "1.000 - 0.300 = 0.700",
+   "accepted_routes": [
+    "Vision Fund is highest at 1.000, 0.700 above the largest other VC fund.",
+    "Vision Fund leads VC Fund 1 by 0.700 on the relative scale.",
+    "The largest comparison VC fund is 0.300, so Vision Fund is 0.700 higher."
+   ],
+   "visual_evidence_rule": "The Vision Fund bar must be visibly tallest, and the chart should support the gap of 0.700 to VC Fund 1 via annotation, difference marker, or readable scale.",
+   "temporal_anchor": "The clause 'put that in perspective' or 'The Vision Fund makes...' should carry the size-lead message.",
+   "reviewer_question": "Is the absolute gap of 0.700 above the largest other fund required, or is the ratio in U3 sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Vision Fund is about 3.33 times the largest other shown VC fund.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Vision Fund",
+     "x": "690.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "numerator"
+    },
+    {
+     "entity": "VC Fund 1",
+     "x": "389.0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "largest non-Vision denominator"
+    }
+   ],
+   "computation": "1.000 / 0.300 = 3.333...",
+   "accepted_routes": [
+    "Vision Fund is about 3.3 times VC Fund 1.",
+    "VC Fund 1 is only about 30% of Vision Fund's relative scale.",
+    "Vision Fund is over three times the largest other VC fund."
+   ],
+   "visual_evidence_rule": "A ratio/multiplier callout or clearly comparable bar lengths must make the ~3.3x relationship to VC Fund 1 visible.",
+   "temporal_anchor": "The 'put that in perspective' clause should carry the multiplier; the Goldman Sachs clause is not supported by this table.",
+   "reviewer_question": "Should the video state the multiplier against the largest other VC fund as a required takeaway?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among the four non-Vision funds, the relative scale descends in the order VC Fund 1 (0.300) > VC Fund 2 (0.280) > VC Fund 3 (0.260) > VC Fund 4 (0.240).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "VC Fund 1",
+     "x": "389.0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "largest of the four"
+    },
+    {
+     "entity": "VC Fund 2",
+     "x": "380.4",
+     "field": "relative_value",
+     "value": 0.28,
+     "note": "second"
+    },
+    {
+     "entity": "VC Fund 3",
+     "x": "371.8",
+     "field": "relative_value",
+     "value": 0.26,
+     "note": "third"
+    },
+    {
+     "entity": "VC Fund 4",
+     "x": "363.2",
+     "field": "relative_value",
+     "value": 0.24,
+     "note": "smallest of the four"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "VC Fund 1 is the largest of the other funds, and VC Fund 4 is the smallest.",
+    "The other VC funds run 0.300, 0.280, 0.260, 0.240 from largest to smallest.",
+    "The four comparison funds are shown in descending order by relative scale."
+   ],
+   "visual_evidence_rule": "The four non-Vision bars must be ordered or labeled so that VC Fund 1 > VC Fund 2 > VC Fund 3 > VC Fund 4 is visible.",
+   "temporal_anchor": "The clause 'these are the other biggest venture capital firms' should carry the ordering of those firms if included.",
+   "reviewer_question": "Must the video preserve the exact ranking among the four comparison funds, or is it enough that each is smaller than Vision Fund?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Vision Fund accounts for about 48% of the combined relative scale of the five displayed funds, while the other four together account for about 52%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Vision Fund",
+     "x": "690.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "part"
+    },
+    {
+     "entity": "VC Fund 1",
+     "x": "389.0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "part of total"
+    },
+    {
+     "entity": "VC Fund 2",
+     "x": "380.4",
+     "field": "relative_value",
+     "value": 0.28,
+     "note": "part of total"
+    },
+    {
+     "entity": "VC Fund 3",
+     "x": "371.8",
+     "field": "relative_value",
+     "value": 0.26,
+     "note": "part of total"
+    },
+    {
+     "entity": "VC Fund 4",
+     "x": "363.2",
+     "field": "relative_value",
+     "value": 0.24,
+     "note": "part of total"
+    }
+   ],
+   "computation": "Total = 1.000 + 0.300 + 0.280 + 0.260 + 0.240 = 2.080. Vision Fund share = 1.000 / 2.080 = 0.4808 (~48.1%). Other four share = 1.080 / 2.080 = 0.5192 (~51.9%).",
+   "accepted_routes": [
+    "Vision Fund is about 48% of the total relative scale of the five funds shown.",
+    "The four other funds together are about 52%, just over half of the five-fund total.",
+    "Among these five funds only, Vision Fund makes up roughly half the combined scale."
+   ],
+   "visual_evidence_rule": "A part-to-whole visual or annotation must show Vision Fund at ~48% of the five-fund total, with the denominator clearly limited to the five displayed funds.",
+   "temporal_anchor": "The 'put that in perspective' clause is the best place to carry the five-fund share, if used.",
+   "reviewer_question": "Should the video quantify Vision Fund's share of the five displayed funds, or would that denominator be too artificial for the intended benchmark?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Naming the five bars as Vision Fund plus four other major VC funds.",
+  "Showing that Vision Fund is about 3.57x VC Fund 2, 3.85x VC Fund 3, and 4.17x VC Fund 4, using 1.000/0.280, 1.000/0.260, and 1.000/0.240.",
+  "A subtitle that says the relative values are normalized and not dollar amounts."
+ ],
+ "unsupported_to_avoid": [
+  "Vision Fund makes Goldman Sachs look more bronze than gold (no Goldman Sachs data in table).",
+  "Anything over six zeros (not in table).",
+  "Vision Fund invests mostly in tech companies (not a numeric/table-supported claim).",
+  "Vision Fund exceeds the four other shown funds combined (table total for other four is 1.080 vs Vision Fund 1.000).",
+  "Vision Fund is 10x or another multiplier not derived from the table.",
+  "Extrapolating to all venture capital firms or the whole VC industry from these five bars."
+ ],
+ "notes": "relative_value is the usable numeric field; the value column is blank, so all comparisons are normalized, not dollar amounts. Share calculations use only the five displayed funds.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 35.7,
+  "usage": {
+   "prompt_tokens": 876,
+   "completion_tokens": 9290,
+   "total_tokens": 10166,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6757
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 492
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

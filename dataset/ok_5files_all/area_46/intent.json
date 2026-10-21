@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_46",
+ "intent_en": "To demonstrate that Americans hold a negative view of the economy, believing it is hurting their families and favoring the wealthy.",
+ "previous_intent": "To demonstrate that Americans generally perceive the economy as failing to work for them, with a significant portion feeling personally negatively impacted by current economic conditions.",
+ "narration_support": "roughly half of Americans saying that the economy was hurting themselves and their families. So it sounds like Americans don't think the economy is working.",
+ "chart_support": "A waffle chart map of the United States indicating that roughly half of Americans believe economic conditions are hurting them and their families.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states that Americans feel the economy is hurting them and is not working. The chart visualizes the specific statistic that roughly half (46%) of Americans feel economic conditions are hurting their families, supporting the narration's claim about personal economic impact.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

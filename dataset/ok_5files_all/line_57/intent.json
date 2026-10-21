@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_57",
+ "intent_en": "To demonstrate that vaccines remain effective at preventing hospitalization for most people across different age groups and vaccine brands.",
+ "previous_intent": "To illustrate that vaccines maintain high effectiveness against hospitalization for most age groups and vaccine types during the summer of 2021.",
+ "narration_support": "vaccines continue to do effectively for most people",
+ "chart_support": "Line chart showing estimated vaccine effectiveness against hospitalization for Pfizer/BioNTech, Moderna, and Johnson & Johnson from May to August, with effectiveness rates staying high for most age demographics",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly states vaccines prevent severe cases effectively, and the chart visualizes high effectiveness against hospitalization (a proxy for severe cases) across three vaccine types and age groups from May to August.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

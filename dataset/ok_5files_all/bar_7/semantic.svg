@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#FDE047"/>
+<rect id="chart-title-box" data-role="title-box" x="390" y="40" width="500" height="56" rx="8" fill="#7C3AED"/>
+<text id="chart-title" data-role="title" x="640.0" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Contraceptive Use 2019</text>
+<g id="chart-plot" data-role="plot">
+<rect id="bar-blue" data-role="bar" data-entity-id="contraceptive-use" data-label="Contraceptive use 76%" data-value="76" x="190" y="330" width="684" height="96" fill="#4EC3F0"/>
+<rect id="bar-orange" data-role="bar" data-entity-id="not-using" data-label="Remaining 24%" data-value="24" x="874" y="330" width="216" height="96" fill="#F5A623"/>
+<rect id="value-box" data-role="value-box" data-entity-id="contraceptive-use" x="790" y="236" width="112" height="44" rx="22" fill="#4EC3F0"/>
+<text id="value-label" data-role="value-label" data-entity-id="contraceptive-use" x="846" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">76%</text>
+<text id="source-label" x="1090" y="700" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#5b5b5b">UNFPA, 2019</text>
+</g>
+</svg>

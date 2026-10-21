@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_160",
+ "intent_en": "To demonstrate that in comparable international contexts, teachers earn a pay ratio close to that of college graduates, contrasting with the lower ratio in the United States.",
+ "previous_intent": "To illustrate the pay ratio between teachers and college graduates in OECD countries, highlighting high parity in nations like Finland and Germany, and contrasting this with the lower ratio in the United States despite higher per-student spending.",
+ "narration_support": "That's on par with the pay ratio between teachers and college graduates in similar countries.",
+ "chart_support": "Bar chart showing 'Pay ratio: teachers vs. college grads' for OECD countries in 2019, displaying high ratios (near parity) for nations like Finland and Germany compared to the OECD average.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration mentions a 98-cent ratio which matches the Finland data point in the chart, and states this is on par with similar countries, which the chart visualizes (DEU, ISR, AUS, UK, NZL, OECD all having high ratios). The narration then contrasts this with the US (65 cents), which is not in the chart but provides the context for the comparison. The narration also transitions to spending per student, implying further content.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

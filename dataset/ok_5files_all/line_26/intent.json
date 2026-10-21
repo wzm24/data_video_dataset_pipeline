@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_26",
+ "intent_en": "To illustrate the divergence between rising worker productivity and stagnant hourly wages in the United States after the mid-20th century.",
+ "previous_intent": "To illustrate the divergence between productivity and wage growth for American workers, highlighting how hourly wages stagnated while productivity continued to rise after the mid-20th century.",
+ "narration_support": "Productivity kept rising, but wages flatlined.",
+ "chart_support": "Line chart titled 'Productivity and wage growth' showing the productivity line rising steeply while the wage line remains relatively flat after roughly 1980.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly describes the decoupling of productivity and wages ('Productivity kept rising, but wages flatlined'), which is visually confirmed by the chart showing the two trend lines separating significantly after 1980.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,252 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_133",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that the perceived risk of full-scale war is currently lower than it was during the Cold War.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The current 2015 relative values for both USA and Russia are lower than their Cold War-era peak values.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0965,
+     "note": "USA series in 2015"
+    },
+    {
+     "entity": "USA",
+     "x": "1965",
+     "field": "relative_value",
+     "value": 0.3693,
+     "note": "USA series peak"
+    },
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0927,
+     "note": "Russia series in 2015"
+    },
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4504,
+     "note": "Russia series peak"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2015 values are lower than the Cold War-era peaks for both USA and Russia.",
+    "Today's risk is below the height of the Cold War.",
+    "Both current series values are well under their Cold War highs.",
+    "2015 USA and Russia are less than their respective 1965/1990 peaks."
+   ],
+   "visual_evidence_rule": "The chart must show the 2015 values and the Cold War peak values for the compared series so the lower current values are visible.",
+   "temporal_anchor": "risk ... is less today than it was at the height of the Cold War",
+   "reviewer_question": "Should the video explicitly compare both USA and Russia, or is one series enough to support the claim?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest relative value in the dataset is Russia in 1990 at 0.4504, identifying the Cold War-era height.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4504,
+     "note": "highest relative value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The highest relative risk is Russia in 1990 at 0.4504.",
+    "Russia peaks in 1990, the largest value in the data.",
+    "The maximum of the series is about 0.45 for Russia around 1990.",
+    "No other point reaches Russia's 1990 value."
+   ],
+   "visual_evidence_rule": "The chart must make the 1990 Russia value identifiable as the highest in the data.",
+   "temporal_anchor": "at the height of the Cold War",
+   "reviewer_question": "Must the video identify the exact 1990 Russia peak, or only a Cold War-era peak?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The USA series peaks in 1965 at 0.3693, which is lower than Russia's 1990 peak of 0.4504.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "1965",
+     "field": "relative_value",
+     "value": 0.3693,
+     "note": "USA series maximum"
+    },
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4504,
+     "note": "Russia series maximum for cross-entity comparison"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The USA series peaks in 1965 at 0.3693.",
+    "USA's Cold War high is 1965, about 0.37.",
+    "The USA maximum is lower than Russia's 1990 maximum.",
+    "USA reaches its highest value in 1965."
+   ],
+   "visual_evidence_rule": "The chart must show the USA 1965 value as the USA series maximum.",
+   "temporal_anchor": "at the height of the Cold War",
+   "reviewer_question": "Is the USA 1965 peak required, or is the overall peak sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Russia's 2015 relative value is about one-fifth of its 1990 peak value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0927,
+     "note": "numerator"
+    },
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4504,
+     "note": "denominator"
+    }
+   ],
+   "computation": "0.0927 / 0.4504 = 0.206",
+   "accepted_routes": [
+    "Russia's 2015 value is about one-fifth of its 1990 peak.",
+    "The 2015 Russia value is roughly 0.21 times the 1990 Russia value.",
+    "Russia's current risk is far below its Cold War high.",
+    "0.0927 is much smaller than 0.4504."
+   ],
+   "visual_evidence_rule": "The chart must show both the 2015 Russia value and the 1990 Russia value so their ratio is visible.",
+   "temporal_anchor": "less today than it was at the height of the Cold War",
+   "reviewer_question": "Must the video quantify how much lower 2015 is, or is a qualitative 'lower' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "In 2015 the USA and Russia relative values are nearly equal, differing by only 0.0038.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0965,
+     "note": "USA 2015 value"
+    },
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0927,
+     "note": "Russia 2015 value"
+    }
+   ],
+   "computation": "0.0965 - 0.0927 = 0.0038",
+   "accepted_routes": [
+    "In 2015 USA and Russia are nearly equal.",
+    "The two 2015 values differ by only 0.0038.",
+    "Both 2015 values are close to 0.09.",
+    "USA 0.0965 and Russia 0.0927 are very close."
+   ],
+   "visual_evidence_rule": "The chart must show both 2015 values simultaneously so their closeness can be seen.",
+   "temporal_anchor": "less today",
+   "reviewer_question": "Is the near-equality of USA and Russia in 2015 required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 66.0,
+  "usage": {
+   "prompt_tokens": 2371,
+   "completion_tokens": 16000,
+   "total_tokens": 18371,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 14353
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 1731
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

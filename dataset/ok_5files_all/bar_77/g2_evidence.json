@@ -1,0 +1,149 @@
+{
+ "clip_id": "bar_77",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:In-N-Out @ x_px=270.8",
+    "mark:Whataburger @ x_px=281.5",
+    "mark:Five Guys @ x_px=303.0",
+    "mark:McDonald's @ x_px=690.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "In-N-Out @ x_px=270.8",
+      "value": 1.0
+     },
+     {
+      "mark": "Whataburger @ x_px=281.5",
+      "value": 2.0
+     },
+     {
+      "mark": "Five Guys @ x_px=303.0",
+      "value": 4.0
+     },
+     {
+      "mark": "McDonald's @ x_px=690.0",
+      "value": 40.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four bars must be visible in order, with In-N-Out shortest, then Whataburger, Five Guys, and McDonald's, or a ranked label must make this order explicit."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:In-N-Out @ x_px=270.8",
+    "mark:McDonald's @ x_px=690.0"
+   ],
+   "assertion": {
+    "low": "In-N-Out @ x_px=270.8",
+    "low_value": 1.0,
+    "high": "McDonald's @ x_px=690.0",
+    "high_value": 40.0,
+    "delta": 39.0,
+    "ratio": 40.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "In-N-Out and McDonald's bars or values must be visible together with a 40x annotation or a scale that makes the 40-to-1 ratio readable."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Whataburger @ x_px=281.5",
+    "mark:In-N-Out @ x_px=270.8"
+   ],
+   "assertion": {
+    "greater": "Whataburger @ x_px=281.5",
+    "lesser": "In-N-Out @ x_px=270.8",
+    "expected_ratio": 2.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In-N-Out and Whataburger bars or values must be visible together with a 2x annotation or equivalent length comparison."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Five Guys @ x_px=303.0",
+    "mark:In-N-Out @ x_px=270.8"
+   ],
+   "assertion": {
+    "greater": "Five Guys @ x_px=303.0",
+    "lesser": "In-N-Out @ x_px=270.8",
+    "expected_ratio": 4.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In-N-Out and Five Guys bars or values must be visible together with a 4x annotation or equivalent length comparison."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:In-N-Out @ x_px=270.8",
+    "segment:Whataburger @ x_px=281.5",
+    "segment:Five Guys @ x_px=303.0",
+    "segment:McDonald's @ x_px=690.0"
+   ],
+   "assertion": {
+    "segment": "In-N-Out @ x_px=270.8",
+    "expected_share": 0.0005,
+    "total_of": "unknown",
+    "total": 47.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "McDonald's must be shown as the 100% reference, with In-N-Out at 2.5%, Whataburger at 5%, and Five Guys at 10% relative_value labels or annotations."
+  }
+ ]
+}

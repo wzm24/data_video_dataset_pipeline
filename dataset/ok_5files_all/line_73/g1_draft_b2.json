@@ -1,0 +1,265 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_73",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the increase in global average temperature over the past century.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The temperature-anomaly series has a net increase from its first to last data point, showing overall warming.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=197.7",
+     "field": "value",
+     "value": -0.156,
+     "note": "first data value"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=1140.0",
+     "field": "value",
+     "value": 0.946,
+     "note": "last data value"
+    }
+   ],
+   "computation": "0.946 - (-0.156) = 1.102",
+   "accepted_routes": [
+    "temperature anomaly rises from -0.156 at the first point to 0.946 at the last point",
+    "net increase of about 1.10 over the series",
+    "the series ends substantially higher than it starts, showing an overall warming trend",
+    "first-to-last change is roughly +1.1 in table value units"
+   ],
+   "visual_evidence_rule": "The rendered series must let the viewer compare the first and last values and see that the last value is higher; the net upward change should be clear.",
+   "temporal_anchor": "global temperatures have risen",
+   "reviewer_question": "Is the first-to-last net increase (about +1.10) required to be stated or shown, rather than merely implying a general upward trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest temperature anomaly in the record is the final data point, 0.946.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=1140.0",
+     "field": "value",
+     "value": 0.946,
+     "note": "last row and maximum value in table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the final anomaly is the highest value, 0.946",
+    "the series peaks at its last point at 0.946",
+    "the maximum of the record is the endpoint, 0.946"
+   ],
+   "visual_evidence_rule": "The final displayed value must be visibly the highest point of the series, with no earlier value exceeding it.",
+   "temporal_anchor": "Today",
+   "reviewer_question": "Must the video explicitly identify the final value as the series maximum, or is the net increase enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series changes sign from negative early values to positive later values.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=197.7",
+     "field": "value",
+     "value": -0.156,
+     "note": "first value is negative"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=585.7",
+     "field": "value",
+     "value": -0.016,
+     "note": "last negative before first positive"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=592.6",
+     "field": "value",
+     "value": 0.052,
+     "note": "first positive in table"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=1140.0",
+     "field": "value",
+     "value": 0.946,
+     "note": "last value is positive"
+    }
+   ],
+   "computation": "sign change from -0.016 at x_px 585.7 to 0.052 at x_px 592.6; first-to-last sign change negative to positive",
+   "accepted_routes": [
+    "early anomalies are negative and recent anomalies are positive",
+    "the series crosses from negative to positive",
+    "it starts negative and ends positive",
+    "there is a negative-to-positive sign change in the record"
+   ],
+   "visual_evidence_rule": "The rendered series must show negative values early and positive values late, including at least one sign change from negative to positive.",
+   "temporal_anchor": "since pre-industrial times",
+   "reviewer_question": "Is the negative-to-positive sign change required, or can the video only show the overall increase without emphasizing baseline crossing?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The minimum anomaly in the record is -0.432 and occurs well before the final point, so the series is not simply increasing from start to finish.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=384.8",
+     "field": "value",
+     "value": -0.432,
+     "note": "minimum value in table"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=197.7",
+     "field": "value",
+     "value": -0.156,
+     "note": "start value is less negative than the minimum"
+    }
+   ],
+   "computation": "min = -0.432; start = -0.156; -0.432 < -0.156",
+   "accepted_routes": [
+    "the lowest anomaly is -0.432",
+    "the series reaches its minimum before the final period, not at the start",
+    "the record dips to about -0.43 partway through"
+   ],
+   "visual_evidence_rule": "The chart must allow the viewer to see a low point earlier than the end; if included, the minimum should be identifiable as -0.432.",
+   "temporal_anchor": "since pre-industrial times",
+   "reviewer_question": "Should the video include the mid-series minimum, or is it optional detail that can be omitted?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The warming is not monotonic: the series contains local ups and downs, including a drop from a local high of 0.144 to -0.098 before later rising to 0.946.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=613.4",
+     "field": "value",
+     "value": 0.144,
+     "note": "local high"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=655.0",
+     "field": "value",
+     "value": -0.098,
+     "note": "later lower value"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "x_px=1140.0",
+     "field": "value",
+     "value": 0.946,
+     "note": "final high"
+    }
+   ],
+   "computation": "0.144 -> -0.098 is a drop of 0.242 (formula: -0.098 - 0.144 = -0.242); final is higher.",
+   "accepted_routes": [
+    "the warming trend is not a straight monotonic rise; there are dips and rebounds",
+    "after an early high of 0.144, the series drops to -0.098 before later rising to 0.946",
+    "the series contains local peaks and troughs while the overall direction is upward"
+   ],
+   "visual_evidence_rule": "The rendered series must show local upward and downward segments, not a smooth monotonic increase.",
+   "temporal_anchor": "have risen",
+   "reviewer_question": "Should the video show non-monotonic fluctuations, or is a simplified overall upward trend acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series has many data points and short-term variability; a simplified line could omit some local wiggles if the overall trend remains.",
+  "The 1950-marked row has value -0.098; from there to the final 0.946 is a later increase of 1.044."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims such as explaining why temperatures rose",
+  "Any percentage share or proportion, since the table is not a pie/donut share and unit column is blank",
+  "Extrapolation beyond the final table point",
+  "Specific year labels other than the single x_value 1950 present in the table",
+  "Stating exact Celsius units or a one-degree value unless the table's blank unit is explicitly accepted"
+ ],
+ "notes": "Use the table's value column as the anomaly series; the blank unit column means numbers should be described as table value units unless the reviewer accepts Celsius from the narration. The 1950 row is the only explicit x_value and can support an optional later-period comparison.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 62.3,
+  "usage": {
+   "prompt_tokens": 5449,
+   "completion_tokens": 14358,
+   "total_tokens": 19807,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12401
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 4937
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

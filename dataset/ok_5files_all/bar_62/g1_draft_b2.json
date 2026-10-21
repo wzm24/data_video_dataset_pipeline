@@ -1,0 +1,338 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_62",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that plant-based milk alternatives have a lower environmental impact in terms of emissions, land use, and water consumption compared to dairy milk.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "For emissions, dairy milk is the baseline at 1.000, while plant-based alternatives are lower: rice and soy at 0.250, oat and almond at 0.180.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "DAIRY · EMISSIONS",
+     "x": "emissions",
+     "field": "value",
+     "value": 1.0,
+     "note": "DAIRY · EMISSIONS row; baseline."
+    },
+    {
+     "entity": "RICE",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.25,
+     "note": "Initial RICE row; inferred same emissions series as DAIRY · EMISSIONS."
+    },
+    {
+     "entity": "SOY",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.25,
+     "note": "Initial SOY row; inferred emissions series."
+    },
+    {
+     "entity": "OAT",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.18,
+     "note": "Initial OAT row; inferred emissions series."
+    },
+    {
+     "entity": "ALMOND",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.18,
+     "note": "Initial ALMOND row; inferred emissions series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Dairy emissions are 1.000, while rice and soy are 0.250 and oat/almond are 0.180.",
+    "Plant milks have lower emissions than dairy: rice/soy 25% of dairy, oat/almond 18% of dairy.",
+    "Emissions ranking: dairy (1.000) > rice = soy (0.250) > oat = almond (0.180)."
+   ],
+   "visual_evidence_rule": "Emissions panel shows bars for dairy, rice, soy, oat, almond at 1.000, 0.250, 0.250, 0.180, 0.180 respectively.",
+   "temporal_anchor": "the narration clause about energy/emissions",
+   "reviewer_question": "Should the video explicitly show plant emissions values relative to dairy, or only state they are lower?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Compared with dairy, emissions are 75% lower for rice and soy and 82% lower for oat and almond.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "DAIRY · EMISSIONS",
+     "x": "emissions",
+     "field": "value",
+     "value": 1.0,
+     "note": "Baseline for reduction formula."
+    },
+    {
+     "entity": "RICE",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.25,
+     "note": "Formula: (1 - 0.250/1.000)*100 = 75%."
+    },
+    {
+     "entity": "SOY",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.25,
+     "note": "Same as rice."
+    },
+    {
+     "entity": "OAT",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.18,
+     "note": "Formula: (1 - 0.180/1.000)*100 = 82%."
+    },
+    {
+     "entity": "ALMOND",
+     "x": "emissions",
+     "field": "value",
+     "value": 0.18,
+     "note": "Same as oat."
+    }
+   ],
+   "computation": "(1 - plant_value / dairy_emissions_value) * 100",
+   "accepted_routes": [
+    "Rice and soy cut emissions by 75%; oat and almond by 82%.",
+    "Emissions are reduced by about three-quarters for rice/soy and over four-fifths for oat/almond.",
+    "Plant milks use 18–25% of dairy's emissions, i.e., 75–82% less."
+   ],
+   "visual_evidence_rule": "Chart or annotation shows percent reduction relative to dairy emissions, or the bars allow computing it with dairy baseline visible.",
+   "temporal_anchor": "the narration clause about lower environmental impact/emissions",
+   "reviewer_question": "Is the emissions percent reduction a required takeaway or just a valid derived detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Among plant-based alternatives, rice and soy have the lowest land use (0.050 each), while oat and almond have higher land use (0.200 each).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICE · LAND USE",
+     "x": "land use",
+     "field": "value",
+     "value": 0.05,
+     "note": "Lowest land-use tier."
+    },
+    {
+     "entity": "SOY · LAND USE",
+     "x": "land use",
+     "field": "value",
+     "value": 0.05,
+     "note": "Lowest land-use tier."
+    },
+    {
+     "entity": "OAT · LAND USE",
+     "x": "land use",
+     "field": "value",
+     "value": 0.2,
+     "note": "Higher land-use tier."
+    },
+    {
+     "entity": "ALMOND · LAND USE",
+     "x": "land use",
+     "field": "value",
+     "value": 0.2,
+     "note": "Higher land-use tier."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Rice and soy use the least land (0.050), while oat and almond use 0.200.",
+    "Land use is four times higher for oat/almond than rice/soy (0.200 vs 0.050).",
+    "Plant-based land use ranges from 0.050 for rice/soy to 0.200 for oat/almond."
+   ],
+   "visual_evidence_rule": "Land-use panel shows bars for rice, soy, oat, almond; rice/soy at 0.050 and oat/almond at 0.200.",
+   "temporal_anchor": "the narration clause about land",
+   "reviewer_question": "Should the video include a dairy land-use baseline/comparison, given the extracted table has no DAIRY · LAND USE row?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Dairy water use is the highest at 1.000; all plant alternatives are lower: soy and oat 0.100, rice 0.500, almond 0.670.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "DAIRY · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 1.0,
+     "note": "Baseline/highest water use."
+    },
+    {
+     "entity": "SOY · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.1,
+     "note": "Lowest plant tier."
+    },
+    {
+     "entity": "OAT · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.1,
+     "note": "Lowest plant tier."
+    },
+    {
+     "entity": "RICE · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.5,
+     "note": "Middle plant value."
+    },
+    {
+     "entity": "ALMOND · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.67,
+     "note": "Highest plant value, still below dairy."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Dairy water use is 1.000; plant alternatives range from 0.100 (soy, oat) to 0.670 (almond).",
+    "All plant milks use less water than dairy: soy/oat 0.100, rice 0.500, almond 0.670.",
+    "Water use ranking: dairy (1.000) > almond (0.670) > rice (0.500) > soy = oat (0.100)."
+   ],
+   "visual_evidence_rule": "Water-use panel shows bars for dairy, rice, soy, oat, almond at 1.000, 0.500, 0.100, 0.100, 0.670 respectively.",
+   "temporal_anchor": "the narration clause about water",
+   "reviewer_question": "Must the video state all plant water-use values, or is it enough to say they are lower than dairy?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Compared with dairy, water use is 90% lower for soy and oat, 50% lower for rice, and 33% lower for almond.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "DAIRY · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 1.0,
+     "note": "Baseline for reduction formula."
+    },
+    {
+     "entity": "SOY · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.1,
+     "note": "Formula: (1 - 0.100/1.000)*100 = 90%."
+    },
+    {
+     "entity": "OAT · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.1,
+     "note": "Same as soy."
+    },
+    {
+     "entity": "RICE · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.5,
+     "note": "Formula: (1 - 0.500/1.000)*100 = 50%."
+    },
+    {
+     "entity": "ALMOND · WATER USE",
+     "x": "water use",
+     "field": "value",
+     "value": 0.67,
+     "note": "Formula: (1 - 0.670/1.000)*100 = 33%."
+    }
+   ],
+   "computation": "(1 - plant_value / dairy_water_use_value) * 100",
+   "accepted_routes": [
+    "Soy and oat use 90% less water; rice 50% less; almond 33% less.",
+    "Water savings range from 90% (soy/oat) to 33% (almond).",
+    "Plant milks reduce water use by 33–90% compared with dairy."
+   ],
+   "visual_evidence_rule": "Chart or annotation shows percent reductions relative to dairy water use, or the bars allow computing it with dairy baseline visible.",
+   "temporal_anchor": "the narration clause about less water",
+   "reviewer_question": "Is the water-use percent reduction a required takeaway or an optional derived insight?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 58.1,
+  "usage": {
+   "prompt_tokens": 1273,
+   "completion_tokens": 16000,
+   "total_tokens": 17273,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13195
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 889
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

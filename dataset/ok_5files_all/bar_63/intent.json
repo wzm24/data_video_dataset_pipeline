@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_63",
+ "intent_en": "To compare the estimated sales volumes and legal status of medical versus recreational marijuana markets.",
+ "previous_intent": "To compare the estimated sales volumes and regulatory factors (such as tax rates and legalization dates) between medical and recreational marijuana markets.",
+ "narration_support": "medical marijuana, which has been legal since 2000 and whose tax rate is 78 % lower. Estimated pot sales are 55 tons of medical pot and 18 .4 tons of recreational pot.",
+ "chart_support": "Bar chart comparing sales volume between Medical (55 tons) and Dispensary (18.4 tons) categories, with the Medical category labeled as established in 2000.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "Narration provides specific sales figures and legal context (2000, tax rate). Chart visualizes the volume difference (Medical > Dispensary) and legal establishment date.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

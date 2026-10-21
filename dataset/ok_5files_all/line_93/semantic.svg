@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111">Black adults now about as likely as White adults to have received a COVID-19 vaccine</text>
+<text x="640" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">% of U.S. adults who say they have received at least one dose of a vaccine to prevent COVID-19</text>
+<text x="640" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#777">Source: PEW RESEARCH CENTER</text>
+<text x="249" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#333">Feb '21</text>
+<text x="816" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#333">June '21</text>
+<text x="1127" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#333">Aug '21</text>
+<polyline points="249.0,522.0 815.6,310.0 1126.8,234.0" fill="none" stroke="#582a72" stroke-width="3.2"/>
+<text x="237.0" y="512.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#582a72">22</text>
+<text x="1138.8" y="234.0" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#582a72">94</text>
+<polyline points="249.0,546.0 815.6,338.0 1126.8,306.0" fill="none" stroke="#7b4b9e" stroke-width="3.2"/>
+<text x="237.0" y="552.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#7b4b9e">16</text>
+<text x="1138.8" y="296.0" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#7b4b9e">76</text>
+<polyline points="249.0,526.0 815.6,350.0 1126.8,322.0" fill="none" stroke="#9e8eb5" stroke-width="3.2"/>
+<text x="237.0" y="526.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#9e8eb5">21</text>
+<text x="1138.8" y="322.0" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#9e8eb5">72</text>
+<polyline points="249.0,550.0 815.6,370.0 1126.8,330.0" fill="none" stroke="#8c8c8c" stroke-width="3.2"/>
+<text x="237.0" y="562.0" text-anchor="end" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#8c8c8c">15</text>
+<text x="1138.8" y="340.0" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#8c8c8c">70</text>
+<text x="1170.0" y="190" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#582a72">Asian*</text>
+<text x="1170.0" y="224" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#7b4b9e">Hispanic</text>
+<text x="1170.0" y="258" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#9e8eb5">White</text>
+<text x="1170.0" y="292" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#8c8c8c">Black</text>
+</svg>

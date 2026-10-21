@@ -1,0 +1,126 @@
+{
+ "clip_id": "bar_97",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "SHIA @ x_px=640.0",
+    "extreme": "max",
+    "expected": 63.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Shia bar/segment must be visibly the largest and carry the value 63 or an equivalent label."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:SHIA @ x_px=640.0",
+    "mark:SUNNI @ x_px=640.0"
+   ],
+   "assertion": {
+    "greater": "SHIA @ x_px=640.0",
+    "lesser": "SUNNI @ x_px=640.0",
+    "expected_ratio": 3.15,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Sunni bar/segment must be visibly shorter than the Shia bar/segment and be labeled 20 or clearly identified as Sunni minority."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:SHIA @ x_px=640.0",
+    "mark:SUNNI @ x_px=640.0"
+   ],
+   "assertion": {
+    "greater": "SHIA @ x_px=640.0",
+    "lesser": "SUNNI @ x_px=640.0",
+    "expected_ratio": 3.15,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gap between the Shia and Sunni bars/segments must be visually large; if annotated, 43 or 3.15x must appear."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": false,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:KURDS (SUNNI) @ x_px=640.0"
+   ],
+   "assertion": {
+    "mark": "KURDS (SUNNI) @ x_px=640.0",
+    "field": "value",
+    "expected": 17.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A third bar/segment labeled KURDS (SUNNI) must be visible and show value 17 or be the shortest listed segment."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:SHIA @ x_px=640.0",
+    "segment:SUNNI @ x_px=640.0",
+    "segment:KURDS (SUNNI) @ x_px=640.0"
+   ],
+   "assertion": {
+    "segment": "SHIA @ x_px=640.0",
+    "expected_share": 0.63,
+    "total_of": "unknown",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show all three values as parts of a common total, or explicitly label Shia as over half / 63% of the listed total."
+  }
+ ]
+}

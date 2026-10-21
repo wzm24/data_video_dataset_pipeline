@@ -1,0 +1,243 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_26",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant difference in mass between the Earth and the Moon.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Earth's mass is about 5.974×10^24 kg (the larger reference mass).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "",
+     "field": "value",
+     "value": 5974000000000000000000000,
+     "note": "table value in kg"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Earth's mass is about 5.974×10^24 kg",
+    "Earth has a mass of roughly 5.97×10^24 kg",
+    "Earth's mass is 5,974,000,000,000,000,000,000,000 kg"
+   ],
+   "visual_evidence_rule": "A value or label for Earth's mass must be present as part of the Earth–Moon comparison.",
+   "temporal_anchor": "when the video establishes Earth's mass in the comparison",
+   "reviewer_question": "Is Earth's absolute mass value required, or is the ratio enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Moon's mass is about 7.349×10^22 kg.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Moon",
+     "x": "",
+     "field": "value",
+     "value": 73490000000000000000000,
+     "note": "table value in kg"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The Moon's mass is about 7.349×10^22 kg",
+    "The Moon's mass is roughly 7.35×10^22 kg",
+    "The Moon's mass is 73,490,000,000,000,000,000,000 kg"
+   ],
+   "visual_evidence_rule": "A value or label for the Moon's mass must be present as part of the Earth–Moon comparison.",
+   "temporal_anchor": "when the video states the Moon's mass in the comparison",
+   "reviewer_question": "Is the Moon's absolute mass value required, or is its relative size enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Earth is more massive than the Moon; the Moon is the smaller body in this comparison.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "",
+     "field": "value",
+     "value": 5974000000000000000000000,
+     "note": "larger mass"
+    },
+    {
+     "entity": "Moon",
+     "x": "",
+     "field": "value",
+     "value": 73490000000000000000000,
+     "note": "smaller mass"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Earth is more massive than the Moon",
+    "The Moon is less massive than Earth",
+    "Earth outweighs the Moon"
+   ],
+   "visual_evidence_rule": "The chart must show Earth's mass as the greater of the two masses.",
+   "temporal_anchor": "the clause comparing the Moon's mass to Earth's mass",
+   "reviewer_question": "Is an explicit ordering statement required, or is it implied by the ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Moon's mass is about one eighty-first of Earth's mass (Moon/Earth ≈ 0.0123; Earth/Moon ≈ 81.3).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "",
+     "field": "value",
+     "value": 5974000000000000000000000,
+     "note": "reference mass"
+    },
+    {
+     "entity": "Moon",
+     "x": "",
+     "field": "value",
+     "value": 73490000000000000000000,
+     "note": "compared mass"
+    },
+    {
+     "entity": "Moon",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0123,
+     "note": "table normalized Moon/Earth value"
+    }
+   ],
+   "computation": "Moon/Earth = 73490000000000000000000 / 5974000000000000000000000 ≈ 0.0123; Earth/Moon = 5974000000000000000000000 / 73490000000000000000000 ≈ 81.3, so the Moon is about 1/81 of Earth's mass.",
+   "accepted_routes": [
+    "The Moon is about 1/81 of Earth's mass",
+    "The Moon's mass is roughly 0.0123 of Earth's mass",
+    "Earth is about 81 times as massive as the Moon",
+    "Earth is roughly 81 times the Moon's mass"
+   ],
+   "visual_evidence_rule": "The chart must present the Moon-to-Earth mass ratio or the Earth-to-Moon multiple as the central comparison.",
+   "temporal_anchor": "the narration clause 'the Moon is only about 1/81th of the mass of Earth'",
+   "reviewer_question": "Must the video state the ratio/multiple explicitly, or can it just show both mass values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The absolute mass difference between Earth and the Moon is about 5.90051×10^24 kg.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Earth",
+     "x": "",
+     "field": "value",
+     "value": 5974000000000000000000000,
+     "note": "minuend"
+    },
+    {
+     "entity": "Moon",
+     "x": "",
+     "field": "value",
+     "value": 73490000000000000000000,
+     "note": "subtrahend"
+    }
+   ],
+   "computation": "Earth value - Moon value = 5974000000000000000000000 - 73490000000000000000000 = 5900510000000000000000000 kg ≈ 5.90051×10^24 kg",
+   "accepted_routes": [
+    "The mass gap is about 5.90051×10^24 kg",
+    "Earth exceeds the Moon by roughly 5.90×10^24 kg",
+    "The difference is about 5,900,510,000,000,000,000,000,000 kg"
+   ],
+   "visual_evidence_rule": "The chart may optionally annotate the arithmetic difference between the two masses.",
+   "temporal_anchor": "after both masses are introduced, as an optional difference callout",
+   "reviewer_question": "Is the absolute mass gap required, or is the ratio sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Earth's relative_value is 1.0000 and the Moon's relative_value is 0.0123 on the table's 0-1 scale.",
+  "Moon's share of the combined Earth+Moon mass is about 0.0122 (derived: 73490000000000000000000 / 6047490000000000000000000 ≈ 0.01215) if a whole-system share is shown."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim the Moon is 1/181 of Earth's mass; the table-derived ratio is about 1/81.",
+  "Do not state 1.23% or any percentage for the Moon/Earth mass ratio because the table's unit is kg, not %.",
+  "Do not claim the Moon is 1/81 Earth's volume, diameter, surface gravity, or density; only mass is in the table.",
+  "Do not add causal or compositional claims about why the masses differ.",
+  "Do not use values not present in or directly derivable from the table."
+ ],
+ "notes": "The table provides absolute kg masses and a 0-1 relative_value for the Moon/Earth size. The core required units are the two endpoint masses and the roughly 81× ratio; the absolute gap is optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 59.5,
+  "usage": {
+   "prompt_tokens": 874,
+   "completion_tokens": 15498,
+   "total_tokens": 16372,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13614
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 362
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

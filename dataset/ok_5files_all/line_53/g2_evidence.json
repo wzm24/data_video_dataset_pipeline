@@ -1,0 +1,148 @@
+{
+ "clip_id": "line_53",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:item-1 @ 1"
+   ],
+   "assertion": {
+    "mark": "item-1 @ 1",
+    "field": "value",
+    "expected": 44.7,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The lowest scenario revenue amount must be visible and identifiable as the starting point."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "item-4 @ 4",
+    "extreme": "max",
+    "expected": 185.7,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest scenario revenue amount must be visible and identifiable as the maximum."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:item-1 @ 1",
+    "mark:item-2 @ 2",
+    "mark:item-3 @ 3",
+    "mark:item-4 @ 4"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "item-1 @ 1",
+      "value": 44.7
+     },
+     {
+      "mark": "item-2 @ 2",
+      "value": 90.5
+     },
+     {
+      "mark": "item-3 @ 3",
+      "value": 137.5
+     },
+     {
+      "mark": "item-4 @ 4",
+      "value": 185.7
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show all four scenario values in increasing order, not only a single summary value."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:item-1 @ 1",
+    "mark:item-4 @ 4"
+   ],
+   "assertion": {
+    "low": "item-1 @ 1",
+    "low_value": 44.7,
+    "high": "item-4 @ 4",
+    "high_value": 185.7,
+    "delta": 141.0,
+    "ratio": 4.1544,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the lowest and highest scenario amounts must be visible so the 141.0B difference can be read or inferred."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:item-1 @ 1",
+    "mark:item-2 @ 2",
+    "mark:item-3 @ 3",
+    "mark:item-4 @ 4"
+   ],
+   "assertion": {
+    "low": "item-1 @ 1",
+    "low_value": 44.7,
+    "high": "item-4 @ 4",
+    "high_value": 185.7,
+    "delta": 141.0,
+    "ratio": 4.1544,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the four scenario values so the three step-to-step differences can be inferred."
+  }
+ ]
+}

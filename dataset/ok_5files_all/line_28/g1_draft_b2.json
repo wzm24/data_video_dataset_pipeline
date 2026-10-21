@@ -1,0 +1,307 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_28",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant widening of the pay gap between American CEOs and workers over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The CEO-worker pay gap shows a broad upward widening over time, with later relative values much higher than early ones.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.12,
+     "note": "early baseline"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "final",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "final point"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "maximum in series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative pay gap becomes substantially larger from the early part of the series to the later part.",
+    "There is a strong overall upward widening over the timeline.",
+    "Late values are much higher than early values, showing a growing gap."
+   ],
+   "visual_evidence_rule": "A clear upward movement from early low values to much higher later values must be visible.",
+   "temporal_anchor": "Opening clause about the pay gap growing over time.",
+   "reviewer_question": "Must the video convey the overall upward widening even if it omits the post-peak decline?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The early portion of the series is low and relatively flat, staying around 0.11-0.15 before the marked 1990 point at 0.18.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "early segment",
+     "field": "relative_value",
+     "value": 0.11,
+     "note": "low early value"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "early segment",
+     "field": "relative_value",
+     "value": 0.15,
+     "note": "high end of early range"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "1990 mark",
+     "field": "relative_value",
+     "value": 0.18,
+     "note": "value at the table's 1990 marker"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Early on, the gap is low, around 0.11 to 0.15 on the relative scale.",
+    "The series starts near 0.12 and stays relatively flat before the steep rise.",
+    "The 1990 marked point is 0.18, only slightly above the early low range."
+   ],
+   "visual_evidence_rule": "The early portion must appear low and comparatively flat before the later rise.",
+   "temporal_anchor": "Initial part of the narration before the growth is emphasized.",
+   "reviewer_question": "Is showing the low early baseline obligatory, or can the video start at the steep growth phase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "After the marked 1990 point, the relative gap accelerates sharply from 0.18 through 0.25, 0.40, 0.60, 0.75 and up to 0.95.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "1990 mark",
+     "field": "relative_value",
+     "value": 0.18,
+     "note": "starting point for steep rise"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "post-1990 step",
+     "field": "relative_value",
+     "value": 0.25,
+     "note": "first steep step"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "post-1990 step",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "second steep step"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "post-1990 step",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "third steep step"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "post-1990 step",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "fourth steep step"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "end of steep rise"
+    }
+   ],
+   "computation": "0.95 - 0.18 = 0.77 on the relative scale",
+   "accepted_routes": [
+    "After the 1990 mark, the gap climbs rapidly from 0.18 to 0.95 on the relative scale.",
+    "The steepest increase happens in the later part of the series, moving from about 0.18 to 0.95.",
+    "The series accelerates after 1990 before reaching its peak."
+   ],
+   "visual_evidence_rule": "The steepest upward section must be visible after the 1990 marker and before the maximum.",
+   "temporal_anchor": "Clause describing the rapid growth of the gap.",
+   "reviewer_question": "Must the video show the steep post-1990 acceleration, or is the overall endpoint comparison sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The series reaches its highest relative value at 0.95, about eight times the early 0.12 level.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "maximum in series"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.12,
+     "note": "early baseline for comparison"
+    }
+   ],
+   "computation": "0.95 / 0.12 = 7.92",
+   "accepted_routes": [
+    "The largest gap in the series is 0.95 on the relative scale.",
+    "The peak is nearly eight times the starting relative level.",
+    "The maximum is about 0.95, far above the early 0.12 baseline."
+   ],
+   "visual_evidence_rule": "A distinct maximum near 0.95 must be visible, much higher than the early baseline.",
+   "temporal_anchor": "Clause describing the gap growing to its most extreme point.",
+   "reviewer_question": "Should the peak be shown explicitly as a maximum, or is the final endpoint comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After the peak, the relative gap declines to about 0.55-0.65 and ends around 0.65, still roughly five times the early 0.12 baseline but below the 0.95 peak.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "pre-decline maximum"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "post-peak low",
+     "field": "relative_value",
+     "value": 0.55,
+     "note": "lowest post-peak value"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "final",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "final point"
+    },
+    {
+     "entity": "CEO-worker pay gap",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.12,
+     "note": "early baseline for final comparison"
+    }
+   ],
+   "computation": "0.65 / 0.12 = 5.42",
+   "accepted_routes": [
+    "After peaking, the relative gap falls to about 0.55-0.65 and ends at 0.65.",
+    "The final value is 0.65, below the 0.95 peak but still roughly five times the initial 0.12.",
+    "The series declines after its maximum but remains elevated relative to the early baseline."
+   ],
+   "visual_evidence_rule": "After the maximum, the visual must show a decline to about 0.55-0.65 and an ending near 0.65.",
+   "temporal_anchor": "No direct narration clause; optional data-backed elaboration after the growth statement.",
+   "reviewer_question": "Should the post-peak decline be treated as required because the table shows it, or optional because the intent emphasizes widening?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The early segment contains a small dip to 0.11 before rising.",
+  "The final segment stays in the 0.55-0.65 range after the decline.",
+  "The marked 1990 point at 0.18 can be used as a visual anchor for the start of the steep rise."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute pay ratios such as 15-to-1 or 220-to-1, because the table has only relative_value.",
+  "Percentages, dollar amounts, counts, or any other absolute quantity not present in the table.",
+  "Causal claims about why CEO-worker pay gaps changed.",
+  "Extrapolating beyond the final relative_value or predicting future values.",
+  "Claiming the final value is the maximum; the maximum is 0.95, while the final value is 0.65.",
+  "Using x_px positions as semantic data or describing axis ticks, colors, or chart rendering."
+ ],
+ "notes": "All cited numbers come from the relative_value column because the table has no absolute value. The intent supports overall widening, while the post-peak decline is marked optional because the narration emphasizes growth.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 54.5,
+  "usage": {
+   "prompt_tokens": 1827,
+   "completion_tokens": 13588,
+   "total_tokens": 15415,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11365
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1315
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

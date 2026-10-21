@@ -1,0 +1,21 @@
+{
+ "clip_id": "bar_151",
+ "family": "bar",
+ "sub_type": "grouped",
+ "orientation": "vertical",
+ "series_count": 2,
+ "category_count": 3,
+ "unit_mark": "bar",
+ "has_axis": false,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 66,
+ "row_count": 36,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "high",
+ "needs_review": false,
+ "time_behavior": "snapshot"
+}

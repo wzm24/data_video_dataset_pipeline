@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">TOP STARTUP VALUATIONS</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="320.0" y1="170.0" x2="320.0" y2="620.0" stroke="#9a9a9a" stroke-width="6" stroke-linecap="round"/>
+<g id="entity-toutiao" data-role="entity" data-entity-id="toutiao" data-label="Toutiao">
+<rect id="toutiao-bar" data-role="bar" data-entity-id="toutiao" data-value="1.0" x="320.0" y="214.2" width="760.0" height="54.0" fill="#E74C3C"/>
+<text id="toutiao-category-label" data-role="category-label" data-entity-id="toutiao" x="298.0" y="250.2" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">Toutiao</text>
+</g>
+<g id="entity-uber" data-role="entity" data-entity-id="uber" data-label="Uber">
+<rect id="uber-bar" data-role="bar" data-entity-id="uber" data-value="0.95" x="320.0" y="316.8" width="722.0" height="54.0" fill="#333333"/>
+<text id="uber-category-label" data-role="category-label" data-entity-id="uber" x="298.0" y="352.8" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">Uber</text>
+</g>
+<g id="entity-didi" data-role="entity" data-entity-id="didi" data-label="Didi">
+<rect id="didi-bar" data-role="bar" data-entity-id="didi" data-value="0.71" x="320.0" y="419.2" width="539.6" height="54.0" fill="#F39C12"/>
+<text id="didi-category-label" data-role="category-label" data-entity-id="didi" x="298.0" y="455.2" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">Didi</text>
+</g>
+<g id="entity-wework" data-role="entity" data-entity-id="wework" data-label="WeWork">
+<rect id="wework-bar" data-role="bar" data-entity-id="wework" data-value="0.56" x="320.0" y="521.8" width="425.6" height="54.0" fill="#333333"/>
+<text id="wework-category-label" data-role="category-label" data-entity-id="wework" x="298.0" y="557.8" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">WeWork</text>
+</g>
+</g>
+</svg>

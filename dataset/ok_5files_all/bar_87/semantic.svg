@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F39C12"/>
+<g id="entity-overweight" data-role="entity" data-entity-id="overweight" data-label="55% of all household cats are overweight">
+<rect id="overweight-bar" data-role="bar" data-entity-id="overweight" data-value="1" x="120" y="150" width="1040" height="130" fill="#C0392B"/>
+<text id="overweight-label" data-role="category-label" data-entity-id="overweight" x="640" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FAD7A0">55% of all household cats are overweight</text>
+</g>
+<g id="entity-know" data-role="entity" data-entity-id="know" data-label="9% of their owners know that">
+<rect id="know-bar" data-role="bar" data-entity-id="know" data-value="1" x="120" y="440" width="1040" height="130" fill="#C0392B"/>
+<text id="know-label" data-role="category-label" data-entity-id="know" x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#FAD7A0">9% of their owners know that</text>
+</g>
+</g>
+</svg>

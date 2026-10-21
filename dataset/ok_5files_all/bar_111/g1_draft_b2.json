@@ -1,0 +1,229 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_111",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the disparity in access to clean water between populations, contextualizing Dewey's privileged background against a lower access statistic.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The visualized metric is relative access to clean water, not an absolute count and not toilet access or running water specifically.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "all",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "The entity label is 'access to clean water' for all rows; 0.6250 is one example relative value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the metric is access to clean water",
+    "the values show relative access to clean water",
+    "the series is labeled access to clean water"
+   ],
+   "visual_evidence_rule": "The chart must identify the metric as access to clean water.",
+   "temporal_anchor": "the narration clause about clean running water",
+   "reviewer_question": "Must the clip explicitly name the metric as access to clean water, or may it rely on the narration alone?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "There is a disparity among the shown relative access values: one value is 0.6250 while another is 0.4361, so access is not uniform.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Higher relative access value."
+    },
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.4361,
+     "note": "Lower relative access value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "one access value is 0.6250 while another is 0.4361",
+    "the highest access value is about 0.63 and the lowest is about 0.44",
+    "there is a visible gap between a higher access value and a lower access value"
+   ],
+   "visual_evidence_rule": "Both the 0.6250 and 0.4361 relative values are represented, and the difference between them is visually apparent.",
+   "temporal_anchor": "the contrast between Dewey's clean water access and the lower access statistic",
+   "reviewer_question": "Must the clip explicitly contrast the higher and lower access values, or is showing only one value sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The highest relative access value shown is 0.6250; it appears twice in the table.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Maximum relative value; appears in two rows."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the maximum relative access value is 0.6250",
+    "one access value reaches about 0.63",
+    "the highest shown access value is roughly 0.625"
+   ],
+   "visual_evidence_rule": "The 0.6250 value is shown as the highest or tied for highest.",
+   "temporal_anchor": "Dewey's clean running water or privileged background",
+   "reviewer_question": "Must the clip explicitly identify 0.6250 as the highest access value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The lowest relative access value shown is 0.4361.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.4361,
+     "note": "Minimum relative value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the minimum relative access value is 0.4361",
+    "the lowest access figure is about 0.44",
+    "the smallest shown value is roughly 0.436"
+   ],
+   "visual_evidence_rule": "The 0.4361 value is shown as the lowest.",
+   "temporal_anchor": "the lower access statistic clause",
+   "reviewer_question": "Must the clip explicitly identify 0.4361 as the lowest access value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The lowest relative access value is about 0.70 times the highest relative access value: 0.4361 / 0.6250 = 0.6978.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.4361,
+     "note": "Lowest relative value."
+    },
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Highest relative value."
+    }
+   ],
+   "computation": "0.4361 / 0.6250 = 0.6978",
+   "accepted_routes": [
+    "the lowest access value is about 0.70 times the highest",
+    "the lowest is roughly seven-tenths of the highest",
+    "the lower value is about 0.70 of the higher value"
+   ],
+   "visual_evidence_rule": "The relative magnitudes of the lowest and highest values are visually comparable so that the lowest is clearly below but more than half of the highest.",
+   "temporal_anchor": "the lower access statistic clause",
+   "reviewer_question": "Is the ratio between the lowest and highest relative values required, or is the absolute gap enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The middle relative value 0.5986 is below the maximum 0.6250 but above the minimum 0.4361; it is about 0.96 times the maximum and about 1.37 times the minimum.",
+  "The absolute gap between the highest and lowest relative values is 0.1889 (0.6250 - 0.4361).",
+  "The two rows with 0.6250 indicate a tie for the maximum relative access value."
+ ],
+ "unsupported_to_avoid": [
+  "Any percentage, count, or dollar amount for access to clean water; the table only has relative values.",
+  "Claims that Dewey personally caused or changed the lower access statistic.",
+  "Using toilet access or running water as the metric; the table entity is access to clean water.",
+  "Stating that the lowest value is exactly 0.44 or exactly seven-tenths without relative phrasing.",
+  "Extrapolating beyond the four shown relative values."
+ ],
+ "notes": "All values are relative_value (0-1), so units avoid absolute quantities and percentages. The middle 0.5986 value is optional; the required focus is the higher/lower disparity.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 40.5,
+  "usage": {
+   "prompt_tokens": 975,
+   "completion_tokens": 10052,
+   "total_tokens": 11027,
+   "prompt_tokens_details": {
+    "cached_tokens": 128
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8391
+   },
+   "prompt_cache_hit_tokens": 128,
+   "prompt_cache_miss_tokens": 847
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

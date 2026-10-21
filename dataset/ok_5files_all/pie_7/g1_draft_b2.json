@@ -1,0 +1,251 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "pie_7",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the scarcity of arable land and the limited proportion of it that is irrigated.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Arable land is an extremely small share of all land: 0.3% arable versus 99.7% other land.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Arable land",
+     "x": "",
+     "field": "value",
+     "value": 0.3,
+     "note": "Arable land share of total land."
+    },
+    {
+     "entity": "Other land",
+     "x": "",
+     "field": "value",
+     "value": 99.7,
+     "note": "Other land share of total land."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Arable land is 0.3% of all land, while other land is 99.7%.",
+    "Only 0.3% of land is arable; 99.7% is other land.",
+    "Arable land is a tiny share (0.3%) compared with other land (99.7%)."
+   ],
+   "visual_evidence_rule": "The chart must show arable land and other land as parts of total land, with arable visibly tiny compared to other land and the 0.3% / 99.7% shares identifiable.",
+   "temporal_anchor": "Because less than 1 % of the country's land is arable",
+   "reviewer_question": "Is the near-zero arable share obligatory, or can the video simply say 'less than 1%' without showing 0.3%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 33.3% irrigation figure is a share of arable land, not a share of all land.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Irrigated arable land",
+     "x": "",
+     "field": "value",
+     "value": 33.3,
+     "note": "Irrigated share within arable land."
+    },
+    {
+     "entity": "Arable land",
+     "x": "",
+     "field": "value",
+     "value": 0.3,
+     "note": "Arable land is the denominator context; it is 0.3% of all land."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Irrigated arable land is 33.3% of arable land.",
+    "Of arable land, 33.3% is irrigated.",
+    "The 33.3% irrigation share uses arable land as the denominator."
+   ],
+   "visual_evidence_rule": "The chart must make clear that the 33.3% irrigation share is nested within arable land, not total land.",
+   "temporal_anchor": "only a third of which is irrigated",
+   "reviewer_question": "Must the denominator for the 33.3% irrigation share be explicit, or can 'of which' be understood from context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Within arable land, irrigated arable land is about one-third and not irrigated arable land is about two-thirds.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Irrigated arable land",
+     "x": "",
+     "field": "value",
+     "value": 33.3,
+     "note": "Irrigated portion of arable land."
+    },
+    {
+     "entity": "Not irrigated",
+     "x": "",
+     "field": "value",
+     "value": 66.7,
+     "note": "Not irrigated portion of arable land."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Within arable land, irrigated is 33.3% and not irrigated is 66.7%.",
+    "About one-third of arable land is irrigated, about two-thirds is not.",
+    "Irrigated arable land (33.3%) is less than not irrigated arable land (66.7%)."
+   ],
+   "visual_evidence_rule": "The chart must show irrigated arable land and not irrigated arable land as the two parts of arable land, with irrigated about one-third and not irrigated about two-thirds.",
+   "temporal_anchor": "only a third of which is irrigated",
+   "reviewer_question": "Is the exact 33.3% / 66.7% split required, or is 'about one-third / two-thirds' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Other land is more than 300 times larger than arable land, emphasizing arable scarcity.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Other land",
+     "x": "",
+     "field": "value",
+     "value": 99.7,
+     "note": "Other land share of total land."
+    },
+    {
+     "entity": "Arable land",
+     "x": "",
+     "field": "value",
+     "value": 0.3,
+     "note": "Arable land share of total land."
+    }
+   ],
+   "computation": "99.7 / 0.3 ≈ 332.3",
+   "accepted_routes": [
+    "Other land is over 300 times arable land.",
+    "Arable land is roughly 1/332 the size of other land.",
+    "Other land is vastly larger than arable land, by a factor of more than 300."
+   ],
+   "visual_evidence_rule": "If the ratio is expressed, the chart must allow comparing other land to arable land so that other land is visibly more than 300 times larger.",
+   "temporal_anchor": "Because less than 1 % of the country's land is arable",
+   "reviewer_question": "Is the ratio comparison worth including, or does the 0.3% / 99.7% split already convey the scarcity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Combining the two shares, irrigated arable land is only about 0.1% of all land.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Irrigated arable land",
+     "x": "",
+     "field": "value",
+     "value": 33.3,
+     "note": "Irrigated share within arable land."
+    },
+    {
+     "entity": "Arable land",
+     "x": "",
+     "field": "value",
+     "value": 0.3,
+     "note": "Arable share of all land."
+    }
+   ],
+   "computation": "33.3% × 0.3% = 0.0999%, about 0.1%",
+   "accepted_routes": [
+    "Irrigated arable land is about 0.1% of all land.",
+    "Only about one-tenth of one percent of land is both arable and irrigated.",
+    "The combined share of irrigated arable land is roughly 0.1% of total land."
+   ],
+   "visual_evidence_rule": "If shown, the chart must allow the viewer to combine the 0.3% arable share and the 33.3% irrigation share into a total-land share of about 0.1%.",
+   "temporal_anchor": "whole sentence, derived from both clauses",
+   "reviewer_question": "Is the derived 0.1% total-land share required, or is it an optional synthesis of the two table compositions?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Not irrigated arable land is about twice irrigated arable land (66.7% vs 33.3%).",
+  "Within arable land, not irrigated is the larger segment and irrigated is the smaller segment.",
+  "Other land is the largest overall category and arable land is the smallest overall category."
+ ],
+ "unsupported_to_avoid": [
+  "Irrigated arable land is 33.3% of all land.",
+  "Arable land is 33.3% of all land.",
+  "Not irrigated land is 66.7% of all land.",
+  "Causal claims such as arable scarcity causing food shortages or irrigation limits causing specific outcomes.",
+  "Any future trend or change over time, since the table has no time dimension.",
+  "Treating relative_value 0.0030 as 0.003% instead of using the table's % value."
+ ],
+ "notes": "The table has two nested share comparisons: arable/other land and irrigated/not irrigated within arable. The key risk is misassigning the 33.3% irrigation share to total land rather than to arable land.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.06
+ },
+ "draft_cost": {
+  "sec": 36.5,
+  "usage": {
+   "prompt_tokens": 975,
+   "completion_tokens": 9067,
+   "total_tokens": 10042,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7047
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 463
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

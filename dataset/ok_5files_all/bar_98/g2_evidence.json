@@ -1,0 +1,129 @@
+{
+ "clip_id": "bar_98",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Cats @ x_px=350.0",
+    "mark:74 million @ x_px=930.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Cats @ x_px=350.0",
+      "value": 88.0
+     },
+     {
+      "mark": "74 million @ x_px=930.0",
+      "value": 74.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The cat bar must be taller than the dog bar, or cats must be labeled/ranked first as most popular."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Cats @ x_px=350.0"
+   ],
+   "assertion": {
+    "mark": "Cats @ x_px=350.0",
+    "field": "value",
+    "expected": 88.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The cat bar endpoint or label must show 88 million."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:74 million @ x_px=930.0"
+   ],
+   "assertion": {
+    "mark": "74 million @ x_px=930.0",
+    "field": "value",
+    "expected": 74.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The dog bar endpoint or label must show 74 million."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Cats @ x_px=350.0",
+    "mark:74 million @ x_px=930.0"
+   ],
+   "assertion": {
+    "low": "74 million @ x_px=930.0",
+    "low_value": 74.0,
+    "high": "Cats @ x_px=350.0",
+    "high_value": 88.0,
+    "delta": 14.0,
+    "ratio": 1.1892,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A difference annotation, arrow, or label must show a 14 million gap between the cat and dog endpoints."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A timeline, annotation, or text card must indicate Europe and the 1750s as the historical origin context."
+  }
+ ]
+}

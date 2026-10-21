@@ -1,0 +1,267 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_116",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that Black men are far more likely than Black women to report being unfairly stopped by police due to their race or ethnicity.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Black men have a higher relative_value than Black women on the unfair-stop measure.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Black men",
+     "x": "Black men",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "relative_value from table"
+    },
+    {
+     "entity": "Black women",
+     "x": "Black women",
+     "field": "relative_value",
+     "value": 0.2986,
+     "note": "relative_value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Black men are more likely than Black women to report this experience on the relative measure.",
+    "The relative_value for Black men exceeds that for Black women.",
+    "Black men's relative measure is higher than Black women's.",
+    "The visual comparison shows Black men above Black women."
+   ],
+   "visual_evidence_rule": "The chart must visually encode Black men's relative_value as greater than Black women's so the direction of difference is clear.",
+   "temporal_anchor": "the 'including about two-thirds of Black men' clause, with Black women shown as the comparator",
+   "reviewer_question": "Should the video be required to state that Black men's relative_value is higher than Black women's?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Among the three entities, Black men have the largest relative_value.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Black men",
+     "x": "Black men",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "relative_value from table"
+    },
+    {
+     "entity": "Black women",
+     "x": "Black women",
+     "field": "relative_value",
+     "value": 0.2986,
+     "note": "relative_value from table"
+    },
+    {
+     "entity": "Black adults",
+     "x": "Black adults",
+     "field": "relative_value",
+     "value": 0.4199,
+     "note": "relative_value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Black men top the list.",
+    "Black men have the highest relative measure.",
+    "No group exceeds Black men.",
+    "Black men rank first among the three groups."
+   ],
+   "visual_evidence_rule": "If all three groups are shown, the Black men encoding must be the largest.",
+   "temporal_anchor": "the 'including about two-thirds of Black men' clause when Black men are singled out",
+   "reviewer_question": "Must the video explicitly show Black men as the highest of the three groups, or is the men-vs-women contrast enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Black adults' relative_value is lower than Black men's and higher than Black women's, placing Black adults between the two.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Black adults",
+     "x": "Black adults",
+     "field": "relative_value",
+     "value": 0.4199,
+     "note": "relative_value from table"
+    },
+    {
+     "entity": "Black men",
+     "x": "Black men",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "relative_value from table"
+    },
+    {
+     "entity": "Black women",
+     "x": "Black women",
+     "field": "relative_value",
+     "value": 0.2986,
+     "note": "relative_value from table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Black adults sit between Black men and Black women.",
+    "The order is Black men > Black adults > Black women.",
+    "Black adults are higher than Black women but lower than Black men.",
+    "Black adults are the intermediate group."
+   ],
+   "visual_evidence_rule": "If Black adults are shown, their visual encoding must sit between Black men and Black women.",
+   "temporal_anchor": "the 'almost half of Black adults said that this had happened to them' clause",
+   "reviewer_question": "Should the clip include Black adults as an intermediate reference, or can it omit the adult group?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Black men's relative_value is exactly twice Black women's.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Black men",
+     "x": "Black men",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "relative_value from table"
+    },
+    {
+     "entity": "Black women",
+     "x": "Black women",
+     "field": "relative_value",
+     "value": 0.2986,
+     "note": "relative_value from table"
+    }
+   ],
+   "computation": "0.5972 / 0.2986 = 2.0",
+   "accepted_routes": [
+    "Black men's relative_value is exactly double Black women's.",
+    "The men-to-women ratio is 2.0.",
+    "Black men are about twice as likely as Black women on this relative measure.",
+    "The relative measure for Black men is twice that for Black women."
+   ],
+   "visual_evidence_rule": "The chart must make the men-vs-women difference read as a doubling, not just a slight edge.",
+   "temporal_anchor": "the 'including about two-thirds of Black men' clause when set against Black women",
+   "reviewer_question": "Must the video quantify the men-vs-women gap as roughly double, or is a qualitative 'higher' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The excess of Black men over Black women equals Black women's own relative_value; the difference is 0.5972 - 0.2986 = 0.2986.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Black men",
+     "x": "Black men",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "relative_value from table"
+    },
+    {
+     "entity": "Black women",
+     "x": "Black women",
+     "field": "relative_value",
+     "value": 0.2986,
+     "note": "relative_value from table"
+    }
+   ],
+   "computation": "0.5972 - 0.2986 = 0.2986",
+   "accepted_routes": [
+    "The gap between Black men and Black women is about 0.30 in relative_value.",
+    "The men-women difference is equal to Black women's relative_value.",
+    "Black men exceed Black women by the same amount as Black women's own level.",
+    "The gap is as large as the entire Black women relative_value."
+   ],
+   "visual_evidence_rule": "If the chart annotates the gap, the gap must be shown as equal to the Black women level.",
+   "temporal_anchor": "the comparison clause that sets Black men against Black women",
+   "reviewer_question": "Should the video annotate the relative gap between Black men and Black women, or is the ratio/doubling sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Black adults' relative_value is closer to Black women's than to Black men's (adults-to-women gap 0.1213 vs adults-to-men gap 0.1773).",
+  "Black adults' relative_value is below the midpoint between Black men and Black women on the relative scale."
+ ],
+ "unsupported_to_avoid": [
+  "Any percentage, count, or fraction such as 60%, two-thirds, or almost half, because the table is relative_only.",
+  "Causal claims that race/ethnicity causes police stops or that police stop Black men more often in absolute terms.",
+  "Extrapolation beyond the three entities in the table.",
+  "Encoding or layout claims about positions, colors, axis ticks, chart type, or rendering."
+ ],
+ "notes": "The table is relative_only, so all units use relative_value and avoid percentages/counts. The core contrast is Black men vs Black women, with an exact 2:1 ratio and a difference equal to Black women's relative_value.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 43.8,
+  "usage": {
+   "prompt_tokens": 857,
+   "completion_tokens": 10270,
+   "total_tokens": 11127,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8423
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 857
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

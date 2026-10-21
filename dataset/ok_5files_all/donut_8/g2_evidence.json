@@ -1,0 +1,132 @@
+{
+ "clip_id": "donut_8",
+ "family": "donut",
+ "chart_form": "donut/multi_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:all american voters @ 1"
+   ],
+   "assertion": {
+    "mark": "all american voters @ 1",
+    "field": "value",
+    "expected": 77.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly label the all-American-voters category with 77% or an equivalent text annotation."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:live in a house with a gun @ 0"
+   ],
+   "assertion": {
+    "mark": "live in a house with a gun @ 0",
+    "field": "value",
+    "expected": 68.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must visibly label the 'live in a house with a gun' category with 68% or an equivalent text annotation."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:live in a house with a gun @ 0"
+   ],
+   "assertion": {
+    "series": "live in a house with a gun",
+    "values": [
+     68.0
+    ],
+    "threshold_between": [
+     68.0,
+     68.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or text annotation must make 68% interpretable against a two-thirds reference, or explicitly say 'more than two-thirds'."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:all american voters @ 1"
+   ],
+   "assertion": {
+    "series": "all american voters",
+    "values": [
+     77.0
+    ],
+    "threshold_between": [
+     77.0,
+     77.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart or text annotation must make 77% interpretable against a three-quarters reference, or explicitly say 'more than three-quarters'."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:live in a house with a gun @ 0",
+    "mark:all american voters @ 1"
+   ],
+   "assertion": {
+    "low": "live in a house with a gun @ 0",
+    "low_value": 68.0,
+    "high": "all american voters @ 1",
+    "high_value": 77.0,
+    "delta": 9.0,
+    "ratio": 1.1324,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 77% and 68% must be visible, or the 9-percentage-point gap must be annotated/labeled."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_16",
+ "intent_en": "To demonstrate that support for Scottish independence remains a minority view among the population based on polling data.",
+ "previous_intent": "To illustrate that in August 2014, polling data indicated that opposition to Scottish independence was higher than support, with only a minority of respondents favoring independence.",
+ "narration_support": "Polls consistently show that only a minority of Scots would vote for actual independence.",
+ "chart_support": "Line chart showing polling results for Aug 2014 where the 'Yes' category is lower than the 'No' category, indicating minority support for independence.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly claims a minority would vote for independence. The chart visualizes this with the 'Yes' line positioned below the 'No' line for Aug 2014, confirming that support is not the majority.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,entity_label_printed,segment_width_px
+bar_108,Pfizer/BioNTech,pfizer/biontech-months-since-last-shot,330.0,,6.0,1.0,months,#8faad6,svg_geometry,Months since last shot,yes,728.6
+bar_108,Pfizer/BioNTech,pfizer/biontech-two-weeks-until-fully-effective,1075.1,,0.55,0.0917,months,#ffff00,svg_geometry,two weeks until fully effective,yes,66.8
+bar_108,Moderna,moderna-months-since-last-shot,330.0,,6.0,1.0,months,#5c7eb3,svg_geometry,Months since last shot,yes,728.6
+bar_108,Moderna,moderna-two-weeks-until-fully-effective,1075.1,,0.55,0.0917,months,#ffff00,svg_geometry,two weeks until fully effective,yes,66.8
+bar_108,Johnson & Johnson,johnson-&-johnson-months-since-last-shot,330.0,,2.0,0.3334,months,#d96060,svg_geometry,Months since last shot,yes,242.9
+bar_108,Johnson & Johnson,johnson-&-johnson-two-weeks-until-fully-effective,589.4,,0.7,0.1167,months,#ffff00,svg_geometry,two weeks until fully effective,yes,85.0
+bar_108,AstraZeneca,astrazeneca-months-since-last-shot,330.0,,6.0,1.0,months,#b04b4b,svg_geometry,Months since last shot,yes,728.6
+bar_108,AstraZeneca,astrazeneca-two-weeks-until-fully-effective,1075.1,,0.55,0.0917,months,#ffff00,svg_geometry,two weeks until fully effective,yes,66.8

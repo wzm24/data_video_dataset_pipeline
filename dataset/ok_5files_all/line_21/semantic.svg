@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#000080"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">TEMPERATURE CHANGE °C</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">-0.4</text>
+<line data-role="tick" x1="112" y1="485.0" x2="120" y2="485.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="491.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">0.0</text>
+<line data-role="tick" x1="112" y1="370.0" x2="120" y2="370.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="376.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">+0.4</text>
+<line data-role="tick" x1="112" y1="255.0" x2="120" y2="255.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="261.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">+0.8</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">+1.2</text>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,513.8 134.2,528.1 148.4,556.9 162.6,513.8 176.8,536.8 191.0,519.5 205.2,499.4 219.4,528.1 233.5,508.0 247.7,485.0 261.9,499.4 276.1,456.2 290.3,413.1 297.4,384.4 311.6,441.9 325.8,470.6 340.0,499.4 354.2,528.1 368.4,513.8 382.6,542.5 396.8,528.1 411.0,556.9 425.2,513.8 439.4,542.5 453.5,528.1 474.8,542.5 489.0,513.8 503.2,556.9 517.4,528.1 531.6,542.5 545.8,571.2 560.0,528.1 574.2,556.9 588.4,513.8 602.6,542.5 616.8,528.1 631.0,499.4 645.2,485.0 659.4,513.8 673.5,470.6 687.7,441.9 701.9,456.2 716.1,427.5 730.3,441.9 744.5,413.1 758.7,384.4 772.9,413.1 787.1,427.5 801.3,398.8 815.5,413.1 829.7,413.1 843.9,398.8 858.1,427.5 872.3,384.4 886.5,413.1 900.6,398.8 914.8,427.5 929.0,384.4 943.2,398.8 957.4,370.0 971.6,384.4 985.8,370.0 1000.0,398.8 1014.2,384.4 1028.4,355.6 1042.6,370.0 1056.8,341.2 1071.0,355.6 1085.2,326.9 1099.4,341.2 1113.5,312.5 1127.7,326.9 1141.9,298.1 1156.1,312.5 1170.3,269.4 1184.5,240.6 1198.7,226.2 1212.9,240.6 1220.0,211.9" fill="none" stroke="#ffffff" stroke-width="2" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1850</text>
+<text data-role="x-axis-label" x="474.8" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1900</text>
+<text data-role="x-axis-label" x="829.7" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1950</text>
+<text data-role="x-axis-label" x="1184.5" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2000</text>
+</g>
+</svg>

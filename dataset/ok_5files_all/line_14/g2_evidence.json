@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_14",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:SUSTAINABLE @ initial",
+    "mark:SUSTAINABLE @ peak"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "SUSTAINABLE @ initial",
+      "value": 0.05
+     },
+     {
+      "mark": "SUSTAINABLE @ peak",
+      "value": 0.92
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The plotted series must visibly include an initial low relative level and a rise to the highest relative level."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:SUSTAINABLE @ peak",
+    "mark:SUSTAINABLE @ trough"
+   ],
+   "assertion": {
+    "low": "SUSTAINABLE @ trough",
+    "low_value": 0.45,
+    "high": "SUSTAINABLE @ peak",
+    "high_value": 0.92,
+    "delta": 0.47,
+    "ratio": 2.0444,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a clear downward segment after the peak reaching a lower minimum near 0.45."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:SUSTAINABLE @ trough",
+    "mark:SUSTAINABLE @ recovery_peak"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "SUSTAINABLE @ trough",
+      "value": 0.45
+     },
+     {
+      "mark": "SUSTAINABLE @ recovery_peak",
+      "value": 0.85
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The plotted series must show an upward segment after the 0.45 trough reaching 0.85."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:SUSTAINABLE @ late_plateau"
+   ],
+   "assertion": {
+    "mark": "SUSTAINABLE @ late_plateau",
+    "field": "value",
+    "expected": 0.72,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final portion of the series must appear relatively flat and end near 0.73."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:SUSTAINABLE @ peak",
+    "mark:SUSTAINABLE @ final"
+   ],
+   "assertion": {
+    "greater": "SUSTAINABLE @ peak",
+    "lesser": "SUSTAINABLE @ final",
+    "expected_ratio": 1.2603,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final plateau must be visibly lower than the peak value."
+  }
+ ]
+}

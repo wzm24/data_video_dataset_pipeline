@@ -1,0 +1,2971 @@
+clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type
+area_43,EU-28,eu-28,1750,0.00,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1750,0.00,,Gt,estimated
+area_43,United States,united_states,1750,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1750,0.00,,Gt,estimated
+area_43,South America,south_america,1750,0.00,,Gt,estimated
+area_43,Africa,africa,1750,0.00,,Gt,estimated
+area_43,India,india,1750,0.00,,Gt,estimated
+area_43,China,china,1750,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1750,0.00,,Gt,estimated
+area_43,Oceania,oceania,1750,0.00,,Gt,estimated
+area_43,International transport,international_transport,1750,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1751,0.00,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1751,0.00,,Gt,estimated
+area_43,United States,united_states,1751,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1751,0.00,,Gt,estimated
+area_43,South America,south_america,1751,0.00,,Gt,estimated
+area_43,Africa,africa,1751,0.00,,Gt,estimated
+area_43,India,india,1751,0.00,,Gt,estimated
+area_43,China,china,1751,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1751,0.00,,Gt,estimated
+area_43,Oceania,oceania,1751,0.00,,Gt,estimated
+area_43,International transport,international_transport,1751,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1752,0.00,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1752,0.00,,Gt,estimated
+area_43,United States,united_states,1752,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1752,0.00,,Gt,estimated
+area_43,South America,south_america,1752,0.00,,Gt,estimated
+area_43,Africa,africa,1752,0.00,,Gt,estimated
+area_43,India,india,1752,0.00,,Gt,estimated
+area_43,China,china,1752,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1752,0.00,,Gt,estimated
+area_43,Oceania,oceania,1752,0.00,,Gt,estimated
+area_43,International transport,international_transport,1752,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1753,0.00,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1753,0.00,,Gt,estimated
+area_43,United States,united_states,1753,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1753,0.00,,Gt,estimated
+area_43,South America,south_america,1753,0.00,,Gt,estimated
+area_43,Africa,africa,1753,0.00,,Gt,estimated
+area_43,India,india,1753,0.00,,Gt,estimated
+area_43,China,china,1753,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1753,0.00,,Gt,estimated
+area_43,Oceania,oceania,1753,0.00,,Gt,estimated
+area_43,International transport,international_transport,1753,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1754,0.00,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1754,0.00,,Gt,estimated
+area_43,United States,united_states,1754,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1754,0.00,,Gt,estimated
+area_43,South America,south_america,1754,0.00,,Gt,estimated
+area_43,Africa,africa,1754,0.00,,Gt,estimated
+area_43,India,india,1754,0.00,,Gt,estimated
+area_43,China,china,1754,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1754,0.00,,Gt,estimated
+area_43,Oceania,oceania,1754,0.00,,Gt,estimated
+area_43,International transport,international_transport,1754,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1755,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1755,0.00,,Gt,estimated
+area_43,United States,united_states,1755,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1755,0.00,,Gt,estimated
+area_43,South America,south_america,1755,0.00,,Gt,estimated
+area_43,Africa,africa,1755,0.00,,Gt,estimated
+area_43,India,india,1755,0.00,,Gt,estimated
+area_43,China,china,1755,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1755,0.00,,Gt,estimated
+area_43,Oceania,oceania,1755,0.00,,Gt,estimated
+area_43,International transport,international_transport,1755,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1756,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1756,0.00,,Gt,estimated
+area_43,United States,united_states,1756,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1756,0.00,,Gt,estimated
+area_43,South America,south_america,1756,0.00,,Gt,estimated
+area_43,Africa,africa,1756,0.00,,Gt,estimated
+area_43,India,india,1756,0.00,,Gt,estimated
+area_43,China,china,1756,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1756,0.00,,Gt,estimated
+area_43,Oceania,oceania,1756,0.00,,Gt,estimated
+area_43,International transport,international_transport,1756,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1757,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1757,0.00,,Gt,estimated
+area_43,United States,united_states,1757,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1757,0.00,,Gt,estimated
+area_43,South America,south_america,1757,0.00,,Gt,estimated
+area_43,Africa,africa,1757,0.00,,Gt,estimated
+area_43,India,india,1757,0.00,,Gt,estimated
+area_43,China,china,1757,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1757,0.00,,Gt,estimated
+area_43,Oceania,oceania,1757,0.00,,Gt,estimated
+area_43,International transport,international_transport,1757,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1758,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1758,0.00,,Gt,estimated
+area_43,United States,united_states,1758,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1758,0.00,,Gt,estimated
+area_43,South America,south_america,1758,0.00,,Gt,estimated
+area_43,Africa,africa,1758,0.00,,Gt,estimated
+area_43,India,india,1758,0.00,,Gt,estimated
+area_43,China,china,1758,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1758,0.00,,Gt,estimated
+area_43,Oceania,oceania,1758,0.00,,Gt,estimated
+area_43,International transport,international_transport,1758,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1759,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1759,0.00,,Gt,estimated
+area_43,United States,united_states,1759,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1759,0.00,,Gt,estimated
+area_43,South America,south_america,1759,0.00,,Gt,estimated
+area_43,Africa,africa,1759,0.00,,Gt,estimated
+area_43,India,india,1759,0.00,,Gt,estimated
+area_43,China,china,1759,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1759,0.00,,Gt,estimated
+area_43,Oceania,oceania,1759,0.00,,Gt,estimated
+area_43,International transport,international_transport,1759,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1760,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1760,0.00,,Gt,estimated
+area_43,United States,united_states,1760,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1760,0.00,,Gt,estimated
+area_43,South America,south_america,1760,0.00,,Gt,estimated
+area_43,Africa,africa,1760,0.00,,Gt,estimated
+area_43,India,india,1760,0.00,,Gt,estimated
+area_43,China,china,1760,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1760,0.00,,Gt,estimated
+area_43,Oceania,oceania,1760,0.00,,Gt,estimated
+area_43,International transport,international_transport,1760,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1761,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1761,0.00,,Gt,estimated
+area_43,United States,united_states,1761,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1761,0.00,,Gt,estimated
+area_43,South America,south_america,1761,0.00,,Gt,estimated
+area_43,Africa,africa,1761,0.00,,Gt,estimated
+area_43,India,india,1761,0.00,,Gt,estimated
+area_43,China,china,1761,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1761,0.00,,Gt,estimated
+area_43,Oceania,oceania,1761,0.00,,Gt,estimated
+area_43,International transport,international_transport,1761,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1762,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1762,0.00,,Gt,estimated
+area_43,United States,united_states,1762,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1762,0.00,,Gt,estimated
+area_43,South America,south_america,1762,0.00,,Gt,estimated
+area_43,Africa,africa,1762,0.00,,Gt,estimated
+area_43,India,india,1762,0.00,,Gt,estimated
+area_43,China,china,1762,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1762,0.00,,Gt,estimated
+area_43,Oceania,oceania,1762,0.00,,Gt,estimated
+area_43,International transport,international_transport,1762,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1763,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1763,0.00,,Gt,estimated
+area_43,United States,united_states,1763,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1763,0.00,,Gt,estimated
+area_43,South America,south_america,1763,0.00,,Gt,estimated
+area_43,Africa,africa,1763,0.00,,Gt,estimated
+area_43,India,india,1763,0.00,,Gt,estimated
+area_43,China,china,1763,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1763,0.00,,Gt,estimated
+area_43,Oceania,oceania,1763,0.00,,Gt,estimated
+area_43,International transport,international_transport,1763,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1764,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1764,0.00,,Gt,estimated
+area_43,United States,united_states,1764,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1764,0.00,,Gt,estimated
+area_43,South America,south_america,1764,0.00,,Gt,estimated
+area_43,Africa,africa,1764,0.00,,Gt,estimated
+area_43,India,india,1764,0.00,,Gt,estimated
+area_43,China,china,1764,0.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1764,0.00,,Gt,estimated
+area_43,Oceania,oceania,1764,0.00,,Gt,estimated
+area_43,International transport,international_transport,1764,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1765,0.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1765,0.00,,Gt,estimated
+area_43,United States,united_states,1765,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1765,0.01,,Gt,estimated
+area_43,South America,south_america,1765,0.00,,Gt,estimated
+area_43,Africa,africa,1765,0.00,,Gt,estimated
+area_43,India,india,1765,0.01,,Gt,estimated
+area_43,China,china,1765,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1765,0.01,,Gt,estimated
+area_43,Oceania,oceania,1765,0.00,,Gt,estimated
+area_43,International transport,international_transport,1765,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1766,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1766,0.00,,Gt,estimated
+area_43,United States,united_states,1766,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1766,0.01,,Gt,estimated
+area_43,South America,south_america,1766,0.00,,Gt,estimated
+area_43,Africa,africa,1766,0.00,,Gt,estimated
+area_43,India,india,1766,0.01,,Gt,estimated
+area_43,China,china,1766,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1766,0.01,,Gt,estimated
+area_43,Oceania,oceania,1766,0.00,,Gt,estimated
+area_43,International transport,international_transport,1766,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1767,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1767,0.00,,Gt,estimated
+area_43,United States,united_states,1767,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1767,0.01,,Gt,estimated
+area_43,South America,south_america,1767,0.00,,Gt,estimated
+area_43,Africa,africa,1767,0.00,,Gt,estimated
+area_43,India,india,1767,0.01,,Gt,estimated
+area_43,China,china,1767,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1767,0.01,,Gt,estimated
+area_43,Oceania,oceania,1767,0.00,,Gt,estimated
+area_43,International transport,international_transport,1767,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1768,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1768,0.00,,Gt,estimated
+area_43,United States,united_states,1768,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1768,0.01,,Gt,estimated
+area_43,South America,south_america,1768,0.00,,Gt,estimated
+area_43,Africa,africa,1768,0.00,,Gt,estimated
+area_43,India,india,1768,0.01,,Gt,estimated
+area_43,China,china,1768,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1768,0.01,,Gt,estimated
+area_43,Oceania,oceania,1768,0.00,,Gt,estimated
+area_43,International transport,international_transport,1768,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1769,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1769,0.00,,Gt,estimated
+area_43,United States,united_states,1769,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1769,0.01,,Gt,estimated
+area_43,South America,south_america,1769,0.00,,Gt,estimated
+area_43,Africa,africa,1769,0.00,,Gt,estimated
+area_43,India,india,1769,0.01,,Gt,estimated
+area_43,China,china,1769,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1769,0.01,,Gt,estimated
+area_43,Oceania,oceania,1769,0.00,,Gt,estimated
+area_43,International transport,international_transport,1769,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1770,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1770,0.00,,Gt,estimated
+area_43,United States,united_states,1770,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1770,0.01,,Gt,estimated
+area_43,South America,south_america,1770,0.00,,Gt,estimated
+area_43,Africa,africa,1770,0.00,,Gt,estimated
+area_43,India,india,1770,0.01,,Gt,estimated
+area_43,China,china,1770,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1770,0.01,,Gt,estimated
+area_43,Oceania,oceania,1770,0.00,,Gt,estimated
+area_43,International transport,international_transport,1770,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1771,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1771,0.00,,Gt,estimated
+area_43,United States,united_states,1771,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1771,0.01,,Gt,estimated
+area_43,South America,south_america,1771,0.00,,Gt,estimated
+area_43,Africa,africa,1771,0.00,,Gt,estimated
+area_43,India,india,1771,0.01,,Gt,estimated
+area_43,China,china,1771,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1771,0.01,,Gt,estimated
+area_43,Oceania,oceania,1771,0.00,,Gt,estimated
+area_43,International transport,international_transport,1771,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1772,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1772,0.00,,Gt,estimated
+area_43,United States,united_states,1772,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1772,0.01,,Gt,estimated
+area_43,South America,south_america,1772,0.00,,Gt,estimated
+area_43,Africa,africa,1772,0.00,,Gt,estimated
+area_43,India,india,1772,0.01,,Gt,estimated
+area_43,China,china,1772,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1772,0.01,,Gt,estimated
+area_43,Oceania,oceania,1772,0.00,,Gt,estimated
+area_43,International transport,international_transport,1772,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1773,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1773,0.00,,Gt,estimated
+area_43,United States,united_states,1773,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1773,0.01,,Gt,estimated
+area_43,South America,south_america,1773,0.00,,Gt,estimated
+area_43,Africa,africa,1773,0.00,,Gt,estimated
+area_43,India,india,1773,0.01,,Gt,estimated
+area_43,China,china,1773,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1773,0.01,,Gt,estimated
+area_43,Oceania,oceania,1773,0.00,,Gt,estimated
+area_43,International transport,international_transport,1773,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1774,0.02,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1774,0.00,,Gt,estimated
+area_43,United States,united_states,1774,0.00,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1774,0.01,,Gt,estimated
+area_43,South America,south_america,1774,0.00,,Gt,estimated
+area_43,Africa,africa,1774,0.00,,Gt,estimated
+area_43,India,india,1774,0.01,,Gt,estimated
+area_43,China,china,1774,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1774,0.01,,Gt,estimated
+area_43,Oceania,oceania,1774,0.00,,Gt,estimated
+area_43,International transport,international_transport,1774,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1775,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1775,0.01,,Gt,estimated
+area_43,United States,united_states,1775,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1775,0.01,,Gt,estimated
+area_43,South America,south_america,1775,0.00,,Gt,estimated
+area_43,Africa,africa,1775,0.00,,Gt,estimated
+area_43,India,india,1775,0.01,,Gt,estimated
+area_43,China,china,1775,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1775,0.01,,Gt,estimated
+area_43,Oceania,oceania,1775,0.00,,Gt,estimated
+area_43,International transport,international_transport,1775,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1776,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1776,0.01,,Gt,estimated
+area_43,United States,united_states,1776,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1776,0.01,,Gt,estimated
+area_43,South America,south_america,1776,0.00,,Gt,estimated
+area_43,Africa,africa,1776,0.00,,Gt,estimated
+area_43,India,india,1776,0.01,,Gt,estimated
+area_43,China,china,1776,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1776,0.01,,Gt,estimated
+area_43,Oceania,oceania,1776,0.00,,Gt,estimated
+area_43,International transport,international_transport,1776,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1777,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1777,0.01,,Gt,estimated
+area_43,United States,united_states,1777,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1777,0.01,,Gt,estimated
+area_43,South America,south_america,1777,0.00,,Gt,estimated
+area_43,Africa,africa,1777,0.00,,Gt,estimated
+area_43,India,india,1777,0.01,,Gt,estimated
+area_43,China,china,1777,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1777,0.01,,Gt,estimated
+area_43,Oceania,oceania,1777,0.00,,Gt,estimated
+area_43,International transport,international_transport,1777,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1778,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1778,0.01,,Gt,estimated
+area_43,United States,united_states,1778,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1778,0.01,,Gt,estimated
+area_43,South America,south_america,1778,0.00,,Gt,estimated
+area_43,Africa,africa,1778,0.00,,Gt,estimated
+area_43,India,india,1778,0.01,,Gt,estimated
+area_43,China,china,1778,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1778,0.01,,Gt,estimated
+area_43,Oceania,oceania,1778,0.00,,Gt,estimated
+area_43,International transport,international_transport,1778,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1779,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1779,0.01,,Gt,estimated
+area_43,United States,united_states,1779,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1779,0.01,,Gt,estimated
+area_43,South America,south_america,1779,0.00,,Gt,estimated
+area_43,Africa,africa,1779,0.00,,Gt,estimated
+area_43,India,india,1779,0.01,,Gt,estimated
+area_43,China,china,1779,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1779,0.01,,Gt,estimated
+area_43,Oceania,oceania,1779,0.00,,Gt,estimated
+area_43,International transport,international_transport,1779,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1780,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1780,0.01,,Gt,estimated
+area_43,United States,united_states,1780,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1780,0.01,,Gt,estimated
+area_43,South America,south_america,1780,0.00,,Gt,estimated
+area_43,Africa,africa,1780,0.00,,Gt,estimated
+area_43,India,india,1780,0.01,,Gt,estimated
+area_43,China,china,1780,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1780,0.01,,Gt,estimated
+area_43,Oceania,oceania,1780,0.00,,Gt,estimated
+area_43,International transport,international_transport,1780,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1781,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1781,0.01,,Gt,estimated
+area_43,United States,united_states,1781,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1781,0.01,,Gt,estimated
+area_43,South America,south_america,1781,0.00,,Gt,estimated
+area_43,Africa,africa,1781,0.00,,Gt,estimated
+area_43,India,india,1781,0.01,,Gt,estimated
+area_43,China,china,1781,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1781,0.01,,Gt,estimated
+area_43,Oceania,oceania,1781,0.00,,Gt,estimated
+area_43,International transport,international_transport,1781,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1782,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1782,0.01,,Gt,estimated
+area_43,United States,united_states,1782,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1782,0.01,,Gt,estimated
+area_43,South America,south_america,1782,0.00,,Gt,estimated
+area_43,Africa,africa,1782,0.00,,Gt,estimated
+area_43,India,india,1782,0.01,,Gt,estimated
+area_43,China,china,1782,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1782,0.01,,Gt,estimated
+area_43,Oceania,oceania,1782,0.00,,Gt,estimated
+area_43,International transport,international_transport,1782,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1783,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1783,0.01,,Gt,estimated
+area_43,United States,united_states,1783,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1783,0.01,,Gt,estimated
+area_43,South America,south_america,1783,0.00,,Gt,estimated
+area_43,Africa,africa,1783,0.00,,Gt,estimated
+area_43,India,india,1783,0.01,,Gt,estimated
+area_43,China,china,1783,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1783,0.01,,Gt,estimated
+area_43,Oceania,oceania,1783,0.00,,Gt,estimated
+area_43,International transport,international_transport,1783,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1784,0.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1784,0.01,,Gt,estimated
+area_43,United States,united_states,1784,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1784,0.01,,Gt,estimated
+area_43,South America,south_america,1784,0.00,,Gt,estimated
+area_43,Africa,africa,1784,0.00,,Gt,estimated
+area_43,India,india,1784,0.01,,Gt,estimated
+area_43,China,china,1784,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1784,0.01,,Gt,estimated
+area_43,Oceania,oceania,1784,0.00,,Gt,estimated
+area_43,International transport,international_transport,1784,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1785,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1785,0.01,,Gt,estimated
+area_43,United States,united_states,1785,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1785,0.01,,Gt,estimated
+area_43,South America,south_america,1785,0.00,,Gt,estimated
+area_43,Africa,africa,1785,0.00,,Gt,estimated
+area_43,India,india,1785,0.01,,Gt,estimated
+area_43,China,china,1785,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1785,0.01,,Gt,estimated
+area_43,Oceania,oceania,1785,0.00,,Gt,estimated
+area_43,International transport,international_transport,1785,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1786,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1786,0.01,,Gt,estimated
+area_43,United States,united_states,1786,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1786,0.01,,Gt,estimated
+area_43,South America,south_america,1786,0.00,,Gt,estimated
+area_43,Africa,africa,1786,0.00,,Gt,estimated
+area_43,India,india,1786,0.01,,Gt,estimated
+area_43,China,china,1786,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1786,0.01,,Gt,estimated
+area_43,Oceania,oceania,1786,0.00,,Gt,estimated
+area_43,International transport,international_transport,1786,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1787,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1787,0.01,,Gt,estimated
+area_43,United States,united_states,1787,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1787,0.01,,Gt,estimated
+area_43,South America,south_america,1787,0.00,,Gt,estimated
+area_43,Africa,africa,1787,0.00,,Gt,estimated
+area_43,India,india,1787,0.01,,Gt,estimated
+area_43,China,china,1787,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1787,0.01,,Gt,estimated
+area_43,Oceania,oceania,1787,0.00,,Gt,estimated
+area_43,International transport,international_transport,1787,0.00,,Gt,estimated
+area_43,EU-28,eu-28,1788,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1788,0.01,,Gt,estimated
+area_43,United States,united_states,1788,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1788,0.01,,Gt,estimated
+area_43,South America,south_america,1788,0.00,,Gt,estimated
+area_43,Africa,africa,1788,0.00,,Gt,estimated
+area_43,India,india,1788,0.01,,Gt,estimated
+area_43,China,china,1788,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1788,0.01,,Gt,estimated
+area_43,Oceania,oceania,1788,0.00,,Gt,estimated
+area_43,International transport,international_transport,1788,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1789,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1789,0.01,,Gt,estimated
+area_43,United States,united_states,1789,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1789,0.01,,Gt,estimated
+area_43,South America,south_america,1789,0.00,,Gt,estimated
+area_43,Africa,africa,1789,0.00,,Gt,estimated
+area_43,India,india,1789,0.01,,Gt,estimated
+area_43,China,china,1789,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1789,0.01,,Gt,estimated
+area_43,Oceania,oceania,1789,0.00,,Gt,estimated
+area_43,International transport,international_transport,1789,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1790,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1790,0.01,,Gt,estimated
+area_43,United States,united_states,1790,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1790,0.01,,Gt,estimated
+area_43,South America,south_america,1790,0.00,,Gt,estimated
+area_43,Africa,africa,1790,0.00,,Gt,estimated
+area_43,India,india,1790,0.01,,Gt,estimated
+area_43,China,china,1790,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1790,0.01,,Gt,estimated
+area_43,Oceania,oceania,1790,0.00,,Gt,estimated
+area_43,International transport,international_transport,1790,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1791,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1791,0.01,,Gt,estimated
+area_43,United States,united_states,1791,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1791,0.01,,Gt,estimated
+area_43,South America,south_america,1791,0.00,,Gt,estimated
+area_43,Africa,africa,1791,0.00,,Gt,estimated
+area_43,India,india,1791,0.01,,Gt,estimated
+area_43,China,china,1791,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1791,0.01,,Gt,estimated
+area_43,Oceania,oceania,1791,0.00,,Gt,estimated
+area_43,International transport,international_transport,1791,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1792,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1792,0.01,,Gt,estimated
+area_43,United States,united_states,1792,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1792,0.01,,Gt,estimated
+area_43,South America,south_america,1792,0.00,,Gt,estimated
+area_43,Africa,africa,1792,0.00,,Gt,estimated
+area_43,India,india,1792,0.01,,Gt,estimated
+area_43,China,china,1792,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1792,0.01,,Gt,estimated
+area_43,Oceania,oceania,1792,0.00,,Gt,estimated
+area_43,International transport,international_transport,1792,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1793,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1793,0.01,,Gt,estimated
+area_43,United States,united_states,1793,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1793,0.01,,Gt,estimated
+area_43,South America,south_america,1793,0.00,,Gt,estimated
+area_43,Africa,africa,1793,0.00,,Gt,estimated
+area_43,India,india,1793,0.01,,Gt,estimated
+area_43,China,china,1793,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1793,0.01,,Gt,estimated
+area_43,Oceania,oceania,1793,0.00,,Gt,estimated
+area_43,International transport,international_transport,1793,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1794,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1794,0.01,,Gt,estimated
+area_43,United States,united_states,1794,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1794,0.01,,Gt,estimated
+area_43,South America,south_america,1794,0.00,,Gt,estimated
+area_43,Africa,africa,1794,0.00,,Gt,estimated
+area_43,India,india,1794,0.01,,Gt,estimated
+area_43,China,china,1794,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1794,0.01,,Gt,estimated
+area_43,Oceania,oceania,1794,0.00,,Gt,estimated
+area_43,International transport,international_transport,1794,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1795,0.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1795,0.01,,Gt,estimated
+area_43,United States,united_states,1795,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1795,0.01,,Gt,estimated
+area_43,South America,south_america,1795,0.00,,Gt,estimated
+area_43,Africa,africa,1795,0.00,,Gt,estimated
+area_43,India,india,1795,0.01,,Gt,estimated
+area_43,China,china,1795,0.01,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1795,0.01,,Gt,estimated
+area_43,Oceania,oceania,1795,0.00,,Gt,estimated
+area_43,International transport,international_transport,1795,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1796,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1796,0.01,,Gt,estimated
+area_43,United States,united_states,1796,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1796,0.02,,Gt,estimated
+area_43,South America,south_america,1796,0.00,,Gt,estimated
+area_43,Africa,africa,1796,0.00,,Gt,estimated
+area_43,India,india,1796,0.02,,Gt,estimated
+area_43,China,china,1796,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1796,0.02,,Gt,estimated
+area_43,Oceania,oceania,1796,0.00,,Gt,estimated
+area_43,International transport,international_transport,1796,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1797,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1797,0.01,,Gt,estimated
+area_43,United States,united_states,1797,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1797,0.02,,Gt,estimated
+area_43,South America,south_america,1797,0.00,,Gt,estimated
+area_43,Africa,africa,1797,0.00,,Gt,estimated
+area_43,India,india,1797,0.02,,Gt,estimated
+area_43,China,china,1797,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1797,0.02,,Gt,estimated
+area_43,Oceania,oceania,1797,0.00,,Gt,estimated
+area_43,International transport,international_transport,1797,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1798,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1798,0.01,,Gt,estimated
+area_43,United States,united_states,1798,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1798,0.02,,Gt,estimated
+area_43,South America,south_america,1798,0.00,,Gt,estimated
+area_43,Africa,africa,1798,0.00,,Gt,estimated
+area_43,India,india,1798,0.02,,Gt,estimated
+area_43,China,china,1798,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1798,0.02,,Gt,estimated
+area_43,Oceania,oceania,1798,0.00,,Gt,estimated
+area_43,International transport,international_transport,1798,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1799,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1799,0.01,,Gt,estimated
+area_43,United States,united_states,1799,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1799,0.02,,Gt,estimated
+area_43,South America,south_america,1799,0.00,,Gt,estimated
+area_43,Africa,africa,1799,0.00,,Gt,estimated
+area_43,India,india,1799,0.02,,Gt,estimated
+area_43,China,china,1799,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1799,0.02,,Gt,estimated
+area_43,Oceania,oceania,1799,0.00,,Gt,estimated
+area_43,International transport,international_transport,1799,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1800,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1800,0.01,,Gt,estimated
+area_43,United States,united_states,1800,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1800,0.02,,Gt,estimated
+area_43,South America,south_america,1800,0.00,,Gt,estimated
+area_43,Africa,africa,1800,0.00,,Gt,estimated
+area_43,India,india,1800,0.02,,Gt,estimated
+area_43,China,china,1800,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1800,0.02,,Gt,estimated
+area_43,Oceania,oceania,1800,0.00,,Gt,estimated
+area_43,International transport,international_transport,1800,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1801,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1801,0.01,,Gt,estimated
+area_43,United States,united_states,1801,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1801,0.02,,Gt,estimated
+area_43,South America,south_america,1801,0.00,,Gt,estimated
+area_43,Africa,africa,1801,0.00,,Gt,estimated
+area_43,India,india,1801,0.02,,Gt,estimated
+area_43,China,china,1801,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1801,0.02,,Gt,estimated
+area_43,Oceania,oceania,1801,0.00,,Gt,estimated
+area_43,International transport,international_transport,1801,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1802,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1802,0.01,,Gt,estimated
+area_43,United States,united_states,1802,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1802,0.02,,Gt,estimated
+area_43,South America,south_america,1802,0.00,,Gt,estimated
+area_43,Africa,africa,1802,0.00,,Gt,estimated
+area_43,India,india,1802,0.02,,Gt,estimated
+area_43,China,china,1802,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1802,0.02,,Gt,estimated
+area_43,Oceania,oceania,1802,0.00,,Gt,estimated
+area_43,International transport,international_transport,1802,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1803,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1803,0.01,,Gt,estimated
+area_43,United States,united_states,1803,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1803,0.02,,Gt,estimated
+area_43,South America,south_america,1803,0.00,,Gt,estimated
+area_43,Africa,africa,1803,0.00,,Gt,estimated
+area_43,India,india,1803,0.02,,Gt,estimated
+area_43,China,china,1803,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1803,0.02,,Gt,estimated
+area_43,Oceania,oceania,1803,0.00,,Gt,estimated
+area_43,International transport,international_transport,1803,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1804,0.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1804,0.01,,Gt,estimated
+area_43,United States,united_states,1804,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1804,0.02,,Gt,estimated
+area_43,South America,south_america,1804,0.00,,Gt,estimated
+area_43,Africa,africa,1804,0.00,,Gt,estimated
+area_43,India,india,1804,0.02,,Gt,estimated
+area_43,China,china,1804,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1804,0.02,,Gt,estimated
+area_43,Oceania,oceania,1804,0.00,,Gt,estimated
+area_43,International transport,international_transport,1804,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1805,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1805,0.01,,Gt,estimated
+area_43,United States,united_states,1805,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1805,0.02,,Gt,estimated
+area_43,South America,south_america,1805,0.00,,Gt,estimated
+area_43,Africa,africa,1805,0.00,,Gt,estimated
+area_43,India,india,1805,0.02,,Gt,estimated
+area_43,China,china,1805,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1805,0.02,,Gt,estimated
+area_43,Oceania,oceania,1805,0.00,,Gt,estimated
+area_43,International transport,international_transport,1805,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1806,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1806,0.01,,Gt,estimated
+area_43,United States,united_states,1806,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1806,0.02,,Gt,estimated
+area_43,South America,south_america,1806,0.00,,Gt,estimated
+area_43,Africa,africa,1806,0.00,,Gt,estimated
+area_43,India,india,1806,0.02,,Gt,estimated
+area_43,China,china,1806,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1806,0.02,,Gt,estimated
+area_43,Oceania,oceania,1806,0.00,,Gt,estimated
+area_43,International transport,international_transport,1806,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1807,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1807,0.01,,Gt,estimated
+area_43,United States,united_states,1807,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1807,0.02,,Gt,estimated
+area_43,South America,south_america,1807,0.00,,Gt,estimated
+area_43,Africa,africa,1807,0.00,,Gt,estimated
+area_43,India,india,1807,0.02,,Gt,estimated
+area_43,China,china,1807,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1807,0.02,,Gt,estimated
+area_43,Oceania,oceania,1807,0.00,,Gt,estimated
+area_43,International transport,international_transport,1807,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1808,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1808,0.01,,Gt,estimated
+area_43,United States,united_states,1808,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1808,0.02,,Gt,estimated
+area_43,South America,south_america,1808,0.00,,Gt,estimated
+area_43,Africa,africa,1808,0.00,,Gt,estimated
+area_43,India,india,1808,0.02,,Gt,estimated
+area_43,China,china,1808,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1808,0.02,,Gt,estimated
+area_43,Oceania,oceania,1808,0.00,,Gt,estimated
+area_43,International transport,international_transport,1808,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1809,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1809,0.01,,Gt,estimated
+area_43,United States,united_states,1809,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1809,0.02,,Gt,estimated
+area_43,South America,south_america,1809,0.00,,Gt,estimated
+area_43,Africa,africa,1809,0.00,,Gt,estimated
+area_43,India,india,1809,0.02,,Gt,estimated
+area_43,China,china,1809,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1809,0.02,,Gt,estimated
+area_43,Oceania,oceania,1809,0.00,,Gt,estimated
+area_43,International transport,international_transport,1809,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1810,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1810,0.01,,Gt,estimated
+area_43,United States,united_states,1810,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1810,0.02,,Gt,estimated
+area_43,South America,south_america,1810,0.00,,Gt,estimated
+area_43,Africa,africa,1810,0.00,,Gt,estimated
+area_43,India,india,1810,0.02,,Gt,estimated
+area_43,China,china,1810,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1810,0.02,,Gt,estimated
+area_43,Oceania,oceania,1810,0.00,,Gt,estimated
+area_43,International transport,international_transport,1810,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1811,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1811,0.01,,Gt,estimated
+area_43,United States,united_states,1811,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1811,0.02,,Gt,estimated
+area_43,South America,south_america,1811,0.00,,Gt,estimated
+area_43,Africa,africa,1811,0.00,,Gt,estimated
+area_43,India,india,1811,0.02,,Gt,estimated
+area_43,China,china,1811,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1811,0.02,,Gt,estimated
+area_43,Oceania,oceania,1811,0.00,,Gt,estimated
+area_43,International transport,international_transport,1811,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1812,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1812,0.01,,Gt,estimated
+area_43,United States,united_states,1812,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1812,0.02,,Gt,estimated
+area_43,South America,south_america,1812,0.00,,Gt,estimated
+area_43,Africa,africa,1812,0.00,,Gt,estimated
+area_43,India,india,1812,0.02,,Gt,estimated
+area_43,China,china,1812,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1812,0.02,,Gt,estimated
+area_43,Oceania,oceania,1812,0.00,,Gt,estimated
+area_43,International transport,international_transport,1812,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1813,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1813,0.01,,Gt,estimated
+area_43,United States,united_states,1813,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1813,0.02,,Gt,estimated
+area_43,South America,south_america,1813,0.00,,Gt,estimated
+area_43,Africa,africa,1813,0.00,,Gt,estimated
+area_43,India,india,1813,0.02,,Gt,estimated
+area_43,China,china,1813,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1813,0.02,,Gt,estimated
+area_43,Oceania,oceania,1813,0.00,,Gt,estimated
+area_43,International transport,international_transport,1813,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1814,0.06,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1814,0.01,,Gt,estimated
+area_43,United States,united_states,1814,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1814,0.02,,Gt,estimated
+area_43,South America,south_america,1814,0.00,,Gt,estimated
+area_43,Africa,africa,1814,0.00,,Gt,estimated
+area_43,India,india,1814,0.02,,Gt,estimated
+area_43,China,china,1814,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1814,0.02,,Gt,estimated
+area_43,Oceania,oceania,1814,0.00,,Gt,estimated
+area_43,International transport,international_transport,1814,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1815,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1815,0.01,,Gt,estimated
+area_43,United States,united_states,1815,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1815,0.02,,Gt,estimated
+area_43,South America,south_america,1815,0.00,,Gt,estimated
+area_43,Africa,africa,1815,0.00,,Gt,estimated
+area_43,India,india,1815,0.02,,Gt,estimated
+area_43,China,china,1815,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1815,0.02,,Gt,estimated
+area_43,Oceania,oceania,1815,0.00,,Gt,estimated
+area_43,International transport,international_transport,1815,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1816,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1816,0.01,,Gt,estimated
+area_43,United States,united_states,1816,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1816,0.02,,Gt,estimated
+area_43,South America,south_america,1816,0.00,,Gt,estimated
+area_43,Africa,africa,1816,0.00,,Gt,estimated
+area_43,India,india,1816,0.02,,Gt,estimated
+area_43,China,china,1816,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1816,0.02,,Gt,estimated
+area_43,Oceania,oceania,1816,0.00,,Gt,estimated
+area_43,International transport,international_transport,1816,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1817,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1817,0.01,,Gt,estimated
+area_43,United States,united_states,1817,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1817,0.02,,Gt,estimated
+area_43,South America,south_america,1817,0.00,,Gt,estimated
+area_43,Africa,africa,1817,0.00,,Gt,estimated
+area_43,India,india,1817,0.02,,Gt,estimated
+area_43,China,china,1817,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1817,0.02,,Gt,estimated
+area_43,Oceania,oceania,1817,0.00,,Gt,estimated
+area_43,International transport,international_transport,1817,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1818,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1818,0.01,,Gt,estimated
+area_43,United States,united_states,1818,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1818,0.02,,Gt,estimated
+area_43,South America,south_america,1818,0.00,,Gt,estimated
+area_43,Africa,africa,1818,0.00,,Gt,estimated
+area_43,India,india,1818,0.02,,Gt,estimated
+area_43,China,china,1818,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1818,0.02,,Gt,estimated
+area_43,Oceania,oceania,1818,0.00,,Gt,estimated
+area_43,International transport,international_transport,1818,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1819,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1819,0.01,,Gt,estimated
+area_43,United States,united_states,1819,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1819,0.02,,Gt,estimated
+area_43,South America,south_america,1819,0.00,,Gt,estimated
+area_43,Africa,africa,1819,0.00,,Gt,estimated
+area_43,India,india,1819,0.02,,Gt,estimated
+area_43,China,china,1819,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1819,0.02,,Gt,estimated
+area_43,Oceania,oceania,1819,0.00,,Gt,estimated
+area_43,International transport,international_transport,1819,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1820,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1820,0.01,,Gt,estimated
+area_43,United States,united_states,1820,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1820,0.02,,Gt,estimated
+area_43,South America,south_america,1820,0.00,,Gt,estimated
+area_43,Africa,africa,1820,0.00,,Gt,estimated
+area_43,India,india,1820,0.02,,Gt,estimated
+area_43,China,china,1820,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1820,0.02,,Gt,estimated
+area_43,Oceania,oceania,1820,0.00,,Gt,estimated
+area_43,International transport,international_transport,1820,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1821,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1821,0.01,,Gt,estimated
+area_43,United States,united_states,1821,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1821,0.02,,Gt,estimated
+area_43,South America,south_america,1821,0.00,,Gt,estimated
+area_43,Africa,africa,1821,0.00,,Gt,estimated
+area_43,India,india,1821,0.02,,Gt,estimated
+area_43,China,china,1821,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1821,0.02,,Gt,estimated
+area_43,Oceania,oceania,1821,0.00,,Gt,estimated
+area_43,International transport,international_transport,1821,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1822,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1822,0.01,,Gt,estimated
+area_43,United States,united_states,1822,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1822,0.02,,Gt,estimated
+area_43,South America,south_america,1822,0.00,,Gt,estimated
+area_43,Africa,africa,1822,0.00,,Gt,estimated
+area_43,India,india,1822,0.02,,Gt,estimated
+area_43,China,china,1822,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1822,0.02,,Gt,estimated
+area_43,Oceania,oceania,1822,0.00,,Gt,estimated
+area_43,International transport,international_transport,1822,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1823,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1823,0.01,,Gt,estimated
+area_43,United States,united_states,1823,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1823,0.02,,Gt,estimated
+area_43,South America,south_america,1823,0.00,,Gt,estimated
+area_43,Africa,africa,1823,0.00,,Gt,estimated
+area_43,India,india,1823,0.02,,Gt,estimated
+area_43,China,china,1823,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1823,0.02,,Gt,estimated
+area_43,Oceania,oceania,1823,0.00,,Gt,estimated
+area_43,International transport,international_transport,1823,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1824,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1824,0.01,,Gt,estimated
+area_43,United States,united_states,1824,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1824,0.02,,Gt,estimated
+area_43,South America,south_america,1824,0.00,,Gt,estimated
+area_43,Africa,africa,1824,0.00,,Gt,estimated
+area_43,India,india,1824,0.02,,Gt,estimated
+area_43,China,china,1824,0.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1824,0.02,,Gt,estimated
+area_43,Oceania,oceania,1824,0.00,,Gt,estimated
+area_43,International transport,international_transport,1824,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1825,0.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1825,0.01,,Gt,estimated
+area_43,United States,united_states,1825,0.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1825,0.03,,Gt,estimated
+area_43,South America,south_america,1825,0.01,,Gt,estimated
+area_43,Africa,africa,1825,0.01,,Gt,estimated
+area_43,India,india,1825,0.03,,Gt,estimated
+area_43,China,china,1825,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1825,0.03,,Gt,estimated
+area_43,Oceania,oceania,1825,0.01,,Gt,estimated
+area_43,International transport,international_transport,1825,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1826,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1826,0.02,,Gt,estimated
+area_43,United States,united_states,1826,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1826,0.03,,Gt,estimated
+area_43,South America,south_america,1826,0.01,,Gt,estimated
+area_43,Africa,africa,1826,0.01,,Gt,estimated
+area_43,India,india,1826,0.03,,Gt,estimated
+area_43,China,china,1826,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1826,0.03,,Gt,estimated
+area_43,Oceania,oceania,1826,0.01,,Gt,estimated
+area_43,International transport,international_transport,1826,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1827,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1827,0.02,,Gt,estimated
+area_43,United States,united_states,1827,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1827,0.03,,Gt,estimated
+area_43,South America,south_america,1827,0.01,,Gt,estimated
+area_43,Africa,africa,1827,0.01,,Gt,estimated
+area_43,India,india,1827,0.03,,Gt,estimated
+area_43,China,china,1827,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1827,0.03,,Gt,estimated
+area_43,Oceania,oceania,1827,0.01,,Gt,estimated
+area_43,International transport,international_transport,1827,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1828,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1828,0.02,,Gt,estimated
+area_43,United States,united_states,1828,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1828,0.03,,Gt,estimated
+area_43,South America,south_america,1828,0.01,,Gt,estimated
+area_43,Africa,africa,1828,0.01,,Gt,estimated
+area_43,India,india,1828,0.03,,Gt,estimated
+area_43,China,china,1828,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1828,0.03,,Gt,estimated
+area_43,Oceania,oceania,1828,0.01,,Gt,estimated
+area_43,International transport,international_transport,1828,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1829,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1829,0.02,,Gt,estimated
+area_43,United States,united_states,1829,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1829,0.03,,Gt,estimated
+area_43,South America,south_america,1829,0.01,,Gt,estimated
+area_43,Africa,africa,1829,0.01,,Gt,estimated
+area_43,India,india,1829,0.03,,Gt,estimated
+area_43,China,china,1829,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1829,0.03,,Gt,estimated
+area_43,Oceania,oceania,1829,0.01,,Gt,estimated
+area_43,International transport,international_transport,1829,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1830,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1830,0.02,,Gt,estimated
+area_43,United States,united_states,1830,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1830,0.03,,Gt,estimated
+area_43,South America,south_america,1830,0.01,,Gt,estimated
+area_43,Africa,africa,1830,0.01,,Gt,estimated
+area_43,India,india,1830,0.03,,Gt,estimated
+area_43,China,china,1830,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1830,0.03,,Gt,estimated
+area_43,Oceania,oceania,1830,0.01,,Gt,estimated
+area_43,International transport,international_transport,1830,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1831,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1831,0.02,,Gt,estimated
+area_43,United States,united_states,1831,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1831,0.03,,Gt,estimated
+area_43,South America,south_america,1831,0.01,,Gt,estimated
+area_43,Africa,africa,1831,0.01,,Gt,estimated
+area_43,India,india,1831,0.03,,Gt,estimated
+area_43,China,china,1831,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1831,0.03,,Gt,estimated
+area_43,Oceania,oceania,1831,0.01,,Gt,estimated
+area_43,International transport,international_transport,1831,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1832,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1832,0.02,,Gt,estimated
+area_43,United States,united_states,1832,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1832,0.03,,Gt,estimated
+area_43,South America,south_america,1832,0.01,,Gt,estimated
+area_43,Africa,africa,1832,0.01,,Gt,estimated
+area_43,India,india,1832,0.03,,Gt,estimated
+area_43,China,china,1832,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1832,0.03,,Gt,estimated
+area_43,Oceania,oceania,1832,0.01,,Gt,estimated
+area_43,International transport,international_transport,1832,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1833,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1833,0.02,,Gt,estimated
+area_43,United States,united_states,1833,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1833,0.03,,Gt,estimated
+area_43,South America,south_america,1833,0.01,,Gt,estimated
+area_43,Africa,africa,1833,0.01,,Gt,estimated
+area_43,India,india,1833,0.03,,Gt,estimated
+area_43,China,china,1833,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1833,0.03,,Gt,estimated
+area_43,Oceania,oceania,1833,0.01,,Gt,estimated
+area_43,International transport,international_transport,1833,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1834,0.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1834,0.02,,Gt,estimated
+area_43,United States,united_states,1834,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1834,0.03,,Gt,estimated
+area_43,South America,south_america,1834,0.01,,Gt,estimated
+area_43,Africa,africa,1834,0.01,,Gt,estimated
+area_43,India,india,1834,0.03,,Gt,estimated
+area_43,China,china,1834,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1834,0.03,,Gt,estimated
+area_43,Oceania,oceania,1834,0.01,,Gt,estimated
+area_43,International transport,international_transport,1834,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1835,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1835,0.02,,Gt,estimated
+area_43,United States,united_states,1835,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1835,0.03,,Gt,estimated
+area_43,South America,south_america,1835,0.01,,Gt,estimated
+area_43,Africa,africa,1835,0.01,,Gt,estimated
+area_43,India,india,1835,0.03,,Gt,estimated
+area_43,China,china,1835,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1835,0.03,,Gt,estimated
+area_43,Oceania,oceania,1835,0.01,,Gt,estimated
+area_43,International transport,international_transport,1835,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1836,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1836,0.02,,Gt,estimated
+area_43,United States,united_states,1836,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1836,0.03,,Gt,estimated
+area_43,South America,south_america,1836,0.01,,Gt,estimated
+area_43,Africa,africa,1836,0.01,,Gt,estimated
+area_43,India,india,1836,0.03,,Gt,estimated
+area_43,China,china,1836,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1836,0.03,,Gt,estimated
+area_43,Oceania,oceania,1836,0.01,,Gt,estimated
+area_43,International transport,international_transport,1836,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1837,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1837,0.02,,Gt,estimated
+area_43,United States,united_states,1837,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1837,0.03,,Gt,estimated
+area_43,South America,south_america,1837,0.01,,Gt,estimated
+area_43,Africa,africa,1837,0.01,,Gt,estimated
+area_43,India,india,1837,0.03,,Gt,estimated
+area_43,China,china,1837,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1837,0.03,,Gt,estimated
+area_43,Oceania,oceania,1837,0.01,,Gt,estimated
+area_43,International transport,international_transport,1837,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1838,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1838,0.02,,Gt,estimated
+area_43,United States,united_states,1838,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1838,0.03,,Gt,estimated
+area_43,South America,south_america,1838,0.01,,Gt,estimated
+area_43,Africa,africa,1838,0.01,,Gt,estimated
+area_43,India,india,1838,0.03,,Gt,estimated
+area_43,China,china,1838,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1838,0.03,,Gt,estimated
+area_43,Oceania,oceania,1838,0.01,,Gt,estimated
+area_43,International transport,international_transport,1838,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1839,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1839,0.02,,Gt,estimated
+area_43,United States,united_states,1839,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1839,0.03,,Gt,estimated
+area_43,South America,south_america,1839,0.01,,Gt,estimated
+area_43,Africa,africa,1839,0.01,,Gt,estimated
+area_43,India,india,1839,0.03,,Gt,estimated
+area_43,China,china,1839,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1839,0.03,,Gt,estimated
+area_43,Oceania,oceania,1839,0.01,,Gt,estimated
+area_43,International transport,international_transport,1839,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1840,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1840,0.02,,Gt,estimated
+area_43,United States,united_states,1840,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1840,0.03,,Gt,estimated
+area_43,South America,south_america,1840,0.01,,Gt,estimated
+area_43,Africa,africa,1840,0.01,,Gt,estimated
+area_43,India,india,1840,0.03,,Gt,estimated
+area_43,China,china,1840,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1840,0.03,,Gt,estimated
+area_43,Oceania,oceania,1840,0.01,,Gt,estimated
+area_43,International transport,international_transport,1840,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1841,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1841,0.02,,Gt,estimated
+area_43,United States,united_states,1841,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1841,0.03,,Gt,estimated
+area_43,South America,south_america,1841,0.01,,Gt,estimated
+area_43,Africa,africa,1841,0.01,,Gt,estimated
+area_43,India,india,1841,0.03,,Gt,estimated
+area_43,China,china,1841,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1841,0.03,,Gt,estimated
+area_43,Oceania,oceania,1841,0.01,,Gt,estimated
+area_43,International transport,international_transport,1841,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1842,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1842,0.02,,Gt,estimated
+area_43,United States,united_states,1842,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1842,0.03,,Gt,estimated
+area_43,South America,south_america,1842,0.01,,Gt,estimated
+area_43,Africa,africa,1842,0.01,,Gt,estimated
+area_43,India,india,1842,0.03,,Gt,estimated
+area_43,China,china,1842,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1842,0.03,,Gt,estimated
+area_43,Oceania,oceania,1842,0.01,,Gt,estimated
+area_43,International transport,international_transport,1842,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1843,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1843,0.02,,Gt,estimated
+area_43,United States,united_states,1843,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1843,0.03,,Gt,estimated
+area_43,South America,south_america,1843,0.01,,Gt,estimated
+area_43,Africa,africa,1843,0.01,,Gt,estimated
+area_43,India,india,1843,0.03,,Gt,estimated
+area_43,China,china,1843,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1843,0.03,,Gt,estimated
+area_43,Oceania,oceania,1843,0.01,,Gt,estimated
+area_43,International transport,international_transport,1843,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1844,0.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1844,0.02,,Gt,estimated
+area_43,United States,united_states,1844,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1844,0.03,,Gt,estimated
+area_43,South America,south_america,1844,0.01,,Gt,estimated
+area_43,Africa,africa,1844,0.01,,Gt,estimated
+area_43,India,india,1844,0.03,,Gt,estimated
+area_43,China,china,1844,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1844,0.03,,Gt,estimated
+area_43,Oceania,oceania,1844,0.01,,Gt,estimated
+area_43,International transport,international_transport,1844,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1845,0.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1845,0.02,,Gt,estimated
+area_43,United States,united_states,1845,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1845,0.03,,Gt,estimated
+area_43,South America,south_america,1845,0.01,,Gt,estimated
+area_43,Africa,africa,1845,0.01,,Gt,estimated
+area_43,India,india,1845,0.03,,Gt,estimated
+area_43,China,china,1845,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1845,0.03,,Gt,estimated
+area_43,Oceania,oceania,1845,0.01,,Gt,estimated
+area_43,International transport,international_transport,1845,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1846,0.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1846,0.02,,Gt,estimated
+area_43,United States,united_states,1846,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1846,0.03,,Gt,estimated
+area_43,South America,south_america,1846,0.01,,Gt,estimated
+area_43,Africa,africa,1846,0.01,,Gt,estimated
+area_43,India,india,1846,0.03,,Gt,estimated
+area_43,China,china,1846,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1846,0.03,,Gt,estimated
+area_43,Oceania,oceania,1846,0.01,,Gt,estimated
+area_43,International transport,international_transport,1846,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1847,0.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1847,0.02,,Gt,estimated
+area_43,United States,united_states,1847,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1847,0.03,,Gt,estimated
+area_43,South America,south_america,1847,0.01,,Gt,estimated
+area_43,Africa,africa,1847,0.01,,Gt,estimated
+area_43,India,india,1847,0.03,,Gt,estimated
+area_43,China,china,1847,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1847,0.03,,Gt,estimated
+area_43,Oceania,oceania,1847,0.01,,Gt,estimated
+area_43,International transport,international_transport,1847,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1848,0.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1848,0.02,,Gt,estimated
+area_43,United States,united_states,1848,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1848,0.03,,Gt,estimated
+area_43,South America,south_america,1848,0.01,,Gt,estimated
+area_43,Africa,africa,1848,0.01,,Gt,estimated
+area_43,India,india,1848,0.03,,Gt,estimated
+area_43,China,china,1848,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1848,0.03,,Gt,estimated
+area_43,Oceania,oceania,1848,0.01,,Gt,estimated
+area_43,International transport,international_transport,1848,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1849,0.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1849,0.02,,Gt,estimated
+area_43,United States,united_states,1849,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1849,0.03,,Gt,estimated
+area_43,South America,south_america,1849,0.01,,Gt,estimated
+area_43,Africa,africa,1849,0.01,,Gt,estimated
+area_43,India,india,1849,0.03,,Gt,estimated
+area_43,China,china,1849,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1849,0.03,,Gt,estimated
+area_43,Oceania,oceania,1849,0.01,,Gt,estimated
+area_43,International transport,international_transport,1849,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1850,0.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1850,0.02,,Gt,estimated
+area_43,United States,united_states,1850,0.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1850,0.03,,Gt,estimated
+area_43,South America,south_america,1850,0.01,,Gt,estimated
+area_43,Africa,africa,1850,0.01,,Gt,estimated
+area_43,India,india,1850,0.03,,Gt,estimated
+area_43,China,china,1850,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1850,0.03,,Gt,estimated
+area_43,Oceania,oceania,1850,0.01,,Gt,estimated
+area_43,International transport,international_transport,1850,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1851,0.11,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1851,0.02,,Gt,estimated
+area_43,United States,united_states,1851,0.03,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1851,0.03,,Gt,estimated
+area_43,South America,south_america,1851,0.01,,Gt,estimated
+area_43,Africa,africa,1851,0.01,,Gt,estimated
+area_43,India,india,1851,0.03,,Gt,estimated
+area_43,China,china,1851,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1851,0.03,,Gt,estimated
+area_43,Oceania,oceania,1851,0.01,,Gt,estimated
+area_43,International transport,international_transport,1851,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1852,0.12,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1852,0.02,,Gt,estimated
+area_43,United States,united_states,1852,0.04,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1852,0.03,,Gt,estimated
+area_43,South America,south_america,1852,0.01,,Gt,estimated
+area_43,Africa,africa,1852,0.01,,Gt,estimated
+area_43,India,india,1852,0.03,,Gt,estimated
+area_43,China,china,1852,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1852,0.03,,Gt,estimated
+area_43,Oceania,oceania,1852,0.01,,Gt,estimated
+area_43,International transport,international_transport,1852,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1853,0.13,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1853,0.02,,Gt,estimated
+area_43,United States,united_states,1853,0.04,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1853,0.03,,Gt,estimated
+area_43,South America,south_america,1853,0.01,,Gt,estimated
+area_43,Africa,africa,1853,0.01,,Gt,estimated
+area_43,India,india,1853,0.03,,Gt,estimated
+area_43,China,china,1853,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1853,0.03,,Gt,estimated
+area_43,Oceania,oceania,1853,0.01,,Gt,estimated
+area_43,International transport,international_transport,1853,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1854,0.14,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1854,0.03,,Gt,estimated
+area_43,United States,united_states,1854,0.05,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1854,0.03,,Gt,estimated
+area_43,South America,south_america,1854,0.01,,Gt,estimated
+area_43,Africa,africa,1854,0.01,,Gt,estimated
+area_43,India,india,1854,0.03,,Gt,estimated
+area_43,China,china,1854,0.03,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1854,0.03,,Gt,estimated
+area_43,Oceania,oceania,1854,0.01,,Gt,estimated
+area_43,International transport,international_transport,1854,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1855,0.15,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1855,0.03,,Gt,estimated
+area_43,United States,united_states,1855,0.06,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1855,0.04,,Gt,estimated
+area_43,South America,south_america,1855,0.01,,Gt,estimated
+area_43,Africa,africa,1855,0.01,,Gt,estimated
+area_43,India,india,1855,0.04,,Gt,estimated
+area_43,China,china,1855,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1855,0.04,,Gt,estimated
+area_43,Oceania,oceania,1855,0.01,,Gt,estimated
+area_43,International transport,international_transport,1855,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1856,0.16,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1856,0.03,,Gt,estimated
+area_43,United States,united_states,1856,0.07,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1856,0.04,,Gt,estimated
+area_43,South America,south_america,1856,0.01,,Gt,estimated
+area_43,Africa,africa,1856,0.01,,Gt,estimated
+area_43,India,india,1856,0.04,,Gt,estimated
+area_43,China,china,1856,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1856,0.04,,Gt,estimated
+area_43,Oceania,oceania,1856,0.01,,Gt,estimated
+area_43,International transport,international_transport,1856,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1857,0.17,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1857,0.03,,Gt,estimated
+area_43,United States,united_states,1857,0.07,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1857,0.04,,Gt,estimated
+area_43,South America,south_america,1857,0.01,,Gt,estimated
+area_43,Africa,africa,1857,0.01,,Gt,estimated
+area_43,India,india,1857,0.04,,Gt,estimated
+area_43,China,china,1857,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1857,0.04,,Gt,estimated
+area_43,Oceania,oceania,1857,0.01,,Gt,estimated
+area_43,International transport,international_transport,1857,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1858,0.18,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1858,0.03,,Gt,estimated
+area_43,United States,united_states,1858,0.08,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1858,0.04,,Gt,estimated
+area_43,South America,south_america,1858,0.01,,Gt,estimated
+area_43,Africa,africa,1858,0.01,,Gt,estimated
+area_43,India,india,1858,0.04,,Gt,estimated
+area_43,China,china,1858,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1858,0.04,,Gt,estimated
+area_43,Oceania,oceania,1858,0.01,,Gt,estimated
+area_43,International transport,international_transport,1858,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1859,0.19,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1859,0.03,,Gt,estimated
+area_43,United States,united_states,1859,0.09,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1859,0.04,,Gt,estimated
+area_43,South America,south_america,1859,0.01,,Gt,estimated
+area_43,Africa,africa,1859,0.01,,Gt,estimated
+area_43,India,india,1859,0.04,,Gt,estimated
+area_43,China,china,1859,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1859,0.04,,Gt,estimated
+area_43,Oceania,oceania,1859,0.01,,Gt,estimated
+area_43,International transport,international_transport,1859,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1860,0.20,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1860,0.04,,Gt,estimated
+area_43,United States,united_states,1860,0.10,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1860,0.04,,Gt,estimated
+area_43,South America,south_america,1860,0.01,,Gt,estimated
+area_43,Africa,africa,1860,0.01,,Gt,estimated
+area_43,India,india,1860,0.04,,Gt,estimated
+area_43,China,china,1860,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1860,0.04,,Gt,estimated
+area_43,Oceania,oceania,1860,0.01,,Gt,estimated
+area_43,International transport,international_transport,1860,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1861,0.21,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1861,0.04,,Gt,estimated
+area_43,United States,united_states,1861,0.10,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1861,0.04,,Gt,estimated
+area_43,South America,south_america,1861,0.01,,Gt,estimated
+area_43,Africa,africa,1861,0.01,,Gt,estimated
+area_43,India,india,1861,0.04,,Gt,estimated
+area_43,China,china,1861,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1861,0.04,,Gt,estimated
+area_43,Oceania,oceania,1861,0.01,,Gt,estimated
+area_43,International transport,international_transport,1861,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1862,0.22,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1862,0.04,,Gt,estimated
+area_43,United States,united_states,1862,0.11,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1862,0.04,,Gt,estimated
+area_43,South America,south_america,1862,0.01,,Gt,estimated
+area_43,Africa,africa,1862,0.01,,Gt,estimated
+area_43,India,india,1862,0.04,,Gt,estimated
+area_43,China,china,1862,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1862,0.04,,Gt,estimated
+area_43,Oceania,oceania,1862,0.01,,Gt,estimated
+area_43,International transport,international_transport,1862,0.01,,Gt,estimated
+area_43,EU-28,eu-28,1863,0.23,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1863,0.04,,Gt,estimated
+area_43,United States,united_states,1863,0.12,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1863,0.04,,Gt,estimated
+area_43,South America,south_america,1863,0.01,,Gt,estimated
+area_43,Africa,africa,1863,0.01,,Gt,estimated
+area_43,India,india,1863,0.04,,Gt,estimated
+area_43,China,china,1863,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1863,0.04,,Gt,estimated
+area_43,Oceania,oceania,1863,0.01,,Gt,estimated
+area_43,International transport,international_transport,1863,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1864,0.24,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1864,0.04,,Gt,estimated
+area_43,United States,united_states,1864,0.13,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1864,0.04,,Gt,estimated
+area_43,South America,south_america,1864,0.01,,Gt,estimated
+area_43,Africa,africa,1864,0.01,,Gt,estimated
+area_43,India,india,1864,0.04,,Gt,estimated
+area_43,China,china,1864,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1864,0.04,,Gt,estimated
+area_43,Oceania,oceania,1864,0.01,,Gt,estimated
+area_43,International transport,international_transport,1864,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1865,0.25,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1865,0.04,,Gt,estimated
+area_43,United States,united_states,1865,0.13,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1865,0.04,,Gt,estimated
+area_43,South America,south_america,1865,0.01,,Gt,estimated
+area_43,Africa,africa,1865,0.01,,Gt,estimated
+area_43,India,india,1865,0.04,,Gt,estimated
+area_43,China,china,1865,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1865,0.04,,Gt,estimated
+area_43,Oceania,oceania,1865,0.01,,Gt,estimated
+area_43,International transport,international_transport,1865,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1866,0.26,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1866,0.05,,Gt,estimated
+area_43,United States,united_states,1866,0.14,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1866,0.04,,Gt,estimated
+area_43,South America,south_america,1866,0.01,,Gt,estimated
+area_43,Africa,africa,1866,0.01,,Gt,estimated
+area_43,India,india,1866,0.04,,Gt,estimated
+area_43,China,china,1866,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1866,0.04,,Gt,estimated
+area_43,Oceania,oceania,1866,0.01,,Gt,estimated
+area_43,International transport,international_transport,1866,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1867,0.27,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1867,0.05,,Gt,estimated
+area_43,United States,united_states,1867,0.15,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1867,0.04,,Gt,estimated
+area_43,South America,south_america,1867,0.01,,Gt,estimated
+area_43,Africa,africa,1867,0.01,,Gt,estimated
+area_43,India,india,1867,0.04,,Gt,estimated
+area_43,China,china,1867,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1867,0.04,,Gt,estimated
+area_43,Oceania,oceania,1867,0.01,,Gt,estimated
+area_43,International transport,international_transport,1867,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1868,0.28,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1868,0.05,,Gt,estimated
+area_43,United States,united_states,1868,0.16,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1868,0.04,,Gt,estimated
+area_43,South America,south_america,1868,0.01,,Gt,estimated
+area_43,Africa,africa,1868,0.01,,Gt,estimated
+area_43,India,india,1868,0.04,,Gt,estimated
+area_43,China,china,1868,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1868,0.04,,Gt,estimated
+area_43,Oceania,oceania,1868,0.01,,Gt,estimated
+area_43,International transport,international_transport,1868,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1869,0.29,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1869,0.05,,Gt,estimated
+area_43,United States,united_states,1869,0.16,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1869,0.04,,Gt,estimated
+area_43,South America,south_america,1869,0.01,,Gt,estimated
+area_43,Africa,africa,1869,0.01,,Gt,estimated
+area_43,India,india,1869,0.04,,Gt,estimated
+area_43,China,china,1869,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1869,0.04,,Gt,estimated
+area_43,Oceania,oceania,1869,0.01,,Gt,estimated
+area_43,International transport,international_transport,1869,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1870,0.30,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1870,0.05,,Gt,estimated
+area_43,United States,united_states,1870,0.17,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1870,0.04,,Gt,estimated
+area_43,South America,south_america,1870,0.01,,Gt,estimated
+area_43,Africa,africa,1870,0.01,,Gt,estimated
+area_43,India,india,1870,0.04,,Gt,estimated
+area_43,China,china,1870,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1870,0.04,,Gt,estimated
+area_43,Oceania,oceania,1870,0.01,,Gt,estimated
+area_43,International transport,international_transport,1870,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1871,0.31,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1871,0.05,,Gt,estimated
+area_43,United States,united_states,1871,0.18,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1871,0.04,,Gt,estimated
+area_43,South America,south_america,1871,0.01,,Gt,estimated
+area_43,Africa,africa,1871,0.01,,Gt,estimated
+area_43,India,india,1871,0.04,,Gt,estimated
+area_43,China,china,1871,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1871,0.04,,Gt,estimated
+area_43,Oceania,oceania,1871,0.01,,Gt,estimated
+area_43,International transport,international_transport,1871,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1872,0.32,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1872,0.06,,Gt,estimated
+area_43,United States,united_states,1872,0.19,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1872,0.04,,Gt,estimated
+area_43,South America,south_america,1872,0.01,,Gt,estimated
+area_43,Africa,africa,1872,0.01,,Gt,estimated
+area_43,India,india,1872,0.04,,Gt,estimated
+area_43,China,china,1872,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1872,0.04,,Gt,estimated
+area_43,Oceania,oceania,1872,0.01,,Gt,estimated
+area_43,International transport,international_transport,1872,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1873,0.33,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1873,0.06,,Gt,estimated
+area_43,United States,united_states,1873,0.19,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1873,0.04,,Gt,estimated
+area_43,South America,south_america,1873,0.01,,Gt,estimated
+area_43,Africa,africa,1873,0.01,,Gt,estimated
+area_43,India,india,1873,0.04,,Gt,estimated
+area_43,China,china,1873,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1873,0.04,,Gt,estimated
+area_43,Oceania,oceania,1873,0.01,,Gt,estimated
+area_43,International transport,international_transport,1873,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1874,0.34,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1874,0.06,,Gt,estimated
+area_43,United States,united_states,1874,0.20,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1874,0.04,,Gt,estimated
+area_43,South America,south_america,1874,0.01,,Gt,estimated
+area_43,Africa,africa,1874,0.01,,Gt,estimated
+area_43,India,india,1874,0.04,,Gt,estimated
+area_43,China,china,1874,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1874,0.04,,Gt,estimated
+area_43,Oceania,oceania,1874,0.01,,Gt,estimated
+area_43,International transport,international_transport,1874,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1875,0.35,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1875,0.06,,Gt,estimated
+area_43,United States,united_states,1875,0.21,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1875,0.04,,Gt,estimated
+area_43,South America,south_america,1875,0.01,,Gt,estimated
+area_43,Africa,africa,1875,0.01,,Gt,estimated
+area_43,India,india,1875,0.04,,Gt,estimated
+area_43,China,china,1875,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1875,0.04,,Gt,estimated
+area_43,Oceania,oceania,1875,0.01,,Gt,estimated
+area_43,International transport,international_transport,1875,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1876,0.36,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1876,0.06,,Gt,estimated
+area_43,United States,united_states,1876,0.22,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1876,0.04,,Gt,estimated
+area_43,South America,south_america,1876,0.01,,Gt,estimated
+area_43,Africa,africa,1876,0.01,,Gt,estimated
+area_43,India,india,1876,0.04,,Gt,estimated
+area_43,China,china,1876,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1876,0.04,,Gt,estimated
+area_43,Oceania,oceania,1876,0.01,,Gt,estimated
+area_43,International transport,international_transport,1876,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1877,0.37,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1877,0.06,,Gt,estimated
+area_43,United States,united_states,1877,0.23,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1877,0.04,,Gt,estimated
+area_43,South America,south_america,1877,0.01,,Gt,estimated
+area_43,Africa,africa,1877,0.01,,Gt,estimated
+area_43,India,india,1877,0.04,,Gt,estimated
+area_43,China,china,1877,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1877,0.04,,Gt,estimated
+area_43,Oceania,oceania,1877,0.01,,Gt,estimated
+area_43,International transport,international_transport,1877,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1878,0.38,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1878,0.06,,Gt,estimated
+area_43,United States,united_states,1878,0.23,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1878,0.04,,Gt,estimated
+area_43,South America,south_america,1878,0.01,,Gt,estimated
+area_43,Africa,africa,1878,0.01,,Gt,estimated
+area_43,India,india,1878,0.04,,Gt,estimated
+area_43,China,china,1878,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1878,0.04,,Gt,estimated
+area_43,Oceania,oceania,1878,0.01,,Gt,estimated
+area_43,International transport,international_transport,1878,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1879,0.39,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1879,0.07,,Gt,estimated
+area_43,United States,united_states,1879,0.24,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1879,0.04,,Gt,estimated
+area_43,South America,south_america,1879,0.01,,Gt,estimated
+area_43,Africa,africa,1879,0.01,,Gt,estimated
+area_43,India,india,1879,0.04,,Gt,estimated
+area_43,China,china,1879,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1879,0.04,,Gt,estimated
+area_43,Oceania,oceania,1879,0.01,,Gt,estimated
+area_43,International transport,international_transport,1879,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1880,0.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1880,0.07,,Gt,estimated
+area_43,United States,united_states,1880,0.25,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1880,0.04,,Gt,estimated
+area_43,South America,south_america,1880,0.01,,Gt,estimated
+area_43,Africa,africa,1880,0.01,,Gt,estimated
+area_43,India,india,1880,0.04,,Gt,estimated
+area_43,China,china,1880,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1880,0.04,,Gt,estimated
+area_43,Oceania,oceania,1880,0.01,,Gt,estimated
+area_43,International transport,international_transport,1880,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1881,0.41,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1881,0.07,,Gt,estimated
+area_43,United States,united_states,1881,0.26,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1881,0.04,,Gt,estimated
+area_43,South America,south_america,1881,0.01,,Gt,estimated
+area_43,Africa,africa,1881,0.01,,Gt,estimated
+area_43,India,india,1881,0.04,,Gt,estimated
+area_43,China,china,1881,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1881,0.04,,Gt,estimated
+area_43,Oceania,oceania,1881,0.01,,Gt,estimated
+area_43,International transport,international_transport,1881,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1882,0.42,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1882,0.07,,Gt,estimated
+area_43,United States,united_states,1882,0.26,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1882,0.04,,Gt,estimated
+area_43,South America,south_america,1882,0.01,,Gt,estimated
+area_43,Africa,africa,1882,0.01,,Gt,estimated
+area_43,India,india,1882,0.04,,Gt,estimated
+area_43,China,china,1882,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1882,0.04,,Gt,estimated
+area_43,Oceania,oceania,1882,0.01,,Gt,estimated
+area_43,International transport,international_transport,1882,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1883,0.43,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1883,0.07,,Gt,estimated
+area_43,United States,united_states,1883,0.27,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1883,0.04,,Gt,estimated
+area_43,South America,south_america,1883,0.01,,Gt,estimated
+area_43,Africa,africa,1883,0.01,,Gt,estimated
+area_43,India,india,1883,0.04,,Gt,estimated
+area_43,China,china,1883,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1883,0.04,,Gt,estimated
+area_43,Oceania,oceania,1883,0.01,,Gt,estimated
+area_43,International transport,international_transport,1883,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1884,0.44,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1884,0.07,,Gt,estimated
+area_43,United States,united_states,1884,0.28,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1884,0.04,,Gt,estimated
+area_43,South America,south_america,1884,0.01,,Gt,estimated
+area_43,Africa,africa,1884,0.01,,Gt,estimated
+area_43,India,india,1884,0.04,,Gt,estimated
+area_43,China,china,1884,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1884,0.04,,Gt,estimated
+area_43,Oceania,oceania,1884,0.01,,Gt,estimated
+area_43,International transport,international_transport,1884,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1885,0.45,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1885,0.08,,Gt,estimated
+area_43,United States,united_states,1885,0.29,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1885,0.04,,Gt,estimated
+area_43,South America,south_america,1885,0.01,,Gt,estimated
+area_43,Africa,africa,1885,0.01,,Gt,estimated
+area_43,India,india,1885,0.04,,Gt,estimated
+area_43,China,china,1885,0.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1885,0.04,,Gt,estimated
+area_43,Oceania,oceania,1885,0.01,,Gt,estimated
+area_43,International transport,international_transport,1885,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1886,0.46,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1886,0.08,,Gt,estimated
+area_43,United States,united_states,1886,0.29,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1886,0.05,,Gt,estimated
+area_43,South America,south_america,1886,0.01,,Gt,estimated
+area_43,Africa,africa,1886,0.01,,Gt,estimated
+area_43,India,india,1886,0.05,,Gt,estimated
+area_43,China,china,1886,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1886,0.05,,Gt,estimated
+area_43,Oceania,oceania,1886,0.01,,Gt,estimated
+area_43,International transport,international_transport,1886,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1887,0.47,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1887,0.08,,Gt,estimated
+area_43,United States,united_states,1887,0.30,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1887,0.05,,Gt,estimated
+area_43,South America,south_america,1887,0.01,,Gt,estimated
+area_43,Africa,africa,1887,0.01,,Gt,estimated
+area_43,India,india,1887,0.05,,Gt,estimated
+area_43,China,china,1887,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1887,0.05,,Gt,estimated
+area_43,Oceania,oceania,1887,0.01,,Gt,estimated
+area_43,International transport,international_transport,1887,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1888,0.48,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1888,0.08,,Gt,estimated
+area_43,United States,united_states,1888,0.31,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1888,0.05,,Gt,estimated
+area_43,South America,south_america,1888,0.01,,Gt,estimated
+area_43,Africa,africa,1888,0.01,,Gt,estimated
+area_43,India,india,1888,0.05,,Gt,estimated
+area_43,China,china,1888,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1888,0.05,,Gt,estimated
+area_43,Oceania,oceania,1888,0.01,,Gt,estimated
+area_43,International transport,international_transport,1888,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1889,0.49,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1889,0.08,,Gt,estimated
+area_43,United States,united_states,1889,0.32,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1889,0.05,,Gt,estimated
+area_43,South America,south_america,1889,0.01,,Gt,estimated
+area_43,Africa,africa,1889,0.01,,Gt,estimated
+area_43,India,india,1889,0.05,,Gt,estimated
+area_43,China,china,1889,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1889,0.05,,Gt,estimated
+area_43,Oceania,oceania,1889,0.01,,Gt,estimated
+area_43,International transport,international_transport,1889,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1890,0.50,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1890,0.08,,Gt,estimated
+area_43,United States,united_states,1890,0.32,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1890,0.05,,Gt,estimated
+area_43,South America,south_america,1890,0.01,,Gt,estimated
+area_43,Africa,africa,1890,0.01,,Gt,estimated
+area_43,India,india,1890,0.05,,Gt,estimated
+area_43,China,china,1890,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1890,0.05,,Gt,estimated
+area_43,Oceania,oceania,1890,0.01,,Gt,estimated
+area_43,International transport,international_transport,1890,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1891,0.51,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1891,0.09,,Gt,estimated
+area_43,United States,united_states,1891,0.33,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1891,0.05,,Gt,estimated
+area_43,South America,south_america,1891,0.01,,Gt,estimated
+area_43,Africa,africa,1891,0.01,,Gt,estimated
+area_43,India,india,1891,0.05,,Gt,estimated
+area_43,China,china,1891,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1891,0.05,,Gt,estimated
+area_43,Oceania,oceania,1891,0.01,,Gt,estimated
+area_43,International transport,international_transport,1891,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1892,0.52,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1892,0.09,,Gt,estimated
+area_43,United States,united_states,1892,0.34,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1892,0.05,,Gt,estimated
+area_43,South America,south_america,1892,0.01,,Gt,estimated
+area_43,Africa,africa,1892,0.01,,Gt,estimated
+area_43,India,india,1892,0.05,,Gt,estimated
+area_43,China,china,1892,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1892,0.05,,Gt,estimated
+area_43,Oceania,oceania,1892,0.01,,Gt,estimated
+area_43,International transport,international_transport,1892,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1893,0.53,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1893,0.09,,Gt,estimated
+area_43,United States,united_states,1893,0.35,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1893,0.05,,Gt,estimated
+area_43,South America,south_america,1893,0.01,,Gt,estimated
+area_43,Africa,africa,1893,0.01,,Gt,estimated
+area_43,India,india,1893,0.05,,Gt,estimated
+area_43,China,china,1893,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1893,0.05,,Gt,estimated
+area_43,Oceania,oceania,1893,0.01,,Gt,estimated
+area_43,International transport,international_transport,1893,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1894,0.54,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1894,0.09,,Gt,estimated
+area_43,United States,united_states,1894,0.35,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1894,0.05,,Gt,estimated
+area_43,South America,south_america,1894,0.01,,Gt,estimated
+area_43,Africa,africa,1894,0.01,,Gt,estimated
+area_43,India,india,1894,0.05,,Gt,estimated
+area_43,China,china,1894,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1894,0.05,,Gt,estimated
+area_43,Oceania,oceania,1894,0.01,,Gt,estimated
+area_43,International transport,international_transport,1894,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1895,0.55,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1895,0.09,,Gt,estimated
+area_43,United States,united_states,1895,0.36,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1895,0.05,,Gt,estimated
+area_43,South America,south_america,1895,0.01,,Gt,estimated
+area_43,Africa,africa,1895,0.01,,Gt,estimated
+area_43,India,india,1895,0.05,,Gt,estimated
+area_43,China,china,1895,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1895,0.05,,Gt,estimated
+area_43,Oceania,oceania,1895,0.01,,Gt,estimated
+area_43,International transport,international_transport,1895,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1896,0.56,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1896,0.09,,Gt,estimated
+area_43,United States,united_states,1896,0.37,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1896,0.05,,Gt,estimated
+area_43,South America,south_america,1896,0.01,,Gt,estimated
+area_43,Africa,africa,1896,0.01,,Gt,estimated
+area_43,India,india,1896,0.05,,Gt,estimated
+area_43,China,china,1896,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1896,0.05,,Gt,estimated
+area_43,Oceania,oceania,1896,0.01,,Gt,estimated
+area_43,International transport,international_transport,1896,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1897,0.57,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1897,0.10,,Gt,estimated
+area_43,United States,united_states,1897,0.38,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1897,0.05,,Gt,estimated
+area_43,South America,south_america,1897,0.01,,Gt,estimated
+area_43,Africa,africa,1897,0.01,,Gt,estimated
+area_43,India,india,1897,0.05,,Gt,estimated
+area_43,China,china,1897,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1897,0.05,,Gt,estimated
+area_43,Oceania,oceania,1897,0.01,,Gt,estimated
+area_43,International transport,international_transport,1897,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1898,0.58,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1898,0.10,,Gt,estimated
+area_43,United States,united_states,1898,0.38,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1898,0.05,,Gt,estimated
+area_43,South America,south_america,1898,0.01,,Gt,estimated
+area_43,Africa,africa,1898,0.01,,Gt,estimated
+area_43,India,india,1898,0.05,,Gt,estimated
+area_43,China,china,1898,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1898,0.05,,Gt,estimated
+area_43,Oceania,oceania,1898,0.01,,Gt,estimated
+area_43,International transport,international_transport,1898,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1899,0.59,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1899,0.10,,Gt,estimated
+area_43,United States,united_states,1899,0.39,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1899,0.05,,Gt,estimated
+area_43,South America,south_america,1899,0.01,,Gt,estimated
+area_43,Africa,africa,1899,0.01,,Gt,estimated
+area_43,India,india,1899,0.05,,Gt,estimated
+area_43,China,china,1899,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1899,0.05,,Gt,estimated
+area_43,Oceania,oceania,1899,0.01,,Gt,estimated
+area_43,International transport,international_transport,1899,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1900,0.60,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1900,0.10,,Gt,estimated
+area_43,United States,united_states,1900,0.40,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1900,0.05,,Gt,estimated
+area_43,South America,south_america,1900,0.01,,Gt,estimated
+area_43,Africa,africa,1900,0.01,,Gt,estimated
+area_43,India,india,1900,0.05,,Gt,estimated
+area_43,China,china,1900,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1900,0.05,,Gt,estimated
+area_43,Oceania,oceania,1900,0.01,,Gt,estimated
+area_43,International transport,international_transport,1900,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1901,0.62,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1901,0.10,,Gt,estimated
+area_43,United States,united_states,1901,0.44,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1901,0.06,,Gt,estimated
+area_43,South America,south_america,1901,0.01,,Gt,estimated
+area_43,Africa,africa,1901,0.01,,Gt,estimated
+area_43,India,india,1901,0.05,,Gt,estimated
+area_43,China,china,1901,0.05,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1901,0.06,,Gt,estimated
+area_43,Oceania,oceania,1901,0.01,,Gt,estimated
+area_43,International transport,international_transport,1901,0.02,,Gt,estimated
+area_43,EU-28,eu-28,1902,0.64,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1902,0.11,,Gt,estimated
+area_43,United States,united_states,1902,0.47,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1902,0.06,,Gt,estimated
+area_43,South America,south_america,1902,0.01,,Gt,estimated
+area_43,Africa,africa,1902,0.01,,Gt,estimated
+area_43,India,india,1902,0.05,,Gt,estimated
+area_43,China,china,1902,0.06,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1902,0.06,,Gt,estimated
+area_43,Oceania,oceania,1902,0.01,,Gt,estimated
+area_43,International transport,international_transport,1902,0.03,,Gt,estimated
+area_43,EU-28,eu-28,1903,0.65,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1903,0.11,,Gt,estimated
+area_43,United States,united_states,1903,0.51,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1903,0.07,,Gt,estimated
+area_43,South America,south_america,1903,0.02,,Gt,estimated
+area_43,Africa,africa,1903,0.02,,Gt,estimated
+area_43,India,india,1903,0.06,,Gt,estimated
+area_43,China,china,1903,0.06,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1903,0.07,,Gt,estimated
+area_43,Oceania,oceania,1903,0.02,,Gt,estimated
+area_43,International transport,international_transport,1903,0.03,,Gt,estimated
+area_43,EU-28,eu-28,1904,0.67,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1904,0.12,,Gt,estimated
+area_43,United States,united_states,1904,0.54,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1904,0.07,,Gt,estimated
+area_43,South America,south_america,1904,0.02,,Gt,estimated
+area_43,Africa,africa,1904,0.02,,Gt,estimated
+area_43,India,india,1904,0.06,,Gt,estimated
+area_43,China,china,1904,0.06,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1904,0.08,,Gt,estimated
+area_43,Oceania,oceania,1904,0.02,,Gt,estimated
+area_43,International transport,international_transport,1904,0.03,,Gt,estimated
+area_43,EU-28,eu-28,1905,0.69,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1905,0.12,,Gt,estimated
+area_43,United States,united_states,1905,0.58,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1905,0.08,,Gt,estimated
+area_43,South America,south_america,1905,0.02,,Gt,estimated
+area_43,Africa,africa,1905,0.02,,Gt,estimated
+area_43,India,india,1905,0.06,,Gt,estimated
+area_43,China,china,1905,0.07,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1905,0.09,,Gt,estimated
+area_43,Oceania,oceania,1905,0.02,,Gt,estimated
+area_43,International transport,international_transport,1905,0.04,,Gt,estimated
+area_43,EU-28,eu-28,1906,0.71,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1906,0.12,,Gt,estimated
+area_43,United States,united_states,1906,0.62,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1906,0.08,,Gt,estimated
+area_43,South America,south_america,1906,0.02,,Gt,estimated
+area_43,Africa,africa,1906,0.02,,Gt,estimated
+area_43,India,india,1906,0.06,,Gt,estimated
+area_43,China,china,1906,0.07,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1906,0.09,,Gt,estimated
+area_43,Oceania,oceania,1906,0.02,,Gt,estimated
+area_43,International transport,international_transport,1906,0.04,,Gt,estimated
+area_43,EU-28,eu-28,1907,0.73,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1907,0.13,,Gt,estimated
+area_43,United States,united_states,1907,0.65,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1907,0.09,,Gt,estimated
+area_43,South America,south_america,1907,0.02,,Gt,estimated
+area_43,Africa,africa,1907,0.02,,Gt,estimated
+area_43,India,india,1907,0.06,,Gt,estimated
+area_43,China,china,1907,0.07,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1907,0.10,,Gt,estimated
+area_43,Oceania,oceania,1907,0.02,,Gt,estimated
+area_43,International transport,international_transport,1907,0.05,,Gt,estimated
+area_43,EU-28,eu-28,1908,0.74,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1908,0.13,,Gt,estimated
+area_43,United States,united_states,1908,0.69,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1908,0.09,,Gt,estimated
+area_43,South America,south_america,1908,0.02,,Gt,estimated
+area_43,Africa,africa,1908,0.02,,Gt,estimated
+area_43,India,india,1908,0.07,,Gt,estimated
+area_43,China,china,1908,0.07,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1908,0.11,,Gt,estimated
+area_43,Oceania,oceania,1908,0.02,,Gt,estimated
+area_43,International transport,international_transport,1908,0.05,,Gt,estimated
+area_43,EU-28,eu-28,1909,0.76,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1909,0.14,,Gt,estimated
+area_43,United States,united_states,1909,0.72,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1909,0.10,,Gt,estimated
+area_43,South America,south_america,1909,0.03,,Gt,estimated
+area_43,Africa,africa,1909,0.03,,Gt,estimated
+area_43,India,india,1909,0.07,,Gt,estimated
+area_43,China,china,1909,0.08,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1909,0.11,,Gt,estimated
+area_43,Oceania,oceania,1909,0.03,,Gt,estimated
+area_43,International transport,international_transport,1909,0.05,,Gt,estimated
+area_43,EU-28,eu-28,1910,0.78,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1910,0.14,,Gt,estimated
+area_43,United States,united_states,1910,0.76,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1910,0.10,,Gt,estimated
+area_43,South America,south_america,1910,0.03,,Gt,estimated
+area_43,Africa,africa,1910,0.03,,Gt,estimated
+area_43,India,india,1910,0.07,,Gt,estimated
+area_43,China,china,1910,0.08,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1910,0.12,,Gt,estimated
+area_43,Oceania,oceania,1910,0.03,,Gt,estimated
+area_43,International transport,international_transport,1910,0.06,,Gt,estimated
+area_43,EU-28,eu-28,1911,0.80,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1911,0.14,,Gt,estimated
+area_43,United States,united_states,1911,0.80,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1911,0.11,,Gt,estimated
+area_43,South America,south_america,1911,0.03,,Gt,estimated
+area_43,Africa,africa,1911,0.03,,Gt,estimated
+area_43,India,india,1911,0.07,,Gt,estimated
+area_43,China,china,1911,0.08,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1911,0.13,,Gt,estimated
+area_43,Oceania,oceania,1911,0.03,,Gt,estimated
+area_43,International transport,international_transport,1911,0.06,,Gt,estimated
+area_43,EU-28,eu-28,1912,0.82,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1912,0.15,,Gt,estimated
+area_43,United States,united_states,1912,0.83,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1912,0.11,,Gt,estimated
+area_43,South America,south_america,1912,0.03,,Gt,estimated
+area_43,Africa,africa,1912,0.03,,Gt,estimated
+area_43,India,india,1912,0.07,,Gt,estimated
+area_43,China,china,1912,0.09,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1912,0.13,,Gt,estimated
+area_43,Oceania,oceania,1912,0.03,,Gt,estimated
+area_43,International transport,international_transport,1912,0.06,,Gt,estimated
+area_43,EU-28,eu-28,1913,0.83,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1913,0.15,,Gt,estimated
+area_43,United States,united_states,1913,0.87,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1913,0.12,,Gt,estimated
+area_43,South America,south_america,1913,0.03,,Gt,estimated
+area_43,Africa,africa,1913,0.03,,Gt,estimated
+area_43,India,india,1913,0.08,,Gt,estimated
+area_43,China,china,1913,0.09,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1913,0.14,,Gt,estimated
+area_43,Oceania,oceania,1913,0.03,,Gt,estimated
+area_43,International transport,international_transport,1913,0.07,,Gt,estimated
+area_43,EU-28,eu-28,1914,0.85,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1914,0.16,,Gt,estimated
+area_43,United States,united_states,1914,0.90,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1914,0.12,,Gt,estimated
+area_43,South America,south_america,1914,0.04,,Gt,estimated
+area_43,Africa,africa,1914,0.04,,Gt,estimated
+area_43,India,india,1914,0.08,,Gt,estimated
+area_43,China,china,1914,0.09,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1914,0.15,,Gt,estimated
+area_43,Oceania,oceania,1914,0.04,,Gt,estimated
+area_43,International transport,international_transport,1914,0.07,,Gt,estimated
+area_43,EU-28,eu-28,1915,0.87,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1915,0.16,,Gt,estimated
+area_43,United States,united_states,1915,0.94,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1915,0.12,,Gt,estimated
+area_43,South America,south_america,1915,0.04,,Gt,estimated
+area_43,Africa,africa,1915,0.04,,Gt,estimated
+area_43,India,india,1915,0.08,,Gt,estimated
+area_43,China,china,1915,0.10,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1915,0.16,,Gt,estimated
+area_43,Oceania,oceania,1915,0.04,,Gt,estimated
+area_43,International transport,international_transport,1915,0.07,,Gt,estimated
+area_43,EU-28,eu-28,1916,0.89,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1916,0.16,,Gt,estimated
+area_43,United States,united_states,1916,0.98,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1916,0.13,,Gt,estimated
+area_43,South America,south_america,1916,0.04,,Gt,estimated
+area_43,Africa,africa,1916,0.04,,Gt,estimated
+area_43,India,india,1916,0.08,,Gt,estimated
+area_43,China,china,1916,0.10,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1916,0.16,,Gt,estimated
+area_43,Oceania,oceania,1916,0.04,,Gt,estimated
+area_43,International transport,international_transport,1916,0.08,,Gt,estimated
+area_43,EU-28,eu-28,1917,0.91,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1917,0.17,,Gt,estimated
+area_43,United States,united_states,1917,1.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1917,0.14,,Gt,estimated
+area_43,South America,south_america,1917,0.04,,Gt,estimated
+area_43,Africa,africa,1917,0.04,,Gt,estimated
+area_43,India,india,1917,0.08,,Gt,estimated
+area_43,China,china,1917,0.10,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1917,0.17,,Gt,estimated
+area_43,Oceania,oceania,1917,0.04,,Gt,estimated
+area_43,International transport,international_transport,1917,0.08,,Gt,estimated
+area_43,EU-28,eu-28,1918,0.92,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1918,0.17,,Gt,estimated
+area_43,United States,united_states,1918,1.05,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1918,0.14,,Gt,estimated
+area_43,South America,south_america,1918,0.04,,Gt,estimated
+area_43,Africa,africa,1918,0.04,,Gt,estimated
+area_43,India,india,1918,0.09,,Gt,estimated
+area_43,China,china,1918,0.10,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1918,0.18,,Gt,estimated
+area_43,Oceania,oceania,1918,0.04,,Gt,estimated
+area_43,International transport,international_transport,1918,0.08,,Gt,estimated
+area_43,EU-28,eu-28,1919,0.94,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1919,0.18,,Gt,estimated
+area_43,United States,united_states,1919,1.08,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1919,0.15,,Gt,estimated
+area_43,South America,south_america,1919,0.04,,Gt,estimated
+area_43,Africa,africa,1919,0.04,,Gt,estimated
+area_43,India,india,1919,0.09,,Gt,estimated
+area_43,China,china,1919,0.11,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1919,0.18,,Gt,estimated
+area_43,Oceania,oceania,1919,0.04,,Gt,estimated
+area_43,International transport,international_transport,1919,0.09,,Gt,estimated
+area_43,EU-28,eu-28,1920,0.96,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1920,0.18,,Gt,estimated
+area_43,United States,united_states,1920,1.12,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1920,0.15,,Gt,estimated
+area_43,South America,south_america,1920,0.05,,Gt,estimated
+area_43,Africa,africa,1920,0.05,,Gt,estimated
+area_43,India,india,1920,0.09,,Gt,estimated
+area_43,China,china,1920,0.11,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1920,0.19,,Gt,estimated
+area_43,Oceania,oceania,1920,0.05,,Gt,estimated
+area_43,International transport,international_transport,1920,0.09,,Gt,estimated
+area_43,EU-28,eu-28,1921,0.98,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1921,0.18,,Gt,estimated
+area_43,United States,united_states,1921,1.16,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1921,0.15,,Gt,estimated
+area_43,South America,south_america,1921,0.05,,Gt,estimated
+area_43,Africa,africa,1921,0.05,,Gt,estimated
+area_43,India,india,1921,0.09,,Gt,estimated
+area_43,China,china,1921,0.11,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1921,0.20,,Gt,estimated
+area_43,Oceania,oceania,1921,0.05,,Gt,estimated
+area_43,International transport,international_transport,1921,0.10,,Gt,estimated
+area_43,EU-28,eu-28,1922,1.00,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1922,0.19,,Gt,estimated
+area_43,United States,united_states,1922,1.19,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1922,0.16,,Gt,estimated
+area_43,South America,south_america,1922,0.05,,Gt,estimated
+area_43,Africa,africa,1922,0.05,,Gt,estimated
+area_43,India,india,1922,0.09,,Gt,estimated
+area_43,China,china,1922,0.12,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1922,0.20,,Gt,estimated
+area_43,Oceania,oceania,1922,0.05,,Gt,estimated
+area_43,International transport,international_transport,1922,0.10,,Gt,estimated
+area_43,EU-28,eu-28,1923,1.01,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1923,0.19,,Gt,estimated
+area_43,United States,united_states,1923,1.23,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1923,0.17,,Gt,estimated
+area_43,South America,south_america,1923,0.05,,Gt,estimated
+area_43,Africa,africa,1923,0.05,,Gt,estimated
+area_43,India,india,1923,0.10,,Gt,estimated
+area_43,China,china,1923,0.12,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1923,0.21,,Gt,estimated
+area_43,Oceania,oceania,1923,0.05,,Gt,estimated
+area_43,International transport,international_transport,1923,0.10,,Gt,estimated
+area_43,EU-28,eu-28,1924,1.03,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1924,0.20,,Gt,estimated
+area_43,United States,united_states,1924,1.26,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1924,0.17,,Gt,estimated
+area_43,South America,south_america,1924,0.05,,Gt,estimated
+area_43,Africa,africa,1924,0.05,,Gt,estimated
+area_43,India,india,1924,0.10,,Gt,estimated
+area_43,China,china,1924,0.12,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1924,0.22,,Gt,estimated
+area_43,Oceania,oceania,1924,0.05,,Gt,estimated
+area_43,International transport,international_transport,1924,0.11,,Gt,estimated
+area_43,EU-28,eu-28,1925,1.05,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1925,0.20,,Gt,estimated
+area_43,United States,united_states,1925,1.30,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1925,0.17,,Gt,estimated
+area_43,South America,south_america,1925,0.06,,Gt,estimated
+area_43,Africa,africa,1925,0.06,,Gt,estimated
+area_43,India,india,1925,0.10,,Gt,estimated
+area_43,China,china,1925,0.12,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1925,0.22,,Gt,estimated
+area_43,Oceania,oceania,1925,0.06,,Gt,estimated
+area_43,International transport,international_transport,1925,0.11,,Gt,estimated
+area_43,EU-28,eu-28,1926,1.07,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1926,0.20,,Gt,estimated
+area_43,United States,united_states,1926,1.34,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1926,0.18,,Gt,estimated
+area_43,South America,south_america,1926,0.06,,Gt,estimated
+area_43,Africa,africa,1926,0.06,,Gt,estimated
+area_43,India,india,1926,0.10,,Gt,estimated
+area_43,China,china,1926,0.13,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1926,0.23,,Gt,estimated
+area_43,Oceania,oceania,1926,0.06,,Gt,estimated
+area_43,International transport,international_transport,1926,0.11,,Gt,estimated
+area_43,EU-28,eu-28,1927,1.09,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1927,0.21,,Gt,estimated
+area_43,United States,united_states,1927,1.37,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1927,0.18,,Gt,estimated
+area_43,South America,south_america,1927,0.06,,Gt,estimated
+area_43,Africa,africa,1927,0.06,,Gt,estimated
+area_43,India,india,1927,0.10,,Gt,estimated
+area_43,China,china,1927,0.13,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1927,0.24,,Gt,estimated
+area_43,Oceania,oceania,1927,0.06,,Gt,estimated
+area_43,International transport,international_transport,1927,0.12,,Gt,estimated
+area_43,EU-28,eu-28,1928,1.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1928,0.21,,Gt,estimated
+area_43,United States,united_states,1928,1.41,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1928,0.19,,Gt,estimated
+area_43,South America,south_america,1928,0.06,,Gt,estimated
+area_43,Africa,africa,1928,0.06,,Gt,estimated
+area_43,India,india,1928,0.11,,Gt,estimated
+area_43,China,china,1928,0.13,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1928,0.25,,Gt,estimated
+area_43,Oceania,oceania,1928,0.06,,Gt,estimated
+area_43,International transport,international_transport,1928,0.12,,Gt,estimated
+area_43,EU-28,eu-28,1929,1.12,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1929,0.22,,Gt,estimated
+area_43,United States,united_states,1929,1.44,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1929,0.20,,Gt,estimated
+area_43,South America,south_america,1929,0.06,,Gt,estimated
+area_43,Africa,africa,1929,0.06,,Gt,estimated
+area_43,India,india,1929,0.11,,Gt,estimated
+area_43,China,china,1929,0.14,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1929,0.25,,Gt,estimated
+area_43,Oceania,oceania,1929,0.06,,Gt,estimated
+area_43,International transport,international_transport,1929,0.12,,Gt,estimated
+area_43,EU-28,eu-28,1930,1.14,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1930,0.22,,Gt,estimated
+area_43,United States,united_states,1930,1.48,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1930,0.20,,Gt,estimated
+area_43,South America,south_america,1930,0.06,,Gt,estimated
+area_43,Africa,africa,1930,0.06,,Gt,estimated
+area_43,India,india,1930,0.11,,Gt,estimated
+area_43,China,china,1930,0.14,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1930,0.26,,Gt,estimated
+area_43,Oceania,oceania,1930,0.06,,Gt,estimated
+area_43,International transport,international_transport,1930,0.13,,Gt,estimated
+area_43,EU-28,eu-28,1931,1.16,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1931,0.22,,Gt,estimated
+area_43,United States,united_states,1931,1.52,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1931,0.21,,Gt,estimated
+area_43,South America,south_america,1931,0.07,,Gt,estimated
+area_43,Africa,africa,1931,0.07,,Gt,estimated
+area_43,India,india,1931,0.11,,Gt,estimated
+area_43,China,china,1931,0.14,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1931,0.27,,Gt,estimated
+area_43,Oceania,oceania,1931,0.07,,Gt,estimated
+area_43,International transport,international_transport,1931,0.13,,Gt,estimated
+area_43,EU-28,eu-28,1932,1.18,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1932,0.23,,Gt,estimated
+area_43,United States,united_states,1932,1.55,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1932,0.21,,Gt,estimated
+area_43,South America,south_america,1932,0.07,,Gt,estimated
+area_43,Africa,africa,1932,0.07,,Gt,estimated
+area_43,India,india,1932,0.11,,Gt,estimated
+area_43,China,china,1932,0.15,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1932,0.27,,Gt,estimated
+area_43,Oceania,oceania,1932,0.07,,Gt,estimated
+area_43,International transport,international_transport,1932,0.14,,Gt,estimated
+area_43,EU-28,eu-28,1933,1.19,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1933,0.23,,Gt,estimated
+area_43,United States,united_states,1933,1.59,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1933,0.22,,Gt,estimated
+area_43,South America,south_america,1933,0.07,,Gt,estimated
+area_43,Africa,africa,1933,0.07,,Gt,estimated
+area_43,India,india,1933,0.12,,Gt,estimated
+area_43,China,china,1933,0.15,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1933,0.28,,Gt,estimated
+area_43,Oceania,oceania,1933,0.07,,Gt,estimated
+area_43,International transport,international_transport,1933,0.14,,Gt,estimated
+area_43,EU-28,eu-28,1934,1.21,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1934,0.24,,Gt,estimated
+area_43,United States,united_states,1934,1.62,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1934,0.22,,Gt,estimated
+area_43,South America,south_america,1934,0.07,,Gt,estimated
+area_43,Africa,africa,1934,0.07,,Gt,estimated
+area_43,India,india,1934,0.12,,Gt,estimated
+area_43,China,china,1934,0.15,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1934,0.29,,Gt,estimated
+area_43,Oceania,oceania,1934,0.07,,Gt,estimated
+area_43,International transport,international_transport,1934,0.14,,Gt,estimated
+area_43,EU-28,eu-28,1935,1.23,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1935,0.24,,Gt,estimated
+area_43,United States,united_states,1935,1.66,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1935,0.22,,Gt,estimated
+area_43,South America,south_america,1935,0.07,,Gt,estimated
+area_43,Africa,africa,1935,0.07,,Gt,estimated
+area_43,India,india,1935,0.12,,Gt,estimated
+area_43,China,china,1935,0.16,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1935,0.30,,Gt,estimated
+area_43,Oceania,oceania,1935,0.07,,Gt,estimated
+area_43,International transport,international_transport,1935,0.15,,Gt,estimated
+area_43,EU-28,eu-28,1936,1.25,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1936,0.24,,Gt,estimated
+area_43,United States,united_states,1936,1.70,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1936,0.23,,Gt,estimated
+area_43,South America,south_america,1936,0.07,,Gt,estimated
+area_43,Africa,africa,1936,0.07,,Gt,estimated
+area_43,India,india,1936,0.12,,Gt,estimated
+area_43,China,china,1936,0.16,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1936,0.30,,Gt,estimated
+area_43,Oceania,oceania,1936,0.07,,Gt,estimated
+area_43,International transport,international_transport,1936,0.15,,Gt,estimated
+area_43,EU-28,eu-28,1937,1.27,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1937,0.25,,Gt,estimated
+area_43,United States,united_states,1937,1.73,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1937,0.23,,Gt,estimated
+area_43,South America,south_america,1937,0.08,,Gt,estimated
+area_43,Africa,africa,1937,0.08,,Gt,estimated
+area_43,India,india,1937,0.12,,Gt,estimated
+area_43,China,china,1937,0.16,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1937,0.31,,Gt,estimated
+area_43,Oceania,oceania,1937,0.08,,Gt,estimated
+area_43,International transport,international_transport,1937,0.15,,Gt,estimated
+area_43,EU-28,eu-28,1938,1.28,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1938,0.25,,Gt,estimated
+area_43,United States,united_states,1938,1.77,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1938,0.24,,Gt,estimated
+area_43,South America,south_america,1938,0.08,,Gt,estimated
+area_43,Africa,africa,1938,0.08,,Gt,estimated
+area_43,India,india,1938,0.13,,Gt,estimated
+area_43,China,china,1938,0.16,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1938,0.32,,Gt,estimated
+area_43,Oceania,oceania,1938,0.08,,Gt,estimated
+area_43,International transport,international_transport,1938,0.16,,Gt,estimated
+area_43,EU-28,eu-28,1939,1.30,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1939,0.26,,Gt,estimated
+area_43,United States,united_states,1939,1.80,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1939,0.24,,Gt,estimated
+area_43,South America,south_america,1939,0.08,,Gt,estimated
+area_43,Africa,africa,1939,0.08,,Gt,estimated
+area_43,India,india,1939,0.13,,Gt,estimated
+area_43,China,china,1939,0.17,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1939,0.32,,Gt,estimated
+area_43,Oceania,oceania,1939,0.08,,Gt,estimated
+area_43,International transport,international_transport,1939,0.16,,Gt,estimated
+area_43,EU-28,eu-28,1940,1.32,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1940,0.26,,Gt,estimated
+area_43,United States,united_states,1940,1.84,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1940,0.25,,Gt,estimated
+area_43,South America,south_america,1940,0.08,,Gt,estimated
+area_43,Africa,africa,1940,0.08,,Gt,estimated
+area_43,India,india,1940,0.13,,Gt,estimated
+area_43,China,china,1940,0.17,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1940,0.33,,Gt,estimated
+area_43,Oceania,oceania,1940,0.08,,Gt,estimated
+area_43,International transport,international_transport,1940,0.16,,Gt,estimated
+area_43,EU-28,eu-28,1941,1.34,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1941,0.26,,Gt,estimated
+area_43,United States,united_states,1941,1.88,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1941,0.26,,Gt,estimated
+area_43,South America,south_america,1941,0.08,,Gt,estimated
+area_43,Africa,africa,1941,0.08,,Gt,estimated
+area_43,India,india,1941,0.13,,Gt,estimated
+area_43,China,china,1941,0.17,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1941,0.34,,Gt,estimated
+area_43,Oceania,oceania,1941,0.08,,Gt,estimated
+area_43,International transport,international_transport,1941,0.17,,Gt,estimated
+area_43,EU-28,eu-28,1942,1.36,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1942,0.27,,Gt,estimated
+area_43,United States,united_states,1942,1.91,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1942,0.26,,Gt,estimated
+area_43,South America,south_america,1942,0.09,,Gt,estimated
+area_43,Africa,africa,1942,0.09,,Gt,estimated
+area_43,India,india,1942,0.13,,Gt,estimated
+area_43,China,china,1942,0.18,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1942,0.34,,Gt,estimated
+area_43,Oceania,oceania,1942,0.09,,Gt,estimated
+area_43,International transport,international_transport,1942,0.17,,Gt,estimated
+area_43,EU-28,eu-28,1943,1.37,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1943,0.27,,Gt,estimated
+area_43,United States,united_states,1943,1.95,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1943,0.27,,Gt,estimated
+area_43,South America,south_america,1943,0.09,,Gt,estimated
+area_43,Africa,africa,1943,0.09,,Gt,estimated
+area_43,India,india,1943,0.14,,Gt,estimated
+area_43,China,china,1943,0.18,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1943,0.35,,Gt,estimated
+area_43,Oceania,oceania,1943,0.09,,Gt,estimated
+area_43,International transport,international_transport,1943,0.17,,Gt,estimated
+area_43,EU-28,eu-28,1944,1.39,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1944,0.28,,Gt,estimated
+area_43,United States,united_states,1944,1.98,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1944,0.27,,Gt,estimated
+area_43,South America,south_america,1944,0.09,,Gt,estimated
+area_43,Africa,africa,1944,0.09,,Gt,estimated
+area_43,India,india,1944,0.14,,Gt,estimated
+area_43,China,china,1944,0.18,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1944,0.36,,Gt,estimated
+area_43,Oceania,oceania,1944,0.09,,Gt,estimated
+area_43,International transport,international_transport,1944,0.18,,Gt,estimated
+area_43,EU-28,eu-28,1945,1.41,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1945,0.28,,Gt,estimated
+area_43,United States,united_states,1945,2.02,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1945,0.28,,Gt,estimated
+area_43,South America,south_america,1945,0.09,,Gt,estimated
+area_43,Africa,africa,1945,0.09,,Gt,estimated
+area_43,India,india,1945,0.14,,Gt,estimated
+area_43,China,china,1945,0.18,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1945,0.37,,Gt,estimated
+area_43,Oceania,oceania,1945,0.09,,Gt,estimated
+area_43,International transport,international_transport,1945,0.18,,Gt,estimated
+area_43,EU-28,eu-28,1946,1.43,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1946,0.28,,Gt,estimated
+area_43,United States,united_states,1946,2.06,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1946,0.28,,Gt,estimated
+area_43,South America,south_america,1946,0.09,,Gt,estimated
+area_43,Africa,africa,1946,0.09,,Gt,estimated
+area_43,India,india,1946,0.14,,Gt,estimated
+area_43,China,china,1946,0.19,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1946,0.37,,Gt,estimated
+area_43,Oceania,oceania,1946,0.09,,Gt,estimated
+area_43,International transport,international_transport,1946,0.19,,Gt,estimated
+area_43,EU-28,eu-28,1947,1.45,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1947,0.29,,Gt,estimated
+area_43,United States,united_states,1947,2.09,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1947,0.28,,Gt,estimated
+area_43,South America,south_america,1947,0.09,,Gt,estimated
+area_43,Africa,africa,1947,0.09,,Gt,estimated
+area_43,India,india,1947,0.14,,Gt,estimated
+area_43,China,china,1947,0.19,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1947,0.38,,Gt,estimated
+area_43,Oceania,oceania,1947,0.09,,Gt,estimated
+area_43,International transport,international_transport,1947,0.19,,Gt,estimated
+area_43,EU-28,eu-28,1948,1.46,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1948,0.29,,Gt,estimated
+area_43,United States,united_states,1948,2.13,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1948,0.29,,Gt,estimated
+area_43,South America,south_america,1948,0.10,,Gt,estimated
+area_43,Africa,africa,1948,0.10,,Gt,estimated
+area_43,India,india,1948,0.15,,Gt,estimated
+area_43,China,china,1948,0.19,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1948,0.39,,Gt,estimated
+area_43,Oceania,oceania,1948,0.10,,Gt,estimated
+area_43,International transport,international_transport,1948,0.19,,Gt,estimated
+area_43,EU-28,eu-28,1949,1.48,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1949,0.30,,Gt,estimated
+area_43,United States,united_states,1949,2.16,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1949,0.29,,Gt,estimated
+area_43,South America,south_america,1949,0.10,,Gt,estimated
+area_43,Africa,africa,1949,0.10,,Gt,estimated
+area_43,India,india,1949,0.15,,Gt,estimated
+area_43,China,china,1949,0.20,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1949,0.39,,Gt,estimated
+area_43,Oceania,oceania,1949,0.10,,Gt,estimated
+area_43,International transport,international_transport,1949,0.20,,Gt,estimated
+area_43,EU-28,eu-28,1950,1.50,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1950,0.30,,Gt,estimated
+area_43,United States,united_states,1950,2.20,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1950,0.30,,Gt,estimated
+area_43,South America,south_america,1950,0.10,,Gt,estimated
+area_43,Africa,africa,1950,0.10,,Gt,estimated
+area_43,India,india,1950,0.15,,Gt,estimated
+area_43,China,china,1950,0.20,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1950,0.40,,Gt,estimated
+area_43,Oceania,oceania,1950,0.10,,Gt,estimated
+area_43,International transport,international_transport,1950,0.20,,Gt,estimated
+area_43,EU-28,eu-28,1951,1.56,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1951,0.32,,Gt,estimated
+area_43,United States,united_states,1951,2.29,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1951,0.32,,Gt,estimated
+area_43,South America,south_america,1951,0.11,,Gt,estimated
+area_43,Africa,africa,1951,0.11,,Gt,estimated
+area_43,India,india,1951,0.16,,Gt,estimated
+area_43,China,china,1951,0.24,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1951,0.42,,Gt,estimated
+area_43,Oceania,oceania,1951,0.10,,Gt,estimated
+area_43,International transport,international_transport,1951,0.22,,Gt,estimated
+area_43,EU-28,eu-28,1952,1.62,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1952,0.35,,Gt,estimated
+area_43,United States,united_states,1952,2.38,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1952,0.34,,Gt,estimated
+area_43,South America,south_america,1952,0.12,,Gt,estimated
+area_43,Africa,africa,1952,0.12,,Gt,estimated
+area_43,India,india,1952,0.17,,Gt,estimated
+area_43,China,china,1952,0.28,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1952,0.45,,Gt,estimated
+area_43,Oceania,oceania,1952,0.11,,Gt,estimated
+area_43,International transport,international_transport,1952,0.23,,Gt,estimated
+area_43,EU-28,eu-28,1953,1.68,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1953,0.37,,Gt,estimated
+area_43,United States,united_states,1953,2.48,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1953,0.36,,Gt,estimated
+area_43,South America,south_america,1953,0.12,,Gt,estimated
+area_43,Africa,africa,1953,0.12,,Gt,estimated
+area_43,India,india,1953,0.18,,Gt,estimated
+area_43,China,china,1953,0.32,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1953,0.47,,Gt,estimated
+area_43,Oceania,oceania,1953,0.11,,Gt,estimated
+area_43,International transport,international_transport,1953,0.25,,Gt,estimated
+area_43,EU-28,eu-28,1954,1.74,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1954,0.40,,Gt,estimated
+area_43,United States,united_states,1954,2.57,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1954,0.38,,Gt,estimated
+area_43,South America,south_america,1954,0.13,,Gt,estimated
+area_43,Africa,africa,1954,0.13,,Gt,estimated
+area_43,India,india,1954,0.19,,Gt,estimated
+area_43,China,china,1954,0.36,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1954,0.50,,Gt,estimated
+area_43,Oceania,oceania,1954,0.12,,Gt,estimated
+area_43,International transport,international_transport,1954,0.26,,Gt,estimated
+area_43,EU-28,eu-28,1955,1.80,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1955,0.42,,Gt,estimated
+area_43,United States,united_states,1955,2.66,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1955,0.40,,Gt,estimated
+area_43,South America,south_america,1955,0.14,,Gt,estimated
+area_43,Africa,africa,1955,0.14,,Gt,estimated
+area_43,India,india,1955,0.20,,Gt,estimated
+area_43,China,china,1955,0.40,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1955,0.52,,Gt,estimated
+area_43,Oceania,oceania,1955,0.12,,Gt,estimated
+area_43,International transport,international_transport,1955,0.28,,Gt,estimated
+area_43,EU-28,eu-28,1956,1.86,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1956,0.44,,Gt,estimated
+area_43,United States,united_states,1956,2.75,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1956,0.42,,Gt,estimated
+area_43,South America,south_america,1956,0.15,,Gt,estimated
+area_43,Africa,africa,1956,0.15,,Gt,estimated
+area_43,India,india,1956,0.21,,Gt,estimated
+area_43,China,china,1956,0.44,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1956,0.54,,Gt,estimated
+area_43,Oceania,oceania,1956,0.12,,Gt,estimated
+area_43,International transport,international_transport,1956,0.30,,Gt,estimated
+area_43,EU-28,eu-28,1957,1.92,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1957,0.47,,Gt,estimated
+area_43,United States,united_states,1957,2.84,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1957,0.44,,Gt,estimated
+area_43,South America,south_america,1957,0.16,,Gt,estimated
+area_43,Africa,africa,1957,0.16,,Gt,estimated
+area_43,India,india,1957,0.22,,Gt,estimated
+area_43,China,china,1957,0.48,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1957,0.57,,Gt,estimated
+area_43,Oceania,oceania,1957,0.13,,Gt,estimated
+area_43,International transport,international_transport,1957,0.31,,Gt,estimated
+area_43,EU-28,eu-28,1958,1.98,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1958,0.49,,Gt,estimated
+area_43,United States,united_states,1958,2.94,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1958,0.46,,Gt,estimated
+area_43,South America,south_america,1958,0.16,,Gt,estimated
+area_43,Africa,africa,1958,0.16,,Gt,estimated
+area_43,India,india,1958,0.23,,Gt,estimated
+area_43,China,china,1958,0.52,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1958,0.59,,Gt,estimated
+area_43,Oceania,oceania,1958,0.13,,Gt,estimated
+area_43,International transport,international_transport,1958,0.33,,Gt,estimated
+area_43,EU-28,eu-28,1959,2.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1959,0.52,,Gt,estimated
+area_43,United States,united_states,1959,3.03,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1959,0.48,,Gt,estimated
+area_43,South America,south_america,1959,0.17,,Gt,estimated
+area_43,Africa,africa,1959,0.17,,Gt,estimated
+area_43,India,india,1959,0.24,,Gt,estimated
+area_43,China,china,1959,0.56,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1959,0.62,,Gt,estimated
+area_43,Oceania,oceania,1959,0.14,,Gt,estimated
+area_43,International transport,international_transport,1959,0.34,,Gt,estimated
+area_43,EU-28,eu-28,1960,2.10,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1960,0.54,,Gt,estimated
+area_43,United States,united_states,1960,3.12,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1960,0.50,,Gt,estimated
+area_43,South America,south_america,1960,0.18,,Gt,estimated
+area_43,Africa,africa,1960,0.18,,Gt,estimated
+area_43,India,india,1960,0.25,,Gt,estimated
+area_43,China,china,1960,0.60,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1960,0.64,,Gt,estimated
+area_43,Oceania,oceania,1960,0.14,,Gt,estimated
+area_43,International transport,international_transport,1960,0.36,,Gt,estimated
+area_43,EU-28,eu-28,1961,2.16,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1961,0.56,,Gt,estimated
+area_43,United States,united_states,1961,3.21,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1961,0.52,,Gt,estimated
+area_43,South America,south_america,1961,0.19,,Gt,estimated
+area_43,Africa,africa,1961,0.19,,Gt,estimated
+area_43,India,india,1961,0.26,,Gt,estimated
+area_43,China,china,1961,0.64,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1961,0.66,,Gt,estimated
+area_43,Oceania,oceania,1961,0.14,,Gt,estimated
+area_43,International transport,international_transport,1961,0.38,,Gt,estimated
+area_43,EU-28,eu-28,1962,2.22,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1962,0.59,,Gt,estimated
+area_43,United States,united_states,1962,3.30,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1962,0.54,,Gt,estimated
+area_43,South America,south_america,1962,0.20,,Gt,estimated
+area_43,Africa,africa,1962,0.20,,Gt,estimated
+area_43,India,india,1962,0.27,,Gt,estimated
+area_43,China,china,1962,0.68,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1962,0.69,,Gt,estimated
+area_43,Oceania,oceania,1962,0.15,,Gt,estimated
+area_43,International transport,international_transport,1962,0.39,,Gt,estimated
+area_43,EU-28,eu-28,1963,2.28,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1963,0.61,,Gt,estimated
+area_43,United States,united_states,1963,3.40,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1963,0.56,,Gt,estimated
+area_43,South America,south_america,1963,0.20,,Gt,estimated
+area_43,Africa,africa,1963,0.20,,Gt,estimated
+area_43,India,india,1963,0.28,,Gt,estimated
+area_43,China,china,1963,0.72,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1963,0.71,,Gt,estimated
+area_43,Oceania,oceania,1963,0.15,,Gt,estimated
+area_43,International transport,international_transport,1963,0.41,,Gt,estimated
+area_43,EU-28,eu-28,1964,2.34,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1964,0.64,,Gt,estimated
+area_43,United States,united_states,1964,3.49,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1964,0.58,,Gt,estimated
+area_43,South America,south_america,1964,0.21,,Gt,estimated
+area_43,Africa,africa,1964,0.21,,Gt,estimated
+area_43,India,india,1964,0.29,,Gt,estimated
+area_43,China,china,1964,0.76,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1964,0.74,,Gt,estimated
+area_43,Oceania,oceania,1964,0.16,,Gt,estimated
+area_43,International transport,international_transport,1964,0.42,,Gt,estimated
+area_43,EU-28,eu-28,1965,2.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1965,0.66,,Gt,estimated
+area_43,United States,united_states,1965,3.58,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1965,0.60,,Gt,estimated
+area_43,South America,south_america,1965,0.22,,Gt,estimated
+area_43,Africa,africa,1965,0.22,,Gt,estimated
+area_43,India,india,1965,0.30,,Gt,estimated
+area_43,China,china,1965,0.80,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1965,0.76,,Gt,estimated
+area_43,Oceania,oceania,1965,0.16,,Gt,estimated
+area_43,International transport,international_transport,1965,0.44,,Gt,estimated
+area_43,EU-28,eu-28,1966,2.46,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1966,0.68,,Gt,estimated
+area_43,United States,united_states,1966,3.67,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1966,0.62,,Gt,estimated
+area_43,South America,south_america,1966,0.23,,Gt,estimated
+area_43,Africa,africa,1966,0.23,,Gt,estimated
+area_43,India,india,1966,0.31,,Gt,estimated
+area_43,China,china,1966,0.84,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1966,0.78,,Gt,estimated
+area_43,Oceania,oceania,1966,0.16,,Gt,estimated
+area_43,International transport,international_transport,1966,0.46,,Gt,estimated
+area_43,EU-28,eu-28,1967,2.52,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1967,0.71,,Gt,estimated
+area_43,United States,united_states,1967,3.76,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1967,0.64,,Gt,estimated
+area_43,South America,south_america,1967,0.24,,Gt,estimated
+area_43,Africa,africa,1967,0.24,,Gt,estimated
+area_43,India,india,1967,0.32,,Gt,estimated
+area_43,China,china,1967,0.88,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1967,0.81,,Gt,estimated
+area_43,Oceania,oceania,1967,0.17,,Gt,estimated
+area_43,International transport,international_transport,1967,0.47,,Gt,estimated
+area_43,EU-28,eu-28,1968,2.58,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1968,0.73,,Gt,estimated
+area_43,United States,united_states,1968,3.86,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1968,0.66,,Gt,estimated
+area_43,South America,south_america,1968,0.24,,Gt,estimated
+area_43,Africa,africa,1968,0.24,,Gt,estimated
+area_43,India,india,1968,0.33,,Gt,estimated
+area_43,China,china,1968,0.92,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1968,0.83,,Gt,estimated
+area_43,Oceania,oceania,1968,0.17,,Gt,estimated
+area_43,International transport,international_transport,1968,0.49,,Gt,estimated
+area_43,EU-28,eu-28,1969,2.64,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1969,0.76,,Gt,estimated
+area_43,United States,united_states,1969,3.95,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1969,0.68,,Gt,estimated
+area_43,South America,south_america,1969,0.25,,Gt,estimated
+area_43,Africa,africa,1969,0.25,,Gt,estimated
+area_43,India,india,1969,0.34,,Gt,estimated
+area_43,China,china,1969,0.96,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1969,0.86,,Gt,estimated
+area_43,Oceania,oceania,1969,0.18,,Gt,estimated
+area_43,International transport,international_transport,1969,0.50,,Gt,estimated
+area_43,EU-28,eu-28,1970,2.70,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1970,0.78,,Gt,estimated
+area_43,United States,united_states,1970,4.04,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1970,0.70,,Gt,estimated
+area_43,South America,south_america,1970,0.26,,Gt,estimated
+area_43,Africa,africa,1970,0.26,,Gt,estimated
+area_43,India,india,1970,0.35,,Gt,estimated
+area_43,China,china,1970,1.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1970,0.88,,Gt,estimated
+area_43,Oceania,oceania,1970,0.18,,Gt,estimated
+area_43,International transport,international_transport,1970,0.52,,Gt,estimated
+area_43,EU-28,eu-28,1971,2.76,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1971,0.80,,Gt,estimated
+area_43,United States,united_states,1971,4.13,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1971,0.72,,Gt,estimated
+area_43,South America,south_america,1971,0.27,,Gt,estimated
+area_43,Africa,africa,1971,0.27,,Gt,estimated
+area_43,India,india,1971,0.36,,Gt,estimated
+area_43,China,china,1971,1.04,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1971,0.90,,Gt,estimated
+area_43,Oceania,oceania,1971,0.18,,Gt,estimated
+area_43,International transport,international_transport,1971,0.54,,Gt,estimated
+area_43,EU-28,eu-28,1972,2.82,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1972,0.83,,Gt,estimated
+area_43,United States,united_states,1972,4.22,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1972,0.74,,Gt,estimated
+area_43,South America,south_america,1972,0.28,,Gt,estimated
+area_43,Africa,africa,1972,0.28,,Gt,estimated
+area_43,India,india,1972,0.37,,Gt,estimated
+area_43,China,china,1972,1.08,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1972,0.93,,Gt,estimated
+area_43,Oceania,oceania,1972,0.19,,Gt,estimated
+area_43,International transport,international_transport,1972,0.55,,Gt,estimated
+area_43,EU-28,eu-28,1973,2.88,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1973,0.85,,Gt,estimated
+area_43,United States,united_states,1973,4.32,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1973,0.76,,Gt,estimated
+area_43,South America,south_america,1973,0.28,,Gt,estimated
+area_43,Africa,africa,1973,0.28,,Gt,estimated
+area_43,India,india,1973,0.38,,Gt,estimated
+area_43,China,china,1973,1.12,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1973,0.95,,Gt,estimated
+area_43,Oceania,oceania,1973,0.19,,Gt,estimated
+area_43,International transport,international_transport,1973,0.57,,Gt,estimated
+area_43,EU-28,eu-28,1974,2.94,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1974,0.88,,Gt,estimated
+area_43,United States,united_states,1974,4.41,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1974,0.78,,Gt,estimated
+area_43,South America,south_america,1974,0.29,,Gt,estimated
+area_43,Africa,africa,1974,0.29,,Gt,estimated
+area_43,India,india,1974,0.39,,Gt,estimated
+area_43,China,china,1974,1.16,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1974,0.98,,Gt,estimated
+area_43,Oceania,oceania,1974,0.20,,Gt,estimated
+area_43,International transport,international_transport,1974,0.58,,Gt,estimated
+area_43,EU-28,eu-28,1975,3.00,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1975,0.90,,Gt,estimated
+area_43,United States,united_states,1975,4.50,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1975,0.80,,Gt,estimated
+area_43,South America,south_america,1975,0.30,,Gt,estimated
+area_43,Africa,africa,1975,0.30,,Gt,estimated
+area_43,India,india,1975,0.40,,Gt,estimated
+area_43,China,china,1975,1.20,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1975,1.00,,Gt,estimated
+area_43,Oceania,oceania,1975,0.20,,Gt,estimated
+area_43,International transport,international_transport,1975,0.60,,Gt,estimated
+area_43,EU-28,eu-28,1976,3.04,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1976,0.93,,Gt,estimated
+area_43,United States,united_states,1976,4.55,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1976,0.81,,Gt,estimated
+area_43,South America,south_america,1976,0.33,,Gt,estimated
+area_43,Africa,africa,1976,0.33,,Gt,estimated
+area_43,India,india,1976,0.44,,Gt,estimated
+area_43,China,china,1976,1.28,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1976,1.06,,Gt,estimated
+area_43,Oceania,oceania,1976,0.21,,Gt,estimated
+area_43,International transport,international_transport,1976,0.62,,Gt,estimated
+area_43,EU-28,eu-28,1977,3.08,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1977,0.95,,Gt,estimated
+area_43,United States,united_states,1977,4.59,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1977,0.83,,Gt,estimated
+area_43,South America,south_america,1977,0.35,,Gt,estimated
+area_43,Africa,africa,1977,0.35,,Gt,estimated
+area_43,India,india,1977,0.48,,Gt,estimated
+area_43,China,china,1977,1.36,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1977,1.12,,Gt,estimated
+area_43,Oceania,oceania,1977,0.22,,Gt,estimated
+area_43,International transport,international_transport,1977,0.64,,Gt,estimated
+area_43,EU-28,eu-28,1978,3.12,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1978,0.98,,Gt,estimated
+area_43,United States,united_states,1978,4.64,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1978,0.84,,Gt,estimated
+area_43,South America,south_america,1978,0.38,,Gt,estimated
+area_43,Africa,africa,1978,0.38,,Gt,estimated
+area_43,India,india,1978,0.52,,Gt,estimated
+area_43,China,china,1978,1.44,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1978,1.18,,Gt,estimated
+area_43,Oceania,oceania,1978,0.23,,Gt,estimated
+area_43,International transport,international_transport,1978,0.66,,Gt,estimated
+area_43,EU-28,eu-28,1979,3.16,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1979,1.01,,Gt,estimated
+area_43,United States,united_states,1979,4.69,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1979,0.85,,Gt,estimated
+area_43,South America,south_america,1979,0.41,,Gt,estimated
+area_43,Africa,africa,1979,0.41,,Gt,estimated
+area_43,India,india,1979,0.56,,Gt,estimated
+area_43,China,china,1979,1.52,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1979,1.24,,Gt,estimated
+area_43,Oceania,oceania,1979,0.24,,Gt,estimated
+area_43,International transport,international_transport,1979,0.68,,Gt,estimated
+area_43,EU-28,eu-28,1980,3.20,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1980,1.03,,Gt,estimated
+area_43,United States,united_states,1980,4.73,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1980,0.87,,Gt,estimated
+area_43,South America,south_america,1980,0.43,,Gt,estimated
+area_43,Africa,africa,1980,0.43,,Gt,estimated
+area_43,India,india,1980,0.60,,Gt,estimated
+area_43,China,china,1980,1.60,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1980,1.30,,Gt,estimated
+area_43,Oceania,oceania,1980,0.25,,Gt,estimated
+area_43,International transport,international_transport,1980,0.70,,Gt,estimated
+area_43,EU-28,eu-28,1981,3.24,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1981,1.06,,Gt,estimated
+area_43,United States,united_states,1981,4.78,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1981,0.88,,Gt,estimated
+area_43,South America,south_america,1981,0.46,,Gt,estimated
+area_43,Africa,africa,1981,0.46,,Gt,estimated
+area_43,India,india,1981,0.64,,Gt,estimated
+area_43,China,china,1981,1.68,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1981,1.36,,Gt,estimated
+area_43,Oceania,oceania,1981,0.26,,Gt,estimated
+area_43,International transport,international_transport,1981,0.72,,Gt,estimated
+area_43,EU-28,eu-28,1982,3.28,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1982,1.09,,Gt,estimated
+area_43,United States,united_states,1982,4.83,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1982,0.89,,Gt,estimated
+area_43,South America,south_america,1982,0.49,,Gt,estimated
+area_43,Africa,africa,1982,0.49,,Gt,estimated
+area_43,India,india,1982,0.68,,Gt,estimated
+area_43,China,china,1982,1.76,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1982,1.42,,Gt,estimated
+area_43,Oceania,oceania,1982,0.27,,Gt,estimated
+area_43,International transport,international_transport,1982,0.74,,Gt,estimated
+area_43,EU-28,eu-28,1983,3.32,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1983,1.11,,Gt,estimated
+area_43,United States,united_states,1983,4.87,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1983,0.91,,Gt,estimated
+area_43,South America,south_america,1983,0.51,,Gt,estimated
+area_43,Africa,africa,1983,0.51,,Gt,estimated
+area_43,India,india,1983,0.72,,Gt,estimated
+area_43,China,china,1983,1.84,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1983,1.48,,Gt,estimated
+area_43,Oceania,oceania,1983,0.28,,Gt,estimated
+area_43,International transport,international_transport,1983,0.76,,Gt,estimated
+area_43,EU-28,eu-28,1984,3.36,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1984,1.14,,Gt,estimated
+area_43,United States,united_states,1984,4.92,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1984,0.92,,Gt,estimated
+area_43,South America,south_america,1984,0.54,,Gt,estimated
+area_43,Africa,africa,1984,0.54,,Gt,estimated
+area_43,India,india,1984,0.76,,Gt,estimated
+area_43,China,china,1984,1.92,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1984,1.54,,Gt,estimated
+area_43,Oceania,oceania,1984,0.29,,Gt,estimated
+area_43,International transport,international_transport,1984,0.78,,Gt,estimated
+area_43,EU-28,eu-28,1985,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1985,1.17,,Gt,estimated
+area_43,United States,united_states,1985,4.97,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1985,0.93,,Gt,estimated
+area_43,South America,south_america,1985,0.57,,Gt,estimated
+area_43,Africa,africa,1985,0.57,,Gt,estimated
+area_43,India,india,1985,0.80,,Gt,estimated
+area_43,China,china,1985,2.00,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1985,1.60,,Gt,estimated
+area_43,Oceania,oceania,1985,0.30,,Gt,estimated
+area_43,International transport,international_transport,1985,0.80,,Gt,estimated
+area_43,EU-28,eu-28,1986,3.44,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1986,1.19,,Gt,estimated
+area_43,United States,united_states,1986,5.01,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1986,0.95,,Gt,estimated
+area_43,South America,south_america,1986,0.59,,Gt,estimated
+area_43,Africa,africa,1986,0.59,,Gt,estimated
+area_43,India,india,1986,0.84,,Gt,estimated
+area_43,China,china,1986,2.08,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1986,1.66,,Gt,estimated
+area_43,Oceania,oceania,1986,0.31,,Gt,estimated
+area_43,International transport,international_transport,1986,0.82,,Gt,estimated
+area_43,EU-28,eu-28,1987,3.48,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1987,1.22,,Gt,estimated
+area_43,United States,united_states,1987,5.06,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1987,0.96,,Gt,estimated
+area_43,South America,south_america,1987,0.62,,Gt,estimated
+area_43,Africa,africa,1987,0.62,,Gt,estimated
+area_43,India,india,1987,0.88,,Gt,estimated
+area_43,China,china,1987,2.16,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1987,1.72,,Gt,estimated
+area_43,Oceania,oceania,1987,0.32,,Gt,estimated
+area_43,International transport,international_transport,1987,0.84,,Gt,estimated
+area_43,EU-28,eu-28,1988,3.52,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1988,1.25,,Gt,estimated
+area_43,United States,united_states,1988,5.11,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1988,0.97,,Gt,estimated
+area_43,South America,south_america,1988,0.65,,Gt,estimated
+area_43,Africa,africa,1988,0.65,,Gt,estimated
+area_43,India,india,1988,0.92,,Gt,estimated
+area_43,China,china,1988,2.24,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1988,1.78,,Gt,estimated
+area_43,Oceania,oceania,1988,0.33,,Gt,estimated
+area_43,International transport,international_transport,1988,0.86,,Gt,estimated
+area_43,EU-28,eu-28,1989,3.56,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1989,1.27,,Gt,estimated
+area_43,United States,united_states,1989,5.15,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1989,0.99,,Gt,estimated
+area_43,South America,south_america,1989,0.67,,Gt,estimated
+area_43,Africa,africa,1989,0.67,,Gt,estimated
+area_43,India,india,1989,0.96,,Gt,estimated
+area_43,China,china,1989,2.32,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1989,1.84,,Gt,estimated
+area_43,Oceania,oceania,1989,0.34,,Gt,estimated
+area_43,International transport,international_transport,1989,0.88,,Gt,estimated
+area_43,EU-28,eu-28,1990,3.60,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1990,1.30,,Gt,estimated
+area_43,United States,united_states,1990,5.20,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1990,1.00,,Gt,estimated
+area_43,South America,south_america,1990,0.70,,Gt,estimated
+area_43,Africa,africa,1990,0.70,,Gt,estimated
+area_43,India,india,1990,1.00,,Gt,estimated
+area_43,China,china,1990,2.40,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1990,1.90,,Gt,estimated
+area_43,Oceania,oceania,1990,0.35,,Gt,estimated
+area_43,International transport,international_transport,1990,0.90,,Gt,estimated
+area_43,EU-28,eu-28,1991,3.58,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1991,1.30,,Gt,estimated
+area_43,United States,united_states,1991,5.25,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1991,1.01,,Gt,estimated
+area_43,South America,south_america,1991,0.73,,Gt,estimated
+area_43,Africa,africa,1991,0.73,,Gt,estimated
+area_43,India,india,1991,1.05,,Gt,estimated
+area_43,China,china,1991,2.51,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1991,2.05,,Gt,estimated
+area_43,Oceania,oceania,1991,0.35,,Gt,estimated
+area_43,International transport,international_transport,1991,0.92,,Gt,estimated
+area_43,EU-28,eu-28,1992,3.56,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1992,1.30,,Gt,estimated
+area_43,United States,united_states,1992,5.30,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1992,1.02,,Gt,estimated
+area_43,South America,south_america,1992,0.76,,Gt,estimated
+area_43,Africa,africa,1992,0.76,,Gt,estimated
+area_43,India,india,1992,1.10,,Gt,estimated
+area_43,China,china,1992,2.62,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1992,2.20,,Gt,estimated
+area_43,Oceania,oceania,1992,0.36,,Gt,estimated
+area_43,International transport,international_transport,1992,0.94,,Gt,estimated
+area_43,EU-28,eu-28,1993,3.54,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1993,1.30,,Gt,estimated
+area_43,United States,united_states,1993,5.35,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1993,1.03,,Gt,estimated
+area_43,South America,south_america,1993,0.79,,Gt,estimated
+area_43,Africa,africa,1993,0.79,,Gt,estimated
+area_43,India,india,1993,1.15,,Gt,estimated
+area_43,China,china,1993,2.73,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1993,2.35,,Gt,estimated
+area_43,Oceania,oceania,1993,0.36,,Gt,estimated
+area_43,International transport,international_transport,1993,0.96,,Gt,estimated
+area_43,EU-28,eu-28,1994,3.52,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1994,1.30,,Gt,estimated
+area_43,United States,united_states,1994,5.40,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1994,1.04,,Gt,estimated
+area_43,South America,south_america,1994,0.82,,Gt,estimated
+area_43,Africa,africa,1994,0.82,,Gt,estimated
+area_43,India,india,1994,1.20,,Gt,estimated
+area_43,China,china,1994,2.84,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1994,2.50,,Gt,estimated
+area_43,Oceania,oceania,1994,0.37,,Gt,estimated
+area_43,International transport,international_transport,1994,0.98,,Gt,estimated
+area_43,EU-28,eu-28,1995,3.50,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1995,1.30,,Gt,estimated
+area_43,United States,united_states,1995,5.45,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1995,1.05,,Gt,estimated
+area_43,South America,south_america,1995,0.85,,Gt,estimated
+area_43,Africa,africa,1995,0.85,,Gt,estimated
+area_43,India,india,1995,1.25,,Gt,estimated
+area_43,China,china,1995,2.95,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1995,2.65,,Gt,estimated
+area_43,Oceania,oceania,1995,0.38,,Gt,estimated
+area_43,International transport,international_transport,1995,1.00,,Gt,estimated
+area_43,EU-28,eu-28,1996,3.48,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1996,1.30,,Gt,estimated
+area_43,United States,united_states,1996,5.50,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1996,1.06,,Gt,estimated
+area_43,South America,south_america,1996,0.88,,Gt,estimated
+area_43,Africa,africa,1996,0.88,,Gt,estimated
+area_43,India,india,1996,1.30,,Gt,estimated
+area_43,China,china,1996,3.06,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1996,2.80,,Gt,estimated
+area_43,Oceania,oceania,1996,0.38,,Gt,estimated
+area_43,International transport,international_transport,1996,1.02,,Gt,estimated
+area_43,EU-28,eu-28,1997,3.46,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1997,1.30,,Gt,estimated
+area_43,United States,united_states,1997,5.55,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1997,1.07,,Gt,estimated
+area_43,South America,south_america,1997,0.91,,Gt,estimated
+area_43,Africa,africa,1997,0.91,,Gt,estimated
+area_43,India,india,1997,1.35,,Gt,estimated
+area_43,China,china,1997,3.17,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1997,2.95,,Gt,estimated
+area_43,Oceania,oceania,1997,0.39,,Gt,estimated
+area_43,International transport,international_transport,1997,1.04,,Gt,estimated
+area_43,EU-28,eu-28,1998,3.44,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1998,1.30,,Gt,estimated
+area_43,United States,united_states,1998,5.60,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1998,1.08,,Gt,estimated
+area_43,South America,south_america,1998,0.94,,Gt,estimated
+area_43,Africa,africa,1998,0.94,,Gt,estimated
+area_43,India,india,1998,1.40,,Gt,estimated
+area_43,China,china,1998,3.28,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1998,3.10,,Gt,estimated
+area_43,Oceania,oceania,1998,0.39,,Gt,estimated
+area_43,International transport,international_transport,1998,1.06,,Gt,estimated
+area_43,EU-28,eu-28,1999,3.42,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),1999,1.30,,Gt,estimated
+area_43,United States,united_states,1999,5.65,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),1999,1.09,,Gt,estimated
+area_43,South America,south_america,1999,0.97,,Gt,estimated
+area_43,Africa,africa,1999,0.97,,Gt,estimated
+area_43,India,india,1999,1.45,,Gt,estimated
+area_43,China,china,1999,3.39,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),1999,3.25,,Gt,estimated
+area_43,Oceania,oceania,1999,0.40,,Gt,estimated
+area_43,International transport,international_transport,1999,1.08,,Gt,estimated
+area_43,EU-28,eu-28,2000,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2000,1.30,,Gt,estimated
+area_43,United States,united_states,2000,5.70,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2000,1.10,,Gt,estimated
+area_43,South America,south_america,2000,1.00,,Gt,estimated
+area_43,Africa,africa,2000,1.00,,Gt,estimated
+area_43,India,india,2000,1.50,,Gt,estimated
+area_43,China,china,2000,3.50,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2000,3.40,,Gt,estimated
+area_43,Oceania,oceania,2000,0.40,,Gt,estimated
+area_43,International transport,international_transport,2000,1.10,,Gt,estimated
+area_43,EU-28,eu-28,2001,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2001,1.31,,Gt,estimated
+area_43,United States,united_states,2001,5.69,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2001,1.10,,Gt,estimated
+area_43,South America,south_america,2001,1.01,,Gt,estimated
+area_43,Africa,africa,2001,1.02,,Gt,estimated
+area_43,India,india,2001,1.56,,Gt,estimated
+area_43,China,china,2001,3.85,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2001,3.65,,Gt,estimated
+area_43,Oceania,oceania,2001,0.40,,Gt,estimated
+area_43,International transport,international_transport,2001,1.11,,Gt,estimated
+area_43,EU-28,eu-28,2002,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2002,1.32,,Gt,estimated
+area_43,United States,united_states,2002,5.68,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2002,1.10,,Gt,estimated
+area_43,South America,south_america,2002,1.01,,Gt,estimated
+area_43,Africa,africa,2002,1.04,,Gt,estimated
+area_43,India,india,2002,1.62,,Gt,estimated
+area_43,China,china,2002,4.19,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2002,3.91,,Gt,estimated
+area_43,Oceania,oceania,2002,0.41,,Gt,estimated
+area_43,International transport,international_transport,2002,1.12,,Gt,estimated
+area_43,EU-28,eu-28,2003,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2003,1.33,,Gt,estimated
+area_43,United States,united_states,2003,5.67,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2003,1.10,,Gt,estimated
+area_43,South America,south_america,2003,1.02,,Gt,estimated
+area_43,Africa,africa,2003,1.06,,Gt,estimated
+area_43,India,india,2003,1.68,,Gt,estimated
+area_43,China,china,2003,4.54,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2003,4.16,,Gt,estimated
+area_43,Oceania,oceania,2003,0.41,,Gt,estimated
+area_43,International transport,international_transport,2003,1.12,,Gt,estimated
+area_43,EU-28,eu-28,2004,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2004,1.34,,Gt,estimated
+area_43,United States,united_states,2004,5.66,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2004,1.10,,Gt,estimated
+area_43,South America,south_america,2004,1.02,,Gt,estimated
+area_43,Africa,africa,2004,1.07,,Gt,estimated
+area_43,India,india,2004,1.74,,Gt,estimated
+area_43,China,china,2004,4.89,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2004,4.41,,Gt,estimated
+area_43,Oceania,oceania,2004,0.41,,Gt,estimated
+area_43,International transport,international_transport,2004,1.13,,Gt,estimated
+area_43,EU-28,eu-28,2005,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2005,1.35,,Gt,estimated
+area_43,United States,united_states,2005,5.65,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2005,1.10,,Gt,estimated
+area_43,South America,south_america,2005,1.03,,Gt,estimated
+area_43,Africa,africa,2005,1.09,,Gt,estimated
+area_43,India,india,2005,1.80,,Gt,estimated
+area_43,China,china,2005,5.24,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2005,4.66,,Gt,estimated
+area_43,Oceania,oceania,2005,0.41,,Gt,estimated
+area_43,International transport,international_transport,2005,1.14,,Gt,estimated
+area_43,EU-28,eu-28,2006,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2006,1.36,,Gt,estimated
+area_43,United States,united_states,2006,5.64,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2006,1.10,,Gt,estimated
+area_43,South America,south_america,2006,1.03,,Gt,estimated
+area_43,Africa,africa,2006,1.11,,Gt,estimated
+area_43,India,india,2006,1.86,,Gt,estimated
+area_43,China,china,2006,5.58,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2006,4.92,,Gt,estimated
+area_43,Oceania,oceania,2006,0.42,,Gt,estimated
+area_43,International transport,international_transport,2006,1.15,,Gt,estimated
+area_43,EU-28,eu-28,2007,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2007,1.37,,Gt,estimated
+area_43,United States,united_states,2007,5.63,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2007,1.10,,Gt,estimated
+area_43,South America,south_america,2007,1.04,,Gt,estimated
+area_43,Africa,africa,2007,1.13,,Gt,estimated
+area_43,India,india,2007,1.92,,Gt,estimated
+area_43,China,china,2007,5.93,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2007,5.17,,Gt,estimated
+area_43,Oceania,oceania,2007,0.42,,Gt,estimated
+area_43,International transport,international_transport,2007,1.16,,Gt,estimated
+area_43,EU-28,eu-28,2008,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2008,1.38,,Gt,estimated
+area_43,United States,united_states,2008,5.62,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2008,1.10,,Gt,estimated
+area_43,South America,south_america,2008,1.04,,Gt,estimated
+area_43,Africa,africa,2008,1.15,,Gt,estimated
+area_43,India,india,2008,1.98,,Gt,estimated
+area_43,China,china,2008,6.28,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2008,5.42,,Gt,estimated
+area_43,Oceania,oceania,2008,0.42,,Gt,estimated
+area_43,International transport,international_transport,2008,1.16,,Gt,estimated
+area_43,EU-28,eu-28,2009,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2009,1.39,,Gt,estimated
+area_43,United States,united_states,2009,5.61,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2009,1.10,,Gt,estimated
+area_43,South America,south_america,2009,1.05,,Gt,estimated
+area_43,Africa,africa,2009,1.17,,Gt,estimated
+area_43,India,india,2009,2.04,,Gt,estimated
+area_43,China,china,2009,6.63,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2009,5.67,,Gt,estimated
+area_43,Oceania,oceania,2009,0.42,,Gt,estimated
+area_43,International transport,international_transport,2009,1.17,,Gt,estimated
+area_43,EU-28,eu-28,2010,3.40,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2010,1.40,,Gt,estimated
+area_43,United States,united_states,2010,5.60,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2010,1.10,,Gt,estimated
+area_43,South America,south_america,2010,1.05,,Gt,estimated
+area_43,Africa,africa,2010,1.18,,Gt,estimated
+area_43,India,india,2010,2.11,,Gt,estimated
+area_43,China,china,2010,6.97,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2010,5.93,,Gt,estimated
+area_43,Oceania,oceania,2010,0.43,,Gt,estimated
+area_43,International transport,international_transport,2010,1.18,,Gt,estimated
+area_43,EU-28,eu-28,2011,3.39,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2011,1.40,,Gt,estimated
+area_43,United States,united_states,2011,5.58,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2011,1.10,,Gt,estimated
+area_43,South America,south_america,2011,1.06,,Gt,estimated
+area_43,Africa,africa,2011,1.20,,Gt,estimated
+area_43,India,india,2011,2.17,,Gt,estimated
+area_43,China,china,2011,7.32,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2011,6.18,,Gt,estimated
+area_43,Oceania,oceania,2011,0.43,,Gt,estimated
+area_43,International transport,international_transport,2011,1.19,,Gt,estimated
+area_43,EU-28,eu-28,2012,3.38,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2012,1.40,,Gt,estimated
+area_43,United States,united_states,2012,5.56,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2012,1.10,,Gt,estimated
+area_43,South America,south_america,2012,1.06,,Gt,estimated
+area_43,Africa,africa,2012,1.22,,Gt,estimated
+area_43,India,india,2012,2.23,,Gt,estimated
+area_43,China,china,2012,7.67,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2012,6.43,,Gt,estimated
+area_43,Oceania,oceania,2012,0.43,,Gt,estimated
+area_43,International transport,international_transport,2012,1.19,,Gt,estimated
+area_43,EU-28,eu-28,2013,3.37,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2013,1.40,,Gt,estimated
+area_43,United States,united_states,2013,5.53,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2013,1.10,,Gt,estimated
+area_43,South America,south_america,2013,1.07,,Gt,estimated
+area_43,Africa,africa,2013,1.24,,Gt,estimated
+area_43,India,india,2013,2.29,,Gt,estimated
+area_43,China,china,2013,8.02,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2013,6.68,,Gt,estimated
+area_43,Oceania,oceania,2013,0.43,,Gt,estimated
+area_43,International transport,international_transport,2013,1.20,,Gt,estimated
+area_43,EU-28,eu-28,2014,3.36,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2014,1.40,,Gt,estimated
+area_43,United States,united_states,2014,5.51,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2014,1.10,,Gt,estimated
+area_43,South America,south_america,2014,1.07,,Gt,estimated
+area_43,Africa,africa,2014,1.26,,Gt,estimated
+area_43,India,india,2014,2.35,,Gt,estimated
+area_43,China,china,2014,8.36,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2014,6.94,,Gt,estimated
+area_43,Oceania,oceania,2014,0.44,,Gt,estimated
+area_43,International transport,international_transport,2014,1.21,,Gt,estimated
+area_43,EU-28,eu-28,2015,3.34,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2015,1.40,,Gt,estimated
+area_43,United States,united_states,2015,5.49,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2015,1.10,,Gt,estimated
+area_43,South America,south_america,2015,1.08,,Gt,estimated
+area_43,Africa,africa,2015,1.28,,Gt,estimated
+area_43,India,india,2015,2.41,,Gt,estimated
+area_43,China,china,2015,8.71,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2015,7.19,,Gt,estimated
+area_43,Oceania,oceania,2015,0.44,,Gt,estimated
+area_43,International transport,international_transport,2015,1.22,,Gt,estimated
+area_43,EU-28,eu-28,2016,3.33,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2016,1.40,,Gt,estimated
+area_43,United States,united_states,2016,5.47,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2016,1.10,,Gt,estimated
+area_43,South America,south_america,2016,1.08,,Gt,estimated
+area_43,Africa,africa,2016,1.29,,Gt,estimated
+area_43,India,india,2016,2.47,,Gt,estimated
+area_43,China,china,2016,9.06,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2016,7.44,,Gt,estimated
+area_43,Oceania,oceania,2016,0.44,,Gt,estimated
+area_43,International transport,international_transport,2016,1.23,,Gt,estimated
+area_43,EU-28,eu-28,2017,3.32,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2017,1.40,,Gt,estimated
+area_43,United States,united_states,2017,5.44,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2017,1.10,,Gt,estimated
+area_43,South America,south_america,2017,1.09,,Gt,estimated
+area_43,Africa,africa,2017,1.31,,Gt,estimated
+area_43,India,india,2017,2.53,,Gt,estimated
+area_43,China,china,2017,9.41,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2017,7.69,,Gt,estimated
+area_43,Oceania,oceania,2017,0.44,,Gt,estimated
+area_43,International transport,international_transport,2017,1.23,,Gt,estimated
+area_43,EU-28,eu-28,2018,3.31,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2018,1.40,,Gt,estimated
+area_43,United States,united_states,2018,5.42,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2018,1.10,,Gt,estimated
+area_43,South America,south_america,2018,1.09,,Gt,estimated
+area_43,Africa,africa,2018,1.33,,Gt,estimated
+area_43,India,india,2018,2.59,,Gt,estimated
+area_43,China,china,2018,9.75,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2018,7.95,,Gt,estimated
+area_43,Oceania,oceania,2018,0.45,,Gt,estimated
+area_43,International transport,international_transport,2018,1.24,,Gt,estimated
+area_43,EU-28,eu-28,2019,3.30,,Gt,estimated
+area_43,Europe (excl. EU-28),europe_(excl._eu-28),2019,1.40,,Gt,estimated
+area_43,United States,united_states,2019,5.40,,Gt,estimated
+area_43,North America (excl. US),north_america_(excl._us),2019,1.10,,Gt,estimated
+area_43,South America,south_america,2019,1.10,,Gt,estimated
+area_43,Africa,africa,2019,1.35,,Gt,estimated
+area_43,India,india,2019,2.65,,Gt,estimated
+area_43,China,china,2019,10.10,,Gt,estimated
+area_43,Asia (excl. China/India),asia_(excl._china/india),2019,8.20,,Gt,estimated
+area_43,Oceania,oceania,2019,0.45,,Gt,estimated
+area_43,International transport,international_transport,2019,1.25,,Gt,estimated

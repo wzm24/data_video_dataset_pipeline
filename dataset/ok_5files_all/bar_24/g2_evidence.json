@@ -1,0 +1,153 @@
+{
+ "clip_id": "bar_24",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:1941 @ 1941"
+   ],
+   "assertion": {
+    "mark": "1941 @ 1941",
+    "field": "value",
+    "expected": 10000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 1941 bar or labeled point must be visible at 10,000 on the value scale."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Now @ Now"
+   ],
+   "assertion": {
+    "mark": "Now @ Now",
+    "field": "value",
+    "expected": 2000000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 'Now' bar or endpoint must be visible at 2,000,000 on the same value scale as the earlier years."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1941 @ 1941",
+    "mark:Now @ Now"
+   ],
+   "assertion": {
+    "low": "1941 @ 1941",
+    "low_value": 10000.0,
+    "high": "Now @ Now",
+    "high_value": 2000000.0,
+    "delta": 1990000.0,
+    "ratio": 200.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 1941 and Now values must be visible together or through persistent labels so the 200x or +1,990,000 comparison can be made."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1941 @ 1941",
+    "mark:1950 @ 1950",
+    "mark:1960 @ 1960",
+    "mark:1974 @ 1974",
+    "mark:Now @ Now"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1941 @ 1941",
+      "value": 10000.0
+     },
+     {
+      "mark": "1950 @ 1950",
+      "value": 80000.0
+     },
+     {
+      "mark": "1960 @ 1960",
+      "value": 800000.0
+     },
+     {
+      "mark": "1974 @ 1974",
+      "value": 1000000.0
+     },
+     {
+      "mark": "Now @ Now",
+      "value": 2000000.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars or points for all five listed years must appear in chronological left-to-right order with increasing heights."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:1960 @ 1960",
+    "mark:1974 @ 1974"
+   ],
+   "assertion": {
+    "series": "1960",
+    "values": [
+     800000.0,
+     1000000.0
+    ],
+    "threshold_between": [
+     800000.0,
+     1000000.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, a 1974 bar or point at 1,000,000 must be visible, with 1960 at 800,000 if showing the crossing or change."
+  }
+ ]
+}

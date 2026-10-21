@@ -1,0 +1,263 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_52",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that tax audit rates have declined disproportionately for high-income earners compared to low-income earners between 2011 and 2017.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The highest-income group (>= $500K) had an audit rate of 8.0% at the start of the period and 2.5% in 2017.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Audit rate for Americans with annual income >=$500K",
+     "x": "series start",
+     "field": "value",
+     "value": 8.0,
+     "note": "initial audit rate, %"
+    },
+    {
+     "entity": "Audit rate for Americans with annual income >=$500K",
+     "x": "2017",
+     "field": "value",
+     "value": 2.5,
+     "note": "final audit rate, %"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The >=$500K audit rate fell from 8% at the start to 2.5% in 2017.",
+    "Audits of the $500K+ group dropped from 8% to 2.5%.",
+    "The top income group's audit rate was 8% initially and 2.5% by 2017."
+   ],
+   "visual_evidence_rule": "The >=$500K series must show both its start value and 2017 value, with the 2017 value lower.",
+   "temporal_anchor": "Audits of the rich have dropped dramatically",
+   "reviewer_question": "Must the video show both the start and 2017 endpoints for the >=$500K group, or is the drop alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The >=$500K audit rate fell by 5.5 percentage points over the period, from 8.0% to 2.5%.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Audit rate for Americans with annual income >=$500K",
+     "x": "series start",
+     "field": "value",
+     "value": 8.0,
+     "note": "initial audit rate, %"
+    },
+    {
+     "entity": "Audit rate for Americans with annual income >=$500K",
+     "x": "2017",
+     "field": "value",
+     "value": 2.5,
+     "note": "final audit rate, %"
+    }
+   ],
+   "computation": "8.0 - 2.5 = 5.5 percentage points",
+   "accepted_routes": [
+    "The >=$500K audit rate dropped 5.5 percentage points.",
+    "It fell by about 5.5 points, from 8% to 2.5%.",
+    "The rich audit rate lost about 69% of its initial level (5.5 / 8.0)."
+   ],
+   "visual_evidence_rule": "The chart must make the magnitude of the >=$500K drop visible across the period.",
+   "temporal_anchor": "Audits of the rich have dropped dramatically",
+   "reviewer_question": "Must the video quantify the >=$500K decline as 5.5 percentage points, or is a qualitative 'dropped dramatically' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The <$25K audit rate changed only slightly, from 1.2% at the start to 0.8% in 2017, a decline of 0.4 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "<$25K",
+     "x": "series start",
+     "field": "value",
+     "value": 1.2,
+     "note": "initial audit rate, %"
+    },
+    {
+     "entity": "<$25K",
+     "x": "2017",
+     "field": "value",
+     "value": 0.8,
+     "note": "final audit rate, %"
+    }
+   ],
+   "computation": "1.2 - 0.8 = 0.4 percentage points",
+   "accepted_routes": [
+    "The <$25K audit rate barely moved, from 1.2% to 0.8%.",
+    "It declined only 0.4 percentage points.",
+    "Audits of the poorest Americans stayed almost the same, edging down from 1.2% to 0.8%."
+   ],
+   "visual_evidence_rule": "The <$25K series must show a start and 2017 value with only a small drop.",
+   "temporal_anchor": "audits of the poorest Americans have stayed almost the same",
+   "reviewer_question": "Must the video state the <$25K change quantitatively, or is 'stayed almost the same' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The absolute decline for >=$500K (5.5 percentage points) was much larger than for <$25K (0.4 percentage points), roughly 14 times as large.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Audit rate for Americans with annual income >=$500K",
+     "x": "series start",
+     "field": "value",
+     "value": 8.0,
+     "note": "initial audit rate, %"
+    },
+    {
+     "entity": "Audit rate for Americans with annual income >=$500K",
+     "x": "2017",
+     "field": "value",
+     "value": 2.5,
+     "note": "final audit rate, %"
+    },
+    {
+     "entity": "<$25K",
+     "x": "series start",
+     "field": "value",
+     "value": 1.2,
+     "note": "initial audit rate, %"
+    },
+    {
+     "entity": "<$25K",
+     "x": "2017",
+     "field": "value",
+     "value": 0.8,
+     "note": "final audit rate, %"
+    }
+   ],
+   "computation": "(8.0 - 2.5) / (1.2 - 0.8) = 5.5 / 0.4 = 13.75",
+   "accepted_routes": [
+    "The rich audit decline was about 14 times the poor audit decline (5.5 points vs 0.4 points).",
+    "High-income audits fell 5.5 points while low-income audits fell only 0.4 points.",
+    "The drop for >=$500K was an order of magnitude larger than for <$25K."
+   ],
+   "visual_evidence_rule": "Both the >=$500K and <$25K series must be visible over the full period so the size of their changes can be compared.",
+   "temporal_anchor": "budget cuts haven't treated all taxpayers equally",
+   "reviewer_question": "Must the video explicitly compare the magnitude of the two declines, or can it show them separately?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The $200K-$500K audit rate also declined over the period, from 2.6% at the start to 0.7% in 2017, a drop of 1.9 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "$200K-500K",
+     "x": "series start",
+     "field": "value",
+     "value": 2.6,
+     "note": "initial audit rate, %"
+    },
+    {
+     "entity": "$200K-500K",
+     "x": "2017",
+     "field": "value",
+     "value": 0.7,
+     "note": "final audit rate, %"
+    }
+   ],
+   "computation": "2.6 - 0.7 = 1.9 percentage points",
+   "accepted_routes": [
+    "The $200K-$500K audit rate also fell, from 2.6% to 0.7%.",
+    "That group dropped 1.9 percentage points.",
+    "Upper-middle-income audits also declined over the period."
+   ],
+   "visual_evidence_rule": "The $200K-$500K series must show its start and 2017 values.",
+   "temporal_anchor": "optional context before or after the rich-vs-poor comparison",
+   "reviewer_question": "Is the $200K-$500K group's decline optional context for this intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The $25K-$200K group also declined from 0.8% to 0.5% over the period."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that budget cuts caused the audit-rate decline.",
+  "Claims about tax enforcement outcomes or compliance not in the table.",
+  "Absolute number of audits or taxpayers affected.",
+  "Extrapolating beyond 2017.",
+  "Saying the <$25K audit rate was exactly unchanged or increased.",
+  "Using relative_value as a percentage."
+ ],
+ "notes": "All cited numeric values are the table's % audit-rate values; percentage-point changes are arithmetic combinations. The table leaves the initial x_value blank, so units use 'series start' rather than asserting 2011 from the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 48.0,
+  "usage": {
+   "prompt_tokens": 1578,
+   "completion_tokens": 10824,
+   "total_tokens": 12402,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8696
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1066
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

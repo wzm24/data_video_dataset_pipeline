@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_73",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that books often contain a disproportionate amount of filler compared to actual useful content, highlighting the inefficiency of reading full texts.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The chart compares two content categories: Filler and Actual content, with Filler at 82 and Actual content at 18.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 82.0,
+     "note": "Table row for Filler; value=82.000"
+    },
+    {
+     "entity": "Actual content",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 18.0,
+     "note": "Table row for Actual content; value=18.000"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Filler is 82 and Actual content is 18.",
+    "The two categories are Filler (82) and Actual content (18).",
+    "Filler: 82; Actual content: 18."
+   ],
+   "visual_evidence_rule": "Both categories must be labeled as Filler and Actual content, and their values 82 and 18 must be visible or directly annotatable.",
+   "temporal_anchor": "The whole narration sentence, especially the contrast between large book and little content.",
+   "reviewer_question": "Should the video explicitly display both raw values (82 and 18), or is a labeled two-category chart enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Filler is much larger than Actual content; the gap is 64 points (82 minus 18).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 82.0,
+     "note": "Table value for Filler"
+    },
+    {
+     "entity": "Actual content",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 18.0,
+     "note": "Table value for Actual content"
+    }
+   ],
+   "computation": "82 - 18 = 64",
+   "accepted_routes": [
+    "Filler exceeds Actual content by 64.",
+    "Actual content is 64 less than Filler.",
+    "The gap between Filler and Actual content is 64 points."
+   ],
+   "visual_evidence_rule": "The two bars must be visibly unequal, and the difference of 64 should be shown or inferable from labels 82 and 18.",
+   "temporal_anchor": "The clause about frustration over how little content can be in such a large book.",
+   "reviewer_question": "Must the video quantify the gap as 64, or is visible inequality between 82 and 18 sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Filler makes up 82% of the combined total, while Actual content makes up 18%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 82.0,
+     "note": "Table value for Filler"
+    },
+    {
+     "entity": "Actual content",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 18.0,
+     "note": "Table value for Actual content"
+    }
+   ],
+   "computation": "82 / (82 + 18) = 0.82 = 82%; 18 / (82 + 18) = 0.18 = 18%",
+   "accepted_routes": [
+    "Filler is 82% and Actual content is 18% of the total.",
+    "Filler accounts for just over four-fifths of the total; Actual content is less than one-fifth.",
+    "Of the total shown, 82% is Filler and 18% is Actual content."
+   ],
+   "visual_evidence_rule": "A total or percentage scale must show Filler at 82% and Actual content at 18% of the combined total.",
+   "temporal_anchor": "The clause about a large book containing little content.",
+   "reviewer_question": "Should the video convert the raw values into shares of the total, or keep only the raw 82 and 18 values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Filler is about 4.6 times Actual content (82 divided by 18).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 82.0,
+     "note": "Table value for Filler"
+    },
+    {
+     "entity": "Actual content",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 18.0,
+     "note": "Table value for Actual content"
+    }
+   ],
+   "computation": "82 / 18 ≈ 4.56",
+   "accepted_routes": [
+    "Filler is about 4.6 times Actual content.",
+    "The Filler-to-Actual-content ratio is roughly 4.56 to 1.",
+    "Filler is more than four and a half times Actual content."
+   ],
+   "visual_evidence_rule": "A ratio annotation or proportional visual must make the about-4.6x relationship apparent.",
+   "temporal_anchor": "The clause about frustration over how little content is in a large book.",
+   "reviewer_question": "Should the video explicitly state the 4.6x ratio, or is the 82-vs-18 comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Filler crosses the majority threshold, while Actual content stays below half of the total.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 82.0,
+     "note": "Table value for Filler"
+    },
+    {
+     "entity": "Actual content",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 18.0,
+     "note": "Table value for Actual content"
+    }
+   ],
+   "computation": "(82 + 18) / 2 = 50; 82 > 50; 18 < 50",
+   "accepted_routes": [
+    "Filler is the majority of the total; Actual content is less than half.",
+    "More than half of the total is Filler, while Actual content is below 50%.",
+    "Filler crosses the 50% line; Actual content does not."
+   ],
+   "visual_evidence_rule": "A 50% midpoint or majority line must be visible, with Filler above it and Actual content below it.",
+   "temporal_anchor": "The clause about a large book containing little content.",
+   "reviewer_question": "Should the video show a 50% threshold/majority line, or is this redundant given the 82% share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Ranking: Filler is the largest category and Actual content is the smallest.",
+  "Total combined amount is 100 units (82 + 18).",
+  "The chart uses two categories only; no time trend is present."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that filler causes frustration or that reading full texts is always inefficient.",
+  "Extrapolation to all books, specific titles, or real-world reading time not present in the table.",
+  "Invented units such as pages, minutes, or words.",
+  "Using relative_value=0.1250 as a share or percentage because its denominator is unclear and it is identical for both categories.",
+  "Wrong denominator: saying Actual content is 18% of Filler instead of 18% of the combined total."
+ ],
+ "notes": "The clip has only two categories and no time series; the strongest required content is the raw pair, the gap/ratio, and the share of total. The 50% majority threshold and ranking are optional because they are largely implied by the share and comparison.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 34.1,
+  "usage": {
+   "prompt_tokens": 703,
+   "completion_tokens": 8815,
+   "total_tokens": 9518,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6958
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 319
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

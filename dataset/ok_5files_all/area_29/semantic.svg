@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs><radialGradient id="bg29" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8e8e8"/></radialGradient></defs>
+<rect width="1280" height="720" fill="url(#bg29)"/>
+<polygon points="24,32 562,32 540,90 24,90 24,32" fill="#5d3975"/>
+<text x="290" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">WHAT IT FEELS LIKE</text>
+<rect x="150" y="486" width="134" height="134" fill="#f59e0b"/>
+<rect x="70" y="636" width="220" height="46" fill="#f59e0b"/>
+<text x="180" y="668" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">DEATH BY CAR</text>
+<rect x="420" y="152" width="468" height="468" fill="#e75d3c"/>
+<rect x="400" y="636" width="270" height="46" fill="#e75d3c"/>
+<text x="535" y="668" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">DEATH BY PLANE</text>
+</svg>

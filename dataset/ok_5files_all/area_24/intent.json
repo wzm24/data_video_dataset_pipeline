@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_24",
+ "intent_en": "To illustrate the relative size of Earth's Moon compared to other large moons and Pluto, emphasizing its substantial size.",
+ "previous_intent": "To highlight the unique size proportion of Earth's Moon relative to its planet and compare its physical dimensions to other major moons and Pluto.",
+ "narration_support": "Our Moon is the biggest in the solar system in relation to its planet, and it's the fifth largest Moon in the solar system, quite a bit bigger than the dwarf planet Pluto.",
+ "chart_support": "A bubble chart comparing the diameters of Ganymed, Titan, Kallisto, Io, the Moon, and Pluto, visually demonstrating that the Moon is larger than Pluto but smaller than the other four moons.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states the Moon is the fifth largest and bigger than Pluto. The chart visually confirms this ranking and size difference through circle areas and diameter labels.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

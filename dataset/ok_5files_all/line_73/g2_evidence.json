@@ -1,0 +1,149 @@
+{
+ "clip_id": "line_73",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:temp anomaly @ x_px=197.7",
+    "mark:temp anomaly @ x_px=1140.0"
+   ],
+   "assertion": {
+    "low": "temp anomaly @ x_px=197.7",
+    "low_value": -0.156,
+    "high": "temp anomaly @ x_px=1140.0",
+    "high_value": 0.946,
+    "delta": 1.102,
+    "ratio": -6.0641,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The rendered series must let the viewer compare the first and last values and see that the last value is higher; the net upward change should be clear."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "temp anomaly @ x_px=1140.0",
+    "extreme": "max",
+    "expected": 0.946,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final displayed value must be visibly the highest point of the series, with no earlier value exceeding it."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:temp anomaly @ x_px=197.7",
+    "mark:temp anomaly @ x_px=585.7",
+    "mark:temp anomaly @ x_px=592.6",
+    "mark:temp anomaly @ x_px=1140.0"
+   ],
+   "assertion": {
+    "series": "temp anomaly",
+    "values": [
+     -0.156,
+     -0.016,
+     0.052,
+     0.946
+    ],
+    "threshold_between": [
+     -0.156,
+     0.946
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The rendered series must show negative values early and positive values late, including at least one sign change from negative to positive."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "temp anomaly @ x_px=384.8",
+    "extreme": "min",
+    "expected": -0.432,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow the viewer to see a low point earlier than the end; if included, the minimum should be identifiable as -0.432."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:temp anomaly @ x_px=613.4",
+    "mark:temp anomaly @ x_px=655.0",
+    "mark:temp anomaly @ x_px=1140.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "temp anomaly @ x_px=613.4",
+      "value": 0.144
+     },
+     {
+      "mark": "temp anomaly @ x_px=655.0",
+      "value": -0.098
+     },
+     {
+      "mark": "temp anomaly @ x_px=1140.0",
+      "value": 0.946
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The rendered series must show local upward and downward segments, not a smooth monotonic increase."
+  }
+ ]
+}

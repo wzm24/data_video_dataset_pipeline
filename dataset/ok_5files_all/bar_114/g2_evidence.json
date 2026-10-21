@@ -1,0 +1,146 @@
+{
+ "clip_id": "bar_114",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "32%",
+    "extreme": "max",
+    "expected": 0.4437,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The top category's magnitude must be visibly the largest among the four."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:32%",
+    "mark:18%",
+    "mark:16%",
+    "mark:10%"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "32%",
+      "value": 0.4437
+     },
+     {
+      "mark": "18%",
+      "value": 0.2496
+     },
+     {
+      "mark": "16%",
+      "value": 0.2219
+     },
+     {
+      "mark": "10%",
+      "value": 0.1387
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The four magnitudes must be shown in descending order."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:32%",
+    "mark:18%"
+   ],
+   "assertion": {
+    "low": "18%",
+    "low_value": 0.2496,
+    "high": "32%",
+    "high_value": 0.4437,
+    "delta": 0.1941,
+    "ratio": 1.7776,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the gap between the highest and next-highest magnitudes visually apparent."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:32%",
+    "mark:10%"
+   ],
+   "assertion": {
+    "greater": "32%",
+    "lesser": "10%",
+    "expected_ratio": 3.199,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the lowest magnitude is much smaller than the highest."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:18%",
+    "mark:16%"
+   ],
+   "assertion": {
+    "greater": "18%",
+    "lesser": "16%",
+    "expected_ratio": 1.1248,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the second and third magnitudes as visually similar and both larger than the fourth."
+  }
+ ]
+}

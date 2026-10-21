@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#f0f0f0"/>
+<line x1="120" y1="600" x2="1220" y2="600" stroke="#a9a9a9" stroke-width="3"/>
+<line x1="120" y1="140" x2="120" y2="600" stroke="#a9a9a9" stroke-width="3"/>
+<polyline points="120.0,600.0 148.2,599.1 176.4,596.3 204.6,591.7 232.8,585.3 261.0,577.0 289.2,566.9 317.4,554.9 345.6,541.1 373.8,525.5 402.1,508.0 430.3,488.7 458.5,467.5 486.7,444.5 514.9,419.7 543.1,393.0 571.3,364.5 599.5,334.1 627.7,301.9 655.9,267.9 684.1,232.0 712.3,194.3 740.5,154.7" fill="none" stroke="#444444" stroke-width="4"/>
+<circle cx="740.5" cy="154.7" r="6" fill="#444444" stroke="#ffffff" stroke-width="2"/>
+<line x1="920" y1="92" x2="1000" y2="92" stroke="#444444" stroke-width="4"/>
+<text x="1020" y="100" font-family="Arial, sans-serif" font-size="22" fill="#a9a9a9">Demand</text>
+</svg>

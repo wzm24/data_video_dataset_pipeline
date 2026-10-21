@@ -1,0 +1,256 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_27",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the income distribution in the depicted context is high, allowing for luxury housing at the average level and ensuring even the lowest earners are wealthier than the average American.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The overall income distribution is single-peaked: it rises from near zero on the left to one main maximum and then declines toward the right.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "income distribution",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "left endpoint near zero"
+    },
+    {
+     "entity": "income distribution",
+     "x": "781.4",
+     "field": "relative_value",
+     "value": 0.7739,
+     "note": "highest point"
+    },
+    {
+     "entity": "income distribution",
+     "x": "1175.8",
+     "field": "relative_value",
+     "value": 0.0118,
+     "note": "right endpoint near zero"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The income distribution rises to a single peak and then falls.",
+    "The overall income curve is unimodal, with one main hump."
+   ],
+   "visual_evidence_rule": "The income distribution data series must show one clear highest region and descending sides.",
+   "temporal_anchor": "the clause about average income and being able to afford a big fancy house",
+   "reviewer_question": "Is the single-peaked shape of the overall income distribution required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The overall income distribution reaches its maximum relative value of 0.7739 at x_px 781.4.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "income distribution",
+     "x": "781.4",
+     "field": "relative_value",
+     "value": 0.7739,
+     "note": "maximum relative value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The highest point of the income distribution is 0.7739 on the relative scale.",
+    "The income distribution peaks at about 0.77 relative value."
+   ],
+   "visual_evidence_rule": "The income distribution series must visibly reach its highest point at the peak position.",
+   "temporal_anchor": "the clause about average income and big fancy housing",
+   "reviewer_question": "Must the peak value 0.7739 be explicitly shown, or is the shape alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The bottom 10% series increases monotonically across its plotted range, from 0.0000 at x_px 120.0 to 0.3426 at x_px 601.2.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "bottom 10%",
+     "x": "120.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "start of bottom 10% series"
+    },
+    {
+     "entity": "bottom 10%",
+     "x": "601.2",
+     "field": "relative_value",
+     "value": 0.3426,
+     "note": "end of bottom 10% series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The bottom 10% curve rises steadily throughout its range.",
+    "The bottom 10% series never decreases."
+   ],
+   "visual_evidence_rule": "The bottom 10% data series must show no downward segments across its plotted range.",
+   "temporal_anchor": "the clause about the lowest paid 10%",
+   "reviewer_question": "Is the monotonic rise of the bottom 10% series required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The bottom 10% series maximum (0.3426 at x=601.2) is about 0.44 times the overall income distribution peak (0.7739 at x=781.4).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "bottom 10%",
+     "x": "601.2",
+     "field": "relative_value",
+     "value": 0.3426,
+     "note": "maximum of bottom 10% series"
+    },
+    {
+     "entity": "income distribution",
+     "x": "781.4",
+     "field": "relative_value",
+     "value": 0.7739,
+     "note": "maximum of overall income distribution"
+    }
+   ],
+   "computation": "0.3426 / 0.7739 = 0.4427",
+   "accepted_routes": [
+    "The bottom 10% series tops out at less than half the overall distribution's peak.",
+    "The bottom 10% maximum is about 0.44 of the overall maximum."
+   ],
+   "visual_evidence_rule": "Both series' maximum points must be visible or labeled for comparison.",
+   "temporal_anchor": "the clause about the lowest paid 10%",
+   "reviewer_question": "Should the video explicitly compare the bottom 10% peak to the overall peak?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The overall income distribution stays above half of its peak relative value (0.7739 / 2 ≈ 0.387) across a broad central interval, crossing that level between x=611.8 and x=622.4 on the rise and between x=932.0 and x=942.6 on the decline.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "income distribution",
+     "x": "611.8",
+     "field": "relative_value",
+     "value": 0.3768,
+     "note": "just below half-peak threshold on rise"
+    },
+    {
+     "entity": "income distribution",
+     "x": "622.4",
+     "field": "relative_value",
+     "value": 0.4121,
+     "note": "above half-peak threshold on rise"
+    },
+    {
+     "entity": "income distribution",
+     "x": "932.0",
+     "field": "relative_value",
+     "value": 0.4121,
+     "note": "above half-peak threshold on decline"
+    },
+    {
+     "entity": "income distribution",
+     "x": "942.6",
+     "field": "relative_value",
+     "value": 0.3768,
+     "note": "just below half-peak threshold on decline"
+    }
+   ],
+   "computation": "0.7739 / 2 = 0.38695",
+   "accepted_routes": [
+    "The income distribution stays above half its peak across a broad central interval.",
+    "The distribution crosses half of its peak around x=617 and x=937."
+   ],
+   "visual_evidence_rule": "The income distribution series must show a broad central section above the half-peak level.",
+   "temporal_anchor": "the clause about average income and big fancy housing",
+   "reviewer_question": "Is the broad region above half the peak required, or is the peak value alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The bottom 10% series shares the same relative values as the overall income distribution at overlapping x positions up to x=601.2, e.g., both are 0.3426 at x=601.2."
+ ],
+ "unsupported_to_avoid": [
+  "The bottom 10% earn more than the average American (no average American row or absolute income is in the table).",
+  "Average earners can afford luxury housing (no housing cost data is in the table).",
+  "Any dollar amounts, percentages, or counts (the table contains only relative_value).",
+  "Causal explanations for the income distribution."
+ ],
+ "notes": "The table has only relative_value for two series; no absolute income or average-American comparison is available. Units focus on relative shape, peak, bottom-10% trend, and derived thresholds.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 58.6,
+  "usage": {
+   "prompt_tokens": 5979,
+   "completion_tokens": 14578,
+   "total_tokens": 20557,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12816
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 5467
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

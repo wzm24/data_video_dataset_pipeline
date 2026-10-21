@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">Adults who skipped prescriptions or doses because of cost</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="511.8" x2="1220" y2="511.8" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="511.8" stroke="#666666" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="511.8" x2="120" y2="511.8" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="517.8" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">0%</text>
+<line data-role="gridline" x1="120" y1="481.5" x2="1220" y2="481.5" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="481.5" x2="120" y2="481.5" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="487.5" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">5%</text>
+<line data-role="gridline" x1="120" y1="451.2" x2="1220" y2="451.2" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="451.2" x2="120" y2="451.2" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="457.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">10%</text>
+<line data-role="gridline" x1="120" y1="420.9" x2="1220" y2="420.9" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="420.9" x2="120" y2="420.9" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="426.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">15%</text>
+<line data-role="gridline" x1="120" y1="390.5" x2="1220" y2="390.5" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="390.5" x2="120" y2="390.5" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="396.5" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">20%</text>
+<line data-role="gridline" x1="120" y1="360.2" x2="1220" y2="360.2" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="360.2" x2="120" y2="360.2" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="366.2" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">25%</text>
+<line data-role="gridline" x1="120" y1="329.9" x2="1220" y2="329.9" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="329.9" x2="120" y2="329.9" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="335.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">30%</text>
+<line data-role="gridline" x1="120" y1="299.5" x2="1220" y2="299.5" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<line data-role="tick" x1="112" y1="299.5" x2="120" y2="299.5" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="305.5" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">35%</text>
+<g id="entity-united-kingdom-percentage" data-role="entity" data-entity-id="united-kingdom" data-label="United Kingdom">
+<rect id="united-kingdom-percentage-bar" data-role="bar" data-entity-id="united-kingdom" data-value="2.1374" x="312.5" y="500.3" width="68.8" height="12.1" fill="#466d78" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="united-kingdom-percentage-label" data-role="category-label" data-entity-id="united-kingdom" x="346.9" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333"><tspan x="346.9" dy="0.0">United</tspan><tspan x="346.9" dy="20.0">Kingdom</tspan></text>
+</g>
+<g id="entity-germany-percentage" data-role="entity" data-entity-id="germany" data-label="Germany">
+<rect id="germany-percentage-bar" data-role="bar" data-entity-id="germany" data-value="3.15522" x="413.0" y="493.9" width="67.9" height="17.9" fill="#466d78" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="germany-percentage-label" data-role="category-label" data-entity-id="germany" x="447.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Germany</text>
+</g>
+<g id="entity-france-percentage" data-role="entity" data-entity-id="france" data-label="France">
+<rect id="france-percentage-bar" data-role="bar" data-entity-id="france" data-value="4.17303" x="513.6" y="487.6" width="67.9" height="24.3" fill="#466d78" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="france-percentage-label" data-role="category-label" data-entity-id="france" x="547.5" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">France</text>
+</g>
+<g id="entity-australia-percentage" data-role="entity" data-entity-id="australia" data-label="Australia">
+<rect id="australia-percentage-bar" data-role="bar" data-entity-id="australia" data-value="6.10687" x="613.3" y="475.4" width="68.8" height="36.4" fill="#466d78" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="australia-percentage-label" data-role="category-label" data-entity-id="australia" x="647.7" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Australia</text>
+</g>
+<g id="entity-switzerland-percentage" data-role="entity" data-entity-id="switzerland" data-label="Switzerland">
+<rect id="switzerland-percentage-bar" data-role="bar" data-entity-id="switzerland" data-value="9.05852" x="713.8" y="456.9" width="68.8" height="54.9" fill="#466d78" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="switzerland-percentage-label" data-role="category-label" data-entity-id="switzerland" x="748.2" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Switzerland</text>
+</g>
+<g id="entity-canada-percentage" data-role="entity" data-entity-id="canada" data-label="Canada">
+<rect id="canada-percentage-bar" data-role="bar" data-entity-id="canada" data-value="10.0763" x="814.4" y="450.5" width="68.8" height="61.3" fill="#466d78" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="canada-percentage-label" data-role="category-label" data-entity-id="canada" x="848.8" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">Canada</text>
+</g>
+<g id="entity-insured-united-states-percentage" data-role="entity" data-entity-id="insured-united-states" data-label="Insured United States">
+<rect id="insured-united-states-percentage-bar" data-role="bar" data-entity-id="insured-united-states" data-value="20.0512" x="914.1" y="387.9" width="69.6" height="125.2" fill="#4b8cc5" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="insured-united-states-percentage-label" data-role="category-label" data-entity-id="insured-united-states" x="948.9" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333"><tspan x="948.9" dy="0.0">Insured</tspan><tspan x="948.9" dy="20.0">United</tspan><tspan x="948.9" dy="20.0">States</tspan></text>
+</g>
+<g id="entity-uninsured-united-states-percentage" data-role="entity" data-entity-id="uninsured-united-states" data-label="Uninsured United States">
+<rect id="uninsured-united-states-percentage-bar" data-role="bar" data-entity-id="uninsured-united-states" data-value="33.4527" x="1013.8" y="304.2" width="70.5" height="208.9" fill="#4b8cc5" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="uninsured-united-states-percentage-label" data-role="category-label" data-entity-id="uninsured-united-states" x="1049.0" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333"><tspan x="1049.0" dy="0.0">Uninsured</tspan><tspan x="1049.0" dy="20.0">United</tspan><tspan x="1049.0" dy="20.0">States</tspan></text>
+</g>
+</g>
+</svg>

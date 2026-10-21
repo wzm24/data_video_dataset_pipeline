@@ -1,0 +1,243 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_29",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how catastrophic events are perceived as much larger risks than frequent causes of death, highlighting a cognitive bias in risk perception.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The 'what it feels like' perception measure spans the full relative scale from 1.0 to 0.0.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "what it feels like",
+     "x": "24.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "maximum relative perception value in the table"
+    },
+    {
+     "entity": "what it feels like",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "minimum relative perception value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "what it feels like reaches 1.0 at the high end and 0.0 at the low end",
+    "perceived risk is shown at full relative height versus zero relative height",
+    "the feeling scale uses endpoints 1.0 and 0.0"
+   ],
+   "visual_evidence_rule": "The chart must visibly show the 'what it feels like' measure at relative value 1.0 and at relative value 0.0, e.g. full height versus baseline.",
+   "temporal_anchor": "high 1.0 should align with 'Single catastrophic events burn into our memory'; low 0.0 should align with 'coal and oil kill silently'.",
+   "reviewer_question": "Are both endpoint values 1.0 and 0.0 required to be explicitly shown, or is only the contrast required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The clip must convey the ordering that catastrophic-event perception ranks above frequent-cause perception.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "what it feels like",
+     "x": "24.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "higher perceived-risk value"
+    },
+    {
+     "entity": "what it feels like",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "lower perceived-risk value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "catastrophic events feel much riskier than coal/oil deaths",
+    "dramatic events rank above silent killers in perceived risk",
+    "the perceived-risk order is catastrophic events first, silent causes last"
+   ],
+   "visual_evidence_rule": "The chart must support a direct perceptual ordering, e.g. one category clearly higher or larger than the other.",
+   "temporal_anchor": "carried by the whole narration clause contrasting burning into memory with killing silently.",
+   "reviewer_question": "Must the clip explicitly name both categories, or only show the perceptual ordering?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The clip must convey that the measure is 'what it feels like'—relative perception, not actual mortality counts.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "what it feels like",
+     "x": "24.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "the table source_type is relative_only; 1.0 is a relative perception value, not an absolute count"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "what it feels like (perceived risk)",
+    "relative perception score",
+    "subjective risk, not death counts"
+   ],
+   "visual_evidence_rule": "Axis or label must indicate relative/feelings/perception, not absolute deaths or counts.",
+   "temporal_anchor": "carried by the perceptual framing in 'burn into our memory' and 'kill silently'.",
+   "reviewer_question": "Should the video explicitly state the scale is relative perception rather than absolute mortality?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The clip must frame the contrast as a cognitive bias in risk perception.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "what it feels like",
+     "x": "24.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "high perceived-risk value for the dramatic event side"
+    },
+    {
+     "entity": "what it feels like",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "low perceived-risk value for the silent-cause side"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "availability heuristic/cognitive bias",
+    "we overestimate rare dramatic risks",
+    "risk perception bias"
+   ],
+   "visual_evidence_rule": "The clip should label or narratively frame the difference as perception bias, not as a factual risk ranking.",
+   "temporal_anchor": "carried by the full narration, especially the contrast between memory-burning events and silent killers.",
+   "reviewer_question": "Must the video explicitly use a bias/availability label, or can it just illustrate the mismatch?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The perceived-risk difference between the high and low sides is a full 1.0 relative point.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "what it feels like",
+     "x": "24.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "maximum value"
+    },
+    {
+     "entity": "what it feels like",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "minimum value"
+    }
+   ],
+   "computation": "1.0 - 0.0 = 1.0",
+   "accepted_routes": [
+    "a 1.0-point gap on the relative perception scale",
+    "the full relative scale separates the two perceptions",
+    "max minus min equals 1.0"
+   ],
+   "visual_evidence_rule": "The chart must make the gap between the 1.0 and 0.0 values visually apparent.",
+   "temporal_anchor": "carried by the contrast in 'Single catastrophic events burn into our memory while coal and oil kill silently'.",
+   "reviewer_question": "Should the video explicitly communicate the 1.0-point gap, or is the ordered contrast sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Using a y-axis labeled 0.0 to 1.0 for the relative 'what it feels like' scale.",
+  "Labeling the high side as catastrophic events and the low side as coal/oil, provided the labels are clearly perceptual.",
+  "Animating a memory/burn effect for catastrophic events and a silent/flat effect for coal/oil."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute death counts for coal/oil or catastrophic events.",
+  "Claiming coal/oil deaths are 0.0; the table's 0.0 is a relative perception value.",
+  "Causal claim that memory or media coverage directly causes mortality.",
+  "Extrapolating to other causes or countries.",
+  "Using a denominator such as total deaths unless explicitly derived from the table (not available)."
+ ],
+ "notes": "The table only provides relative 'what it feels like' values of 1.0 and 0.0; category labels come from narration/intent. Units focus on the perceptual contrast, relative-only scale, and cognitive-bias framing.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.0
+ },
+ "draft_cost": {
+  "sec": 48.7,
+  "usage": {
+   "prompt_tokens": 685,
+   "completion_tokens": 10906,
+   "total_tokens": 11591,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9126
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 429
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

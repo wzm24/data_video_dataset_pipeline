@@ -1,0 +1,145 @@
+{
+ "clip_id": "bar_69",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:USA @ 300.0",
+    "mark:European Union @ 540.0",
+    "mark:China @ 780.0",
+    "mark:Japan @ 1020.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "USA @ 300.0",
+      "value": 18.5
+     },
+     {
+      "mark": "European Union @ 540.0",
+      "value": 15.4
+     },
+     {
+      "mark": "China @ 780.0",
+      "value": 11.8
+     },
+     {
+      "mark": "Japan @ 1020.0",
+      "value": 4.8
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a descending order by bar height or an explicit ranked list: USA tallest, EU second, China third, Japan shortest."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "USA @ 300.0",
+    "extreme": "max",
+    "expected": 18.5,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "USA bar must be tallest and labeled 18.5 (or $18.5T)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:European Union @ 540.0",
+    "mark:China @ 780.0"
+   ],
+   "assertion": {
+    "greater": "European Union @ 540.0",
+    "lesser": "China @ 780.0",
+    "expected_ratio": 1.3051,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "EU bar/label must be 15.4 and visibly taller than China's 11.8; EU should appear second in the order."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Japan @ 1020.0",
+    "extreme": "min",
+    "expected": 4.8,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Japan bar must be shortest and labeled 4.8 (or $4.8T)."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:USA @ 300.0",
+    "mark:China @ 780.0"
+   ],
+   "assertion": {
+    "low": "China @ 780.0",
+    "low_value": 11.8,
+    "high": "USA @ 300.0",
+    "high_value": 18.5,
+    "delta": 6.7,
+    "ratio": 1.5678,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, chart must annotate or encode a gap of 6.7 between the USA and China bars/labels."
+  }
+ ]
+}

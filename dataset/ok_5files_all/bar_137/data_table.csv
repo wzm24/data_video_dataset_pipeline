@@ -1,0 +1,12 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_137,EU-28,eu-28,460.0,,,0.1406,relative,#1f6e8b,relative_only
+bar_137,Europe,europe,460.0,,,0.1406,relative,#4b53a3,relative_only
+bar_137,United States,united-states,460.0,,,0.1406,relative,#fde725,relative_only
+bar_137,North America,north-america,460.0,,,0.1406,relative,#e0e1dd,relative_only
+bar_137,North America,north-america,460.0,,,0.1406,relative,#1b9e77,relative_only
+bar_137,South America,south-america,460.0,,,0.1406,relative,#2ca02c,relative_only
+bar_137,India,india,460.0,,,0.1406,relative,#fdae6b,relative_only
+bar_137,China,china,460.0,,,0.1406,relative,#d73027,relative_only
+bar_137,Asia,asia,460.0,,,0.1406,relative,#f4a582,relative_only
+bar_137,Oceania,oceania,460.0,,,0.1406,relative,#fcbba1,relative_only
+bar_137,35 billion worldwide,35-billion-worldwide,460.0,,,0.1406,relative,#7f7f7f,relative_only

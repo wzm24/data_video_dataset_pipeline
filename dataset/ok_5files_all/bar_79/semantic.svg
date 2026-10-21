@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f4f4f2"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#3d6fb4">VC FUNDS</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="260.0" y1="580.0" x2="1120.0" y2="580.0" stroke="#888888" stroke-width="3"/>
+<g id="entity-vision-fund" data-role="entity" data-entity-id="vision-fund" data-label="Vision Fund">
+<rect id="vision-fund-bar" data-role="bar" data-entity-id="vision-fund" data-value="1" x="260.0" y="215.2" width="860.0" height="45.6" fill="#4a90d9" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text data-role="value-label" x="274.0" y="245.0" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f2f2f2">VISION FUND</text>
+</g>
+<g id="entity-vc-fund-1" data-role="entity" data-entity-id="vc-fund-1" data-label="VC Fund 1">
+<rect id="vc-fund-1-bar" data-role="bar" data-entity-id="vc-fund-1" data-value="0.3" x="260.0" y="291.2" width="258.0" height="45.6" fill="#e8b84b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-vc-fund-2" data-role="entity" data-entity-id="vc-fund-2" data-label="VC Fund 2">
+<rect id="vc-fund-2-bar" data-role="bar" data-entity-id="vc-fund-2" data-value="0.28" x="260.0" y="367.2" width="240.8" height="45.6" fill="#333333" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-vc-fund-3" data-role="entity" data-entity-id="vc-fund-3" data-label="VC Fund 3">
+<rect id="vc-fund-3-bar" data-role="bar" data-entity-id="vc-fund-3" data-value="0.26" x="260.0" y="443.2" width="223.6" height="45.6" fill="#a8c3e0" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-vc-fund-4" data-role="entity" data-entity-id="vc-fund-4" data-label="VC Fund 4">
+<rect id="vc-fund-4-bar" data-role="bar" data-entity-id="vc-fund-4" data-value="0.24" x="260.0" y="519.2" width="206.4" height="45.6" fill="#e8a8c0" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+</g>
+</svg>

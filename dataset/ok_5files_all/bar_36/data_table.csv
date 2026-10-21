@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,name_source,entity_original
+bar_36,Less than high school,less-than-high-school,507.6,,3.000,0.0725,,#dcdcdc,printed,,svg_text,Less than high school
+bar_36,High school graduate,high-school-graduate,561.2,,9.000,0.2175,,#dcdcdc,printed,,svg_text,High school graduate
+bar_36,Some college,some-college,722.0,,27.000,0.6525,,#fcee0a,printed,,svg_text,Some college
+bar_36,College graduate,college-graduate,659.5,,20.000,0.4834,,#dcdcdc,printed,,svg_text,College graduate

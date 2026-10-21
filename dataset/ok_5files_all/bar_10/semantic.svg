@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#7B3FF2"/>
+<rect id="chart-title-box" data-role="title-box" x="440" y="30" width="400" height="56" rx="8" fill="#22D3EE"/>
+<text id="chart-title" data-role="title" x="640.0" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Life Expectancy</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1160" y2="600" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+<line data-role="axis" x1="120" y1="180" x2="120" y2="600" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">0</text>
+<line data-role="tick" x1="112" y1="468.75" x2="120" y2="468.75" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="474.75" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">25</text>
+<line data-role="tick" x1="112" y1="337.5" x2="120" y2="337.5" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="343.5" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">50</text>
+<line data-role="tick" x1="112" y1="206.25" x2="120" y2="206.25" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text data-role="tick-label" x="104" y="212.25" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">75</text>
+<g id="entity-usa" data-role="entity" data-entity-id="usa" data-label="USA">
+<rect id="usa-bar" data-role="bar" data-entity-id="usa" data-value="71" x="240" y="227.25" width="160" height="372.75" fill="#A78BFA"/>
+<text id="usa-label" data-role="category-label" data-entity-id="usa" x="320" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">USA</text>
+</g>
+<g id="entity-south-korea" data-role="entity" data-entity-id="south-korea" data-label="South Korea">
+<rect id="south-korea-bar" data-role="bar" data-entity-id="south-korea" data-value="52" x="560" y="327.0" width="160" height="273.0" fill="#A78BFA"/>
+<text id="south-korea-label" data-role="category-label" data-entity-id="south-korea" x="640" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">South Korea</text>
+</g>
+<g id="entity-bangladesh" data-role="entity" data-entity-id="bangladesh" data-label="Bangladesh">
+<rect id="bangladesh-bar" data-role="bar" data-entity-id="bangladesh" data-value="47" x="880" y="353.25" width="160" height="246.75" fill="#22D3EE"/>
+<text id="bangladesh-label" data-role="category-label" data-entity-id="bangladesh" x="960" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">Bangladesh</text>
+</g>
+</g>
+</svg>

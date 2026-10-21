@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#F0F0F0"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">GDP (NOMINAL)</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="230.0" y1="140" x2="230.0" y2="600" stroke="#666666" stroke-width="3"/>
+<line data-role="axis" x1="230.0" y1="600" x2="1220" y2="600" stroke="#666666" stroke-width="3"/>
+<g id="entity-ghana-value" data-role="entity" data-entity-id="ghana" data-label="Ghana">
+<rect id="ghana-value-bar" data-role="bar" data-entity-id="ghana" data-value="1" x="230.0" y="222.8" width="726.0" height="36.8" fill="#C8232C" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="ghana-value-label" data-role="category-label" data-entity-id="ghana" x="216.0" y="233.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">Ghana</text>
+</g>
+<g id="entity-madagascar-value" data-role="entity" data-entity-id="madagascar" data-label="Madagascar">
+<rect id="madagascar-value-bar" data-role="bar" data-entity-id="madagascar" data-value="0.303" x="230.0" y="301.0" width="220.0" height="36.8" fill="#E84D39" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="madagascar-value-label" data-role="category-label" data-entity-id="madagascar" x="216.0" y="311.4" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">Madagascar</text>
+</g>
+<g id="entity-saint-lucia-value" data-role="entity" data-entity-id="saint-lucia" data-label="Saint Lucia">
+<rect id="saint-lucia-value-bar" data-role="bar" data-entity-id="saint-lucia" data-value="0.0606" x="230.0" y="379.2" width="44.0" height="36.8" fill="#5DADE2" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="saint-lucia-value-label" data-role="category-label" data-entity-id="saint-lucia" x="216.0" y="389.6" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333">Saint Lucia</text>
+</g>
+<g id="entity-antigua-and-barbuda-value" data-role="entity" data-entity-id="antigua-and-barbuda" data-label="Antigua and Barbuda">
+<rect id="antigua-and-barbuda-value-bar" data-role="bar" data-entity-id="antigua-and-barbuda" data-value="0.0303" x="230.0" y="462.0" width="22.0" height="36.8" fill="#2E86C1" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="antigua-and-barbuda-value-label" data-role="category-label" data-entity-id="antigua-and-barbuda" x="216.0" y="472.4" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#333333"><tspan x="216.0" dy="0.0">Antigua and</tspan><tspan x="216.0" dy="20.0">Barbuda</tspan></text>
+</g>
+</g>
+</svg>

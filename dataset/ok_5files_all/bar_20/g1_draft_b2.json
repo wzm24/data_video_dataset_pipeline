@@ -1,0 +1,214 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_20",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that empowering families to choose their desired number of children leads to a substantial decrease in the projected global population by the year 2100.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The projected global population in 2100 is 2.8 billion people.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2100)",
+     "x": "2100",
+     "field": "value",
+     "value": 2.8,
+     "note": "Absolute value from the table; the table unit column is billion."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2100 projection is 2.8 billion people.",
+    "By 2100, projected global population is 2.8 billion.",
+    "The projected population reaches 2.8 billion in 2100."
+   ],
+   "visual_evidence_rule": "A visible 2100 endpoint value of 2.8 billion must be shown.",
+   "temporal_anchor": "The 'to 2.8 billion people' endpoint clause.",
+   "reviewer_question": "Must the video state the 2100 projected population as 2.8 billion?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 2.8 billion value applies to the year 2100, not to an earlier or unspecified time.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2100)",
+     "x": "2100",
+     "field": "x_value",
+     "value": 2100,
+     "note": "x_value is the table's time endpoint for the projection."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "This is the 2100 projection.",
+    "The value is anchored to the year 2100.",
+    "The endpoint year is 2100."
+   ],
+   "visual_evidence_rule": "The year 2100 must be visible as the time anchor for the 2.8 billion value.",
+   "temporal_anchor": "The endpoint clause showing 2.8 billion; if narration omits 2100, the chart must still carry the year.",
+   "reviewer_question": "Must the 2100 date be explicitly shown as the time for the value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 2.8 figure is measured in billions of people, not as a percentage, count, or other scale.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2100)",
+     "x": "2100",
+     "field": "value",
+     "value": 2.8,
+     "note": "The table's unit column is 'billion'."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "2.8 billion people",
+    "2.8 billion",
+    "The value is in billions."
+   ],
+   "visual_evidence_rule": "The 2.8 value must be labeled or scaled as billions, not as millions or a percentage.",
+   "temporal_anchor": "The '2.8 billion people' phrase.",
+   "reviewer_question": "Must the 'billion' unit be explicit in the video?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The metric is projected population, not the number of births.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2100)",
+     "x": "2100",
+     "field": "value",
+     "value": 2.8,
+     "note": "Entity column is 'Projected population (2100)', distinct from birth counts."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "This is projected global population.",
+    "The 2.8 billion figure represents people/population.",
+    "The metric is a population projection, not a birth count."
+   ],
+   "visual_evidence_rule": "The chart must identify the metric as population/people rather than births alone.",
+   "temporal_anchor": "The phrase around '2.8 billion people'; reconcile 'birth projections' with the table's population metric.",
+   "reviewer_question": "Must the video identify 2.8 billion as projected population rather than births?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "In the table's relative scale, the sole 2100 projection is normalized to 1.0000 as the reference/full value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Projected population (2100)",
+     "x": "2100",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "relative_value is a 0-1 normalization, not a percentage."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2100 projection is the table's full/reference relative value.",
+    "The sole row has relative_value 1.0000.",
+    "The value is normalized to 1.0 in the dataset."
+   ],
+   "visual_evidence_rule": "If the relative scale is exposed, the 2100 value must read as the 1.0000/full reference row.",
+   "temporal_anchor": "No direct narration clause; optional metadata anchor.",
+   "reviewer_question": "Should the relative_value normalization be treated as optional metadata or omitted?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may note that the table contains only the 2100 projected-population endpoint, so no comparison or ranking is available.",
+  "The video may use the normalized relative_value 1.0000 as optional scale metadata if it does not imply a percentage."
+ ],
+ "unsupported_to_avoid": [
+  "The narrated decline percentage is not in the table and should not be asserted.",
+  "Any baseline or starting population value, because the table provides only the 2100 endpoint.",
+  "Causal claims that family choice directly causes the projected population level; the table only carries the endpoint value.",
+  "Comparisons against other countries, scenarios, or years, since the table has only one row.",
+  "Absolute birth counts or percentage values not derivable from the single table row."
+ ],
+ "notes": "Only one absolute row exists, so the ground truth centers on the 2100 endpoint value 2.8 billion and its identity, time, and unit. The narrated decline percentage and causal framing are not table-supported and should be avoided.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.95
+ },
+ "draft_cost": {
+  "sec": 36.7,
+  "usage": {
+   "prompt_tokens": 884,
+   "completion_tokens": 7660,
+   "total_tokens": 8544,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6155
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 372
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

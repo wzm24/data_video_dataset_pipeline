@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#333333"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Top 0.1% wealth share in the United States</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">0%</text>
+<line data-role="tick" x1="112" y1="508.0" x2="120" y2="508.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="514.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">5%</text>
+<line data-role="tick" x1="112" y1="416.0" x2="120" y2="416.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="422.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">10%</text>
+<line data-role="tick" x1="112" y1="324.0" x2="120" y2="324.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="330.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">15%</text>
+<line data-role="tick" x1="112" y1="232.0" x2="120" y2="232.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="238.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">20%</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">25%</text>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="200.0,213.6 230.0,305.6 250.0,360.8 270.0,287.2 300.0,324.0 320.0,158.4 340.0,324.0 360.0,268.8 380.0,305.6 410.0,379.2 440.0,416.0 470.0,434.4 500.0,443.6 530.0,434.4 560.0,443.6 590.0,434.4 620.0,443.6 650.0,452.8 680.0,462.0 710.0,471.2 740.0,480.4 770.0,489.6 800.0,489.6 830.0,471.2 860.0,462.0 890.0,452.8 920.0,416.0 950.0,397.6 980.0,379.2 1010.0,360.8 1040.0,342.4 1070.0,324.0 1100.0,287.2 1130.0,250.4 1140.0,232.0 1160.0,250.4 1180.0,259.6" fill="none" stroke="#ffffff" stroke-width="2" data-animation-property="points"/>
+</g>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="270.0,259.6 1180.0,259.6" fill="none" stroke="#d4d400" stroke-width="2" stroke-dasharray="8,6" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1910</text>
+<text data-role="x-axis-label" x="220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1920</text>
+<text data-role="x-axis-label" x="320.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1930</text>
+<text data-role="x-axis-label" x="420.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1940</text>
+<text data-role="x-axis-label" x="520.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1950</text>
+<text data-role="x-axis-label" x="620.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1960</text>
+<text data-role="x-axis-label" x="720.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1970</text>
+<text data-role="x-axis-label" x="820.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1980</text>
+<text data-role="x-axis-label" x="920.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1990</text>
+<text data-role="x-axis-label" x="1020.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2000</text>
+<text data-role="x-axis-label" x="1120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2010</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2020</text>
+</g>
+</svg>

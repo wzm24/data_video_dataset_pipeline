@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#2b323f"/>
+<text x="640" y="50" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#fff">Revenue estimates of Biden's proposal</text>
+<text x="640" y="82" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#fff">over 10 years</text>
+<text x="544.0" y="208.0" text-anchor="end" font-family="Arial" font-size="18" fill="#fff">Tax Foundation</text>
+<rect x="560.0" y="182.0" width="362.1" height="36" fill="#d98236"/>
+<text x="912.1" y="208.0" text-anchor="end" font-family="Arial" font-size="19" font-weight="700" fill="#fff">$213 billion</text>
+<text x="544.0" y="328.0" text-anchor="end" font-family="Arial" font-size="18" fill="#fff">Penn Wharton</text>
+<rect x="560.0" y="302.0" width="510.0" height="36" fill="#d98236"/>
+<text x="1060.0" y="328.0" text-anchor="end" font-family="Arial" font-size="19" font-weight="700" fill="#fff">$300 billion</text>
+<text x="544.0" y="448.0" text-anchor="end" font-family="Arial" font-size="18" fill="#fff">Tax Policy Center</text>
+<rect x="560.0" y="422.0" width="639.2" height="36" fill="#d98236"/>
+<text x="1189.2" y="448.0" text-anchor="end" font-family="Arial" font-size="19" font-weight="700" fill="#fff">$376 billion</text>
+<text x="544.0" y="568.0" text-anchor="end" font-family="Arial" font-size="18" fill="#fff">Americans for Tax Fairness</text>
+<rect x="560.0" y="542.0" width="680.0" height="36" fill="#d98236"/>
+<text x="1230.0" y="568.0" text-anchor="end" font-family="Arial" font-size="19" font-weight="700" fill="#fff">$400 billion</text>
+</svg>

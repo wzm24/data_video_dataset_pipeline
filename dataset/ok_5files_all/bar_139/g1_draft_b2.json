@@ -1,0 +1,293 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_139",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the substantial income disparity between high-earning and low-earning U.S. households in 2019.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The relative income values increase across the ordered income groups from the 10th through the 90th, with higher group labels having larger relative values.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "relative_value",
+     "value": 0.0499,
+     "note": "low end of the ordered series"
+    },
+    {
+     "entity": "20th",
+     "x": "20th",
+     "field": "relative_value",
+     "value": 0.0683,
+     "note": "second point in the upward series"
+    },
+    {
+     "entity": "30th",
+     "x": "30th",
+     "field": "relative_value",
+     "value": 0.0932,
+     "note": "third point in the upward series"
+    },
+    {
+     "entity": "40th",
+     "x": "40th",
+     "field": "relative_value",
+     "value": 0.1243,
+     "note": "fourth point in the upward series"
+    },
+    {
+     "entity": "50th",
+     "x": "50th",
+     "field": "relative_value",
+     "value": 0.1708,
+     "note": "middle point in the upward series"
+    },
+    {
+     "entity": "60th",
+     "x": "60th",
+     "field": "relative_value",
+     "value": 0.2175,
+     "note": "sixth point in the upward series"
+    },
+    {
+     "entity": "70th",
+     "x": "70th",
+     "field": "relative_value",
+     "value": 0.2642,
+     "note": "seventh point in the upward series"
+    },
+    {
+     "entity": "80th",
+     "x": "80th",
+     "field": "relative_value",
+     "value": 0.3262,
+     "note": "eighth point in the upward series"
+    },
+    {
+     "entity": "90th",
+     "x": "90th",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "high end of the ordered series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series rises from the 10th group to the 90th group.",
+    "Each step from 10th through 90th increases in relative income.",
+    "Higher income-percentile groups have larger relative values."
+   ],
+   "visual_evidence_rule": "The chart must show the groups in order with the 90th visibly higher than the 10th and no reversal in the overall upward trend.",
+   "temporal_anchor": "the ranking/setup clause ('Suppose that I rank US families by their income...')",
+   "reviewer_question": "Is the overall upward ordering from 10th to 90th a required semantic unit, or only the two endpoint disparity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 10th group is the smallest relative-value endpoint in the series, with relative_value 0.0499.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "relative_value",
+     "value": 0.0499,
+     "note": "minimum of all rows"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 10th group is the lowest point.",
+    "Relative income is smallest at the 10th group.",
+    "The low end sits at a relative value of 0.0499."
+   ],
+   "visual_evidence_rule": "The 10th group must be visibly the shortest/lowest point among the displayed groups.",
+   "temporal_anchor": "the low-income comparison clause ('families who ranked the 10th lowest')",
+   "reviewer_question": "Must the exact bottom value 0.0499 be shown, or is only the bottom position required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 90th group is the largest relative-value endpoint in the series, with relative_value 0.6250.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "90th",
+     "x": "90th",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "maximum of all rows"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 90th group is the highest point.",
+    "Relative income is largest at the 90th group.",
+    "The high end sits at 0.6250 relative units."
+   ],
+   "visual_evidence_rule": "The 90th group must be visibly the tallest/highest point among the displayed groups.",
+   "temporal_anchor": "the high-income comparison clause ('families who ranked the 10th highest')",
+   "reviewer_question": "Must the exact top value 0.6250 be shown, or is only the top position required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The high-end 90th group's relative value is about 12.5 times the low-end 10th group's relative value (0.6250 / 0.0499 = 12.525), showing a disparity greater than twelvefold.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "90th",
+     "x": "90th",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "numerator"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "relative_value",
+     "value": 0.0499,
+     "note": "denominator"
+    }
+   ],
+   "computation": "0.6250 / 0.0499 = 12.525",
+   "accepted_routes": [
+    "The 90th group is about 12.5 times the 10th group.",
+    "The high end is more than 12 times the low end.",
+    "Rounded to the nearest whole number, the ratio is about 13 times."
+   ],
+   "visual_evidence_rule": "The chart must make the 90th and 10th values directly comparable and show the 90th towering over the 10th by more than an order of magnitude.",
+   "temporal_anchor": "the disparity clause ('...was 13 times as much as...')",
+   "reviewer_question": "Should the video use the table-derived ratio 12.5×, the narration's rounded 13×, or both?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 80th-to-90th step is the largest single-step increase in the series: 0.6250 - 0.3262 = 0.2988, far larger than the next largest step from the 70th to 80th (0.3262 - 0.2642 = 0.0620).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "70th",
+     "x": "70th",
+     "field": "relative_value",
+     "value": 0.2642,
+     "note": "start of the next-largest adjacent step"
+    },
+    {
+     "entity": "80th",
+     "x": "80th",
+     "field": "relative_value",
+     "value": 0.3262,
+     "note": "end of the next-largest adjacent step and start of the largest step"
+    },
+    {
+     "entity": "90th",
+     "x": "90th",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "end of the largest adjacent step"
+    }
+   ],
+   "computation": "0.6250 - 0.3262 = 0.2988; 0.3262 - 0.2642 = 0.0620; 0.2988 / 0.0620 = 4.819",
+   "accepted_routes": [
+    "The biggest jump occurs between the 80th and 90th groups.",
+    "The 90th group is separated from the rest by the largest step.",
+    "The last interval adds about 0.2988 relative units, roughly five times the previous largest interval."
+   ],
+   "visual_evidence_rule": "The chart must show a visibly steeper rise between the 80th and 90th than between any other adjacent pair.",
+   "temporal_anchor": "optional extension after the ranking setup, if the animation includes more than the two endpoints",
+   "reviewer_question": "Should this optional largest-step detail be included, or does it distract from the two-endpoint disparity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The full series spans groups labeled from the 10th through the 90th, establishing the ranking context.",
+  "The 90th group is the only value above 0.5 relative units; the 80th and below are at or below 0.3262.",
+  "The lower groups from 10th through 80th are relatively compressed compared with the 90th."
+ ],
+ "unsupported_to_avoid": [
+  "Any dollar amount or percentage for household income, because the table only provides relative_value.",
+  "Causal explanations for the income disparity.",
+  "Claims about income in years other than 2019.",
+  "Using the x_px positions or colors as if they encoded values.",
+  "Treating relative_value as a percent share (e.g., saying 0.6250 means 62.5% of income).",
+  "Treating the narration's '13 times' as an exact table value rather than a rounded expression of the table-derived ratio 0.6250 / 0.0499 = 12.525."
+ ],
+ "notes": "The table is relative-only, so all values are described as relative magnitudes and ratios, not dollars or percentages. The core required comparison is the 90th-to-10th ratio; the largest 80th-to-90th jump is a useful optional derived unit.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 46.6,
+  "usage": {
+   "prompt_tokens": 1159,
+   "completion_tokens": 11470,
+   "total_tokens": 12629,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9235
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 647
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,237 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_96",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the power imbalance and sectarian conflict arising from the Shia majority taking control and oppressing the Sunni minority.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Shia value is 63 in the chart.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia row value from table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Shia is 63.",
+    "The Shia bar reaches 63.",
+    "Shia value: 63."
+   ],
+   "visual_evidence_rule": "A bar labeled SHIA must be visible and its value/annotation must show 63.",
+   "temporal_anchor": "The, until then, suppressed Shia majority took over",
+   "reviewer_question": "Must the exact Shia value 63 be shown, or is a qualitative 'majority' label enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Sunni value is 20 in the chart.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni row value from table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Sunni is 20.",
+    "The Sunni bar reaches 20.",
+    "Sunni value: 20."
+   ],
+   "visual_evidence_rule": "A bar labeled SUNNI must be visible and its value/annotation must show 20.",
+   "temporal_anchor": "and began oppressing the Sunnis",
+   "reviewer_question": "Must the exact Sunni value 20 be shown, or is a qualitative 'minority' label enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Shia is larger/higher than Sunni in the chart.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value."
+    }
+   ],
+   "computation": "63 > 20",
+   "accepted_routes": [
+    "Shia outranks Sunni.",
+    "Shia is the larger of the two values.",
+    "Shia is higher than Sunni."
+   ],
+   "visual_evidence_rule": "The SHIA bar must be visibly taller than the SUNNI bar.",
+   "temporal_anchor": "The, until then, suppressed Shia majority took over",
+   "reviewer_question": "Is the Shia > Sunni ranking required independently of the exact numbers?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Shia-Sunni gap is 43 table units.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value used in difference."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value used in difference."
+    }
+   ],
+   "computation": "63 - 20 = 43",
+   "accepted_routes": [
+    "Shia exceeds Sunni by 43.",
+    "The gap between Shia and Sunni is 43.",
+    "63 minus 20 leaves a 43-unit difference."
+   ],
+   "visual_evidence_rule": "A difference annotation or bar-length gap must make the 43-unit separation visible.",
+   "temporal_anchor": "began oppressing the Sunnis",
+   "reviewer_question": "Is the 43-unit gap required as an explicit derived comparison, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Shia accounts for about 76% and Sunni about 24% of the combined 83 (63 + 20).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Numerator for Shia share."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Numerator for Sunni share and part of denominator."
+    }
+   ],
+   "computation": "63 / (63 + 20) = 75.9%; 20 / (63 + 20) = 24.1%",
+   "accepted_routes": [
+    "Shia is about 76% and Sunni about 24% of the two-group total.",
+    "The Shia:Sunni composition is roughly 76:24.",
+    "Shia accounts for roughly three quarters; Sunni about one quarter."
+   ],
+   "visual_evidence_rule": "If shown, a stacked/combined bar or percentage labels must display roughly 76% Shia and 24% Sunni of the 63+20 total.",
+   "temporal_anchor": "The, until then, suppressed Shia majority took over",
+   "reviewer_question": "Is the two-group share (76/24) required, or is the raw 63 vs 20 comparison sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Ratio: Shia is about 3.15 times Sunni (63 / 20 = 3.15).",
+  "Shia can be labeled a majority of the two-group total because 63/83 is about 76%.",
+  "Sunni can be labeled a minority of the two-group total because 20/83 is about 24%.",
+  "The table colors #C0392B for Shia and #2E8B57 for Sunni may be used as identity cues if consistent."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that Shia oppression caused the Sunni rebel uprising or Al Qaeda entry.",
+  "Al Qaeda, terrorist groups, Iraq, rebel uprising, or suppression as data points not present in the table.",
+  "Treating 63 and 20 as percentages of a larger population or vote share unless the unit/source is clarified.",
+  "Using any denominator other than 83 for share/composition.",
+  "Extrapolating future conflict or asserting uniform behavior for all Shia or Sunni people."
+ ],
+ "notes": "Only two data rows exist, so derived comparisons must use 63 and 20. The share unit is optional because the table does not state that these two entities exhaust the total.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 35.0,
+  "usage": {
+   "prompt_tokens": 737,
+   "completion_tokens": 8303,
+   "total_tokens": 9040,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6635
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 353
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

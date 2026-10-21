@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#1a1a1a">Share of profits spent on stock buybacks</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#333333" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="517.9" x2="1220" y2="517.9" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="435.7" x2="1220" y2="435.7" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="353.6" x2="1220" y2="353.6" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="271.4" x2="1220" y2="271.4" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="189.3" x2="1220" y2="189.3" stroke="#333333" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">0%</text>
+<line data-role="tick" x1="112" y1="517.9" x2="120" y2="517.9" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="523.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">20%</text>
+<line data-role="tick" x1="112" y1="435.7" x2="120" y2="435.7" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="441.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">40%</text>
+<line data-role="tick" x1="112" y1="353.6" x2="120" y2="353.6" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="359.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">60%</text>
+<line data-role="tick" x1="112" y1="271.4" x2="120" y2="271.4" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="277.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">80%</text>
+<line data-role="tick" x1="112" y1="189.3" x2="120" y2="189.3" stroke="#333333" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="195.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#333333">100%</text>
+<g id="entity-gm" data-role="entity" data-entity-id="gm" data-label="GM" data-series="true">
+<polyline id="gm-polyline" data-role="polyline" data-entity-id="gm" points="120.0,263.2 340.0,411.1 560.0,263.2 780.0,452.1 1000.0,485.0 1220.0,140.0" fill="none" stroke="#2b3652" stroke-width="2" data-animation-property="points"/>
+</g>
+<g id="entity-toyota" data-role="entity" data-entity-id="toyota" data-label="Toyota" data-series="true">
+<polyline id="toyota-polyline" data-role="polyline" data-entity-id="toyota" points="120.0,575.4 340.0,600.0 560.0,517.9 780.0,456.2 1000.0,439.8 1220.0,522.0" fill="none" stroke="#7f8c8d" stroke-width="2" data-animation-property="points"/>
+</g>
+<g id="entity-vw" data-role="entity" data-entity-id="vw" data-label="VW" data-series="true">
+<polyline id="vw-polyline" data-role="polyline" data-entity-id="vw" points="120.0,600.0 340.0,600.0 560.0,600.0 780.0,600.0 1000.0,600.0 1220.0,600.0" fill="none" stroke="#555555" stroke-width="2" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">2012</text>
+<text data-role="x-axis-label" x="340.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">2013</text>
+<text data-role="x-axis-label" x="560.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">2014</text>
+<text data-role="x-axis-label" x="780.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">2015</text>
+<text data-role="x-axis-label" x="1000.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">2016</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">2017</text>
+<text data-role="end-label" x="1230.0" y="147.0" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2b3652">GM</text>
+<text data-role="end-label" x="1230.0" y="529.0" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7f8c8d">Toyota</text>
+<text data-role="end-label" x="1230.0" y="607.0" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#555555">VW</text>
+</g>
+</svg>

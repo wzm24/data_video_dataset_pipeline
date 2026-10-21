@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fa3a3"/><stop offset="1" stop-color="#b3c2c2"/></linearGradient>
+<pattern id="stripes" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="none"/><line x1="0" y1="0" x2="0" y2="9" stroke="#ffffff" stroke-width="2" opacity="0.18"/></pattern>
+</defs>
+<rect width="1280" height="720" fill="url(#bg)"/>
+<rect width="1280" height="720" fill="url(#stripes)"/>
+<text x="640" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#111111" opacity="0.35">Online video posting</text>
+<text x="637" y="93" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#111111">Online video posting</text>
+<rect x="430" y="410.3" width="150" height="189.7" fill="#101060"/>
+<text x="505" y="392" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">14%</text>
+<text x="505" y="644" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">2009</text>
+<rect x="700" y="180.0" width="150" height="420.0" fill="#101060"/>
+<text x="775" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">31%</text>
+<text x="775" y="644" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">2013</text>
+</svg>

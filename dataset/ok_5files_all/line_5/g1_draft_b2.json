@@ -1,0 +1,259 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_5",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the partisan divide in support for replacing the Electoral College, demonstrating that Democrats are the primary proponents of a popular vote.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The value series rises from 44 in 2000 to a peak of 52 in 2010, then falls to 23 in 2020.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Democrats",
+     "x": "2000",
+     "field": "value",
+     "value": 44.0,
+     "note": "start value; Republicans have identical value"
+    },
+    {
+     "entity": "Democrats",
+     "x": "2010",
+     "field": "value",
+     "value": 52.0,
+     "note": "peak value; Republicans have identical value"
+    },
+    {
+     "entity": "Democrats",
+     "x": "2020",
+     "field": "value",
+     "value": 23.0,
+     "note": "end value; Republicans have identical value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Value starts at 44 in 2000, peaks at 52 in 2010, and ends at 23 in 2020.",
+    "The series rises from 44 to 52, then declines to 23 by 2020.",
+    "After a rise through 2010, the value falls sharply to its lowest point in 2020."
+   ],
+   "visual_evidence_rule": "The animated data marks must move upward from 2000 to 2010 and downward to 2020 for both parties.",
+   "temporal_anchor": "Should be conveyed during the data animation; not explicitly stated in the narration.",
+   "reviewer_question": "Is the full rise-then-fall trend required, or is only the partisan comparison required by the intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The maximum value in the table is 52 at 2010.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Democrats",
+     "x": "2010",
+     "field": "value",
+     "value": 52.0,
+     "note": "maximum value in table; Republicans have identical value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The highest value shown is 52 in 2010.",
+    "Both parties peak at 52 in 2010.",
+    "The series reaches its maximum of 52 at 2010."
+   ],
+   "visual_evidence_rule": "The 2010 mark must be shown as the highest point on the value series.",
+   "temporal_anchor": "Middle of the animation.",
+   "reviewer_question": "Is the peak value required, or is the overall trend sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The largest drop is from 52 in 2010 to 25 in 2015, a decrease of 27 in the table's value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Democrats",
+     "x": "2010",
+     "field": "value",
+     "value": 52.0,
+     "note": "start of largest drop; Republicans have identical value"
+    },
+    {
+     "entity": "Democrats",
+     "x": "2015",
+     "field": "value",
+     "value": 25.0,
+     "note": "end of largest drop; Republicans have identical value"
+    }
+   ],
+   "computation": "52 - 25 = 27",
+   "accepted_routes": [
+    "The value falls by 27 from 2010 to 2015.",
+    "Between 2010 and 2015, the value drops from 52 to 25.",
+    "The sharpest decline is from 52 at 2010 to 25 at 2015."
+   ],
+   "visual_evidence_rule": "The chart must show a steep decline between the 2010 peak and the 2015 value.",
+   "temporal_anchor": "During the decline phase of the animation.",
+   "reviewer_question": "Is the largest single drop required, or is the full trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The minimum value in the table is 23 at 2020.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Democrats",
+     "x": "2020",
+     "field": "value",
+     "value": 23.0,
+     "note": "minimum value in table; Republicans have identical value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lowest value is 23 in 2020.",
+    "By 2020 the value has fallen to 23, the lowest in the table.",
+    "Both parties end at 23 in 2020."
+   ],
+   "visual_evidence_rule": "The 2020 mark must be shown as the lowest point on the value series.",
+   "temporal_anchor": "End of the animation.",
+   "reviewer_question": "Is the endpoint minimum required, or is the change from peak sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Democrats and Republicans have identical values at every year in the table; no partisan gap is shown in the provided data.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Democrats",
+     "x": "2000",
+     "field": "value",
+     "value": 44.0,
+     "note": "same as Republicans"
+    },
+    {
+     "entity": "Republicans",
+     "x": "2000",
+     "field": "value",
+     "value": 44.0,
+     "note": "same as Democrats"
+    },
+    {
+     "entity": "Democrats",
+     "x": "2020",
+     "field": "value",
+     "value": 23.0,
+     "note": "same as Republicans"
+    },
+    {
+     "entity": "Republicans",
+     "x": "2020",
+     "field": "value",
+     "value": 23.0,
+     "note": "same as Democrats"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Democrats and Republicans have the same values at every year in the table.",
+    "The two party series are identical, so there is no partisan gap.",
+    "The table shows no difference between Democrats and Republicans.",
+    "Both parties overlap exactly in the data."
+   ],
+   "visual_evidence_rule": "If both parties are visualized, their data marks must coincide at each year; the video must not depict one party as higher.",
+   "temporal_anchor": "The narration's second sentence about Democrats leading the charge; the data does not support a difference.",
+   "reviewer_question": "Should the video follow the intent's partisan-divide claim even though the table's values are identical for both parties?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Exact intermediate values (e.g., 46.6087 at x_px 725) are optional if the overall trend and endpoints are conveyed.",
+  "Using relative_value instead of value for a normalized trend shape is optional, but it must be described relatively, not as a percentage.",
+  "Highlighting the 2015 value of 25 as an intermediate low is optional."
+ ],
+ "unsupported_to_avoid": [
+  "Democrats have higher support than Republicans.",
+  "Democrats are the primary proponents as a measured data difference.",
+  "Any percentage, e.g., 44% or 23%, because the unit column is blank.",
+  "Causal claims that Electoral College disadvantage causes Democrats to lead the charge.",
+  "Republican presidents winning the popular vote or Electoral College outcomes.",
+  "Values outside the 2000-2020 period."
+ ],
+ "notes": "The table's value column has no unit and both entities are identical across all rows; the intent's partisan divide is not supported by the provided data. The core data story is a rise from 44 in 2000 to 52 in 2010, then a fall to 23 in 2020.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 55.4,
+  "usage": {
+   "prompt_tokens": 2377,
+   "completion_tokens": 12447,
+   "total_tokens": 14824,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10666
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1865
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

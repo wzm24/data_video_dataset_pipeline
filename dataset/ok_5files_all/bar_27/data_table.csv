@@ -1,0 +1,8 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_27,"Less than $20,000",less-than-20-000,595.4,,890.000,0.5250,,#4A96D6,printed
+bar_27,"$40,000",40-000,620.8,,946.000,0.5850,,#4A96D6,printed
+bar_27,"$60,000",60-000,642.5,,994.000,0.6365,,#4A96D6,printed
+bar_27,"$80,000",80-000,648.0,,1006.000,0.6492,,#4A96D6,printed
+bar_27,"$100,000",100-000,669.8,,1054.000,0.7007,,#4A96D6,printed
+bar_27,"$140,000",140-000,692.0,,1103.000,0.7532,,#4A96D6,printed
+bar_27,"More than $200,000",more-than-200-000,713.3,,1150.000,0.8035,,#4A96D6,printed

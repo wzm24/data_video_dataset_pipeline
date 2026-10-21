@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<text x="640" y="58" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#222">There is a large gap in income across U.S. households</text>
+<text x="640" y="86" text-anchor="middle" font-family="Arial" font-size="17" fill="#555">Household income at selected percentiles, 2019</text>
+<rect x="239.0" y="584.1" width="62.0" height="35.9" fill="#5c9e65"/>
+<text x="270.0" y="572.1" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">$16,026</text>
+<text x="270.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">10th</text>
+<rect x="339.0" y="570.8" width="62.0" height="49.2" fill="#d3d3d3"/>
+<text x="370.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">20th</text>
+<rect x="439.0" y="552.9" width="62.0" height="67.1" fill="#d3d3d3"/>
+<text x="470.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">30th</text>
+<rect x="539.0" y="530.5" width="62.0" height="89.5" fill="#d3d3d3"/>
+<text x="570.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">40th</text>
+<rect x="639.0" y="497.0" width="62.0" height="123.0" fill="#d3d3d3"/>
+<text x="670.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">50th</text>
+<rect x="739.0" y="463.4" width="62.0" height="156.6" fill="#d3d3d3"/>
+<text x="770.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">60th</text>
+<rect x="839.0" y="429.8" width="62.0" height="190.2" fill="#d3d3d3"/>
+<text x="870.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">70th</text>
+<rect x="939.0" y="385.1" width="62.0" height="234.9" fill="#d3d3d3"/>
+<text x="970.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">80th</text>
+<rect x="1039.0" y="170.0" width="62.0" height="450.0" fill="#5c9e65"/>
+<text x="1070.0" y="158.0" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#222">$201,150</text>
+<text x="1070.0" y="650" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">90th</text>
+<text x="640" y="690" text-anchor="middle" font-family="Arial" font-size="14" fill="#777">Source: U.S. Census Bureau. · PEW RESEARCH CENTER</text>
+</svg>

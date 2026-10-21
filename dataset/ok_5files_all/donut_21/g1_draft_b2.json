@@ -1,0 +1,207 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_21",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how the high concentration of the population in urban areas creates a dense ecosystem for startups and introduces demographics as a key factor.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The urban population share is 92%, indicating that the vast majority of the measured population lives in urban areas.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 92,
+     "note": "Table gives share = 92 percent; relative_value = 0.9200."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "92% of Israelis live in urban areas",
+    "the urban share is 92 percent",
+    "urban residents make up approximately 92% of the total"
+   ],
+   "visual_evidence_rule": "A central donut/percentage mark or label must visibly show 92% as the urban share, with the urban segment dominating the composition.",
+   "temporal_anchor": "opening narration clause about 92% of Israelis living in urban areas",
+   "reviewer_question": "Must the exact 92% value be stated or labeled, or is a visual majority/donut sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complementary non-urban share is 8%, obtained by subtracting the 92% urban share from the whole.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 92,
+     "note": "Use whole percent 100 minus reported 92 to derive non-urban complement."
+    }
+   ],
+   "computation": "100 - 92 = 8",
+   "accepted_routes": [
+    "8% live outside urban areas",
+    "the non-urban share is 8%",
+    "the remaining slice is about 8%"
+   ],
+   "visual_evidence_rule": "If the chart is a donut, the complement segment should be labeled or visibly identified as 8% / non-urban; otherwise this is optional.",
+   "temporal_anchor": "same opening clause or the donut reveal",
+   "reviewer_question": "Should the 8% complement be treated as required composition context or only as an optional donut detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Urban residents outnumber non-urban residents by a large ratio: about 11.5 to 1.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 92,
+     "note": "Derived from urban share 92 and non-urban complement 100 - 92 = 8."
+    }
+   ],
+   "computation": "92 / (100 - 92) = 11.5",
+   "accepted_routes": [
+    "about 11.5 urban residents per non-urban resident",
+    "more than 11 times as many urban as non-urban residents",
+    "urban-to-non-urban ratio is roughly 11.5:1"
+   ],
+   "visual_evidence_rule": "A textual callout, annotation, or comparative mark must show the 92% vs 8% contrast or the derived ~11.5:1 ratio if this optional unit is used.",
+   "temporal_anchor": "after the 92% reveal when emphasizing concentration",
+   "reviewer_question": "Is the derived 11.5:1 ratio acceptable as optional emphasis, or is it overreach beyond the single-share message?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 92% share represents an overwhelming majority or high concentration, not a close urban-non-urban split.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "0",
+     "field": "value",
+     "value": 92,
+     "note": "92% is the only numeric value; it is well above any simple majority threshold."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "92% is an overwhelming majority",
+    "urban areas hold a dominant share",
+    "the share is far from a close split"
+   ],
+   "visual_evidence_rule": "The urban segment should visually dominate the composition and/or the narration or callout should characterize 92% as high concentration / overwhelming majority.",
+   "temporal_anchor": "opening clause about 92% urban population",
+   "reviewer_question": "Must the video explicitly frame 92% as high concentration or an overwhelming majority beyond simply showing the number?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Demographics is introduced as another key factor for talent/startup ecosystems, with no numeric demographic value in the table.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [],
+   "computation": "none",
+   "accepted_routes": [
+    "Demographics is another important talent factor",
+    "The video then introduces demographics as key",
+    "Demographics is highlighted as overlooked but important"
+   ],
+   "visual_evidence_rule": "A title, callout, or narration transition must mention demographics as a key factor; no demographic data need be plotted.",
+   "temporal_anchor": "closing narration clause introducing demographics",
+   "reviewer_question": "Must the video include the demographic transition even though the data table has no demographic value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the relative_value 0.92 as an alternative notation for the 92% share.",
+  "Using a donut chart because the table contains a single share/composition datum.",
+  "The single x_px value can support a one-slice or donut layout rather than a time-series axis."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that urban concentration creates startup density or surrounds startups with customers/partners/competitors.",
+  "The northern-half geographic concentration mentioned only in narration, since it is not in the table.",
+  "Any absolute population counts, city-level data, or startup counts.",
+  "Any demographic percentages, demographic trends, or causal effects of demographics.",
+  "Any time-series change, year-over-year comparison, or multiple data series."
+ ],
+ "notes": "Only one numeric datum is available: 92% urban share (relative_value 0.92). U5 is an intent-driven qualitative transition with no numeric table basis.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.02
+ },
+ "draft_cost": {
+  "sec": 45.9,
+  "usage": {
+   "prompt_tokens": 634,
+   "completion_tokens": 9859,
+   "total_tokens": 10493,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8378
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 378
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

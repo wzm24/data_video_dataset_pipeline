@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_62",
+ "intent_en": "To demonstrate that plant-based milk alternatives have a lower environmental impact in terms of emissions, land use, and water consumption compared to dairy milk.",
+ "previous_intent": "To illustrate that milk alternatives generally have a lower environmental impact than dairy milk in terms of emissions, land use, and water consumption.",
+ "narration_support": "Many milk alternatives use significantly less energy, land and less water to produce so they have a much lower environmental impact than animal milk.",
+ "chart_support": "Grouped bar chart comparing Emissions, Land Use, and Water Use across Dairy, Rice, Soy, Oat, and Almond categories, visually indicating that Dairy has the highest resource usage in all three areas.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states milk alternatives have lower environmental impact due to less resource use, and the chart visualizes this by showing Dairy having the longest bars for Emissions, Land Use, and Water Use compared to plant-based options.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

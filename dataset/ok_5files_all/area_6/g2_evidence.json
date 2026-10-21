@@ -1,0 +1,148 @@
+{
+ "clip_id": "area_6",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:births per woman @ 1960"
+   ],
+   "assertion": {
+    "mark": "births per woman @ 1960",
+    "field": "value",
+    "expected": 7.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line chart must visibly mark or label the 1960 start point at 7.00 and the 2019 end point at 2.00."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:births per woman @ 1960",
+    "mark:births per woman @ 2019"
+   ],
+   "assertion": {
+    "low": "births per woman @ 2019",
+    "low_value": 2.0,
+    "high": "births per woman @ 1960",
+    "high_value": 7.0,
+    "delta": 5.0,
+    "ratio": 3.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the total drop from 7.00 to 2.00 visible, e.g., a vertical span/annotation or a stated 5.00-point decrease."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:births per woman @ 1960",
+    "mark:births per woman @ 2019",
+    "mark:births per woman @ 2019"
+   ],
+   "assertion": {
+    "low": "births per woman @ 2019",
+    "low_value": 0.2857,
+    "high": "births per woman @ 1960",
+    "high_value": 7.0,
+    "delta": 6.7143,
+    "ratio": 24.5012,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A percent-change annotation or a normalized reference to 1960 must be visible if this is included; the chart alone at absolute scale does not automatically show 71%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:births per woman @ 1994",
+    "mark:births per woman @ 1995"
+   ],
+   "assertion": {
+    "series": "births per woman",
+    "values": [
+     4.07,
+     3.93
+    ],
+    "threshold_between": [
+     3.93,
+     4.07
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A marker or label at 1995 near 3.93/4 must be visible if this checkpoint is included, ideally showing the adjacent 1994 value of 4.07."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:births per woman @ 1960",
+    "mark:births per woman @ 1976",
+    "mark:births per woman @ 1977"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "births per woman @ 1960",
+      "value": 7.0
+     },
+     {
+      "mark": "births per woman @ 1976",
+      "value": 7.0
+     },
+     {
+      "mark": "births per woman @ 1977",
+      "value": 6.93
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line should visibly remain flat at 7.00 through 1976 before showing a downward slope after 1977, rather than drawing a straight decline from 1960."
+  }
+ ]
+}

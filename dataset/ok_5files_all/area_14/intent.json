@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_14",
+ "intent_en": "To illustrate how a rapid pandemic outbreak can exceed healthcare system capacity.",
+ "previous_intent": "To illustrate how a rapid pandemic outbreak can cause infection volumes to exceed the capacity of healthcare systems.",
+ "narration_support": "If the numbers get too large, healthcare systems become unable to handle it.",
+ "chart_support": "Area chart plotting Infections against Time, showing a sharp peak that rises significantly above the horizontal line representing the Capacity of Healthcare System.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states that large numbers of sick people make healthcare systems unable to handle the situation, which is visually represented by the infection curve peaking well above the healthcare capacity line.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,292 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_93",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that vaccination rates among Black Americans have converged with those of White and Hispanic Americans over the course of the outbreak.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Early in the outbreak, Black adults (15%) were below White adults (21%) and Hispanic adults (16%); the Black–White gap was 6 points and the Black–Hispanic gap was 1 point.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Black",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 15.0,
+     "note": "Black early rate"
+    },
+    {
+     "entity": "White",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 21.0,
+     "note": "White early rate"
+    },
+    {
+     "entity": "Hispanic",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 16.0,
+     "note": "Hispanic early rate"
+    }
+   ],
+   "computation": "Black−White = 15−21 = −6 percentage points; Black−Hispanic = 15−16 = −1 percentage point",
+   "accepted_routes": [
+    "Early on, Black adults (15%) trailed White (21%) and Hispanic (16%) adults.",
+    "At the start, Black vaccination rate was 6 points below White and 1 point below Hispanic.",
+    "Initially Black Americans were a bit less likely than White or Hispanic Americans to have had or intend a vaccine."
+   ],
+   "visual_evidence_rule": "First/early time point must show Black below White and Hispanic, with 15%, 21%, and 16% visible or readable.",
+   "temporal_anchor": "while earlier in the outbreak...",
+   "reviewer_question": "Must the video show the early Black–White/Hispanic gap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Black vaccination rate rose from 15% early to 70% at the final period, an increase of 55 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Black",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 15.0,
+     "note": "Black early rate"
+    },
+    {
+     "entity": "Black",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 70.0,
+     "note": "Black final rate"
+    }
+   ],
+   "computation": "70−15 = +55 percentage points",
+   "accepted_routes": [
+    "Black vaccination rate rose from 15% to 70% over the outbreak.",
+    "Black rate increased by 55 percentage points.",
+    "Black adults moved from about 15% early to about 70% at the end."
+   ],
+   "visual_evidence_rule": "Black series must start near 15% and end near 70%; if quantified, annotation/label should show +55 pts.",
+   "temporal_anchor": "we've seen a change here... over the course of the outbreak",
+   "reviewer_question": "Is the magnitude of Black increase required to establish convergence?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the final period, Black, White, and Hispanic rates all reach comparable majority levels: Black 70%, White 72%, Hispanic 76%, a 6-point range with all at least 70%.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Black",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 70.0,
+     "note": "Black final rate"
+    },
+    {
+     "entity": "White",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 72.0,
+     "note": "White final rate"
+    },
+    {
+     "entity": "Hispanic",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 76.0,
+     "note": "Hispanic final rate"
+    }
+   ],
+   "computation": "max−min = 76−70 = 6 percentage points; minimum = 70%",
+   "accepted_routes": [
+    "By the end, comparable majorities of Black (70%), White (72%), and Hispanic (76%) adults reported vaccination.",
+    "Final Black, White, and Hispanic rates are all around 70%–76%.",
+    "The final B/W/H spread is only 6 points, with Black at 70% and Hispanic at 76%."
+   ],
+   "visual_evidence_rule": "Final time point must show Black, White, and Hispanic close together and at or above 70%, with labels 70, 72, and 76 or equivalent.",
+   "temporal_anchor": "We now find that comparable majorities...",
+   "reviewer_question": "Is final-period comparability/threshold among Black, White, and Hispanic obligatory?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Black–White gap narrowed from 6 percentage points early to 2 points at the final period; Black closed 4 points, or about two-thirds, of its initial gap with White.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "White",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 21.0,
+     "note": "White early rate"
+    },
+    {
+     "entity": "Black",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 15.0,
+     "note": "Black early rate"
+    },
+    {
+     "entity": "White",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 72.0,
+     "note": "White final rate"
+    },
+    {
+     "entity": "Black",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 70.0,
+     "note": "Black final rate"
+    }
+   ],
+   "computation": "Early gap = 21−15 = 6; final gap = 72−70 = 2; narrowing = 6−2 = 4 points; 4/6 = 66.7% of initial gap closed",
+   "accepted_routes": [
+    "The Black–White gap shrank from 6 points to 2 points.",
+    "Black closed 4 of the 6 initial points behind White.",
+    "About 67% of the early Black–White gap was gone by the end."
+   ],
+   "visual_evidence_rule": "Chart must allow comparing Black and White at early and final periods, e.g., two lines/bars showing 21 vs 15 and 72 vs 70.",
+   "temporal_anchor": "we've seen a change here... over the course of the outbreak",
+   "reviewer_question": "Must the video quantify the narrowing Black–White gap, not just final levels?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "White and Hispanic vaccination rates also rose substantially: White from 21% to 72% (+51 points) and Hispanic from 16% to 76% (+60 points).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "White",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 21.0,
+     "note": "White early rate"
+    },
+    {
+     "entity": "White",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 72.0,
+     "note": "White final rate"
+    },
+    {
+     "entity": "Hispanic",
+     "x": "first listed/early",
+     "field": "value",
+     "value": 16.0,
+     "note": "Hispanic early rate"
+    },
+    {
+     "entity": "Hispanic",
+     "x": "third listed/final",
+     "field": "value",
+     "value": 76.0,
+     "note": "Hispanic final rate"
+    }
+   ],
+   "computation": "White: 72−21 = +51 percentage points; Hispanic: 76−16 = +60 percentage points",
+   "accepted_routes": [
+    "White rose from 21% to 72%, and Hispanic from 16% to 76%.",
+    "White increased by 51 points; Hispanic by 60 points.",
+    "Both White and Hispanic rates also climbed sharply over the outbreak."
+   ],
+   "visual_evidence_rule": "If included, White and Hispanic series must start at 21%/16% and end at 72%/76%.",
+   "temporal_anchor": "over the course of the outbreak",
+   "reviewer_question": "Are White/Hispanic trajectories required, or only Black's trajectory plus final comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Asian* ends highest at 94%, but the intent does not require covering Asian.",
+  "Final order among Black/White/Hispanic: Hispanic 76% > White 72% > Black 70%.",
+  "Middle listed period values: Black 60%, White 65%, Hispanic 68%, all already majority levels."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that vaccination campaigns or outreach caused the convergence.",
+  "Extrapolating beyond the three listed periods or to groups not in the table.",
+  "Claiming the Black–Hispanic gap narrowed; the table shows Black 15 vs Hispanic 16 early and Black 70 vs Hispanic 76 final, so that gap went from 1 to 6 points.",
+  "Using Asian 94% to say Black/White/Hispanic converged with Asian or that all groups reached 94%.",
+  "Saying all groups are equal at the end; Black 70%, White 72%, and Hispanic 76% are comparable but not equal."
+ ],
+ "notes": "The table has no explicit x labels; I treated the three rows per entity as early/mid/final in listed order, matching the narration’s earlier/now/over-outbreak language. Asian* is present in the table but outside the intent; its 94% endpoint should not be used to claim Black/White/Hispanic convergence.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 54.3,
+  "usage": {
+   "prompt_tokens": 872,
+   "completion_tokens": 12166,
+   "total_tokens": 13038,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9935
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 616
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

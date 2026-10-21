@@ -1,0 +1,151 @@
+{
+ "clip_id": "area_45",
+ "family": "area",
+ "chart_form": "area/stacked_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Top 0.01% @ 2014"
+   ],
+   "assertion": {
+    "mark": "Top 0.01% @ 2014",
+    "field": "value",
+    "expected": 420.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "At x=2014, all three line endpoints or end labels are visible with values 420, 50, and 15."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Top 0.01% @ 2014",
+    "mark:Middle 40% @ 2014"
+   ],
+   "assertion": {
+    "greater": "Top 0.01% @ 2014",
+    "lesser": "Middle 40% @ 2014",
+    "expected_ratio": 8.4,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A gap bracket, annotation, or direct comparison at 2014 shows the Top 0.01% and Middle 40% endpoints separated by 370 percentage points."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Top 0.01% @ 2014",
+    "mark:Bottom 50% @ 2014"
+   ],
+   "assertion": {
+    "greater": "Top 0.01% @ 2014",
+    "lesser": "Bottom 50% @ 2014",
+    "expected_ratio": 28.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A gap bracket, annotation, or direct comparison at 2014 shows the Top 0.01% and Bottom 50% endpoints separated by 405 percentage points."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Top 0.01% @ 1983",
+    "mark:Middle 40% @ 1983",
+    "mark:Top 0.01% @ 1984",
+    "mark:Middle 40% @ 1984",
+    "mark:Bottom 50% @ 1984"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Top 0.01% @ 1983",
+      "value": -5.0
+     },
+     {
+      "mark": "Middle 40% @ 1983",
+      "value": -5.0
+     },
+     {
+      "mark": "Top 0.01% @ 1984",
+      "value": 7.5
+     },
+     {
+      "mark": "Middle 40% @ 1984",
+      "value": -2.1
+     },
+     {
+      "mark": "Bottom 50% @ 1984",
+      "value": -7.1
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart shows the Top 0.01% line crossing above the Middle 40% around 1984 and staying above both other lines through 2014."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Top 0.01% @ 2014",
+    "mark:Middle 40% @ 2014",
+    "mark:Bottom 50% @ 2014"
+   ],
+   "assertion": {
+    "low": "Bottom 50% @ 2014",
+    "low_value": 15.0,
+    "high": "Top 0.01% @ 2014",
+    "high_value": 420.0,
+    "delta": 405.0,
+    "ratio": 28.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A multiplier annotation or side-by-side comparison shows 8.4x for top-vs-middle and 28x for top-vs-bottom."
+  }
+ ]
+}

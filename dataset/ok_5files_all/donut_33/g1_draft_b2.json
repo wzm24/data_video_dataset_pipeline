@@ -1,0 +1,198 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_33",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate why lawmakers target capital gains tax reform by demonstrating that the majority of long-term capital gains are concentrated among the top 1% of earners.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The top 1% of earners receive 69% of taxable long-term capital gains.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 69,
+     "note": "Table value is 69 percent; relative_value is 0.690."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Top 1% receives 69% of long-term capital gains",
+    "69% of taxable long-term capital gains go to the top 1%",
+    "The top 1% share is 69%",
+    "Rounded: about 70% goes to the top 1%"
+   ],
+   "visual_evidence_rule": "A labeled Top 1% slice or bar showing 69% must be visible.",
+   "temporal_anchor": "the clause 'most taxable capital gains are going to the top 1%'",
+   "reviewer_question": "Is the exact 69% top-1% share required, or is a rounded 'about 70%' acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Everyone else receives the remaining 31%, and the two shares make up the full 100% distribution.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "everyone else",
+     "x": "1",
+     "field": "value",
+     "value": 31,
+     "note": "Table value is 31 percent; relative_value is 0.310."
+    },
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 69,
+     "note": "Used with 31 to compute 69 + 31 = 100."
+    }
+   ],
+   "computation": "69 + 31 = 100",
+   "accepted_routes": [
+    "Everyone else receives 31%",
+    "The remaining 31% goes to all other earners",
+    "The two groups sum to 100% of taxable long-term capital gains",
+    "Top 1% plus everyone else equals the whole pie"
+   ],
+   "visual_evidence_rule": "The complement slice/bar labeled everyone else with 31% and the full composition summing to 100% must be visible if a donut or stacked chart is used.",
+   "temporal_anchor": "the same 'most taxable capital gains are going to the top 1%' clause, shown as the rest of the distribution",
+   "reviewer_question": "Should the video be required to show the 31% complement, or is it optional once the 69% top-1% share is shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The top 1% share is a majority—more than half—of taxable long-term capital gains.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 69,
+     "note": "69 percent exceeds a half/majority of the distribution."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top 1% receives the majority of long-term capital gains",
+    "More than half of taxable long-term capital gains go to the top 1%",
+    "The top 1% slice crosses the half-way mark"
+   ],
+   "visual_evidence_rule": "The chart must make clear that the Top 1% slice is larger than half, e.g. highlight or annotation on the 69% slice.",
+   "temporal_anchor": "the clause 'most taxable capital gains are going to the top 1%'",
+   "reviewer_question": "Must the video explicitly state the majority/more-than-half claim, or is the 69% value alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The top 1% receives more than twice everyone else's share: 69% versus 31%, a gap of 38 percentage points or a ratio of about 2.23x.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 69,
+     "note": "Top 1% share."
+    },
+    {
+     "entity": "everyone else",
+     "x": "1",
+     "field": "value",
+     "value": 31,
+     "note": "Everyone else share."
+    }
+   ],
+   "computation": "69 / 31 = 2.2258... ≈ 2.23x; 69 - 31 = 38 percentage points",
+   "accepted_routes": [
+    "Top 1% gets more than twice everyone else's share",
+    "69% vs 31% is about a 2.2x difference",
+    "The top 1% is 38 percentage points above everyone else",
+    "Top 1% receives over double the share of all other earners"
+   ],
+   "visual_evidence_rule": "Both 69% and 31% labels must be visible together, or a side-by-side bar/contrast must show the 69-vs-31 gap.",
+   "temporal_anchor": "the clause 'most taxable capital gains are going to the top 1%'",
+   "reviewer_question": "Should the video require the explicit top-1%-vs-everyone-else comparison, or is the top-1% share alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The video may use a donut chart to show the 69% top-1% share and 31% everyone-else share as complementary parts of taxable long-term capital gains.",
+  "The video may state that this concentration explains why lawmakers target capital gains tax reform as a way to tax the rich."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that the 69% concentration alone proves lawmakers' motives or that tax reform would definitely pass.",
+  "Interpreting the 69% as a share of all taxes, all income, or all capital gains rather than taxable long-term capital gains.",
+  "Using a denominator other than the two table groups or implying a third group not in the table.",
+  "Extrapolating to future revenue, behavioral effects, or other tax policies not in the table."
+ ],
+ "notes": "Core required data points are the 69% top-1% share, its majority status, and the contrast with the 31% everyone-else share. The 31% complement and policy-rationale framing are valid but optional pending reviewer strictness.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.87
+ },
+ "draft_cost": {
+  "sec": 43.2,
+  "usage": {
+   "prompt_tokens": 649,
+   "completion_tokens": 10009,
+   "total_tokens": 10658,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8445
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 393
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

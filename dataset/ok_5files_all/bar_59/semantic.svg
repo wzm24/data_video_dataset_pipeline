@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#111111"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">Cities with largest loss of blacks</text>
+<g id="chart-plot" data-role="plot">
+<g id="entity-detroit" data-role="entity" data-entity-id="detroit" data-label="Detroit">
+<rect id="detroit-bar" data-role="bar" data-entity-id="detroit" data-value="1" x="350.0" y="192.2" width="800.0" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="detroit-label" data-role="category-label" data-entity-id="detroit" x="336.0" y="209.2" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Detroit</text>
+</g>
+<g id="entity-chicago" data-role="entity" data-entity-id="chicago" data-label="Chicago">
+<rect id="chicago-bar" data-role="bar" data-entity-id="chicago" data-value="0.9213" x="350.0" y="236.7" width="737.0" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="chicago-label" data-role="category-label" data-entity-id="chicago" x="336.0" y="253.7" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Chicago</text>
+</g>
+<g id="entity-new-orleans" data-role="entity" data-entity-id="new-orleans" data-label="New Orleans">
+<rect id="new-orleans-bar" data-role="bar" data-entity-id="new-orleans" data-value="0.6164" x="350.0" y="281.1" width="493.1" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="new-orleans-label" data-role="category-label" data-entity-id="new-orleans" x="336.0" y="298.1" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">New Orleans</text>
+</g>
+<g id="entity-new-york" data-role="entity" data-entity-id="new-york" data-label="New York">
+<rect id="new-york-bar" data-role="bar" data-entity-id="new-york" data-value="0.5115" x="350.0" y="325.6" width="409.2" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="new-york-label" data-role="category-label" data-entity-id="new-york" x="336.0" y="342.6" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">New York</text>
+</g>
+<g id="entity-los-angeles" data-role="entity" data-entity-id="los-angeles" data-label="Los Angeles">
+<rect id="los-angeles-bar" data-role="bar" data-entity-id="los-angeles" data-value="0.282" x="350.0" y="370.0" width="225.6" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="los-angeles-label" data-role="category-label" data-entity-id="los-angeles" x="336.0" y="387.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Los Angeles</text>
+</g>
+<g id="entity-washington-dc" data-role="entity" data-entity-id="washington-dc" data-label="Washington, DC">
+<rect id="washington-dc-bar" data-role="bar" data-entity-id="washington-dc" data-value="0.1803" x="350.0" y="414.4" width="144.2" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="washington-dc-label" data-role="category-label" data-entity-id="washington-dc" x="336.0" y="431.4" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Washington, DC</text>
+</g>
+<g id="entity-oakland" data-role="entity" data-entity-id="oakland" data-label="Oakland">
+<rect id="oakland-bar" data-role="bar" data-entity-id="oakland" data-value="0.1541" x="350.0" y="458.9" width="123.3" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="oakland-label" data-role="category-label" data-entity-id="oakland" x="336.0" y="475.9" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Oakland</text>
+</g>
+<g id="entity-cleveland" data-role="entity" data-entity-id="cleveland" data-label="Cleveland">
+<rect id="cleveland-bar" data-role="bar" data-entity-id="cleveland" data-value="0.1541" x="350.0" y="503.3" width="123.3" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="cleveland-label" data-role="category-label" data-entity-id="cleveland" x="336.0" y="520.3" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Cleveland</text>
+</g>
+<g id="entity-atlanta" data-role="entity" data-entity-id="atlanta" data-label="Atlanta">
+<rect id="atlanta-bar" data-role="bar" data-entity-id="atlanta" data-value="0.1541" x="350.0" y="547.8" width="123.3" height="20.0" fill="#d3d3d3" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="atlanta-label" data-role="category-label" data-entity-id="atlanta" x="336.0" y="564.8" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Atlanta</text>
+</g>
+</g>
+</svg>

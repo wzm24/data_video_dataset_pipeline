@@ -1,0 +1,240 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "donut_6",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the overwhelming public support for universal background checks and introduce the different venues of gun sales (retail stores, private transactions, and gun shows) that are central to the policy debate.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The measured public support for universal background checks is 96% in favor.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "in favor",
+     "x": "2017",
+     "field": "value",
+     "value": 96.0,
+     "note": "unit is percent; relative_value is 0.96"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "96% in favor",
+    "support was 96 percent",
+    "in favor stood at 96%",
+    "almost all respondents were in favor: 96%"
+   ],
+   "visual_evidence_rule": "The in-favor value or segment must be shown as 96%.",
+   "temporal_anchor": "Pretty much every American is in favor of this.",
+   "reviewer_question": "Is the 96% support figure required as the headline endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The only non-in-favor category, 'other', is 4%, the smaller of the two categories.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "other",
+     "x": "2017",
+     "field": "value",
+     "value": 4.0,
+     "note": "unit is percent; relative_value is 0.04"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the 'other' category was 4%",
+    "only 4% fell into other",
+    "the remainder was 4%",
+    "other stood at 4 percent"
+   ],
+   "visual_evidence_rule": "The 'other' value or segment must be shown as 4%.",
+   "temporal_anchor": "There's only one problem.",
+   "reviewer_question": "Must the 4% 'other' share be explicitly conveyed, or is it enough to imply a tiny remainder?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The two categories form a 96% versus 4% part-to-whole split, summing to 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "in favor",
+     "x": "2017",
+     "field": "value",
+     "value": 96.0,
+     "note": "unit is percent"
+    },
+    {
+     "entity": "other",
+     "x": "2017",
+     "field": "value",
+     "value": 4.0,
+     "note": "unit is percent"
+    }
+   ],
+   "computation": "96 + 4 = 100; 96/100 = 96%, 4/100 = 4%",
+   "accepted_routes": [
+    "the split was 96% in favor to 4% other",
+    "together the two groups sum to 100%",
+    "in favor made up 96% of the total and other 4%",
+    "almost all responses were in favor, with 4% other"
+   ],
+   "visual_evidence_rule": "Both 96% and 4% must be visible and presented as a part-to-whole composition.",
+   "temporal_anchor": "Pretty much every American is in favor of this.",
+   "reviewer_question": "Is the 96/4 part-to-whole split required, or is showing only 96% sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The in-favor share is 24 times the size of the 'other' share.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "in favor",
+     "x": "2017",
+     "field": "value",
+     "value": 96.0,
+     "note": "unit is percent"
+    },
+    {
+     "entity": "other",
+     "x": "2017",
+     "field": "value",
+     "value": 4.0,
+     "note": "unit is percent"
+    }
+   ],
+   "computation": "96 / 4 = 24",
+   "accepted_routes": [
+    "in favor was 24 times as large as other",
+    "supporters outnumbered other 24 to 1",
+    "the ratio of in favor to other was 24:1",
+    "96% versus 4% is a 24-fold difference"
+   ],
+   "visual_evidence_rule": "Both 96% and 4% must be visible so the 24:1 ratio can be inferred.",
+   "temporal_anchor": "Pretty much every American is in favor of this.",
+   "reviewer_question": "Should the 24-to-1 ratio be required, or is it optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The gap between the in-favor share and the 'other' share is 92 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "in favor",
+     "x": "2017",
+     "field": "value",
+     "value": 96.0,
+     "note": "unit is percent"
+    },
+    {
+     "entity": "other",
+     "x": "2017",
+     "field": "value",
+     "value": 4.0,
+     "note": "unit is percent"
+    }
+   ],
+   "computation": "96 - 4 = 92 percentage points",
+   "accepted_routes": [
+    "the gap between in favor and other was 92 percentage points",
+    "in favor led other by 92 percentage points",
+    "96% minus 4% equals 92 percentage points",
+    "the two categories differ by 92 points"
+   ],
+   "visual_evidence_rule": "Both 96% and 4% must be visible so a 92-point gap can be inferred.",
+   "temporal_anchor": "There's only one problem.",
+   "reviewer_question": "Should the 92-point gap be required, or is it optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The data point is from 2017.",
+  "The 'other' value is estimated while the 'in favor' value is printed."
+ ],
+ "unsupported_to_avoid": [
+  "Any data or values for retail stores, private transactions, or gun shows, which are not in the table.",
+  "Causal claim that universal background checks won't solve America's gun crisis.",
+  "Any count of Americans or population totals; the table gives only percentages.",
+  "Labeling the 4% as 'opposed' or 'against' instead of the table's 'other'.",
+  "Extrapolating to other years or populations beyond the 2017 row."
+ ],
+ "notes": "The table supports only the 96% in-favor and 4% other split; the venues mentioned in the intent have no table rows. I treat the 24:1 ratio and 92-point gap as optional derived emphases.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 39.6,
+  "usage": {
+   "prompt_tokens": 917,
+   "completion_tokens": 8791,
+   "total_tokens": 9708,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7166
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 405
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

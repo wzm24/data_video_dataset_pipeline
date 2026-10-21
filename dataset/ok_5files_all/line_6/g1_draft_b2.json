@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_6",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that the Bank of England base rate and average mortgage rates have fallen to historically low levels.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The video must identify two rate series: the Bank of England base rate and an average mortgage rate, specifically the 5-year fixed example.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "2016",
+     "field": "value",
+     "value": 0.2506,
+     "note": "named base-rate series"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "2016",
+     "field": "value",
+     "value": 2.1996,
+     "note": "named mortgage-rate series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Two series are named: the Bank of England base rate and an average mortgage rate.",
+    "The base rate and a 5-year fixed mortgage rate are shown separately.",
+    "Both the Bank of England base rate and the mortgage rate are identified as rate series."
+   ],
+   "visual_evidence_rule": "Both named rate series must be visibly present and distinguishable as separate data series.",
+   "temporal_anchor": "That's the Bank of England base rate. And that's an average mortgage rate.",
+   "reviewer_question": "Must both series be named or labeled, or is it enough to show two anonymous rate lines?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Bank of England base rate fell from 10.1996% in 1991 to 0.2506% in 2016, a decline of about 9.95 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "1991",
+     "field": "value",
+     "value": 10.1996,
+     "note": "starting base-rate value"
+    },
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "2016",
+     "field": "value",
+     "value": 0.2506,
+     "note": "ending base-rate value"
+    }
+   ],
+   "computation": "10.1996 - 0.2506 = 9.9490 percentage points decline",
+   "accepted_routes": [
+    "The base rate fell from 10.1996% in 1991 to 0.2506% in 2016.",
+    "The base rate dropped by about 9.95 percentage points over the period.",
+    "The base rate declined from roughly 10.2% to 0.25%."
+   ],
+   "visual_evidence_rule": "The base-rate series must show a clear fall from its 1991 starting value to its 2016 ending value.",
+   "temporal_anchor": "That's the Bank of England base rate, and those are historically low levels.",
+   "reviewer_question": "Is the full 1991-to-2016 base-rate decline required, or only the final low?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The average mortgage rate fell from 9.4989% at its earliest listed point to 2.1996% in 2016, a decline of about 7.30 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "earliest listed mortgage point",
+     "field": "value",
+     "value": 9.4989,
+     "note": "first mortgage value in the table; no year is given for this row"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "2016",
+     "field": "value",
+     "value": 2.1996,
+     "note": "ending mortgage-rate value"
+    }
+   ],
+   "computation": "9.4989 - 2.1996 = 7.2993 percentage points decline",
+   "accepted_routes": [
+    "The average mortgage rate fell from 9.4989% at its first listed point to 2.1996% in 2016.",
+    "The mortgage rate dropped by about 7.30 percentage points over the series.",
+    "The mortgage rate fell from just under 9.5% to about 2.2% by 2016."
+   ],
+   "visual_evidence_rule": "The mortgage-rate series must show a visible downward movement from its first plotted value to its 2016 ending value.",
+   "temporal_anchor": "And that's an average mortgage rate, and those are historically low levels.",
+   "reviewer_question": "Can the mortgage decline be anchored to its first plotted value even though the table gives no starting year?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the 2016 endpoint, both rates are at their lowest listed values: base rate 0.2506% and mortgage rate 2.1996%.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "2016",
+     "field": "value",
+     "value": 0.2506,
+     "note": "lowest listed base-rate value"
+    },
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "2016",
+     "field": "value",
+     "value": 2.1996,
+     "note": "lowest listed mortgage-rate value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Both rates end at their lowest values in the table: 0.2506% and 2.1996% in 2016.",
+    "In 2016 the base rate is 0.2506% and the mortgage rate is 2.1996%, the lowest listed levels.",
+    "The final points are the series lows for both rates."
+   ],
+   "visual_evidence_rule": "The 2016 endpoint values for both named series must be visible as the lowest listed values in their respective series.",
+   "temporal_anchor": "Those are historically low levels.",
+   "reviewer_question": "Is the claim that both 2016 endpoints are series lows required, or is showing one rate's low enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At the 2016 endpoint, the average mortgage rate of 2.1996% is higher than the base rate of 0.2506%, by about 1.95 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Mortgage rate (Example: 5 year fixed)",
+     "x": "2016",
+     "field": "value",
+     "value": 2.1996,
+     "note": "mortgage-rate endpoint"
+    },
+    {
+     "entity": "Base Rate Bank of England",
+     "x": "2016",
+     "field": "value",
+     "value": 0.2506,
+     "note": "base-rate endpoint"
+    }
+   ],
+   "computation": "2.1996 - 0.2506 = 1.9490 percentage points",
+   "accepted_routes": [
+    "In 2016 the mortgage rate was about 2.2% versus the base rate at about 0.25%.",
+    "The mortgage rate ended about 1.95 percentage points above the base rate.",
+    "The final gap between the two rates is roughly 2 percentage points."
+   ],
+   "visual_evidence_rule": "At the 2016 endpoint, the mortgage-rate value must appear higher than the base-rate value.",
+   "temporal_anchor": "And that's an average mortgage rate, while that is the Bank of England base rate.",
+   "reviewer_question": "Is the final mortgage-versus-base gap required context, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The paths are not monotonic: both series show interim fluctuations before their 2016 lows.",
+  "The base rate has noticeably higher intermediate values around the mid-1990s and later rebounds.",
+  "The 2016 spread between the mortgage rate and base rate may be shown as optional context."
+ ],
+ "unsupported_to_avoid": [
+  "Any explanation of what ultra-low interest rates 'mean' or the two things the narration teases, because the table does not specify them.",
+  "Causal claims that low rates caused mortgage changes, inflation changes, or economic outcomes.",
+  "All-time historical-low claims beyond the listed table period.",
+  "Future rate predictions or post-2016 values.",
+  "Chart layout or rendering specifics such as colours, axis ticks, positions, or chart type."
+ ],
+ "notes": "The table has absolute % values, so endpoint, change, extreme, and gap units are allowed. Keep 'historically low' tied to lowest listed values in the table rather than unverifiable all-time history.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 42.5,
+  "usage": {
+   "prompt_tokens": 5434,
+   "completion_tokens": 9987,
+   "total_tokens": 15421,
+   "prompt_tokens_details": {
+    "cached_tokens": 2688
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7936
+   },
+   "prompt_cache_hit_tokens": 2688,
+   "prompt_cache_miss_tokens": 2746
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

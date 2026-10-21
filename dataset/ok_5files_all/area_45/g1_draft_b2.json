@@ -1,0 +1,286 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_45",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the growing disparity in after-tax income growth between the wealthiest Americans and the middle and bottom classes over the last four decades.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "By 2014, cumulative after-tax income growth since 1980 was 420% for the Top 0.01%, 50% for the Middle 40%, and 15% for the Bottom 50%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 0.01%",
+     "x": "2014",
+     "field": "value",
+     "value": 420.0,
+     "note": "percent_growth; 1980 baseline is 0.0"
+    },
+    {
+     "entity": "Middle 40%",
+     "x": "2014",
+     "field": "value",
+     "value": 50.0,
+     "note": "percent_growth; 1980 baseline is 0.0"
+    },
+    {
+     "entity": "Bottom 50%",
+     "x": "2014",
+     "field": "value",
+     "value": 15.0,
+     "note": "percent_growth; 1980 baseline is 0.0"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2014 the lines end at +420%, +50%, and +15% for the top 0.01%, middle 40%, and bottom 50%.",
+    "After-tax income growth from 1980 to 2014: richest 420%, middle 40% 50%, bottom 50% 15%.",
+    "The wealthiest ended at 420%, the middle class at 50%, and the bottom half at 15%."
+   ],
+   "visual_evidence_rule": "At x=2014, all three line endpoints or end labels are visible with values 420, 50, and 15.",
+   "temporal_anchor": "The clause about the richest rising more than 400% and middle-class income rising 50% / the final endpoint of the four-decade period.",
+   "reviewer_question": "Must the video show all three 2014 endpoint values, or is it enough to show only the top and middle groups?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "At the 2014 endpoint, Top 0.01% after-tax income growth exceeds Middle 40% growth by 370 percentage points (420% - 50%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 0.01%",
+     "x": "2014",
+     "field": "value",
+     "value": 420.0,
+     "note": "minuend"
+    },
+    {
+     "entity": "Middle 40%",
+     "x": "2014",
+     "field": "value",
+     "value": 50.0,
+     "note": "subtrahend"
+    }
+   ],
+   "computation": "420.0 - 50.0 = 370.0 percentage points",
+   "accepted_routes": [
+    "The top 0.01% ends 370 percentage points above the middle 40%.",
+    "Richest growth (420%) is 370 points higher than middle-class growth (50%).",
+    "The 2014 top-middle gap is 370 percentage points."
+   ],
+   "visual_evidence_rule": "A gap bracket, annotation, or direct comparison at 2014 shows the Top 0.01% and Middle 40% endpoints separated by 370 percentage points.",
+   "temporal_anchor": "The comparison between the richest and the middle class in the narration.",
+   "reviewer_question": "Does the video need to quantify the top-vs-middle gap, or are the two endpoint values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the 2014 endpoint, Top 0.01% after-tax income growth exceeds Bottom 50% growth by 405 percentage points (420% - 15%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 0.01%",
+     "x": "2014",
+     "field": "value",
+     "value": 420.0,
+     "note": "minuend"
+    },
+    {
+     "entity": "Bottom 50%",
+     "x": "2014",
+     "field": "value",
+     "value": 15.0,
+     "note": "subtrahend"
+    }
+   ],
+   "computation": "420.0 - 15.0 = 405.0 percentage points",
+   "accepted_routes": [
+    "The top 0.01% ends 405 percentage points above the bottom 50%.",
+    "Richest growth (420%) is 405 points higher than bottom-half growth (15%).",
+    "The 2014 top-bottom gap is 405 percentage points."
+   ],
+   "visual_evidence_rule": "A gap bracket, annotation, or direct comparison at 2014 shows the Top 0.01% and Bottom 50% endpoints separated by 405 percentage points.",
+   "temporal_anchor": "The clause about disparity between the richest Americans and the middle and bottom classes.",
+   "reviewer_question": "Must the bottom 50% be directly compared to the top group, or can it appear only as the lowest line?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Top 0.01% line pulls ahead of the Middle 40% by 1984 and remains highest through 2014; in 1984 the values are 7.5% for Top 0.01%, -2.1% for Middle 40%, and -7.1% for Bottom 50%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 0.01%",
+     "x": "1983",
+     "field": "value",
+     "value": -5.0,
+     "note": "tied with Middle 40% before pulling ahead"
+    },
+    {
+     "entity": "Middle 40%",
+     "x": "1983",
+     "field": "value",
+     "value": -5.0,
+     "note": "tied with Top 0.01% before 1984"
+    },
+    {
+     "entity": "Top 0.01%",
+     "x": "1984",
+     "field": "value",
+     "value": 7.5,
+     "note": "highest line"
+    },
+    {
+     "entity": "Middle 40%",
+     "x": "1984",
+     "field": "value",
+     "value": -2.1,
+     "note": "middle line"
+    },
+    {
+     "entity": "Bottom 50%",
+     "x": "1984",
+     "field": "value",
+     "value": -7.1,
+     "note": "lowest line"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "From 1984 onward, the order is top 0.01% highest, middle 40% next, bottom 50% lowest.",
+    "The top group overtakes the middle group in 1984 and stays above it through 2014.",
+    "In 1984 the richest turn positive at 7.5%, while the middle and bottom groups are still negative."
+   ],
+   "visual_evidence_rule": "The chart shows the Top 0.01% line crossing above the Middle 40% around 1984 and staying above both other lines through 2014.",
+   "temporal_anchor": "The growing-disparity / last-40-years clause.",
+   "reviewer_question": "Must the video mark the 1984 crossover/order, or do the final endpoints already convey the growing disparity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By 2014, the Top 0.01% growth rate is 8.4 times the Middle 40% growth rate (420 / 50) and 28 times the Bottom 50% growth rate (420 / 15).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Top 0.01%",
+     "x": "2014",
+     "field": "value",
+     "value": 420.0,
+     "note": "numerator"
+    },
+    {
+     "entity": "Middle 40%",
+     "x": "2014",
+     "field": "value",
+     "value": 50.0,
+     "note": "denominator for 8.4x"
+    },
+    {
+     "entity": "Bottom 50%",
+     "x": "2014",
+     "field": "value",
+     "value": 15.0,
+     "note": "denominator for 28x"
+    }
+   ],
+   "computation": "420.0 / 50.0 = 8.4; 420.0 / 15.0 = 28.0",
+   "accepted_routes": [
+    "The top 0.01% grew 8.4 times as much as the middle 40% and 28 times as much as the bottom 50% by 2014.",
+    "Top growth was 8.4-fold the middle-class growth and 28-fold the bottom-half growth.",
+    "By 2014, the richest group's 420% growth was 8.4x the middle group's 50% and 28x the bottom group's 15%."
+   ],
+   "visual_evidence_rule": "A multiplier annotation or side-by-side comparison shows 8.4x for top-vs-middle and 28x for top-vs-bottom.",
+   "temporal_anchor": "The richest-risen-more-than-400-percent versus middle-only-50-percent clause.",
+   "reviewer_question": "Is a multiplicative comparison acceptable and/or required, or should the video prefer percentage-point gaps?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Top 0.01% first reaches 400% in 2011 and ends at 420% in 2014.",
+  "Middle 40% reaches 50% at the 2014 endpoint.",
+  "Bottom 50% reaches 15% at the 2014 endpoint.",
+  "Middle 40% remains above Bottom 50% after 1981, though the top-vs-middle gap is the larger disparity."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that the wealthy are undertaxed or that tax policy caused the divergence.",
+  "Tax rates or after-tax dollar income levels by group; these are not in the table.",
+  "Income shares, wealth shares, or composition percentages; the table only has percent_growth values.",
+  "Extrapolating beyond 2014 or predicting future gaps.",
+  "Using 400% as the exact 2014 top endpoint instead of the table's 420% (400% appears as a 2011 value)."
+ ],
+ "notes": "The table is cumulative percent growth since 1980, so all endpoint and gap statements are percentage-point differences, not dollars or shares. The narration's tax-opinion language is outside the table and should not be treated as data evidence.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 48.5,
+  "usage": {
+   "prompt_tokens": 3545,
+   "completion_tokens": 12173,
+   "total_tokens": 15718,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9761
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 3289
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

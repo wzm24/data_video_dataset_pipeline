@@ -1,0 +1,264 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_19",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how sales performance can start strong with an initial peak but decline significantly over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series begins at a relatively high level: the first ordered observation is 0.70 on the relative scale, below the later peak but above the later post-peak observations.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sales performance",
+     "x": "first ordered observation",
+     "field": "relative_value",
+     "value": 0.7,
+     "note": "first row in table order"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Starts strong with an opening relative value of 0.70",
+    "The first point is 0.70, not the maximum",
+    "Opening level is relatively high at 0.70 and exceeds the later post-peak values"
+   ],
+   "visual_evidence_rule": "The opening point must be visibly relatively high compared with the late points, and not falsely shown as the series maximum.",
+   "temporal_anchor": "opening clause about a huge spike in the beginning",
+   "reviewer_question": "Is the relatively high opening value 0.70 required to convey the strong start?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest value occurs early, at the fourth ordered observation, with relative_value 0.94; this is the initial peak.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sales performance",
+     "x": "fourth ordered observation",
+     "field": "relative_value",
+     "value": 0.94,
+     "note": "maximum relative_value in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Early peak reaches 0.94 at the fourth point",
+    "The highest relative value is 0.94, occurring early rather than at the first point",
+    "The series peaks at 0.94 before declining"
+   ],
+   "visual_evidence_rule": "The fourth ordered point must be visibly the highest point of the series.",
+   "temporal_anchor": "clause about the huge spike in the beginning",
+   "reviewer_question": "Must the video identify the early peak as the maximum at 0.94 on the fourth observation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "From the early peak to the final observation, the series drops by 0.76 relative units: 0.94 down to 0.18.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sales performance",
+     "x": "fourth ordered observation",
+     "field": "relative_value",
+     "value": 0.94,
+     "note": "series maximum"
+    },
+    {
+     "entity": "Sales performance",
+     "x": "tenth ordered observation",
+     "field": "relative_value",
+     "value": 0.18,
+     "note": "final observation"
+    }
+   ],
+   "computation": "0.94 - 0.18 = 0.76",
+   "accepted_routes": [
+    "Drops from 0.94 to 0.18, a decline of 0.76 relative units",
+    "Ends 0.76 below its early peak",
+    "Loses 0.76 of the relative scale from the highest point to the final point"
+   ],
+   "visual_evidence_rule": "The chart must show a large fall from the highest point to the last point.",
+   "temporal_anchor": "clause about almost nothing after the spike",
+   "reviewer_question": "Must the video quantify the peak-to-end drop as 0.76 relative units?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After the peak, the general trend is downward: values fall from 0.70 at the fifth point to 0.58, 0.30, 0.22, with a minor uptick to 0.27, then a final fall to 0.18.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Sales performance",
+     "x": "fifth ordered observation",
+     "field": "relative_value",
+     "value": 0.7,
+     "note": "first post-peak point"
+    },
+    {
+     "entity": "Sales performance",
+     "x": "sixth ordered observation",
+     "field": "relative_value",
+     "value": 0.58,
+     "note": "post-peak decline"
+    },
+    {
+     "entity": "Sales performance",
+     "x": "seventh ordered observation",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "post-peak decline"
+    },
+    {
+     "entity": "Sales performance",
+     "x": "eighth ordered observation",
+     "field": "relative_value",
+     "value": 0.22,
+     "note": "low point before small rebound"
+    },
+    {
+     "entity": "Sales performance",
+     "x": "ninth ordered observation",
+     "field": "relative_value",
+     "value": 0.27,
+     "note": "minor uptick"
+    },
+    {
+     "entity": "Sales performance",
+     "x": "tenth ordered observation",
+     "field": "relative_value",
+     "value": 0.18,
+     "note": "final low point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series mostly falls after its early peak, with only a small rebound from 0.22 to 0.27 before the final 0.18",
+    "Post-peak trend is downward despite one minor uptick",
+    "After the fourth point, the path is largely descending"
+   ],
+   "visual_evidence_rule": "The post-peak segment must visibly trend downward, including the small rebound near the end.",
+   "temporal_anchor": "clause about things not looking good by the later points",
+   "reviewer_question": "Must the video convey the sustained post-peak downward trend, including the minor rebound?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By the end, the series is far below its opening level: the final value 0.18 is about one quarter of the opening value 0.70.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Sales performance",
+     "x": "first ordered observation",
+     "field": "relative_value",
+     "value": 0.7,
+     "note": "opening value"
+    },
+    {
+     "entity": "Sales performance",
+     "x": "tenth ordered observation",
+     "field": "relative_value",
+     "value": 0.18,
+     "note": "final value"
+    }
+   ],
+   "computation": "0.18 / 0.70 = 0.257, approximately one quarter",
+   "accepted_routes": [
+    "Final value is roughly one quarter of the opening value",
+    "Closing value 0.18 is far below opening 0.70",
+    "Ends at less than a third of its starting relative level"
+   ],
+   "visual_evidence_rule": "The final point must be visibly much lower than the opening point.",
+   "temporal_anchor": "clause contrasting the first day with the 20th or 50th",
+   "reviewer_question": "Is the start-to-end comparison optional, or should the video explicitly contrast 0.18 with 0.70?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The first four observations are all relatively high: 0.70, 0.83, 0.80, 0.94.",
+  "The decline is not perfectly monotonic because the value rises from 0.22 to 0.27 before falling to 0.18.",
+  "The final observation is the lowest relative value in the series at 0.18."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute sales amount, salary, dollar value, or percentage because the table uses relative_value only.",
+  "Causal claim that seasonal bumps caused the initial spike.",
+  "Specific day labels such as the 20th or 50th unless supported by the table; the table provides ordered observations only.",
+  "Claim that performance became zero or literally nothing, because the lowest relative value is 0.18.",
+  "Specific chart type, colors, axis ticks, or pixel positions."
+ ],
+ "notes": "All values are relative_value, so units describe relative level, order, and trend rather than absolute sales or percentages. The key shape is a high early phase peaking at the fourth observation, then a large decline to a low final value.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 36.5,
+  "usage": {
+   "prompt_tokens": 1372,
+   "completion_tokens": 8073,
+   "total_tokens": 9445,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6082
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 860
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

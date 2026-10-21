@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_38",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate a historical trend that is currently reversing, providing visual context for a newly emerging movement.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series begins at its highest relative level, 0.92.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Historical trend",
+     "x": "first point",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "Highest value in the series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "starts at the highest level, 0.92",
+    "initial relative level is 0.92",
+    "the series opens at its maximum of 0.92"
+   ],
+   "visual_evidence_rule": "The displayed series must begin at its highest value.",
+   "temporal_anchor": "the opening history clause should carry the initial high.",
+   "reviewer_question": "Is the exact initial high 0.92 required, or can the video only indicate a high starting point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "By the labeled 1970 point, the series has fallen to 0.31, about one-third of the starting level.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Historical trend",
+     "x": "1970",
+     "field": "relative_value",
+     "value": 0.31,
+     "note": "x_value label 1970."
+    },
+    {
+     "entity": "Historical trend",
+     "x": "first point",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "Used for ratio."
+    }
+   ],
+   "computation": "0.31 / 0.92 = ~0.34; 0.92 / 0.31 = ~2.97",
+   "accepted_routes": [
+    "falls from 0.92 to 0.31 by 1970",
+    "the 1970 level is about one-third of the start",
+    "the start is about three times the 1970 level"
+   ],
+   "visual_evidence_rule": "The displayed series must show a large downward change from the first point to the point labeled 1970.",
+   "temporal_anchor": "the go-back clause should carry the decline to 1970.",
+   "reviewer_question": "Must the video explicitly connect the 1970 point to the starting high, or is the general decline enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series reaches its lowest relative level, 0.26, after the 1970 point.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Historical trend",
+     "x": "lowest point",
+     "field": "relative_value",
+     "value": 0.26,
+     "note": "Minimum of the series."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the minimum is 0.26",
+    "it bottoms at 0.26",
+    "reaches its lowest level of 0.26"
+   ],
+   "visual_evidence_rule": "The displayed series must visibly reach its lowest value before the final rise.",
+   "temporal_anchor": "the clause before the new-movement statement should carry the low point.",
+   "reviewer_question": "Is the exact minimum 0.26 required, or can the video say only lowest point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After the minimum, the trend reverses upward and reaches 0.51 at the final labeled point (2010), about twice the low.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Historical trend",
+     "x": "lowest point",
+     "field": "relative_value",
+     "value": 0.26,
+     "note": "Start of reversal."
+    },
+    {
+     "entity": "Historical trend",
+     "x": "2010",
+     "field": "relative_value",
+     "value": 0.51,
+     "note": "Final labeled point."
+    }
+   ],
+   "computation": "0.51 / 0.26 = ~1.96; 0.51 - 0.26 = 0.25",
+   "accepted_routes": [
+    "reverses from 0.26 to 0.51 by 2010",
+    "after the low it climbs to 0.51 at the final point",
+    "the final level is about twice the minimum"
+   ],
+   "visual_evidence_rule": "The displayed series must turn upward after the lowest point and end at a higher value.",
+   "temporal_anchor": "the now-data-indicates-new-movement clause should carry the reversal.",
+   "reviewer_question": "Is the final 2010 value 0.51 required, or is the upward direction sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Despite the recent reversal, the final relative level (0.51 at 2010) remains below the starting level (0.92), at about half.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Historical trend",
+     "x": "first point",
+     "field": "relative_value",
+     "value": 0.92,
+     "note": "Initial high."
+    },
+    {
+     "entity": "Historical trend",
+     "x": "2010",
+     "field": "relative_value",
+     "value": 0.51,
+     "note": "Final labeled point."
+    }
+   ],
+   "computation": "0.51 / 0.92 = ~0.55; 0.92 / 0.51 = ~1.80",
+   "accepted_routes": [
+    "ends at about half the starting level",
+    "final 0.51 is well below the initial 0.92",
+    "initial high is about 1.8 times the final level"
+   ],
+   "visual_evidence_rule": "The displayed series must end lower than it began.",
+   "temporal_anchor": "the now-data-indicates clause should carry the final-vs-start comparison.",
+   "reviewer_question": "Is the final-still-below-initial comparison required context or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Around 1970 the series plateaus near 0.31 before dipping to 0.26.",
+  "The decline crosses the 0.50 relative level before reaching the minimum.",
+  "The last four points rise consecutively: 0.33, 0.41, 0.46, 0.51."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state the narration's start year as a data point; it is not in the table.",
+  "Do not use percentages, dollar amounts, counts, or absolute units; only relative_value is available.",
+  "Do not claim the historical trend causes the new movement.",
+  "Do not extrapolate beyond the first or last table points.",
+  "Do not say the final point overtakes the initial point."
+ ],
+ "notes": "All numeric claims are relative_value comparisons or ratios; no absolute units are available. The main reviewer trade-off is whether the final-vs-start comparison is required context or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 54.0,
+  "usage": {
+   "prompt_tokens": 1468,
+   "completion_tokens": 12502,
+   "total_tokens": 13970,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10826
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 956
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

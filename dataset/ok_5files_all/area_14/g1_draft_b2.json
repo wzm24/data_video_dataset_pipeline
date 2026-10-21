@@ -1,0 +1,306 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_14",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how a rapid pandemic outbreak can exceed healthcare system capacity.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The plotted series is Infections on a relative 0–100 index, not an absolute patient count; its maximum is 100.0 relative (relative_value 1.0000).",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": 31.0,
+     "field": "value",
+     "value": 100.0,
+     "note": "peak of the relative infections series"
+    },
+    {
+     "entity": "Infections",
+     "x": 31.0,
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "peak expressed as a normalized fraction"
+    },
+    {
+     "entity": "Infections",
+     "x": 0.0,
+     "field": "value",
+     "value": 0.0,
+     "note": "start of the relative series"
+    },
+    {
+     "entity": "Infections",
+     "x": 62.0,
+     "field": "value",
+     "value": 0.0,
+     "note": "end of the relative series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Infections are shown on a relative 0–100 scale.",
+    "The peak reaches 100.0 on a normalized infections index.",
+    "This is a relative infections curve, not an absolute count of patients."
+   ],
+   "visual_evidence_rule": "Y-axis or label must indicate relative/normalized infections; no absolute case-count numbers or population-share denominator.",
+   "temporal_anchor": "The narration clause about many people getting sick should not be converted into an absolute count; the relative scale should be visible when infections rise.",
+   "reviewer_question": "Must the video explicitly identify the infections values as relative/normalized rather than absolute case counts?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The infections curve reaches its maximum at x=31.0 with value 100.0 relative (1.0000 on the relative scale).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": 31.0,
+     "field": "value",
+     "value": 100.0,
+     "note": "peak value"
+    },
+    {
+     "entity": "Infections",
+     "x": 31.0,
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "peak as normalized relative value"
+    },
+    {
+     "entity": "Infections",
+     "x": 29.4,
+     "field": "value",
+     "value": 99.4,
+     "note": "adjacent lower value before peak"
+    },
+    {
+     "entity": "Infections",
+     "x": 32.6,
+     "field": "value",
+     "value": 99.4,
+     "note": "adjacent lower value after peak"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Infections peak at 100.0 relative at x=31.0.",
+    "The highest point of the outbreak curve is 1.0000 on the relative scale at x=31.0.",
+    "The curve tops out at the 100 mark halfway through the plotted interval."
+   ],
+   "visual_evidence_rule": "Apex of the infections curve must be visible at x=31.0 and y=100.0 relative (or 1.0000 normalized).",
+   "temporal_anchor": "The clause about numbers getting too large should align with the peak/apex.",
+   "reviewer_question": "Must the peak value and its x-position be explicitly shown or labeled?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The fastest single-step rise in infections occurs from x=14.0 to x=15.5, where the value increases by 7.8 relative points (from 42.2 to 50.0), a slope of about 5.2 points per x-unit.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": 14.0,
+     "field": "value",
+     "value": 42.2,
+     "note": "start of fastest rise segment"
+    },
+    {
+     "entity": "Infections",
+     "x": 15.5,
+     "field": "value",
+     "value": 50.0,
+     "note": "end of fastest rise segment"
+    },
+    {
+     "entity": "Infections",
+     "x": 17.1,
+     "field": "value",
+     "value": 57.8,
+     "note": "following value continues rapid rise"
+    }
+   ],
+   "computation": "(50.0 - 42.2) = 7.8 relative points; (15.5 - 14.0) = 1.5 x-units; 7.8 / 1.5 = 5.2 points per x-unit.",
+   "accepted_routes": [
+    "The steepest rise adds 7.8 relative points in just 1.5 x-units, from 42.2 to 50.0.",
+    "At its fastest, infections climb at about 5.2 relative points per x-unit between x=14.0 and x=15.5.",
+    "The curve accelerates sharply through 42.2 to 50.0 just before the halfway mark."
+   ],
+   "visual_evidence_rule": "The steepest tangent/segment of the rising curve should be visible around x=14.0–15.5, with values 42.2 and 50.0.",
+   "temporal_anchor": "The narration clause about a fast pandemic/same-time sickness should carry this rapid-growth unit.",
+   "reviewer_question": "Must the video quantify the steepest growth segment, not just show a peak?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The curve crosses the 50.0 relative level on the rise at x=15.5 and on the decline at x=46.5, remaining above 50.0 for 31.0 x-units between those crossings.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": 15.5,
+     "field": "value",
+     "value": 50.0,
+     "note": "rising-side 50% crossing"
+    },
+    {
+     "entity": "Infections",
+     "x": 46.5,
+     "field": "value",
+     "value": 50.0,
+     "note": "falling-side 50% crossing"
+    },
+    {
+     "entity": "Infections",
+     "x": 31.0,
+     "field": "value",
+     "value": 100.0,
+     "note": "peak inside the above-50% interval"
+    }
+   ],
+   "computation": "(46.5 - 15.5) = 31.0 x-units above 50.0 relative.",
+   "accepted_routes": [
+    "Infections cross 50.0 relative at x=15.5 and x=46.5.",
+    "The curve stays above the halfway mark for 31.0 x-units.",
+    "50% relative is reached at x=15.5 on the way up and again at x=46.5 on the way down."
+   ],
+   "visual_evidence_rule": "A visible 50.0 relative level/line and intersection points at x=15.5 and x=46.5.",
+   "temporal_anchor": "Can accompany the capacity-strain clause if a non-numeric reference line is used.",
+   "reviewer_question": "Is the 50% crossing an obligatory threshold for the capacity message, or optional derived detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "After its peak at x=31.0, the infections curve descends back to 0.0 relative by x=62.0, with a decline that mirrors the rise (e.g., 50.0 at x=46.5 and 20.6 at x=52.7).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": 31.0,
+     "field": "value",
+     "value": 100.0,
+     "note": "peak before decline"
+    },
+    {
+     "entity": "Infections",
+     "x": 46.5,
+     "field": "value",
+     "value": 50.0,
+     "note": "decline crossing of 50.0"
+    },
+    {
+     "entity": "Infections",
+     "x": 52.7,
+     "field": "value",
+     "value": 20.6,
+     "note": "lower decline value"
+    },
+    {
+     "entity": "Infections",
+     "x": 62.0,
+     "field": "value",
+     "value": 0.0,
+     "note": "right endpoint return to zero"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Infections fall back to zero by x=62.0.",
+    "The curve drops from the 100.0 peak at x=31.0 to 0.0 at x=62.0.",
+    "The decline passes 50.0 at x=46.5 and 20.6 at x=52.7 before reaching 0.0."
+   ],
+   "visual_evidence_rule": "Descending right side of the curve from apex at x=31.0 to endpoint 0.0 at x=62.0.",
+   "temporal_anchor": "Optional after the peak/capacity-strain moment; not required by the pandemic-overload intent.",
+   "reviewer_question": "Must the full decline to zero be shown, or is the rise/peak sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing the curve starts at 0.0 relative at x=0.0 and remains low initially (e.g., 2.4 at x=3.1, 9.5 at x=6.2) is valid but not required.",
+  "Indicating approximate symmetry around the peak (e.g., 99.4 at x=29.4 and x=32.6; 97.6 at x=27.9 and x=34.1) is supported by the table but optional.",
+  "Using a non-numeric or illustrative capacity threshold line as a narrative device, as long as no specific capacity value is asserted from the table."
+ ],
+ "unsupported_to_avoid": [
+  "A numeric healthcare capacity threshold, such as 80% or 100 patients, because the table contains no capacity entity.",
+  "Causal claim that the relative infections curve directly causes healthcare system failure; the table supports only the infections curve.",
+  "Absolute case counts or population shares not derivable from the relative table.",
+  "Extrapolating the outbreak before x=0.0 or after x=62.0.",
+  "Claiming exact real-time days or weeks unless x_px is explicitly defined as time."
+ ],
+ "notes": "The table only supports a relative infections curve; the capacity-overload message is intent-level and must not be given a table-sourced capacity number. Units emphasize peak, steep rise, 50% crossing, and decline.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 50.0,
+  "usage": {
+   "prompt_tokens": 1720,
+   "completion_tokens": 11798,
+   "total_tokens": 13518,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9306
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 1464
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

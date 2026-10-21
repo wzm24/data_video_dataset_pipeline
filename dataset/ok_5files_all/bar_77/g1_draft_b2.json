@@ -1,0 +1,282 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_77",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the relatively small number of In-N-Out Burger locations compared to its major competitors in the United States market.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Among the four chains, In-N-Out has the smallest location-count index, and the ordered ranking is In-N-Out < Whataburger < Five Guys < McDonald's.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "lowest value among the four chains"
+    },
+    {
+     "entity": "Whataburger",
+     "x": "x_px=281.5",
+     "field": "value",
+     "value": 2.0,
+     "note": "second-lowest value"
+    },
+    {
+     "entity": "Five Guys",
+     "x": "x_px=303.0",
+     "field": "value",
+     "value": 4.0,
+     "note": "third-lowest value"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "x_px=690.0",
+     "field": "value",
+     "value": 40.0,
+     "note": "highest value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In-N-Out is the smallest of the four chains, followed by Whataburger, Five Guys, and McDonald's.",
+    "Ranking: In-N-Out (1.000) < Whataburger (2.000) < Five Guys (4.000) < McDonald's (40.000).",
+    "McDonald's is the largest, In-N-Out is the smallest, with Whataburger and Five Guys in between."
+   ],
+   "visual_evidence_rule": "All four bars must be visible in order, with In-N-Out shortest, then Whataburger, Five Guys, and McDonald's, or a ranked label must make this order explicit.",
+   "temporal_anchor": "the narration clause establishing In-N-Out is one of the smallest major fast food chains compared with competitors",
+   "reviewer_question": "Must the video explicitly rank all four chains, or is showing In-N-Out as the smallest sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "McDonald's has 40 times as many locations as In-N-Out.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "reference value for the ratio"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "x_px=690.0",
+     "field": "value",
+     "value": 40.0,
+     "note": "numerator of the ratio"
+    }
+   ],
+   "computation": "40.000 / 1.000 = 40",
+   "accepted_routes": [
+    "McDonald's has 40 times as many locations as In-N-Out.",
+    "In-N-Out has 1/40 as many locations as McDonald's.",
+    "For every In-N-Out location, there are 40 McDonald's locations.",
+    "McDonald's is 40x In-N-Out."
+   ],
+   "visual_evidence_rule": "In-N-Out and McDonald's bars or values must be visible together with a 40x annotation or a scale that makes the 40-to-1 ratio readable.",
+   "temporal_anchor": "the narration clause about McDonald's having forty times as many locations",
+   "reviewer_question": "Is the 40x McDonald's comparison required, or optional if the overall ranking already conveys In-N-Out's smallness?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Whataburger has twice as many locations as In-N-Out.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "reference value for the ratio"
+    },
+    {
+     "entity": "Whataburger",
+     "x": "x_px=281.5",
+     "field": "value",
+     "value": 2.0,
+     "note": "numerator of the ratio"
+    }
+   ],
+   "computation": "2.000 / 1.000 = 2",
+   "accepted_routes": [
+    "Whataburger has twice as many locations as In-N-Out.",
+    "Whataburger is 2x In-N-Out.",
+    "In-N-Out has half as many locations as Whataburger."
+   ],
+   "visual_evidence_rule": "In-N-Out and Whataburger bars or values must be visible together with a 2x annotation or equivalent length comparison.",
+   "temporal_anchor": "the narration clause about Whataburger having over twice as many locations",
+   "reviewer_question": "Is the exact 2x Whataburger comparison required, or can it be omitted or rounded?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Five Guys has four times as many locations as In-N-Out.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "reference value for the ratio"
+    },
+    {
+     "entity": "Five Guys",
+     "x": "x_px=303.0",
+     "field": "value",
+     "value": 4.0,
+     "note": "numerator of the ratio"
+    }
+   ],
+   "computation": "4.000 / 1.000 = 4",
+   "accepted_routes": [
+    "Five Guys has four times as many locations as In-N-Out.",
+    "Five Guys is 4x In-N-Out.",
+    "In-N-Out has one-quarter as many locations as Five Guys."
+   ],
+   "visual_evidence_rule": "In-N-Out and Five Guys bars or values must be visible together with a 4x annotation or equivalent length comparison.",
+   "temporal_anchor": "the narration clause about Five Guys having almost four times as many locations",
+   "reviewer_question": "Is the exact 4x Five Guys comparison required, or can it be omitted or rounded?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Using McDonald's as the 100% benchmark, In-N-Out is 2.5%, Whataburger is 5%, and Five Guys is 10% of McDonald's location-count value.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "relative_value",
+     "value": 0.025,
+     "note": "table relative_value"
+    },
+    {
+     "entity": "Whataburger",
+     "x": "x_px=281.5",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "table relative_value"
+    },
+    {
+     "entity": "Five Guys",
+     "x": "x_px=303.0",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "table relative_value"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "x_px=690.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "table relative_value; benchmark is 100%"
+    }
+   ],
+   "computation": "relative_value × 100: 0.0250→2.5%, 0.0500→5%, 0.1000→10%, 1.0000→100%",
+   "accepted_routes": [
+    "Using McDonald's as 100%, In-N-Out is 2.5%, Whataburger is 5%, and Five Guys is 10%.",
+    "In-N-Out's relative_value is 0.0250 of McDonald's; Whataburger's is 0.0500; Five Guys's is 0.1000.",
+    "McDonald's is the 1.0000 benchmark; the other chains are small fractions of it."
+   ],
+   "visual_evidence_rule": "McDonald's must be shown as the 100% reference, with In-N-Out at 2.5%, Whataburger at 5%, and Five Guys at 10% relative_value labels or annotations.",
+   "temporal_anchor": "the optional annotation during the small-number comparison section; no dedicated narration clause is required",
+   "reviewer_question": "Should the video include the 2.5%/5%/10% relative-to-McDonald's percentages as an optional alternative to the 40x/2x/4x multiples?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "McDonald's is 20 times Whataburger (40 / 2 = 20).",
+  "McDonald's is 10 times Five Guys (40 / 4 = 10).",
+  "Five Guys is twice Whataburger (4 / 2 = 2).",
+  "McDonald's relative_value 1.0000 can be shown as the benchmark for the comparison."
+ ],
+ "unsupported_to_avoid": [
+  "In-N-Out has 347 locations; this number is not in the table.",
+  "Subway comparison, average five restaurants per year, since 1948, or two less than Subway; these are not in the table.",
+  "Causal claims that unlimited demand or company policy explains the small number of locations.",
+  "World market claims; the table only supports the listed US-market comparison.",
+  "Treating value=1.000 as exactly one location rather than an indexed or relative value.",
+  "Summing relative_value as if it were total market share; 0.0250+0.0500+0.1000+1.0000 is not a valid total-market composition.",
+  "Extrapolating location counts beyond the four listed entities."
+ ],
+ "notes": "Treat table values as location-count index/multiples and relative_value as relative to McDonald's, not raw location counts. Do not import the narration's 347, Subway, or annual-opening facts because they are absent from the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 39.1,
+  "usage": {
+   "prompt_tokens": 787,
+   "completion_tokens": 10219,
+   "total_tokens": 11006,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7899
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 531
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

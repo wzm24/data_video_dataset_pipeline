@@ -1,0 +1,128 @@
+{
+ "clip_id": "line_17",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Private school participation @ 1220.0",
+    "extreme": "min",
+    "expected": 1.0332,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Private school participation series must visibly attain its maximum at its final plotted point."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Private school participation @ 1143.3",
+    "mark:Private school participation @ 1220.0"
+   ],
+   "assertion": {
+    "low": "Private school participation @ 1143.3",
+    "low_value": 0.1,
+    "high": "Private school participation @ 1220.0",
+    "high_value": 1.0332,
+    "delta": 0.9332,
+    "ratio": 10.332,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Private school participation series must show a steep upward trend from its first to last point, consistent with a tenfold increase."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Richest 10% @ 1117.7",
+    "extreme": "min",
+    "expected": 0.1667,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Richest 10% series must visibly reach its maximum at x=1117.7 before any later point."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Richest 10% @ 1143.3",
+    "mark:Private school participation @ 1143.3"
+   ],
+   "assertion": {
+    "greater": "Richest 10% @ 1143.3",
+    "lesser": "Private school participation @ 1143.3",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the shared x position, the Richest 10% and Private school participation series must visibly coincide or cross at the same value."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Private school participation @ 1220.0",
+    "mark:Richest 10% @ 1117.7"
+   ],
+   "assertion": {
+    "greater": "Private school participation @ 1220.0",
+    "lesser": "Richest 10% @ 1117.7",
+    "expected_ratio": 6.198,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The maximum of the Private school participation series must be visibly much higher than the maximum of the Richest 10% series."
+  }
+ ]
+}

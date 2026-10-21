@@ -1,0 +1,239 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_43",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the United States' significant historical contribution to global carbon dioxide emissions, thereby justifying its responsibility to lead decarbonization efforts.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In 2019, China's annual CO2 emissions are higher than the U.S.'s, so the U.S. is not the current top annual emitter.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "China",
+     "x": 2019,
+     "field": "value",
+     "value": 10.1,
+     "note": "China 2019 annual CO2 in Gt"
+    },
+    {
+     "entity": "United States",
+     "x": 2019,
+     "field": "value",
+     "value": 5.4,
+     "note": "US 2019 annual CO2 in Gt"
+    }
+   ],
+   "computation": "China 2019 value minus US 2019 value = 10.10 - 5.40 = 4.70 Gt higher for China.",
+   "accepted_routes": [
+    "China emitted 10.1 Gt CO2 in 2019, more than the U.S.'s 5.4 Gt.",
+    "The U.S. is not the current largest annual CO2 emitter; China is.",
+    "In 2019, China's annual emissions were about 4.7 Gt above the U.S.'s."
+   ],
+   "visual_evidence_rule": "The final-year (2019) values for China and the United States must be visible and show China's bar/point/line endpoint above the U.S.",
+   "temporal_anchor": "The narration clause 'The U.S. doesn't currently emit the most carbon dioxide of any country'.",
+   "reviewer_question": "Is the current-year annual ranking (China > U.S.) required in the clip, or may it be omitted?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "When annual emissions are summed from 1750 through 2019, the United States has the largest cumulative total among all listed countries/regions.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "1750-2019",
+     "field": "value",
+     "value": 5.4,
+     "note": "2019 endpoint; cumulative total is sum of all US annual values from 1750-2019"
+    },
+    {
+     "entity": "China",
+     "x": "1750-2019",
+     "field": "value",
+     "value": 10.1,
+     "note": "2019 endpoint; cumulative total is sum of all China annual values from 1750-2019"
+    },
+    {
+     "entity": "EU-28",
+     "x": "1750-2019",
+     "field": "value",
+     "value": 3.3,
+     "note": "2019 endpoint; cumulative total is sum of all EU-28 annual values from 1750-2019"
+    },
+    {
+     "entity": "India",
+     "x": "1750-2019",
+     "field": "value",
+     "value": 2.65,
+     "note": "2019 endpoint; cumulative total is sum of all India annual values from 1750-2019"
+    }
+   ],
+   "computation": "For each entity, sum(value) over x=1750..2019. The U.S. sum is greater than the sum for China, EU-28, India, and every other listed entity.",
+   "accepted_routes": [
+    "The U.S. has emitted more CO2 in total than any other country or region in the chart.",
+    "Over 1750-2019, U.S. cumulative emissions rank first.",
+    "No other listed entity has a larger cumulative CO2 total than the United States."
+   ],
+   "visual_evidence_rule": "The animation must show a cumulative total/rank (e.g., cumulative area, running sum, or ranked cumulative bars) indicating the U.S. is highest; simply showing 2019 annual values is insufficient.",
+   "temporal_anchor": "The narration clause 'it's emitted more carbon dioxide in total than any other country or region'.",
+   "reviewer_question": "Is the cumulative ranking required, and must the clip explicitly show it is computed by summing annual values over 1750-2019?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The U.S. leads cumulative emissions while China leads current annual emissions; the two metrics point in opposite directions for the U.S. and China.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "China",
+     "x": 2019,
+     "field": "value",
+     "value": 10.1,
+     "note": "China 2019 annual CO2 in Gt"
+    },
+    {
+     "entity": "United States",
+     "x": 2019,
+     "field": "value",
+     "value": 5.4,
+     "note": "US 2019 annual CO2 in Gt"
+    },
+    {
+     "entity": "United States",
+     "x": "1750-2019",
+     "field": "value",
+     "value": 5.4,
+     "note": "2019 endpoint; cumulative US total is sum over all years"
+    },
+    {
+     "entity": "China",
+     "x": "1750-2019",
+     "field": "value",
+     "value": 10.1,
+     "note": "2019 endpoint; cumulative China total is sum over all years"
+    }
+   ],
+   "computation": "Compare 2019 annual: China 10.10 > US 5.40. Compare cumulative sums over 1750-2019: US sum > China sum. Thus rankings differ.",
+   "accepted_routes": [
+    "Although China emits more now, the U.S. has emitted more historically.",
+    "The U.S. trails China in 2019 annual CO2 but leads China in cumulative CO2 since 1750.",
+    "China is the current top annual emitter; the U.S. is the top historical cumulative emitter."
+   ],
+   "visual_evidence_rule": "The clip must place the current-year annual comparison next to or in contrast with the cumulative comparison, so the reversal is visible.",
+   "temporal_anchor": "The narration's 'doesn't currently... but... in total' contrast.",
+   "reviewer_question": "Should the clip explicitly contrast China's current annual lead with the U.S.'s historical cumulative lead, or is one of those facts enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "U.S. annual emissions rose substantially over the industrial era: from 0.40 Gt in 1900 to 5.40 Gt in 2019, an increase of 5.00 Gt (13.5x).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": 1900,
+     "field": "value",
+     "value": 0.4,
+     "note": "US annual CO2 in Gt"
+    },
+    {
+     "entity": "United States",
+     "x": 2019,
+     "field": "value",
+     "value": 5.4,
+     "note": "US annual CO2 in Gt"
+    }
+   ],
+   "computation": "5.40 - 0.40 = 5.00 Gt increase; 5.40 / 0.40 = 13.5x.",
+   "accepted_routes": [
+    "U.S. annual CO2 emissions increased from 0.4 Gt in 1900 to 5.4 Gt in 2019.",
+    "U.S. emissions grew about 13-14 times between 1900 and 2019.",
+    "The U.S. added roughly 5 Gt of annual CO2 emissions since 1900."
+   ],
+   "visual_evidence_rule": "The U.S. line/bar should visibly rise from 1900 to 2019, with those two endpoints labeled or readable.",
+   "temporal_anchor": "The narration clause 'as one of the oldest industrial powers' or the historical-contribution setup.",
+   "reviewer_question": "Is the U.S. long-term emissions growth path required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "U.S. share of 2019 global annual emissions is about 15% (5.40 / 36.30), where 36.30 is the sum of all 2019 entity values.",
+  "EU-28 cumulative emissions are lower than U.S. cumulative emissions over 1750-2019.",
+  "U.S. annual emissions were already above 1 Gt by 1917 (1.01 Gt) and above 5 Gt by 1986 (5.01 Gt)."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming the U.S. is currently the largest annual CO2 emitter; the table shows China is higher in 2019.",
+  "Causal or normative claims that emissions data alone prove the U.S. 'should' lead decarbonization.",
+  "Per-capita or population-normalized comparisons, which are not in the table.",
+  "Extrapolations beyond 2019 or projections of future emissions.",
+  "Exact cumulative totals or exact cumulative shares unless the annual series are summed explicitly."
+ ],
+ "notes": "The core trade-off is between showing the current annual ranking versus the historical cumulative ranking, plus whether the clip must explicitly contrast them. U4 and the share fact are optional context that support the historical-contribution framing.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.0
+ },
+ "draft_cost": {
+  "sec": 65.6,
+  "usage": {
+   "prompt_tokens": 76749,
+   "completion_tokens": 14364,
+   "total_tokens": 91113,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12294
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 76493
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

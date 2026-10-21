@@ -1,0 +1,144 @@
+{
+ "clip_id": "bar_89",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:0-4-right @ 0-4",
+    "mark:95-99-right @ 95-99",
+    "mark:0-4-left @ 0-4",
+    "mark:95-99-left @ 95-99"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "0-4-right @ 0-4",
+      "value": 1.05
+     },
+     {
+      "mark": "95-99-right @ 95-99",
+      "value": 0.009
+     },
+     {
+      "mark": "0-4-left @ 0-4",
+      "value": 0.996
+     },
+     {
+      "mark": "95-99-left @ 95-99",
+      "value": 0.008
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Bars for the youngest age groups (0-4 and 5-9) are visibly longer than bars for older age groups, creating a bottom-heavy shape."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "0-4-right @ 0-4",
+    "extreme": "max",
+    "expected": 1.05,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 0-4 bars are the longest in the chart, or at least no other age group exceeds them."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:0-4-right @ 0-4",
+    "mark:95-99-right @ 95-99"
+   ],
+   "assertion": {
+    "greater": "0-4-right @ 0-4",
+    "lesser": "95-99-right @ 95-99",
+    "expected_ratio": 116.6667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 95-99 and 90-95 bars are extremely short compared with 0-4 and 5-9."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:0-4-right @ 0-4",
+    "mark:0-4-left @ 0-4"
+   ],
+   "assertion": {
+    "greater": "0-4-right @ 0-4",
+    "lesser": "0-4-left @ 0-4",
+    "expected_ratio": 1.0542,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "For 0-4 and 5-9, the female-series bar is slightly longer than the male-series bar."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:15-19-left @ 15-19",
+    "mark:15-19-right @ 15-19"
+   ],
+   "assertion": {
+    "greater": "15-19-left @ 15-19",
+    "lesser": "15-19-right @ 15-19",
+    "expected_ratio": 1.0617,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 15-19 and 20-24 bars are visibly longer than most older cohorts, though shorter than 0-4 and 5-9."
+  }
+ ]
+}

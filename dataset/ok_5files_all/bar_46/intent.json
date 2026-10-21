@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_46",
+ "intent_en": "To illustrate the distribution of income taxes across different individuals as a baseline for comparing the total tax burden when corporate and property taxes are included.",
+ "previous_intent": "To establish a baseline of income tax distribution across a group of individuals and introduce the addition of corporate and property taxes to analyze the total tax burden.",
+ "narration_support": "Let's go back to our first chart with these 11 people. Remember, this is just the income tax. What happens when we add in all the other taxes?",
+ "chart_support": "Bar chart titled 'Income taxes' showing the relative tax burden for 11 person icons, with a legend indicating 'Corporate and Income taxes' (where the purple bars correspond to income taxes).",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly identifies the current chart as 'just the income tax' and sets up a comparison with 'all the other taxes' like corporate and property taxes. The chart title confirms 'Income taxes' and displays a distribution across 11 people, while the legend hints at the broader category of 'Corporate and Income taxes'.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

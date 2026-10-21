@@ -1,0 +1,7 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_22,Cashier,cashier,190.0,,-4000.000,0.0194,,#E45756,printed
+bar_22,Working mom,working-mom,380.0,,1000.000,0.0046,,#E6E7EB,printed
+bar_22,Office clerk,office-clerk,570.0,,2000.000,0.0093,,#E6E7EB,printed
+bar_22,Nurse,nurse,760.0,,26000.000,0.1204,,#E6E7EB,printed
+bar_22,Teacher,teacher,950.0,,32000.000,0.1482,,#E6E7EB,printed
+bar_22,Accountant,accountant,1140.0,,110000.000,0.5093,,#E6E7EB,printed

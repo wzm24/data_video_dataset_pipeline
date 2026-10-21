@@ -1,0 +1,229 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_21",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the rising global temperatures that underscore the urgency of making sensible decisions to avoid a future climate crisis.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data is a single Global temperature series, not a comparison across multiple entities.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Global temperature",
+     "x": "all rows",
+     "field": "value",
+     "value": -0.1002,
+     "note": "example first-row value; the entity field is Global temperature for every row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the clip is about global temperature",
+    "one global temperature series is shown",
+    "all plotted values belong to the Global temperature entity"
+   ],
+   "visual_evidence_rule": "The chart must identify the series as Global temperature; no second entity is required.",
+   "temporal_anchor": "the science tells us is coming",
+   "reviewer_question": "Must the clip explicitly label the series as global temperature, or is the chart context enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Overall trend: the series moves from negative early values to positive late values, showing an upward global temperature pattern.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Global temperature",
+     "x": "x_px 120.0",
+     "field": "value",
+     "value": -0.1002,
+     "note": "first row value, negative"
+    },
+    {
+     "entity": "Global temperature",
+     "x": "x_px 1220.0",
+     "field": "value",
+     "value": 0.9499,
+     "note": "final row value, positive"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "temperatures start negative and end positive",
+    "the series shifts from negative early values to positive late values",
+    "there is an overall upward trend from the first to the last point"
+   ],
+   "visual_evidence_rule": "The rendered series must visibly change from early values below zero to late values above zero.",
+   "temporal_anchor": "the science tells us is coming",
+   "reviewer_question": "Must the video explicitly show a negative-to-positive shift, or is a general upward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Net change: the final value is 1.0501 table-value units higher than the first value (0.9499 - (-0.1002) = 1.0501).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Global temperature",
+     "x": "x_px 120.0",
+     "field": "value",
+     "value": -0.1002,
+     "note": "first value"
+    },
+    {
+     "entity": "Global temperature",
+     "x": "x_px 1220.0",
+     "field": "value",
+     "value": 0.9499,
+     "note": "final value"
+    }
+   ],
+   "computation": "final value minus first value: 0.9499 - (-0.1002) = 1.0501",
+   "accepted_routes": [
+    "the series increases by about 1.05 table units from start to finish",
+    "the final point is roughly 1.05 higher than the first point",
+    "net rise of 1.0501 in the table's value field"
+   ],
+   "visual_evidence_rule": "The chart must make the end-to-start increase visible; the final plotted value must be about 1.05 table units above the first.",
+   "temporal_anchor": "we sleepwalk into the crisis",
+   "reviewer_question": "Is the net first-to-last increase required, or is the final high value sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Endpoint extreme: the final value, 0.9499, is the highest value in the series.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Global temperature",
+     "x": "x_px 1220.0",
+     "field": "value",
+     "value": 0.9499,
+     "note": "final value and maximum of the value column"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the series ends at its highest point, 0.9499",
+    "the last value is the maximum in the data",
+    "the peak occurs at the final point"
+   ],
+   "visual_evidence_rule": "The final plotted value must be visibly the highest point of the series.",
+   "temporal_anchor": "the crisis the science tells us is coming",
+   "reviewer_question": "Must the final point be marked or emphasized as the series maximum?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series has a mid-series minimum of -0.2998, showing the rise was not uninterrupted.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Global temperature",
+     "x": "x_px 545.8",
+     "field": "value",
+     "value": -0.2998,
+     "note": "minimum of the value column"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the lowest point in the series is -0.2998",
+    "the series dips to about -0.30 before the late increase",
+    "there is a mid-series low of -0.2998"
+   ],
+   "visual_evidence_rule": "The chart must show a mid-series trough below the surrounding values.",
+   "temporal_anchor": "we sleepwalk into the crisis",
+   "reviewer_question": "Must the video acknowledge the mid-series dip, or can it omit the non-monotonic part?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series crosses from negative to positive values at least once.",
+  "Late values are consistently higher than early values.",
+  "The final segment shows a sharp late increase."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state a percentage from relative_value; relative_value is a 0-1 normalization, not a percent.",
+  "Do not attach °C, °F, or any physical unit because the unit column is empty.",
+  "Do not claim that sensible decisions now cause the temperature rise; the table only shows a series.",
+  "Do not extrapolate future temperatures beyond the final table value.",
+  "Do not claim a specific year for every point; only one x_value of 1950 appears in the table."
+ ],
+ "notes": "All numeric claims use the table's value field; the unit column is empty, so no physical unit is asserted. Relative_value is not used as a percentage.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 46.9,
+  "usage": {
+   "prompt_tokens": 4391,
+   "completion_tokens": 10774,
+   "total_tokens": 15165,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9193
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 3879
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

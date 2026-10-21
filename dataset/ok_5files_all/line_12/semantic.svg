@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f0f0f0"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#FCD116">SUBWAY</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#000000" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#000000" stroke-width="3"/>
+<g id="entity-subway" data-role="entity" data-entity-id="subway" data-label="Subway" data-series="true">
+<polyline id="subway-polyline" data-role="polyline" data-entity-id="subway" points="120.0,600.0 384.0,480.4 604.0,448.2 780.0,342.4 1000.0,282.6 1154.0,195.2 1220.0,140.0" fill="none" stroke="#FCD116" stroke-width="6" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="subway" cx="384.0" cy="480.4" r="6" fill="#FCD116" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="subway" cx="604.0" cy="448.2" r="6" fill="#FCD116" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="subway" cx="780.0" cy="342.4" r="6" fill="#FCD116" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="subway" cx="1000.0" cy="282.6" r="6" fill="#FCD116" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="subway" cx="1154.0" cy="195.2" r="6" fill="#FCD116" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="120.0" y="582.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">20,721</text>
+<text data-role="point-label" x="1220.0" y="122.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">25,285</text>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">2006</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">2011</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#FCD116" stroke-width="6"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333333">Subway</text>
+</g>
+</svg>

@@ -1,0 +1,232 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_64",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the global prevalence of lactose intolerance and the biological mechanism behind it.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Lactose intolerance affects 65% of the global population.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Lactose Intolerant",
+     "x": "Lactose Intolerant",
+     "field": "value",
+     "value": 65,
+     "note": "Table value 65 with unit %"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Worldwide, about 65% of the population is lactose intolerant.",
+    "Lactose intolerance has a global prevalence of 65%.",
+    "Roughly two-thirds of people worldwide are lactose intolerant."
+   ],
+   "visual_evidence_rule": "The chart must show the Lactose Intolerant category with a label, value, or mark at 65% (or the equivalent 0.65 share of the whole).",
+   "temporal_anchor": "The clause stating the worldwide prevalence of lactose intolerance.",
+   "reviewer_question": "Is the 65% global prevalence of lactose intolerance obligatory in the video?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Lactose tolerance affects 35% of the global population.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Lactose-Tolerant",
+     "x": "Lactose-Tolerant",
+     "field": "value",
+     "value": 35,
+     "note": "Table value 35 with unit %"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "About 35% of the world population is lactose tolerant.",
+    "A little over a third are lactose tolerant.",
+    "The remaining 35% can digest lactose."
+   ],
+   "visual_evidence_rule": "The chart must show the Lactose-Tolerant category with a label, value, or mark at 35% (or the equivalent 0.35 share of the whole).",
+   "temporal_anchor": "Any clause presenting the lactose-tolerant or complementary share, if included.",
+   "reviewer_question": "Is showing the 35% lactose-tolerant share obligatory or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Lactose intolerance is nearly twice as common as lactose tolerance.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Lactose Intolerant",
+     "x": "Lactose Intolerant",
+     "field": "value",
+     "value": 65,
+     "note": "Table value 65 with unit %"
+    },
+    {
+     "entity": "Lactose-Tolerant",
+     "x": "Lactose-Tolerant",
+     "field": "value",
+     "value": 35,
+     "note": "Table value 35 with unit %"
+    }
+   ],
+   "computation": "65 / 35 = 1.857..., so intolerance is about 1.9 times tolerance.",
+   "accepted_routes": [
+    "Lactose intolerance is almost twice as prevalent as lactose tolerance.",
+    "65% vs 35%: intolerance is roughly 1.9 times as common.",
+    "The intolerant group is about 1.86 times the tolerant group."
+   ],
+   "visual_evidence_rule": "The chart must allow comparing the two category sizes, e.g., bars with relative lengths or labels showing 65% and 35%.",
+   "temporal_anchor": "The clause comparing the two groups, if present.",
+   "reviewer_question": "Is the comparative ratio/ordering between the two groups obligatory or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Lactose intolerance is the majority condition (more than half of the population), while lactose tolerance is the minority.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Lactose Intolerant",
+     "x": "Lactose Intolerant",
+     "field": "value",
+     "value": 65,
+     "note": "Table value 65 with unit %"
+    },
+    {
+     "entity": "Lactose-Tolerant",
+     "x": "Lactose-Tolerant",
+     "field": "value",
+     "value": 35,
+     "note": "Table value 35 with unit %"
+    }
+   ],
+   "computation": "65 > (65+35)/2 = 50, and 35 < 50, so intolerant is the majority and tolerant is the minority.",
+   "accepted_routes": [
+    "More than half the world is lactose intolerant.",
+    "Lactose intolerance is the majority condition.",
+    "Lactose tolerance is the minority share (35%)."
+   ],
+   "visual_evidence_rule": "The chart must make the 65% share visibly exceed half of the total, or the narration must state majority/minority.",
+   "temporal_anchor": "The clause framing the 65% as the larger/majority group.",
+   "reviewer_question": "Is the majority/minority framing required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The two categories together account for 100% of the population (65% + 35%), i.e., they are complementary shares of the whole.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Lactose Intolerant",
+     "x": "Lactose Intolerant",
+     "field": "value",
+     "value": 65,
+     "note": "Table value 65 with unit %"
+    },
+    {
+     "entity": "Lactose-Tolerant",
+     "x": "Lactose-Tolerant",
+     "field": "value",
+     "value": 35,
+     "note": "Table value 35 with unit %"
+    }
+   ],
+   "computation": "65 + 35 = 100.",
+   "accepted_routes": [
+    "Lactose intolerance and lactose tolerance together make up the whole population.",
+    "The two shares are complementary: 65% intolerant and 35% tolerant.",
+    "Together the two categories sum to 100%."
+   ],
+   "visual_evidence_rule": "The chart must show both categories as parts of one whole, or otherwise make their complementary relationship explicit.",
+   "temporal_anchor": "The clause that presents both shares together, if included.",
+   "reviewer_question": "Is the complementary 100% composition required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [
+  "The 150 millilitres per day limit mentioned in the narration (not in table).",
+  "The absence of the enzyme after infancy and other biological mechanism details (causal claims not in table).",
+  "Any claim that lactose intolerance causes specific symptoms or digestive limits beyond the table.",
+  "Any percentage, count, or value not derivable from the table cells (e.g., 150 ml, enzyme levels).",
+  "Extrapolation to time trends or other populations not represented."
+ ],
+ "notes": "The data table supports only the 65% intolerant and 35% tolerant prevalence split; mechanism details and 150 ml limit are outside the table. Required flag is set only for the core 65% prevalence, with comparison, complement, and majority framing offered as optional valid units.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 48.0,
+  "usage": {
+   "prompt_tokens": 955,
+   "completion_tokens": 10912,
+   "total_tokens": 11867,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9227
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 443
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

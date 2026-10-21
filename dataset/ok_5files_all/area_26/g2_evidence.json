@@ -1,0 +1,131 @@
+{
+ "clip_id": "area_26",
+ "family": "area",
+ "chart_form": "area/overlay_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Earth"
+   ],
+   "assertion": {
+    "mark": "Earth",
+    "field": "value",
+    "expected": 5.974e+24,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A value or label for Earth's mass must be present as part of the Earth–Moon comparison."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Moon"
+   ],
+   "assertion": {
+    "mark": "Moon",
+    "field": "value",
+    "expected": 7.349e+22,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A value or label for the Moon's mass must be present as part of the Earth–Moon comparison."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Earth",
+    "mark:Moon"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Earth",
+      "value": 5.974e+24
+     },
+     {
+      "mark": "Moon",
+      "value": 7.349e+22
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The chart must show Earth's mass as the greater of the two masses."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Earth",
+    "mark:Moon"
+   ],
+   "assertion": {
+    "greater": "Earth",
+    "lesser": "Moon",
+    "expected_ratio": 81.29,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must present the Moon-to-Earth mass ratio or the Earth-to-Moon multiple as the central comparison."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Earth",
+    "mark:Moon"
+   ],
+   "assertion": {
+    "greater": "Earth",
+    "lesser": "Moon",
+    "expected_ratio": 81.29,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart may optionally annotate the arithmetic difference between the two masses."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_11",
+ "intent_en": "To demonstrate that test-optional colleges attract more applicants than test-required colleges and that application volumes have increased over time.",
+ "previous_intent": "To illustrate the increase in college applications over time, demonstrating that test-optional institutions attract more applicants than test-required institutions.",
+ "narration_support": "First more students apply. Naturally, when universities make it easier to do so, whether by using the common application or removing requirements like test scores, more will.",
+ "chart_support": "Line chart showing average applications from 1992 to 2010, where the test-optional trend line is consistently higher and rises more steeply than the test-required trend line.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly links removing requirements (like test scores) to more students applying. The chart visualizes this by showing application counts over time, with test-optional schools having significantly higher application numbers than test-required schools.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

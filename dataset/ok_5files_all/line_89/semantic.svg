@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#2c3340"/>
+<text x="640" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Maximum capital gains tax rate, long-term</text>
+<text x="640" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#aaaaaa">Source: US Treasury, not including NIIT</text>
+<line x1="160.0" y1="610.0" x2="1150.0" y2="610.0" stroke="#4a5263" stroke-width="1"/>
+<text x="148.0" y="615.0" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#ddd">0</text>
+<line x1="160.0" y1="520.0" x2="1150.0" y2="520.0" stroke="#4a5263" stroke-width="1"/>
+<text x="148.0" y="525.0" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#ddd">10</text>
+<line x1="160.0" y1="430.0" x2="1150.0" y2="430.0" stroke="#4a5263" stroke-width="1"/>
+<text x="148.0" y="435.0" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#ddd">20</text>
+<line x1="160.0" y1="340.0" x2="1150.0" y2="340.0" stroke="#4a5263" stroke-width="1"/>
+<text x="148.0" y="345.0" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#ddd">30</text>
+<line x1="160.0" y1="250.0" x2="1150.0" y2="250.0" stroke="#4a5263" stroke-width="1"/>
+<text x="148.0" y="255.0" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#ddd">40</text>
+<line x1="160.0" y1="160.0" x2="1150.0" y2="160.0" stroke="#4a5263" stroke-width="1"/>
+<text x="148.0" y="165.0" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#ddd">50</text>
+<text x="226" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ddd">1960</text>
+<text x="358" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ddd">1970</text>
+<text x="490" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ddd">1980</text>
+<text x="622" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ddd">1990</text>
+<text x="754" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ddd">2000</text>
+<text x="886" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ddd">2010</text>
+<text x="1018" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ddd">2020</text>
+<polyline points="226.0,385.0 239.2,385.0 252.4,385.0 265.6,385.0 278.8,385.0 292.0,385.0 305.2,385.0 318.4,385.0 331.6,367.9 344.8,362.5 358.0,338.2 371.2,317.5 384.4,295.0 397.6,295.0 410.8,295.0 424.0,295.0 437.2,295.0 450.4,295.0 463.6,305.8 476.8,358.0 490.0,358.0 503.2,358.0 516.4,430.0 529.6,430.0 542.8,430.0 556.0,430.0 569.2,430.0 582.4,358.0 595.6,358.0 608.8,358.0 622.0,358.0 635.2,358.0 648.4,358.0 661.6,358.0 674.8,358.0 688.0,358.0 701.2,358.0 714.4,430.0 727.6,430.0 740.8,430.0 754.0,430.0 767.2,430.0 780.4,430.0 793.6,475.0 806.8,475.0 820.0,475.0 833.2,475.0 846.4,475.0 859.6,475.0 872.8,475.0 886.0,475.0 899.2,475.0 912.4,475.0 925.6,395.8 938.8,395.8 952.0,395.8 965.2,395.8 978.4,395.8 991.6,395.8 1004.8,395.8 1018.0,395.8 1031.2,430.0" fill="none" stroke="#e88d45" stroke-width="3"/>
+<polyline points="1031.2,430.0 1044.4,253.6 1150.0,253.6" fill="none" stroke="#e88d45" stroke-width="3" stroke-dasharray="7 6"/>
+<text x="1056.4" y="243.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#e88d45">39.6%</text>
+<rect x="1024.4" y="269.6" width="90" height="24" fill="#e88d45"/>
+<text x="1069.4" y="286.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#2c3340">proposed</text>
+</svg>

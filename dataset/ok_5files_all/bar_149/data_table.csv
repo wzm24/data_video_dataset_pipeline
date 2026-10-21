@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_149,Tax Foundation,tax-foundation,741.0,,,0.2829,relative,#d98236,relative_only
+bar_149,Penn Wharton,penn-wharton,815.0,,,0.3984,relative,#d98236,relative_only
+bar_149,Tax Policy Center,tax-policy-center,879.6,,,0.4994,relative,#d98236,relative_only
+bar_149,Americans for Tax Fairness,americans-for-tax-fairness,900.0,,,0.5312,relative,#d98236,relative_only

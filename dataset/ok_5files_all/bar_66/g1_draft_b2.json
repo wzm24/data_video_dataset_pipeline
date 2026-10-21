@@ -1,0 +1,213 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_66",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To contextualize the corporate tax rate reduction and the predictions made by its supporters regarding economic benefits for workers and corporations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The corporate tax rate shown in the chart is 21%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Corporate tax rate",
+     "x": "value",
+     "field": "value",
+     "value": 21.0,
+     "note": "Table value is 21.000; narration treats the unit as percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "corporate tax rate is 21%",
+    "the rate was lowered to 21 percent",
+    "post-cut corporate tax rate: 21%"
+   ],
+   "visual_evidence_rule": "A bar, label, or on-screen number for Corporate tax rate must read 21% or 21.0.",
+   "temporal_anchor": "the narration clause 'lowered the corporate tax rate ... to 21%'",
+   "reviewer_question": "Must the final corporate tax rate of 21% be explicitly displayed as a number or label?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The corporate tax rate has a relative/normalized value of 0.0833 (8.33%).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Corporate tax rate",
+     "x": "relative_value",
+     "field": "relative_value",
+     "value": 0.0833,
+     "note": "Table relative_value is 0.0833; percent form is 0.0833 × 100 = 8.33%."
+    }
+   ],
+   "computation": "0.0833 × 100 = 8.33%",
+   "accepted_routes": [
+    "relative value is 0.0833",
+    "normalized value is 8.33%",
+    "chart encodes the rate at 0.0833 on the relative scale"
+   ],
+   "visual_evidence_rule": "If the chart uses a relative or normalized scale, the Corporate tax rate bar or segment must align with 0.0833 or 8.33%.",
+   "temporal_anchor": "not tied to a specific narration clause; optionally shown with the 21% rate label",
+   "reviewer_question": "Should the relative_value of 0.0833 be treated as a required semantic unit or only as a chart-encoding artifact?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Supporters of the tax cut predicted that corporations would reinvest the tax savings.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Corporate tax rate",
+     "x": "supporters' prediction",
+     "field": "narration",
+     "value": null,
+     "note": "Original narration states supporters predicted corporations would reinvest tax savings."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "supporters predicted corporations would reinvest the tax savings",
+    "backers said companies would put the tax-cut savings back into the economy",
+    "the claimed corporate benefit was reinvestment of tax savings"
+   ],
+   "visual_evidence_rule": "A text, icon, or callout must attribute the reinvestment claim to supporters of the tax cut, not present it as a verified outcome.",
+   "temporal_anchor": "the narration clause 'Those who supported the cuts predicted that corporations would reinvest those tax savings'",
+   "reviewer_question": "Must the video distinguish corporate reinvestment as a prediction or claim rather than an observed result?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Supporters predicted that workers would benefit the most from the corporate tax cut.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Corporate tax rate",
+     "x": "supporters' prediction",
+     "field": "narration",
+     "value": null,
+     "note": "Original narration states workers would benefit the most."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "workers would benefit the most",
+    "the biggest gains were predicted for workers",
+    "supporters claimed workers would be the main beneficiaries"
+   ],
+   "visual_evidence_rule": "A text, icon, or callout must show workers as the group predicted to benefit most, attributed to supporters.",
+   "temporal_anchor": "the narration clause 'and that workers would benefit the most'",
+   "reviewer_question": "Must the comparative claim that workers would benefit the most be included as a prediction?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The corporate tax rate was reduced, with 21% as the resulting endpoint.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Corporate tax rate",
+     "x": "value",
+     "field": "value",
+     "value": 21.0,
+     "note": "Table value is 21.000; narration frames this as the result of a reduction to 21%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "corporate tax rate was cut to 21%",
+    "the rate was lowered, ending at 21%",
+    "a reduction brought the corporate tax rate to 21%"
+   ],
+   "visual_evidence_rule": "Chart or annotation must indicate a downward change or reduction ending at 21%, e.g., a down arrow, before/after framing, or wording 'cut/lowered to 21%'.",
+   "temporal_anchor": "the narration clause 'lowered the corporate tax rate ... to 21%'",
+   "reviewer_question": "Must the video explicitly frame 21% as the result of a reduction rather than as a standalone rate?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The clip may mention the GM Lordstown plant shutdown as temporal context.",
+  "The clip may use the color #3C3B6E for the Corporate tax rate bar, but this is not semantic."
+ ],
+ "unsupported_to_avoid": [
+  "The exact pre-cut corporate tax rate and the size of the reduction in percentage points are not in the table; avoid citing them as data unless an additional source is provided.",
+  "Do not assert that the tax cut actually caused corporate reinvestment or worker benefits; only report supporters' predictions.",
+  "Do not claim workers actually benefited the most as an outcome.",
+  "Do not extrapolate corporate tax revenue, economic growth, or job effects."
+ ],
+ "notes": "Only one table row exists, so most numeric units center on the 21.0 value and its 0.0833 relative encoding. The predictions are qualitative and must be attributed to supporters.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 45.3,
+  "usage": {
+   "prompt_tokens": 699,
+   "completion_tokens": 10864,
+   "total_tokens": 11563,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9318
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 315
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

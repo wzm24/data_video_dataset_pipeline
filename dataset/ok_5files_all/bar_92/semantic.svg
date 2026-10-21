@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="260.0" y1="150.0" x2="260.0" y2="610.0" stroke="#9a9a9a" stroke-width="6" stroke-linecap="round"/>
+<g id="entity-ivory-coast" data-role="entity" data-entity-id="ivory-coast" data-label="Ivory Coast">
+<rect id="ivory-coast-bar" data-role="bar" data-entity-id="ivory-coast" data-value="53" x="260.0" y="196.5" width="799.6" height="52.0" fill="#E67E22"/>
+<text id="ivory-coast-value-label" data-role="value-label" data-entity-id="ivory-coast" x="1037.6" y="232.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">53</text>
+<text id="ivory-coast-category-label" data-role="category-label" data-entity-id="ivory-coast" x="238.0" y="231.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">Ivory Coast</text>
+</g>
+<g id="entity-nigeria" data-role="entity" data-entity-id="nigeria" data-label="Nigeria">
+<rect id="nigeria-bar" data-role="bar" data-entity-id="nigeria" data-value="54" x="260.0" y="301.5" width="814.7" height="52.0" fill="#2E8B57"/>
+<text id="nigeria-value-label" data-role="value-label" data-entity-id="nigeria" x="1052.7" y="337.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">54</text>
+<text id="nigeria-category-label" data-role="category-label" data-entity-id="nigeria" x="238.0" y="336.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">Nigeria</text>
+</g>
+<g id="entity-somalia" data-role="entity" data-entity-id="somalia" data-label="Somalia">
+<rect id="somalia-bar" data-role="bar" data-entity-id="somalia" data-value="55" x="260.0" y="406.5" width="829.8" height="52.0" fill="#2E86C1"/>
+<text id="somalia-value-label" data-role="value-label" data-entity-id="somalia" x="1067.8" y="442.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">55</text>
+<text id="somalia-category-label" data-role="category-label" data-entity-id="somalia" x="238.0" y="441.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">Somalia</text>
+</g>
+<g id="entity-mozambique" data-role="entity" data-entity-id="mozambique" data-label="Mozambique">
+<rect id="mozambique-bar" data-role="bar" data-entity-id="mozambique" data-value="57" x="260.0" y="511.5" width="860.0" height="52.0" fill="#C0392B"/>
+<text id="mozambique-value-label" data-role="value-label" data-entity-id="mozambique" x="1098.0" y="547.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">57</text>
+<text id="mozambique-category-label" data-role="category-label" data-entity-id="mozambique" x="238.0" y="546.5" text-anchor="end" font-family="Arial, sans-serif" font-size="26" fill="#333333">Mozambique</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,263 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_53",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the potential financial impact of increased tax evasion by showing how lost tax revenue rises with higher cheating rates.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the lowest shown increase in cheating-rate scenario (x=1), lost tax revenue is 44.7 billion USD.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "item-1",
+     "x": "1",
+     "field": "value",
+     "value": 44.7,
+     "note": "lowest scenario value, in billion_usd"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At the lowest shown cheating increase, lost tax revenue is $44.7 billion.",
+    "The baseline lost-revenue amount is about $45 billion.",
+    "Scenario 1 has 44.7 billion USD in lost tax revenue."
+   ],
+   "visual_evidence_rule": "The lowest scenario revenue amount must be visible and identifiable as the starting point.",
+   "temporal_anchor": "the clause 'even if people only cheat one percentage point more'",
+   "reviewer_question": "Should the lowest-scenario value be required as the baseline, or is showing only the rising trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "At the highest shown increase in cheating-rate scenario (x=4), lost tax revenue reaches 185.7 billion USD, the largest value in the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "item-4",
+     "x": "4",
+     "field": "value",
+     "value": 185.7,
+     "note": "highest scenario value, in billion_usd"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At the highest shown cheating increase, lost revenue is $185.7 billion.",
+    "The highest scenario reaches about $186 billion in lost tax revenue.",
+    "The maximum shown lost tax revenue is 185.7 billion USD."
+   ],
+   "visual_evidence_rule": "The highest scenario revenue amount must be visible and identifiable as the maximum.",
+   "temporal_anchor": "the clause 'or four percentage points'",
+   "reviewer_question": "Should the highest scenario value be required as a key endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "As the shown cheating-rate scenario rises from x=1 to x=4, lost tax revenue increases monotonically across the four values: 44.7, 90.5, 137.5, and 185.7 billion USD.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "item-1",
+     "x": "1",
+     "field": "value",
+     "value": 44.7,
+     "note": "first value in increasing sequence"
+    },
+    {
+     "entity": "item-2",
+     "x": "2",
+     "field": "value",
+     "value": 90.5,
+     "note": "second value, higher than item-1"
+    },
+    {
+     "entity": "item-3",
+     "x": "3",
+     "field": "value",
+     "value": 137.5,
+     "note": "third value, higher than item-2"
+    },
+    {
+     "entity": "item-4",
+     "x": "4",
+     "field": "value",
+     "value": 185.7,
+     "note": "fourth value, higher than item-3"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Lost revenue rises from $44.7B to $90.5B to $137.5B to $185.7B across the four scenarios.",
+    "Each higher cheating scenario has more lost revenue than the previous one.",
+    "The four values are monotonically increasing."
+   ],
+   "visual_evidence_rule": "The chart must show all four scenario values in increasing order, not only a single summary value.",
+   "temporal_anchor": "the full sequence from 'one percentage point more' through 'four percentage points'",
+   "reviewer_question": "Is a monotonic increasing trend across all four scenarios required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The highest scenario loses 141.0 billion USD more than the lowest scenario: 185.7 minus 44.7 billion USD.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "item-1",
+     "x": "1",
+     "field": "value",
+     "value": 44.7,
+     "note": "lower endpoint for difference"
+    },
+    {
+     "entity": "item-4",
+     "x": "4",
+     "field": "value",
+     "value": 185.7,
+     "note": "upper endpoint for difference"
+    }
+   ],
+   "computation": "185.7 - 44.7 = 141.0 billion_usd",
+   "accepted_routes": [
+    "The highest scenario loses $141.0 billion more than the lowest.",
+    "Moving from scenario 1 to scenario 4 increases lost revenue by about $141 billion.",
+    "The gap between the largest and smallest shown loss is 141.0 billion USD."
+   ],
+   "visual_evidence_rule": "Both the lowest and highest scenario amounts must be visible so the 141.0B difference can be read or inferred.",
+   "temporal_anchor": "the span from 'one percentage point more' to 'four percentage points'",
+   "reviewer_question": "Must the total $141.0B increase from lowest to highest be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The step-to-step increases in lost revenue are not constant: +45.8B from x=1 to x=2, +47.0B from x=2 to x=3, and +48.2B from x=3 to x=4 billion USD.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "item-1",
+     "x": "1",
+     "field": "value",
+     "value": 44.7,
+     "note": "start of first step"
+    },
+    {
+     "entity": "item-2",
+     "x": "2",
+     "field": "value",
+     "value": 90.5,
+     "note": "end of first step"
+    },
+    {
+     "entity": "item-3",
+     "x": "3",
+     "field": "value",
+     "value": 137.5,
+     "note": "end of second step"
+    },
+    {
+     "entity": "item-4",
+     "x": "4",
+     "field": "value",
+     "value": 185.7,
+     "note": "end of third step"
+    }
+   ],
+   "computation": "90.5 - 44.7 = 45.8; 137.5 - 90.5 = 47.0; 185.7 - 137.5 = 48.2 billion_usd",
+   "accepted_routes": [
+    "The step-by-step increases are about $45.8B, $47.0B, and $48.2B.",
+    "Each additional scenario step adds between roughly $46B and $48B.",
+    "The marginal impact grows slightly from 45.8 to 48.2 billion USD."
+   ],
+   "visual_evidence_rule": "The chart must show the four scenario values so the three step-to-step differences can be inferred.",
+   "temporal_anchor": "the clauses 'or two percentage points,' 'or three percentage points,' and 'or four percentage points'",
+   "reviewer_question": "Is the non-constant marginal increase optional detail or required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The highest scenario is about 4.15 times the lowest scenario: 185.7 / 44.7 ≈ 4.15.",
+  "The average increase per scenario step is 47.0 billion USD: 141.0 / 3 = 47.0."
+ ],
+ "unsupported_to_avoid": [
+  "Extrapolating beyond the four shown scenarios, such as stating what happens at 5+ percentage points.",
+  "Stating the lost revenue as a share of GDP, total tax revenue, or government budget without table support.",
+  "Causal claims about why evasion increases or its broader economic effects.",
+  "Any monetary values not present in or directly computable from the table, such as $200B or $1T.",
+  "Chart-type, layout, color, or axis-tick requirements."
+ ],
+ "notes": "All monetary values come from the table's billion_usd value column; x=1..4 are the table's scenario steps. Do not treat relative_value as a percentage because the table has absolute values and the clip is not a pie/donut share.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 40.2,
+  "usage": {
+   "prompt_tokens": 1013,
+   "completion_tokens": 8947,
+   "total_tokens": 9960,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6915
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 501
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,128 @@
+{
+ "clip_id": "donut_27",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:left share @ left-share"
+   ],
+   "assertion": {
+    "mark": "left share @ left-share",
+    "field": "value",
+    "expected": 9.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible label or annotation for the left/baseline side shows 9% or 0.09."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:right share @ right-share"
+   ],
+   "assertion": {
+    "mark": "right share @ right-share",
+    "field": "value",
+    "expected": 2.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible label or annotation for the right/negotiated side shows 2% or 0.02."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:left share @ left-share",
+    "mark:right share @ right-share"
+   ],
+   "assertion": {
+    "low": "right share @ right-share",
+    "low_value": 2.0,
+    "high": "left share @ left-share",
+    "high_value": 9.0,
+    "delta": 7.0,
+    "ratio": 4.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 9% and 2% must be visible, with an arrow, delta, or annotation showing the decrease, not just one endpoint."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:left share @ left-share",
+    "mark:right share @ right-share"
+   ],
+   "assertion": {
+    "greater": "left share @ left-share",
+    "lesser": "right share @ right-share",
+    "expected_ratio": 4.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the direction/order visible: the 9% element should be visibly larger or higher than the 2% element, with labels tying each value to the correct side."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:left share @ left-share",
+    "mark:right share @ right-share"
+   ],
+   "assertion": {
+    "low": "right share @ right-share",
+    "low_value": 2.0,
+    "high": "left share @ left-share",
+    "high_value": 9.0,
+    "delta": 7.0,
+    "ratio": 4.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible annotation or scale shows the relative reduction, about 78% lower, or the residual ratio, about 22% of baseline."
+  }
+ ]
+}

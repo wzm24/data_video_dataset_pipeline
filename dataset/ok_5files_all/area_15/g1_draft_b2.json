@@ -1,0 +1,267 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_15",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the two potential outcomes of a pandemic outbreak—fast and slow spread—and how early reactions determine the shape of the infection curve over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The video frames the data as two alternative pandemic futures—Fast Spread and Slow Spread—both plotted as relative infection curves over the same x/time axis; the intended message is that early reaction selects which curve occurs.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Fast Spread",
+     "x": "0.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "starts at relative 0"
+    },
+    {
+     "entity": "Slow Spread",
+     "x": "0.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "starts at relative 0"
+    },
+    {
+     "entity": "Fast Spread",
+     "x": "62.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "ends at relative 0"
+    },
+    {
+     "entity": "Slow Spread",
+     "x": "100.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "ends at relative 0"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Two possible futures: fast and slow spread.",
+    "Fast Spread vs Slow Spread curves over time.",
+    "Two alternate outbreak trajectories; early reaction decides which one."
+   ],
+   "visual_evidence_rule": "Both series are visibly labeled or distinguished, with a shared x/time axis and relative infection y-axis.",
+   "temporal_anchor": "There are two futures for a pandemic like corona, fast and slow.",
+   "reviewer_question": "Must the video explicitly present both series as alternative outcomes, rather than showing only one curve?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Fast Spread reaches its maximum relative infection level of 100 at x=31.0, making it the tall, early-peaking curve.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Fast Spread",
+     "x": "31.0",
+     "field": "value",
+     "value": 100.0,
+     "note": "maximum relative value for Fast Spread"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Fast spread peaks at 100 around x=31.",
+    "The fast curve's highest point is 100 at x=31.0.",
+    "Fast Spread tops out at 100 on the relative scale."
+   ],
+   "visual_evidence_rule": "The fast curve's peak is marked or visually readable at relative value 100 and x=31.0.",
+   "temporal_anchor": "fast and slow",
+   "reviewer_question": "Must the fast curve's peak value and x-location be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Slow Spread reaches its maximum relative infection level of only 40 at x=50.0, making it the low, later-peaking curve.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Slow Spread",
+     "x": "50.0",
+     "field": "value",
+     "value": 40.0,
+     "note": "maximum relative value for Slow Spread"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Slow spread peaks at 40 around x=50.",
+    "The slow curve's highest point is 40 at x=50.0.",
+    "Slow Spread tops out at 40 on the relative scale."
+   ],
+   "visual_evidence_rule": "The slow curve's peak is marked or visually readable at relative value 40 and x=50.0.",
+   "temporal_anchor": "fast and slow",
+   "reviewer_question": "Must the slow curve's peak value and x-location be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Fast Spread peak is much higher than the Slow Spread peak: 100 vs 40, so Fast is 2.5 times Slow and Slow is 40% of Fast.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Fast Spread",
+     "x": "31.0",
+     "field": "value",
+     "value": 100.0,
+     "note": "fast peak"
+    },
+    {
+     "entity": "Slow Spread",
+     "x": "50.0",
+     "field": "value",
+     "value": 40.0,
+     "note": "slow peak"
+    }
+   ],
+   "computation": "100.0 / 40.0 = 2.5; 40.0 / 100.0 = 0.40 (40%); 100.0 - 40.0 = 60.0",
+   "accepted_routes": [
+    "Fast peak is 100 vs slow peak 40.",
+    "Fast peak is 2.5 times the slow peak.",
+    "Slow peak is 40% of the fast peak.",
+    "The slow curve peaks 60 relative points lower than the fast curve."
+   ],
+   "visual_evidence_rule": "Both peak heights are simultaneously visible or sequentially compared on the same relative y-scale.",
+   "temporal_anchor": "Which future we will see depends on how we will react to it in the early days of the outbreak.",
+   "reviewer_question": "Must the video compare the two peak heights rather than only show each peak separately?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The Fast Spread wave is compressed: it peaks earlier and returns to zero sooner than Slow Spread, which peaks later and lasts longer.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Fast Spread",
+     "x": "31.0",
+     "field": "value",
+     "value": 100.0,
+     "note": "fast peak x"
+    },
+    {
+     "entity": "Slow Spread",
+     "x": "50.0",
+     "field": "value",
+     "value": 40.0,
+     "note": "slow peak x"
+    },
+    {
+     "entity": "Fast Spread",
+     "x": "62.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "fast endpoint"
+    },
+    {
+     "entity": "Slow Spread",
+     "x": "100.0",
+     "field": "value",
+     "value": 0.0,
+     "note": "slow endpoint"
+    }
+   ],
+   "computation": "Slow peak x - fast peak x = 50.0 - 31.0 = 19.0; slow endpoint / fast endpoint = 100.0 / 62.0 ≈ 1.61",
+   "accepted_routes": [
+    "Fast peaks earlier (x=31) than slow (x=50).",
+    "Fast ends by x=62 while slow continues to x=100.",
+    "The slow curve is broader/longer; the fast curve is narrower/shorter.",
+    "Slow lasts about 1.6 times as long as fast (100/62)."
+   ],
+   "visual_evidence_rule": "The x positions of both peaks and both zero endpoints are visible on the shared time axis.",
+   "temporal_anchor": "Which future we will see depends on how we will react to it in the early days of the outbreak.",
+   "reviewer_question": "Must the video convey the timing/width difference between the curves, not just their peak heights?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "At x=0 both curves start at relative 0; both eventually return to relative 0.",
+  "Slow peak occurs at x=50.0, while Fast peak occurs at x=31.0, a difference of 19.0 x-units.",
+  "The Fast curve is symmetric around its peak at x=31.0.",
+  "The Slow curve's duration is about 1.6 times the Fast curve's duration (100.0 / 62.0 ≈ 1.61)."
+ ],
+ "unsupported_to_avoid": [
+  "Specific policy interventions, named reactions, or exact dates that caused either curve.",
+  "Real-world case counts, mortality, or absolute infection numbers; the table values are relative.",
+  "Extrapolating beyond x=100 or claiming what happens after the curves return to zero.",
+  "Quantifying early reaction effects beyond the qualitative 'early reaction matters' framing.",
+  "Wrong comparisons such as saying Fast is 60% higher than Slow when using peak values (100 vs 40)."
+ ],
+ "notes": "The table contains two relative curves over x; any reaction-related message is qualitative from the intent/narration. Numbers are relative values, not absolute infections.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 44.8,
+  "usage": {
+   "prompt_tokens": 2317,
+   "completion_tokens": 10115,
+   "total_tokens": 12432,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8193
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 2061
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

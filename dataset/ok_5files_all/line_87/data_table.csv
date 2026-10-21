@@ -1,0 +1,26 @@
+clip_id,panel,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,y_px
+line_87,Party,Party,party-1994,70.0,1994,15,,gap,#2b7bb9,generator_table + svg_structure,Party,329.1
+line_87,Party,Party,party-2004,213.5,2004,16,,gap,#2b7bb9,generator_table + svg_structure,Party,321.8
+line_87,Party,Party,party-2014,357.0,2014,23,,gap,#2b7bb9,generator_table + svg_structure,Party,270.7
+line_87,Party,Party,party-2017,400.0,2017,36,,gap,#2b7bb9,generator_table + svg_structure,Party,175.9
+line_87,Race,Race,race-1994,470.0,1994,14,,gap,#2b7bb9,generator_table + svg_structure,Race,252.5
+line_87,Race,Race,race-2005,627.8,2005,13.5,,gap,#2b7bb9,generator_table + svg_structure,Race,274.4
+line_87,Race,Race,race-2012,728.3,2012,14,,gap,#2b7bb9,generator_table + svg_structure,Race,252.5
+line_87,Race,Race,race-2017,800.0,2017,14,,gap,#2b7bb9,generator_table + svg_structure,Race,252.5
+line_87,Religious attendance,Religious attendance,religious-attendance-1994,870.0,1994,5,,gap,#2b7bb9,generator_table + svg_structure,Religious attendance,296.2
+line_87,Religious attendance,Religious attendance,religious-attendance-1998,927.4,1998,4,,gap,#2b7bb9,generator_table + svg_structure,Religious attendance,313.8
+line_87,Religious attendance,Religious attendance,religious-attendance-2010,1099.6,2010,7,,gap,#2b7bb9,generator_table + svg_structure,Religious attendance,261.2
+line_87,Religious attendance,Religious attendance,religious-attendance-2017,1200.0,2017,11,,gap,#2b7bb9,generator_table + svg_structure,Religious attendance,191.2
+line_87,Education,Education,education-1994,70.0,1994,8,,gap,#2b7bb9,generator_table + svg_structure,Education,566.2
+line_87,Education,Education,education-2002,184.8,2002,9,,gap,#2b7bb9,generator_table + svg_structure,Education,537.1
+line_87,Education,Education,education-2008,270.9,2008,9,,gap,#2b7bb9,generator_table + svg_structure,Education,537.1
+line_87,Education,Education,education-2013,342.6,2013,10.5,,gap,#2b7bb9,generator_table + svg_structure,Education,493.3
+line_87,Education,Education,education-2017,400.0,2017,11,,gap,#2b7bb9,generator_table + svg_structure,Education,478.8
+line_87,Age,Age,age-1994,470.0,1994,6,,gap,#2b7bb9,generator_table + svg_structure,Age,555.3
+line_87,Age,Age,age-2005,627.8,2005,5,,gap,#2b7bb9,generator_table + svg_structure,Age,577.2
+line_87,Age,Age,age-2010,699.6,2010,6,,gap,#2b7bb9,generator_table + svg_structure,Age,555.3
+line_87,Age,Age,age-2017,800.0,2017,10,,gap,#2b7bb9,generator_table + svg_structure,Age,467.8
+line_87,Gender,Gender,gender-1994,870.0,1994,9,,gap,#2b7bb9,generator_table + svg_structure,Gender,482.7
+line_87,Gender,Gender,gender-2008,1070.9,2008,8,,gap,#2b7bb9,generator_table + svg_structure,Gender,514.5
+line_87,Gender,Gender,gender-2016,1185.7,2016,6.5,,gap,#2b7bb9,generator_table + svg_structure,Gender,562.3
+line_87,Gender,Gender,gender-2017,1200.0,2017,7,,gap,#2b7bb9,generator_table + svg_structure,Gender,546.4

@@ -1,0 +1,88 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_25,Base Rate Bank of England,base-rate-bank-of-england,120.0,1991,10.1996,1.0222,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,128.8,,7.0000,0.6667,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,142.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,164.0,,5.1996,0.4666,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,186.0,,5.0998,0.4555,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,208.0,,6.7007,0.6334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,230.0,,6.4989,0.6110,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,252.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,274.0,,7.1996,0.6888,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,296.0,,7.4989,0.7221,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,318.0,,7.3991,0.7110,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,340.0,,5.0998,0.4555,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,362.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,384.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,406.0,,4.0998,0.3444,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,428.0,,4.0000,0.3333,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,450.0,,3.6009,0.2890,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,472.0,,4.8004,0.4223,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,494.0,,4.8004,0.4223,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,516.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,538.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,560.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,582.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,604.0,,6.1996,0.5777,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,626.0,,4.0000,0.3333,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,648.0,,3.6009,0.2890,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,670.0,,4.8004,0.4223,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,692.0,,4.8004,0.4223,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,714.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,736.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,758.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,780.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,802.0,,6.1996,0.5777,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,824.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,846.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,912.0,,5.8004,0.5334,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,978.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,1000.0,,6.0000,0.5556,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,1008.8,,0.4989,-0.0557,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,1022.0,,0.4989,-0.0557,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,1066.0,,0.4989,-0.0557,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,1154.0,,0.4989,-0.0557,%,#ffffff,svg_geometry
+line_25,Base Rate Bank of England,base-rate-bank-of-england,1220.0,2016,0.3991,-0.0668,%,#ffffff,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,186.0,,9.4989,0.9443,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,208.0,,8.4989,0.8332,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,230.0,,8.1996,0.8000,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,252.0,,7.8004,0.7556,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,274.0,,8.0998,0.7889,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,296.0,,7.4989,0.7221,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,318.0,,7.1996,0.6888,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,340.0,,7.0000,0.6667,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,362.0,,6.4989,0.6110,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,384.0,,6.0000,0.5556,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,406.0,,5.4989,0.4999,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,428.0,,5.8004,0.5334,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,450.0,,5.1996,0.4666,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,472.0,,4.4989,0.3888,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,494.0,,4.1996,0.3555,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,516.0,,4.8004,0.4223,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,538.0,,4.4989,0.3888,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,560.0,,5.0000,0.4444,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,582.0,,4.8004,0.4223,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,604.0,,5.1996,0.4666,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,626.0,,5.0000,0.4444,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,648.0,,5.4989,0.4999,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,670.0,,5.1996,0.4666,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,692.0,,5.8004,0.5334,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,714.0,,5.4989,0.4999,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,736.0,,5.1996,0.4666,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,758.0,,5.0000,0.4444,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,780.0,,4.8004,0.4223,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,802.0,,5.1996,0.4666,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,824.0,,5.0000,0.4444,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,846.0,,4.4989,0.3888,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,868.0,,4.1996,0.3555,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,890.0,,4.0000,0.3333,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,912.0,,3.8004,0.3112,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,934.0,,4.1996,0.3555,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,956.0,,4.0000,0.3333,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,978.0,,3.8004,0.3112,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,1000.0,,3.4989,0.2777,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,1022.0,,3.1996,0.2444,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,1044.0,,3.0000,0.2222,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,1088.0,,2.8004,0.2000,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,1132.0,,2.4989,0.1665,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,1176.0,,2.2993,0.1444,%,#d9534f,svg_geometry
+line_25,Mortgage rate (Example: 5 year fixed),mortgage-rate-5y-fixed,1220.0,2016,2.1996,0.1333,%,#d9534f,svg_geometry

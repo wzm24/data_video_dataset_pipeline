@@ -1,0 +1,139 @@
+{
+ "clip_id": "bar_82",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Ghana",
+    "mark:Madagascar"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Ghana",
+      "value": 1.0
+     },
+     {
+      "mark": "Madagascar",
+      "value": 0.303
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Ghana bar is tallest and Madagascar bar is second tallest among the four entities."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Ghana",
+    "mark:Madagascar"
+   ],
+   "assertion": {
+    "low": "Madagascar",
+    "low_value": 0.303,
+    "high": "Ghana",
+    "high_value": 1.0,
+    "delta": 0.697,
+    "ratio": 3.3003,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Ghana bar length is about 3.3 times the Madagascar bar length, or an explicit ratio label is shown."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Madagascar",
+    "mark:Saint Lucia"
+   ],
+   "assertion": {
+    "greater": "Madagascar",
+    "lesser": "Saint Lucia",
+    "expected_ratio": 4.9672,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Madagascar bar is about 5x Saint Lucia bar and 10x Antigua bar."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Saint Lucia",
+    "mark:Antigua and Barbuda"
+   ],
+   "assertion": {
+    "greater": "Saint Lucia",
+    "lesser": "Antigua and Barbuda",
+    "expected_ratio": 2.0333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Saint Lucia and Antigua bars are the shortest; Antigua is about half the length of Saint Lucia."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Ghana",
+    "segment:Madagascar",
+    "segment:Saint Lucia",
+    "segment:Antigua and Barbuda"
+   ],
+   "assertion": {
+    "segment": "Ghana",
+    "expected_share": 0.7174,
+    "total_of": "unknown",
+    "total": 1.394,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A share chart or stacked bar shows these proportions, or labels indicate percentages of the four-country total."
+  }
+ ]
+}

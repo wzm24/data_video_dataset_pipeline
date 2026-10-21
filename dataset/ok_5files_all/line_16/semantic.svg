@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#dcd5c9"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Aug 2014</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#000000" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#000000" stroke-width="3"/>
+<g id="entity-no" data-role="entity" data-entity-id="no" data-label="NO" data-series="true">
+<polyline id="no-polyline" data-role="polyline" data-entity-id="no" points="120.0,167.6 303.3,199.8 486.7,158.4 670.0,209.0 853.3,181.4 1036.7,199.8 1220.0,186.0" fill="none" stroke="#232332" stroke-width="3" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="no" cx="303.3" cy="199.8" r="6" fill="#232332" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="no" cx="853.3" cy="181.4" r="6" fill="#232332" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="no" cx="1220.0" cy="186.0" r="6" fill="#232332" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="1220.0" y="168.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#000000">47%</text>
+</g>
+<g id="entity-yes" data-role="entity" data-entity-id="yes" data-label="YES" data-series="true">
+<polyline id="yes-polyline" data-role="polyline" data-entity-id="yes" points="120.0,383.8 303.3,356.2 486.7,351.6 670.0,337.8 853.3,365.4 1036.7,356.2 1220.0,342.4" fill="none" stroke="#2b6c96" stroke-width="3" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="yes" cx="303.3" cy="356.2" r="6" fill="#2b6c96" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="yes" cx="853.3" cy="365.4" r="6" fill="#2b6c96" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="yes" cx="1220.0" cy="342.4" r="6" fill="#2b6c96" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="1220.0" y="324.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#000000">37%</text>
+</g>
+<g id="entity-don-t-know" data-role="entity" data-entity-id="don-t-know" data-label="DON&#x27;T KNOW" data-series="true">
+<polyline id="don-t-know-polyline" data-role="polyline" data-entity-id="don-t-know" points="120.0,544.8 303.3,531.0 486.7,558.6 670.0,567.8 853.3,554.0 1036.7,540.2 1220.0,540.2" fill="none" stroke="#ffffff" stroke-width="3" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="don-t-know" cx="303.3" cy="531.0" r="6" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="don-t-know" cx="1036.7" cy="540.2" r="6" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="don-t-know" cx="1220.0" cy="540.2" r="6" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<text data-role="point-label" x="1220.0" y="522.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#000000">14%</text>
+</g>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#232332" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#000000">NO</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#2b6c96" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#000000">YES</text>
+<line x1="520.0" y1="156" x2="600.0" y2="156" stroke="#ffffff" stroke-width="3"/>
+<text x="610.0" y="164" font-family="Arial, sans-serif" font-size="22" fill="#000000">DON&#x27;T KNOW</text>
+</g>
+</svg>

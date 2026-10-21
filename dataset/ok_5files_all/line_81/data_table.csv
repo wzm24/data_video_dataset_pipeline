@@ -1,0 +1,14 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_81,oxygen need,oxygen-need,170.0,Mar 2020,200751.0110,-0.3110,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,245.4,Apr 2020,301848.6424,-0.2997,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,320.8,May 2020,801559.7920,-0.2442,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,396.2,Jun 2020,1500577.7008,-0.1666,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,471.5,Jul 2020,2800404.3905,-0.0221,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,546.9,Aug 2020,3502310.8030,0.0558,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,622.3,Sep 2020,4501733.1023,0.1669,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,697.7,Oct 2020,2999711.1496,0.0000,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,773.1,Nov 2020,2800404.3905,-0.0221,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,848.5,Dec 2020,2000288.8504,-0.1110,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,923.8,Jan 2021,1500577.7008,-0.1666,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,999.2,Feb 2021,1500577.7008,-0.1666,,#76c976,svg_geometry
+line_81,oxygen need,oxygen-need,1074.6,Mar 2021,10501155.4015,0.8334,,#76c976,svg_geometry

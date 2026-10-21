@@ -1,0 +1,184 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_131",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the massive scale of global nuclear arsenals that poses a threat of nuclear winter.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "All listed entities share the same relative_value of 0.1111.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "all listed entities",
+     "x": "all rows",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "each row equals 0.1111"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "All entities share the same relative value.",
+    "Each row is 0.1111 on the relative scale.",
+    "No entity differs from the others in relative size."
+   ],
+   "visual_evidence_rule": "The relative magnitudes of all listed entities appear identical.",
+   "temporal_anchor": "while the dataset is displayed",
+   "reviewer_question": "Should the video explicitly convey the equality of all relative values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "No entity is largest because all relative values are tied.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "all listed entities",
+     "x": "all rows",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "all relative values are equal"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "No entity is ranked above another.",
+    "There is no largest entity in the table.",
+    "Ordering is tied across all listed rows."
+   ],
+   "visual_evidence_rule": "No entity is visually emphasized as larger than another.",
+   "temporal_anchor": "when the clip might imply one arsenal is biggest",
+   "reviewer_question": "Must the video avoid implying any ranking among the listed entities?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The relative values are flat, so no trend or order can be shown.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "all listed entities",
+     "x": "all rows",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "flat relative values"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The relative values show no upward or downward trend.",
+    "The ordering is flat across all listed entities.",
+    "No direction of change is supported by the table."
+   ],
+   "visual_evidence_rule": "The viewer can see that relative magnitudes do not rise or fall.",
+   "temporal_anchor": "while the dataset is introduced",
+   "reviewer_question": "Should the video avoid suggesting any trend among the entities?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The table is relative-only, so no absolute quantity can be conveyed.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "all listed entities",
+     "x": "all rows",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "unit column is relative for every row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Only relative values are available.",
+    "Absolute quantities are absent from the table.",
+    "The clip cannot show an absolute total."
+   ],
+   "visual_evidence_rule": "No absolute quantity or total appears for the rows.",
+   "temporal_anchor": "before the narration's threat framing",
+   "reviewer_question": "Must the video explicitly avoid absolute quantity claims?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The entity labels mix country names with numeric or year-like strings.",
+  "The relative values sum to about 0.8888, below a full whole."
+ ],
+ "unsupported_to_avoid": [
+  "Hundreds of millions killed",
+  "Nuclear winter conditions",
+  "Absolute number of nuclear bombs",
+  "Global total arsenal count",
+  "Any country is largest or ranked",
+  "Percentages derived from relative_value",
+  "Causal claim from arsenals to nuclear winter"
+ ],
+ "notes": "The table is relative-only and all rows are tied at 0.1111; no absolute scale or ranking is supported. Narration's death-toll and nuclear-winter claims are context, not table values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.9
+ },
+ "draft_cost": {
+  "sec": 44.4,
+  "usage": {
+   "prompt_tokens": 1256,
+   "completion_tokens": 9717,
+   "total_tokens": 10973,
+   "prompt_tokens_details": {
+    "cached_tokens": 1024
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8695
+   },
+   "prompt_cache_hit_tokens": 1024,
+   "prompt_cache_miss_tokens": 232
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

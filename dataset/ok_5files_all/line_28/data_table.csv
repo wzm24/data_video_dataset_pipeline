@@ -1,0 +1,23 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+line_28,CEO-worker pay gap,line-1-466882,120.0,,,0.1200,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,178.9,,,0.1200,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,277.1,,,0.1200,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,336.1,,,0.1100,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,434.3,,,0.1300,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,473.6,,,0.1400,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,571.8,,,0.1500,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,670.0,1990,,0.1800,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,709.3,,,0.2500,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,768.2,,,0.4000,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,807.5,,,0.6000,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,827.1,,,0.7500,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,866.4,,,0.9500,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,886.1,,,0.8000,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,905.7,,,0.7000,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,945.0,,,0.7500,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,1003.9,,,0.6500,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,1043.2,,,0.5500,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,1082.5,,,0.6200,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,1121.8,,,0.6000,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,1161.1,,,0.6300,relative,#466882,relative_only,line-1,intent_based_backfill
+line_28,CEO-worker pay gap,line-1-466882,1220.0,,,0.6500,relative,#466882,relative_only,line-1,intent_based_backfill

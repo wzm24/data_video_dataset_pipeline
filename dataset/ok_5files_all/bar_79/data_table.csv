@@ -1,0 +1,6 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_79,Vision Fund,vision-fund,690.0,,1.000,1.0000,,#4a90d9,printed,bar-1,semantic_svg_backfill
+bar_79,VC Fund 1,vc-fund-1,389.0,,0.300,0.3000,,#e8b84b,printed,bar-2,semantic_svg_backfill
+bar_79,VC Fund 2,vc-fund-2,380.4,,0.280,0.2800,,#333333,printed,bar-3,semantic_svg_backfill
+bar_79,VC Fund 3,vc-fund-3,371.8,,0.260,0.2600,,#a8c3e0,printed,bar-4,semantic_svg_backfill
+bar_79,VC Fund 4,vc-fund-4,363.2,,0.240,0.2400,,#e8a8c0,printed,bar-5,semantic_svg_backfill

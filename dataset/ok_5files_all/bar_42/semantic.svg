@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#2b2b2b"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">UK energy subsidies 2016</text>
+<g id="chart-plot" data-role="plot">
+<g id="entity-fossil-fuels" data-role="entity" data-entity-id="fossil-fuels" data-label="fossil fuels">
+<rect id="fossil-fuels-bar" data-role="bar" data-entity-id="fossil-fuels" data-value="10.5" x="340.0" y="329.0" width="220.0" height="231.0" fill="#6B7B8C" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="fossil-fuels-value-label" data-role="value-label" data-entity-id="fossil-fuels" x="450.0" y="315.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#f2f2f2">£10.5bn</text>
+<text id="fossil-fuels-label" data-role="category-label" data-entity-id="fossil-fuels" x="450.0" y="359.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f2f2f2">fossil fuels</text>
+</g>
+<g id="entity-renewables" data-role="entity" data-entity-id="renewables" data-label="renewables">
+<rect id="renewables-bar" data-role="bar" data-entity-id="renewables" data-value="7.3" x="720.0" y="399.4" width="220.0" height="160.6" fill="#5AA469" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
+<text id="renewables-value-label" data-role="value-label" data-entity-id="renewables" x="830.0" y="385.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#f2f2f2">£7.3bn</text>
+<text id="renewables-label" data-role="category-label" data-entity-id="renewables" x="830.0" y="429.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f2f2f2">renewables</text>
+</g>
+</g>
+</svg>

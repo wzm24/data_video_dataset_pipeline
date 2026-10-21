@@ -1,0 +1,281 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_70",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that Ikea's legal structure effectively makes it one of the world's largest charitable foundations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Stichting Ingka (Ikea's foundation) is third largest among the four entities shown: Bill & Melinda Gates 51.6 > Novo Nordisk 49.1 > Stichting Ingka 36.0 > Wellcome Trust 32.9.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "BILL & MELINDA GATES",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 51.6,
+     "note": "largest value in table"
+    },
+    {
+     "entity": "NOVO NORDISK",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 49.1,
+     "note": "second-largest value in table"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "third-largest value in table"
+    },
+    {
+     "entity": "WELLCOME TRUST",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 32.9,
+     "note": "fourth/smallest value in table"
+    }
+   ],
+   "computation": "none; order by value descending",
+   "accepted_routes": [
+    "Stichting Ingka ranks third, behind the Gates Foundation and Novo Nordisk and ahead of Wellcome Trust.",
+    "The chart order is Gates 51.6, Novo Nordisk 49.1, Stichting Ingka 36.0, Wellcome Trust 32.9.",
+    "Ikea is the third-largest foundation in this comparison."
+   ],
+   "visual_evidence_rule": "Bars or labels must show Stichting Ingka in third position, with two larger values above it and one smaller value below it.",
+   "temporal_anchor": "the 'third largest charity' clause",
+   "reviewer_question": "Must the video state/show Ikea as third in the ranking, or is it enough to show Ikea as merely one of the largest?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Stichting Ingka's charted value is 36.000, with relative_value 0.6000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "Ikea/Stichting Ingka absolute value"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "Ikea/Stichting Ingka relative value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Stichting Ingka (Ikea) has a value of 36.0 and relative value 0.6000.",
+    "Ikea's foundation endpoint is 36.0 on the chart.",
+    "The Stichting Ingka bar ends at 36.0, or 0.60 on the relative scale."
+   ],
+   "visual_evidence_rule": "Stichting Ingka's bar/endpoint must be labeled 36.0 or 0.6000 relative.",
+   "temporal_anchor": "the clause introducing Ikea/Stichting Ingka as the third-largest charity",
+   "reviewer_question": "Must the animation show Ikea's own value/endpoint, or can it omit it and only show rank/gap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Ikea/Stichting Ingka is about 30% smaller than the Bill & Melinda Gates Foundation.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "BILL & MELINDA GATES",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 51.6,
+     "note": "Gates value used as comparison denominator"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "Ikea value compared with Gates"
+    },
+    {
+     "entity": "BILL & MELINDA GATES",
+     "x": "x_value empty",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "Gates relative value for alternate formula"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "Ikea relative value for alternate formula"
+    }
+   ],
+   "computation": "(51.6 - 36.0) / 51.6 = 15.6 / 51.6 = 0.3023 ≈ 30.2% smaller; equivalently (0.8600 - 0.6000) / 0.8600 = 0.3023. Ikea is 36.0 / 51.6 = 0.6977 ≈ 69.8% of Gates.",
+   "accepted_routes": [
+    "Ikea is about 30% smaller than the Gates Foundation.",
+    "Ikea/Stichting Ingka is about 70% of the Gates Foundation's value (36.0 vs 51.6).",
+    "The Gates-to-Ikea gap is 15.6, equal to about 30.2% of Gates's 51.6.",
+    "Using relative values, 0.6000 is about 30.2% below 0.8600."
+   ],
+   "visual_evidence_rule": "The visual must compare Gates and Ikea and show or label the roughly 30% smaller gap, not just their absolute bars.",
+   "temporal_anchor": "the 'only 30 % smaller than the Bill and Melinda Gates Foundation' clause",
+   "reviewer_question": "Must the video quantify Ikea as roughly 30% smaller than Gates, or is a visual gap enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Novo Nordisk is above Stichting Ingka at 49.1, which is why Ikea is third rather than second.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "NOVO NORDISK",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 49.1,
+     "note": "second-place value above Ikea"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "Ikea value below Novo"
+    }
+   ],
+   "computation": "49.1 - 36.0 = 13.1",
+   "accepted_routes": [
+    "Novo Nordisk (49.1) outranks Stichting Ingka (36.0).",
+    "Ikea is behind both Gates and Novo Nordisk, with Novo at 49.1.",
+    "The second-place Novo Nordisk bar is 13.1 points above Ikea's 36.0."
+   ],
+   "visual_evidence_rule": "Novo Nordisk's bar must be visibly taller than Stichting Ingka's, establishing Ikea as third.",
+   "temporal_anchor": "the ranking clause, before or when saying third largest",
+   "reviewer_question": "Must the video explicitly show Novo Nordisk above Ikea, or is a generic third-place label enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Wellcome Trust is below Stichting Ingka at 32.9, so Ikea is not the smallest.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "WELLCOME TRUST",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 32.9,
+     "note": "smallest value below Ikea"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "Ikea value above Wellcome"
+    }
+   ],
+   "computation": "36.0 - 32.9 = 3.1",
+   "accepted_routes": [
+    "Stichting Ingka (36.0) is above Wellcome Trust (32.9).",
+    "Wellcome Trust is the smallest at 32.9, below Ikea's 36.0.",
+    "Ikea's value is 3.1 higher than Wellcome's."
+   ],
+   "visual_evidence_rule": "Wellcome Trust's bar must be shorter than Stichting Ingka's.",
+   "temporal_anchor": "optional in the ranking clause or bar labels",
+   "reviewer_question": "Is it necessary to show Ikea is above Wellcome, or is that extra context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Show all four entity names and absolute values as bar labels: Gates 51.6, Novo Nordisk 49.1, Stichting Ingka 36.0, Wellcome Trust 32.9.",
+  "Display the relative_value scores 0.8600, 0.8183, 0.6000, and 0.5483 alongside the bars.",
+  "Animate the 15.6 gap between Gates and Stichting Ingka.",
+  "Highlight Wellcome Trust as the smallest bar at 32.9."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that Ikea's legal structure directly causes its foundation value or rank.",
+  "Claim that Ikea is the world's largest or second-largest charity; the table only ranks it third among the four shown.",
+  "Claim that Ikea/Stichting Ingka is larger than Novo Nordisk or the Gates Foundation.",
+  "Treat relative_value 0.6000 as a 60% share of the four-fund total; the table's relative_value denominator is not given.",
+  "Extrapolate from these four entities to all charitable foundations worldwide.",
+  "State that Gates is about 30% larger than Ikea; the correct derived statement is that Ikea is about 30% smaller than Gates."
+ ],
+ "notes": "Core contested decisions: whether the ~30% smaller-than-Gates gap is obligatory, and whether Novo Nordisk's second-place bar must be shown to justify Ikea's third rank. The table supports only these four entities; avoid treating relative_value as a share unless the denominator is specified.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 51.8,
+  "usage": {
+   "prompt_tokens": 758,
+   "completion_tokens": 13233,
+   "total_tokens": 13991,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10825
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 502
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "area_1",
+ "intent_en": "To illustrate the critical consequences of an outbreak overwhelming healthcare resources, specifically how infection rates exceeding system capacity lead to untreated deaths and further system collapse.",
+ "previous_intent": "To illustrate the severe consequences of an outbreak overwhelming healthcare systems, including untreated patients and a decline in system capacity.",
+ "narration_support": "people will die untreated and as more health care workers get sick themselves the capacity of health care systems falls even further.",
+ "chart_support": "An area chart plotting Infections against Time, showing a large infection peak (labeled Outbreak) rising significantly above the horizontal line representing the Capacity of Healthcare System.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration describes the negative outcomes (deaths, falling capacity) while the chart visualizes the cause (infections peaking well above the healthcare capacity line).",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

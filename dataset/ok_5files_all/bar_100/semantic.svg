@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<g id="chart-plot" data-role="plot">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f2ede3"/>
+<text data-role="panel-title" x="380.0" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">CIVIL WARS ENDED BY FORCE</text>
+<rect data-role="panel-bg" x="100.0" y="150" width="560.0" height="470" rx="12" fill="#ffffff" stroke="#d8d0c0" stroke-width="2"/>
+<g data-role="entity" data-entity-id="civil-wars-force-0" data-label="UNTIL 1989">
+<rect id="civil-wars-force-0-bar" data-role="bar" data-entity-id="civil-wars-force-0" data-value="1.0" x="229.0" y="180.0" width="110.0" height="320.0" fill="#E67E22"/>
+<text id="civil-wars-force-0-label" data-role="category-label" data-entity-id="civil-wars-force-0" x="284.0" y="540.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">UNTIL 1989</text>
+</g>
+<g data-role="entity" data-entity-id="civil-wars-force-1" data-label="CURRENTLY">
+<rect id="civil-wars-force-1-bar" data-role="bar" data-entity-id="civil-wars-force-1" data-value="0.35" x="430.6" y="388.0" width="110.0" height="112.0" fill="#A0522D"/>
+<text id="civil-wars-force-1-label" data-role="category-label" data-entity-id="civil-wars-force-1" x="485.6" y="540.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">CURRENTLY</text>
+</g>
+<text data-role="panel-title" x="900.0" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222222">CIVIL WARS ENDED BY DIPLOMACY</text>
+<rect data-role="panel-bg" x="620.0" y="150" width="560.0" height="470" rx="12" fill="#ffffff" stroke="#d8d0c0" stroke-width="2"/>
+<g data-role="entity" data-entity-id="civil-wars-diplomacy-0" data-label="UNTIL 1989">
+<rect id="civil-wars-diplomacy-0-bar" data-role="bar" data-entity-id="civil-wars-diplomacy-0" data-value="0.25" x="749.0" y="420.0" width="110.0" height="80.0" fill="#1F3A5F"/>
+<text id="civil-wars-diplomacy-0-label" data-role="category-label" data-entity-id="civil-wars-diplomacy-0" x="804.0" y="540.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">UNTIL 1989</text>
+</g>
+<g data-role="entity" data-entity-id="civil-wars-diplomacy-1" data-label="CURRENTLY">
+<rect id="civil-wars-diplomacy-1-bar" data-role="bar" data-entity-id="civil-wars-diplomacy-1" data-value="1.0" x="950.6" y="180.0" width="110.0" height="320.0" fill="#5B9BD5"/>
+<text id="civil-wars-diplomacy-1-label" data-role="category-label" data-entity-id="civil-wars-diplomacy-1" x="1005.6" y="540.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">CURRENTLY</text>
+</g>
+</g>
+</svg>

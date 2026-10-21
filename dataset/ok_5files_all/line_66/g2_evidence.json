@@ -1,0 +1,176 @@
+{
+ "clip_id": "line_66",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:global deaths @ x_px 170.0"
+   ],
+   "assertion": {
+    "mark": "global deaths @ x_px 170.0",
+    "field": "value",
+    "expected": 0.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "First and last plotted points must be visible or labeled; the line starts at baseline 0.0000 and ends at maximum height 2.5000."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:global deaths @ x_px 170.0",
+    "mark:global deaths @ x_px 253.3",
+    "mark:global deaths @ x_px 420.0",
+    "mark:global deaths @ x_px 586.7",
+    "mark:global deaths @ x_px 670.0",
+    "mark:global deaths @ x_px 836.7",
+    "mark:global deaths @ x_px 1003.3",
+    "mark:global deaths @ x_px 1170.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "global deaths @ x_px 170.0",
+      "value": 0.0
+     },
+     {
+      "mark": "global deaths @ x_px 253.3",
+      "value": 0.28
+     },
+     {
+      "mark": "global deaths @ x_px 420.0",
+      "value": 0.52
+     },
+     {
+      "mark": "global deaths @ x_px 586.7",
+      "value": 0.78
+     },
+     {
+      "mark": "global deaths @ x_px 670.0",
+      "value": 1.0
+     },
+     {
+      "mark": "global deaths @ x_px 836.7",
+      "value": 1.35
+     },
+     {
+      "mark": "global deaths @ x_px 1003.3",
+      "value": 1.95
+     },
+     {
+      "mark": "global deaths @ x_px 1170.0",
+      "value": 2.5
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The line or area must not descend across any consecutive points; all eight points should appear left-to-right in increasing order."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:global deaths @ x_px 836.7",
+    "mark:global deaths @ x_px 1003.3"
+   ],
+   "assertion": {
+    "low": "global deaths @ x_px 836.7",
+    "low_value": 1.35,
+    "high": "global deaths @ x_px 1003.3",
+    "high_value": 1.95,
+    "delta": 0.6,
+    "ratio": 1.4444,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The segment between x_px 836.7 and x_px 1003.3 must have the largest vertical rise of any adjacent segment."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:global deaths @ x_px 1003.3",
+    "segment:global deaths @ x_px 1003.3",
+    "segment:global deaths @ x_px 1170.0",
+    "segment:global deaths @ x_px 1170.0"
+   ],
+   "assertion": {
+    "segment": "global deaths @ x_px 1003.3",
+    "expected_share": 0.78,
+    "total_of": "unknown",
+    "total": 2.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The penultimate point height should be shown as about 78% of the final point height, with the final point at 100%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:global deaths @ x_px 670.0",
+    "mark:global deaths @ x_px 670.0",
+    "mark:global deaths @ x_px 1170.0",
+    "mark:global deaths @ x_px 1170.0"
+   ],
+   "assertion": {
+    "series": "global deaths",
+    "values": [
+     1.0,
+     0.4,
+     2.5,
+     1.0
+    ],
+    "threshold_between": [
+     0.4,
+     2.5
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A point at x_px 670.0 must sit at value 1.0000, about 40% of the final height."
+  }
+ ]
+}

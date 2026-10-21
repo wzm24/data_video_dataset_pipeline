@@ -1,0 +1,270 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_36",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the relationship between educational attainment and Black migration rates from the South, highlighting the significance of 'some college' education in this trend since the 1960s.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Some college is the highest educational-attainment category by value/relative_value.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "value",
+     "value": 27,
+     "note": "maximum value among the four categories"
+    },
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "relative_value",
+     "value": 0.6525,
+     "note": "maximum relative_value among the four categories"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Some college has the largest value, 27.",
+    "Some college is the top category, with relative_value 0.6525.",
+    "The tallest/largest bar is Some college."
+   ],
+   "visual_evidence_rule": "The Some college mark must be visually identifiable as the largest/tallest/longest among the four categories.",
+   "temporal_anchor": "the narration clause mentioning 'some college' or 'at least some college'",
+   "reviewer_question": "Must the video explicitly identify Some college as the top category?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The four categories order from highest to lowest as Some college, College graduate, High school graduate, Less than high school.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "value",
+     "value": 27,
+     "note": "rank 1"
+    },
+    {
+     "entity": "College graduate",
+     "x": "College graduate",
+     "field": "value",
+     "value": 20,
+     "note": "rank 2"
+    },
+    {
+     "entity": "High school graduate",
+     "x": "High school graduate",
+     "field": "value",
+     "value": 9,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Less than high school",
+     "x": "Less than high school",
+     "field": "value",
+     "value": 3,
+     "note": "rank 4"
+    }
+   ],
+   "computation": "ordering by value",
+   "accepted_routes": [
+    "The categories rank as Some college > College graduate > High school graduate > Less than high school.",
+    "College graduate is second, High school graduate third, and Less than high school fourth.",
+    "The bars are ordered from Some college down to Less than high school."
+   ],
+   "visual_evidence_rule": "The relative heights/lengths of all four categories must make the full rank order visible.",
+   "temporal_anchor": "overall clip",
+   "reviewer_question": "Must the full rank order be conveyed, or is only the top category's position required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Some college's value (27) is greater than College graduate's value (20), so the 'some college' category is the top category above 'college graduate'.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "value",
+     "value": 27,
+     "note": "higher value"
+    },
+    {
+     "entity": "College graduate",
+     "x": "College graduate",
+     "field": "value",
+     "value": 20,
+     "note": "lower value"
+    }
+   ],
+   "computation": "27 - 20 = 7; 27 / 20 = 1.35",
+   "accepted_routes": [
+    "Some college is higher than College graduate.",
+    "Some college exceeds College graduate by 7.",
+    "Some college is about 1.35 times College graduate."
+   ],
+   "visual_evidence_rule": "The Some college bar must be visibly taller/longer than the College graduate bar.",
+   "temporal_anchor": "the narration clause mentioning 'some college'",
+   "reviewer_question": "Should the video explicitly contrast Some college with College graduate as the top two categories?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Some college's value is three times High school graduate's value and nine times Less than high school's value.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "value",
+     "value": 27,
+     "note": "numerator"
+    },
+    {
+     "entity": "High school graduate",
+     "x": "High school graduate",
+     "field": "value",
+     "value": 9,
+     "note": "27/9 = 3"
+    },
+    {
+     "entity": "Less than high school",
+     "x": "Less than high school",
+     "field": "value",
+     "value": 3,
+     "note": "27/3 = 9"
+    }
+   ],
+   "computation": "27 / 9 = 3; 27 / 3 = 9",
+   "accepted_routes": [
+    "Some college is three times High school graduate.",
+    "Some college is nine times Less than high school.",
+    "High school graduate is three times Less than high school."
+   ],
+   "visual_evidence_rule": "The High school graduate and Less than high school bars must be visibly much shorter than the Some college bar.",
+   "temporal_anchor": "overall clip",
+   "reviewer_question": "Should the video quantify the gap between Some college and the lower two categories?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Less than high school is the lowest category, with value 3 and relative_value 0.0725.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Less than high school",
+     "x": "Less than high school",
+     "field": "value",
+     "value": 3,
+     "note": "minimum value among the four categories"
+    },
+    {
+     "entity": "Less than high school",
+     "x": "Less than high school",
+     "field": "relative_value",
+     "value": 0.0725,
+     "note": "minimum relative_value among the four categories"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Less than high school is the smallest bar.",
+    "The lowest value is 3 for Less than high school.",
+    "Less than high school has the smallest relative_value, 0.0725."
+   ],
+   "visual_evidence_rule": "The Less than high school mark must be visually identifiable as the smallest/shortest among the four categories.",
+   "temporal_anchor": "overall clip",
+   "reviewer_question": "Should the video explicitly mark the lowest category?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing exact relative_value labels 0.6525, 0.4834, 0.2175, 0.0725 for the four categories.",
+  "Showing the exact difference of 7 between Some college and College graduate when the bars visibly show that gap."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that some college education caused Black migration or that civil rights laws led to migration.",
+  "Any percentage, count, or migration-rate unit for the values, because the table's unit column is empty.",
+  "Time trend since the 1960s, because the table has no time dimension.",
+  "Treating relative_value as a share of the whole or summing it to 100%; the relative_values do not sum to 1.",
+  "Chart-type, color, axis-tick, or position-specific statements."
+ ],
+ "notes": "The table has four educational attainment categories with absolute values and proportional relative_values; no unit or time column is populated. Units focus on ordering, extremes, and the counterintuitive Some college > College graduate comparison.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 38.8,
+  "usage": {
+   "prompt_tokens": 1037,
+   "completion_tokens": 9540,
+   "total_tokens": 10577,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7957
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 525
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

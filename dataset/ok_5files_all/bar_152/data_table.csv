@@ -1,0 +1,10 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_152,2008,2008,295.6,,19923.404,0.4874,,#e69545,axis_calibrated
+bar_152,2009,2009,406.7,,19923.404,0.4874,,#e69545,axis_calibrated
+bar_152,2010,2010,517.8,,20927.660,0.5126,,#e69545,axis_calibrated
+bar_152,2011,2011,628.8,,22927.660,0.5626,,#e69545,axis_calibrated
+bar_152,2012,2012,739.9,,23923.404,0.5874,,#e69545,axis_calibrated
+bar_152,2013,2013,851.1,,31923.404,0.7874,,#e69545,axis_calibrated
+bar_152,2014,2014,962.2,,34927.660,0.8626,,#e69545,axis_calibrated
+bar_152,2015,2015,1073.3,,32927.660,0.8126,,#e69545,axis_calibrated
+bar_152,2016,2016,1184.5,,37923.404,0.9374,,#e69545,axis_calibrated

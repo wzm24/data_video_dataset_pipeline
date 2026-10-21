@@ -1,0 +1,236 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_121",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate that before the 2020 election, voters had higher confidence in in-person voting than in mail-in voting, supporting the narration's point about unfamiliarity with mail-in methods.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In-person polling places has a higher relative 'Very' confidence value than absentee/mail-in ballot (0.2680 vs. 0.1094).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "In person at polling places",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.268,
+     "note": "series Very"
+    },
+    {
+     "entity": "By absentee or mail-in ballot",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.1094,
+     "note": "series Very"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In-person Very confidence is higher than mail-in Very confidence.",
+    "The in-person polling-place mark for Very exceeds the absentee/mail-in mark for Very.",
+    "Voters are more likely to be Very confident in in-person voting than in mail-in voting."
+   ],
+   "visual_evidence_rule": "The mark for In person at polling places under Very must extend farther than the mark for By absentee or mail-in ballot under Very.",
+   "temporal_anchor": "the clause about expanded vote-by-mail access, when contrasting with in-person voting",
+   "reviewer_question": "Is the in-person vs. mail-in Very-confidence comparison obligatory from the intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In-person polling places has the largest relative value among the four rows (0.2680).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "In person at polling places",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.268,
+     "note": "highest of 0.2680, 0.2242, 0.2078, 0.1094"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In-person Very confidence is the highest relative value shown.",
+    "The in-person polling-place Very bar is the tallest among the four displayed values.",
+    "The largest relative value in the chart is for In person at polling places under Very."
+   ],
+   "visual_evidence_rule": "The mark for In person at polling places under Very must be the farthest-extending or tallest among all four marks.",
+   "temporal_anchor": "the clause about in-person confidence being higher than mail-in",
+   "reviewer_question": "Must the video state that in-person Very confidence is the top value overall, or only that it beats mail-in?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Absentee/mail-in ballot has the smallest relative 'Very' value among the four rows (0.1094).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "By absentee or mail-in ballot",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.1094,
+     "note": "lowest of 0.2680, 0.2242, 0.2078, 0.1094"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Mail-in Very confidence is the lowest relative value shown.",
+    "The absentee/mail-in Very bar is the shortest among the four displayed values.",
+    "The smallest relative value in the chart is for By absentee or mail-in ballot under Very."
+   ],
+   "visual_evidence_rule": "The mark for By absentee or mail-in ballot under Very must be the shortest or least-extending among all four marks.",
+   "temporal_anchor": "the clause about unfamiliarity with mail-in voting",
+   "reviewer_question": "Must the video state that mail-in Very confidence is the bottom value overall, or only that it trails in-person?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The in-person 'Very' relative value is about 2.4 times the mail-in 'Very' relative value (0.2680 / 0.1094 ≈ 2.45).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "In person at polling places",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.268,
+     "note": "series Very"
+    },
+    {
+     "entity": "By absentee or mail-in ballot",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.1094,
+     "note": "series Very"
+    }
+   ],
+   "computation": "0.2680 / 0.1094 = 2.45",
+   "accepted_routes": [
+    "In-person Very confidence is about two and a half times mail-in Very confidence.",
+    "The in-person Very value is more than double the mail-in Very value.",
+    "The ratio of in-person Very to mail-in Very is roughly 2.4 to 1."
+   ],
+   "visual_evidence_rule": "The In person at polling places Very mark must appear more than twice as long as the By absentee or mail-in ballot Very mark.",
+   "temporal_anchor": "the clause contrasting in-person and mail-in confidence",
+   "reviewer_question": "Should the magnitude/ratio of the gap be obligatory, or is the direction of the gap enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The two 'Somewhat' rows (entities 49 and 20) have relative values 0.2242 and 0.2078, which are close to each other and between the mail-in Very and in-person Very values.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "49",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.2242,
+     "note": "series Somewhat"
+    },
+    {
+     "entity": "20",
+     "x": "Somewhat",
+     "field": "relative_value",
+     "value": 0.2078,
+     "note": "series Somewhat"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The two Somewhat relative values are similar in size.",
+    "Somewhat confidence values sit above mail-in Very confidence but below in-person Very confidence.",
+    "The 49 and 20 Somewhat entries are close to each other."
+   ],
+   "visual_evidence_rule": "The two Somewhat marks (for entities 49 and 20) must appear similar in length and must fall between the mail-in Very and in-person Very marks.",
+   "temporal_anchor": "optional, during the mail-in familiarity discussion if Somewhat confidence is shown",
+   "reviewer_question": "Should the video include the Somewhat entries, or focus only on the Very-confidence contrast?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The four relative values order as In-person Very > 49 Somewhat > 20 Somewhat > Mail-in Very.",
+  "The mail-in Very relative value is less than half of the in-person Very relative value.",
+  "The in-person Very relative value is smaller than the sum of the two Somewhat relative values."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute percentage, count, or dollar amount such as 49% or 20%.",
+  "Claims that the pandemic caused unfamiliarity with mail-in voting or caused the confidence gap.",
+  "Total confidence by voting method if it requires assuming the Somewhat rows belong to in-person or mail-in.",
+  "Party affiliation, demographics, election outcomes, or other data not present in the table.",
+  "Color meanings, axis ticks, chart type, or layout prescriptions."
+ ],
+ "notes": "The table is relative-only, so all units use relative_value and should not be phrased as percentages or counts. The strongest required contrast is In person at polling places (Very) versus By absentee or mail-in ballot (Very).",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 49.8,
+  "usage": {
+   "prompt_tokens": 1020,
+   "completion_tokens": 11539,
+   "total_tokens": 12559,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9694
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 380
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

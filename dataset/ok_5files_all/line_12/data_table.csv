@@ -1,0 +1,10 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+line_12,Subway ridership,subway,120.0,2006,20721,0.0000,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,384.0,,21908,0.2600,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,604.0,,22227,0.3300,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,780.0,,23277,0.5600,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,1000.0,,23870,0.6900,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,1154.0,,24737,0.8800,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,1220.0,2011,25285,1.0000,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,520.0,,22105,0.3033,riders,#FCD116,svg_geometry,Subway
+line_12,Subway ridership,subway,600.0,,22221,0.3287,riders,#FCD116,svg_geometry,Subway

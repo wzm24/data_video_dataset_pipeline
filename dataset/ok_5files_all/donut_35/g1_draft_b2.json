@@ -1,0 +1,199 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_35",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate how a tiny elite segment of the music industry disproportionately skews aggregate revenue statistics, masking the reality for the broader market.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The top 1% segment accounts for 30% of aggregate revenue.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 30,
+     "note": "printed value is 30 percent"
+    },
+    {
+     "entity": "top 1%",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "same share expressed as decimal 0.3000"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Top 1% accounts for 30% of aggregate revenue",
+    "The top 1% slice is 30%",
+    "30% of the total is concentrated in the top 1%",
+    "The top 1% share is 0.30"
+   ],
+   "visual_evidence_rule": "The top 1% segment/slice must be labeled with 30% or 0.30, or visually equal to 30% of a 100% chart.",
+   "temporal_anchor": "the clause 'but it's mostly the top 1%'",
+   "reviewer_question": "Must the video state the exact 30% top-1% share, or is 'nearly one-third' acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The non-top-1% remainder, i.e. the other 99%, accounts for 70% of aggregate revenue.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "top 1% share as decimal, used to compute the complement"
+    }
+   ],
+   "computation": "1 - 0.3000 = 0.7000 = 70%",
+   "accepted_routes": [
+    "The remaining 99% account for 70%",
+    "Non-top-1% share is 70%",
+    "Everything outside the top 1% makes up 70%",
+    "The rest of the industry is 70%"
+   ],
+   "visual_evidence_rule": "The complement segment must be shown as 70%, or the chart must make the 30% top-1% slice leave 70% unambiguously.",
+   "temporal_anchor": "the 'aggregate' / broader-market contrast immediately after the top 1% reveal",
+   "reviewer_question": "Should the video explicitly show the remaining 70% share for the non-top-1% market, or only imply it from the 30% slice?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The top 1%'s 30% revenue share is 30 times its 1% population share.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "revenue share as decimal; population share 0.01 comes from the entity label 'top 1%'"
+    }
+   ],
+   "computation": "0.3000 / 0.01 = 30",
+   "accepted_routes": [
+    "Top 1% revenue share is 30× its population share",
+    "The top 1% is 30 times overrepresented",
+    "Top 1% punches 30× above its weight",
+    "30% revenue share vs 1% population = 30×"
+   ],
+   "visual_evidence_rule": "The chart or annotation must show both 1% population share and 30% revenue share, or an explicit 30× overrepresentation annotation.",
+   "temporal_anchor": "the 'top 1%' clause",
+   "reviewer_question": "Should the video explicitly compute the 30× overrepresentation, or is showing 1% vs 30% enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The non-top-1% share exceeds the top 1% share by 40 percentage points: 70% versus 30%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "top 1%",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "top 1% share as decimal, used to compute complement and gap"
+    }
+   ],
+   "computation": "1 - 0.3000 = 0.7000; 0.7000 - 0.3000 = 0.4000 = 40 percentage points",
+   "accepted_routes": [
+    "The rest exceeds the top 1% by 40 percentage points",
+    "There is a 40-point gap between 70% rest and 30% top 1%",
+    "The top 1% trails the remaining 99% by 40 points",
+    "70% vs 30% is a 40-point difference"
+   ],
+   "visual_evidence_rule": "The chart must show top 1% at 30% and rest at 70%, or an annotation of the 40-point gap.",
+   "temporal_anchor": "the contrast between 'top 1%' and 'aggregate'",
+   "reviewer_question": "Should the video explicitly state the 40-point gap between the rest and the top 1%, or is showing 70% vs 30% enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Use a donut chart with the top 1% slice at 30% and the rest at 70%.",
+  "Label the top 1% share as 'nearly one-third' instead of the exact 30%.",
+  "Show 30× overrepresentation as a callout comparing 1% population with 30% revenue.",
+  "Show the 40-point gap as an optional emphasis between the remaining 70% and the top 1%'s 30%.",
+  "State that the top 1% is not a majority of aggregate revenue because 30% is less than the 70% remainder."
+ ],
+ "unsupported_to_avoid": [
+  "Dollar amounts or absolute revenue totals not present in the table.",
+  "Claims that the top 1% causes the industry to look healthy.",
+  "A specific percentage or dollar amount by which the average is inflated.",
+  "Historical trends, forecasts, or year-over-year changes.",
+  "Claims about artist counts, streams, or other metrics not specified by the table.",
+  "Treating 30% as a majority or saying the top 1% accounts for most revenue.",
+  "Assigning 30% to the bottom 99% or reversing the top-1% and remainder shares.",
+  "Causal claims about the broader market 'struggling' or being masked without table support."
+ ],
+ "notes": "The table has a single printed top-1% revenue share: 30%, or 0.3000 as a relative value. The key derived candidates are the 70% complement, the 30× population-share overrepresentation, and the 40-point rest-vs-top gap.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.94
+ },
+ "draft_cost": {
+  "sec": 50.0,
+  "usage": {
+   "prompt_tokens": 604,
+   "completion_tokens": 11133,
+   "total_tokens": 11737,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9450
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 348
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

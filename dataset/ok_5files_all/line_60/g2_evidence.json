@@ -1,0 +1,132 @@
+{
+ "clip_id": "line_60",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:oppose same-sex marriage @ 2003",
+    "mark:favor same-sex marriage @ 2003"
+   ],
+   "assertion": {
+    "greater": "oppose same-sex marriage @ 2003",
+    "lesser": "favor same-sex marriage @ 2003",
+    "expected_ratio": 1.6765,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both entity series must be visible over time, and at 2003 the oppose series must be above the favor series."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:oppose same-sex marriage @ 2003",
+    "mark:oppose same-sex marriage @ 2017"
+   ],
+   "assertion": {
+    "low": "oppose same-sex marriage @ 2017",
+    "low_value": 32.0,
+    "high": "oppose same-sex marriage @ 2003",
+    "high_value": 57.0,
+    "delta": 25.0,
+    "ratio": 1.7812,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The oppose series must be visible from 2003 to 2017 and show a downward trend."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:favor same-sex marriage @ 2003",
+    "mark:favor same-sex marriage @ 2017"
+   ],
+   "assertion": {
+    "low": "favor same-sex marriage @ 2003",
+    "low_value": 34.0,
+    "high": "favor same-sex marriage @ 2017",
+    "high_value": 62.0,
+    "delta": 28.0,
+    "ratio": 1.8235,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The favor series must be visible from 2003 to 2017 and show an upward trend."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:favor same-sex marriage @ 2011",
+    "mark:oppose same-sex marriage @ 2011"
+   ],
+   "assertion": {
+    "at": 2011,
+    "above": "favor same-sex marriage",
+    "above_value": 49.0,
+    "below": "oppose same-sex marriage",
+    "below_value": 49.0,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the two series meeting at 2011 (both 49) and the favor series above the oppose series at 2013."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:favor same-sex marriage @ 2017"
+   ],
+   "assertion": {
+    "mark": "favor same-sex marriage @ 2017",
+    "field": "value",
+    "expected": 62.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "At 2017, the favor series must be above the oppose series, with favor at its highest shown value and oppose at its lowest shown value."
+  }
+ ]
+}

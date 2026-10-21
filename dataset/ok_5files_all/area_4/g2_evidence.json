@@ -1,0 +1,137 @@
+{
+ "clip_id": "area_4",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:democracy share @ 1900"
+   ],
+   "assertion": {
+    "mark": "democracy share @ 1900",
+    "field": "value",
+    "expected": 14.7,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the line or area at 1900 near 14.7% and at 2000 near 97.1%, with visible overall upward trajectory."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:democracy share @ 1900",
+    "mark:democracy share @ 2000"
+   ],
+   "assertion": {
+    "low": "democracy share @ 1900",
+    "low_value": 14.7,
+    "high": "democracy share @ 2000",
+    "high_value": 97.1,
+    "delta": 82.4,
+    "ratio": 6.6054,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible annotation or vertical difference between the start and end values must support the +82.4 percentage-point gain."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:democracy share @ 1968",
+    "mark:democracy share @ 1970"
+   ],
+   "assertion": {
+    "series": "democracy share",
+    "values": [
+     48.7,
+     50.2
+    ],
+    "threshold_between": [
+     48.7,
+     50.2
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 50% horizontal reference line must be visible, with the series crossing it between 1968 and 1970."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:democracy share @ 1980",
+    "mark:democracy share @ 1990"
+   ],
+   "assertion": {
+    "low": "democracy share @ 1980",
+    "low_value": 55.2,
+    "high": "democracy share @ 1990",
+    "high_value": 88.8,
+    "delta": 33.6,
+    "ratio": 1.6087,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a visibly steeper slope or expanded area between 1980 and 1990, with those years labeled or traceable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:democracy share @ 1924",
+    "mark:democracy share @ 1936"
+   ],
+   "assertion": {
+    "low": "democracy share @ 1936",
+    "low_value": 13.2,
+    "high": "democracy share @ 1924",
+    "high_value": 28.3,
+    "delta": 15.1,
+    "ratio": 2.1439,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a local peak around 1924 and a trough around 1936, making the reversal visible."
+  }
+ ]
+}

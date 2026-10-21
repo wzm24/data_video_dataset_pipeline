@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#f3f1ec"/>
+<text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111">Reported smallpox cases in India</text>
+<text x="640" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666">Source: World Health Organization</text>
+<line x1="150.0" y1="600.0" x2="1150.0" y2="600.0" stroke="#111" stroke-width="2"/>
+<line x1="150.0" y1="180.0" x2="150.0" y2="600.0" stroke="#111" stroke-width="2"/>
+<text x="136.0" y="501.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#333">50,000</text>
+<text x="136.0" y="396.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#333">100,000</text>
+<text x="136.0" y="291.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#333">150,000</text>
+<text x="136.0" y="186.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#333">200,000</text>
+<text x="150" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#333">1962</text>
+<text x="304" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#333">1964</text>
+<text x="458" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#333">1966</text>
+<text x="612" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#333">1968</text>
+<text x="765" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#333">1970</text>
+<text x="919" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#333">1972</text>
+<text x="1073" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#333">1974</text>
+<polyline points="164.0,484.5 226.9,421.5 303.8,516.0 380.8,526.5 457.7,526.5 534.6,421.5 611.5,526.5 688.5,547.5 765.4,495.0 842.3,547.5 919.2,537.0 996.2,421.5 1073.1,201.0 1150.0,600.0" fill="none" stroke="#333333" stroke-width="3"/>
+<line x1="1073.1" y1="201.0" x2="1150.0" y2="600.0" stroke="#ffd21f" stroke-width="9" opacity="0.75"/>
+</svg>

@@ -1,0 +1,213 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_15",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the increase in the number of people flagged for far-right activity between 2016-17 and 2017-18.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The flagged count was 1.000 in 2016-17 and 1.400 in 2017-18 (table value units).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2016-17",
+     "x": "480.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "2016-17 endpoint value"
+    },
+    {
+     "entity": "2017-18",
+     "x": "800.0",
+     "field": "value",
+     "value": 1.4,
+     "note": "2017-18 endpoint value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "2016-17: 1.0; 2017-18: 1.4",
+    "The flagged count rose from 1.0 to 1.4 across the two periods",
+    "In 2016-17 the value was 1.0, and in 2017-18 it was 1.4"
+   ],
+   "visual_evidence_rule": "Both period bars/endpoints are visible with their numeric labels 1.0 and 1.4 (or equivalent table units).",
+   "temporal_anchor": "the number of people flagged to authorities because of worries about far-right activity",
+   "reviewer_question": "Are both endpoint values required, or is the comparative increase alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 2017-18 value is greater than the 2016-17 value; the series increases from 2016-17 to 2017-18.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2016-17",
+     "x": "480.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "lower endpoint"
+    },
+    {
+     "entity": "2017-18",
+     "x": "800.0",
+     "field": "value",
+     "value": 1.4,
+     "note": "higher endpoint"
+    }
+   ],
+   "computation": "1.400 > 1.000",
+   "accepted_routes": [
+    "2017-18 is higher than 2016-17",
+    "the number increased over the two periods",
+    "2016-17 is lower than 2017-18"
+   ],
+   "visual_evidence_rule": "The 2017-18 bar/endpoint is visibly taller/higher than the 2016-17 bar/endpoint.",
+   "temporal_anchor": "has risen",
+   "reviewer_question": "Must the chart explicitly show the upward direction/ranking, or is the numeric change enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The increase is 0.400 table value units, which is a 40% rise from 2016-17 to 2017-18.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2016-17",
+     "x": "480.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "baseline for change"
+    },
+    {
+     "entity": "2017-18",
+     "x": "800.0",
+     "field": "value",
+     "value": 1.4,
+     "note": "endpoint for change"
+    }
+   ],
+   "computation": "(1.400 - 1.000) = 0.400; (0.400 / 1.000) * 100 = 40%",
+   "accepted_routes": [
+    "up by 0.4, or 40%",
+    "a 40% increase",
+    "increased by two-fifths",
+    "more than a third higher"
+   ],
+   "visual_evidence_rule": "A change annotation or label shows +0.4 and/or +40% between the two bars.",
+   "temporal_anchor": "has risen by more than a third",
+   "reviewer_question": "Is the derived 40%/0.4 increase obligatory, or may the video only state 'more than a third'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The increase exceeded one third; the derived 40% rise is above the one-third threshold.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2016-17",
+     "x": "480.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "baseline"
+    },
+    {
+     "entity": "2017-18",
+     "x": "800.0",
+     "field": "value",
+     "value": 1.4,
+     "note": "endpoint"
+    }
+   ],
+   "computation": "Derived increase = (1.400 - 1.000) / 1.000 = 0.400 = 40%; 40% > one third",
+   "accepted_routes": [
+    "more than a third",
+    "above one third",
+    "exceeded one third",
+    "40%, which is more than a third"
+   ],
+   "visual_evidence_rule": "An annotation or threshold marker calls out that the rise is more than one third.",
+   "temporal_anchor": "by more than a third",
+   "reviewer_question": "Must the video literally state the one-third threshold, or is the derived 40% rise sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The x-axis labels '2016-17' and '2017-18' may be shown.",
+  "The subject context 'people flagged to authorities because of worries about far-right activity' may be shown.",
+  "The normalized relative_value positions (0.6000 for 2016-17 and 0.8405 for 2017-18) may be used for bar-height scaling, but they are not part of the spoken claim."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why far-right activity or referrals increased.",
+  "Extrapolating beyond 2017-18 or predicting future years.",
+  "Treating the table values as exact counts of people or inventing a unit because the unit column is blank.",
+  "Using the later year as the denominator for the percentage increase.",
+  "Interpreting relative_value as a share/composition without a defined denominator."
+ ],
+ "notes": "Core required units are the endpoints, upward direction, and derived 40% increase; the one-third threshold is narration-explicit but optional if the 40% rise is shown. Values use table value units because the table's unit column is blank.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.9
+ },
+ "draft_cost": {
+  "sec": 49.8,
+  "usage": {
+   "prompt_tokens": 656,
+   "completion_tokens": 12413,
+   "total_tokens": 13069,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10841
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 400
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

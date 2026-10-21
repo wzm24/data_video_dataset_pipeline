@@ -1,0 +1,215 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_17",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the distribution of produced oxygen between commercial industries and medical purposes.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Commercial industries receive 83.3% of produced oxygen, while medical purposes receive 16.7%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Commercial",
+     "x": "1",
+     "field": "value",
+     "value": 83.3,
+     "note": "Commercial share from table; x_px=1"
+    },
+    {
+     "entity": "Medical purposes",
+     "x": "0",
+     "field": "value",
+     "value": 16.7,
+     "note": "Medical share from table; x_px=0"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Commercial industries get 83.3% of produced oxygen, while medical purposes get 16.7%.",
+    "About 83% of oxygen goes to commercial industries and about 17% to medical purposes.",
+    "Commercial is 83.3% of the total; medical is 16.7%.",
+    "Most oxygen goes to commercial use (83.3%), with the rest going to medical (16.7%)."
+   ],
+   "visual_evidence_rule": "Both slices or bars must be labeled or otherwise readable as 83.3% and 16.7% (or rounded 83% and 17%) and visually distinguishable.",
+   "temporal_anchor": "The commercial-share and medical-share clauses together.",
+   "reviewer_question": "Are both exact shares required, or can the video show the split visually without numeric labels?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Commercial's share is about 5 times medical's share.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Commercial",
+     "x": "1",
+     "field": "value",
+     "value": 83.3,
+     "note": "Commercial share from table"
+    },
+    {
+     "entity": "Medical purposes",
+     "x": "0",
+     "field": "value",
+     "value": 16.7,
+     "note": "Medical share from table"
+    }
+   ],
+   "computation": "83.3 / 16.7 = 4.988... ≈ 5.0",
+   "accepted_routes": [
+    "Commercial receives about 5 times as much oxygen as medical purposes.",
+    "The commercial share is roughly fivefold the medical share.",
+    "Medical is about one-fifth of commercial.",
+    "For every unit going to medical, about five units go to commercial."
+   ],
+   "visual_evidence_rule": "The chart must make the approximately 5:1 relationship evident, either through labeled values that permit the comparison or through an explicit annotation.",
+   "temporal_anchor": "Optional comparison between the two share clauses; not explicit in the original narration.",
+   "reviewer_question": "Should the ~5:1 ratio be treated as required content or as an optional derived insight?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Commercial's share exceeds medical's share by 66.6 percentage points.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Commercial",
+     "x": "1",
+     "field": "value",
+     "value": 83.3,
+     "note": "Commercial share from table"
+    },
+    {
+     "entity": "Medical purposes",
+     "x": "0",
+     "field": "value",
+     "value": 16.7,
+     "note": "Medical share from table"
+    }
+   ],
+   "computation": "83.3 - 16.7 = 66.6",
+   "accepted_routes": [
+    "Commercial's share is 66.6 percentage points higher than medical's.",
+    "The gap between commercial and medical is about 67 percentage points.",
+    "Commercial exceeds medical by 66.6 points of the 100% total."
+   ],
+   "visual_evidence_rule": "Labels or values must support a 66.6 percentage-point difference; if the chart does not annotate the gap, this remains an optional derived claim.",
+   "temporal_anchor": "Optional comparison between the two share clauses.",
+   "reviewer_question": "Should the 66.6-point difference be required or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Commercial and medical together account for 100% of produced oxygen.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Commercial",
+     "x": "1",
+     "field": "value",
+     "value": 83.3,
+     "note": "Commercial share from table"
+    },
+    {
+     "entity": "Medical purposes",
+     "x": "0",
+     "field": "value",
+     "value": 16.7,
+     "note": "Medical share from table"
+    }
+   ],
+   "computation": "83.3 + 16.7 = 100.0",
+   "accepted_routes": [
+    "The two categories together account for all produced oxygen (100%).",
+    "Commercial and medical sum to 100% of the distribution.",
+    "The pie represents 100% of produced oxygen, split only between commercial and medical.",
+    "Together, commercial and medical make up the entire distribution."
+   ],
+   "visual_evidence_rule": "A complete pie or 100% total must be shown; if using bars, an explicit total or 100% label is needed.",
+   "temporal_anchor": "The chart title or opening clause establishing the distribution.",
+   "reviewer_question": "Must the video explicitly state that the two categories total 100%, or is a complete pie sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Commercial is the larger/maximum category at 83.3%.",
+  "Medical purposes is the smaller category at 16.7%.",
+  "Medical share is approximately one-sixth of the total.",
+  "Commercial share is approximately five-sixths of the total."
+ ],
+ "unsupported_to_avoid": [
+  "Substituting the narration's rounded percentages for the table's 83.3% and 16.7%.",
+  "Absolute oxygen production volumes or tonnage not present in the table.",
+  "Causal claims that steel, pharmaceuticals, or hospital demand drive the shares.",
+  "Extrapolating to other years, regions, or oxygen uses beyond the two listed categories.",
+  "Treating 16.7 and 83.3 as counts rather than percentages."
+ ],
+ "notes": "The table supports only two shares; U1 and U4 are the core split and whole-distribution claims. U2 and U3 are valid derived comparisons but likely optional unless the animation explicitly annotates them.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.94
+ },
+ "draft_cost": {
+  "sec": 43.5,
+  "usage": {
+   "prompt_tokens": 640,
+   "completion_tokens": 10373,
+   "total_tokens": 11013,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8835
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 384
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

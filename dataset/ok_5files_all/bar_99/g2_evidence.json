@@ -1,0 +1,129 @@
+{
+ "clip_id": "bar_99",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both category labels must be visible: one for other state-on-state wars and one for wars between democracies."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Wars between democracies @ 1000.0"
+   ],
+   "assertion": {
+    "segment": "Wars between democracies @ 1000.0",
+    "expected_share": 0.22,
+    "total_of": "unknown",
+    "total": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The wars-between-democracies bar or segment must show 0.22 or 22%, or a length matching 0.22 on a 0-1 scale."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Other wars @ 540.0"
+   ],
+   "assertion": {
+    "segment": "Other wars @ 540.0",
+    "expected_share": 0.78,
+    "total_of": "unknown",
+    "total": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The other-wars bar or segment must show 0.78 or 78%, or a length matching 0.78 on a 0-1 scale."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Other wars @ 540.0",
+    "mark:Wars between democracies @ 1000.0"
+   ],
+   "assertion": {
+    "series": "Other wars",
+    "values": [
+     0.78,
+     0.22
+    ],
+    "threshold_between": [
+     0.22,
+     0.78
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both shares must be visible or inferable from a normalized 0-1/100% scale so the viewer can see 0.22 below and 0.78 above the halfway point."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Other wars @ 540.0",
+    "mark:Wars between democracies @ 1000.0"
+   ],
+   "assertion": {
+    "low": "Wars between democracies @ 1000.0",
+    "low_value": 0.22,
+    "high": "Other wars @ 540.0",
+    "high_value": 0.78,
+    "delta": 0.56,
+    "ratio": 3.5455,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 0.78 and 0.22 values must be visible or labeled so the ratio can be derived."
+  }
+ ]
+}

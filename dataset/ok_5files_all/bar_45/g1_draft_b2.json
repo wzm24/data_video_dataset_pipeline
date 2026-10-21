@@ -1,0 +1,249 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_45",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain that billionaires pay lower income tax rates than less wealthy individuals because their wealth is not derived from typical income.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The 400 RICHEST group (the billionaires/top 400 referenced by the narration) has a plotted income-tax-rate value of 10.000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "400 RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "Rightmost endpoint bar; value column is 10.000."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The top 400 richest are at 10.0 on the tax-rate scale.",
+    "Billionaires' plotted income-tax rate value is 10.000.",
+    "The far-right 400 RICHEST bar tops out at about 10."
+   ],
+   "visual_evidence_rule": "The rightmost 400 RICHEST bar must be visible and labeled/readable at 10.000 (or about 10).",
+   "temporal_anchor": "The clause introducing Billionaires or the clause saying their income gets taxed at lower rates.",
+   "reviewer_question": "Is the 400 RICHEST endpoint value 10.000 obligatory for the clip's core claim?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The RICHEST 10% group has the highest plotted value among all listed groups: 19.000.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST 10%",
+     "x": "1074.1",
+     "field": "value",
+     "value": 19.0,
+     "note": "Highest value in the table; comparator for the billionaire-rate contrast."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "RICHEST 10% peaks at 19.0.",
+    "The top 10% bar is the tallest at 19.000.",
+    "Richest 10% is 19.0, the maximum in the series."
+   ],
+   "visual_evidence_rule": "The RICHEST 10% bar must be visible as the tallest bar, at 19.000.",
+   "temporal_anchor": "The clause referring to 'these less rich people' as the comparison group.",
+   "reviewer_question": "Must the video identify RICHEST 10% as the highest comparator at 19.000?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 400 RICHEST value (10.000) is lower than the RICHEST 10% value (19.000); the gap is 9.000 and the ratio is about 0.526.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "400 RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "Lower bar in the key contrast."
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1074.1",
+     "field": "value",
+     "value": 19.0,
+     "note": "Higher comparator bar."
+    }
+   ],
+   "computation": "19.000 - 10.000 = 9.000; 10.000 / 19.000 = approx. 0.526",
+   "accepted_routes": [
+    "Billionaires are taxed at a lower rate than the richest 10%: 10 vs 19.",
+    "The 400 richest bar is about 9 points below the richest 10% bar.",
+    "Top 400 rate is roughly half the richest 10% rate (10/19)."
+   ],
+   "visual_evidence_rule": "Both the 400 RICHEST (10.000) and RICHEST 10% (19.000) bars must be visible together, with 400 RICHEST clearly lower.",
+   "temporal_anchor": "The clause 'their income actually gets taxed at lower rates than these less rich people.'",
+   "reviewer_question": "Is the direct 400 RICHEST < RICHEST 10% comparison required, or are the two values enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 400 RICHEST value (10.000) is also lower than Group 9's value (12.000) but higher than Group 8's value (9.000), so the final bar breaks the upward progression locally.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Group 9",
+     "x": "976.9",
+     "field": "value",
+     "value": 12.0,
+     "note": "Immediately preceding higher-rate group before the final bar."
+    },
+    {
+     "entity": "Group 8",
+     "x": "879.5",
+     "field": "value",
+     "value": 9.0,
+     "note": "Group just below 400 RICHEST in value."
+    },
+    {
+     "entity": "400 RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "Final endpoint bar."
+    }
+   ],
+   "computation": "12.000 - 10.000 = 2.000; 10.000 - 9.000 = 1.000",
+   "accepted_routes": [
+    "The 400 richest bar sits below Group 9's 12.0 but above Group 8's 9.0.",
+    "The last bar breaks the rise: Group 9 is 12.0 and 400 RICHEST is 10.0.",
+    "Group 8 is 9.0, 400 RICHEST is 10.0, and Group 9 is 12.0 in that order."
+   ],
+   "visual_evidence_rule": "Group 8, Group 9, and 400 RICHEST bars must be visible and ordered with values 9.000, 12.000, 10.000.",
+   "temporal_anchor": "The clause comparing billionaires' rates with less rich people, if the video shows more than the top 10% comparator.",
+   "reviewer_question": "Should the video convey the local drop below Group 9 and the rise above Group 8, or is that optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The overall series generally rises from POOREST 10% (1.000) through RICHEST 10% (19.000), then drops to 400 RICHEST (10.000).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "POOREST 10%",
+     "x": "198.7",
+     "field": "value",
+     "value": 1.0,
+     "note": "Leftmost starting value."
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1074.1",
+     "field": "value",
+     "value": 19.0,
+     "note": "Peak before final drop."
+    },
+    {
+     "entity": "400 RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "Final endpoint value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Rates climb from 1.0 for the poorest 10% to 19.0 for the richest 10%, then fall to 10.0 for the 400 richest.",
+    "The series is mostly increasing until the final 400 RICHEST bar drops.",
+    "Poorest 10% start at 1.0; richest 10% peak at 19.0; top 400 end at 10.0."
+   ],
+   "visual_evidence_rule": "The chart must show the left-to-right progression and the final drop from the 19.000 peak (or at least from Group 9's 12.000) to 400 RICHEST's 10.000.",
+   "temporal_anchor": "The clause saying billionaires' income gets taxed at lower rates than less rich people.",
+   "reviewer_question": "Is the full rising-then-dropping shape required, or can the clip only show the two key endpoint bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing all 11 bars in order as context, including POOREST 10% at 1.000 and the intermediate groups.",
+  "Noting that the 400 RICHEST value 10.000 is higher than POOREST 10% 1.000, so the lower-rate claim is not universal across all less-wealthy groups.",
+  "Using relative_value (400 RICHEST 0.3333 vs RICHEST 10% 0.6333) as a normalized visual height if the chart's y-scale requires it."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that billionaires' wealth is not derived from typical income; no table field supports wealth-source composition.",
+  "Claim that billionaires pay lower income tax rates than all less wealthy groups; table shows POOREST 10% at 1.000, Group 2 at 2.000, etc., which are below 400 RICHEST's 10.000.",
+  "Other taxes or total tax burden; the table only has the plotted values and no other-tax fields.",
+  "Treating relative_value as a share of total; it does not sum to 1 and is not labeled as a composition denominator."
+ ],
+ "notes": "Core required contrast is 400 RICHEST 10.000 vs RICHEST 10% 19.000; Group 9 12.000 and the full trend are optional context. Avoid the causal wealth-source explanation because it is not in the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 61.6,
+  "usage": {
+   "prompt_tokens": 1155,
+   "completion_tokens": 14478,
+   "total_tokens": 15633,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12194
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 771
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

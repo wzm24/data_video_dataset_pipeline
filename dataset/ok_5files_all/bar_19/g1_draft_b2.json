@@ -1,0 +1,200 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_19",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the extreme temperature variations on Mercury resulting from its lack of atmosphere and orbital dynamics.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Mercury's maximum temperature is 437°C.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Max temperature",
+     "x": "Temperature",
+     "field": "value",
+     "value": 437,
+     "note": "Table row bar_19/max-temperature; printed_label value 437 °C."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Max temperature reaches 437°C.",
+    "Mercury's high is 437 degrees Celsius.",
+    "The maximum is 437°C.",
+    "High temperature: 437°C."
+   ],
+   "visual_evidence_rule": "A bar or label for Max temperature must show 437°C (or 437).",
+   "temporal_anchor": "the clause about 'enormous fluctuations in temperature' or the temperature reveal moment",
+   "reviewer_question": "Must the maximum temperature 437°C be explicitly labeled/displayed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Mercury's minimum temperature is -173°C.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Min temperature",
+     "x": "Temperature",
+     "field": "value",
+     "value": -173,
+     "note": "Table row bar_19/min-temperature; printed_label value -173 °C."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Min temperature is -173°C.",
+    "Mercury's low is -173 degrees Celsius.",
+    "The minimum is -173°C.",
+    "Low temperature: -173°C."
+   ],
+   "visual_evidence_rule": "A bar or label for Min temperature must show -173°C (or -173).",
+   "temporal_anchor": "the clause about 'enormous fluctuations in temperature' or the temperature reveal moment",
+   "reviewer_question": "Must the minimum temperature -173°C be explicitly labeled/displayed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The temperature difference or range between Mercury's maximum and minimum is 610°C.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Max temperature",
+     "x": "Temperature",
+     "field": "value",
+     "value": 437,
+     "note": "Max endpoint used in the range calculation."
+    },
+    {
+     "entity": "Min temperature",
+     "x": "Temperature",
+     "field": "value",
+     "value": -173,
+     "note": "Min endpoint used in the range calculation."
+    }
+   ],
+   "computation": "437 - (-173) = 610",
+   "accepted_routes": [
+    "Temperature range is 610°C.",
+    "Max and min differ by about 610 degrees Celsius.",
+    "There is a 610°C spread between the extremes.",
+    "Mercury's temperature swings by 610°C."
+   ],
+   "visual_evidence_rule": "Both 437°C and -173°C must be visible, and the 610°C span must be annotated or directly inferable from the axis.",
+   "temporal_anchor": "the clause about 'enormous fluctuations in temperature'",
+   "reviewer_question": "Must the video state the 610°C range/difference, or is showing both endpoints sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The maximum temperature is higher than the minimum temperature; 437°C is greater than -173°C.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Max temperature",
+     "x": "Temperature",
+     "field": "value",
+     "value": 437,
+     "note": "Higher extreme in the order comparison."
+    },
+    {
+     "entity": "Min temperature",
+     "x": "Temperature",
+     "field": "value",
+     "value": -173,
+     "note": "Lower extreme in the order comparison."
+    }
+   ],
+   "computation": "none (order comparison: 437 > -173)",
+   "accepted_routes": [
+    "Max temperature is higher than Min temperature.",
+    "437°C is greater than -173°C.",
+    "The maximum ranks above the minimum.",
+    "Max > Min."
+   ],
+   "visual_evidence_rule": "The chart must visually place Max above/greater than Min, e.g., 437°C bar/label vs -173°C bar/label.",
+   "temporal_anchor": "the clause about 'enormous fluctuations in temperature'",
+   "reviewer_question": "Must the video explicitly establish Max > Min ordering, or is the max/min labeling enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Both extremes are from the same Temperature series for Mercury and are labeled Max temperature and Min temperature.",
+  "Mercury has no atmosphere or moon (narration context; no table data).",
+  "A Mercury year is shorter than a Mercury day (narration context; no table data)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that lack of atmosphere or orbital dynamics directly caused the specific 437°C or -173°C values.",
+  "Any values not in the table, such as Mercury's orbital period, day length, atmosphere composition, or temperatures in other units.",
+  "Implying the chart shows temperature over time or a time-series trend; the table only has max/min extremes.",
+  "Claiming Mercury is the hottest/coldest planet or has the largest temperature range in the solar system."
+ ],
+ "notes": "The table only contains two temperature extremes; the core data units are the two endpoints, their 610°C difference, and their ordering. Narration context about year/day and atmosphere is listed as optional because it has no numeric support in the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.94
+ },
+ "draft_cost": {
+  "sec": 42.6,
+  "usage": {
+   "prompt_tokens": 680,
+   "completion_tokens": 10010,
+   "total_tokens": 10690,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8655
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 296
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

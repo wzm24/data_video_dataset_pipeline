@@ -1,0 +1,168 @@
+{
+ "clip_id": "line_83",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Taiwan daily cases @ Jan 2020",
+    "mark:Taiwan daily cases @ Apr 2020",
+    "mark:Taiwan daily cases @ Aug 2020",
+    "mark:Taiwan daily cases @ Nov 2020",
+    "mark:Taiwan daily cases @ Feb 2021"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Taiwan daily cases @ Jan 2020",
+      "value": 5.9524
+     },
+     {
+      "mark": "Taiwan daily cases @ Apr 2020",
+      "value": 22.7193
+     },
+     {
+      "mark": "Taiwan daily cases @ Aug 2020",
+      "value": 7.2607
+     },
+     {
+      "mark": "Taiwan daily cases @ Nov 2020",
+      "value": 6.9601
+     },
+     {
+      "mark": "Taiwan daily cases @ Feb 2021",
+      "value": 8.0236
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show a prolonged low level in the line before the steep rise, including at least two early labeled months such as Jan 2020 and Feb 2021."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Taiwan daily cases @ Jun 2021",
+    "mark:Taiwan daily cases @ post-Jun 2021 first surge point"
+   ],
+   "assertion": {
+    "low": "Taiwan daily cases @ Jun 2021",
+    "low_value": 33.2143,
+    "high": "Taiwan daily cases @ post-Jun 2021 first surge point",
+    "high_value": 115.0,
+    "delta": 81.7857,
+    "ratio": 3.4624,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the line turning sharply upward at or after the June 2021 point and passing through about 115 cases."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Taiwan daily cases @ Jun 2021",
+    "mark:Taiwan daily cases @ post-Jun 2021 first surge point",
+    "mark:Taiwan daily cases @ post-Jun 2021 second surge point",
+    "mark:Taiwan daily cases @ post-Jun 2021 peak"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Taiwan daily cases @ Jun 2021",
+      "value": 33.2143
+     },
+     {
+      "mark": "Taiwan daily cases @ post-Jun 2021 first surge point",
+      "value": 115.0
+     },
+     {
+      "mark": "Taiwan daily cases @ post-Jun 2021 second surge point",
+      "value": 369.6429
+     },
+     {
+      "mark": "Taiwan daily cases @ post-Jun 2021 peak",
+      "value": 496.9048
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the line's steep upward path and the ordered high points around 115, 370, and 497."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Taiwan daily cases @ post-Jun 2021 peak",
+    "extreme": "max",
+    "expected": 496.9048,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the line reaching its highest point at about 497 cases."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Taiwan daily cases @ post-Jun 2021 peak",
+    "mark:Taiwan daily cases @ Jun 2021"
+   ],
+   "assertion": {
+    "greater": "Taiwan daily cases @ post-Jun 2021 peak",
+    "lesser": "Taiwan daily cases @ Jun 2021",
+    "expected_ratio": 14.9606,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the peak visibly far above the June 2021 pre-surge level, supporting a roughly 15x comparison."
+  }
+ ]
+}

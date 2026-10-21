@@ -1,0 +1,285 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_147",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the significant disparity in vaccine purchases between high-income nations and lower-income countries or international mechanisms like Covax.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "High income has the largest relative purchase level among all listed categories.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "largest relative_value in the table; no absolute value is available"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "High income has the highest relative purchase level in the series, at 0.5353.",
+    "High income is the top category on the relative scale.",
+    "No other listed entity has a relative_value above 0.5353."
+   ],
+   "visual_evidence_rule": "The relative magnitude for High income must be visibly greater than every other listed entity.",
+   "temporal_anchor": "the opening framing of the vaccine-purchase disparity",
+   "reviewer_question": "Must the video establish High income as the maximum relative value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "High income's relative purchase level is about four times Covax's relative purchase level.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "Covax",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1253,
+     "note": "denominator for ratio"
+    }
+   ],
+   "computation": "0.5353 / 0.1253 = 4.27",
+   "accepted_routes": [
+    "High income's relative value is about 4.3 times Covax's.",
+    "Covax's relative value is roughly one-fourth of High income's.",
+    "High income is more than four times Covax on the relative scale."
+   ],
+   "visual_evidence_rule": "The chart must make the relative magnitude of High income and Covax directly comparable so the roughly fourfold gap is visible.",
+   "temporal_anchor": "the clause comparing high-income purchases with international mechanisms like Covax",
+   "reviewer_question": "Is the High income versus Covax ratio required, or is Covax's lower ranking enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "High income's relative purchase level exceeds the combined relative values of all other listed categories.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "compared against combined remainder"
+    },
+    {
+     "entity": "Upper middle income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1367,
+     "note": "part of combined remainder"
+    },
+    {
+     "entity": "Lower middle income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0535,
+     "note": "part of combined remainder"
+    },
+    {
+     "entity": "Lower income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0353,
+     "note": "part of combined remainder"
+    },
+    {
+     "entity": "Covax",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1253,
+     "note": "part of combined remainder"
+    }
+   ],
+   "computation": "0.1367 + 0.0535 + 0.0353 + 0.1253 = 0.3508; compare to High income 0.5353",
+   "accepted_routes": [
+    "High income alone exceeds the combined relative values of upper-middle, lower-middle, lower-income, and Covax.",
+    "The other four categories sum to 0.3508, which is less than High income's 0.5353.",
+    "High income's relative level is larger than the total of all non-high-income categories."
+   ],
+   "visual_evidence_rule": "The chart must allow High income to be compared against the combined remainder of the other four entities.",
+   "temporal_anchor": "the purchase-disparity clause contrasting High income with lower-income categories and Covax",
+   "reviewer_question": "Is the combined-remainder comparison required, or optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The full relative ordering is High income > Upper middle income > Covax > Lower middle income > Lower income.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "rank 1"
+    },
+    {
+     "entity": "Upper middle income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1367,
+     "note": "rank 2"
+    },
+    {
+     "entity": "Covax",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1253,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Lower middle income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0535,
+     "note": "rank 4"
+    },
+    {
+     "entity": "Lower income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0353,
+     "note": "rank 5"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Order from highest to lowest: High income, Upper middle income, Covax, Lower middle income, Lower income.",
+    "High income is first, Upper middle income second, Covax third, Lower middle income fourth, and Lower income last.",
+    "Covax sits between Upper middle income and Lower middle income in the ranking."
+   ],
+   "visual_evidence_rule": "The relative ordering of all five entities must be visually discernible.",
+   "temporal_anchor": "the overall vaccine-purchase comparison across income groups and Covax",
+   "reviewer_question": "Is preserving the full ordering required, especially Covax above Lower middle and Lower income?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "High income's relative purchase level is about fifteen times Lower income's relative purchase level.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "Lower income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0353,
+     "note": "denominator for ratio"
+    }
+   ],
+   "computation": "0.5353 / 0.0353 = 15.16",
+   "accepted_routes": [
+    "High income's relative value is about 15 times Lower income's.",
+    "Lower income is the lowest relative value, roughly one-fifteenth of High income's.",
+    "High income is more than fifteen times Lower income on the relative scale."
+   ],
+   "visual_evidence_rule": "The chart must make the relative magnitudes of High income and Lower income comparable enough to show the roughly fifteenfold gap.",
+   "temporal_anchor": "the clause contrasting High income with lower-income countries",
+   "reviewer_question": "Is the High income versus Lower income ratio required, or is the ranking alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Covax's relative value (0.1253) is greater than Lower middle income (0.0535) and Lower income (0.0353).",
+  "Upper middle income is the second-highest relative value (0.1367)."
+ ],
+ "unsupported_to_avoid": [
+  "45 million doses delivered",
+  "April as a data date",
+  "Percentages, dose counts, dollar amounts, or population denominators",
+  "Causal claims about why high-income nations purchased more",
+  "Extrapolating beyond the five listed categories",
+  "Treating relative_value as a percentage rather than a relative magnitude"
+ ],
+ "notes": "The table is relative-only, so all units use relative_value and arithmetic ratios, not percentages or dose counts. The strongest required contrast is High income versus Covax and lower-income categories; the combined-remainder comparison is a valid optional emphasis.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 28.4,
+  "usage": {
+   "prompt_tokens": 996,
+   "completion_tokens": 6758,
+   "total_tokens": 7754,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4752
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 484
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#8338EC"/>
+<rect id="chart-title-box" data-role="title-box" x="390" y="36" width="500" height="56" rx="8" fill="#FF5E57"/>
+<text id="chart-title" data-role="title" x="640.0" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Illiteracy Rate 2017</text>
+<text id="chart-subtitle" data-role="subtitle" x="640.0" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" opacity="0.85">15 and Older</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="gridline" x1="120" y1="516.0" x2="1160" y2="516.0" stroke="#A78BFA" stroke-width="2" opacity="0.30"/>
+<line data-role="gridline" x1="120" y1="432.0" x2="1160" y2="432.0" stroke="#A78BFA" stroke-width="2" opacity="0.30"/>
+<line data-role="gridline" x1="120" y1="348.0" x2="1160" y2="348.0" stroke="#A78BFA" stroke-width="2" opacity="0.30"/>
+<line data-role="gridline" x1="120" y1="264.0" x2="1160" y2="264.0" stroke="#A78BFA" stroke-width="2" opacity="0.30"/>
+<line data-role="gridline" x1="120" y1="180.0" x2="1160" y2="180.0" stroke="#A78BFA" stroke-width="2" opacity="0.30"/>
+<line data-role="axis" x1="120" y1="600" x2="1160" y2="600" stroke="#ffffff" stroke-width="3" opacity="0.55"/>
+<g id="entity-sub-saharan-africa" data-role="entity" data-entity-id="sub-saharan-africa" data-label="Sub-Saharan Africa">
+<rect id="sub-saharan-africa-bar" data-role="bar" data-entity-id="sub-saharan-africa" data-value="36.1" x="140" y="296.76" width="160" height="303.24" fill="#FFC845" data-animation-property="height" data-anchor="bottom" data-animation-axis="y"/>
+<rect id="sub-saharan-africa-value-box" data-role="value-box" data-entity-id="sub-saharan-africa" x="175" y="250.76" width="90" height="36" rx="18" fill="#4B1E8F"/>
+<text id="sub-saharan-africa-value-label" data-role="value-label" data-entity-id="sub-saharan-africa" x="220" y="275.26" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">36.1%</text>
+<text id="sub-saharan-africa-label" data-role="category-label" data-entity-id="sub-saharan-africa" x="220" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#FFC845">Sub-Saharan Africa</text>
+</g>
+<g id="entity-latin-america-caribbean" data-role="entity" data-entity-id="latin-america-caribbean" data-label="Latin America &amp; Caribbean">
+<rect id="latin-america-caribbean-bar" data-role="bar" data-entity-id="latin-america-caribbean" data-value="6.9" x="420" y="542.04" width="160" height="57.96" fill="#4ADE80" data-animation-property="height" data-anchor="bottom" data-animation-axis="y"/>
+<rect id="latin-america-caribbean-value-box" data-role="value-box" data-entity-id="latin-america-caribbean" x="455" y="496.04" width="90" height="36" rx="18" fill="#4B1E8F"/>
+<text id="latin-america-caribbean-value-label" data-role="value-label" data-entity-id="latin-america-caribbean" x="500" y="520.54" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">6.9%</text>
+<text id="latin-america-caribbean-label" data-role="category-label" data-entity-id="latin-america-caribbean" x="500" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#4ADE80">Latin America &amp; Caribbean</text>
+</g>
+<g id="entity-east-asia-pacific" data-role="entity" data-entity-id="east-asia-pacific" data-label="East Asia &amp; Pacific">
+<rect id="east-asia-pacific-bar" data-role="bar" data-entity-id="east-asia-pacific" data-value="5.1" x="700" y="557.16" width="160" height="42.84" fill="#4ECDC4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y"/>
+<rect id="east-asia-pacific-value-box" data-role="value-box" data-entity-id="east-asia-pacific" x="735" y="511.16" width="90" height="36" rx="18" fill="#4B1E8F"/>
+<text id="east-asia-pacific-value-label" data-role="value-label" data-entity-id="east-asia-pacific" x="780" y="535.66" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">5.1%</text>
+<text id="east-asia-pacific-label" data-role="category-label" data-entity-id="east-asia-pacific" x="780" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#4ECDC4">East Asia &amp; Pacific</text>
+</g>
+<g id="entity-european-union" data-role="entity" data-entity-id="european-union" data-label="European Union">
+<rect id="european-union-bar" data-role="bar" data-entity-id="european-union" data-value="1" x="980" y="591.6" width="160" height="8.4" fill="#54A0FF" data-animation-property="height" data-anchor="bottom" data-animation-axis="y"/>
+<rect id="european-union-value-box" data-role="value-box" data-entity-id="european-union" x="1015" y="545.6" width="90" height="36" rx="18" fill="#4B1E8F"/>
+<text id="european-union-value-label" data-role="value-label" data-entity-id="european-union" x="1060" y="570.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">1%</text>
+<text id="european-union-label" data-role="category-label" data-entity-id="european-union" x="1060" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#54A0FF">European Union</text>
+</g>
+</g>
+</svg>

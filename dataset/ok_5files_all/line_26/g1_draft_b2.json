@@ -1,0 +1,293 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_26",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the divergence between rising worker productivity and stagnant hourly wages in the United States after the mid-20th century.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "In the early part of the series, productivity and wages rise together and remain essentially identical through x=642.5, where both reach about 70%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "120",
+     "field": "value",
+     "value": -0.0047,
+     "note": "start value near zero"
+    },
+    {
+     "entity": "WAGES",
+     "x": "120",
+     "field": "value",
+     "value": -0.0047,
+     "note": "start value near zero, same as productivity"
+    },
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "642.5",
+     "field": "value",
+     "value": 69.9758,
+     "note": "end of identical early segment"
+    },
+    {
+     "entity": "WAGES",
+     "x": "642.5",
+     "field": "value",
+     "value": 69.9758,
+     "note": "same value as productivity at x=642.5"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Both productivity and wages climb together from near zero to about 70% through x=642.5.",
+    "The two series are essentially identical in the early portion of the chart.",
+    "Through the early period, wages keep pace with productivity and the two values match."
+   ],
+   "visual_evidence_rule": "The chart must show both named series and make clear that their values coincide through x=642.5 before separating.",
+   "temporal_anchor": "The productivity of American workers nearly doubled in the 30 years after World War II, and so did hourly wages.",
+   "reviewer_question": "Is the early co-movement of productivity and wages required, or can the video begin at or near the divergence point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The series diverge at x=670: productivity rises above wages for the first time in the main sequence.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "642.5",
+     "field": "value",
+     "value": 69.9758,
+     "note": "still equal to wages"
+    },
+    {
+     "entity": "WAGES",
+     "x": "642.5",
+     "field": "value",
+     "value": 69.9758,
+     "note": "still equal to productivity"
+    },
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "670",
+     "field": "value",
+     "value": 74.9977,
+     "note": "first main-sequence value above wages"
+    },
+    {
+     "entity": "WAGES",
+     "x": "670",
+     "field": "value",
+     "value": 71.9976,
+     "note": "first main-sequence value below productivity"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Productivity pulls ahead of wages at x=670, about 75.0% versus 72.0%.",
+    "After being equal at about 70%, productivity overtakes wages around x=670.",
+    "The point where the two series separate is x=670, with productivity slightly higher."
+   ],
+   "visual_evidence_rule": "The chart must show the two series separating and productivity moving above wages at or around x=670.",
+   "temporal_anchor": "This helped build the American middle class, but things didn't stay that way.",
+   "reviewer_question": "Is the exact divergence point x=670 required, or is it enough to show the gap opening later?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "After divergence, wages grow much more slowly than productivity: from x=670 to x=1220, wages rise by about 38.0 percentage points while productivity rises by about 150.0 percentage points.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "WAGES",
+     "x": "670",
+     "field": "value",
+     "value": 71.9976,
+     "note": "post-divergence start"
+    },
+    {
+     "entity": "WAGES",
+     "x": "1220",
+     "field": "value",
+     "value": 110.0205,
+     "note": "post-divergence end"
+    },
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "670",
+     "field": "value",
+     "value": 74.9977,
+     "note": "post-divergence start"
+    },
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "1220",
+     "field": "value",
+     "value": 225.0023,
+     "note": "post-divergence end"
+    }
+   ],
+   "computation": "formula: wage increase = 110.0205 - 71.9976 = 38.0229; productivity increase = 225.0023 - 74.9977 = 150.0046; ratio ≈ 150.0046 / 38.0229 ≈ 3.95",
+   "accepted_routes": [
+    "From the divergence point to the end, wages rise only about 38 points, while productivity rises about 150 points.",
+    "Post-divergence, productivity's increase is roughly four times wages' increase.",
+    "Wages flatten after x=670, adding about 38 percentage points while productivity adds about 150."
+   ],
+   "visual_evidence_rule": "The chart must show that after x=670 the wage series rises much less steeply than the productivity series.",
+   "temporal_anchor": "Productivity kept rising, but wages flatlined.",
+   "reviewer_question": "Must the video quantify the post-divergence wage increase as about 38 points, or is a qualitative 'wages flatlined' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At the final point x=1220, productivity reaches about 225.0% and wages reach about 110.0%.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "1220",
+     "field": "value",
+     "value": 225.0023,
+     "note": "final productivity value"
+    },
+    {
+     "entity": "WAGES",
+     "x": "1220",
+     "field": "value",
+     "value": 110.0205,
+     "note": "final wages value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "By the final point, productivity stands at about 225%, while wages stand at about 110%.",
+    "Ending values: productivity ≈ 225%, wages ≈ 110%.",
+    "At the end of the series, productivity is about 225% and wages about 110%."
+   ],
+   "visual_evidence_rule": "The chart must show the final endpoint values for both productivity and wages.",
+   "temporal_anchor": "Productivity kept rising, but wages flatlined.",
+   "reviewer_question": "Are the final endpoint values required, or can the video show only the widening gap?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By the final point, productivity is roughly twice the wage level and about 115 percentage points higher than wages.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "PRODUCTIVITY",
+     "x": "1220",
+     "field": "value",
+     "value": 225.0023,
+     "note": "final productivity value"
+    },
+    {
+     "entity": "WAGES",
+     "x": "1220",
+     "field": "value",
+     "value": 110.0205,
+     "note": "final wages value"
+    }
+   ],
+   "computation": "formula: ratio = 225.0023 / 110.0205 ≈ 2.05; gap = 225.0023 - 110.0205 = 114.9818",
+   "accepted_routes": [
+    "Productivity ends at about twice the wage level.",
+    "The final gap between productivity and wages is about 115 percentage points.",
+    "By the end, productivity is roughly double wages."
+   ],
+   "visual_evidence_rule": "The chart must make the final vertical gap and ratio between productivity and wages apparent.",
+   "temporal_anchor": "Productivity kept rising, but wages flatlined.",
+   "reviewer_question": "Is the final ratio/gap required, or is showing two diverging series sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Both series start at nearly 0% (values of -0.0047).",
+  "Over the full x range, productivity rises from near 0% to about 225%, while wages rise from near 0% to about 110%.",
+  "The wage series grows slowly after x=670 rather than being literally flat at zero."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that a new political and economic philosophy caused the divergence.",
+  "Claims about the American middle class growing or declining as a consequence.",
+  "Exact years or decades (e.g., 1970s, 1980s) unless they are explicitly provided by the table.",
+  "Dollar amounts for wages or productivity.",
+  "Claims that wages did not rise at all after divergence, since the table shows wages rising from 71.9976 to 110.0205.",
+  "Extrapolating the series beyond x=1220."
+ ],
+ "notes": "The table's value column uses % as the unit, so percentages are stated directly. The key required story is early co-movement, divergence at x=670, post-divergence wage stagnation, and the final endpoint gap.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 33.8,
+  "usage": {
+   "prompt_tokens": 5303,
+   "completion_tokens": 7877,
+   "total_tokens": 13180,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5711
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 4663
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

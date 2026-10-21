@@ -1,0 +1,300 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_60",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate Dubai's leading position in international visitor spending compared to other major global cities.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Dubai has the highest international visitor spending value among all seven listed cities.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "highest value in the table"
+    },
+    {
+     "entity": "London",
+     "x": "value",
+     "field": "value",
+     "value": 0.628,
+     "note": "next-highest competitor value"
+    },
+    {
+     "entity": "Tokyo",
+     "x": "value",
+     "field": "value",
+     "value": 0.39,
+     "note": "lowest listed value, below Dubai"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Dubai ranks first in visitor spending among these cities.",
+    "Dubai tops the chart with a spending value of 1.000.",
+    "Dubai has the highest bar, ahead of London at 0.628 and New York at 0.581."
+   ],
+   "visual_evidence_rule": "Dubai's bar must be visibly tallest or ranked first and labeled with 1.000.",
+   "temporal_anchor": "the clause 'who spend more than any other city in the world'",
+   "reviewer_question": "Must the video explicitly state Dubai is first, rather than only showing a tall bar?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The full descending ranking is Dubai, London, New York, Singapore, Bangkok, Paris, Tokyo.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "rank 1"
+    },
+    {
+     "entity": "London",
+     "x": "value",
+     "field": "value",
+     "value": 0.628,
+     "note": "rank 2"
+    },
+    {
+     "entity": "New York",
+     "x": "value",
+     "field": "value",
+     "value": 0.581,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Singapore",
+     "x": "value",
+     "field": "value",
+     "value": 0.549,
+     "note": "rank 4"
+    },
+    {
+     "entity": "Bangkok",
+     "x": "value",
+     "field": "value",
+     "value": 0.502,
+     "note": "rank 5"
+    },
+    {
+     "entity": "Paris",
+     "x": "value",
+     "field": "value",
+     "value": 0.437,
+     "note": "rank 6"
+    },
+    {
+     "entity": "Tokyo",
+     "x": "value",
+     "field": "value",
+     "value": 0.39,
+     "note": "rank 7"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Dubai is first, followed by London, New York, Singapore, Bangkok, Paris, and Tokyo.",
+    "The bars are ordered from Dubai down to Tokyo.",
+    "Top three are Dubai, London, New York, with Tokyo last."
+   ],
+   "visual_evidence_rule": "Bars must be sorted or labeled in the descending order shown in the table.",
+   "temporal_anchor": "the overall bar-chart comparison sequence after 'spend more than any other city'",
+   "reviewer_question": "Must the video preserve the full seven-city order, or is Dubai-first plus the New York/London comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Dubai's spending value is about 59% higher than London's.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "used as numerator baseline"
+    },
+    {
+     "entity": "London",
+     "x": "value",
+     "field": "value",
+     "value": 0.628,
+     "note": "used as comparison baseline"
+    }
+   ],
+   "computation": "(1.000 - 0.628) / 0.628 = 0.5924, i.e. about 59.2% higher",
+   "accepted_routes": [
+    "Dubai is about 59% higher than London.",
+    "London is about 62.8% of Dubai's value.",
+    "Dubai is roughly 1.59 times London's value."
+   ],
+   "visual_evidence_rule": "A visible annotation or callout linking Dubai and London bars with the 59% gap.",
+   "temporal_anchor": "the New York/London comparison clause, if split to London only",
+   "reviewer_question": "Is a separate London-only percentage required, or is the combined London/New York 65% average enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Dubai's spending value is about 72% higher than New York's.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "used as numerator baseline"
+    },
+    {
+     "entity": "New York",
+     "x": "value",
+     "field": "value",
+     "value": 0.581,
+     "note": "used as comparison baseline"
+    }
+   ],
+   "computation": "(1.000 - 0.581) / 0.581 = 0.7212, i.e. about 72.1% higher",
+   "accepted_routes": [
+    "Dubai is about 72% higher than New York.",
+    "New York is about 58.1% of Dubai's value.",
+    "Dubai is roughly 1.72 times New York's value."
+   ],
+   "visual_evidence_rule": "A visible annotation or callout linking Dubai and New York bars with the 72% gap.",
+   "temporal_anchor": "the New York/London comparison clause, if split to New York only",
+   "reviewer_question": "Is a separate New York-only percentage required, or is the combined London/New York 65% average enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Dubai's spending value is about 65% higher than the average of London and New York.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "used as numerator baseline"
+    },
+    {
+     "entity": "London",
+     "x": "value",
+     "field": "value",
+     "value": 0.628,
+     "note": "used in London/New York average"
+    },
+    {
+     "entity": "New York",
+     "x": "value",
+     "field": "value",
+     "value": 0.581,
+     "note": "used in London/New York average"
+    }
+   ],
+   "computation": "London/New York average = (0.628 + 0.581) / 2 = 0.6045; (1.000 - 0.6045) / 0.6045 = 0.6543, i.e. about 65.4% higher",
+   "accepted_routes": [
+    "Dubai is about 65% above the London/New York average.",
+    "Dubai is roughly 1.65 times the average of London and New York.",
+    "Dubai's value exceeds the London-New York benchmark by about 65%."
+   ],
+   "visual_evidence_rule": "A visible London/New York average benchmark or annotation showing Dubai is about 65% above it.",
+   "temporal_anchor": "the clause '65 % more even than New York or London'",
+   "reviewer_question": "Should the 65% premium be interpreted as versus the London/New York average, or as two separate comparisons against London and New York?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Dubai also has the highest relative_value at 0.7416.",
+  "Tokyo is the lowest-ranked city at value 0.390.",
+  "London is about 8.1% above New York: (0.628 - 0.581) / 0.581 = 0.0809.",
+  "Singapore, Bangkok, and Paris occupy ranks 4, 5, and 6 respectively."
+ ],
+ "unsupported_to_avoid": [
+  "14 million international visitors per year, because it is not in the table.",
+  "Absolute spending amounts or currency units, because the table unit field is blank.",
+  "Claiming Dubai is exactly 65% higher than New York alone or London alone; the table gives about 72.1% vs New York and about 59.2% vs London.",
+  "Causal claims such as marketing genius causing the spending lead.",
+  "Interpreting relative_value 0.7416 as a 74.16% share of all city spending."
+ ],
+ "notes": "Values are treated as spending index because the table unit is blank. The 65% figure is an arithmetic combination of London and New York values, not a direct table cell.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 46.4,
+  "usage": {
+   "prompt_tokens": 919,
+   "completion_tokens": 11115,
+   "total_tokens": 12034,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9047
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 535
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

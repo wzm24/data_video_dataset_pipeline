@@ -1,0 +1,156 @@
+{
+ "clip_id": "line_99",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both table entities must be represented and tied to their time records; no third entity should be introduced."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:dashed curve @ 1979-80",
+    "mark:dashed curve @ 1985-86",
+    "mark:dashed curve @ 1991-92",
+    "mark:dashed curve @ 1997-98",
+    "mark:dashed curve @ 2003-04",
+    "mark:dashed curve @ 2009-10",
+    "mark:dashed curve @ 2015-16"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "dashed curve @ 1979-80",
+      "value": 0.0004
+     },
+     {
+      "mark": "dashed curve @ 1985-86",
+      "value": 0.1332
+     },
+     {
+      "mark": "dashed curve @ 1991-92",
+      "value": 0.4007
+     },
+     {
+      "mark": "dashed curve @ 1997-98",
+      "value": 0.7328
+     },
+     {
+      "mark": "dashed curve @ 2003-04",
+      "value": 0.7734
+     },
+     {
+      "mark": "dashed curve @ 2009-10",
+      "value": 0.8264
+     },
+     {
+      "mark": "dashed curve @ 2015-16",
+      "value": 0.96
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The dashed series must be shown as increasing across the listed periods, not flat, falling, or only shown as a single maximum."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:solid curve @ 1985-86",
+    "mark:solid curve @ 2015-16"
+   ],
+   "assertion": {
+    "low": "solid curve @ 1985-86",
+    "low_value": 0.2,
+    "high": "solid curve @ 2015-16",
+    "high_value": 1.0,
+    "delta": 0.8,
+    "ratio": 5.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The solid series must be shown as rising substantially from the 1985-86 minimum to the 2015-16 maximum."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:solid curve @ 2015-16"
+   ],
+   "assertion": {
+    "mark": "solid curve @ 2015-16",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final 2015-16 values for both series must be visible and ordered correctly: solid 1.0000, dashed 0.9600."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:dashed curve @ 1985-86",
+    "mark:solid curve @ 1985-86"
+   ],
+   "assertion": {
+    "greater": "dashed curve @ 1985-86",
+    "lesser": "solid curve @ 1985-86",
+    "expected_ratio": 2.0035,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative ordering of the two series must be shown changing from dashed > solid in 1985-86 to solid > dashed by 1997-98 and at the 2015-16 endpoint."
+  }
+ ]
+}

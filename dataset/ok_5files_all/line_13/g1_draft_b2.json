@@ -1,0 +1,243 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_13",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the trend of deaths over time, supporting the assertion that safety measures like helmets save lives and introducing a health-focused perspective.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The first Deaths relative series declines overall from 0.75 at its first observed point to 0.64 at its final observed point, a net decrease of 0.11 on the relative scale.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Deaths (line-1)",
+     "x": "x_px=120",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "first observed point of the line-1 Deaths series"
+    },
+    {
+     "entity": "Deaths (line-1)",
+     "x": "x_px=560",
+     "field": "relative_value",
+     "value": 0.64,
+     "note": "final observed point of the line-1 Deaths series"
+    }
+   ],
+   "computation": "0.75 - 0.64 = 0.11 relative-value points",
+   "accepted_routes": [
+    "The first Deaths series falls overall, from a relative level of 0.75 at the start to 0.64 at its end.",
+    "Early observed values decline from 0.75 to 0.64 across the line-1 series.",
+    "Line-1 drops by 0.11 relative-value points from its first to last recorded point."
+   ],
+   "visual_evidence_rule": "A visible series trace for the first Deaths series must start near 0.75 and end near 0.64, with an overall downward displacement.",
+   "temporal_anchor": "So it's pretty clear, helmets can save lives",
+   "reviewer_question": "Must the video show the first series’ net decline from 0.75 to 0.64, or can it focus only on the second series?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The second Deaths relative series declines overall from 0.64 at its first observed point to 0.40 at its lowest observed point, a net decrease of 0.24 on the relative scale.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Deaths (line-2)",
+     "x": "x_px=560",
+     "field": "relative_value",
+     "value": 0.64,
+     "note": "first observed point of the line-2 Deaths series"
+    },
+    {
+     "entity": "Deaths (line-2)",
+     "x": "x_px=1110",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "lowest observed point of the line-2 Deaths series"
+    }
+   ],
+   "computation": "0.64 - 0.40 = 0.24 relative-value points",
+   "accepted_routes": [
+    "The second Deaths series declines overall, from 0.64 at its start to 0.40 at its lowest.",
+    "Line-2 moves downward from 0.64 to a minimum of 0.40.",
+    "The later series falls by 0.24 relative-value points between its initial and lowest observed points."
+   ],
+   "visual_evidence_rule": "A visible series trace for the second Deaths series must start near 0.64 and descend to the 0.40 minimum.",
+   "temporal_anchor": "So it's pretty clear, helmets can save lives",
+   "reviewer_question": "Must the video show the second series’ decline from 0.64 to its 0.40 minimum?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The second Deaths relative series reaches its lowest observed value of 0.40, which is below its starting value 0.64 and its final value 0.45.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Deaths (line-2)",
+     "x": "x_px=1110",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "minimum relative_value for line-2"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The lowest relative value in the table is 0.40, occurring in the second Deaths series.",
+    "Line-2 reaches its minimum at 0.40.",
+    "The second series bottoms out at 0.40."
+   ],
+   "visual_evidence_rule": "The lowest point of the second series must be identifiable at 0.40.",
+   "temporal_anchor": "So it's pretty clear, helmets can save lives",
+   "reviewer_question": "Is the exact minimum value 0.40 required, or is a general downward trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After reaching 0.40, the second Deaths relative series rebounds to 0.45 at the final observed point, an increase of 0.05 on the relative scale.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Deaths (line-2)",
+     "x": "x_px=1110",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "minimum before rebound"
+    },
+    {
+     "entity": "Deaths (line-2)",
+     "x": "x_px=1220",
+     "field": "relative_value",
+     "value": 0.45,
+     "note": "final observed point of line-2"
+    }
+   ],
+   "computation": "0.45 - 0.40 = 0.05 relative-value points",
+   "accepted_routes": [
+    "After its minimum, line-2 rises to 0.45 by the final point.",
+    "The second Deaths series rebounds from 0.40 to 0.45.",
+    "Line-2 increases by 0.05 relative-value points after the low point."
+   ],
+   "visual_evidence_rule": "After the 0.40 point, the same series trace must rise to 0.45 by the final point.",
+   "temporal_anchor": "So it's pretty clear, helmets can save lives",
+   "reviewer_question": "Must the video show the post-minimum rebound to 0.45, or is the decline alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At the shared transition point, the first and second Deaths relative series have the same value, 0.64.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Deaths (line-1)",
+     "x": "x_px=560",
+     "field": "relative_value",
+     "value": 0.64,
+     "note": "final point of line-1"
+    },
+    {
+     "entity": "Deaths (line-2)",
+     "x": "x_px=560",
+     "field": "relative_value",
+     "value": 0.64,
+     "note": "first point of line-2"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At the shared transition point, both Deaths series have the same relative value, 0.64.",
+    "Line-1 and line-2 meet at 0.64 at the shared point.",
+    "The two series are equal at the transition point, both at 0.64."
+   ],
+   "visual_evidence_rule": "At the shared x-point, both series traces must sit at the same relative level 0.64.",
+   "temporal_anchor": "So it's pretty clear, helmets can save lives",
+   "reviewer_question": "Should the shared point where both series equal 0.64 be explicitly shown, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The first Deaths series has a peak relative value of 0.75 at x_px=120, which is the highest value in the table.",
+  "The first Deaths series shows a local rise from 0.68 at x_px=230 to 0.71 at x_px=340."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute death counts, percentages, rates, dollars, or any non-relative quantity.",
+  "Claiming that helmets caused the relative decline or rebound shown in the series.",
+  "Assuming line-1 and line-2 correspond to specific interventions, policies, or before/after helmet use.",
+  "Extrapolating beyond x_px=120 or x_px=1220.",
+  "Treating the relative_value as a share of total deaths without a denominator.",
+  "Using colors, axis ticks, chart layout, or pixel positions as the semantic content itself."
+ ],
+ "notes": "All units are relative-only because the table lacks absolute value. The main review trade-off is whether the video must include both Deaths series and the post-minimum rebound, or whether showing the downward trend alone suffices.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 38.0,
+  "usage": {
+   "prompt_tokens": 2208,
+   "completion_tokens": 9381,
+   "total_tokens": 11589,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7328
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 1824
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

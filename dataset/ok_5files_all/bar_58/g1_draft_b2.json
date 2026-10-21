@@ -1,0 +1,270 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_58",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that eyewitness misinterpretation is the leading cause of wrongful convictions.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Eyewitness misinterpretation is the leading/highest cause in the chart, with value 72 (relative_value 0.72, i.e. 72%).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Eyewitness misinterpretation",
+     "x": "Eyewitness misinterpretation",
+     "field": "value",
+     "value": 72.0,
+     "note": "Table value is 72.000; relative_value is 0.7200."
+    }
+   ],
+   "computation": "0.7200 × 100 = 72%",
+   "accepted_routes": [
+    "Eyewitness misinterpretation is the leading cause at 72%.",
+    "72% of the cited exonerations involve inaccurate eyewitness testimony.",
+    "The eyewitness bar is highest, at about 72%."
+   ],
+   "visual_evidence_rule": "The eyewitness-misinterpretation bar must be visibly the tallest and must be labeled or annotated with 72% or 72.",
+   "temporal_anchor": "The main evidence clause about inaccurate eyewitness testimony.",
+   "reviewer_question": "Must the video state the exact top value 72%, or is 'leading cause' alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Eyewitness misinterpretation is greater than every other listed cause: 72 vs improper forensics 47, false confessions 27, and informant 15.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Eyewitness misinterpretation",
+     "x": "Eyewitness misinterpretation",
+     "field": "value",
+     "value": 72.0,
+     "note": "Top value."
+    },
+    {
+     "entity": "Improper forensics",
+     "x": "Improper forensics",
+     "field": "value",
+     "value": 47.0,
+     "note": "Lower than eyewitness."
+    },
+    {
+     "entity": "False confessions",
+     "x": "False confessions",
+     "field": "value",
+     "value": 27.0,
+     "note": "Lower than eyewitness."
+    },
+    {
+     "entity": "Informant",
+     "x": "Informant",
+     "field": "value",
+     "value": 15.0,
+     "note": "Lower than eyewitness."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Eyewitness misinterpretation tops all other listed causes.",
+    "72 is higher than 47, 27, and 15.",
+    "No other listed cause reaches the eyewitness misinterpretation level."
+   ],
+   "visual_evidence_rule": "The eyewitness bar must be shown alongside the other three bars at lower heights, with values or labels visible enough to compare.",
+   "temporal_anchor": "The main evidence clause about eyewitness testimony being involved.",
+   "reviewer_question": "Is it enough to compare eyewitness to all other causes, or must the runner-up gap also be explicit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The full descending order is eyewitness misinterpretation 72, improper forensics 47, false confessions 27, informant 15.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Eyewitness misinterpretation",
+     "x": "Eyewitness misinterpretation",
+     "field": "value",
+     "value": 72.0,
+     "note": "Rank 1."
+    },
+    {
+     "entity": "Improper forensics",
+     "x": "Improper forensics",
+     "field": "value",
+     "value": 47.0,
+     "note": "Rank 2."
+    },
+    {
+     "entity": "False confessions",
+     "x": "False confessions",
+     "field": "value",
+     "value": 27.0,
+     "note": "Rank 3."
+    },
+    {
+     "entity": "Informant",
+     "x": "Informant",
+     "field": "value",
+     "value": 15.0,
+     "note": "Rank 4."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The bars descend from 72 to 47 to 27 to 15.",
+    "Eyewitness leads, then improper forensics, then false confessions, then informant.",
+    "Improper forensics is second at 47, followed by false confessions at 27 and informant at 15."
+   ],
+   "visual_evidence_rule": "All four bars must appear in the correct order or be visibly sortable as eyewitness > improper forensics > false confessions > informant.",
+   "temporal_anchor": "The visual reveal of the full bar series after the opening claim.",
+   "reviewer_question": "Should the video show the complete ranking, or is the leading-cause comparison alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Eyewitness misinterpretation exceeds the second-ranked cause, improper forensics, by 25 percentage points: 72 − 47 = 25.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Eyewitness misinterpretation",
+     "x": "Eyewitness misinterpretation",
+     "field": "value",
+     "value": 72.0,
+     "note": "Top value."
+    },
+    {
+     "entity": "Improper forensics",
+     "x": "Improper forensics",
+     "field": "value",
+     "value": 47.0,
+     "note": "Second value."
+    }
+   ],
+   "computation": "72 − 47 = 25",
+   "accepted_routes": [
+    "Eyewitness misinterpretation leads improper forensics by 25 points.",
+    "72 versus 47 is a 25-percentage-point gap.",
+    "The runner-up, improper forensics, is 25 points lower."
+   ],
+   "visual_evidence_rule": "The top two bars must be visible with their values 72 and 47, plus a gap annotation or label showing 25.",
+   "temporal_anchor": "The comparison beat immediately after the top two bars are introduced.",
+   "reviewer_question": "Is the 25-point lead over the runner-up required, or is it optional enrichment?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Eyewitness misinterpretation is more than twice false confessions: 72 / 27 ≈ 2.7 times.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Eyewitness misinterpretation",
+     "x": "Eyewitness misinterpretation",
+     "field": "value",
+     "value": 72.0,
+     "note": "Top value."
+    },
+    {
+     "entity": "False confessions",
+     "x": "False confessions",
+     "field": "value",
+     "value": 27.0,
+     "note": "Third value."
+    }
+   ],
+   "computation": "72 / 27 = 2.666..., rounded to about 2.7",
+   "accepted_routes": [
+    "Eyewitness misinterpretation is about 2.7 times false confessions.",
+    "72 is more than double 27.",
+    "False confessions is less than half the eyewitness level."
+   ],
+   "visual_evidence_rule": "The eyewitness bar 72 and false-confessions bar 27 must be visible, with an annotation or scale indicating a greater-than-twofold difference.",
+   "temporal_anchor": "An optional comparison beat after the main ranking is established.",
+   "reviewer_question": "Does an extra magnitude comparison beyond the top ranking add value, or is it distracting?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Improper forensics is the runner-up at 47%.",
+  "False confessions is 27% and informant is 15%.",
+  "Eyewitness misinterpretation is 4.8 times informant: 72 / 15 = 4.8."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim the four listed values sum to 100% or build a pie chart; 72 + 47 + 27 + 15 = 161, and causes may overlap.",
+  "Do not say eyewitness misinterpretation causes 72% of all wrongful convictions; the table/narration context is DNA exonerations and involvement, not sole causation.",
+  "Do not claim 72% of cases are solely due to eyewitness error.",
+  "Do not introduce external thresholds or denominators that are not present in the table."
+ ],
+ "notes": "Values are treated as percentages because value/relative_value pairs are 72/0.72, 47/0.47, 27/0.27, and 15/0.15. The minimal required claim is that eyewitness misinterpretation is the highest listed cause; full ranking and extra magnitude comparisons are optional enrichments.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 46.1,
+  "usage": {
+   "prompt_tokens": 725,
+   "completion_tokens": 10181,
+   "total_tokens": 10906,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8118
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 469
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_8",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the dramatic growth of the global population, reaching record levels by 2014.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "By 2014, world population reached 8.00 billion, the highest/record value in the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "world population",
+     "x": "2014",
+     "field": "value",
+     "value": 8.0,
+     "note": "Final year in table; also max value because 2010-2014 all equal 8.00B."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "By 2014, world population was 8.00 billion, the highest in the dataset.",
+    "The 2014 population reached 8 billion, a record level in this series.",
+    "The final chart value is 8.00B in 2014, the all-time high shown."
+   ],
+   "visual_evidence_rule": "The final point/area at 2014 must align with 8.00B on the y-axis, and the chart must make clear this is the top/record level.",
+   "temporal_anchor": "The 'global population is at an all-time high' clause.",
+   "reviewer_question": "Must the video explicitly mark 2014 as the record/endpoint value of 8.00B?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "World population grew dramatically from 1.02 billion in 1800 to 8.00 billion in 2014, an increase of 6.98 billion, or about 7.8 times.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "world population",
+     "x": "1800",
+     "field": "value",
+     "value": 1.02,
+     "note": "Starting value for the series."
+    },
+    {
+     "entity": "world population",
+     "x": "2014",
+     "field": "value",
+     "value": 8.0,
+     "note": "Ending value for the series."
+    }
+   ],
+   "computation": "(8.00 - 1.02) = 6.98B increase; 8.00 / 1.02 = 7.84x; (6.98 / 1.02) * 100 = 684% increase.",
+   "accepted_routes": [
+    "World population rose from 1.02B in 1800 to 8.00B in 2014, an increase of 6.98B.",
+    "It grew almost eightfold over the period, adding about 7 billion people.",
+    "From 1800 to 2014, population increased by roughly 684%, or 7.8x."
+   ],
+   "visual_evidence_rule": "Both the 1800 start value (1.02B) and the 2014 endpoint (8.00B) must be visible or directly labeled, with the connecting growth/area making the change apparent.",
+   "temporal_anchor": "The 'global population' clause; if narration expands, this should lead into the 'at an all-time high' statement.",
+   "reviewer_question": "Must the video quantify the full 1800-to-2014 growth, or is showing the endpoint alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The world population trend is upward over 1800-2014; the table values never decrease from year to year.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "world population",
+     "x": "1800",
+     "field": "value",
+     "value": 1.02,
+     "note": "Series start."
+    },
+    {
+     "entity": "world population",
+     "x": "2014",
+     "field": "value",
+     "value": 8.0,
+     "note": "Series end; higher than all prior values."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "World population increases over time from 1800 to 2014.",
+    "The population line trends upward throughout the period.",
+    "The annual series is non-decreasing and ends much higher than it begins."
+   ],
+   "visual_evidence_rule": "The animated line/area must rise from left to right across the 1800-2014 x-axis, not show a decline.",
+   "temporal_anchor": "The 'global population' clause.",
+   "reviewer_question": "Must the animation visibly establish an upward trend, or is the start-to-end change enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "World population first reached 8.00 billion in 2010 and stayed at 8.00 billion through 2014.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "world population",
+     "x": "2009",
+     "field": "value",
+     "value": 7.93,
+     "note": "Last value below 8.00B."
+    },
+    {
+     "entity": "world population",
+     "x": "2010",
+     "field": "value",
+     "value": 8.0,
+     "note": "First value at 8.00B."
+    },
+    {
+     "entity": "world population",
+     "x": "2014",
+     "field": "value",
+     "value": 8.0,
+     "note": "Still 8.00B at the endpoint."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Population first hit 8 billion in 2010 and remained at 8.00B through 2014.",
+    "The 8B threshold is reached by 2010 and held to 2014.",
+    "World population crossed the 8B mark between 2009 and 2010."
+   ],
+   "visual_evidence_rule": "An 8B gridline or callout should show the crossing at 2010 and the flat 8.00B level through 2014.",
+   "temporal_anchor": "The 'at an all-time high' clause, if the video specifies when the high was first reached.",
+   "reviewer_question": "Should the video mark the first 8B crossing in 2010, or only the 2014 record endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Most of the population growth was recent: the 1900-2014 increase was 6.10 billion, compared with 0.88 billion from 1800 to 1900, about 6.9 times larger.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "world population",
+     "x": "1800",
+     "field": "value",
+     "value": 1.02,
+     "note": "Baseline."
+    },
+    {
+     "entity": "world population",
+     "x": "1900",
+     "field": "value",
+     "value": 1.9,
+     "note": "Midpoint for century comparison."
+    },
+    {
+     "entity": "world population",
+     "x": "2014",
+     "field": "value",
+     "value": 8.0,
+     "note": "Endpoint."
+    }
+   ],
+   "computation": "1800-1900: 1.90 - 1.02 = 0.88B; 1900-2014: 8.00 - 1.90 = 6.10B; 6.10 / 0.88 = 6.93x.",
+   "accepted_routes": [
+    "From 1900 to 2014, population rose by 6.10B, versus only 0.88B from 1800 to 1900.",
+    "Recent growth dominates: the post-1900 increase was about 7 times the 19th-century increase.",
+    "Most of the total increase came after 1900, adding 6.1B compared with 0.9B before."
+   ],
+   "visual_evidence_rule": "The chart or annotation must distinguish the 1800-1900 segment from the 1900-2014 segment, or label the two increases.",
+   "temporal_anchor": "The 'dramatic growth' or 'global population' clause.",
+   "reviewer_question": "Should the video quantify the acceleration by comparing 1800-1900 with 1900-2014?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "World population more than quadrupled from 1900 (1.90B) to 2014 (8.00B): 8.00 / 1.90 = 4.21x.",
+  "Population first passed 6 billion between 1986 (5.90B) and 1987 (6.03B).",
+  "Population first passed 7 billion between 1998 (6.98B) and 1999 (7.12B)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that war going out of fashion caused population growth.",
+  "Claims about years before 1800 or after 2014.",
+  "Treating relative_value as a share, percentage, or absolute population size.",
+  "Saying population first hit 8 billion only in 2014; the table shows 8.00B from 2010 through 2014.",
+  "Saying population doubled from 1800 to 2014; the table implies about a 7.8x rise."
+ ],
+ "notes": "The core G1 should include the 1800-to-2014 growth and the 2014 record value; the first 8B crossing and century acceleration are valid optional refinements. All cited numbers are table cells or simple differences/ratios.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 43.7,
+  "usage": {
+   "prompt_tokens": 6598,
+   "completion_tokens": 9998,
+   "total_tokens": 16596,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7768
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 6342
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

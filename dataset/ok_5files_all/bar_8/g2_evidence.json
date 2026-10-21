@@ -1,0 +1,129 @@
+{
+ "clip_id": "bar_8",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:School fees @ 520.0"
+   ],
+   "assertion": {
+    "mark": "School fees @ 520.0",
+    "field": "value",
+    "expected": 16000.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled School fees bar or marker with value 16,000 must be visible."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Average income @ 760.0"
+   ],
+   "assertion": {
+    "mark": "Average income @ 760.0",
+    "field": "value",
+    "expected": 28400.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A labeled Average income bar or marker with value 28,400 must be visible if the share or comparison is shown."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:School fees @ 520.0",
+    "segment:Average income @ 760.0"
+   ],
+   "assertion": {
+    "segment": "School fees @ 520.0",
+    "expected_share": 0.3604,
+    "total_of": "unknown",
+    "total": 44400.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A percentage annotation, ratio label, or fill showing School fees against Average income must be visible; it must use 56.3% or rounded 56%, not 50%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:School fees @ 520.0",
+    "mark:Average income @ 760.0"
+   ],
+   "assertion": {
+    "series": "School fees",
+    "values": [
+     16000.0,
+     28400.0
+    ],
+    "threshold_between": [
+     16000.0,
+     28400.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 50% reference line or explicit >50% annotation must be visible and exceeded by the fee share."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Average income @ 760.0",
+    "mark:School fees @ 520.0"
+   ],
+   "assertion": {
+    "greater": "Average income @ 760.0",
+    "lesser": "School fees @ 520.0",
+    "expected_ratio": 1.775,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Side-by-side bars or a ratio label comparing Average income to School fees must be visible."
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#333333"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Productivity and wage growth</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">0</text>
+<line data-role="tick" x1="112" y1="523.3" x2="120" y2="523.3" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="529.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">50%</text>
+<line data-role="tick" x1="112" y1="446.7" x2="120" y2="446.7" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="452.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">100%</text>
+<line data-role="tick" x1="112" y1="370.0" x2="120" y2="370.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="376.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">150%</text>
+<line data-role="tick" x1="112" y1="293.3" x2="120" y2="293.3" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="299.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">200%</text>
+<line data-role="tick" x1="112" y1="216.7" x2="120" y2="216.7" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="222.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">250%</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#ffffff" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">300%</text>
+<g id="entity-productivity" data-role="entity" data-entity-id="productivity" data-label="PRODUCTIVITY" data-series="true">
+<path id="productivity-path" data-role="line" data-entity-id="productivity" d="M 120.0 600.0 C 124.6 599.4, 138.3 597.4, 147.5 596.2 C 156.7 594.9, 165.8 593.6, 175.0 592.3 C 184.2 591.1, 193.3 589.8, 202.5 588.5 C 211.7 587.2, 220.8 585.9, 230.0 584.7 C 239.2 583.4, 248.3 582.1, 257.5 580.8 C 266.7 579.6, 275.8 578.4, 285.0 577.0 C 294.2 575.6, 303.3 573.9, 312.5 572.4 C 321.7 570.9, 330.8 569.3, 340.0 567.8 C 349.2 566.3, 358.3 565.0, 367.5 563.2 C 376.7 561.4, 385.8 559.1, 395.0 557.1 C 404.2 555.0, 413.3 553.0, 422.5 550.9 C 431.7 548.9, 440.8 546.8, 450.0 544.8 C 459.2 542.8, 468.3 541.0, 477.5 538.7 C 486.7 536.4, 495.8 533.6, 505.0 531.0 C 514.2 528.4, 523.3 525.9, 532.5 523.3 C 541.7 520.8, 550.8 518.2, 560.0 515.7 C 569.2 513.1, 578.3 510.6, 587.5 508.0 C 596.7 505.4, 605.8 502.9, 615.0 500.3 C 624.2 497.8, 633.3 495.2, 642.5 492.7 C 651.7 490.1, 660.8 487.6, 670.0 485.0 C 679.2 482.4, 688.3 479.9, 697.5 477.3 C 706.7 474.8, 715.8 472.2, 725.0 469.7 C 734.2 467.1, 743.3 464.6, 752.5 462.0 C 761.7 459.4, 770.8 456.9, 780.0 454.3 C 789.2 451.8, 798.3 449.2, 807.5 446.7 C 816.7 444.1, 825.8 441.6, 835.0 439.0 C 844.2 436.4, 853.3 433.9, 862.5 431.3 C 871.7 428.8, 880.8 426.2, 890.0 423.7 C 899.2 421.1, 908.3 419.3, 917.5 416.0 C 926.7 412.7, 935.8 407.6, 945.0 403.7 C 954.2 399.9, 963.3 397.3, 972.5 393.0 C 981.7 388.7, 990.8 382.8, 1000.0 377.7 C 1009.2 372.6, 1018.3 367.4, 1027.5 362.3 C 1036.7 357.2, 1045.8 352.1, 1055.0 347.0 C 1064.2 341.9, 1073.3 336.8, 1082.5 331.7 C 1091.7 326.6, 1100.8 321.4, 1110.0 316.3 C 1119.2 311.2, 1128.3 306.1, 1137.5 301.0 C 1146.7 295.9, 1155.8 290.8, 1165.0 285.7 C 1174.2 280.6, 1183.3 275.4, 1192.5 270.3 C 1201.7 265.2, 1215.4 257.6, 1220.0 255.0" fill="none" stroke="#7296c2" stroke-width="3"/>
+</g>
+<g id="entity-wages" data-role="entity" data-entity-id="wages" data-label="WAGES" data-series="true">
+<path id="wages-path" data-role="line" data-entity-id="wages" d="M 120.0 600.0 C 124.6 599.4, 138.3 597.4, 147.5 596.2 C 156.7 594.9, 165.8 593.6, 175.0 592.3 C 184.2 591.1, 193.3 589.8, 202.5 588.5 C 211.7 587.2, 220.8 585.9, 230.0 584.7 C 239.2 583.4, 248.3 582.1, 257.5 580.8 C 266.7 579.6, 275.8 578.4, 285.0 577.0 C 294.2 575.6, 303.3 573.9, 312.5 572.4 C 321.7 570.9, 330.8 569.3, 340.0 567.8 C 349.2 566.3, 358.3 565.0, 367.5 563.2 C 376.7 561.4, 385.8 559.1, 395.0 557.1 C 404.2 555.0, 413.3 553.0, 422.5 550.9 C 431.7 548.9, 440.8 546.8, 450.0 544.8 C 459.2 542.8, 468.3 541.0, 477.5 538.7 C 486.7 536.4, 495.8 533.6, 505.0 531.0 C 514.2 528.4, 523.3 525.9, 532.5 523.3 C 541.7 520.8, 550.8 518.2, 560.0 515.7 C 569.2 513.1, 578.3 510.6, 587.5 508.0 C 596.7 505.4, 605.8 502.9, 615.0 500.3 C 624.2 497.8, 633.3 494.5, 642.5 492.7 C 651.7 490.9, 660.8 490.6, 670.0 489.6 C 679.2 488.6, 688.3 487.6, 697.5 486.5 C 706.7 485.5, 715.8 484.5, 725.0 483.5 C 734.2 482.4, 743.3 481.4, 752.5 480.4 C 761.7 479.4, 770.8 478.4, 780.0 477.3 C 789.2 476.3, 798.3 475.3, 807.5 474.3 C 816.7 473.2, 825.8 472.2, 835.0 471.2 C 844.2 470.2, 853.3 469.2, 862.5 468.1 C 871.7 467.1, 880.8 466.1, 890.0 465.1 C 899.2 464.0, 908.3 463.0, 917.5 462.0 C 926.7 461.0, 935.8 460.0, 945.0 458.9 C 954.2 457.9, 963.3 456.9, 972.5 455.9 C 981.7 454.8, 990.8 453.8, 1000.0 452.8 C 1009.2 451.8, 1018.3 450.8, 1027.5 449.7 C 1036.7 448.7, 1045.8 447.7, 1055.0 446.7 C 1064.2 445.6, 1073.3 444.6, 1082.5 443.6 C 1091.7 442.6, 1100.8 441.6, 1110.0 440.5 C 1119.2 439.5, 1128.3 438.5, 1137.5 437.5 C 1146.7 436.4, 1155.8 435.2, 1165.0 434.4 C 1174.2 433.6, 1183.3 433.4, 1192.5 432.9 C 1201.7 432.4, 1215.4 431.6, 1220.0 431.3" fill="none" stroke="#a8c0d8" stroke-width="3"/>
+</g>
+<text data-role="x-axis-label" x="291.9" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1960</text>
+<text data-role="x-axis-label" x="635.6" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1980</text>
+<text data-role="x-axis-label" x="979.4" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">2000</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#7296c2" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">PRODUCTIVITY</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#a8c0d8" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">WAGES</text>
+</g>
+</svg>

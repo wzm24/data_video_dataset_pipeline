@@ -1,0 +1,242 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_72",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the recent sharp rise in global average temperatures and attribute it to human fossil fuel consumption, contrasting it with long-term historical stability.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Before the first positive reading, the anomaly series stays negative and only ranges from -0.4320 to -0.0160, a span of 0.4160; this is the long early stretch of no zero-crossing.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "pre-first-positive minimum",
+     "field": "value",
+     "value": -0.432,
+     "note": "lowest value before the first positive reading"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "pre-first-positive maximum",
+     "field": "value",
+     "value": -0.016,
+     "note": "closest-to-zero value before the first positive reading"
+    }
+   ],
+   "computation": "range = (-0.0160) - (-0.4320) = 0.4160",
+   "accepted_routes": [
+    "Before the first positive reading, the series stays between -0.4320 and -0.0160, a range of 0.4160 anomaly units.",
+    "The early portion never reaches zero and varies only within about 0.42 anomaly units.",
+    "All readings before the first positive value are negative, from about -0.43 up to about -0.02."
+   ],
+   "visual_evidence_rule": "The early portion must remain below zero and not exceed the small negative value near -0.016 before the first positive point.",
+   "temporal_anchor": "For more than 10,000 years, the average global temperature didn't change by more than one degree Celsius.",
+   "reviewer_question": "Should the early negative/no-crossing band be a required beat for long-term stability, or is general pre-rise stability enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The first positive anomaly in the series is 0.0520, marking a zero-crossing after the previous value of -0.0160.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "first positive row",
+     "field": "value",
+     "value": 0.052,
+     "note": "first value greater than zero"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "row before first positive",
+     "field": "value",
+     "value": -0.016,
+     "note": "immediately prior value, still below zero"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The first positive anomaly appears as 0.0520 after the series has stayed below zero.",
+    "The plotted series crosses the zero line just before a reading of 0.0520.",
+    "Before the first positive reading, the closest value is -0.0160; then it goes to 0.0520."
+   ],
+   "visual_evidence_rule": "A zero crossing must be visible, with the first positive plotted value at 0.0520.",
+   "temporal_anchor": "But then humans started burning fossil fuels around here.",
+   "reviewer_question": "Is the first zero-crossing essential to the contrast, or just a fluctuation before the post-1950 rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "At the 1950-marked reference point, the anomaly is -0.0980, still negative; this is not yet the modern high.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "1950",
+     "field": "value",
+     "value": -0.098,
+     "note": "row with x_value=1950"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At the 1950 marker, the anomaly value is -0.0980, still below zero.",
+    "The point labeled 1950 reads -0.098, so the rise is not yet underway in that row.",
+    "Around 1950 the series is slightly negative, at about -0.10 anomaly units."
+   ],
+   "visual_evidence_rule": "The 1950 time marker must be identifiable and show a value below zero.",
+   "temporal_anchor": "around here",
+   "reviewer_question": "Should the 1950 marker be an explicit required anchor, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "From the 1950-marked value (-0.0980) to the final value (0.9460), the anomaly rises by 1.0440, about one unit on the table's anomaly scale.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "1950",
+     "field": "value",
+     "value": -0.098,
+     "note": "start value for recent rise"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "final row",
+     "field": "value",
+     "value": 0.946,
+     "note": "end value for recent rise"
+    }
+   ],
+   "computation": "0.9460 - (-0.0980) = 1.0440",
+   "accepted_routes": [
+    "Since the 1950 marker, the value rises from -0.0980 to 0.9460, an increase of 1.0440.",
+    "The 1950-to-final change is about 1.0 anomaly unit (0.9460 minus -0.0980).",
+    "The anomaly climbs by roughly 1.04 from the 1950 point to the end."
+   ],
+   "visual_evidence_rule": "The chart must show both the 1950 point (below zero) and the final endpoint (0.9460), or make the difference 1.0440 visually comparable.",
+   "temporal_anchor": "Today global temperatures have risen about one degree Celsius since pre-",
+   "reviewer_question": "Is the recent rise required to be quantified as the 1950-to-final increase of 1.0440, or can the video just show a sharp upward shape?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The final reading is the series maximum: value 0.9460 and relative_value 1.0000, the highest normalized value in the table.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "temp anomaly",
+     "x": "final row",
+     "field": "value",
+     "value": 0.946,
+     "note": "maximum value in the series"
+    },
+    {
+     "entity": "temp anomaly",
+     "x": "final row",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "highest normalized value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series ends at its highest value, 0.9460, with relative_value 1.0000.",
+    "The final point is the maximum of the series; its normalized size is 1.0000.",
+    "The last reading is the largest, at 0.9460 and relative maximum 1.0000."
+   ],
+   "visual_evidence_rule": "The final plotted value must be visibly the highest of the series.",
+   "temporal_anchor": "Today",
+   "reviewer_question": "Is the final maximum required as its own beat, or is it sufficiently carried by the 1950-to-end rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series has earlier positive blips, including a local maximum of 0.1440, before returning to -0.0980 at the 1950 marker.",
+  "The first positive reading 0.0520 is followed by later dips below zero before the sustained post-1950 rise."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that fossil fuel burning caused the temperature rise; the table contains no fossil fuel data.",
+  "The 10,000-year duration as a table fact.",
+  "Exact Celsius labeling or exact 1 degree Celsius as a table value when the table unit column is blank.",
+  "Any percentage share of warming attributed to fossil fuels.",
+  "Values or baselines not present in the table, such as a pre-industrial baseline beyond the rows shown."
+ ],
+ "notes": "The table contains one temperature-anomaly series; absolute numbers are in value, while relative_value is only a 0-1 normalization for size/order. Fossil-fuel attribution and the 10,000-year span appear only in the narration, not in the table, so they should not be encoded as data units.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 59.1,
+  "usage": {
+   "prompt_tokens": 5493,
+   "completion_tokens": 13090,
+   "total_tokens": 18583,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11076
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 4981
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

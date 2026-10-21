@@ -1,0 +1,8 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_60,Dubai,dubai,415.9,,1.000,0.7416,,#6A9FDB,printed,bar-1,semantic_svg_backfill
+bar_60,London,london,511.6,,0.628,0.4658,,#6A9FDB,printed,bar-2,semantic_svg_backfill
+bar_60,NY,ny,590.9,,0.581,0.4310,,#6A9FDB,printed,bar-3,semantic_svg_backfill
+bar_60,Singapore,singapore,673.4,,0.549,0.4075,,#6A9FDB,printed,bar-4,semantic_svg_backfill
+bar_60,Bangkok,bangkok,763.4,,0.502,0.3727,,#6A9FDB,printed,bar-5,semantic_svg_backfill
+bar_60,Paris,paris,849.4,,0.437,0.3243,,#6A9FDB,printed,bar-6,semantic_svg_backfill
+bar_60,Tokyo,tokyo,935.1,,0.390,0.2895,,#6A9FDB,printed,bar-7,semantic_svg_backfill

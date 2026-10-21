@@ -1,0 +1,242 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_93",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the demographic proportions of Sunni and Shia Muslims and the friction between these groups.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Sunni Muslims make up about 80% of the Muslim world.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "Muslim world share",
+     "field": "value",
+     "value": 80.0,
+     "note": "Table value is 80; narration frames it as about 80% of the Muslim world."
+    }
+   ],
+   "computation": "80 / (80 + 20) = 0.80 = 80%",
+   "accepted_routes": [
+    "Sunni Muslims make up about 80% of the Muslim world.",
+    "Sunnis are roughly 80% of Muslims.",
+    "The Sunni share is approximately 80 percent.",
+    "80% of the Muslim world is Sunni."
+   ],
+   "visual_evidence_rule": "A Sunni-labeled mark must occupy about 80% of the whole, e.g. an 80% bar/area/slice or four-fifths of the composition.",
+   "temporal_anchor": "The clause 'Sunnis make up about 80 % of the Muslim world'.",
+   "reviewer_question": "Must the video state or visualize Sunni as 80% of the Muslim-world whole, or is a relative bar height enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Shia Muslims make up about 20% of the Muslim world.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "Muslim world share",
+     "field": "value",
+     "value": 20.0,
+     "note": "Table value is 20; narration frames it as about 20% of the Muslim world."
+    }
+   ],
+   "computation": "20 / (80 + 20) = 0.20 = 20%",
+   "accepted_routes": [
+    "Shia Muslims make up about 20% of the Muslim world.",
+    "Shia are roughly 20% of Muslims.",
+    "The Shia share is approximately 20 percent.",
+    "20% of the Muslim world is Shia."
+   ],
+   "visual_evidence_rule": "A Shia-labeled mark must occupy about 20% of the whole, e.g. a 20% bar/area/slice or one-fifth of the composition.",
+   "temporal_anchor": "The clause 'Shia about 20%'.",
+   "reviewer_question": "Must the video state or visualize Shia as 20% of the Muslim-world whole, or can it be shown only as the remainder?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Sunni Muslims are the larger group and Shia Muslims are the smaller group.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "Muslim world share",
+     "field": "value",
+     "value": 80.0,
+     "note": "80 is greater than the Shia value of 20."
+    },
+    {
+     "entity": "SHIA",
+     "x": "Muslim world share",
+     "field": "value",
+     "value": 20.0,
+     "note": "20 is less than the Sunni value of 80."
+    }
+   ],
+   "computation": "80 > 20",
+   "accepted_routes": [
+    "Sunni are the larger group.",
+    "Sunnis outnumber Shia.",
+    "Sunni majority versus Shia minority.",
+    "Sunni share is higher than Shia share."
+   ],
+   "visual_evidence_rule": "The Sunni visual element must be clearly larger or higher than the Shia visual element.",
+   "temporal_anchor": "The two percentage clauses, or the opening framing of the proportions.",
+   "reviewer_question": "Does the video need an explicit majority/larger-than label, or is the visible 80-versus-20 order sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Sunni-to-Shia population ratio is about 4 to 1.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "Muslim world share",
+     "field": "value",
+     "value": 80.0,
+     "note": "Used as numerator in ratio."
+    },
+    {
+     "entity": "SHIA",
+     "x": "Muslim world share",
+     "field": "value",
+     "value": 20.0,
+     "note": "Used as denominator in ratio."
+    }
+   ],
+   "computation": "80 / 20 = 4, i.e. 4:1",
+   "accepted_routes": [
+    "Sunni are about four times as numerous as Shia.",
+    "The Sunni-to-Shia ratio is roughly 4 to 1.",
+    "For every Shia Muslim there are about four Sunni Muslims.",
+    "Sunni outnumber Shia by about 4 times."
+   ],
+   "visual_evidence_rule": "If a ratio is shown, the annotation must compare the 80 and 20 values as 4:1, not 1:4.",
+   "temporal_anchor": "Optional derived annotation after both percentage clauses; not stated in the original narration.",
+   "reviewer_question": "Should the 4:1 ratio be required, or only allowed as optional derived context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "There is friction or tension between hardliners on both the Sunni and Shia sides.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "hardliners",
+     "field": "narration",
+     "value": null,
+     "note": "Qualitative friction from narration/intent; no table number."
+    },
+    {
+     "entity": "SHIA",
+     "x": "hardliners",
+     "field": "narration",
+     "value": null,
+     "note": "Qualitative friction from narration/intent; no table number."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Hardliners on both sides dislike each other.",
+    "There is tension between Sunni and Shia hardliners.",
+    "The two sects have friction among their hardliners.",
+    "Hardliners on both sides do not like each other very much."
+   ],
+   "visual_evidence_rule": "A verbal or visual cue of tension/friction must appear between the two groups, while specifying hardliners rather than all Sunnis and all Shia.",
+   "temporal_anchor": "The clause 'And the hardliners on both sides don't like each other very much.'",
+   "reviewer_question": "Must the clip include a friction/tension cue between hardliners, or is that optional narration color?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The combined Sunni and Shia shares total 100% (80 + 20 = 100).",
+  "The Sunni-Shia gap is 60 percentage points (80 - 20 = 60).",
+  "Sunni share is four-fifths and Shia share is one-fifth.",
+  "The Sunni:Shia ratio is 4:1 (80 / 20 = 4)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that the 80/20 split causes the friction between hardliners.",
+  "Extrapolating to global population, all people, or all Muslims beyond the stated Muslim-world denominator.",
+  "Claiming all Sunnis and all Shia dislike each other; narration specifies hardliners.",
+  "Inventing additional sects, countries, population counts, or historical causes.",
+  "Using the table's relative_value 1.0000 as if it were a percentage or share."
+ ],
+ "notes": "The table supplies only the 80 and 20 values; all numeric units are direct uses or arithmetic combinations of those cells. Friction is qualitative from narration/intent and should be limited to hardliners, not all Muslims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 34.1,
+  "usage": {
+   "prompt_tokens": 712,
+   "completion_tokens": 7793,
+   "total_tokens": 8505,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5928
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 328
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

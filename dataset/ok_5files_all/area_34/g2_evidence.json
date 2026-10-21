@@ -1,0 +1,148 @@
+{
+ "clip_id": "area_34",
+ "family": "area",
+ "chart_form": "area/simple_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Housing affordability @ series start",
+    "mark:Housing affordability @ middle/peak",
+    "mark:Housing affordability @ series end"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Housing affordability @ series start",
+      "value": 0.0075
+     },
+     {
+      "mark": "Housing affordability @ middle/peak",
+      "value": 0.9998
+     },
+     {
+      "mark": "Housing affordability @ series end",
+      "value": 0.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The plotted series must visibly rise from near the bottom to near the top, then descend back to near the bottom."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Housing affordability @ middle/peak",
+    "extreme": "max",
+    "expected": 0.9998,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest point of the series must be visibly near the top of the normalized range."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Housing affordability @ series start"
+   ],
+   "assertion": {
+    "mark": "Housing affordability @ series start",
+    "field": "value",
+    "expected": 0.0075,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both ends of the series must sit near the bottom of the normalized scale, far below the peak."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Housing affordability @ maximum for threshold derivation",
+    "mark:Housing affordability @ rising-side crossing bracket low",
+    "mark:Housing affordability @ rising-side crossing bracket high",
+    "mark:Housing affordability @ falling-side crossing bracket high",
+    "mark:Housing affordability @ falling-side crossing bracket low"
+   ],
+   "assertion": {
+    "series": "Housing affordability",
+    "values": [
+     0.9998,
+     0.4941,
+     0.5186,
+     0.5186,
+     0.4941
+    ],
+    "threshold_between": [
+     0.4941,
+     0.9998
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A reference level at about half the peak must visibly intersect the series at two points, one on the rise and one on the fall."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Housing affordability @ early rising side",
+    "mark:Housing affordability @ late falling side"
+   ],
+   "assertion": {
+    "greater": "Housing affordability @ early rising side",
+    "lesser": "Housing affordability @ late falling side",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The left and right limbs of the curve must have corresponding heights at comparable distances from the peak."
+  }
+ ]
+}

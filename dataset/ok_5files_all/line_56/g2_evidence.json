@@ -1,0 +1,157 @@
+{
+ "clip_id": "line_56",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 3,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make clear that the entities are 65+ and that the two time points are May and August."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST",
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST",
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "65+ @ MAY",
+      "value": 95.5
+     },
+     {
+      "mark": "65+ @ AUGUST",
+      "value": 89.5
+     },
+     {
+      "mark": "65+ @ MAY",
+      "value": 97.5
+     },
+     {
+      "mark": "65+ @ AUGUST",
+      "value": 93.5
+     },
+     {
+      "mark": "65+ @ MAY",
+      "value": 85.5
+     },
+     {
+      "mark": "65+ @ AUGUST",
+      "value": 82.5
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "For each of the three 65+ vaccine series, the August endpoint must be visibly lower than the May endpoint."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST"
+   ],
+   "assertion": {
+    "low": "65+ @ AUGUST",
+    "low_value": 89.5,
+    "high": "65+ @ MAY",
+    "high_value": 95.5,
+    "delta": 6.0,
+    "ratio": 1.067,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the Pfizer/BioNTech 65+ May and August values visible, or their difference, so a 6-point drop is apparent."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST"
+   ],
+   "assertion": {
+    "low": "65+ @ AUGUST",
+    "low_value": 93.5,
+    "high": "65+ @ MAY",
+    "high_value": 97.5,
+    "delta": 4.0,
+    "ratio": 1.0428,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the Moderna 65+ May and August values visible, or their difference, so a 4-point drop is apparent."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:65+ @ MAY",
+    "mark:65+ @ AUGUST"
+   ],
+   "assertion": {
+    "low": "65+ @ AUGUST",
+    "low_value": 82.5,
+    "high": "65+ @ MAY",
+    "high_value": 85.5,
+    "delta": 3.0,
+    "ratio": 1.0364,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the Johnson & Johnson 65+ May and August values visible, or their difference, so a 3-point drop is apparent."
+  }
+ ]
+}

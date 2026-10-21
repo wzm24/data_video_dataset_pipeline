@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f2f2f5"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#bfbfbf" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#bfbfbf" stroke-width="3"/>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#a0a0a0" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">$350</text>
+<line data-role="tick" x1="112" y1="370.0" x2="120" y2="370.0" stroke="#a0a0a0" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="376.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">$175</text>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#a0a0a0" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">$0</text>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,212.3 170.0,225.4 220.0,159.7 270.0,205.7 320.0,218.9 370.0,251.7 420.0,291.1 470.0,330.6 520.0,350.3 570.0,402.9 620.0,462.0 670.0,508.0 720.0,540.9 770.0,494.9 820.0,521.1 870.0,508.0 920.0,514.6 970.0,534.3 1020.0,508.0 1070.0,540.9 1120.0,508.0 1170.0,554.0 1220.0,567.1" fill="none" stroke="#1f6cb5" stroke-width="6" data-animation-property="points"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">1990</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#a0a0a0">2015</text>
+</g>
+</svg>

@@ -1,0 +1,4 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_9,USA,usa,320.0,,16500.000,0.8250,,#A78BFA,printed
+bar_9,South Korea,south-korea,640.0,,1500.000,0.0750,,#A78BFA,printed
+bar_9,Bangladesh,bangladesh,960.0,,750.000,0.0375,,#FFD700,printed

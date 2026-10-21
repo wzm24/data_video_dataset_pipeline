@@ -1,0 +1,105 @@
+{
+ "clip_id": "pie_17",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Medical purposes @ 0",
+    "segment:Commercial @ 1"
+   ],
+   "assertion": {
+    "segment": "Medical purposes @ 0",
+    "expected_share": 0.167,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both slices or bars must be labeled or otherwise readable as 83.3% and 16.7% (or rounded 83% and 17%) and visually distinguishable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Commercial @ 1",
+    "mark:Medical purposes @ 0"
+   ],
+   "assertion": {
+    "greater": "Commercial @ 1",
+    "lesser": "Medical purposes @ 0",
+    "expected_ratio": 4.988,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the approximately 5:1 relationship evident, either through labeled values that permit the comparison or through an explicit annotation."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Commercial @ 1",
+    "mark:Medical purposes @ 0"
+   ],
+   "assertion": {
+    "greater": "Commercial @ 1",
+    "lesser": "Medical purposes @ 0",
+    "expected_ratio": 4.988,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Labels or values must support a 66.6 percentage-point difference; if the chart does not annotate the gap, this remains an optional derived claim."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Medical purposes @ 0",
+    "segment:Commercial @ 1"
+   ],
+   "assertion": {
+    "segment": "Medical purposes @ 0",
+    "expected_share": 0.167,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A complete pie or 100% total must be shown; if using bars, an explicit total or 100% label is needed."
+  }
+ ]
+}

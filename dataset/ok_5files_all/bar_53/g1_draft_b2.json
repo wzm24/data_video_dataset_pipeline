@@ -1,0 +1,313 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_53",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that lower-income individuals pay a larger share of their income in consumption taxes compared to higher-income individuals.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The lowest-income group, POOREST, pays 12.5 of income in consumption taxes, the highest endpoint in the chart.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "income group: POOREST",
+     "field": "value",
+     "value": 12.5,
+     "note": "Highest printed value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The poorest group pays 12.5% of income in consumption taxes.",
+    "At the low-income end, the consumption-tax share is 12.5.",
+    "POOREST has the highest charted share at 12.5."
+   ],
+   "visual_evidence_rule": "The bar labeled POOREST must be visible and its height/value must be readable as 12.5, preferably with an endpoint label.",
+   "temporal_anchor": "first clause: 'how much of their income each of these people pays in consumption taxes'",
+   "reviewer_question": "Must the video explicitly state the POOREST endpoint value 12.5?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The highest-income group, RICHEST, pays 2.0 of income in consumption taxes, the lowest endpoint in the chart.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "RICHEST",
+     "x": "income group: RICHEST",
+     "field": "value",
+     "value": 2.0,
+     "note": "Lowest printed value in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The richest group pays 2.0% of income in consumption taxes.",
+    "At the high-income end, the consumption-tax share is 2.0.",
+    "RICHEST has the lowest charted share at 2.0."
+   ],
+   "visual_evidence_rule": "The bar labeled RICHEST must be visible and its height/value must be readable as 2.0, preferably with an endpoint label.",
+   "temporal_anchor": "first clause: 'how much of their income each of these people pays in consumption taxes'",
+   "reviewer_question": "Must the video explicitly state the RICHEST endpoint value 2.0?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The consumption-tax share declines across the income ladder: POOREST 12.5, Group 2 11.0, Group 3 9.5, Group 4 8.0, Group 5 7.0, Group 6 6.5, Group 7 6.0, Group 8 5.0, Group 9 4.5, Group 10 3.0, RICHEST 2.0.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "income group 1",
+     "field": "value",
+     "value": 12.5,
+     "note": "Start of the monotonic decline."
+    },
+    {
+     "entity": "Group 2",
+     "x": "income group 2",
+     "field": "value",
+     "value": 11.0,
+     "note": "Second value in the ordered decline."
+    },
+    {
+     "entity": "Group 3",
+     "x": "income group 3",
+     "field": "value",
+     "value": 9.5,
+     "note": "Third value."
+    },
+    {
+     "entity": "Group 4",
+     "x": "income group 4",
+     "field": "value",
+     "value": 8.0,
+     "note": "Fourth value."
+    },
+    {
+     "entity": "Group 5",
+     "x": "income group 5",
+     "field": "value",
+     "value": 7.0,
+     "note": "Fifth value."
+    },
+    {
+     "entity": "Group 6",
+     "x": "income group 6",
+     "field": "value",
+     "value": 6.5,
+     "note": "Sixth value."
+    },
+    {
+     "entity": "Group 7",
+     "x": "income group 7",
+     "field": "value",
+     "value": 6.0,
+     "note": "Seventh value."
+    },
+    {
+     "entity": "Group 8",
+     "x": "income group 8",
+     "field": "value",
+     "value": 5.0,
+     "note": "Eighth value."
+    },
+    {
+     "entity": "Group 9",
+     "x": "income group 9",
+     "field": "value",
+     "value": 4.5,
+     "note": "Ninth value."
+    },
+    {
+     "entity": "Group 10",
+     "x": "income group 10",
+     "field": "value",
+     "value": 3.0,
+     "note": "Tenth value."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "income group 11",
+     "field": "value",
+     "value": 2.0,
+     "note": "End of the monotonic decline."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The consumption-tax share falls steadily from poorest to richest.",
+    "Each higher-income group pays a lower share than the previous group.",
+    "The bars decline monotonically across the income ladder."
+   ],
+   "visual_evidence_rule": "All eleven income-group bars must appear in order or the chart must clearly show a downward sequence from POOREST to RICHEST.",
+   "temporal_anchor": "during the chart reveal, after 'if we chart how much of their income...'",
+   "reviewer_question": "Must the video show or state the ordered decline, rather than only the two endpoint bars?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Lower-income groups pay a larger share of income in consumption taxes than higher-income groups; for example, POOREST 12.5 is higher than RICHEST 2.0, and Group 2 11.0 is higher than Group 10 3.0.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "income group: POOREST",
+     "field": "value",
+     "value": 12.5,
+     "note": "Low-income example versus RICHEST."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "income group: RICHEST",
+     "field": "value",
+     "value": 2.0,
+     "note": "High-income example versus POOREST."
+    },
+    {
+     "entity": "Group 2",
+     "x": "income group 2",
+     "field": "value",
+     "value": 11.0,
+     "note": "Lower-middle example higher than higher-income Group 10."
+    },
+    {
+     "entity": "Group 10",
+     "x": "income group 10",
+     "field": "value",
+     "value": 3.0,
+     "note": "Higher-income example lower than Group 2."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Poor people pay a much larger portion than rich people.",
+    "The poorest group's share is larger than the richest group's share.",
+    "The chart shows an inverse relationship between income group and consumption-tax share."
+   ],
+   "visual_evidence_rule": "The POOREST and RICHEST bars, or a clear low-vs-high grouping, must be simultaneously visible enough to compare heights.",
+   "temporal_anchor": "final clause: 'poor people pay a much larger portion'",
+   "reviewer_question": "Must the video directly verbalize or annotate the low-versus-high comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The derived poorest-to-richest gap is 10.5 points, since 12.5 - 2.0 = 10.5; equivalently, the POOREST share is 6.25 times the RICHEST share, since 12.5 / 2.0 = 6.25.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "POOREST",
+     "x": "income group: POOREST",
+     "field": "value",
+     "value": 12.5,
+     "note": "Used in subtraction and division."
+    },
+    {
+     "entity": "RICHEST",
+     "x": "income group: RICHEST",
+     "field": "value",
+     "value": 2.0,
+     "note": "Used in subtraction and division."
+    }
+   ],
+   "computation": "12.5 - 2.0 = 10.5; 12.5 / 2.0 = 6.25",
+   "accepted_routes": [
+    "The poorest-to-richest gap is 10.5 percentage points.",
+    "The poorest share is 6.25 times the richest share.",
+    "The richest group pays about one-sixth of what the poorest group pays."
+   ],
+   "visual_evidence_rule": "The endpoint values 12.5 and 2.0 must be visible or labeled if the video states the gap or ratio.",
+   "temporal_anchor": "optional emphasis during or after the final clause, if the video adds a quantitative gap or ratio",
+   "reviewer_question": "Should the video include the derived 10.5-point gap or 6.25x ratio, or is that optional extra emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Specific middle-group values such as Group 5 = 7.0 or Group 9 = 4.5.",
+  "The second-highest share is Group 2 at 11.0.",
+  "The RICHEST relative_value is 0.0667 compared with POOREST relative_value 0.4167, if the chart explains the normalization."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that consumption taxes cause income inequality or poverty.",
+  "Dollar incomes, income thresholds, or tax amounts not present in the table.",
+  "Total government revenue, budget shares, or population weights not present in the table.",
+  "Trends over time, since the table is cross-sectional by income group.",
+  "Claims about all taxes or overall progressivity beyond this consumption-tax share chart."
+ ],
+ "notes": "Core signal is the inverse income-gradient in the charted consumption-tax share; endpoint values and monotonic order should be mandatory. Gap/ratio and middle-group values are valid optional emphasis.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 28.1,
+  "usage": {
+   "prompt_tokens": 1088,
+   "completion_tokens": 6695,
+   "total_tokens": 7783,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4210
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 704
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

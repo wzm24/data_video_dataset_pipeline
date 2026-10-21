@@ -1,0 +1,11 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_54,Israel (cases/1000),israel-cases-1000,180.0,,1.5769,0.2500,,#c24636,axis_calibrated
+line_54,Israel (cases/1000),israel-cases-1000,415.0,,1.4769,0.2333,,#c24636,axis_calibrated
+line_54,Israel (cases/1000),israel-cases-1000,650.0,,2.3769,0.3833,,#c24636,axis_calibrated
+line_54,Israel (cases/1000),israel-cases-1000,885.0,,3.3769,0.5500,,#c24636,axis_calibrated
+line_54,Israel (cases/1000),israel-cases-1000,1120.0,,3.6769,0.6000,,#c24636,axis_calibrated
+line_54,United States (cases/1000),united-states-cases-1000,180.0,,0.5769,0.0833,,#4e7ab5,axis_calibrated
+line_54,United States (cases/1000),united-states-cases-1000,415.0,,0.9769,0.1500,,#4e7ab5,axis_calibrated
+line_54,United States (cases/1000),united-states-cases-1000,650.0,,1.9769,0.3167,,#4e7ab5,axis_calibrated
+line_54,United States (cases/1000),united-states-cases-1000,885.0,,2.7769,0.4500,,#4e7ab5,axis_calibrated
+line_54,United States (cases/1000),united-states-cases-1000,1120.0,,5.2769,0.8667,,#4e7ab5,axis_calibrated

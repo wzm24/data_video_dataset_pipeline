@@ -1,0 +1,16 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_98,dashed curve,dashed,329.0,1979-80,,0.4996,,,svg_geometry
+line_98,dashed curve,dashed,467.0,1985-86,,0.3750,,,svg_geometry
+line_98,dashed curve,dashed,606.0,1991-92,,0.4130,,,svg_geometry
+line_98,dashed curve,dashed,744.0,1997-98,,0.7494,,,svg_geometry
+line_98,dashed curve,dashed,883.0,2003-04,,0.8751,,,svg_geometry
+line_98,dashed curve,dashed,1021.0,2009-10,,0.9623,,,svg_geometry
+line_98,dashed curve,dashed,1160.0,2015-16,,1.0000,,,svg_geometry
+line_98,solid curve,solid,190.0,1973-74,,0.0000,,,svg_geometry
+line_98,solid curve,solid,329.0,1979-80,,0.3130,,,svg_geometry
+line_98,solid curve,solid,467.0,1985-86,,0.3750,,,svg_geometry
+line_98,solid curve,solid,606.0,1991-92,,0.4379,,,svg_geometry
+line_98,solid curve,solid,744.0,1997-98,,0.6870,,,svg_geometry
+line_98,solid curve,solid,883.0,2003-04,,0.8126,,,svg_geometry
+line_98,solid curve,solid,1021.0,2009-10,,0.8873,,,svg_geometry
+line_98,solid curve,solid,1160.0,2015-16,,0.9375,,,svg_geometry

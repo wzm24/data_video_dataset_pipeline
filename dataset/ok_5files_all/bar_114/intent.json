@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_114",
+ "intent_en": "To illustrate the racial and ethnic disparities in public confidence in police officers, demonstrating that White adults express significantly higher confidence than Black, Hispanic, and Asian adults.",
+ "previous_intent": "To demonstrate fault lines in public confidence in police, highlighting racial and ethnic disparities where White adults have significantly higher trust than Black, Hispanic, and Asian adults, and noting significant differences by age.",
+ "narration_support": "White adults are much more likely than black or Hispanic adults to say that they have a great deal of confidence in the police.",
+ "chart_support": "Horizontal bar chart comparing the percentage of adults with a great deal of confidence in police officers by race and ethnicity, showing White adults with the highest proportion and Black adults with the lowest.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly discusses race as a fault line for police confidence and states White adults are more likely to have confidence, which aligns with the chart showing White adults at 32% versus lower percentages for other groups. The narration also mentions age differences which are not shown in this specific chart, suggesting this is part of a larger sequence, but the race data is fully supported.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

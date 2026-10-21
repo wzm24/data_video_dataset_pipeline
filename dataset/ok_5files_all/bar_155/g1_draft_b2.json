@@ -1,0 +1,278 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_155",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the substantial unfunded pension liability gap by contrasting reported financial figures with actual liability estimates.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Reported Liabilities has the largest relative value at 0.3509, above Reported Assets and Actual Liabilities at 0.2632 and the second Reported Assets entry at 0.2485.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Reported Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3509,
+     "note": "maximum relative_value"
+    },
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "compared with maximum"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "compared with maximum"
+    },
+    {
+     "entity": "Reported Assets (bar-4)",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "compared with maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Reported Liabilities has the largest relative value, 0.3509",
+    "Reported Liabilities exceeds all other entities in relative value",
+    "the maximum relative value is Reported Liabilities at about 0.351"
+   ],
+   "visual_evidence_rule": "The chart must make Reported Liabilities visibly larger in relative value than the other listed entities.",
+   "temporal_anchor": "pension liabilities total clause",
+   "reviewer_question": "Should the video explicitly identify Reported Liabilities as the maximum relative value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Reported Assets and Actual Liabilities are tied at the same relative value of 0.2632.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "tied relative_value"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "tied relative_value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Reported Assets and Actual Liabilities have equal relative values of 0.2632",
+    "Actual Liabilities matches Reported Assets at 0.2632",
+    "the two entities are tied at about 0.263 in relative value"
+   ],
+   "visual_evidence_rule": "The chart must show Reported Assets and Actual Liabilities as equal in relative magnitude.",
+   "temporal_anchor": "assets minus liabilities clause",
+   "reviewer_question": "Is the equality between Reported Assets and Actual Liabilities required, or merely optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The second Reported Assets entry has the lowest relative value at 0.2485, below the 0.2632 tie and the 0.3509 Reported Liabilities.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Reported Assets (bar-4)",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "minimum relative_value"
+    },
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "above minimum"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "above minimum"
+    },
+    {
+     "entity": "Reported Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3509,
+     "note": "above minimum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The second Reported Assets entry is the lowest relative value at 0.2485",
+    "Reported Assets (bar-4) is smaller than the 0.2632 tie",
+    "the minimum relative value is the bar-4 Reported Assets at about 0.249"
+   ],
+   "visual_evidence_rule": "The chart must make the second Reported Assets entry visibly smaller in relative value than the other listed entities.",
+   "temporal_anchor": "assets minus liabilities clause",
+   "reviewer_question": "Should the second Reported Assets entry be shown as the minimum, or is it a backfill duplicate that can be ignored?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Reported Liabilities exceeds Actual Liabilities by 0.0877 in relative value, computed as 0.3509 minus 0.2632.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Reported Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3509,
+     "note": "minuend"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "subtrahend"
+    }
+   ],
+   "computation": "0.3509 - 0.2632 = 0.0877",
+   "accepted_routes": [
+    "Reported Liabilities is 0.0877 higher than Actual Liabilities in relative value",
+    "the relative gap between Reported Liabilities and Actual Liabilities is about 0.088",
+    "Actual Liabilities is 0.0877 lower than Reported Liabilities"
+   ],
+   "visual_evidence_rule": "The chart must make the relative-value difference between Reported Liabilities and Actual Liabilities visible.",
+   "temporal_anchor": "unfunded total liability clause",
+   "reviewer_question": "Should the derived 0.0877 gap between Reported Liabilities and Actual Liabilities be a required unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Reported Liabilities exceeds the lower Reported Assets entry by 0.1024 in relative value, computed as 0.3509 minus 0.2485.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Reported Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.3509,
+     "note": "minuend"
+    },
+    {
+     "entity": "Reported Assets (bar-4)",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "subtrahend"
+    }
+   ],
+   "computation": "0.3509 - 0.2485 = 0.1024",
+   "accepted_routes": [
+    "Reported Liabilities is 0.1024 higher than the lower Reported Assets entry",
+    "the relative gap between Reported Liabilities and the bar-4 Reported Assets is about 0.102",
+    "the lower Reported Assets value is 0.1024 below Reported Liabilities"
+   ],
+   "visual_evidence_rule": "The chart must make the relative-value difference between Reported Liabilities and the lower Reported Assets entry visible.",
+   "temporal_anchor": "unfunded total liability clause",
+   "reviewer_question": "Should the derived 0.1024 gap between Reported Liabilities and the lower Reported Assets entry be included, or is it too secondary?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The tie between Reported Assets and Actual Liabilities at 0.2632 can be shown as an explicit equality or left implicit.",
+  "The second Reported Assets entry (bar-4) can be treated as an optional backfill comparison rather than a core required value.",
+  "The relative ordering can be conveyed by a ranking or by pairwise comparisons."
+ ],
+ "unsupported_to_avoid": [
+  "Absolute dollar amounts from the narration, such as $7 trillion, $3.6 trillion, or $3.4 trillion.",
+  "Percentages, counts, or any absolute financial quantity.",
+  "Causal claims about why pension liabilities are unfunded.",
+  "Claims that Actual Liabilities exceeds Reported Liabilities or Reported Assets, since the table does not show that.",
+  "Chart type, axis ticks, colors, positions, or rendering details."
+ ],
+ "notes": "All cited values are relative_value in 0-1; derived gaps are arithmetic differences of table cells. The second Reported Assets row (bar-4) is treated as an optional backfill comparison.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 42.7,
+  "usage": {
+   "prompt_tokens": 930,
+   "completion_tokens": 11205,
+   "total_tokens": 12135,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9300
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 546
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

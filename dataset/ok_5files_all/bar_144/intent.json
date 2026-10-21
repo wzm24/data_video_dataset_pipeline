@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_144",
+ "intent_en": "To demonstrate that the vast majority of vaccine doses scheduled for production in 2021 have already been purchased.",
+ "previous_intent": "To demonstrate the high proportion of planned vaccine production for Pfizer-BioNTech and Moderna that had already been purchased.",
+ "narration_support": "Pfizer -BioNTech vaccine doses that were scheduled to be produced by the end of the year had already been bought",
+ "chart_support": "bar chart showing the proportion of Pfizer-BioNTech doses purchased for the year 2021",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "Narration mentions Moderna (100%) but the chart only displays Pfizer-BioNTech (96%); the intent captures the general pre-purchasing trend for 2021 supplies.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

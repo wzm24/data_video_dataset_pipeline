@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_7",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the revenue series and the profit series must be visible and distinguishable in the animation."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:REVENUE @ 1998",
+    "mark:REVENUE @ 2018"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "REVENUE @ 1998",
+      "value": 0.0
+     },
+     {
+      "mark": "REVENUE @ 2018",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The revenue series must visibly rise over the timeline and finish at its highest point."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:PROFIT @ 1998",
+    "mark:PROFIT @ 2018"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "PROFIT @ 1998",
+      "value": 0.0083
+     },
+     {
+      "mark": "PROFIT @ 2018",
+      "value": 0.025
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The profit series must remain visibly low or near-flat while revenue rises."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:REVENUE @ 2018",
+    "mark:PROFIT @ 2018"
+   ],
+   "assertion": {
+    "greater": "REVENUE @ 2018",
+    "lesser": "PROFIT @ 2018",
+    "expected_ratio": 40.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final gap between revenue and profit must be shown as extremely large."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:REVENUE @ 1998",
+    "mark:PROFIT @ 1998",
+    "mark:REVENUE @ 2018",
+    "mark:PROFIT @ 2018"
+   ],
+   "assertion": {
+    "low": "REVENUE @ 1998",
+    "low_value": 0.0,
+    "high": "REVENUE @ 2018",
+    "high_value": 1.0,
+    "delta": 1.0,
+    "ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The two series must visibly separate over the timeline, with revenue rising far more steeply than profit."
+  }
+ ]
+}

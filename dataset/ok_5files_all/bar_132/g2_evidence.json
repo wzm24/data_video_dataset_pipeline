@@ -1,0 +1,150 @@
+{
+ "clip_id": "bar_132",
+ "family": "bar",
+ "chart_form": "bar/pictograph",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:2015 @ 2015"
+   ],
+   "assertion": {
+    "mark": "2015 @ 2015",
+    "field": "value",
+    "expected": 9.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2015 data value must be readable as 9 countries at the end of the series."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1945 @ 1945",
+    "mark:1990 @ 1990"
+   ],
+   "assertion": {
+    "low": "1945 @ 1945",
+    "low_value": 1.0,
+    "high": "1990 @ 1990",
+    "high_value": 10.0,
+    "delta": 9.0,
+    "ratio": 10.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The series must show a clear rise from the 1945 value of 1 to the 1990 value of 10."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "1990 @ 1990",
+    "extreme": "max",
+    "expected": 10.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1990 value must be visibly the highest point and readable as 10 countries."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1990 @ 1990",
+    "mark:1995 @ 1995",
+    "mark:2000 @ 2000",
+    "mark:2005 @ 2005",
+    "mark:2010 @ 2010",
+    "mark:2015 @ 2015"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1990 @ 1990",
+      "value": 10.0
+     },
+     {
+      "mark": "1995 @ 1995",
+      "value": 9.0
+     },
+     {
+      "mark": "2000 @ 2000",
+      "value": 9.0
+     },
+     {
+      "mark": "2005 @ 2005",
+      "value": 9.0
+     },
+     {
+      "mark": "2010 @ 2010",
+      "value": 9.0
+     },
+     {
+      "mark": "2015 @ 2015",
+      "value": 9.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1995-2015 span must be visibly flat at 9 countries after the 1990 peak."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "identity_or_series",
+   "required_candidate": false,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 15,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If country names are shown, South Africa must appear for 1990 and be absent for 1995-2015."
+  }
+ ]
+}

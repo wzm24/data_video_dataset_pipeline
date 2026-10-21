@@ -1,0 +1,5 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series,entity_original,entity_source
+bar_26,1993,1993-blue,480.0,,46.0,0.4600,,#4299C6,printed,Considerable importance,bar-1,semantic_svg_series_backfill
+bar_26,1993,1993-gray,480.0,,54.0,0.5400,,#C9C9C9,printed,Not considerable importance,bar-2,semantic_svg_series_backfill
+bar_26,2005,2005-blue,800.0,,59.0,0.5900,,#4299C6,printed,Considerable importance,bar-3,semantic_svg_series_backfill
+bar_26,2005,2005-gray,800.0,,41.0,0.4100,,#C9C9C9,printed,Not considerable importance,bar-4,semantic_svg_series_backfill

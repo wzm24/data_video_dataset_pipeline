@@ -1,0 +1,15 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_64,reported cases india,india_smallpox,,1962,55000,0.275,cases,,estimated
+line_64,reported cases india,india_smallpox,,1963,85000,0.425,cases,,estimated
+line_64,reported cases india,india_smallpox,,1964,40000,0.2,cases,,estimated
+line_64,reported cases india,india_smallpox,,1965,35000,0.175,cases,,estimated
+line_64,reported cases india,india_smallpox,,1966,35000,0.175,cases,,estimated
+line_64,reported cases india,india_smallpox,,1967,85000,0.425,cases,,estimated
+line_64,reported cases india,india_smallpox,,1968,35000,0.175,cases,,estimated
+line_64,reported cases india,india_smallpox,,1969,25000,0.125,cases,,estimated
+line_64,reported cases india,india_smallpox,,1970,50000,0.25,cases,,estimated
+line_64,reported cases india,india_smallpox,,1971,25000,0.125,cases,,estimated
+line_64,reported cases india,india_smallpox,,1972,30000,0.15,cases,,estimated
+line_64,reported cases india,india_smallpox,,1973,85000,0.425,cases,,estimated
+line_64,reported cases india,india_smallpox,,1974,190000,0.95,cases,,estimated
+line_64,reported cases india,india_smallpox,,1975,0,0,cases,,estimated

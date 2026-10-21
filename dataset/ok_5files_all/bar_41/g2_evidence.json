@@ -1,0 +1,171 @@
+{
+ "clip_id": "bar_41",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:AM @ 2011",
+    "mark:AM @ 2014"
+   ],
+   "assertion": {
+    "low": "AM @ 2011",
+    "low_value": 47.0,
+    "high": "AM @ 2014",
+    "high_value": 61.0,
+    "delta": 14.0,
+    "ratio": 1.2979,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2011 and 2014 AM values, or their difference, must be readable from the chart."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:PM @ 2011",
+    "mark:PM @ 2014"
+   ],
+   "assertion": {
+    "low": "PM @ 2011",
+    "low_value": 42.0,
+    "high": "PM @ 2014",
+    "high_value": 64.0,
+    "delta": 22.0,
+    "ratio": 1.5238,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2011 and 2014 PM values, or their difference, must be readable from the chart."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:AM @ 2011",
+    "mark:PM @ 2011",
+    "mark:AM @ 2012",
+    "mark:PM @ 2012",
+    "mark:AM @ 2013",
+    "mark:PM @ 2013",
+    "mark:AM @ 2014",
+    "mark:PM @ 2014"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "AM @ 2011",
+      "value": 47.0
+     },
+     {
+      "mark": "PM @ 2011",
+      "value": 42.0
+     },
+     {
+      "mark": "AM @ 2012",
+      "value": 54.0
+     },
+     {
+      "mark": "PM @ 2012",
+      "value": 52.0
+     },
+     {
+      "mark": "AM @ 2013",
+      "value": 58.0
+     },
+     {
+      "mark": "PM @ 2013",
+      "value": 61.0
+     },
+     {
+      "mark": "AM @ 2014",
+      "value": 61.0
+     },
+     {
+      "mark": "PM @ 2014",
+      "value": 64.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The year-by-year ordering for both AM and PM must be visible so that every step from 2011 to 2014 is upward."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:AM @ 2011",
+    "mark:PM @ 2011"
+   ],
+   "assertion": {
+    "at": "2011",
+    "above": "AM",
+    "above_value": 47.0,
+    "below": "PM",
+    "below_value": 42.0,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both AM and PM values for 2011 and at least 2013 must be visible to show the crossover."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:AM @ 2011",
+    "mark:PM @ 2011"
+   ],
+   "assertion": {
+    "greater": "AM @ 2011",
+    "lesser": "PM @ 2011",
+    "expected_ratio": 1.119,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The endpoint values or total changes for both AM and PM must be visible so their increases can be compared."
+  }
+ ]
+}

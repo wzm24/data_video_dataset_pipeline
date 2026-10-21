@@ -1,0 +1,132 @@
+{
+ "clip_id": "line_52",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Audit rate for Americans with annual income >=$500K @ 2017"
+   ],
+   "assertion": {
+    "mark": "Audit rate for Americans with annual income >=$500K @ 2017",
+    "field": "value",
+    "expected": 2.5,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The >=$500K series must show both its start value and 2017 value, with the 2017 value lower."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Audit rate for Americans with annual income >=$500K @ 2017",
+    "mark:Audit rate for Americans with annual income >=$500K @ series start"
+   ],
+   "assertion": {
+    "low": "Audit rate for Americans with annual income >=$500K @ 2017",
+    "low_value": 2.5,
+    "high": "Audit rate for Americans with annual income >=$500K @ series start",
+    "high_value": 8.0,
+    "delta": 5.5,
+    "ratio": 3.2,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the magnitude of the >=$500K drop visible across the period."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:<$25K @ 2017",
+    "mark:<$25K @ series start"
+   ],
+   "assertion": {
+    "low": "<$25K @ 2017",
+    "low_value": 0.8,
+    "high": "<$25K @ series start",
+    "high_value": 1.2,
+    "delta": 0.4,
+    "ratio": 1.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The <$25K series must show a start and 2017 value with only a small drop."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Audit rate for Americans with annual income >=$500K @ 2017",
+    "mark:<$25K @ 2017"
+   ],
+   "assertion": {
+    "greater": "Audit rate for Americans with annual income >=$500K @ 2017",
+    "lesser": "<$25K @ 2017",
+    "expected_ratio": 3.125,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the >=$500K and <$25K series must be visible over the full period so the size of their changes can be compared."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:$200K-500K @ 2017",
+    "mark:$200K-500K @ series start"
+   ],
+   "assertion": {
+    "low": "$200K-500K @ 2017",
+    "low_value": 0.7,
+    "high": "$200K-500K @ series start",
+    "high_value": 2.6,
+    "delta": 1.9,
+    "ratio": 3.7143,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The $200K-$500K series must show its start and 2017 values."
+  }
+ ]
+}

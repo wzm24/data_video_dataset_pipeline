@@ -1,0 +1,4 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_116,Black men,black-men,330.0,,,0.5972,relative,#d3d3d3,relative_only
+bar_116,Black women,black-women,690.0,,,0.2986,relative,#d3d3d3,relative_only
+bar_116,Black adults,black-adults,1050.0,,,0.4199,relative,#555555,relative_only

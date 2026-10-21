@@ -1,0 +1,11 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series
+line_19,Sales performance,line-1-5b8fd9,120.0,,,0.7000,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,242.2,,,0.8300,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,364.4,,,0.8000,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,486.7,,,0.9400,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,608.9,,,0.7000,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,731.1,,,0.5800,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,853.3,,,0.3000,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,975.6,,,0.2200,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,1097.8,,,0.2700,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes
+line_19,Sales performance,line-1-5b8fd9,1220.0,,,0.1800,relative,#5b8fd9,relative_only,line-1,intent_based_backfill,Yikes

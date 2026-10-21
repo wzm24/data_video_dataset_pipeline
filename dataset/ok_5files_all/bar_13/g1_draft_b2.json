@@ -1,0 +1,216 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_13",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the factors causing the significant variance in future population projections and the complexities involved.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Two distinct projection values/series are plotted: one with value 1.000 and one with value 3.200, distinguished by colors #FDB042 and #F97316.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "first plotted value"
+    },
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "value",
+     "value": 3.2,
+     "note": "second plotted value"
+    },
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "color",
+     "value": "#FDB042",
+     "note": "color for the 1.000 value"
+    },
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "color",
+     "value": "#F97316",
+     "note": "color for the 3.200 value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart shows two projection values: 1.000 and 3.200.",
+    "Two distinct values are plotted, 1.000 and 3.200.",
+    "The data contains two values for the same position: 1.000 and 3.200."
+   ],
+   "visual_evidence_rule": "Both values (1.000 and 3.200) must be visible as distinct bars, labels, or legend entries; if only one value appears, this unit fails.",
+   "temporal_anchor": "the noun phrase 'the projections' in 'why do the projections vary'",
+   "reviewer_question": "Must the video show both the 1.000 and 3.200 values, or is only the variance needed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The higher projection (3.200) exceeds the lower projection (1.000) by 2.200, i.e. the absolute gap/variance is 2.200.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "value",
+     "value": 3.2,
+     "note": "higher projection"
+    },
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "lower projection"
+    }
+   ],
+   "computation": "3.200 - 1.000 = 2.200",
+   "accepted_routes": [
+    "The projections differ by 2.200.",
+    "The gap between the two projections is 2.200.",
+    "The higher value minus the lower value is 2.200."
+   ],
+   "visual_evidence_rule": "A difference/gap annotation, or both values visible with enough labeling to derive 2.200, must be shown.",
+   "temporal_anchor": "the clause 'why do the projections vary'",
+   "reviewer_question": "Is the 2.200 absolute difference obligatory, or are the two endpoint values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The higher projection is 3.2 times the lower projection (3.200 / 1.000 = 3.200), or equivalently 220% greater ((3.200 - 1.000) / 1.000 = 2.200 = 220%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "value",
+     "value": 3.2,
+     "note": "higher projection"
+    },
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "lower projection"
+    }
+   ],
+   "computation": "3.200 / 1.000 = 3.200; (3.200 - 1.000) / 1.000 = 2.200 = 220%",
+   "accepted_routes": [
+    "The higher value is 3.2 times the lower value.",
+    "3.200 is 220% greater than 1.000.",
+    "The ratio of high to low is 3.2."
+   ],
+   "visual_evidence_rule": "Both values must be visible, and a ratio or percent-change annotation (3.2x or 220%) should be shown to make this explicit.",
+   "temporal_anchor": "the clause 'vary' or the follow-up 'it's complicated'",
+   "reviewer_question": "Should the video include the relative ratio/percentage difference, or only the absolute difference?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Both plotted rows share the same relative_value of 0.0781 (i.e., 7.81% if treated as a proportion).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "1",
+     "x": "750.0",
+     "field": "relative_value",
+     "value": 0.0781,
+     "note": "same relative_value for both rows"
+    }
+   ],
+   "computation": "0.0781 * 100 = 7.81%",
+   "accepted_routes": [
+    "The relative value is 0.0781 for both series.",
+    "Both series share the same relative value, 0.0781.",
+    "The relative value is 7.81% (if 0.0781 is a proportion)."
+   ],
+   "visual_evidence_rule": "The relative_value 0.0781 must appear as a label or annotation for both series; otherwise this unit is not conveyed.",
+   "temporal_anchor": "no clear narration clause; optional detail under 'it's complicated'",
+   "reviewer_question": "Is the identical relative_value 0.0781 a meaningful feature to show, or a data artifact to ignore?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The two values are plotted at the same x position (750.0), implying a grouped or paired comparison.",
+  "The colors #FDB042 and #F97316 distinguish the two projection variants.",
+  "The lower value is 1.000 and the higher value is 3.200 (endpoint values)."
+ ],
+ "unsupported_to_avoid": [
+  "The narration's 2.4 billion variance is not supported by the table; table-derived difference is 2.200.",
+  "Causal claims about why the projections differ (e.g., specific factors) are not present in the table.",
+  "Any extrapolation beyond the two listed values or relative_value."
+ ],
+ "notes": "The table supports only two projection values (1.000 and 3.200) and their derived difference/ratio; no causal factors are present. The narration's 2.4 billion figure is not in the table and should not be used without external confirmation.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.87
+ },
+ "draft_cost": {
+  "sec": 25.3,
+  "usage": {
+   "prompt_tokens": 614,
+   "completion_tokens": 6320,
+   "total_tokens": 6934,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4663
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 358
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

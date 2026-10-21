@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series,name_source
+bar_122,Aug 2016,aug-2016,277.4,,,0.0764,relative,#c9212b,relative_only,Aug 2016,,Very,vlm_axis
+bar_122,Aug 2016,aug-2016,277.4,,,0.2569,relative,#f26d76,relative_only,Aug 2016,,Somewhat,vlm_axis
+bar_122,Nov 2016,nov-2016,552.5,,,0.3264,relative,#c9212b,relative_only,Nov 2016,,Very,vlm_axis
+bar_122,Nov 2016,nov-2016,552.5,,,0.2847,relative,#f26d76,relative_only,Nov 2016,semantic_svg_order_backfill,Somewhat,vlm_axis
+bar_122,Aug 2016,aug-2016,827.5,,,0.3403,relative,#1f5f63,relative_only,Aug 2016,,Very,vlm_axis
+bar_122,Aug 2016,aug-2016,827.5,,,0.2083,relative,#2cb8c9,relative_only,Aug 2016,semantic_svg_order_backfill,Somewhat,vlm_axis
+bar_122,Nov 2016,nov-2016,1102.5,,,0.3056,relative,#1f5f63,relative_only,Nov 2016,,Very,vlm_axis
+bar_122,Nov 2016,nov-2016,1102.5,,,0.2222,relative,#2cb8c9,relative_only,Nov 2016,semantic_svg_order_backfill,Somewhat,vlm_axis

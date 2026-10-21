@@ -1,0 +1,130 @@
+{
+ "clip_id": "bar_43",
+ "family": "bar",
+ "chart_form": "bar/stacked_100",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:White @ Registered",
+    "mark:Nonwhite @ Registered"
+   ],
+   "assertion": {
+    "greater": "White @ Registered",
+    "lesser": "Nonwhite @ Registered",
+    "expected_ratio": 1.85,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both registered segments must be visible/labeled at 74% for White and 40% for Nonwhite, ideally side by side."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:White @ Registered",
+    "mark:Nonwhite @ Registered"
+   ],
+   "assertion": {
+    "low": "Nonwhite @ Registered",
+    "low_value": 40.0,
+    "high": "White @ Registered",
+    "high_value": 74.0,
+    "delta": 34.0,
+    "ratio": 1.85,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible annotation or measured difference between the registered segments must total 34 percentage points."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Nonwhite @ Registered",
+    "segment:Nonwhite @ Couldn't vote"
+   ],
+   "assertion": {
+    "segment": "Nonwhite @ Registered",
+    "expected_share": 0.4,
+    "total_of": "the same category's stacked series",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Nonwhite bar must show a larger 'Couldn't vote' segment at 60% and a smaller 'Registered' segment at 40%."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:White @ Registered",
+    "segment:White @ Couldn't vote"
+   ],
+   "assertion": {
+    "segment": "White @ Registered",
+    "expected_share": 0.74,
+    "total_of": "the same category's stacked series",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The White bar should show a larger 'Registered' segment at 74% and a smaller 'Couldn't vote' segment at 26%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Nonwhite @ Couldn't vote",
+    "mark:White @ Couldn't vote"
+   ],
+   "assertion": {
+    "greater": "Nonwhite @ Couldn't vote",
+    "lesser": "White @ Couldn't vote",
+    "expected_ratio": 2.3077,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 'Couldn't vote' segments must be visible/labeled at 60% for Nonwhite and 26% for White, with the Nonwhite segment clearly larger."
+  }
+ ]
+}

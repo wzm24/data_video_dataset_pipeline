@@ -1,0 +1,258 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_3",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To persuade viewers that the world is becoming more peaceful over the long term, encouraging support for peace and democracy despite current conflicts.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The data series is annual battle deaths per million people, covering 1950 through 2010.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "battle deaths",
+     "x": "1950",
+     "field": "value",
+     "value": 180.2,
+     "note": "first year of the series"
+    },
+    {
+     "entity": "battle deaths",
+     "x": "2010",
+     "field": "value",
+     "value": 12.3,
+     "note": "last year of the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Annual battle deaths per million people, 1950–2010",
+    "The metric is battle deaths per million, tracked yearly from 1950 to 2010",
+    "A six-decade series of battle deaths per million population"
+   ],
+   "visual_evidence_rule": "The data trace must be identified as battle deaths per million people and must cover 1950 through 2010.",
+   "temporal_anchor": "overall, things are getting better",
+   "reviewer_question": "Must the video explicitly identify the metric as battle deaths per million people rather than total battle deaths?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Long-term downward trend: battle deaths per million is much lower at the end of the series in 2010 than at the start in 1950.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "battle deaths",
+     "x": "1950",
+     "field": "value",
+     "value": 180.2,
+     "note": "start of long-term comparison"
+    },
+    {
+     "entity": "battle deaths",
+     "x": "2010",
+     "field": "value",
+     "value": 12.3,
+     "note": "end of long-term comparison"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Battle deaths per million fell from about 180 in 1950 to about 12 in 2010",
+    "The long-run direction is downward over the six decades",
+    "The 2010 level is far below the 1950 level"
+   ],
+   "visual_evidence_rule": "The data trace from 1950 to 2010 must show a net decrease from the first value to the last value.",
+   "temporal_anchor": "things are getting better",
+   "reviewer_question": "Is the net 1950-to-2010 decline sufficient to convey long-term peace, or must intermediate years also be emphasized?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The size of the 1950-to-2010 decline: 167.9 fewer battle deaths per million, about 93% lower than 1950.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "battle deaths",
+     "x": "1950",
+     "field": "value",
+     "value": 180.2,
+     "note": "baseline year"
+    },
+    {
+     "entity": "battle deaths",
+     "x": "2010",
+     "field": "value",
+     "value": 12.3,
+     "note": "comparison year"
+    }
+   ],
+   "computation": "180.2 - 12.3 = 167.9; (180.2 - 12.3) / 180.2 = 0.9317 ≈ 93%",
+   "accepted_routes": [
+    "A drop of about 168 battle deaths per million",
+    "Roughly 93% lower than in 1950",
+    "Less than one-tenth the 1950 rate"
+   ],
+   "visual_evidence_rule": "The chart must make the 1950 and 2010 endpoints visible or annotate the derived decline.",
+   "temporal_anchor": "things are getting better",
+   "reviewer_question": "Must the video quantify the decline, or is showing the downward shape enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Early steep decline: battle deaths per million fell from 180.2 in 1950 to 20.5 in 1955, a drop of 159.7 and about 89% below 1950.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "battle deaths",
+     "x": "1950",
+     "field": "value",
+     "value": 180.2,
+     "note": "early baseline"
+    },
+    {
+     "entity": "battle deaths",
+     "x": "1955",
+     "field": "value",
+     "value": 20.5,
+     "note": "after the early drop"
+    }
+   ],
+   "computation": "180.2 - 20.5 = 159.7; (180.2 - 20.5) / 180.2 = 0.8862 ≈ 89%",
+   "accepted_routes": [
+    "By 1955 the rate was about 89% below 1950",
+    "The early 1950s saw a steep fall, from 180.2 to 20.5",
+    "Battle deaths per million dropped sharply between 1950 and 1955"
+   ],
+   "visual_evidence_rule": "The data trace must show a sharp decrease between 1950 and 1955.",
+   "temporal_anchor": "overall, things are getting better",
+   "reviewer_question": "Should the video call out the early 1950s decline, or focus only on the full-period trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The decline is not monotonic: after the early drop, temporary rebounds occurred, including 48.6 in 1973 and 42.1 in 1984, before later decline.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "battle deaths",
+     "x": "1973",
+     "field": "value",
+     "value": 48.6,
+     "note": "mid-century rebound peak"
+    },
+    {
+     "entity": "battle deaths",
+     "x": "1984",
+     "field": "value",
+     "value": 42.1,
+     "note": "later rebound peak"
+    },
+    {
+     "entity": "battle deaths",
+     "x": "1950",
+     "field": "value",
+     "value": 180.2,
+     "note": "comparison to show rebounds remain below the start"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The decline was interrupted by rebounds, including 48.6 in 1973 and 42.1 in 1984",
+    "The series is not a smooth downward line",
+    "There were later peaks in the 1970s and 1980s, though both stayed below the 1950 level"
+   ],
+   "visual_evidence_rule": "The data trace must show local highs around 1973 and 1984 rather than a smooth uninterrupted decline.",
+   "temporal_anchor": "Yes, there are nasty conflicts going on in many places",
+   "reviewer_question": "Must the video acknowledge temporary reversals/rebounds, or can it simplify to the net downward trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The highest value in the table is 180.2 battle deaths per million in 1950.",
+  "The lowest value in the table is 9.5 battle deaths per million, occurring in 1961 and 1998.",
+  "The 2010 value is 12.3 battle deaths per million, which is not the series minimum."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that democracy causes peace or that speaking up directly reduces battle deaths.",
+  "Extrapolating beyond 2010 or claiming the world will become completely peaceful.",
+  "Using total battle deaths or absolute counts; the table unit is deaths per million.",
+  "Calling 2010 the lowest value; 1961 and 1998 are lower at 9.5.",
+  "Referring to current conflicts after 2010 as if they were in the data.",
+  "Claiming all conflicts have ended or that battle deaths are zero."
+ ],
+ "notes": "The core required story is a long-run decline in battle deaths per million from 1950 to 2010, but the table also shows an early steep drop and later rebounds. Optional units make the non-monotonicity visible without overstating the data.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.15
+ },
+ "draft_cost": {
+  "sec": 38.3,
+  "usage": {
+   "prompt_tokens": 2716,
+   "completion_tokens": 9433,
+   "total_tokens": 12149,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7528
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 2332
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

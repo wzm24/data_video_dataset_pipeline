@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f0f4f8"/>
+<rect x="220.0" y="150.0" width="300" height="450.0" rx="24" fill="#ffffff" stroke="#c4d4e4" stroke-width="4"/>
+<rect x="230.0" y="159.0" width="280" height="431.0" rx="14" fill="#2b4c7e"/>
+<text x="370" y="135.0" text-anchor="middle" font-family="Arial" font-size="72" font-weight="700" fill="#123">98%</text>
+<text x="370" y="655" text-anchor="middle" font-family="Arial" font-size="26" fill="#234">access to clean water</text>
+<rect x="760.0" y="150.0" width="300" height="450.0" rx="24" fill="#ffffff" stroke="#c4d4e4" stroke-width="4"/>
+<rect x="770.0" y="276.0" width="280" height="314.0" rx="14" fill="#2b4c7e"/>
+<text x="910" y="340.0" text-anchor="middle" font-family="Arial" font-size="64" font-weight="700" fill="#ffffff">72%</text>
+<text x="910" y="655" text-anchor="middle" font-family="Arial" font-size="26" fill="#234">access to clean water</text>
+</svg>

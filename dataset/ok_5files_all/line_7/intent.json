@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_7",
+ "intent_en": "To illustrate a corporate strategy that prioritizes long-term growth over immediate profitability, resulting in a massive divergence between revenue and profit.",
+ "previous_intent": "To illustrate the stark divergence between rapidly rising revenue and stagnant profit margins from 1998 to 2018, demonstrating a corporate strategy that prioritizes long-term growth over immediate profitability to exploit antitrust loopholes.",
+ "narration_support": "Profit has stayed around zero because it's more interested in growth.",
+ "chart_support": "Line chart showing Revenue increasing exponentially from 1998 to 2018 while Profit remains flat near zero.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly links low profit to a growth strategy ('playing the long game'), which is visually confirmed by the chart showing rising revenue and flat profit over the 20-year period.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

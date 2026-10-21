@@ -1,0 +1,294 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_16",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that decarbonizing the electricity, residential, commercial, and transportation sectors is the key to solving the majority of US carbon emission problems.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The four sectors named for decarbonization are Electricity generation, Residential, Commercial, and Transportation.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Electricity generation",
+     "x": "4",
+     "field": "value",
+     "value": 28,
+     "note": "Table value for Electricity generation; target sector."
+    },
+    {
+     "entity": "Residential",
+     "x": "0",
+     "field": "value",
+     "value": 14,
+     "note": "Table value for Residential; target sector."
+    },
+    {
+     "entity": "Commercial",
+     "x": "1",
+     "field": "value",
+     "value": 12,
+     "note": "Table value for Commercial; target sector."
+    },
+    {
+     "entity": "Transportation",
+     "x": "3",
+     "field": "value",
+     "value": 28,
+     "note": "Table value for Transportation; target sector."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Electricity generation, Residential, Commercial, and Transportation are the four target sectors.",
+    "The decarbonization set is electricity, residential, commercial, and transportation.",
+    "The four sectors highlighted are Electricity generation, Residential, Commercial, and Transportation."
+   ],
+   "visual_evidence_rule": "Labels or highlights must distinguish these four sectors from the Industrial sector.",
+   "temporal_anchor": "The clause naming 'electricity, residential, commercial, and transportation' should carry it.",
+   "reviewer_question": "Must the video explicitly identify all four sectors in the decarbonization target set?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The four target sectors together total 82 percentage points: Electricity generation 28 + Residential 14 + Commercial 12 + Transportation 28. If normalized across all five listed percentages (sum 103), their share is about 80% (82/103≈79.6%).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Electricity generation",
+     "x": "4",
+     "field": "value",
+     "value": 28,
+     "note": "One of the four target sectors."
+    },
+    {
+     "entity": "Residential",
+     "x": "0",
+     "field": "value",
+     "value": 14,
+     "note": "One of the four target sectors."
+    },
+    {
+     "entity": "Commercial",
+     "x": "1",
+     "field": "value",
+     "value": 12,
+     "note": "One of the four target sectors."
+    },
+    {
+     "entity": "Transportation",
+     "x": "3",
+     "field": "value",
+     "value": 28,
+     "note": "One of the four target sectors."
+    }
+   ],
+   "computation": "28+14+12+28=82; all five table values sum to 103, so 82/103≈79.6%.",
+   "accepted_routes": [
+    "Electricity generation, Residential, Commercial, and Transportation together account for 82 percentage points.",
+    "The four target sectors total 82%.",
+    "Together these four sectors are about 80% of the five listed values if normalized (82/103≈79.6%)."
+   ],
+   "visual_evidence_rule": "A sum or combined annotation for the four target sectors must be visible or inferable from the highlighted slices.",
+   "temporal_anchor": "The clause 'If electricity, residential, commercial, and transportation were mostly decarbonized' plus the 'solved a lot' conclusion.",
+   "reviewer_question": "Must the video state the four-sector total as 82 percentage points (or ~80% normalized)?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Ranking by sector share: Transportation and Electricity generation are tied at 28% each; Industrial is 21%; Residential is 14%; Commercial is 12%.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Transportation",
+     "x": "3",
+     "field": "value",
+     "value": 28,
+     "note": "Tied for largest share."
+    },
+    {
+     "entity": "Electricity generation",
+     "x": "4",
+     "field": "value",
+     "value": 28,
+     "note": "Tied for largest share."
+    },
+    {
+     "entity": "Industrial",
+     "x": "2",
+     "field": "value",
+     "value": 21,
+     "note": "Next-largest sector."
+    },
+    {
+     "entity": "Residential",
+     "x": "0",
+     "field": "value",
+     "value": 14,
+     "note": "Fourth-largest sector."
+    },
+    {
+     "entity": "Commercial",
+     "x": "1",
+     "field": "value",
+     "value": 12,
+     "note": "Smallest sector."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Transportation and Electricity generation are tied for largest at 28%, then Industrial 21%, Residential 14%, Commercial 12%.",
+    "The order is Transportation = Electricity generation (28%) > Industrial (21%) > Residential (14%) > Commercial (12%).",
+    "Commercial is smallest at 12%, followed by Residential at 14%.",
+    "Electricity generation and Transportation share the top share at 28% each."
+   ],
+   "visual_evidence_rule": "Slice sizes and labels must show the tie at 28% and the descending order to 12%.",
+   "temporal_anchor": "The 'broken down by economic sector' clause when the chart hierarchy is shown.",
+   "reviewer_question": "Must the video convey the full sector ranking and the 28% tie, or only the four target sectors?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Industrial is the sector not included in the four-sector decarbonization target set; it is 21%.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Industrial",
+     "x": "2",
+     "field": "value",
+     "value": 21,
+     "note": "Non-targeted sector value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Industrial, at 21%, is the non-targeted sector.",
+    "The decarbonization set leaves out Industrial, which is 21%.",
+    "Industrial accounts for 21% and is not part of the four target sectors."
+   ],
+   "visual_evidence_rule": "Industrial slice must be labeled 21% and visually not highlighted as one of the four targets.",
+   "temporal_anchor": "The 'broken down by economic sector' clause or the moment the target set is contrasted with the remaining sector.",
+   "reviewer_question": "Must the video identify Industrial as the excluded/non-target sector?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Electricity generation and Transportation together total 56 percentage points (28+28); normalized across all five listed values, they are about 54% (56/103≈54.4%).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Electricity generation",
+     "x": "4",
+     "field": "value",
+     "value": 28,
+     "note": "One of the two largest sectors."
+    },
+    {
+     "entity": "Transportation",
+     "x": "3",
+     "field": "value",
+     "value": 28,
+     "note": "One of the two largest sectors."
+    }
+   ],
+   "computation": "28+28=56; 56/103≈54.4%.",
+   "accepted_routes": [
+    "Electricity generation plus Transportation equals 56 percentage points.",
+    "The two largest sectors together are 56%.",
+    "Together they are about 54% of the five listed values if normalized (56/103≈54.4%)."
+   ],
+   "visual_evidence_rule": "Both 28% slices or a combined annotation for them must be visible.",
+   "temporal_anchor": "The clause listing electricity and transportation as target sectors.",
+   "reviewer_question": "Must the video state that the two largest sectors alone exceed half (if normalized) or total 56 percentage points?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The chart includes five economic sectors: Residential, Commercial, Industrial, Transportation, and Electricity generation.",
+  "Residential and Commercial together total 26 percentage points (14+12).",
+  "The four-sector target total (82) exceeds Industrial (21) by 61 percentage points (82-21=61).",
+  "Commercial is the smallest sector at 12%."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that decarbonizing these sectors will reduce US carbon emissions by exactly 82%.",
+  "Stating the five table percentages sum to 100% (raw table sum is 103).",
+  "Extrapolating to future emissions, policy outcomes, or global emissions.",
+  "Presenting Industrial as part of the four-sector decarbonization target set.",
+  "Using a different denominator without stating the formula."
+ ],
+ "notes": "Raw table percentages sum to 103, so normalized shares (e.g., 82/103≈79.6%) differ from raw percentage-point sums; use formulas when normalizing. The core intent is supported by the four-sector majority composition, not by a causal intervention estimate.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 66.6,
+  "usage": {
+   "prompt_tokens": 748,
+   "completion_tokens": 14684,
+   "total_tokens": 15432,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12495
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 492
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

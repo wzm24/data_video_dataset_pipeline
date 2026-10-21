@@ -1,0 +1,235 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_16",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that public support for marijuana legalization exceeds opposition among Americans.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Support for marijuana legalization is 58%, represented by the inner arc.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "inner arc",
+     "x": "0",
+     "field": "value",
+     "value": 58,
+     "note": "Inner arc value; mapped to support per intent/narration."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Support is 58%.",
+    "58% of Americans support legalization.",
+    "The support share is about 58%.",
+    "0.58 support share."
+   ],
+   "visual_evidence_rule": "The 58% label must be visibly attached to the support/inner arc, not to the opposition arc.",
+   "temporal_anchor": "the clause introducing the support or pro-legalization figure",
+   "reviewer_question": "Should the video be required to explicitly label 58% as support, given the table calls it only 'inner arc'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Opposition to marijuana legalization is 42%, represented by the outer arc.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "outer arc",
+     "x": "1",
+     "field": "value",
+     "value": 42,
+     "note": "Outer arc value; mapped to opposition per intent/narration."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Opposition is 42%.",
+    "42% want marijuana to remain illegal.",
+    "The opposition share is about 42%.",
+    "0.42 opposition share."
+   ],
+   "visual_evidence_rule": "The 42% label must be visibly attached to the opposition/outer arc, not to the support arc.",
+   "temporal_anchor": "the opposition or comparison clause",
+   "reviewer_question": "Should the video be required to explicitly label 42% as opposition, given the table calls it only 'outer arc'?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Support exceeds opposition by 16 percentage points: 58% support versus 42% opposition.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "inner arc",
+     "x": "0",
+     "field": "value",
+     "value": 58,
+     "note": "Support share."
+    },
+    {
+     "entity": "outer arc",
+     "x": "1",
+     "field": "value",
+     "value": 42,
+     "note": "Opposition share."
+    }
+   ],
+   "computation": "58 - 42 = 16",
+   "accepted_routes": [
+    "Support leads opposition by 16 points.",
+    "The gap is 16 percentage points in favor of legalization.",
+    "58% support versus 42% opposition, a 16-point difference.",
+    "Support is about 16 points higher than opposition."
+   ],
+   "visual_evidence_rule": "Both arc labels or a comparison annotation must make 58% > 42% visible; the 16-point gap may be shown as a callout.",
+   "temporal_anchor": "the core claim clause that support exceeds opposition",
+   "reviewer_question": "Is the explicit 16-point gap required, or is showing 58% > 42% sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The support and opposition shares together account for the complete donut: 58% + 42% = 100%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "inner arc",
+     "x": "0",
+     "field": "value",
+     "value": 58,
+     "note": "Support share."
+    },
+    {
+     "entity": "outer arc",
+     "x": "1",
+     "field": "value",
+     "value": 42,
+     "note": "Opposition share."
+    }
+   ],
+   "computation": "58 + 42 = 100",
+   "accepted_routes": [
+    "Together they total 100%.",
+    "The donut is fully accounted for by 58% and 42%.",
+    "The two segments sum to the whole.",
+    "Support plus opposition equals 100%."
+   ],
+   "visual_evidence_rule": "The donut must appear complete with exactly two segments whose labels total 100%.",
+   "temporal_anchor": "throughout the donut reveal, or in any composition/total clause",
+   "reviewer_question": "Should the complete 100% composition be required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Support is a majority, more than half, at 58%.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "inner arc",
+     "x": "0",
+     "field": "value",
+     "value": 58,
+     "note": "Support share is more than half; threshold is verbal, not a table cell."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "58% is a majority.",
+    "More than half support legalization.",
+    "Support is above half.",
+    "A majority supports legalization at 58%."
+   ],
+   "visual_evidence_rule": "If shown, majority status must be tied to the 58% support share, e.g. a 'majority' label, not to the 42% opposition share.",
+   "temporal_anchor": "optional majority clause following the support value",
+   "reviewer_question": "Should majority status be required beyond the simple 58% > 42% comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Visual emphasis on the 58% arc as the larger segment is valid, provided it does not imply rapid change or causation.",
+  "A donut chart with two complementary arcs summing to the whole is a valid visual form.",
+  "Labeling the inner arc as support and outer arc as opposition is valid if it makes the mapping clear."
+ ],
+ "unsupported_to_avoid": [
+  "The original narration's 52% support and 45% opposition values, because the table gives 58% and 42%.",
+  "Causal or rapid-change language such as 'rapidly outpacing' beyond the static table.",
+  "Extrapolating future support or opposition trends.",
+  "Party, demographic, or regional breakdowns not present in the table.",
+  "Treating 58 and 42 as raw respondent counts instead of percentages.",
+  "Assuming a denominator other than the two donut arcs, such as voters only."
+ ],
+ "notes": "Table contains only two donut arcs; map inner arc to support and outer arc to opposition per intent/narration. Original narration's 52/45 conflict with table values and should not be used.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.11
+ },
+ "draft_cost": {
+  "sec": 45.5,
+  "usage": {
+   "prompt_tokens": 632,
+   "completion_tokens": 9666,
+   "total_tokens": 10298,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8056
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 376
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

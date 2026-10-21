@@ -1,0 +1,181 @@
+{
+ "clip_id": "bar_154",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 4,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series must be visibly present and aligned to the same four year labels."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Series A @ 1994",
+    "mark:Series B @ 1994",
+    "mark:Series A @ 2016",
+    "mark:Series B @ 2016"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Series A @ 1994",
+      "value": 0.1492
+     },
+     {
+      "mark": "Series B @ 1994",
+      "value": 0.1585
+     },
+     {
+      "mark": "Series A @ 2016",
+      "value": 0.5129
+     },
+     {
+      "mark": "Series B @ 2016",
+      "value": 0.5408
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both series must show an increase from the first time point to the last."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Series A @ 1994",
+    "mark:Series B @ 1994",
+    "mark:Series A @ 2008",
+    "mark:Series B @ 2008",
+    "mark:Series A @ 2014",
+    "mark:Series B @ 2014",
+    "mark:Series A @ 2016",
+    "mark:Series B @ 2016"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Series A @ 1994",
+      "value": 0.1492
+     },
+     {
+      "mark": "Series B @ 1994",
+      "value": 0.1585
+     },
+     {
+      "mark": "Series A @ 2008",
+      "value": 0.345
+     },
+     {
+      "mark": "Series B @ 2008",
+      "value": 0.2985
+     },
+     {
+      "mark": "Series A @ 2014",
+      "value": 0.401
+     },
+     {
+      "mark": "Series B @ 2014",
+      "value": 0.429
+     },
+     {
+      "mark": "Series A @ 2016",
+      "value": 0.5129
+     },
+     {
+      "mark": "Series B @ 2016",
+      "value": 0.5408
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Each series must show monotonic upward progression across the four displayed time points."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Series A @ 2016",
+    "extreme": "min",
+    "expected": 0.5129,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final year 2016 must be visibly the highest point in both series."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Series A @ 1994",
+    "mark:Series B @ 1994",
+    "mark:Series A @ 2016",
+    "mark:Series B @ 2016"
+   ],
+   "assertion": {
+    "low": "Series A @ 1994",
+    "low_value": 0.1492,
+    "high": "Series B @ 2016",
+    "high_value": 0.5408,
+    "delta": 0.3916,
+    "ratio": 3.6247,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The change from first to last point should be visibly comparable between the two series, with one slightly larger overall."
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "clip_id": "bar_148",
+ "family": "bar",
+ "chart_form": "bar/grouped",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Bottom fifth @ 300.0"
+   ],
+   "assertion": {
+    "segment": "Bottom fifth @ 300.0",
+    "expected_share": 0.0008,
+    "total_of": "unknown",
+    "total": 1040.721,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The bottom-fifth composition must show a dominant labor segment near 0.82 and a small other segment near 0.18."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Top fifth @ 940.0"
+   ],
+   "assertion": {
+    "segment": "Top fifth @ 940.0",
+    "expected_share": 0.0006,
+    "total_of": "unknown",
+    "total": 1040.721,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The top-fifth composition must show a labor segment near 0.62 and an other segment near 0.38."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Top 1% @ 1100.0"
+   ],
+   "assertion": {
+    "segment": "Top 1% @ 1100.0",
+    "expected_share": 0.0003,
+    "total_of": "unknown",
+    "total": 1040.721,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The top 1% composition must show the non-labor segment at about 0.65, exceeding the labor segment at about 0.35."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Bottom fifth @ 300.0",
+    "mark:Second fifth @ 460.0",
+    "mark:Third fifth @ 620.0",
+    "mark:Fourth fifth @ 780.0",
+    "mark:Top fifth @ 940.0",
+    "mark:Top 1% @ 1100.0"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Bottom fifth @ 300.0",
+      "value": 0.82
+     },
+     {
+      "mark": "Second fifth @ 460.0",
+      "value": 0.85
+     },
+     {
+      "mark": "Third fifth @ 620.0",
+      "value": 0.82
+     },
+     {
+      "mark": "Fourth fifth @ 780.0",
+      "value": 0.81
+     },
+     {
+      "mark": "Top fifth @ 940.0",
+      "value": 0.62
+     },
+     {
+      "mark": "Top 1% @ 1100.0",
+      "value": 0.35
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual must show the labor share remaining high for the first four groups and declining steeply for the top fifth and top 1%."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Bottom fifth @ 300.0",
+    "mark:Bottom fifth @ 300.0"
+   ],
+   "assertion": {
+    "greater": "Bottom fifth @ 300.0",
+    "lesser": "Bottom fifth @ 300.0",
+    "expected_ratio": 4.5556,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual must allow comparing the top 1% and bottom fifth segments, e.g., both groups visible with their labor/non-labor splits."
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "clip_id": "donut_12",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:share @ share"
+   ],
+   "assertion": {
+    "segment": "share @ share",
+    "expected_share": 0.3,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A 30% slice/segment must be visibly labeled as the platform/commission/share portion."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:remaining @ rest"
+   ],
+   "assertion": {
+    "segment": "remaining @ rest",
+    "expected_share": 0.7,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The complementary 70% segment must be visible/labeled if the donut is shown as a complete composition."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:remaining @ rest",
+    "mark:share @ share"
+   ],
+   "assertion": {
+    "greater": "remaining @ rest",
+    "lesser": "share @ share",
+    "expected_ratio": 2.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 30% segment must appear visibly smaller than the 70% segment, or a comparison label must state 30% < 70%/less than half."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:share @ share",
+    "segment:remaining @ rest"
+   ],
+   "assertion": {
+    "segment": "share @ share",
+    "expected_share": 0.3,
+    "total_of": "percent",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "If a donut/pie is used, the 30% and 70% segments must visibly fill the entire 100% circle."
+  }
+ ]
+}

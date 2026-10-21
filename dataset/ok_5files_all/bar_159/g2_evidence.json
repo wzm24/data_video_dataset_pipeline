@@ -1,0 +1,165 @@
+{
+ "clip_id": "bar_159",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:USA @ USA",
+    "mark:OECD @ OECD"
+   ],
+   "assertion": {
+    "greater": "USA @ USA",
+    "lesser": "OECD @ OECD",
+    "expected_ratio": 1.0138,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "USA and OECD are both identifiable and their encoded values are visibly ordered with USA higher than OECD."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:FIN @ FIN",
+    "mark:USA @ USA"
+   ],
+   "assertion": {
+    "greater": "FIN @ FIN",
+    "lesser": "USA @ USA",
+    "expected_ratio": 1.0432,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Finland, Japan, and USA are all identifiable and both Finland and Japan have encoded values above USA."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:KOR @ KOR",
+    "mark:USA @ USA"
+   ],
+   "assertion": {
+    "greater": "KOR @ KOR",
+    "lesser": "USA @ USA",
+    "expected_ratio": 1.0499,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "South Korea, Singapore, and USA are identifiable and both South Korea and Singapore have encoded values above USA."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:SGP @ SGP",
+    "mark:JPN @ JPN",
+    "mark:KOR @ KOR",
+    "mark:FIN @ FIN",
+    "mark:NZL @ NZL",
+    "mark:UK @ UK",
+    "mark:USA @ USA",
+    "mark:OECD @ OECD"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "SGP @ SGP",
+      "value": 0.6667
+     },
+     {
+      "mark": "JPN @ JPN",
+      "value": 0.6232
+     },
+     {
+      "mark": "KOR @ KOR",
+      "value": 0.6228
+     },
+     {
+      "mark": "FIN @ FIN",
+      "value": 0.6188
+     },
+     {
+      "mark": "NZL @ NZL",
+      "value": 0.6024
+     },
+     {
+      "mark": "UK @ UK",
+      "value": 0.5983
+     },
+     {
+      "mark": "USA @ USA",
+      "value": 0.5932
+     },
+     {
+      "mark": "OECD @ OECD",
+      "value": 0.5851
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All eight listed entities are displayed with an ordering that matches SGP > JPN > KOR > FIN > NZL > UK > USA > OECD."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:USA @ USA",
+    "mark:OECD @ OECD"
+   ],
+   "assertion": {
+    "greater": "USA @ USA",
+    "lesser": "OECD @ OECD",
+    "expected_ratio": 1.0138,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The gaps between USA-OECD, Finland-USA, and Japan-USA are visible; the USA-OECD gap appears smaller than the other two."
+  }
+ ]
+}

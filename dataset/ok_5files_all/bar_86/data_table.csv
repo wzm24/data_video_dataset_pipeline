@@ -1,0 +1,5 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_86,Fall,fall,591.0,,42.000,0.6841,,#F05045,printed,bar-1,semantic_svg_backfill
+bar_86,Stay,stay,779.1,,29.000,0.4748,,#E88D82,printed,bar-2,semantic_svg_backfill
+bar_86,Unsure,unsure,967.0,,22.000,0.3487,,#8C8C8C,printed,bar-3,semantic_svg_backfill
+bar_86,Rise,rise,401.9,,7.000,0.1188,,#2196F3,printed,bar-4,semantic_svg_backfill

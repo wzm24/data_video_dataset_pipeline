@@ -1,0 +1,139 @@
+{
+ "clip_id": "bar_156",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 2,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both entity names must appear as data labels or annotations, and the backfilled Reported Assets entry must be distinguishable from the primary Reported Assets entry."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Reported Assets",
+    "mark:Actual Liabilities"
+   ],
+   "assertion": {
+    "greater": "Reported Assets",
+    "lesser": "Actual Liabilities",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show or label the primary Reported Assets and Actual Liabilities values as equal at 0.2632."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Actual Liabilities",
+    "mark:Reported Assets"
+   ],
+   "assertion": {
+    "greater": "Actual Liabilities",
+    "lesser": "Reported Assets",
+    "expected_ratio": 1.0592,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show Actual Liabilities as higher than the bar-3 Reported Assets value, or label the difference as 0.0147."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Reported Assets",
+    "mark:Actual Liabilities",
+    "mark:Reported Assets"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Reported Assets",
+      "value": 0.2632
+     },
+     {
+      "mark": "Actual Liabilities",
+      "value": 0.2632
+     },
+     {
+      "mark": "Reported Assets",
+      "value": 0.2485
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the tie at 0.2632 and the lower 0.2485 value apparent."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Reported Assets",
+    "mark:Actual Liabilities",
+    "mark:Reported Assets"
+   ],
+   "assertion": {
+    "low": "Reported Assets",
+    "low_value": 0.2485,
+    "high": "Reported Assets",
+    "high_value": 0.2632,
+    "delta": 0.0147,
+    "ratio": 1.0592,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both the highest and lowest relative values, or label the spread as 0.0147."
+  }
+ ]
+}

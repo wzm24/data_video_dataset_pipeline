@@ -1,0 +1,139 @@
+{
+ "clip_id": "bar_123",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 1,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A single line or bar series must be visible with x-axis years spanning 1950–2013 and units marked as billion 2014 USD."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:military spending @ 1950",
+    "mark:military spending @ 2013"
+   ],
+   "assertion": {
+    "low": "military spending @ 1950",
+    "low_value": 85.0,
+    "high": "military spending @ 2013",
+    "high_value": 580.0,
+    "delta": 495.0,
+    "ratio": 6.8235,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1950 and 2013 endpoints must be identifiable, labeled, or annotated on the same series."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "military spending @ 2009",
+    "extreme": "max",
+    "expected": 720.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2009 data point must be marked or annotated as the maximum."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:military spending @ 2009",
+    "mark:military spending @ 2013"
+   ],
+   "assertion": {
+    "low": "military spending @ 2013",
+    "low_value": 580.0,
+    "high": "military spending @ 2009",
+    "high_value": 720.0,
+    "delta": 140.0,
+    "ratio": 1.2414,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2009 peak and 2013 endpoint must both be visible and linked by a descending segment or annotation."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:military spending @ 1950",
+    "mark:military spending @ 1952",
+    "mark:military spending @ 1954"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "military spending @ 1950",
+      "value": 85.0
+     },
+     {
+      "mark": "military spending @ 1952",
+      "value": 430.0
+     },
+     {
+      "mark": "military spending @ 1954",
+      "value": 230.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The early points 1950, 1952, and 1954 must be visible as a spike-and-fall segment."
+  }
+ ]
+}

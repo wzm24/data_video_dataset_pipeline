@@ -1,0 +1,123 @@
+{
+ "clip_id": "bar_87",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:55% of all household cats are overweight @ 640.0"
+   ],
+   "assertion": {
+    "mark": "55% of all household cats are overweight @ 640.0",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A value label or bar/segment for overweight-cat prevalence must read 55%."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:9% of their owners know that @ 640.0"
+   ],
+   "assertion": {
+    "mark": "9% of their owners know that @ 640.0",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A value label or bar/segment for owner awareness must read 9%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:55% of all household cats are overweight @ 640.0",
+    "mark:9% of their owners know that @ 640.0"
+   ],
+   "assertion": {
+    "greater": "55% of all household cats are overweight @ 640.0",
+    "lesser": "9% of their owners know that @ 640.0",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both 55% and 9% must be visible and comparable; the disparity should be shown as a gap/difference, not only as two isolated labels."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:55% of all household cats are overweight @ 640.0",
+    "mark:9% of their owners know that @ 640.0"
+   ],
+   "assertion": {
+    "greater": "55% of all household cats are overweight @ 640.0",
+    "lesser": "9% of their owners know that @ 640.0",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If included, a ratio or multiplier annotation, or a side-by-side comparison, must make the roughly 6.1x relation visible."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:55% of all household cats are overweight @ 640.0"
+   ],
+   "assertion": {
+    "segment": "55% of all household cats are overweight @ 640.0",
+    "expected_share": 0.5,
+    "total_of": "unknown",
+    "total": 2.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A majority or over-half cue/label should accompany or frame the 55% mark if this framing is used."
+  }
+ ]
+}

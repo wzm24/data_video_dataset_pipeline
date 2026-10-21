@@ -1,0 +1,136 @@
+{
+ "clip_id": "line_96",
+ "family": "line",
+ "chart_form": "line/multi_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Mexico @ 2007",
+    "mark:Mexico @ 2017"
+   ],
+   "assertion": {
+    "low": "Mexico @ 2017",
+    "low_value": 4.9,
+    "high": "Mexico @ 2007",
+    "high_value": 6.9,
+    "delta": 2.0,
+    "ratio": 1.4082,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Mexico series must visibly fall from 2007 to 2017, with 2007 and 2017 values or a labeled drop shown."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Other countries @ 2017",
+    "mark:Mexico @ 2017"
+   ],
+   "assertion": {
+    "greater": "Other countries @ 2017",
+    "lesser": "Mexico @ 2017",
+    "expected_ratio": 1.1224,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "At the 2017 x-position, the Other countries series/bar must be visibly above Mexico's 4.9m mark."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:Mexico @ 2015",
+    "mark:Other countries @ 2015"
+   ],
+   "assertion": {
+    "at": "2015",
+    "above": "Mexico",
+    "above_value": 5.6,
+    "below": "Other countries",
+    "below_value": 5.4,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Chart must show Mexico above Other at 2015 and Other above Mexico at 2017, ideally marking the interval or crossing point."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Other countries @ 1990",
+    "mark:Other countries @ 2017"
+   ],
+   "assertion": {
+    "low": "Other countries @ 1990",
+    "low_value": 1.5,
+    "high": "Other countries @ 2017",
+    "high_value": 5.5,
+    "delta": 4.0,
+    "ratio": 3.6667,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Other countries series must visibly rise across the full 1990-2017 span, with endpoint values or growth annotation."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Mexico @ 2007",
+    "segment:Other countries @ 2007",
+    "segment:Mexico @ 2017",
+    "segment:Other countries @ 2017"
+   ],
+   "assertion": {
+    "segment": "Mexico @ 2007",
+    "expected_share": 0.6635,
+    "total_of": "million",
+    "total": 10.4,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "A stacked share/100% chart or labeled percentages must show Other above 50% and Mexico below 50% in 2017, optionally contrasting with 2007."
+  }
+ ]
+}

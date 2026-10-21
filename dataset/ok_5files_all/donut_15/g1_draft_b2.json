@@ -1,0 +1,222 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_15",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the proportion of electricity consumption in California attributed to indoor marijuana cultivation relative to total household usage.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Indoor marijuana cultivation accounts for 12% of California household electricity consumption.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 12,
+     "note": "printed share value is 12 percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Indoor marijuana cultivation accounts for 12% of California household electricity consumption.",
+    "12 percent of household electricity in California comes from indoor marijuana growing.",
+    "The indoor marijuana cultivation share of California household electricity use is 12%.",
+    "Indoor grow modules make up 12% of California household electricity use."
+   ],
+   "visual_evidence_rule": "Donut slice or label must show 12% for indoor marijuana cultivation, with the whole labeled as California household electricity consumption.",
+   "temporal_anchor": "The percentage clause: 'indoor marijuana grow modules account for about X% of household electricity use' (use table's 12%).",
+   "reviewer_question": "Should the ground truth require the table's 12% as the authoritative share value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The remaining 88% of California household electricity consumption is from other household uses.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 12,
+     "note": "complement of the 12% share"
+    }
+   ],
+   "computation": "100 - 12 = 88 (100% total implied by percent unit)",
+   "accepted_routes": [
+    "The remaining 88% of California household electricity use comes from other uses.",
+    "Other household uses account for 88% of California household electricity consumption.",
+    "The non-indoor-marijuana share is 88% (100% - 12%).",
+    "California household electricity use is 88% from other sources."
+   ],
+   "visual_evidence_rule": "Remainder slice or legend must show or imply 88%, or the donut must visually place the 12% slice against the 100% whole.",
+   "temporal_anchor": "Not explicitly in narration; if shown, attach to the donut remainder/legend after the main percentage.",
+   "reviewer_question": "Should the 88% complement be required or only optional visual context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The 12% share is equivalent to 0.12 as a proportion.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "relative_value",
+     "value": 0.12,
+     "note": "decimal equivalent of 12%"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The share is 12%, equivalent to 0.12 as a proportion.",
+    "12 percent can be written as 0.12.",
+    "The relative value is 0.1200.",
+    "The decimal form of the share is 0.12."
+   ],
+   "visual_evidence_rule": "If decimal form appears, it must be 0.12 or 12%, not a percent value one hundred times smaller.",
+   "temporal_anchor": "Same percentage clause, only if a decimal or relative-value annotation is displayed.",
+   "reviewer_question": "Must the video convert 12% to 0.12, or is displaying 12% sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 12% share is relative to total household electricity consumption in California, not total electricity consumption overall.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 12,
+     "note": "numeric value anchored to scope from intent/narration"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 12% share is of total household electricity consumption in California, not total electricity consumption overall.",
+    "The denominator is California household electricity usage.",
+    "This percentage is relative to household electricity use in California.",
+    "It is a share of household electricity consumption, not all electricity use."
+   ],
+   "visual_evidence_rule": "Title, subtitle, or legend must specify California household electricity consumption as the denominator.",
+   "temporal_anchor": "The phrase 'of household electricity use' and the opening phrase 'In California'.",
+   "reviewer_question": "Should the ground truth require the household-electricity denominator, not all California electricity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 12% share refers to indoor marijuana cultivation, not outdoor or all marijuana cultivation.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "share",
+     "x": "share",
+     "field": "value",
+     "value": 12,
+     "note": "numeric value anchored to entity scope from intent/narration"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The share refers to indoor marijuana cultivation, not outdoor or all marijuana cultivation.",
+    "Indoor grow modules are the entity; the 12% is not for marijuana overall.",
+    "The 12% is specifically indoor marijuana cultivation's share.",
+    "The percentage applies to indoor marijuana cultivation in California."
+   ],
+   "visual_evidence_rule": "Label must specify indoor marijuana cultivation, not all marijuana.",
+   "temporal_anchor": "The phrase 'indoor marijuana grow modules'.",
+   "reviewer_question": "Should the ground truth require the 'indoor' qualifier rather than allowing all marijuana cultivation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The donut's unhighlighted remainder represents the other 88% of household electricity use.",
+  "The 12% slice is a minority of the whole.",
+  "The chart uses a part-to-whole donut form."
+ ],
+ "unsupported_to_avoid": [
+  "The original narration's percentage if it conflicts with the table's 12%.",
+  "Causal explanations for why indoor marijuana cultivation uses electricity.",
+  "Extrapolation to total California electricity consumption or national/global shares.",
+  "Treating the denominator as all electricity consumption rather than household electricity consumption.",
+  "Interpreting relative_value 0.1200 as a percent rather than as a proportion.",
+  "Ranking or comparing against other categories not present in the table.",
+  "Saying indoor marijuana cultivation is the largest or majority share."
+ ],
+ "notes": "Only one numeric share is provided, so most candidate units hinge on the 12% value, its implied complement, and correct scope/denominator. The table's 12% should override any conflicting narration value.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.96
+ },
+ "draft_cost": {
+  "sec": 47.1,
+  "usage": {
+   "prompt_tokens": 590,
+   "completion_tokens": 11032,
+   "total_tokens": 11622,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9419
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 334
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

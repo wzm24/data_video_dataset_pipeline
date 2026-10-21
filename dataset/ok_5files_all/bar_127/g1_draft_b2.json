@@ -1,0 +1,273 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_127",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant proportion of the population killed in Hiroshima and Nagasaki.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Both largest relative rows exceed both survived rows.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "100k killed",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5176,
+     "note": "largest row"
+    },
+    {
+     "entity": "HIROHIMA",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.4853,
+     "note": "second largest row"
+    },
+    {
+     "entity": "survived",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2022,
+     "note": "larger survived row"
+    },
+    {
+     "entity": "survived",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1699,
+     "note": "smaller survived row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Both survived values are lower than both larger rows",
+    "0.17 and 0.20 are below 0.49 and 0.52",
+    "Survived segments are smaller than killed-related segments"
+   ],
+   "visual_evidence_rule": "Two larger bars or segments visibly exceed two smaller survived segments.",
+   "temporal_anchor": "About a third of the population of both cities were killed",
+   "reviewer_question": "Must the video show both larger rows exceeding both survived rows?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Full ranking: 100k killed, HIROHIMA, survived 0.2022, survived 0.1699.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "100k killed",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5176,
+     "note": "rank 1"
+    },
+    {
+     "entity": "HIROHIMA",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.4853,
+     "note": "rank 2"
+    },
+    {
+     "entity": "survived",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2022,
+     "note": "rank 3"
+    },
+    {
+     "entity": "survived",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1699,
+     "note": "rank 4"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Order is 0.5176 > 0.4853 > 0.2022 > 0.1699",
+    "100k killed, HIROHIMA, survived, survived from largest to smallest",
+    "Two killed-related rows rank above both survived rows"
+   ],
+   "visual_evidence_rule": "Visual order or labels reflect this largest-to-smallest ranking.",
+   "temporal_anchor": "both cities were killed",
+   "reviewer_question": "Is full four-row ranking required or only the killed-vs-survived contrast?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The maximum relative value is 0.5176 for 100k killed.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "100k killed",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5176,
+     "note": "maximum row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "100k killed is largest at about 0.52",
+    "Maximum is 0.5176 for 100k killed",
+    "Top row is 100k killed with relative value 0.5176"
+   ],
+   "visual_evidence_rule": "The 100k killed segment is visibly the largest.",
+   "temporal_anchor": "About a third of the population of both cities were killed",
+   "reviewer_question": "Must the maximum segment be explicitly shown as largest?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Largest minus larger survived equals about 0.32.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "100k killed",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5176,
+     "note": "largest row"
+    },
+    {
+     "entity": "survived",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2022,
+     "note": "larger survived row"
+    }
+   ],
+   "computation": "0.5176 - 0.2022 = 0.3154",
+   "accepted_routes": [
+    "Gap is about 0.32 relative units",
+    "0.5176 exceeds 0.2022 by about 0.3154",
+    "Killed max is about 0.32 above larger survived"
+   ],
+   "visual_evidence_rule": "Difference between largest and larger survived segment is visible.",
+   "temporal_anchor": "significant proportion of the population killed",
+   "reviewer_question": "Should the video quantify the gap between killed max and larger survived?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Largest killed relative value is about 2.6 times larger survived.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "100k killed",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5176,
+     "note": "largest row"
+    },
+    {
+     "entity": "survived",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2022,
+     "note": "larger survived row"
+    }
+   ],
+   "computation": "0.5176 / 0.2022 = 2.56",
+   "accepted_routes": [
+    "Ratio is about 2.6",
+    "0.52 is roughly 2.6 times 0.20",
+    "Killed max is over 2.5 times larger survived"
+   ],
+   "visual_evidence_rule": "Largest segment appears at least two-and-a-half times larger survived.",
+   "temporal_anchor": "significant proportion of the population killed",
+   "reviewer_question": "Should the video include this ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Exact labels 'survived' and '100k killed'",
+  "Two survived rows both shown",
+  "Relative values rounded to two decimals",
+  "Ordering of survived rows: 0.2022 above 0.1699"
+ ],
+ "unsupported_to_avoid": [
+  "Percentages such as 33%",
+  "Absolute counts such as 100,000 people",
+  "Population totals",
+  "Causal claims about why deaths occurred",
+  "Extrapolation to other cities",
+  "Chart positions, colors, axis ticks, or chart type"
+ ],
+ "notes": "All units use relative_value only; no absolute counts or percentages. The two survived rows are distinguished by their relative values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.22
+ },
+ "draft_cost": {
+  "sec": 37.9,
+  "usage": {
+   "prompt_tokens": 928,
+   "completion_tokens": 9237,
+   "total_tokens": 10165,
+   "prompt_tokens_details": {
+    "cached_tokens": 768
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7637
+   },
+   "prompt_cache_hit_tokens": 768,
+   "prompt_cache_miss_tokens": 160
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

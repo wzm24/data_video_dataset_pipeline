@@ -1,0 +1,204 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_7",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the substantial increase in contraceptive usage over time, driven by distribution efforts to remote areas.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The final contraceptive-use level is 76%, presented as the endpoint/result of the usage trend.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Contraceptive use 76%",
+     "x": "x_px=532.0",
+     "field": "value",
+     "value": 76.0,
+     "note": "Main contraceptive-use bar/segment has value 76, labelled 76%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Contraceptive use reaches 76%.",
+    "The final contraceptive-use value is 76%.",
+    "76% of the relevant group uses contraceptives at the endpoint."
+   ],
+   "visual_evidence_rule": "A bar/segment or endpoint label for contraceptive use must show 76% (or 76 with percent context).",
+   "temporal_anchor": "The 'contraceptive use ... to 76%' result clause.",
+   "reviewer_question": "Should the clip be required to show the 76% final contraceptive-use value even if the starting value is not in the table?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 76% contraceptive-use share and the 24% remaining share together form the whole composition (100%).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Contraceptive use 76%",
+     "x": "x_px=532.0",
+     "field": "value",
+     "value": 76.0,
+     "note": "Use category value."
+    },
+    {
+     "entity": "Remaining 24%",
+     "x": "x_px=982.0",
+     "field": "value",
+     "value": 24.0,
+     "note": "Complementary remaining category value."
+    }
+   ],
+   "computation": "76 + 24 = 100",
+   "accepted_routes": [
+    "Contraceptive use is 76%, with 24% remaining.",
+    "The chart splits into 76% use and 24% remaining.",
+    "These two segments sum to the full 100%."
+   ],
+   "visual_evidence_rule": "Both the 76% contraceptive-use segment and the 24% remaining segment must be visible or labeled as parts of one whole.",
+   "temporal_anchor": "The main contraceptive-use result clause; the 24% contrast can accompany the same visual.",
+   "reviewer_question": "Is the 24% remaining segment required as part of the composition, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Contraceptive use (76%) is substantially larger than the remaining share (24%): 52 percentage points higher and about 3.17 times as large.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Contraceptive use 76%",
+     "x": "x_px=532.0",
+     "field": "value",
+     "value": 76.0,
+     "note": "Use category value."
+    },
+    {
+     "entity": "Remaining 24%",
+     "x": "x_px=982.0",
+     "field": "value",
+     "value": 24.0,
+     "note": "Remaining category value."
+    }
+   ],
+   "computation": "76 - 24 = 52 percentage points; 76 / 24 ≈ 3.17",
+   "accepted_routes": [
+    "76% is 52 percentage points higher than 24%.",
+    "Contraceptive use is more than three times the remaining share.",
+    "The use category is much larger than the remaining category."
+   ],
+   "visual_evidence_rule": "The visual must allow the 76% and 24% values to be compared through labels, aligned bars, or proportional areas.",
+   "temporal_anchor": "The main result clause comparing use with the remaining share.",
+   "reviewer_question": "Should a 76%-vs-24% comparison be required, or is it an optional emphasis?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Contraceptive use is the larger/dominant category, ranked above the remaining category.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Contraceptive use 76%",
+     "x": "x_px=532.0",
+     "field": "value",
+     "value": 76.0,
+     "note": "Use category value."
+    },
+    {
+     "entity": "Remaining 24%",
+     "x": "x_px=982.0",
+     "field": "value",
+     "value": 24.0,
+     "note": "Remaining category value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Contraceptive use ranks above remaining.",
+    "The larger category is contraceptive use.",
+    "The 76% segment is dominant over the 24% remaining segment."
+   ],
+   "visual_evidence_rule": "The 76% contraceptive-use category must be visually ordered, emphasized, or sized as larger than the 24% remaining category.",
+   "temporal_anchor": "The main contraceptive-use result clause.",
+   "reviewer_question": "Is explicit ranking or dominance of the 76% category over 24% required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A visual emphasis on the 76% contraceptive-use segment as the main result.",
+  "The 24% remaining segment as complementary contrast to the 76% use segment.",
+  "A non-causal contextual mention of distribution efforts without numeric or causal support."
+ ],
+ "unsupported_to_avoid": [
+  "The narration's starting baseline and start year, which are absent from the table.",
+  "Any computed increase from the narration's starting baseline to 76%, because that baseline is not in the table.",
+  "Causal claim that distribution to remote areas drove the increase.",
+  "Any time labels or values other than 76 and 24 from the table.",
+  "Treating the 24% remaining category as non-use unless the chart explicitly labels it that way."
+ ],
+ "notes": "The table supports only the final 76% and the complementary 24% remaining; the narration's historical start-to-final comparison is not table-backed. Required candidates should therefore focus on the 76% endpoint, with composition and comparison units left for reviewer discretion.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.92
+ },
+ "draft_cost": {
+  "sec": 45.6,
+  "usage": {
+   "prompt_tokens": 660,
+   "completion_tokens": 10022,
+   "total_tokens": 10682,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8527
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 404
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

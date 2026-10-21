@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#58b5b0"/>
+<line x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<polyline points="110.0,485.0 168.1,542.5 201.3,504.2 251.0,485.0 292.5,427.5 317.4,446.7 350.6,389.2 375.5,408.3 408.7,370.0 441.9,331.7 466.7,350.8 499.9,312.5 541.4,370.0 574.6,331.7 607.8,350.8 649.3,312.5 699.0,255.0 715.6,235.8 748.8,274.2 773.7,255.0 815.2,312.5 840.1,389.2 873.3,331.7 906.4,350.8 964.5,197.5 997.7,255.0 1047.5,235.8 1080.7,293.3 1113.9,389.2 1147.0,331.7 1171.9,350.8 1196.8,331.7 1213.4,370.0 1230.0,350.8" fill="none" stroke="#ffffff" stroke-width="3.5"/>
+<text x="110.0" y="475.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">38€</text>
+<text x="1230.0" y="340.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">50€</text>
+</svg>

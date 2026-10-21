@@ -1,0 +1,155 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_31",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the growth of the vegan population in the United States between 2008 and 2014 and the high proportion of females within that demographic.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Among U.S. vegans, 79% are female, so females are the large majority of this demographic.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.3333,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "VEGANS WHO ARE FEMALE: 79%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 79.0,
+     "note": "Table reports the female vegan share as 79.0 percent."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "79% of vegans are female",
+    "females make up 79% of U.S. vegans",
+    "about 4 in 5 vegans are female",
+    "female share of vegans: 79%"
+   ],
+   "visual_evidence_rule": "A donut/percentage segment or label must show the 79% female share.",
+   "temporal_anchor": "The female-share clause, where narration states women make up around 79% of vegans.",
+   "reviewer_question": "Should the 79% female share be mandatory in the ground truth?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The complement of the female share is 21%, so the female-versus-nonfemale split is 79% to 21%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.3333,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "VEGANS WHO ARE FEMALE: 79%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 79.0,
+     "note": "Residual nonfemale share is derived as 100 - 79."
+    }
+   ],
+   "computation": "100 - 79 = 21",
+   "accepted_routes": [
+    "the split is 79% female and 21% male or other",
+    "males/nonfemales are the remaining 21%",
+    "female-to-nonfemale split is 79 to 21",
+    "nonfemale vegans account for 21%"
+   ],
+   "visual_evidence_rule": "If a full split is shown, the nonfemale residual must be 21%, not another value.",
+   "temporal_anchor": "Optional elaboration immediately after the 79% female-share clause.",
+   "reviewer_question": "Should the derived 21% nonfemale complement be required, optional, or excluded as over-derivation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Females outnumber nonfemale vegans by about 3.8 to 1, since 79 divided by the 21% remainder is approximately 3.76.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.3333,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "VEGANS WHO ARE FEMALE: 79%",
+     "x": "donut_value",
+     "field": "value",
+     "value": 79.0,
+     "note": "Ratio is derived from the table value: 79 / (100 - 79)."
+    }
+   ],
+   "computation": "(100 - 79) = 21; 79 / 21 = 3.7619",
+   "accepted_routes": [
+    "about 3.8 female vegans for every nonfemale vegan",
+    "females outnumber nonfemales nearly 4 to 1",
+    "female-to-nonfemale ratio is roughly 3.8:1",
+    "female vegans are about 3.8 times nonfemale vegans"
+   ],
+   "visual_evidence_rule": "Any ratio callout must show 79 versus 21 or approximately 3.8:1, not an unsupported exact 4:1.",
+   "temporal_anchor": "Optional elaboration in the female-share clause.",
+   "reviewer_question": "Should the derived female-to-nonfemale ratio be required, optional, or excluded?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 79% figure is labeled as estimated, so the video may present it as an estimate rather than an exact census count.",
+  "79% can be rounded to about 80% or 'nearly eight in ten' in narration.",
+  "The video may visually emphasize that females are a clear majority within the vegan demographic."
+ ],
+ "unsupported_to_avoid": [
+  "Vegan population growth from 2008 to 2014 (no 2008 or 2014 vegan population values are in the table)",
+  "U.S. vegans are roughly 2.5% of the population (not in the table)",
+  "Israel has the highest concentration of vegans at around 5% (not in the table)",
+  "Meat-eaters far outweigh vegans worldwide (not in the table)",
+  "Causal claim that women are bigger fans of veganism (causal/identity claim not in the table)",
+  "Any exact male share beyond the derived 21% complement or any exact ratio beyond the derived 79/21 calculation"
+ ],
+ "notes": "The table contains only one numeric cell: 79% female vegans. The growth and cross-country claims in the narration are unsupported by this table and should not be grounds for required G1 units.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 3,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.69
+ },
+ "draft_cost": {
+  "sec": 28.2,
+  "usage": {
+   "prompt_tokens": 686,
+   "completion_tokens": 5833,
+   "total_tokens": 6519,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4641
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 430
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

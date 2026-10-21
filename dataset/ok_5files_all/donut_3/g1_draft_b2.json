@@ -1,0 +1,249 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_3",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To inform viewers that running a restaurant is a challenging endeavor with significant failure rates over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The earlier numeric state (state 3s at x=3) shows a printed percent value of 90% (relative value 0.90).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "state 3s",
+     "x": "3",
+     "field": "value",
+     "value": 90,
+     "note": "unit=percent"
+    },
+    {
+     "entity": "state 3s",
+     "x": "3",
+     "field": "relative_value",
+     "value": 0.9,
+     "note": "same as 90 percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "90% at state 3s",
+    "the first printed percent is 90%",
+    "relative value 0.90 for state 3s",
+    "90 percent at the 3s state"
+   ],
+   "visual_evidence_rule": "A chart label, donut segment, or annotation for state 3s must show 90% (or 0.90).",
+   "temporal_anchor": "opening clause that states the 90% figure (myth context)",
+   "reviewer_question": "Must the video display the 90% value at state 3s, or is the opening 90% only optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The later numeric state (state 8s at x=8) shows a printed percent value of 60% (relative value 0.60).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "state 8s",
+     "x": "8",
+     "field": "value",
+     "value": 60,
+     "note": "unit=percent"
+    },
+    {
+     "entity": "state 8s",
+     "x": "8",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "same as 60 percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "60% at state 8s",
+    "the second printed percent is 60%",
+    "relative value 0.60 for state 8s",
+    "60 percent at the 8s state"
+   ],
+   "visual_evidence_rule": "A chart label, donut segment, or annotation for state 8s must show 60% (or 0.60).",
+   "temporal_anchor": "clause correcting the myth / truth is still not very promising",
+   "reviewer_question": "Must the video display the 60% value at state 8s, or can the later rate be conveyed only qualitatively?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The numeric percent value declines from 90% at state 3s to 60% at state 8s, a drop of 30 percentage points (or a one-third relative decrease).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "state 3s",
+     "x": "3",
+     "field": "value",
+     "value": 90,
+     "note": "unit=percent"
+    },
+    {
+     "entity": "state 8s",
+     "x": "8",
+     "field": "value",
+     "value": 60,
+     "note": "unit=percent"
+    }
+   ],
+   "computation": "60 - 90 = -30 percentage points; (90 - 60) / 90 = 33.3% relative decline",
+   "accepted_routes": [
+    "a 30-point drop from 90% to 60%",
+    "the value falls by 30 percentage points",
+    "decreases from 90% to 60%",
+    "shrinks by one-third relative (90 to 60)"
+   ],
+   "visual_evidence_rule": "Both 90% and 60% states must be visible, or an explicit annotation/arrow must show the 30-point or one-third decrease.",
+   "temporal_anchor": "clause contrasting the first year and after three years / over time",
+   "reviewer_question": "Should the video explicitly state the 30-point or one-third decline, or is showing both endpoints sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The state 3s value (90%) is higher than the state 8s value (60%), so the two numeric states are ordered decreasingly.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "state 3s",
+     "x": "3",
+     "field": "value",
+     "value": 90,
+     "note": "unit=percent"
+    },
+    {
+     "entity": "state 8s",
+     "x": "8",
+     "field": "value",
+     "value": 60,
+     "note": "unit=percent"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "90% is higher than 60%",
+    "the first state is larger than the second",
+    "the printed percent values decrease from state 3s to state 8s",
+    "downward order over the two numeric states"
+   ],
+   "visual_evidence_rule": "Both values must be visible with state 3s larger than state 8s, or a downward arrow/order must indicate the decrease.",
+   "temporal_anchor": "clause about significant failure rates over time",
+   "reviewer_question": "Must the video make the 90% > 60% ordering explicit, or is it enough that both endpoints appear?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The final state (state last at x=12) is an illustrative rating with no numeric percent value in the table, so it should not be plotted as a percent.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "state last",
+     "x": "12",
+     "field": "value",
+     "value": null,
+     "note": "blank in table; unit=rating"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "state last is a rating, not a percent",
+    "no numeric value is given for the last state",
+    "the final state is illustrative only",
+    "do not plot state last as 0%"
+   ],
+   "visual_evidence_rule": "If shown, state last must be marked as rating/illustrative and must not be drawn as a numeric percent segment.",
+   "temporal_anchor": "closing clause about confidence or the final rating state",
+   "reviewer_question": "Should the final illustrative rating be shown at all, and must it be kept non-numeric?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Using the 90% value as an opening myth/context anchor if the narration explicitly frames it that way.",
+  "Describing the 60% later value as still substantial or not very promising without naming a year.",
+  "Omitting state last if the video focuses only on the two numeric percent states."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming 90% of restaurants fail in the first year as a factual rate; the narration frames it as a myth.",
+  "Citing one-third (33.3%) or two-thirds (66.7%) as table values; they are not in the table and 60% is not two-thirds.",
+  "Assigning a numeric percent or failure rate to state last, whose unit is rating and whose value/relative_value are blank.",
+  "Inferring causation such as change of ownership or owners moving on from the table.",
+  "Extrapolating beyond the two numeric states, e.g. projecting failure rates after state 8s or at state last.",
+  "Assuming a denominator or restaurant count; the table gives only percent/relative_value, not totals."
+ ],
+ "notes": "Values are treated as printed percent/relative_value pairs from the table; state labels '3s' and '8s' are not interpreted as years. The main trade-off is whether to require the derived 30-point decline in addition to the two endpoint values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 48.9,
+  "usage": {
+   "prompt_tokens": 696,
+   "completion_tokens": 11894,
+   "total_tokens": 12590,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10062
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 440
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

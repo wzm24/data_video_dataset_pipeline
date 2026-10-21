@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_74",
+ "intent_en": "To explain how major fast-food chains generate high revenue through a massive number of global locations.",
+ "previous_intent": "To compare the global number of locations for major fast-food chains, illustrating the massive scale of brands like Subway, McDonald's, Starbucks, and KFC.",
+ "narration_support": "Globally, there are 20 ,000 KFCs, 30 ,000 Starbucks, 37 ,000 McDonald's, and more than any other 43 ,000 Subways.",
+ "chart_support": "Horizontal bar chart titled 'GLOBAL LOCATIONS' displaying a ranking of location counts for KFC, Starbucks, McDonald's, and Subway.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration introduces a billion-dollar business model and lists location counts for major brands, which the chart visualizes as a comparison of global locations.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

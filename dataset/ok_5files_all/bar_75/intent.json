@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_75",
+ "intent_en": "To illustrate that music industry revenue has significantly declined since the late 1990s peak and that the transition to digital formats has not immediately replaced the revenue lost from the decline of physical media like CDs.",
+ "previous_intent": "To illustrate the significant decline in music industry revenue following the 1999 peak and explain how the transition to digital formats did not replace previous earnings levels.",
+ "narration_support": "\"Earnings peaked in 1999, and they've been down ever since... Nothing replaces the CD. At least not immediately.\"",
+ "chart_support": "Stacked bar chart showing music revenue by format (LP/EP/8-track, Cassette, CD, Digital) from 1982 to 2013, displaying a peak around 1999 followed by a sharp decline where digital revenue (pink) does not offset the loss of CD revenue (blue), highlighted by a red circle.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly discusses the revenue peak in 1999 and the failure of digital formats to replace CDs. The chart visualizes this with a stacked bar graph showing the dominance of CDs (blue) followed by a drop in total height as digital (pink) appears, with a red circle emphasizing this decline.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

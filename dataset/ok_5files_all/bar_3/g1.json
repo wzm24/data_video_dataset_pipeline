@@ -1,0 +1,51 @@
+{
+ "clip_id": "bar_3",
+ "version": "g1_r_u_v1",
+ "intent": "Show how cyclists' and drivers' traffic-law compliance rates compare, and convey how close the two groups are.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How close are cyclists' and drivers' traffic-law compliance rates?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "cyclists",
+     "drivers"
+    ],
+    "measure": "traffic-law compliance rate",
+    "time": "the plotted snapshot"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Cyclists' and drivers' traffic-law compliance rates are close: 88% vs 85%, a 3-percentage-point gap.",
+   "accept": [
+    "similar / comparable / close",
+    "88% vs 85%, 3 percentage points apart",
+    "two bars of nearly equal length"
+   ],
+   "reject": [
+    "cyclists are much more compliant",
+    "drivers are more compliant",
+    "a large gap",
+    "the rates are identical",
+    "a 13-percentage-point gap"
+   ],
+   "evidence": "Two bars of nearly equal length, or a comparison showing a 3-point gap."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "notes": "Narration compares biking with 'any other time'; the table only compares cyclists vs drivers. Treated as a chart-only comparison.",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21"
+}

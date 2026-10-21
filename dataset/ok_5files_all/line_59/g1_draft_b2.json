@@ -1,0 +1,259 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_59",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that Brexit polls were reasonably accurate in depicting a close race between Remain and Leave voters, rather than being wildly inaccurate.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "At the final time point, both Remain and Leave poll at about 46.1% (46.0750), indicating a very close race or tie at the end of the series.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Remain",
+     "x": "1160",
+     "field": "value",
+     "value": 46.075,
+     "note": "final time point"
+    },
+    {
+     "entity": "Leave",
+     "x": "1160",
+     "field": "value",
+     "value": 46.075,
+     "note": "final time point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Final poll shows both at about 46.1%.",
+    "Last poll: Remain and Leave both around 46%.",
+    "The endpoint value is roughly 46.1% for both sides."
+   ],
+   "visual_evidence_rule": "The chart must show the final time point with both entities at approximately 46.1%.",
+   "temporal_anchor": "the polls were actually showing a close race",
+   "reviewer_question": "Is the final poll value (~46.1% for both) a required takeaway, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Across all provided time points, Remain and Leave have identical values (zero difference), depicting a tied or extremely close race throughout.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Remain",
+     "x": "140",
+     "field": "value",
+     "value": 39.2833,
+     "note": "same as Leave at x=140"
+    },
+    {
+     "entity": "Leave",
+     "x": "140",
+     "field": "value",
+     "value": 39.2833,
+     "note": "same as Remain at x=140"
+    },
+    {
+     "entity": "Remain",
+     "x": "1160",
+     "field": "value",
+     "value": 46.075,
+     "note": "same as Leave at final point"
+    },
+    {
+     "entity": "Leave",
+     "x": "1160",
+     "field": "value",
+     "value": 46.075,
+     "note": "same as Remain at final point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Remain and Leave are tied at every poll.",
+    "The two series coincide throughout.",
+    "No gap between Remain and Leave at any time point.",
+    "The race is level across all provided polls."
+   ],
+   "visual_evidence_rule": "The chart must show Remain and Leave values as equal at each time point, with no visible gap between them.",
+   "temporal_anchor": "the polls were actually showing a close race",
+   "reviewer_question": "Must the video convey that Remain and Leave were tied/equal at every poll, or is a general close-race statement enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The polling values range from a low of about 38.2% (38.2167 at x=715) to a high of about 46.1% (46.0750 at x=1160).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Remain/Leave",
+     "x": "715",
+     "field": "value",
+     "value": 38.2167,
+     "note": "lowest value in the series"
+    },
+    {
+     "entity": "Remain/Leave",
+     "x": "1160",
+     "field": "value",
+     "value": 46.075,
+     "note": "highest value in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Values range from about 38.2% to 46.1%.",
+    "Lowest ~38.2%, highest ~46.1%.",
+    "The series spans roughly 38–46%."
+   ],
+   "visual_evidence_rule": "The chart must show the low point around 38.2% and the high point around 46.1%.",
+   "temporal_anchor": "it also wasn't an instance where the polls were wildly off",
+   "reviewer_question": "Should the full range (~38–46%) be required to show polls were not wildly off?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The polling values generally trend upward over the period, from about 39.3% at the first time point to about 46.1% at the last.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Remain/Leave",
+     "x": "140",
+     "field": "value",
+     "value": 39.2833,
+     "note": "first time point"
+    },
+    {
+     "entity": "Remain/Leave",
+     "x": "1160",
+     "field": "value",
+     "value": 46.075,
+     "note": "last time point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The polls trend upward over the period.",
+    "Polling values rise from about 39% to about 46%.",
+    "The series generally increases from start to end."
+   ],
+   "visual_evidence_rule": "The chart must show a general upward movement from the first to the last time point.",
+   "temporal_anchor": "for most of the final month",
+   "reviewer_question": "Is the upward trend over the period required, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The change from the first to the last poll is an increase of about 6.8 percentage points (46.0750 - 39.2833 = 6.7917) for both entities.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Remain/Leave",
+     "x": "140 -> 1160",
+     "field": "value",
+     "value": 6.7917,
+     "note": "46.0750 - 39.2833 = 6.7917 percentage points"
+    }
+   ],
+   "computation": "46.0750 - 39.2833 = 6.7917",
+   "accepted_routes": [
+    "The change from first to last poll is about +6.8 percentage points.",
+    "Both sides gain roughly 6.8 points from start to end.",
+    "The final value is about 6.8 points higher than the first."
+   ],
+   "visual_evidence_rule": "The chart must make the first-to-last increase of about 6.8 percentage points apparent.",
+   "temporal_anchor": "for most of the final month",
+   "reviewer_question": "Is the ~6.8-point increase from first to last a required derived change?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The first poll value is about 39.3% for both entities.",
+  "The series has minor fluctuations, such as a dip to 38.2167% at x=715.",
+  "The final month shows a narrowing or level race with no entity pulling far ahead."
+ ],
+ "unsupported_to_avoid": [
+  "Leave led Remain for most of the final month (table shows identical values for both).",
+  "Betting markets suggested Remain would win (not in table).",
+  "Polls were wildly inaccurate (not in table).",
+  "Any claim that the polls predicted the exact referendum result.",
+  "Causal explanations for why the polls were close or accurate.",
+  "Remain and Leave percentages sum to 100% (not stated and not true for these table values)."
+ ],
+ "notes": "The table's unit is %, so absolute percentages are allowed. However, Remain and Leave rows are identical at each x, so units about a Leave lead are unsupported.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 41.1,
+  "usage": {
+   "prompt_tokens": 2016,
+   "completion_tokens": 8840,
+   "total_tokens": 10856,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7057
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1504
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

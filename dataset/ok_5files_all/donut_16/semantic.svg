@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#fadcb5"/>
+<circle cx="640.0" cy="360.0" r="272" fill="none" stroke="#c4b498" stroke-width="3" stroke-dasharray="10 12"/>
+<path d="M 640.0 60.0 A 300.0 300.0 0 1 1 490.0 619.8" fill="none" stroke="#9cae46" stroke-width="26" stroke-linecap="butt"/>
+<path d="M 640.0 28.0 A 332.0 332.0 0 0 1 806.0 647.5" fill="none" stroke="#e69a92" stroke-width="24" stroke-linecap="butt"/>
+<polygon points="467.2,363.0 481.6,354.0 510.4,348.0 546.4,345.0 582.4,342.0 625.6,339.0 668.8,336.0 712.0,334.5 755.2,333.0 798.4,336.0 812.8,345.0 802.0,357.0 776.8,363.0 762.4,375.0 769.6,390.0 748.0,399.0 719.2,396.0 690.4,405.0 661.6,399.0 640.0,408.0 618.4,399.0 596.8,402.0 568.0,393.0 546.4,399.0 524.8,390.0 503.2,387.0 481.6,378.0" fill="#9cae46" stroke="#ffffff" stroke-width="3"/>
+<ellipse cx="496.0" cy="318.0" rx="46" ry="34" fill="#9cae46" stroke="#ffffff" stroke-width="3"/>
+<g fill="#9cae46"><circle cx="568.0" cy="430.0" r="9"/><circle cx="589.6" cy="438.0" r="7"/></g>
+</svg>

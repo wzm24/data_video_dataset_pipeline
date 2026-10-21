@@ -1,0 +1,24 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+bar_57,Poorest,Poorest-Corporate and property taxes,134.0,,1.0,1.0,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,2nd,2nd-Income taxes,234.0,,1.0,0.4348,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,2nd,2nd-Corporate and property taxes,234.0,,1.3,0.5652,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,3rd,3rd-Income taxes,334.0,,3.0,0.6667,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,3rd,3rd-Corporate and property taxes,334.0,,1.5,0.3333,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,4th,4th-Income taxes,434.0,,4.0,0.6667,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,4th,4th-Corporate and property taxes,434.0,,2.0,0.3333,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,5th,5th-Income taxes,534.0,,6.0,0.7317,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,5th,5th-Corporate and property taxes,534.0,,2.2,0.2683,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,6th,6th-Income taxes,634.0,,7.0,0.7292,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,6th,6th-Corporate and property taxes,634.0,,2.6,0.2708,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,7th,7th-Income taxes,734.0,,8.0,0.7273,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,7th,7th-Corporate and property taxes,734.0,,3.0,0.2727,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,8th,8th-Income taxes,834.0,,10.0,0.7576,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,8th,8th-Corporate and property taxes,834.0,,3.2,0.2424,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,9th,9th-Income taxes,934.0,,12.0,0.7643,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,9th,9th-Corporate and property taxes,934.0,,3.7,0.2357,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,10th,10th-Income taxes,1034.0,,18.0,0.6545,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,10th,10th-Corporate and property taxes,1034.0,,9.2,0.3345,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,10th,10th-Estate taxes,1034.0,,0.3,0.0109,%,#7da0c4,svg_geometry,Estate taxes
+bar_57,Richest,Richest-Income taxes,1134.0,,10.0,0.4695,%,#5B4B8A,svg_geometry,Income taxes
+bar_57,Richest,Richest-Corporate and property taxes,1134.0,,10.5,0.493,%,#23527c,svg_geometry,Corporate and property taxes
+bar_57,Richest,Richest-Estate taxes,1134.0,,0.8,0.0376,%,#7da0c4,svg_geometry,Estate taxes

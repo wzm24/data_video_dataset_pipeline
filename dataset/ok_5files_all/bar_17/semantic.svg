@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#303030"/>
+<text id="chart-title" data-role="title" x="640.0" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#f2f2f2">Share of expenditures, 2019</text>
+<text id="chart-subtitle" data-role="subtitle" x="640.0" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#bdbdbd">Bureau of Labor Statistics</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="320" y1="600" x2="1160" y2="600" stroke="#9e9e9e" stroke-width="3"/>
+<line data-role="axis" x1="320" y1="160" x2="320" y2="600" stroke="#9e9e9e" stroke-width="3"/>
+<text data-role="tick-label" x="320" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#c9c9c9">0%</text>
+<g id="entity-housing" data-role="entity" data-entity-id="housing" data-label="Housing">
+<rect id="housing-bar" data-role="bar" data-entity-id="housing" data-value="33" x="320" y="180" width="840" height="44" fill="#8FB4C4"/>
+<text id="housing-label" data-role="category-label" data-entity-id="housing" x="305" y="210" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Housing</text>
+</g>
+<g id="entity-transportation" data-role="entity" data-entity-id="transportation" data-label="Transportation">
+<rect id="transportation-bar" data-role="bar" data-entity-id="transportation" data-value="17" x="320" y="256" width="433" height="44" fill="#4B7BA8"/>
+<text id="transportation-value-label" data-role="value-label" data-entity-id="transportation" x="763" y="286" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">17%</text>
+<text id="transportation-label" data-role="category-label" data-entity-id="transportation" x="305" y="286" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Transportation</text>
+</g>
+<g id="entity-food" data-role="entity" data-entity-id="food" data-label="Food">
+<rect id="food-bar" data-role="bar" data-entity-id="food" data-value="12" x="320" y="332" width="305" height="44" fill="#8FB4C4"/>
+<text id="food-label" data-role="category-label" data-entity-id="food" x="305" y="362" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Food</text>
+</g>
+<g id="entity-personal-insurance" data-role="entity" data-entity-id="personal-insurance" data-label="Personal insurance">
+<rect id="personal-insurance-bar" data-role="bar" data-entity-id="personal-insurance" data-value="11" x="320" y="408" width="280" height="44" fill="#8FB4C4"/>
+<text id="personal-insurance-label" data-role="category-label" data-entity-id="personal-insurance" x="305" y="438" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Personal insurance</text>
+</g>
+<g id="entity-health-care" data-role="entity" data-entity-id="health-care" data-label="Health care">
+<rect id="health-care-bar" data-role="bar" data-entity-id="health-care" data-value="9" x="320" y="484" width="229" height="44" fill="#8FB4C4"/>
+<text id="health-care-label" data-role="category-label" data-entity-id="health-care" x="305" y="514" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Health care</text>
+</g>
+<g id="entity-clothes" data-role="entity" data-entity-id="clothes" data-label="Clothes">
+<rect id="clothes-bar" data-role="bar" data-entity-id="clothes" data-value="3" x="320" y="560" width="76" height="40" fill="#8FB4C4"/>
+<text id="clothes-label" data-role="category-label" data-entity-id="clothes" x="305" y="586" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">Clothes</text>
+</g>
+</g>
+</svg>

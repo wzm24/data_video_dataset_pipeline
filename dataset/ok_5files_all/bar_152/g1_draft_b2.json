@@ -1,0 +1,250 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_152",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the increasing trend of reported rape cases in India from 2008 to 2016.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Reported rape cases in India trend upward over 2008–2016, from 19,923.404 in 2008 to 37,923.404 in 2016.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2008",
+     "x": "2008",
+     "field": "value",
+     "value": 19923.404,
+     "note": "start year"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 37923.404,
+     "note": "end year"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Reported rape cases generally increased from 2008 to 2016.",
+    "The series rises overall from about 19,900 in 2008 to about 37,900 in 2016.",
+    "There is an upward trend across the period, despite year-to-year variation."
+   ],
+   "visual_evidence_rule": "A line/bar series for 2008–2016 must visibly ascend overall; the start and end years should be identifiable.",
+   "temporal_anchor": "the narration clause stating that reported rape cases have been increasing",
+   "reviewer_question": "Must the video show an overall upward trend across the full 2008–2016 period, even if it does not annotate every year?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The 2016 endpoint is the maximum shown: 37,923.404 reported cases, higher than all earlier years.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 37923.404,
+     "note": "final and highest year in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In 2016, reported rape cases reached about 37,900.",
+    "The final year, 2016, ends at 37,923.404 cases.",
+    "2016 is the highest year shown, at roughly 37,900 reported cases."
+   ],
+   "visual_evidence_rule": "The 2016 bar/point must be labeled or clearly end the series at its highest level.",
+   "temporal_anchor": "the narration phrase 'from 2008 to 2016' or the end of the increasing-trend statement",
+   "reviewer_question": "Must the 2016 endpoint value, and/or its status as the highest year, be explicitly conveyed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The largest year-over-year rise is 2012 to 2013: 23,923.404 to 31,923.404, an increase of 8,000 cases.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2012",
+     "x": "2012",
+     "field": "value",
+     "value": 23923.404,
+     "note": "year before the largest annual jump"
+    },
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 31923.404,
+     "note": "year after the largest annual jump"
+    }
+   ],
+   "computation": "31923.404 - 23923.404 = 8000.000",
+   "accepted_routes": [
+    "The biggest single-year jump is from 2012 to 2013, up about 8,000 cases.",
+    "Reported cases rise most sharply between 2012 and 2013, from roughly 23,900 to 31,900.",
+    "2013 adds about 8,000 cases over 2012."
+   ],
+   "visual_evidence_rule": "Adjacent 2012 and 2013 bars/points must show the largest vertical increase, ideally with the difference annotated.",
+   "temporal_anchor": "optional callout during the overall increasing-trend narration",
+   "reviewer_question": "Is the largest year-over-year increase optional, or should the video single it out?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The series is not monotonic: reported cases fall from 34,927.660 in 2014 to 32,927.660 in 2015, a decrease of 2,000.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 34927.66,
+     "note": "year before the decline"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 32927.66,
+     "note": "year of the decline"
+    }
+   ],
+   "computation": "34927.660 - 32927.660 = 2000.000",
+   "accepted_routes": [
+    "There is a dip in 2015, down about 2,000 from 2014.",
+    "Reported cases decline from roughly 34,900 in 2014 to 32,900 in 2015.",
+    "2014 to 2015 is a year-over-year decrease of 2,000 cases."
+   ],
+   "visual_evidence_rule": "The 2015 bar/point must be visibly lower than 2014, and the decline may be labeled.",
+   "temporal_anchor": "optional qualification within or after the increasing-trend narration",
+   "reviewer_question": "Must the video acknowledge the 2015 decline to avoid implying a strictly monotonic rise?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Apart from 2016, 2014 is the second-highest year shown, above 2015 and 2013; 2016 is 2,995.744 cases higher than 2014 and 4,995.744 higher than 2015.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 34927.66,
+     "note": "second-highest year"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 32927.66,
+     "note": "third-highest year"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 37923.404,
+     "note": "highest year"
+    }
+   ],
+   "computation": "37923.404 - 34927.660 = 2995.744; 37923.404 - 32927.660 = 4995.744",
+   "accepted_routes": [
+    "2014 is the second-highest year after 2016.",
+    "The top three years are 2016, 2014, then 2015.",
+    "2016 exceeds 2014 by about 3,000 and 2015 by about 5,000 cases."
+   ],
+   "visual_evidence_rule": "Bars/points for 2014, 2015, and 2016 must allow the ranking 2016 > 2014 > 2015 to be read.",
+   "temporal_anchor": "optional ranking/comparison callout near the later years",
+   "reviewer_question": "Should the video show late-period ranking/comparison, or is endpoint change alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "2008 and 2009 are equal at 19,923.404 reported cases.",
+  "The total increase from 2008 to 2016 is 18,000 cases, about +90.3%.",
+  "2015 is lower than 2014 but still higher than 2013."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim actual rape incidence increased; the data are reported cases only.",
+  "Do not claim every year rose monotonically; 2015 declined.",
+  "Do not extrapolate beyond 2016 or infer causes.",
+  "Do not use per-capita/population-normalized rates or denominators not in the table.",
+  "Do not use arbitrary thresholds or values not derivable from the table."
+ ],
+ "notes": "The core required content is the overall upward trend and the 2008-to-2016 endpoint; the largest jump and 2015 dip are useful optional nuance. Keep all figures tied to the table and avoid causal or normalized-rate claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 34.8,
+  "usage": {
+   "prompt_tokens": 890,
+   "completion_tokens": 8588,
+   "total_tokens": 9478,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6570
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 634
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,177 @@
+{
+ "clip_id": "bar_75",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:LP/EP/8-Track @ 1982",
+    "mark:Cassette @ 1982"
+   ],
+   "assertion": {
+    "greater": "LP/EP/8-Track @ 1982",
+    "lesser": "Cassette @ 1982",
+    "expected_ratio": 1.392,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual encoding must make the 1982-to-1983 crossover from LP/EP/8-Track to cassette visible, and show cassette as largest through 1987."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:CD @ 1987",
+    "mark:Cassette @ 1987",
+    "mark:CD @ 1988",
+    "mark:Cassette @ 1988",
+    "mark:CD @ 2006",
+    "mark:Digital @ 2006"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "CD @ 1987",
+      "value": 0.3769
+     },
+     {
+      "mark": "Cassette @ 1987",
+      "value": 0.48
+     },
+     {
+      "mark": "CD @ 1988",
+      "value": 0.4671
+     },
+     {
+      "mark": "Cassette @ 1988",
+      "value": 0.4488
+     },
+     {
+      "mark": "CD @ 2006",
+      "value": 0.5058
+     },
+     {
+      "mark": "Digital @ 2006",
+      "value": 0.485
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show CD overtaking cassette around 1988 and remaining above other individual formats through 2006."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:CD @ 1998",
+    "mark:CD @ 1999",
+    "mark:CD @ 2013"
+   ],
+   "assertion": {
+    "low": "CD @ 2013",
+    "low_value": 0.2001,
+    "high": "CD @ 1998",
+    "high_value": 0.96,
+    "delta": 0.7599,
+    "ratio": 4.7976,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 1998 CD peak and the subsequent downward path to 2013 visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Digital @ 1998",
+    "mark:Digital @ 2007",
+    "mark:CD @ 2007",
+    "mark:Digital @ 2013"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Digital @ 1998",
+      "value": 0.002
+     },
+     {
+      "mark": "Digital @ 2007",
+      "value": 0.5561
+     },
+     {
+      "mark": "CD @ 2007",
+      "value": 0.4349
+     },
+     {
+      "mark": "Digital @ 2013",
+      "value": 0.7637
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show digital’s first appearance in 1998, its rise, and the 2007 crossover above CD."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "series_crossing",
+   "requires": [
+    "mark:CD @ 2006",
+    "mark:Digital @ 2006"
+   ],
+   "assertion": {
+    "at": "2006",
+    "above": "CD",
+    "above_value": 0.5058,
+    "below": "Digital",
+    "below_value": 0.485,
+    "direction": "above at this x",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 2006-to-2007 threshold visible: digital moves from below the sum of physical formats to above it."
+  }
+ ]
+}

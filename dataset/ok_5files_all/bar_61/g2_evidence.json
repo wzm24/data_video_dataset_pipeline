@@ -1,0 +1,164 @@
+{
+ "clip_id": "bar_61",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1960s @ 1960s",
+    "mark:1970s @ 1970s",
+    "mark:1980s @ 1980s",
+    "mark:1990s @ 1990s",
+    "mark:2000-7* @ 2000-7*",
+    "mark:2000s* @ 2000s*"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1960s @ 1960s",
+      "value": 30.0
+     },
+     {
+      "mark": "1970s @ 1970s",
+      "value": 25.0
+     },
+     {
+      "mark": "1980s @ 1980s",
+      "value": 18.0
+     },
+     {
+      "mark": "1990s @ 1990s",
+      "value": 18.0
+     },
+     {
+      "mark": "2000-7* @ 2000-7*",
+      "value": 5.0
+     },
+     {
+      "mark": "2000s* @ 2000s*",
+      "value": 1.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All six decade bars/points appear in order with heights 30, 25, 18, 18, 5, 1; the overall direction from first to last is clearly downward."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1960s @ 1960s",
+    "mark:2000s* @ 2000s*",
+    "mark:1960s @ 1960s",
+    "mark:2000s* @ 2000s*"
+   ],
+   "assertion": {
+    "low": "2000s* @ 2000s*",
+    "low_value": 0.0333,
+    "high": "1960s @ 1960s",
+    "high_value": 30.0,
+    "delta": 29.9667,
+    "ratio": 900.9009,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1960s bar (30) and 2000s* bar (1) are both visible or annotated, with the computed drop or share called out."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1960s @ 1960s",
+    "mark:1970s @ 1970s",
+    "mark:1970s @ 1970s"
+   ],
+   "assertion": {
+    "low": "1970s @ 1970s",
+    "low_value": 0.8333,
+    "high": "1960s @ 1960s",
+    "high_value": 30.0,
+    "delta": 29.1667,
+    "ratio": 36.0014,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1960s and 1970s bars are adjacent and show 30 then 25, with the 5-unit drop or 83.3% relative value visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:1970s @ 1970s",
+    "mark:1980s @ 1980s"
+   ],
+   "assertion": {
+    "greater": "1970s @ 1970s",
+    "lesser": "1980s @ 1980s",
+    "expected_ratio": 1.3889,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1980s and 1990s bars are equal height at 18, with the 1970s bar higher at 25."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1990s @ 1990s",
+    "mark:2000-7* @ 2000-7*"
+   ],
+   "assertion": {
+    "low": "2000-7* @ 2000-7*",
+    "low_value": 5.0,
+    "high": "1990s @ 1990s",
+    "high_value": 18.0,
+    "delta": 13.0,
+    "ratio": 3.6,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1990s (18) and 2000-7* (5) bars are adjacent, with the 13-unit drop or 72.2% decline called out."
+  }
+ ]
+}

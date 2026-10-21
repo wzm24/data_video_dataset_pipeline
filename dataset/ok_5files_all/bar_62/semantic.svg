@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f5f3ef"/>
+<g id="chart-plot" data-role="plot">
+<text data-role="column-title" x="550.0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#e4572e">EMISSIONS</text>
+<g id="entity-dairy-emissions" data-role="entity" data-entity-id="dairy-emissions" data-label="DAIRY · EMISSIONS">
+<rect id="dairy-emissions-bar" data-role="bar" data-entity-id="dairy-emissions" data-value="1" x="420.0" y="200.0" width="260.0" height="26.0" fill="#e4572e" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-rice-emissions" data-role="entity" data-entity-id="rice-emissions" data-label="RICE · EMISSIONS">
+<rect id="rice-emissions-bar" data-role="bar" data-entity-id="rice-emissions" data-value="0.25" x="420.0" y="286.0" width="65.0" height="26.0" fill="#e4572e" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-soy-emissions" data-role="entity" data-entity-id="soy-emissions" data-label="SOY · EMISSIONS">
+<rect id="soy-emissions-bar" data-role="bar" data-entity-id="soy-emissions" data-value="0.25" x="420.0" y="372.0" width="65.0" height="26.0" fill="#e4572e" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-oat-emissions" data-role="entity" data-entity-id="oat-emissions" data-label="OAT · EMISSIONS">
+<rect id="oat-emissions-bar" data-role="bar" data-entity-id="oat-emissions" data-value="0.18" x="420.0" y="458.0" width="46.8" height="26.0" fill="#e4572e" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-almond-emissions" data-role="entity" data-entity-id="almond-emissions" data-label="ALMOND · EMISSIONS">
+<rect id="almond-emissions-bar" data-role="bar" data-entity-id="almond-emissions" data-value="0.18" x="420.0" y="544.0" width="46.8" height="26.0" fill="#e4572e" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="column-title" x="840.0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#4c9a5b">LAND USE</text>
+<g id="entity-dairy-land-use" data-role="entity" data-entity-id="dairy-land-use" data-label="DAIRY · LAND USE">
+<rect id="dairy-land-use-bar" data-role="bar" data-entity-id="dairy-land-use" data-value="1" x="710.0" y="200.0" width="260.0" height="26.0" fill="#4c9a5b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-rice-land-use" data-role="entity" data-entity-id="rice-land-use" data-label="RICE · LAND USE">
+<rect id="rice-land-use-bar" data-role="bar" data-entity-id="rice-land-use" data-value="0.05" x="710.0" y="286.0" width="13.0" height="26.0" fill="#4c9a5b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-soy-land-use" data-role="entity" data-entity-id="soy-land-use" data-label="SOY · LAND USE">
+<rect id="soy-land-use-bar" data-role="bar" data-entity-id="soy-land-use" data-value="0.05" x="710.0" y="372.0" width="13.0" height="26.0" fill="#4c9a5b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-oat-land-use" data-role="entity" data-entity-id="oat-land-use" data-label="OAT · LAND USE">
+<rect id="oat-land-use-bar" data-role="bar" data-entity-id="oat-land-use" data-value="0.2" x="710.0" y="458.0" width="52.0" height="26.0" fill="#4c9a5b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-almond-land-use" data-role="entity" data-entity-id="almond-land-use" data-label="ALMOND · LAND USE">
+<rect id="almond-land-use-bar" data-role="bar" data-entity-id="almond-land-use" data-value="0.2" x="710.0" y="544.0" width="52.0" height="26.0" fill="#4c9a5b" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="column-title" x="1130.0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#4a90d9">WATER USE</text>
+<g id="entity-dairy-water-use" data-role="entity" data-entity-id="dairy-water-use" data-label="DAIRY · WATER USE">
+<rect id="dairy-water-use-bar" data-role="bar" data-entity-id="dairy-water-use" data-value="1" x="1000.0" y="200.0" width="260.0" height="26.0" fill="#4a90d9" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-rice-water-use" data-role="entity" data-entity-id="rice-water-use" data-label="RICE · WATER USE">
+<rect id="rice-water-use-bar" data-role="bar" data-entity-id="rice-water-use" data-value="0.5" x="1000.0" y="286.0" width="130.0" height="26.0" fill="#4a90d9" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-soy-water-use" data-role="entity" data-entity-id="soy-water-use" data-label="SOY · WATER USE">
+<rect id="soy-water-use-bar" data-role="bar" data-entity-id="soy-water-use" data-value="0.1" x="1000.0" y="372.0" width="26.0" height="26.0" fill="#4a90d9" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-oat-water-use" data-role="entity" data-entity-id="oat-water-use" data-label="OAT · WATER USE">
+<rect id="oat-water-use-bar" data-role="bar" data-entity-id="oat-water-use" data-value="0.1" x="1000.0" y="458.0" width="26.0" height="26.0" fill="#4a90d9" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<g id="entity-almond-water-use" data-role="entity" data-entity-id="almond-water-use" data-label="ALMOND · WATER USE">
+<rect id="almond-water-use-bar" data-role="bar" data-entity-id="almond-water-use" data-value="0.67" x="1000.0" y="544.0" width="174.2" height="26.0" fill="#4a90d9" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+<text data-role="category-label" x="404.0" y="220.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">DAIRY</text>
+<text data-role="category-label" x="404.0" y="306.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">RICE</text>
+<text data-role="category-label" x="404.0" y="392.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">SOY</text>
+<text data-role="category-label" x="404.0" y="478.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">OAT</text>
+<text data-role="category-label" x="404.0" y="564.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">ALMOND</text>
+</g>
+</svg>

@@ -1,0 +1,128 @@
+{
+ "clip_id": "pie_6",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:Oil @ 0"
+   ],
+   "assertion": {
+    "mark": "Oil @ 0",
+    "field": "value",
+    "expected": 0.3,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The oil slice/segment or an on-screen label must display 0.3% (or an equivalent rounded statement such as about 0.3%)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:Oil @ 0"
+   ],
+   "assertion": {
+    "series": "Oil",
+    "values": [
+     0.3
+    ],
+    "threshold_between": [
+     0.3,
+     0.3
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visible annotation or label must state 'less than 1%' or show a 1% reference line/benchmark with the oil value below it."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Rest of GDP (non-oil) @ 1"
+   ],
+   "assertion": {
+    "segment": "Rest of GDP (non-oil) @ 1",
+    "expected_share": 0.997,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The non-oil slice or complement label must display 99.7%, or the chart must clearly show the rest of the pie making up nearly all GDP."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Rest of GDP (non-oil) @ 1",
+    "mark:Oil @ 0"
+   ],
+   "assertion": {
+    "greater": "Rest of GDP (non-oil) @ 1",
+    "lesser": "Oil @ 0",
+    "expected_ratio": 332.3333,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If used, the chart or annotation must compare the two shares directly, e.g., 0.3% vs 99.7%, a 99.4-point gap, or a ~332x ratio. It should not imply 0.3% of non-oil GDP."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Oil @ 0",
+    "segment:Rest of GDP (non-oil) @ 1"
+   ],
+   "assertion": {
+    "segment": "Oil @ 0",
+    "expected_share": 0.003,
+    "total_of": "%",
+    "total": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The pie/bar must have exactly the two complementary categories Oil and Rest of GDP (non-oil), with no unexplained remainder; a sum-to-100 annotation can appear."
+  }
+ ]
+}

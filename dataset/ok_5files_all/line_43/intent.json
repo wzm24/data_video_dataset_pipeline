@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_43",
+ "intent_en": "To explain that the demand for programming is growing but finite, so the focus should be on attracting genuinely interested individuals rather than trying to appeal to everyone.",
+ "previous_intent": "To illustrate a strategic approach of targeting genuinely interested individuals for programming services, acknowledging that while demand is increasing, it is not infinite and mass appeal is counterproductive.",
+ "narration_support": "There will be more demand for programming, but not unlimited demand. So we might as well attract who's actually interested.",
+ "chart_support": "Line graph showing a rising 'Demand' curve ending at a specific point, a crossed-out infinity symbol indicating finite limits, and a magnet attracting specific dots representing targeted attraction.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "The narration explicitly states demand is not unlimited and advocates for attracting interested people. The chart visualizes this with a rising demand curve (not infinite), a prohibited infinity symbol, and a magnet attracting specific targets.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

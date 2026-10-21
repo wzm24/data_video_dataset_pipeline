@@ -1,0 +1,267 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_92",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To highlight the critically low life expectancy and economic struggles of a specific country (Somalia) by comparing its health metrics with peer nations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Somalia's plotted value is 55.0, matching the narration's 55-year life expectancy.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Somalia",
+     "x": "country",
+     "field": "value",
+     "value": 55.0,
+     "note": "Somalia row value=55.000; narration anchors this as 55-year life expectancy."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Somalia's life expectancy is 55 years.",
+    "Somalia sits at 55.",
+    "The chart shows Somalia at 55.",
+    "Somalia's bar endpoint is 55."
+   ],
+   "visual_evidence_rule": "Somalia's bar or label must be visibly associated with the value 55.",
+   "temporal_anchor": "The result is a 55 year life expectancy...",
+   "reviewer_question": "Must the video explicitly identify Somalia's 55-year value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "In the four-country peer set, Somalia is not the lowest; the ascending order is Ivory Coast 53, Nigeria 54, Somalia 55, Mozambique 57.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Ivory Coast",
+     "x": "country",
+     "field": "value",
+     "value": 53.0,
+     "note": "Ivory Coast row value=53.000."
+    },
+    {
+     "entity": "Nigeria",
+     "x": "country",
+     "field": "value",
+     "value": 54.0,
+     "note": "Nigeria row value=54.000."
+    },
+    {
+     "entity": "Somalia",
+     "x": "country",
+     "field": "value",
+     "value": 55.0,
+     "note": "Somalia row value=55.000."
+    },
+    {
+     "entity": "Mozambique",
+     "x": "country",
+     "field": "value",
+     "value": 57.0,
+     "note": "Mozambique row value=57.000."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Among these peers, Somalia is third-lowest, above Ivory Coast and Nigeria and below Mozambique.",
+    "The four-country order is Ivory Coast (53), Nigeria (54), Somalia (55), Mozambique (57).",
+    "Somalia is second-highest of the four listed countries.",
+    "Only Mozambique is higher than Somalia in this peer set."
+   ],
+   "visual_evidence_rule": "All four bars must be shown with values or a visibly ordered axis from 53 to 57.",
+   "temporal_anchor": "comparing its health metrics with peer nations",
+   "reviewer_question": "Should the video show Somalia's relative rank among all four listed peers, including the fact that Ivory Coast and Nigeria are lower?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Somalia's value is 2 years above Ivory Coast (55 - 53 = 2) and 1 year above Nigeria (55 - 54 = 1).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Somalia",
+     "x": "country",
+     "field": "value",
+     "value": 55.0,
+     "note": "Somalia row value=55.000."
+    },
+    {
+     "entity": "Ivory Coast",
+     "x": "country",
+     "field": "value",
+     "value": 53.0,
+     "note": "Ivory Coast row value=53.000."
+    },
+    {
+     "entity": "Nigeria",
+     "x": "country",
+     "field": "value",
+     "value": 54.0,
+     "note": "Nigeria row value=54.000."
+    }
+   ],
+   "computation": "55 - 53 = 2; 55 - 54 = 1",
+   "accepted_routes": [
+    "Somalia is 2 years above Ivory Coast and 1 year above Nigeria.",
+    "Ivory Coast is 2 years below Somalia; Nigeria is 1 year below Somalia.",
+    "Somalia's advantage over Ivory Coast is 2 years, over Nigeria 1 year."
+   ],
+   "visual_evidence_rule": "The gaps between Somalia and Ivory Coast/Nigeria bars must be visible or labeled.",
+   "temporal_anchor": "compare with peer nations",
+   "reviewer_question": "Must the video quantify Somalia's gap above Ivory Coast and Nigeria, or is rank sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Mozambique is the highest listed peer at 57, and Somalia is 2 years below it (57 - 55 = 2).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Mozambique",
+     "x": "country",
+     "field": "value",
+     "value": 57.0,
+     "note": "Mozambique row value=57.000."
+    },
+    {
+     "entity": "Somalia",
+     "x": "country",
+     "field": "value",
+     "value": 55.0,
+     "note": "Somalia row value=55.000."
+    }
+   ],
+   "computation": "57 - 55 = 2",
+   "accepted_routes": [
+    "Mozambique is highest at 57, 2 years above Somalia.",
+    "Somalia is 2 years below Mozambique's 57.",
+    "The top value is Mozambique 57; Somalia is at 55."
+   ],
+   "visual_evidence_rule": "Mozambique's 57 bar and Somalia's 55 bar must be visible together or the 2-year gap labeled.",
+   "temporal_anchor": "peer comparison clause",
+   "reviewer_question": "Should the video highlight Mozambique as the peer-set maximum and its 2-year lead over Somalia?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The peer-set range is 4 years, from Ivory Coast's 53 to Mozambique's 57 (57 - 53 = 4).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Ivory Coast",
+     "x": "country",
+     "field": "value",
+     "value": 53.0,
+     "note": "Ivory Coast row value=53.000."
+    },
+    {
+     "entity": "Mozambique",
+     "x": "country",
+     "field": "value",
+     "value": 57.0,
+     "note": "Mozambique row value=57.000."
+    }
+   ],
+   "computation": "57 - 53 = 4",
+   "accepted_routes": [
+    "The four listed countries span 4 years.",
+    "Mozambique is 4 years above Ivory Coast.",
+    "The range runs from 53 to 57, a 4-year spread."
+   ],
+   "visual_evidence_rule": "The minimum and maximum bars or their values must be visible to show the spread.",
+   "temporal_anchor": "peer comparison clause",
+   "reviewer_question": "Is the overall peer-set spread needed, or only Somalia's position and gaps?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Somalia's table relative_value 0.6483 may be shown only if the chart defines what it is relative to; the table does not define that denominator.",
+  "The four bars may be colored and ordered exactly as in the table, including Somalia's #2E86C1 color.",
+  "The video may note that Somalia's 55 is close to Nigeria's 54 as an optional one-year nuance."
+ ],
+ "unsupported_to_avoid": [
+  "Any GDP claim about Somalia, Ghana, or Madagascar; the table has no GDP rows.",
+  "Causal link between low life expectancy and economic struggle.",
+  "Claim that Somalia is the lowest in the table or among these four peers; Ivory Coast (53) and Nigeria (54) are lower.",
+  "World ranking or 'one of the lowest in the world' from only these four countries.",
+  "Interpreting relative_value as a share or percentile without a defined denominator.",
+  "Extrapolating trends over time; the table has no time field."
+ ],
+ "notes": "The table only supports the four listed values; the narration's GDP comparison is outside the data. The key risk is that Somalia's 55 is not the lowest among the listed peers.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 32.9,
+  "usage": {
+   "prompt_tokens": 722,
+   "completion_tokens": 8117,
+   "total_tokens": 8839,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6116
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 466
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

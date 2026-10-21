@@ -1,0 +1,8 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_29,Australia,australia,528.6,,42.316,0.0646,,#426b75,printed,bar-1,semantic_svg_backfill
+bar_29,France,france,609.0,,47.821,0.0782,,#426b75,printed,bar-2,semantic_svg_backfill
+bar_29,Germany,germany,689.4,,49.885,0.0832,,#426b75,printed,bar-3,semantic_svg_backfill
+bar_29,Norway,norway,448.2,,36.812,0.0511,,#426b75,printed,bar-4,semantic_svg_backfill
+bar_29,United Kingdom,united-kingdom,769.2,,58.142,0.1037,,#426b75,printed,bar-5,semantic_svg_backfill
+bar_29,Canada,canada,849.6,,82.225,0.1630,,#426b75,printed,bar-6,semantic_svg_backfill
+bar_29,United States,united-states,929.5,,318.863,0.7069,,#426b75,printed,bar-7,semantic_svg_backfill

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#111">Us versus Them</text>
+<text x="96" y="390" text-anchor="middle" transform="rotate(-90 96 390)" font-family="Georgia, serif" font-size="17" fill="#333">Us versus Them Polarization</text>
+<text x="190" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">1973-74</text>
+<text x="329" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">1979-80</text>
+<text x="467" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">1985-86</text>
+<text x="606" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">1991-92</text>
+<text x="744" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">1997-98</text>
+<text x="883" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">2003-04</text>
+<text x="1021" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">2009-10</text>
+<text x="1160" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">2015-16</text>
+<path d="M 190.0 250.0 C 213.1 276.7, 282.4 370.0, 328.6 410.0 C 374.8 450.0, 421.0 490.0, 467.1 490.0 C 513.3 490.0, 559.5 440.0, 605.7 410.0 C 651.9 380.0, 698.1 332.0, 744.3 310.0 C 790.5 288.0, 836.7 284.7, 882.9 278.0 C 929.0 271.3, 975.2 274.7, 1021.4 270.0 C 1067.6 265.3, 1136.9 253.3, 1160.0 250.0" fill="none" stroke="#000000" stroke-width="3"/>
+<path d="M 328.6 550.0 C 351.7 543.3, 421.0 530.0, 467.1 510.0 C 513.3 490.0, 559.5 460.0, 605.7 430.0 C 651.9 400.0, 698.1 348.7, 744.3 330.0 C 790.5 311.3, 836.7 322.7, 882.9 318.0 C 929.0 313.3, 975.2 311.3, 1021.4 302.0 C 1067.6 292.7, 1136.9 268.7, 1160.0 262.0" fill="none" stroke="#000000" stroke-width="2.4" stroke-dasharray="8 6"/>
+</svg>

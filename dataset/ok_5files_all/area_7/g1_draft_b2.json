@@ -1,0 +1,272 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_7",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant changes in a country's population demographics and age structure from 1972 to 2019.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The 1972 and 2019 population distributions have different peak/order profiles: 1972 reaches its maximum at x_px=-1 with value 211; 2019's maximum is 115 and remains flat from x_px=19 through -1.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "population 1972",
+     "x": "x_px=-1",
+     "field": "value",
+     "value": 211,
+     "note": "1972 peak value"
+    },
+    {
+     "entity": "population 2019",
+     "x": "x_px=19",
+     "field": "value",
+     "value": 115,
+     "note": "2019 peak plateau starts at x=19"
+    },
+    {
+     "entity": "population 2019",
+     "x": "x_px=-1",
+     "field": "value",
+     "value": 115,
+     "note": "2019 plateau continues to x=-1"
+    }
+   ],
+   "computation": "max(1972)=211 at x=-1; max(2019)=115 across x=19..-1",
+   "accepted_routes": [
+    "1972 peaks at x=-1 at 211, while 2019 stays at 115 from x=19 down to x=-1",
+    "In 1972 the highest value is 211 at the leftmost plotted x; in 2019 the highest value is 115 and forms a flat peak from x=19 to x=-1",
+    "The 2019 maximum (115) is a plateau across x=19 to -1, unlike 1972's single peak at x=-1 (211)"
+   ],
+   "visual_evidence_rule": "Both curves shown; 1972 maximum at x=-1 (211) and 2019 plateau at 115 for x=19 through -1 are visible or labeled.",
+   "temporal_anchor": "The narration clause 'This also changed the country's demographics and the economy' (or equivalent overall change clause).",
+   "reviewer_question": "Should the video be required to state both the 1972 single peak and the 2019 flat peak/plateau?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The two distributions cross between x_px=15 and x_px=16: at x=15, 1972 is higher (118 vs 115); at x=16, 2019 is higher (115 vs 111).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "population 1972",
+     "x": "x_px=15",
+     "field": "value",
+     "value": 118,
+     "note": "1972 is higher at x=15"
+    },
+    {
+     "entity": "population 2019",
+     "x": "x_px=15",
+     "field": "value",
+     "value": 115,
+     "note": "2019 lower at x=15"
+    },
+    {
+     "entity": "population 1972",
+     "x": "x_px=16",
+     "field": "value",
+     "value": 111,
+     "note": "1972 lower at x=16"
+    },
+    {
+     "entity": "population 2019",
+     "x": "x_px=16",
+     "field": "value",
+     "value": 115,
+     "note": "2019 higher at x=16"
+    }
+   ],
+   "computation": "1972_x15=118 > 2019_x15=115 and 1972_x16=111 < 2019_x16=115",
+   "accepted_routes": [
+    "The curves cross between x=15 and x=16; 1972 is higher at x=15 (118 vs 115) and 2019 is higher at x=16 (115 vs 111)",
+    "At x=15, 1972 exceeds 2019 by 3 (118 vs 115); at x=16, 2019 exceeds 1972 by 4 (115 vs 111)",
+    "1972 dominates at x≤15, 2019 dominates at x≥16 (crossover between 15 and 16)"
+   ],
+   "visual_evidence_rule": "Both curves intersect or visibly swap relative height between x=15 and x=16.",
+   "temporal_anchor": "The narration clause contrasting 1972 and 2019 changes ('before many children were born...' / changed demographics).",
+   "reviewer_question": "Must the video explicitly show the crossover between x=15 and x=16?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The peak value/proxy dropped from 211 in 1972 to 115 in 2019, a decline of 96 (about 45.5%).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "population 1972",
+     "x": "x_px=-1",
+     "field": "value",
+     "value": 211,
+     "note": "1972 peak"
+    },
+    {
+     "entity": "population 2019",
+     "x": "x_px=-1",
+     "field": "value",
+     "value": 115,
+     "note": "2019 value at same x, also 2019 peak plateau value"
+    }
+   ],
+   "computation": "(211 - 115) / 211 = 0.4545; absolute drop = 96",
+   "accepted_routes": [
+    "Peak value fell from 211 to 115, down 96 or about 45%",
+    "The maximum 1972 value (211) declined to the 2019 peak (115), a 45.5% drop",
+    "1972's highest value 211 is roughly 1.8× the 2019 maximum 115"
+   ],
+   "visual_evidence_rule": "1972 value 211 at x=-1 and 2019 value 115 at x=-1 (or the 2019 peak plateau) are visible, with the decline/difference indicated.",
+   "temporal_anchor": "'in 2019 it was down to two' / the 2019 comparison clause.",
+   "reviewer_question": "Is the derived peak decline from 211 to 115 required, or is showing the raw peak values sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "At x_px=40, the population proxy increased from 55 in 1972 to 83 in 2019, a rise of 28 (about 50.9%).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "population 1972",
+     "x": "x_px=40",
+     "field": "value",
+     "value": 55,
+     "note": "1972 value at x=40"
+    },
+    {
+     "entity": "population 2019",
+     "x": "x_px=40",
+     "field": "value",
+     "value": 83,
+     "note": "2019 value at x=40"
+    }
+   ],
+   "computation": "(83 - 55) / 55 = 0.5091; absolute increase = 28",
+   "accepted_routes": [
+    "At x=40, value rose from 55 to 83, up about 51%",
+    "x=40 gained 28 in the proxy, from 55 (1972) to 83 (2019)",
+    "Middle x=40 increased by roughly half, 55 → 83"
+   ],
+   "visual_evidence_rule": "At x=40, both 1972 (55) and 2019 (83) values are visible; the increase is highlighted.",
+   "temporal_anchor": "The narration clause about changed demographics/age structure.",
+   "reviewer_question": "Should a specific middle-age increase (x=40) be required to illustrate the shift?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At x_px=74, the population proxy increased from 6 in 1972 to 10 in 2019, a rise of 4 (about 66.7%).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "population 1972",
+     "x": "x_px=74",
+     "field": "value",
+     "value": 6,
+     "note": "1972 value at x=74"
+    },
+    {
+     "entity": "population 2019",
+     "x": "x_px=74",
+     "field": "value",
+     "value": 10,
+     "note": "2019 value at x=74"
+    }
+   ],
+   "computation": "(10 - 6) / 6 = 0.6667; absolute increase = 4",
+   "accepted_routes": [
+    "At x=74, value rose from 6 to 10, up about 67%",
+    "x=74 increased by 4, from 6 (1972) to 10 (2019)",
+    "Older x=74 rose by two-thirds, 6 → 10"
+   ],
+   "visual_evidence_rule": "At x=74, both 1972 (6) and 2019 (10) values are visible; the increase is highlighted.",
+   "temporal_anchor": "The narration clause about older/children or changed demographics.",
+   "reviewer_question": "Should an older-age increase (x=74) be required, or is the crossover sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Total population proxy increased from 5759 (1972 sum of value across x_px) to 6087 (2019 sum), +328 (+5.7%).",
+  "1972 series ends at x=74 with value 6; 2019 extends to x=83 with value 5, showing a longer high-x tail.",
+  "At x=0, value decreased from 209 (1972) to 115 (2019), a drop of 94 (-45.0%)."
+ ],
+ "unsupported_to_avoid": [
+  "Any causal claim that demographics changed the economy.",
+  "Values for 1995 or other years not in the table.",
+  "Exact population counts; table is px_proxy estimated.",
+  "Extrapolating beyond x=-1..83 or 1972/2019.",
+  "Using relative_value as share of total population; it is normalized to max/peak, not total.",
+  "Claiming x_px is definitely age in years without chart axis confirmation."
+ ],
+ "notes": "The table provides only px_proxy values for two years; all units rely on those values or simple arithmetic. The crossover between x=15 and x=16 is the strongest derived signal of age-structure shift.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 56.3,
+  "usage": {
+   "prompt_tokens": 5420,
+   "completion_tokens": 14764,
+   "total_tokens": 20184,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12382
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 5164
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

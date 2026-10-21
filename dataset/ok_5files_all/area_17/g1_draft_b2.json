@@ -1,0 +1,263 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_17",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the differing stability of the East and West Antarctic ice sheets in response to climate change, highlighting the vulnerability of the West due to its below-sea-level topography.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The bedrock beneath the West Antarctic ice sheet lies below sea level, while the bedrock in the central/East Antarctic sector is above sea level.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bedrock",
+     "x": "180.0",
+     "field": "value",
+     "value": -2.127,
+     "note": "West Antarctic end, below sea level"
+    },
+    {
+     "entity": "Bedrock",
+     "x": "513.0",
+     "field": "value",
+     "value": 1.589,
+     "note": "central/East sector, above sea level"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "West Antarctic bedrock is below sea level, while East Antarctic bedrock is mostly above sea level.",
+    "The West Antarctic sector sits on a bed below sea level, contrasting with the higher East Antarctic bed.",
+    "Bedrock elevation is negative under West Antarctica (as low as about -2.13 km) and positive under East Antarctica (up to about +1.59 km)."
+   ],
+   "visual_evidence_rule": "The bedrock data encoding must show negative values in the West Antarctic section and positive values in the central/East Antarctic section.",
+   "temporal_anchor": "the contrast between the clauses about the eastern ice sheet lying on high ground and Western Antarctica being different",
+   "reviewer_question": "Is the West/East mapping (x_px 180 for West, central positive bedrock for East) valid for this clip?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "At the West Antarctic end, the ice surface is above sea level while the bedrock is below sea level, making the ice marine-based.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Ice surface",
+     "x": "180.0",
+     "field": "value",
+     "value": 0.462,
+     "note": "West Antarctic end, above sea level"
+    },
+    {
+     "entity": "Bedrock",
+     "x": "180.0",
+     "field": "value",
+     "value": -2.127,
+     "note": "West Antarctic end, below sea level"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "At the West Antarctic end, the ice surface is above sea level but the bedrock is below it.",
+    "The West Antarctic ice sheet is marine-based: its base is below sea level while its top is above.",
+    "West Antarctic ice rests on bedrock about 2.13 km below sea level while the surface is about 0.46 km above sea level."
+   ],
+   "visual_evidence_rule": "The chart must show the West Antarctic ice surface above sea level and the corresponding bedrock below sea level at the same location.",
+   "temporal_anchor": "the clause 'Most of it lies below sea level'",
+   "reviewer_question": "Is the marine-based threshold (surface above sea level, bed below sea level) required as its own unit?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "In the central/East Antarctic sector, the bedrock is above sea level beneath a high ice surface, indicating the ice is grounded on high ground.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Bedrock",
+     "x": "756.0",
+     "field": "value",
+     "value": 1.058,
+     "note": "central/East sector, above sea level"
+    },
+    {
+     "entity": "Ice surface",
+     "x": "756.0",
+     "field": "value",
+     "value": 3.854,
+     "note": "central/East sector, high ice surface"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "In the East Antarctic central sector, the bedrock is above sea level beneath a high ice surface.",
+    "East Antarctic ice is grounded on high ground: bed about 1.06 km above sea level under an ice surface of about 3.85 km.",
+    "The central/East Antarctic sector has positive bedrock elevation, keeping it grounded above sea level."
+   ],
+   "visual_evidence_rule": "The chart must show positive bedrock elevation under the central/East Antarctic ice surface.",
+   "temporal_anchor": "the clause 'The eastern ice sheet lies mostly on high ground, above sea level'",
+   "reviewer_question": "Is the East Antarctic high-ground comparison required, or is the West vulnerability contrast alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The ice surface reaches its highest point in the interior (about 3.85 km) and drops to its lowest point at the West Antarctic edge (about 0.46 km).",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Ice surface",
+     "x": "756.0",
+     "field": "value",
+     "value": 3.854,
+     "note": "highest ice surface in the table"
+    },
+    {
+     "entity": "Ice surface",
+     "x": "180.0",
+     "field": "value",
+     "value": 0.462,
+     "note": "lowest ice surface in the table, West Antarctic edge"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The ice surface is highest in the interior at about 3.85 km and lowest at the West Antarctic edge at about 0.46 km.",
+    "Ice surface elevation is highest in the middle and lower at the edges.",
+    "The ice sheet is thickest/highest in the interior (about 3.85 km) and thinnest/lowest near the West Antarctic edge (about 0.46 km)."
+   ],
+   "visual_evidence_rule": "The ice surface data encoding must show a high interior value and a much lower value at the West Antarctic end.",
+   "temporal_anchor": "the opening clause 'It's thickest in the middle'",
+   "reviewer_question": "Is the interior-to-edge ice-surface profile optional context, or should it be required because the narration opens with it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Ice thickness is roughly similar in the West and central/East Antarctic sections (about 2.59 km versus about 2.80 km), so the key contrast is bedrock elevation rather than ice thickness.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Ice surface",
+     "x": "180.0",
+     "field": "value",
+     "value": 0.462,
+     "note": "West Antarctic surface"
+    },
+    {
+     "entity": "Bedrock",
+     "x": "180.0",
+     "field": "value",
+     "value": -2.127,
+     "note": "West Antarctic bed"
+    },
+    {
+     "entity": "Ice surface",
+     "x": "756.0",
+     "field": "value",
+     "value": 3.854,
+     "note": "central/East Antarctic surface"
+    },
+    {
+     "entity": "Bedrock",
+     "x": "756.0",
+     "field": "value",
+     "value": 1.058,
+     "note": "central/East Antarctic bed"
+    }
+   ],
+   "computation": "West thickness = 0.462 - (-2.127) = 2.589 km; central/East thickness = 3.854 - 1.058 = 2.796 km",
+   "accepted_routes": [
+    "West and East Antarctic ice thicknesses are similar, around 2.6–2.8 km, despite different bed elevations.",
+    "The West Antarctic column is about 2.59 km thick and the central/East Antarctic column about 2.80 km thick.",
+    "Ice thickness is roughly comparable across the two sectors, so the key contrast is bedrock elevation."
+   ],
+   "visual_evidence_rule": "The chart must allow comparison of ice thickness (surface minus bedrock) between the West and central/East sections, or otherwise show that both are roughly 2.6–2.8 km thick.",
+   "temporal_anchor": "the comparison of the two sides' stability ('melting slowly and remains relatively stable' versus 'more rapid collapse')",
+   "reviewer_question": "Is the similar-thickness contrast worth including as an optional insight, or is it extra beyond the core East/West topographic contrast?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The rightmost bedrock also drops below sea level, but this is not needed for the East/West stability contrast.",
+  "The exact x_px location of the maximum ice surface (x=756) is optional detail.",
+  "The fact that the ice surface is relatively flat over parts of the interior is optional."
+ ],
+ "unsupported_to_avoid": [
+  "Claims that West Antarctica will certainly collapse or that East Antarctica is completely safe.",
+  "Absolute melt rates, sea-level rise amounts, or temperature values not in the table.",
+  "Using 0 km as if it were a table value rather than treating it as the sea-level threshold implied by negative versus positive bedrock values.",
+  "Any chart type, colour, axis tick, or layout prescription."
+ ],
+ "notes": "Core units are the bedrock contrast, the West marine-based threshold, and the East high-ground grounding. The ice-surface profile and similar-thickness comparison are valid but optional context.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 57.1,
+  "usage": {
+   "prompt_tokens": 16137,
+   "completion_tokens": 13839,
+   "total_tokens": 29976,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11672
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 15497
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

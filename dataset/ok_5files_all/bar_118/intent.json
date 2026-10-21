@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_118",
+ "intent_en": "To demonstrate the widespread public support for various proposed reforms to policing practices in the United States.",
+ "previous_intent": "To demonstrate the broad public support for various policing policy proposals, highlighting the overwhelming backing for requiring training in nonviolent alternatives to deadly force.",
+ "narration_support": "we found a broad base of support for a number of proposals about policing",
+ "chart_support": "Horizontal bar chart showing the percentage of respondents favoring five different policing policy proposals, indicating high overall favorability across all categories.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states there is a 'broad base of support' for policing proposals, which aligns with the chart's title 'Broad support among Americans' and the high favorability percentages shown for each policy.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

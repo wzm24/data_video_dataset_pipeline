@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_50",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:RICHEST @ 1160.5"
+   ],
+   "assertion": {
+    "mark": "RICHEST @ 1160.5",
+    "field": "value",
+    "expected": 10.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The RICHEST bar or its value label must be visible at the far right and show 10.0 (or 10%)."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:POOREST @ 209.4"
+   ],
+   "assertion": {
+    "mark": "POOREST @ 209.4",
+    "field": "value",
+    "expected": 11.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The POOREST bar or its value label must be visible at the left and show 11.0 (or 11%)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Group 3 @ 447.2",
+    "mark:RICHEST @ 1160.5"
+   ],
+   "assertion": {
+    "low": "RICHEST @ 1160.5",
+    "low_value": 10.0,
+    "high": "Group 3 @ 447.2",
+    "high_value": 12.0,
+    "delta": 2.0,
+    "ratio": 1.2,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Group 3 must be identifiable as the highest bar at 12.0, and RICHEST as the lowest at 10.0; the 2.0-point range should be stated or visually implied."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:POOREST @ 209.4",
+    "mark:Group 4 @ 566.1"
+   ],
+   "assertion": {
+    "greater": "POOREST @ 209.4",
+    "lesser": "Group 4 @ 566.1",
+    "expected_ratio": 1.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show the repeated 11.0% values for POOREST, Group 4, Group 5, Group 6 and the repeated 10.4% values for Group 7 and Group 8, either by labels or aligned bar heights."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:POOREST @ 209.4",
+    "mark:RICHEST @ 1160.5"
+   ],
+   "assertion": {
+    "low": "RICHEST @ 1160.5",
+    "low_value": 10.0,
+    "high": "POOREST @ 209.4",
+    "high_value": 11.0,
+    "delta": 1.0,
+    "ratio": 1.1,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both the POOREST and RICHEST endpoint values must be visible or directly comparable so the 1.0-point gap can be seen."
+  }
+ ]
+}

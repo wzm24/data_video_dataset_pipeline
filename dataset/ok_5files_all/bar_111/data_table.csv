@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_111,access to clean water,access-to-clean-water,370.0,,,0.6250,relative,#ffffff,relative_only
+bar_111,access to clean water,access-to-clean-water,370.0,,,0.5986,relative,#2b4c7e,relative_only
+bar_111,access to clean water,access-to-clean-water,910.0,,,0.6250,relative,#ffffff,relative_only
+bar_111,access to clean water,access-to-clean-water,910.0,,,0.4361,relative,#2b4c7e,relative_only

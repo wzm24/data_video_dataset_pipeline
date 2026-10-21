@@ -1,0 +1,279 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_100",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the declining trend in the estimated supply of new certified teachers in the United States.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The supply reaches its highest shown value in 2008 at 195,000, higher than the 2005 value of 175,000 and all later years.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "new teacher supply",
+     "x": "2008",
+     "field": "value",
+     "value": 195000,
+     "note": "highest value in table"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2009",
+     "field": "value",
+     "value": 185000,
+     "note": "lower than 2008"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2005",
+     "field": "value",
+     "value": 175000,
+     "note": "lower than 2008"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2013",
+     "field": "value",
+     "value": 110000,
+     "note": "lower than 2008"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2017",
+     "field": "value",
+     "value": 90000,
+     "note": "lower than 2008"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Supply peaks at about 195,000 in 2008",
+    "The highest supply shown is 195,000 in 2008",
+    "Supply rises to 195,000 by 2008 before falling"
+   ],
+   "visual_evidence_rule": "The 2008 value must be visible as the highest among the shown years.",
+   "temporal_anchor": "first narration clause, 'The supply ... is shrinking' (show peak before decline)",
+   "reviewer_question": "Must the video show the 2008 peak, or is a net decline from 2005 enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "From the 2008 peak of 195,000 to the projected 2017 value of 90,000, supply declines by 105,000, or about 54% lower than the 2008 level.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "new teacher supply",
+     "x": "2008",
+     "field": "value",
+     "value": 195000,
+     "note": "peak/start of decline"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2017",
+     "field": "value",
+     "value": 90000,
+     "note": "projected end value"
+    }
+   ],
+   "computation": "195000 - 90000 = 105000; 105000 / 195000 = 0.538; 90000 / 195000 = 0.462",
+   "accepted_routes": [
+    "Supply falls by about 105,000 from 2008 to 2017",
+    "From 195,000 in 2008 to 90,000 projected in 2017, a drop of roughly 105,000",
+    "The 2017 projected value is about 46% of the 2008 peak",
+    "About 54% lower than the 2008 peak"
+   ],
+   "visual_evidence_rule": "Both 2008 and 2017 values must be readable or labeled, and the net decrease should be indicated.",
+   "temporal_anchor": "first narration clause, 'The supply ... is shrinking'",
+   "reviewer_question": "Must the video quantify the full peak-to-projection drop?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "After 2008, the shown values decline in order: 195,000 in 2008, 185,000 in 2009, 110,000 in 2013, and 90,000 projected in 2017.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "new teacher supply",
+     "x": "2008",
+     "field": "value",
+     "value": 195000,
+     "note": "post-2008 sequence starts here"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2009",
+     "field": "value",
+     "value": 185000,
+     "note": "lower than 2008"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2013",
+     "field": "value",
+     "value": 110000,
+     "note": "lower than 2009"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2017",
+     "field": "value",
+     "value": 90000,
+     "note": "projected; lower than 2013"
+    }
+   ],
+   "computation": "195000 > 185000 > 110000 > 90000",
+   "accepted_routes": [
+    "After 2008, supply falls to 185,000 in 2009, 110,000 in 2013, and 90,000 projected in 2017",
+    "The series declines steadily after 2008",
+    "Each post-2008 shown value is lower than the previous one"
+   ],
+   "visual_evidence_rule": "The 2008, 2009, 2013, and 2017 values must be available in chronological order for comparison.",
+   "temporal_anchor": "first narration clause, 'The supply ... is shrinking'",
+   "reviewer_question": "Must the video show the intermediate post-2008 sequence, or is endpoint decline sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The 2017 value of 90,000 is projected, whereas the earlier shown values are estimated.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "new teacher supply",
+     "x": "2017",
+     "field": "value",
+     "value": 90000,
+     "note": "source_type is projected"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The 2017 value of 90,000 is projected, not estimated",
+    "Distinguish the 2017 point as projected",
+    "The final 90,000 value is a projection"
+   ],
+   "visual_evidence_rule": "The 2017 value must be annotated or labeled as projected, not estimated.",
+   "temporal_anchor": "no matching original clause; if included, attach to the 2017 endpoint in the first clause",
+   "reviewer_question": "Must the 2017 point be explicitly marked as projected whenever it is shown?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "By 2013 the supply is 110,000, which is below the 2005 starting level of 175,000; the drop is 65,000.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "new teacher supply",
+     "x": "2005",
+     "field": "value",
+     "value": 175000,
+     "note": "start value"
+    },
+    {
+     "entity": "new teacher supply",
+     "x": "2013",
+     "field": "value",
+     "value": 110000,
+     "note": "below 2005"
+    }
+   ],
+   "computation": "175000 - 110000 = 65000",
+   "accepted_routes": [
+    "By 2013 supply is 110,000, below the 2005 level of 175,000",
+    "Supply falls below its 2005 starting value by 2013",
+    "2013 supply is 65,000 lower than 2005"
+   ],
+   "visual_evidence_rule": "The 2005 and 2013 values must be visible together so the crossing below the starting level can be compared.",
+   "temporal_anchor": "first narration clause, 'The supply ... is shrinking'",
+   "reviewer_question": "Must the video state that 2013 is below the 2005 starting level?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Showing exact values for all shown years",
+  "Annotating the 2009 value as the first post-peak decline",
+  "Showing the 2005 value as context for the later decline"
+ ],
+ "unsupported_to_avoid": [
+  "Any claim that public school student growth is causing the teacher supply decline",
+  "Any public school enrollment or student count not in the table",
+  "Treating the 2017 projected 90,000 as an estimate or actual count",
+  "Any absolute shortage or demand gap not derived from the supplied teacher supply values",
+  "Percentages or totals not derivable from the table values"
+ ],
+ "notes": "The table contains only one series of teacher supply counts, with 2005–2013 estimated and 2017 projected. The original narration's student-growth clause is not supported by the table and should not be visualized as data.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 41.5,
+  "usage": {
+   "prompt_tokens": 957,
+   "completion_tokens": 9950,
+   "total_tokens": 10907,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7964
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 445
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

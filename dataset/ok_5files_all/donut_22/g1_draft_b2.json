@@ -1,0 +1,241 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "donut_22",
+ "family": "donut",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the significant prevalence of fracking in new oil and gas well drilling.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The highlighted/orange share, identified by the narration as fracking, is 60% of new oil and gas wells.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "orange share",
+     "x": "0",
+     "field": "value",
+     "value": 60,
+     "note": "printed percent; relative_value 0.6000"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Fracking accounts for 60% of new wells.",
+    "The orange segment is 60%.",
+    "60% of the donut is the orange/fracking share.",
+    "The prevalence of fracking is 60%."
+   ],
+   "visual_evidence_rule": "A segment or label showing 60% (or 0.60) for the orange category must appear.",
+   "temporal_anchor": "Narration clause 'Over 60% ... using fracking'.",
+   "reviewer_question": "Should the 60% value be required to be explicitly labeled as fracking, not just as orange share?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The non-fracking/blue remainder is 40%.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 40,
+     "note": "printed percent; relative_value 0.4000"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Blue segment is 40%.",
+    "Non-fracking share is 40%.",
+    "The remainder is 40%.",
+    "40% of new wells are not fracking, if blue is non-fracking."
+   ],
+   "visual_evidence_rule": "The blue/other segment must show 40% (or 0.40).",
+   "temporal_anchor": "No direct narration clause; if included, place alongside the donut’s complementary segment.",
+   "reviewer_question": "Must the complementary 40% share be shown, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Fracking/orange share is more than half of the total, crossing the 50% threshold at 60%.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "orange share",
+     "x": "0",
+     "field": "value",
+     "value": 60,
+     "note": "printed percent; relative_value 0.6000"
+    },
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 40,
+     "note": "printed percent; relative_value 0.4000"
+    }
+   ],
+   "computation": "(60 + 40) / 2 = 50; 60 > 50",
+   "accepted_routes": [
+    "Fracking is the majority share at 60%.",
+    "More than half of new wells are fracking.",
+    "60% exceeds the 50% majority threshold.",
+    "The fracking share is over 50%."
+   ],
+   "visual_evidence_rule": "Chart or annotation must make clear the orange/fracking slice is over half of the donut, e.g., >50% marker or majority label.",
+   "temporal_anchor": "Narration clause 'Over 60% ... using fracking'.",
+   "reviewer_question": "Should the majority/threshold interpretation be required, or is the 60% value sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Fracking/orange share is 20 percentage points higher than non-fracking/blue share (60% vs 40%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "orange share",
+     "x": "0",
+     "field": "value",
+     "value": 60,
+     "note": "printed percent; relative_value 0.6000"
+    },
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 40,
+     "note": "printed percent; relative_value 0.4000"
+    }
+   ],
+   "computation": "60 - 40 = 20 percentage points",
+   "accepted_routes": [
+    "The gap between fracking and non-fracking is 20 percentage points.",
+    "60% versus 40% means a 20-point lead.",
+    "Fracking leads by 20 points.",
+    "Orange share exceeds blue by 20 percentage points."
+   ],
+   "visual_evidence_rule": "Both 60% and 40% shares must be visible, or a 20-point gap annotation must be shown.",
+   "temporal_anchor": "Optional; if used, attach to the 'prevalence' comparison in the narration.",
+   "reviewer_question": "Should the 20-point gap be included as required, or is it acceptable optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The two shares make up the full composition, summing to 100% (60% + 40%).",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "orange share",
+     "x": "0",
+     "field": "value",
+     "value": 60,
+     "note": "printed percent; relative_value 0.6000"
+    },
+    {
+     "entity": "blue share",
+     "x": "1",
+     "field": "value",
+     "value": 40,
+     "note": "printed percent; relative_value 0.4000"
+    }
+   ],
+   "computation": "60 + 40 = 100",
+   "accepted_routes": [
+    "The donut shows the complete 100% split.",
+    "The two segments sum to 100%.",
+    "The composition is fully covered by 60% and 40%.",
+    "Only two categories make up 100%."
+   ],
+   "visual_evidence_rule": "The chart must be a complete donut/pie or otherwise indicate the full 100% composition, not a partial bar.",
+   "temporal_anchor": "No direct narration clause; optional chart-level framing.",
+   "reviewer_question": "Should completeness of the composition (sum to 100%) be required, or is it implicit and optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Show relative proportions 0.60 and 0.40 instead of percent values.",
+  "Label the two categories as orange and blue exactly as in the table.",
+  "Show that the donut has only two segments."
+ ],
+ "unsupported_to_avoid": [
+  "Claiming the blue 40% is specifically non-fracking unless the color/category mapping is established.",
+  "Claiming 60% of all oil and gas wells rather than new wells.",
+  "Claiming fracking caused an increase or trend over time.",
+  "Extrapolating to future drilling or total wells.",
+  "Using 20 or 50 as raw table values without showing the 60−40 or (60+40)/2 derivation."
+ ],
+ "notes": "Table labels are generic orange/blue shares, while intent and narration supply the fracking framing. The reviewer must decide required mapping and whether complementary share, gap, or sum are obligatory or optional.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.11
+ },
+ "draft_cost": {
+  "sec": 28.1,
+  "usage": {
+   "prompt_tokens": 614,
+   "completion_tokens": 6389,
+   "total_tokens": 7003,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4667
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 358
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

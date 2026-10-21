@@ -1,0 +1,154 @@
+{
+ "clip_id": "bar_78",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 5,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Year labels 2013–2017 must be visible, and each bar or point must be readable or directly annotated with its value."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:2013 @ 2013",
+    "mark:2014 @ 2014",
+    "mark:2015 @ 2015",
+    "mark:2016 @ 2016",
+    "mark:2017 @ 2017"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "2013 @ 2013",
+      "value": 100.0
+     },
+     {
+      "mark": "2014 @ 2014",
+      "value": 130.0
+     },
+     {
+      "mark": "2015 @ 2015",
+      "value": 200.0
+     },
+     {
+      "mark": "2016 @ 2016",
+      "value": 190.0
+     },
+     {
+      "mark": "2017 @ 2017",
+      "value": 200.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the 2016 decline and 2017 recovery visible, e.g., the 2016 bar lower than 2015 and 2017."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2013 @ 2013",
+    "mark:2017 @ 2017"
+   ],
+   "assertion": {
+    "low": "2013 @ 2013",
+    "low_value": 100.0,
+    "high": "2017 @ 2017",
+    "high_value": 200.0,
+    "delta": 100.0,
+    "ratio": 2.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "First and last values, 100 and 200, must be visible or directly comparable as a 2x relationship."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2015 @ 2015",
+    "mark:2016 @ 2016",
+    "mark:2017 @ 2017"
+   ],
+   "assertion": {
+    "low": "2016 @ 2016",
+    "low_value": 190.0,
+    "high": "2015 @ 2015",
+    "high_value": 200.0,
+    "delta": 10.0,
+    "ratio": 1.0526,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "2016 must be visibly lower than 2015 and 2017 by an amount that reads as about a 5% change."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:2013 @ 2013",
+    "segment:2014 @ 2014",
+    "segment:2015 @ 2015",
+    "segment:2016 @ 2016",
+    "segment:2017 @ 2017"
+   ],
+   "assertion": {
+    "segment": "2013 @ 2013",
+    "expected_share": 0.0005,
+    "total_of": "unknown",
+    "total": 820.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The relative_value metric must be explicitly shown, e.g., secondary bars, labels, or annotations, not merely inferred from the primary value bars."
+  }
+ ]
+}

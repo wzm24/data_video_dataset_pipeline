@@ -1,0 +1,245 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_4",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that net housing additions in England have consistently failed to meet the annual target over the period from 2000 to 2019.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Across the series, net housing additions stay below the annual target referenced in the narration; the highest annual value, 247,770 in 2018-19, is still short of that target.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Net housing additions",
+     "x": "2018-19",
+     "field": "value",
+     "value": 247770.0,
+     "note": "maximum annual value; if the maximum is below the target, no year reaches it. The target number itself is not in the table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "No year reaches the annual target; even the best year, 2018-19, has 247,770 net additions and remains below target.",
+    "The series stays under the target throughout; its maximum is 247,770 in 2018-19.",
+    "The target is never met, with 2018-19 the closest year at 247,770."
+   ],
+   "visual_evidence_rule": "A visible target reference and the 2018-19 maximum mark must make the maximum appear below the target.",
+   "temporal_anchor": "the clause 'we've consistently not hit this target'",
+   "reviewer_question": "Should target shortfall be required even though the target value is not in the table?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The end of the period is much higher than the start: net additions rise from 132,000 in 2000-01 to 247,770 in 2018-19, an increase of 115,770; the final value is about 1.88 times the initial value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Net housing additions",
+     "x": "2000-01",
+     "field": "value",
+     "value": 132000.0,
+     "note": "first value in the series"
+    },
+    {
+     "entity": "Net housing additions",
+     "x": "2018-19",
+     "field": "value",
+     "value": 247770.0,
+     "note": "last value in the series"
+    }
+   ],
+   "computation": "247770 - 132000 = 115770; 247770 / 132000 ≈ 1.88",
+   "accepted_routes": [
+    "Starts at 132,000 in 2000-01 and ends at 247,770 in 2018-19.",
+    "Rises by about 116,000 over the period.",
+    "The final value is roughly 1.88 times the initial value."
+   ],
+   "visual_evidence_rule": "The first and last annual marks must be visible or labeled so their values can be compared.",
+   "temporal_anchor": "the period framing (2000-2019) / opening period statement",
+   "reviewer_question": "Should the start-to-end increase be required, or is the target shortfall alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "There is a pronounced mid-period fall: net additions drop from 223,530 in 2007-08 to 130,610 in 2012-13, a decline of 92,920 (about 42%).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Net housing additions",
+     "x": "2007-08 (inferred from annual row order)",
+     "field": "value",
+     "value": 223530.0,
+     "note": "mid-period high before the fall"
+    },
+    {
+     "entity": "Net housing additions",
+     "x": "2012-13 (inferred from annual row order)",
+     "field": "value",
+     "value": 130610.0,
+     "note": "lowest value in the series"
+    }
+   ],
+   "computation": "223530 - 130610 = 92920; 92920 / 223530 ≈ 0.42",
+   "accepted_routes": [
+    "Falls from 223,530 in 2007-08 to 130,610 in 2012-13.",
+    "Drops by about 93,000, or roughly 42%.",
+    "After a mid-2000s high, it reaches its lowest point at 130,610."
+   ],
+   "visual_evidence_rule": "The 2007-08 high and 2012-13 low must be visible or labeled sufficiently to see the decline.",
+   "temporal_anchor": "the 'consistently' clause, if used for mid-period context",
+   "reviewer_question": "Should the mid-period decline be required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "After the 2012-13 low of 130,610, net additions recover to 247,770 by 2018-19, an increase of 117,160 (about 90%, nearly doubling).",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Net housing additions",
+     "x": "2012-13 (inferred from annual row order)",
+     "field": "value",
+     "value": 130610.0,
+     "note": "lowest value in the series"
+    },
+    {
+     "entity": "Net housing additions",
+     "x": "2018-19",
+     "field": "value",
+     "value": 247770.0,
+     "note": "final and maximum value"
+    }
+   ],
+   "computation": "247770 - 130610 = 117160; 117160 / 130610 ≈ 0.90",
+   "accepted_routes": [
+    "Rebounds from 130,610 in 2012-13 to 247,770 in 2018-19.",
+    "Rises by 117,160 after the low.",
+    "The final value is nearly double the 2012-13 low."
+   ],
+   "visual_evidence_rule": "The 2012-13 low and 2018-19 endpoint must be visible or labeled to see the recovery.",
+   "temporal_anchor": "the 'consistently' clause, if used for late-period recovery",
+   "reviewer_question": "Should the post-2012 recovery be required, or optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The final 2018-19 maximum of 247,770 exceeds the earlier 2007-08 peak of 223,530 by 24,240 (about 11%).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Net housing additions",
+     "x": "2018-19",
+     "field": "value",
+     "value": 247770.0,
+     "note": "final and maximum value"
+    },
+    {
+     "entity": "Net housing additions",
+     "x": "2007-08 (inferred from annual row order)",
+     "field": "value",
+     "value": 223530.0,
+     "note": "earlier local peak"
+    }
+   ],
+   "computation": "247770 - 223530 = 24240; 24240 / 223530 ≈ 0.11",
+   "accepted_routes": [
+    "The 2018-19 value of 247,770 is above the 2007-08 peak of 223,530.",
+    "The end-of-period maximum is about 24,000 higher than the mid-2000s high.",
+    "The new high at 2018-19 is roughly 11% above the 2007-08 level."
+   ],
+   "visual_evidence_rule": "The 2007-08 local peak and 2018-19 maximum must be visible or labeled for comparison.",
+   "temporal_anchor": "the 'consistently' clause, if used for final comparison",
+   "reviewer_question": "Should the final maximum exceeding the earlier peak be required, or optional comparison?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The 2010-11 point is 137,390, a local low around the middle of the period.",
+  "The 2017-18 point is 228,170, just below the 2018-19 maximum.",
+  "From 2000-01 to 2007-08, net additions rise from 132,000 to 223,530.",
+  "The 2014-15 point is 176,580."
+ ],
+ "unsupported_to_avoid": [
+  "Citing the spoken annual target as if it were a table value or deriving it from table cells.",
+  "Causal claims such as the financial crisis causing the mid-period fall.",
+  "Extrapolating beyond 2018-19 or claiming future delivery.",
+  "Using relative_value as a percentage; it is a 0-1 normalization, not a share.",
+  "Comparing to other countries, tenures, or housing types not in the table.",
+  "Saying the series is monotonic or smooth; the table shows rises and falls."
+ ],
+ "notes": "The table has absolute net additional dwellings, not the target; target-related units avoid citing the target number and use only the table maximum to show shortfall. Years not explicitly labeled are inferred from annual row order between 2000-01, 2010-11, and 2018-19.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 67.0,
+  "usage": {
+   "prompt_tokens": 1867,
+   "completion_tokens": 15151,
+   "total_tokens": 17018,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12992
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1355
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

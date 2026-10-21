@@ -1,0 +1,206 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_68",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain the economic mechanism behind yield curve inversion, illustrating how gloomy outlooks drive investors to buy long-term bonds and lower long-term interest rates.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The interest rate falls over the clip, shown as a downward-sloping line from left to right.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Interest rate",
+     "x": "240",
+     "field": "relative_value",
+     "value": 0.2667,
+     "note": "start point on relative y-scale (0 top, 1 bottom)"
+    },
+    {
+     "entity": "Interest rate",
+     "x": "1080",
+     "field": "relative_value",
+     "value": 0.8444,
+     "note": "end point on relative y-scale (0 top, 1 bottom)"
+    }
+   ],
+   "computation": "0.8444 - 0.2667 = 0.5777; on a y-down relative scale this is a downward move, representing a fall in interest rate",
+   "accepted_routes": [
+    "Interest rate falls over the clip",
+    "Long-term interest rate declines",
+    "The interest-rate line slopes downward",
+    "The rate moves from a higher to a lower position on the chart"
+   ],
+   "visual_evidence_rule": "A line labeled Interest rate must visibly descend from x=240 to x=1080.",
+   "temporal_anchor": "the clause 'so the interest rate for holding them falls'",
+   "reviewer_question": "Should the unit require a visibly downward-sloping interest-rate line, rather than treating the increasing relative_value as an increase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The interest-rate line has relative y endpoints of 0.2667 at the start and 0.8444 at the end.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Interest rate",
+     "x": "240",
+     "field": "relative_value",
+     "value": 0.2667,
+     "note": "start endpoint"
+    },
+    {
+     "entity": "Interest rate",
+     "x": "1080",
+     "field": "relative_value",
+     "value": 0.8444,
+     "note": "end endpoint"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Starts at 0.2667 and ends at 0.8444 on the relative scale",
+    "Endpoint relative values are 0.2667 and 0.8444",
+    "The line goes from 0.2667 to 0.8444",
+    "The interest-rate line has relative y endpoints 0.2667 and 0.8444"
+   ],
+   "visual_evidence_rule": "Both endpoint positions of the interest-rate line are visible.",
+   "temporal_anchor": "the clause 'interest rate for holding them falls' or the whole clip",
+   "reviewer_question": "Are the exact endpoint relative values required, or is the general downward direction sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The relative y-coordinate of the interest-rate line changes by 0.5777 over the segment.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Interest rate",
+     "x": "240",
+     "field": "relative_value",
+     "value": 0.2667,
+     "note": "start value"
+    },
+    {
+     "entity": "Interest rate",
+     "x": "1080",
+     "field": "relative_value",
+     "value": 0.8444,
+     "note": "end value"
+    }
+   ],
+   "computation": "0.8444 - 0.2667 = 0.5777",
+   "accepted_routes": [
+    "The relative y-coordinate changes by 0.5777",
+    "The line moves by ~0.58 relative units",
+    "The vertical span is 0.5777 on the relative scale"
+   ],
+   "visual_evidence_rule": "The vertical distance between the line's start and end is 0.5777 relative units.",
+   "temporal_anchor": "the clause 'interest rate ... falls'",
+   "reviewer_question": "Is the exact magnitude of the relative move required, or optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The plotted series is interest rate, and it is the only series in the data table.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Interest rate",
+     "x": "all",
+     "field": "entity_id",
+     "value": null,
+     "note": "single entity in the table; no bond price or other series present"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart plots interest rate",
+    "The line represents interest rate",
+    "Interest rate is the tracked metric",
+    "The series is labeled Interest rate"
+   ],
+   "visual_evidence_rule": "An axis label, legend, or on-chart text identifies the line as Interest rate.",
+   "temporal_anchor": "the clause 'interest rate for holding them falls'",
+   "reviewer_question": "Must the chart explicitly label the series as interest rate to avoid confusion with bond price?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The broader context that this clip relates to yield curve inversion (from intent, not table).",
+  "The x-pixel positions 240 and 1080 as the start and end points (optional if the video animates the line)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claim that gloomy outlook drives investors to buy long-term bonds (not in the data table).",
+  "Bond price increases (not in the table).",
+  "Investor behavior or safe-asset preference (not in the table).",
+  "Absolute interest rate values (table only has relative positions).",
+  "Interpretation that interest rate rises because relative_value goes from 0.2667 to 0.8444 (if relative_value is a screen y-coordinate, the visual direction is downward)."
+ ],
+ "notes": "The table contains only relative positions for a single interest-rate line, so the data-grounded requirements center on a downward visual slope. Causal mechanism and bond-price movements are narration context and not supported by the table.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.85
+ },
+ "draft_cost": {
+  "sec": 59.0,
+  "usage": {
+   "prompt_tokens": 670,
+   "completion_tokens": 13693,
+   "total_tokens": 14363,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 12366
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 414
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

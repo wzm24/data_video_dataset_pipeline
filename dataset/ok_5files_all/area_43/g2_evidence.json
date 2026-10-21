@@ -1,0 +1,124 @@
+{
+ "clip_id": "area_43",
+ "family": "area",
+ "chart_form": "area/stacked_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:China @ 2019",
+    "mark:United States @ 2019"
+   ],
+   "assertion": {
+    "greater": "China @ 2019",
+    "lesser": "United States @ 2019",
+    "expected_ratio": 1.8704,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final-year (2019) values for China and the United States must be visible and show China's bar/point/line endpoint above the U.S."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:United States @ 1750-2019",
+    "mark:China @ 1750-2019",
+    "mark:EU-28 @ 1750-2019",
+    "mark:India @ 1750-2019"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "United States @ 1750-2019",
+      "value": 5.4
+     },
+     {
+      "mark": "China @ 1750-2019",
+      "value": 10.1
+     },
+     {
+      "mark": "EU-28 @ 1750-2019",
+      "value": 3.3
+     },
+     {
+      "mark": "India @ 1750-2019",
+      "value": 2.65
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The animation must show a cumulative total/rank (e.g., cumulative area, running sum, or ranked cumulative bars) indicating the U.S. is highest; simply showing 2019 annual values is insufficient."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:China @ 2019",
+    "mark:United States @ 2019"
+   ],
+   "assertion": {
+    "greater": "China @ 2019",
+    "lesser": "United States @ 2019",
+    "expected_ratio": 1.8704,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The clip must place the current-year annual comparison next to or in contrast with the cumulative comparison, so the reversal is visible."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:United States @ 1900",
+    "mark:United States @ 2019"
+   ],
+   "assertion": {
+    "low": "United States @ 1900",
+    "low_value": 0.4,
+    "high": "United States @ 2019",
+    "high_value": 5.4,
+    "delta": 5.0,
+    "ratio": 13.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The U.S. line/bar should visibly rise from 1900 to 2019, with those two endpoints labeled or readable."
+  }
+ ]
+}

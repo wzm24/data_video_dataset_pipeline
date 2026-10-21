@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#222">% approving of the president's job performance (term average)</text>
+<text x="344.0" y="142.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Trump</text>
+<rect x="423.0" y="130.0" width="693.0" height="10" fill="#cfcfcf"/>
+<circle cx="423.0" cy="135.0" r="10" fill="#567694"/>
+<circle cx="1116.0" cy="135.0" r="10" fill="#b34141"/>
+<text x="409.0" y="141.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">7</text>
+<text x="1130.0" y="141.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">84</text>
+<text x="344.0" y="187.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Obama</text>
+<rect x="486.0" y="175.0" width="603.0" height="10" fill="#cfcfcf"/>
+<circle cx="486.0" cy="180.0" r="10" fill="#b34141"/>
+<circle cx="1089.0" cy="180.0" r="10" fill="#567694"/>
+<text x="472.0" y="186.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">14</text>
+<text x="1103.0" y="186.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">81</text>
+<text x="344.0" y="232.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">G.W. Bush</text>
+<rect x="567.0" y="220.0" width="522.0" height="10" fill="#cfcfcf"/>
+<circle cx="567.0" cy="225.0" r="10" fill="#567694"/>
+<circle cx="1089.0" cy="225.0" r="10" fill="#b34141"/>
+<text x="553.0" y="231.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">23</text>
+<text x="1103.0" y="231.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">81</text>
+<text x="344.0" y="277.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Clinton</text>
+<rect x="603.0" y="265.0" width="477.0" height="10" fill="#cfcfcf"/>
+<circle cx="603.0" cy="270.0" r="10" fill="#b34141"/>
+<circle cx="1080.0" cy="270.0" r="10" fill="#567694"/>
+<text x="589.0" y="276.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">27</text>
+<text x="1094.0" y="276.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">80</text>
+<text x="344.0" y="322.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">G.H.W. Bush</text>
+<rect x="756.0" y="310.0" width="342.0" height="10" fill="#cfcfcf"/>
+<circle cx="756.0" cy="315.0" r="10" fill="#567694"/>
+<circle cx="1098.0" cy="315.0" r="10" fill="#b34141"/>
+<text x="742.0" y="321.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">44</text>
+<text x="1112.0" y="321.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">82</text>
+<text x="344.0" y="367.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Reagan</text>
+<rect x="639.0" y="355.0" width="468.0" height="10" fill="#cfcfcf"/>
+<circle cx="639.0" cy="360.0" r="10" fill="#567694"/>
+<circle cx="1107.0" cy="360.0" r="10" fill="#b34141"/>
+<text x="625.0" y="366.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">31</text>
+<text x="1121.0" y="366.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">83</text>
+<text x="344.0" y="412.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Carter</text>
+<rect x="630.0" y="400.0" width="243.0" height="10" fill="#cfcfcf"/>
+<circle cx="630.0" cy="405.0" r="10" fill="#b34141"/>
+<circle cx="873.0" cy="405.0" r="10" fill="#567694"/>
+<text x="616.0" y="411.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">30</text>
+<text x="887.0" y="411.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">57</text>
+<text x="344.0" y="457.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Ford</text>
+<rect x="684.0" y="445.0" width="279.0" height="10" fill="#cfcfcf"/>
+<circle cx="684.0" cy="450.0" r="10" fill="#567694"/>
+<circle cx="963.0" cy="450.0" r="10" fill="#b34141"/>
+<text x="670.0" y="456.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">36</text>
+<text x="977.0" y="456.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">67</text>
+<text x="344.0" y="502.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Nixon</text>
+<rect x="666.0" y="490.0" width="369.0" height="10" fill="#cfcfcf"/>
+<circle cx="666.0" cy="495.0" r="10" fill="#567694"/>
+<circle cx="1035.0" cy="495.0" r="10" fill="#b34141"/>
+<text x="652.0" y="501.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">34</text>
+<text x="1049.0" y="501.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">75</text>
+<text x="344.0" y="547.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Johnson</text>
+<rect x="720.0" y="535.0" width="270.0" height="10" fill="#cfcfcf"/>
+<circle cx="720.0" cy="540.0" r="10" fill="#b34141"/>
+<circle cx="990.0" cy="540.0" r="10" fill="#567694"/>
+<text x="706.0" y="546.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">40</text>
+<text x="1004.0" y="546.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">70</text>
+<text x="344.0" y="592.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Kennedy</text>
+<rect x="801.0" y="580.0" width="315.0" height="10" fill="#cfcfcf"/>
+<circle cx="801.0" cy="585.0" r="10" fill="#b34141"/>
+<circle cx="1116.0" cy="585.0" r="10" fill="#567694"/>
+<text x="787.0" y="591.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">49</text>
+<text x="1130.0" y="591.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">84</text>
+<text x="344.0" y="637.0" text-anchor="end" font-family="Arial" font-size="16" font-weight="700" fill="#333">Eisenhower</text>
+<rect x="801.0" y="625.0" width="351.0" height="10" fill="#cfcfcf"/>
+<circle cx="801.0" cy="630.0" r="10" fill="#567694"/>
+<circle cx="1152.0" cy="630.0" r="10" fill="#b34141"/>
+<text x="787.0" y="636.0" text-anchor="end" font-family="Arial" font-size="17" font-weight="700" fill="#222">49</text>
+<text x="1166.0" y="636.0" font-family="Arial" font-size="17" font-weight="700" fill="#222">88</text>
+<line x1="360" y1="693" x2="1260" y2="693" stroke="#333"/>
+<line x1="360" y1="693.0" x2="360" y2="701.0" stroke="#333"/>
+<text x="360" y="719.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">0</text>
+<line x1="540" y1="693.0" x2="540" y2="701.0" stroke="#333"/>
+<text x="540" y="719.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">20</text>
+<line x1="720" y1="693.0" x2="720" y2="701.0" stroke="#333"/>
+<text x="720" y="719.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">40</text>
+<line x1="900" y1="693.0" x2="900" y2="701.0" stroke="#333"/>
+<text x="900" y="719.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">60</text>
+<line x1="1080" y1="693.0" x2="1080" y2="701.0" stroke="#333"/>
+<text x="1080" y="719.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">80</text>
+<line x1="1260" y1="693.0" x2="1260" y2="701.0" stroke="#333"/>
+<text x="1260" y="719.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#333">100</text>
+</svg>

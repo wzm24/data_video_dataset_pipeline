@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_107",
+ "intent_en": "To contextualize the massive financial impact of increased tax cheating by comparing lost tax revenue to the Department of Education's annual budget.",
+ "previous_intent": "To illustrate the magnitude of tax losses from increased cheating by comparing the lost revenue to the Department of Education's budget, highlighting the substantial financial impact.",
+ "narration_support": "Putting that into perspective, the money lost with 4 percentage points more cheating is triple the Department of Education's budget for 2018.",
+ "chart_support": "Bar chart comparing the Department of Education FY 2018 budget with taxes lost due to 4 percentage points more cheating, showing the lost taxes are substantially higher.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly uses a comparison to 'put that into perspective', and the chart visualizes this by placing the Department of Education budget next to the taxes lost from cheating, with the latter bar being much taller.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

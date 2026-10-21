@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#e0e0e0"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#333333">The stock market is growing faster than wages</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#999999" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#999999" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="534.3" x2="1220" y2="534.3" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="468.6" x2="1220" y2="468.6" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="402.9" x2="1220" y2="402.9" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="337.1" x2="1220" y2="337.1" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="271.4" x2="1220" y2="271.4" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="205.7" x2="1220" y2="205.7" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="gridline" x1="120" y1="140.0" x2="1220" y2="140.0" stroke="#666666" stroke-width="1" stroke-opacity="0.35"/>
+<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">80</text>
+<line data-role="tick" x1="112" y1="534.3" x2="120" y2="534.3" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="540.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">100</text>
+<line data-role="tick" x1="112" y1="468.6" x2="120" y2="468.6" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="474.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">120</text>
+<line data-role="tick" x1="112" y1="402.9" x2="120" y2="402.9" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="408.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">140</text>
+<line data-role="tick" x1="112" y1="337.1" x2="120" y2="337.1" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="343.1" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">160</text>
+<line data-role="tick" x1="112" y1="271.4" x2="120" y2="271.4" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="277.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">180</text>
+<line data-role="tick" x1="112" y1="205.7" x2="120" y2="205.7" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="211.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">200</text>
+<line data-role="tick" x1="112" y1="140.0" x2="120" y2="140.0" stroke="#666666" stroke-width="2"/>
+<text data-role="tick-label" x="104" y="146.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#666666">220</text>
+<g id="entity-s-p-500" data-role="entity" data-entity-id="s-p-500" data-label="S&amp;P 500" data-series="true">
+<polyline id="s-p-500-polyline" data-role="polyline" data-entity-id="s-p-500" points="120.0,370.0 176.6,320.7 233.1,320.7 277.1,370.0 333.7,370.0 390.3,402.9 434.3,567.1 490.9,534.3 547.4,452.1 591.4,452.1 648.0,468.6 704.6,386.4 748.6,386.4 805.1,419.3 861.7,376.6 905.7,370.0 962.3,363.4 1018.9,353.6 1062.9,271.4 1119.4,238.6 1176.0,205.7 1220.0,189.3" fill="none" stroke="#c85a28" stroke-width="3" data-animation-property="points"/>
+</g>
+<g id="entity-wages" data-role="entity" data-entity-id="wages" data-label="Wages" data-series="true">
+<path id="wages-path" data-role="line" data-entity-id="wages" d="M 120.0 550.7 C 124.7 549.1, 138.9 543.6, 148.3 540.9 C 157.7 538.1, 167.1 535.9, 176.6 534.3 C 186.0 532.6, 195.4 532.1, 204.9 531.0 C 214.3 529.9, 223.7 528.8, 233.1 527.7 C 242.6 526.6, 251.7 525.0, 261.4 524.4 C 271.1 523.9, 281.6 524.4, 291.3 524.4 C 301.0 524.4, 310.1 524.4, 319.6 524.4 C 329.0 524.4, 338.4 523.9, 347.9 524.4 C 357.3 525.0, 366.7 526.1, 376.1 527.7 C 385.6 529.4, 394.7 532.1, 404.4 534.3 C 414.1 536.5, 424.6 539.8, 434.3 540.9 C 444.0 542.0, 453.1 540.9, 462.6 540.9 C 472.0 540.9, 481.4 541.4, 490.9 540.9 C 500.3 540.3, 509.7 538.7, 519.1 537.6 C 528.6 536.5, 538.0 535.4, 547.4 534.3 C 556.9 533.2, 566.0 531.5, 575.7 531.0 C 585.4 530.5, 595.9 531.5, 605.6 531.0 C 615.3 530.5, 624.4 528.8, 633.9 527.7 C 643.3 526.6, 652.7 525.5, 662.1 524.4 C 671.6 523.3, 681.0 522.2, 690.4 521.1 C 699.9 520.0, 709.0 519.0, 718.7 517.9 C 728.4 516.8, 738.9 515.1, 748.6 514.6 C 758.3 514.0, 767.4 515.1, 776.9 514.6 C 786.3 514.0, 795.7 511.8, 805.1 511.3 C 814.6 510.7, 824.0 511.8, 833.4 511.3 C 842.9 510.7, 852.3 508.5, 861.7 508.0 C 871.1 507.5, 880.3 508.5, 890.0 508.0 C 899.7 507.5, 910.2 505.8, 919.9 504.7 C 929.5 503.6, 938.7 502.5, 948.1 501.4 C 957.6 500.3, 967.0 499.2, 976.4 498.1 C 985.9 497.0, 995.3 495.4, 1004.7 494.9 C 1014.1 494.3, 1023.3 495.4, 1033.0 494.9 C 1042.7 494.3, 1053.2 492.1, 1062.9 491.6 C 1072.5 491.0, 1081.7 492.1, 1091.1 491.6 C 1100.6 491.0, 1110.0 488.8, 1119.4 488.3 C 1128.9 487.7, 1138.3 488.8, 1147.7 488.3 C 1157.1 487.7, 1166.6 485.5, 1176.0 485.0 C 1185.4 484.5, 1197.0 485.5, 1204.3 485.0 C 1211.6 484.5, 1217.4 482.3, 1220.0 481.7" fill="none" stroke="#8da392" stroke-width="3"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2007</text>
+<text data-role="x-axis-label" x="277.1" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2008</text>
+<text data-role="x-axis-label" x="434.3" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2009</text>
+<text data-role="x-axis-label" x="591.4" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2010</text>
+<text data-role="x-axis-label" x="748.6" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2011</text>
+<text data-role="x-axis-label" x="905.7" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2012</text>
+<text data-role="x-axis-label" x="1062.9" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2013</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666666">2014</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#c85a28" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#666666">S&amp;P 500</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#8da392" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#666666">Wages</text>
+</g>
+</svg>

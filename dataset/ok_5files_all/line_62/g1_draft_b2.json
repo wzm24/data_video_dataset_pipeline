@@ -1,0 +1,280 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_62",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the rapid and massive increase in confirmed Covid-19 deaths over a single year.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The global deaths series ends at 2.5 million.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "1170",
+     "field": "value",
+     "value": 2.5,
+     "note": "final tabulated value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "global deaths ended at 2.5 million",
+    "the final total reached 2.5M",
+    "by the end, the series is at 2.5 million"
+   ],
+   "visual_evidence_rule": "The final plotted point or end label must show 2.5M, or a rounded 2.5 million.",
+   "temporal_anchor": "the narration clause 'over 2 million people worldwide' / end of clip",
+   "reviewer_question": "Must the video state the exact final 2.5M endpoint, or is the narration's 'over 2 million' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The global deaths series starts at 0 million.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "170",
+     "field": "value",
+     "value": 0,
+     "note": "initial tabulated value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the series begins at 0 deaths",
+    "the baseline is 0M",
+    "it starts from zero"
+   ],
+   "visual_evidence_rule": "The first plotted point or baseline must be at 0 on the deaths axis.",
+   "temporal_anchor": "the narration clause 'In one year' / start of clip",
+   "reviewer_question": "Is an explicit 0 baseline required to make the increase clear, or can the axis scale imply it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Global deaths increased by 2.5 million over the clip/year.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "170",
+     "field": "value",
+     "value": 0,
+     "note": "initial value"
+    },
+    {
+     "entity": "global deaths",
+     "x": "1170",
+     "field": "value",
+     "value": 2.5,
+     "note": "final value"
+    }
+   ],
+   "computation": "2.5 - 0 = 2.5",
+   "accepted_routes": [
+    "deaths rose by 2.5 million",
+    "an increase of 2.5M across the year",
+    "the total added 2.5 million deaths from start to end"
+   ],
+   "visual_evidence_rule": "The chart must show or annotate a rise from 0 to 2.5M, not merely the final value.",
+   "temporal_anchor": "the narration clause 'In one year'",
+   "reviewer_question": "Must the total increase of 2.5M be quantified, or is an upward curve enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Global deaths pass the 2 million threshold stated in the narration and end above it; the table brackets this between 1.95M and 2.5M.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "1003",
+     "field": "value",
+     "value": 1.95,
+     "note": "last tabulated value below the narration's 2M threshold"
+    },
+    {
+     "entity": "global deaths",
+     "x": "1170",
+     "field": "value",
+     "value": 2.5,
+     "note": "final value above the narration's 2M threshold"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "global deaths passed 2 million",
+    "over 2 million by year's end",
+    "the 2M mark is crossed before the final 2.5M"
+   ],
+   "visual_evidence_rule": "A 2M reference line or label must be visible and the curve must cross it before the final point.",
+   "temporal_anchor": "the narration clause 'over 2 million people worldwide'",
+   "reviewer_question": "Must the 2M crossing be explicitly shown, or does the final 2.5M endpoint imply it?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series rises monotonically at each tabulated point: 0, 0.28, 0.52, 0.78, 1.00, 1.35, 1.95, and 2.50 million.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "global deaths",
+     "x": "170",
+     "field": "value",
+     "value": 0,
+     "note": "point 1"
+    },
+    {
+     "entity": "global deaths",
+     "x": "253",
+     "field": "value",
+     "value": 0.28,
+     "note": "point 2"
+    },
+    {
+     "entity": "global deaths",
+     "x": "420",
+     "field": "value",
+     "value": 0.52,
+     "note": "point 3"
+    },
+    {
+     "entity": "global deaths",
+     "x": "587",
+     "field": "value",
+     "value": 0.78,
+     "note": "point 4"
+    },
+    {
+     "entity": "global deaths",
+     "x": "670",
+     "field": "value",
+     "value": 1,
+     "note": "point 5"
+    },
+    {
+     "entity": "global deaths",
+     "x": "837",
+     "field": "value",
+     "value": 1.35,
+     "note": "point 6"
+    },
+    {
+     "entity": "global deaths",
+     "x": "1003",
+     "field": "value",
+     "value": 1.95,
+     "note": "point 7"
+    },
+    {
+     "entity": "global deaths",
+     "x": "1170",
+     "field": "value",
+     "value": 2.5,
+     "note": "point 8"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the deaths curve climbs steadily",
+    "each tabulated value is higher than the previous one",
+    "a continuous upward trend from 0 to 2.5M"
+   ],
+   "visual_evidence_rule": "The animated line or sequence must ascend without downward segments across the tabulated points.",
+   "temporal_anchor": "the narration clause 'In one year' / whole clip progression",
+   "reviewer_question": "Must the full monotonic progression be shown, or can the video jump from start to final value?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The final 2.5M is 2.5 times the 1.00M value at x=670 (2.5 / 1.0 = 2.5).",
+  "The final 2.5M is 1.5M above the 1.00M value at x=670 (2.5 - 1.0 = 1.5).",
+  "The last interval from 1.95M to 2.5M is a +0.55M jump (2.5 - 1.95 = 0.55).",
+  "At x=670 the 1.00M value is 40% of the final total (table relative_value 0.4).",
+  "At x=1003 the 1.95M value is 78% of the final total (table relative_value 0.78)."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that the virus killed exactly 2.5M people, because the table entity is global deaths, not a decomposed cause series.",
+  "Extrapolating beyond the final 2.5M point or beyond the one-year window.",
+  "Treating x_px values as calendar dates or as an exact time axis without labels.",
+  "Comparing to other countries or regions, since the table has only one global-deaths entity.",
+  "Presenting 2.0M as a tabulated value; it is a narration threshold bracketed by 1.95M and 2.5M, not a plotted table point."
+ ],
+ "notes": "The table contains one cumulative global-deaths series with a clear 0-to-2.5M increase. The 2M threshold is narration-derived rather than a tabulated point, so its basis uses the 1.95M and 2.5M bracketing values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 49.5,
+  "usage": {
+   "prompt_tokens": 752,
+   "completion_tokens": 11756,
+   "total_tokens": 12508,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9686
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 496
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

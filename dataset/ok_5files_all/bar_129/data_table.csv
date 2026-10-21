@@ -1,0 +1,21 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series
+bar_129,1985,1985,467.1,,,0.2610,relative,#2b7de0,relative_only,,,USA
+bar_129,"58,761",58-761,901.8,,,0.4182,relative,#d92525,relative_only,,,Russia / Red
+bar_129,1980,1980,464.8,,,0.2575,relative,#2b7de0,relative_only,,,USA
+bar_129,USA,bar-4,894.2,,,0.4134,relative,#d92525,relative_only,bar-4,semantic_svg_order_backfill,Russia / Red
+bar_129,Russia / Red,bar-5,1162.9,,,0.0068,relative,#8c8c8c,relative_only,bar-5,semantic_svg_order_backfill,Other
+bar_129,1975,1975,407.6,,,0.1680,relative,#2b7de0,relative_only,,,USA
+bar_129,Other,bar-7,748.1,,,0.3641,relative,#d92525,relative_only,bar-7,semantic_svg_order_backfill,Russia / Red
+bar_129,2015,bar-8,998.9,,,0.0280,relative,#8c8c8c,relative_only,bar-8,semantic_svg_order_backfill,Other
+bar_129,1970,1970,453.0,,,0.2391,relative,#2b7de0,relative_only,,,USA
+bar_129,2010,bar-10,728.4,,,0.1913,relative,#d92525,relative_only,bar-10,semantic_svg_order_backfill,Russia / Red
+bar_129,2005,bar-11,863.0,,,0.0191,relative,#8c8c8c,relative_only,bar-11,semantic_svg_order_backfill,Other
+bar_129,1965,1965,489.7,,,0.2964,relative,#2b7de0,relative_only,,,USA
+bar_129,2000,bar-13,717.4,,,0.0593,relative,#d92525,relative_only,bar-13,semantic_svg_order_backfill,Russia / Red
+bar_129,1995,bar-14,762.2,,,0.0108,relative,#8c8c8c,relative_only,bar-14,semantic_svg_order_backfill,Other
+bar_129,1960,1960,438.6,,,0.2165,relative,#2b7de0,relative_only,,,USA
+bar_129,1990,bar-16,589.4,,,0.0191,relative,#d92525,relative_only,bar-16,semantic_svg_order_backfill,Russia / Red
+bar_129,1985,bar-17,605.7,,,0.0064,relative,#8c8c8c,relative_only,bar-17,semantic_svg_order_backfill,Other
+bar_129,1955,1955,319.6,,,0.0307,relative,#2b7de0,relative_only,,,USA
+bar_129,1955,1955,341.8,,,0.0038,relative,#d92525,relative_only,,,Russia / Red
+bar_129,1950,1950,308.9,,,0.0138,relative,#2b7de0,relative_only,,,USA

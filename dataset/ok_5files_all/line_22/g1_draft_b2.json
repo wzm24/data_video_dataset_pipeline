@@ -1,0 +1,257 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_22",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate the trend of grade inflation over time, illustrating the increase in higher grades and the decrease in lower grades.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The clip shows a single series labeled F with data points spanning the years 1961 to 2006.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "F",
+     "x": "1961-2006",
+     "field": "relative_value",
+     "value": 0.15,
+     "note": "first point of series F"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The chart features a single series called F.",
+    "Data for series F covers 1961 through 2006.",
+    "The line represents entity F over time."
+   ],
+   "visual_evidence_rule": "The chart must include a line or series identified as F, with data points spanning the years 1961 to 2006.",
+   "temporal_anchor": "grades are inflating over time",
+   "reviewer_question": "Must the clip identify the series as F and show its full time span?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The series starts at relative value 0.15 in 1961 and ends at 0.10 in 2006.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "F",
+     "x": "1961",
+     "field": "relative_value",
+     "value": 0.15,
+     "note": "start point"
+    },
+    {
+     "entity": "F",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "end point"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "1961 value is 0.15, 2006 value is 0.10.",
+    "The series begins at 0.15 and ends at 0.10.",
+    "Start: 0.15 (1961), end: 0.10 (2006)."
+   ],
+   "visual_evidence_rule": "The chart must display a data point for F at 1961 with relative value 0.15 and a data point at 2006 with relative value 0.10.",
+   "temporal_anchor": "grades are inflating over time",
+   "reviewer_question": "Must the clip explicitly show both the 1961 and 2006 endpoint values for series F?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series declines from 0.15 in 1961 to a minimum of 0.05 at an intermediate point, then rises to 0.10 and stays flat through 2006.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "F",
+     "x": "1961",
+     "field": "relative_value",
+     "value": 0.15,
+     "note": "start"
+    },
+    {
+     "entity": "F",
+     "x": "intermediate (between 1961 and 1997)",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "minimum"
+    },
+    {
+     "entity": "F",
+     "x": "1997",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "rise and plateau start"
+    },
+    {
+     "entity": "F",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "plateau end"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The series drops to 0.05 then climbs to 0.10 and levels off.",
+    "Initial decline, then a rise, then a plateau at 0.10.",
+    "The value is lowest at 0.05, then increases to 0.10 by 1997 and remains there."
+   ],
+   "visual_evidence_rule": "The chart must show a downward trend from 1961 to a low point of 0.05, followed by an upward trend to 0.10 and a flat segment from 1997 to 2006.",
+   "temporal_anchor": "grades are inflating over time",
+   "reviewer_question": "Must the clip convey the full trend shape (decline, rise, plateau) rather than just endpoints?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "From 1961 to 2006, the relative value decreases by 0.05 (0.15 - 0.10 = 0.05), a net reduction of one-third (0.05 / 0.15 = 1/3).",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "F",
+     "x": "1961",
+     "field": "relative_value",
+     "value": 0.15,
+     "note": "start"
+    },
+    {
+     "entity": "F",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "end"
+    }
+   ],
+   "computation": "difference = 0.15 - 0.10 = 0.05; ratio = 0.05 / 0.15 = 1/3",
+   "accepted_routes": [
+    "The value drops by 0.05 from 1961 to 2006.",
+    "Net decrease of one-third from the 1961 level.",
+    "The 2006 value is 0.05 lower than the 1961 value."
+   ],
+   "visual_evidence_rule": "The chart must allow comparison of the 1961 and 2006 relative values, showing a drop of 0.05.",
+   "temporal_anchor": "far fewer C's and D's",
+   "reviewer_question": "Must the clip quantify the net change between 1961 and 2006?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 2006 relative value (0.10) is two-thirds of the 1961 value (0.15) (0.10 / 0.15 = 2/3).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "F",
+     "x": "1961",
+     "field": "relative_value",
+     "value": 0.15,
+     "note": "start"
+    },
+    {
+     "entity": "F",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "end"
+    }
+   ],
+   "computation": "0.10 / 0.15 = 2/3",
+   "accepted_routes": [
+    "2006 value is about two-thirds of the 1961 value.",
+    "The ending value is roughly two-thirds of the starting value.",
+    "The series ends at two-thirds of its starting level."
+   ],
+   "visual_evidence_rule": "Chart must show both endpoint values so the viewer can compare them.",
+   "temporal_anchor": "grades are inflating over time",
+   "reviewer_question": "Should the clip explicitly compare the 2006 value to the 1961 value as a ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series reaches its highest relative value of 0.15 in 1961.",
+  "The minimum relative value is 0.05.",
+  "The series has a plateau at 0.10 from 1997 to 2006."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why grades are inflating",
+  "Extrapolating beyond 2006",
+  "Interpreting relative_value as a percentage (e.g., saying 15% or 10%)",
+  "Assuming F stands for a specific grade without table basis",
+  "Stating absolute counts or percentages not present in the table"
+ ],
+ "notes": "The table contains a single series F with relative values from 1961 to 2006; all proposed units use relative_value and avoid absolute units. The intent mentions multiple grades, but the table only supports one series, so units focus on that series' trend.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.1
+ },
+ "draft_cost": {
+  "sec": 50.5,
+  "usage": {
+   "prompt_tokens": 1347,
+   "completion_tokens": 12651,
+   "total_tokens": 13998,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10751
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 835
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

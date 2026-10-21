@@ -1,0 +1,223 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_10",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the disproportionate share of national income captured by the highest earners before taxes.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The top 1% of earners receive 22.5% of national income before taxes.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 22.5,
+     "note": "Income share for the top 1% slice; unit is %."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Top 1% take home about 22.5% of national income before taxes.",
+    "The highest-earning 1% receive 22.5% of pre-tax national income.",
+    "A 22.5% share of national income goes to the top 1%."
+   ],
+   "visual_evidence_rule": "A pie/donut slice or annotation labeled 'Top 1%' must display 22.5% (or 'about 22.5%') as its income share.",
+   "temporal_anchor": "the clause 'take home about 22.5% of the national income'",
+   "reviewer_question": "Must the video state the top 1% income share as 22.5%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The second pie slice shown in the table has value 77.1%, understood as the remaining/non-top-1% share if the chart labels it that way.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "22.5%",
+     "x": "1",
+     "field": "value",
+     "value": 77.1,
+     "note": "Table row slice-2; the entity label is ambiguous/backfilled, but the value is 77.1%."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The second pie slice / remaining share is 77.1%.",
+    "The other slice is 77.1%.",
+    "The non-top-1% remainder is about 77.1%, if labeled as remainder."
+   ],
+   "visual_evidence_rule": "A second pie slice or legend entry for slice-2 must display 77.1% (or 'about 77.1%'), with clear labeling if it is called the remainder/non-top-1% share.",
+   "temporal_anchor": "no narration clause; optional visual beat after the 22.5% reveal",
+   "reviewer_question": "Should the second slice's 77.1% be treated as required despite not being in the narration?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The rest slice (77.1%) is much larger than the top 1% slice (22.5%): it is about 3.43 times as large, and 54.6 percentage points larger.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 22.5,
+     "note": "Top 1% share."
+    },
+    {
+     "entity": "22.5%",
+     "x": "1",
+     "field": "value",
+     "value": 77.1,
+     "note": "Second slice share."
+    }
+   ],
+   "computation": "77.1 / 22.5 = 3.4267; 77.1 - 22.5 = 54.6 percentage points",
+   "accepted_routes": [
+    "The rest slice is about 3.43 times the top 1% slice.",
+    "77.1% is 54.6 percentage points larger than 22.5%.",
+    "The top 1% share is much smaller than the remaining share: 22.5% vs 77.1%."
+   ],
+   "visual_evidence_rule": "Both 22.5% and 77.1% must be visible in the same chart, or a comparison graphic must show the rest slice is larger/multiple of the top 1% slice.",
+   "temporal_anchor": "no narration clause; optional visual beat after both slices are shown",
+   "reviewer_question": "Must the video compare the top 1% slice against the rest slice, or is showing the 22.5% share alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The top 1%'s 22.5% income share is disproportionate relative to their 1% population share: it is about 22.5 times their population share.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 22.5,
+     "note": "Income share from the table; population share '1%' is embedded in the entity label 'Top 1%'."
+    }
+   ],
+   "computation": "22.5 / 1 = 22.5, where 1 is the population share embedded in the entity label 'Top 1%'",
+   "accepted_routes": [
+    "Top 1% receive about 22.5 times their 1% population share.",
+    "22.5% income share vs 1% population share.",
+    "The top 1% are overrepresented by roughly 22.5x."
+   ],
+   "visual_evidence_rule": "The 22.5% income share and the 1% population share (or an explicit '22.5x' annotation) must both be visible.",
+   "temporal_anchor": "the clause 'a top 1%'",
+   "reviewer_question": "Must the video explicitly contrast the 22.5% income share with the 1% population share or state the ~22.5x overrepresentation?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The 22.5% share is a pre-tax / before-tax measure, not an after-tax or disposable-income measure.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "0",
+     "field": "value",
+     "value": 22.5,
+     "note": "Qualifier 'before taxes' comes from intent/narration, not a table column."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Before taxes.",
+    "Pre-tax national income.",
+    "Not after-tax or disposable income."
+   ],
+   "visual_evidence_rule": "A title, subtitle, or on-chart annotation must say 'before taxes' or 'pre-tax national income' near the 22.5% figure.",
+   "temporal_anchor": "the opening clause 'Before taxes'",
+   "reviewer_question": "Must the video label the 22.5% as pre-tax/before-tax rather than after-tax?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The two table slices sum to 99.6% (22.5 + 77.1), so labels may be rounded/estimated rather than exactly 100%.",
+  "The second slice is larger than the top 1% slice (77.1% vs 22.5%).",
+  "The source types differ: the Top 1% value is printed, while the second slice is estimated.",
+  "The chart can show the 22.5% slice as the highlighted component in a pie/donut."
+ ],
+ "unsupported_to_avoid": [
+  "Do not claim the 22.5% is after-tax, disposable income, or tax paid.",
+  "Do not say the top 1% earn 22.5% of wealth, GDP, or total population; the table says national income share.",
+  "Do not state the remaining share is exactly 77.5% (100 - 22.5) when the table's second slice is 77.1%.",
+  "Do not claim a causal reason for the disparity or extrapolate to trends over time.",
+  "Do not use an unstated 99% population denominator unless clearly derived from the entity label and labeled as such."
+ ],
+ "notes": "The table's second row has an ambiguous/backfilled entity label ('22.5%') but value 77.1%; treat any rest-slice unit as optional unless the reviewer decides the pie requires it. The 1% population comparison is derived from the entity name 'Top 1%', not a separate numeric column.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.09
+ },
+ "draft_cost": {
+  "sec": 47.8,
+  "usage": {
+   "prompt_tokens": 696,
+   "completion_tokens": 11626,
+   "total_tokens": 12322,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9664
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 312
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

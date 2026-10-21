@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#FDF8F5"/>
+<text id="chart-title" data-role="title" x="640.0" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#222222">Highest level of math taken</text>
+<text id="chart-subtitle" data-role="subtitle" x="640.0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#666666">A 2011 study by Mike Bastedo and Ozan Jaquette</text>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1120" y2="600" stroke="#444444" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="180" x2="120" y2="600" stroke="#444444" stroke-width="3"/>
+<line data-role="gridline" x1="120" y1="600" x2="1120" y2="600" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<text data-role="tick-label" x="108" y="606" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">No math</text>
+<line data-role="gridline" x1="120" y1="495" x2="1120" y2="495" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<text data-role="tick-label" x="108" y="501" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">Low math</text>
+<line data-role="gridline" x1="120" y1="390" x2="1120" y2="390" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<text data-role="tick-label" x="108" y="396" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">Algebra I</text>
+<line data-role="gridline" x1="120" y1="285" x2="1120" y2="285" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<text data-role="tick-label" x="108" y="291" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">Algebra II</text>
+<line data-role="gridline" x1="120" y1="180" x2="1120" y2="180" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+<text data-role="tick-label" x="108" y="186" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#444444">Trig / Alg III</text>
+<g id="entity-1982" data-role="entity" data-entity-id="1982" data-label="1982">
+<rect id="1982-bar" data-role="bar" data-entity-id="1982" data-value="2.7" x="400" y="316.5" width="160" height="283.5" fill="#4299D6"/>
+<text data-role="category-label" x="480" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">1982</text>
+</g>
+<g id="entity-2004" data-role="entity" data-entity-id="2004" data-label="2004">
+<rect id="2004-bar" data-role="bar" data-entity-id="2004" data-value="1.65" x="700" y="426.75" width="160" height="173.25" fill="#4299D6"/>
+<text data-role="category-label" x="780" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">2004</text>
+</g>
+</g>
+</svg>

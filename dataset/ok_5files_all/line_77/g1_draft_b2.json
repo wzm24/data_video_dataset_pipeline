@@ -1,0 +1,263 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "line_77",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the timing and severity of the sharp surge in daily confirmed coronavirus cases in India beginning in early 2021.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The line represents India's daily confirmed COVID-19 cases, specifically a 7-day moving average ('daily cases 7dma').",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=170.0",
+     "field": "value",
+     "value": 4.5613,
+     "note": "start of plotted series"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1150.0",
+     "field": "value",
+     "value": 369.5175,
+     "note": "end of plotted series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "India's daily COVID-19 cases, 7-day moving average",
+    "Daily confirmed cases in India (7dma)",
+    "The curve tracks India's daily cases, smoothed over 7 days"
+   ],
+   "visual_evidence_rule": "The chart must have a label/title or legend identifying the entity as India daily cases 7dma.",
+   "temporal_anchor": "the 'India experienced ... coronavirus cases' clause",
+   "reviewer_question": "Must the video explicitly name both the metric (daily cases/7dma) and country (India)?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The sharp surge begins late in the series, after a low near 15.8 around x_px 972-977, not at the beginning of the plotted period.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=972.4",
+     "field": "value",
+     "value": 15.7921,
+     "note": "late low before the surge"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=977.1",
+     "field": "value",
+     "value": 15.7921,
+     "note": "late low before the surge"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1027.8",
+     "field": "value",
+     "value": 21.7271,
+     "note": "early rise out of low"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1097.0",
+     "field": "value",
+     "value": 105.5474,
+     "note": "steep rise underway"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The surge starts after a late low near 16",
+    "Cases first fall to about 15.8 before climbing steeply in the final part of the chart",
+    "The steep increase begins in the final segment, not at the series start"
+   ],
+   "visual_evidence_rule": "The chart must show a trough/low before the final steep upward segment; the surge should not be read as the initial rise.",
+   "temporal_anchor": "the 'It began in April 2021' clause",
+   "reviewer_question": "Is the late-series timing/onset, not just any increase, required?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "By the final plotted point, the 7-day average reaches about 369.5 daily cases.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1150.0",
+     "field": "value",
+     "value": 369.5175,
+     "note": "final plotted value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The curve ends near 370 cases",
+    "Final 7-day average is about 369.5",
+    "The plotted series ends at roughly 370 daily cases"
+   ],
+   "visual_evidence_rule": "The final endpoint/value should be visible or labeled on the y-axis or annotation.",
+   "temporal_anchor": "the 'sharp increase in coronavirus cases' clause",
+   "reviewer_question": "Must the video show the final endpoint value, or is showing the steep rise enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "From the pre-surge low to the final point, cases increase by about 353.7 (from ~15.8 to ~369.5), a roughly 23.4-fold rise.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=972.4",
+     "field": "value",
+     "value": 15.7921,
+     "note": "pre-surge low used as baseline"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1150.0",
+     "field": "value",
+     "value": 369.5175,
+     "note": "final endpoint"
+    }
+   ],
+   "computation": "(369.5175 - 15.7921) = 353.7254; 369.5175 / 15.7921 = 23.40",
+   "accepted_routes": [
+    "Cases rose about 23-fold from the late low",
+    "From about 16 to about 370, an increase of roughly 354 cases",
+    "The final level is roughly 23 times the pre-surge low"
+   ],
+   "visual_evidence_rule": "Both the pre-surge low and final high must be visible, or the rise must be quantified in an annotation.",
+   "temporal_anchor": "the 'sharp increase' clause",
+   "reviewer_question": "Should the video quantify the fold-change/difference from the late low to the endpoint?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The final surge crosses the 100, 200, and 300 case thresholds in quick succession.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1097.0",
+     "field": "value",
+     "value": 105.5474,
+     "note": "first value above 100 in final surge"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1120.0",
+     "field": "value",
+     "value": 208.7249,
+     "note": "first value above 200 in final surge"
+    },
+    {
+     "entity": "daily cases 7dma",
+     "x": "x_px=1136.2",
+     "field": "value",
+     "value": 314.9156,
+     "note": "first value above 300 in final surge"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Cases pass 100, then 200, then 300 during the surge",
+    "The 7-day average crosses 100 near x_px 1097, 200 near x_px 1120, and 300 near x_px 1136",
+    "It breaks through 100/200/300 thresholds as it accelerates"
+   ],
+   "visual_evidence_rule": "Horizontal reference lines or annotations at 100, 200, and 300 should be shown with the curve crossing them.",
+   "temporal_anchor": "the 'sharp increase' clause",
+   "reviewer_question": "Are threshold crossings required, or are they optional visual evidence of steepness?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The series had an earlier local peak near 97.8 at x_px 628.9 before declining to the late low.",
+  "The final relative_value is 0.9133, but it should not be interpreted as a share/proportion without axis metadata.",
+  "The series is plotted as a 7-day moving average, which smooths daily volatility."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about variants, lockdowns, festivals, elections, or other drivers.",
+  "Extrapolating beyond x_px=1150 or claiming the final value is the maximum in the full pandemic if the table only ends here.",
+  "Using relative_value as a percentage/share of population or cases.",
+  "Stating exact dates beyond the narration without an x-to-date mapping in the table."
+ ],
+ "notes": "The table has only x_px and values, so date labels should be sourced from the narration/axis, not inferred. U5 is a deliberate optional threshold unit to make the severity trade-off visible.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.05
+ },
+ "draft_cost": {
+  "sec": 48.4,
+  "usage": {
+   "prompt_tokens": 9807,
+   "completion_tokens": 11169,
+   "total_tokens": 20976,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 9130
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 9551
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

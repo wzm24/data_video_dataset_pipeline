@@ -1,0 +1,157 @@
+{
+ "clip_id": "line_87",
+ "family": "line",
+ "chart_form": "line/multi_panel",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Party @ 1994",
+    "mark:Party @ 2017"
+   ],
+   "assertion": {
+    "low": "Party @ 1994",
+    "low_value": 15.0,
+    "high": "Party @ 2017",
+    "high_value": 36.0,
+    "delta": 21.0,
+    "ratio": 2.4,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The Party trajectory must be traceable from 15 in 1994 to 36 in 2017, and the increase or ratio must be readable."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Party @ 2017",
+    "mark:Race @ 2017"
+   ],
+   "assertion": {
+    "greater": "Party @ 2017",
+    "lesser": "Race @ 2017",
+    "expected_ratio": 2.5714,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In 2017, the Party gap must appear clearly separated above all other demographic gaps, with at least Party 36 and the nearest other gap 14 readable."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Party @ 1994",
+    "mark:Race @ 1994"
+   ],
+   "assertion": {
+    "greater": "Party @ 1994",
+    "lesser": "Race @ 1994",
+    "expected_ratio": 1.0714,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "In 1994, Party 15 and the largest other gap Race 14 must be visible as close or comparable, with other non-Party gaps lower."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Race @ 2017",
+    "mark:Religious attendance @ 1998"
+   ],
+   "assertion": {
+    "greater": "Race @ 2017",
+    "lesser": "Religious attendance @ 1998",
+    "expected_ratio": 3.5,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The non-Party series must stay within the 4-to-14 band across their recorded years while Party reaches 36."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Party @ 2017",
+    "mark:Race @ 2017",
+    "mark:Religious attendance @ 2017",
+    "mark:Education @ 2017",
+    "mark:Age @ 2017",
+    "mark:Gender @ 2017"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Party @ 2017",
+      "value": 36.0
+     },
+     {
+      "mark": "Race @ 2017",
+      "value": 14.0
+     },
+     {
+      "mark": "Religious attendance @ 2017",
+      "value": 11.0
+     },
+     {
+      "mark": "Education @ 2017",
+      "value": 11.0
+     },
+     {
+      "mark": "Age @ 2017",
+      "value": 10.0
+     },
+     {
+      "mark": "Gender @ 2017",
+      "value": 7.0
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2017 order Party > Race > Religious attendance/Education > Age > Gender must be inferable from the displayed 2017 values."
+  }
+ ]
+}

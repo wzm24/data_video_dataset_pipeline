@@ -1,0 +1,33 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source,series,entity_label_printed,date_section_range
+bar_138,Feb 20,Feb 20-Local,174.1,,1.000,0.0333,,#853333,vision,Feb 20,printed_date_anchor,Local,yes,Feb 20 - Feb 26
+bar_138,Feb 20,Feb 20-Local,202.2,,1.000,0.0333,,#853333,vision,Feb 20,inherited_section_anchor,Local,no,Feb 20 - Feb 26
+bar_138,Feb 20,Feb 20-Local,230.3,,1.000,0.0333,,#853333,vision,bar-3,inherited_section_anchor,Local,no,Feb 20 - Feb 26
+bar_138,Feb 20,Feb 20-Local,258.4,,2.000,0.0667,,#853333,vision,bar-4,inherited_section_anchor,Local,no,Feb 20 - Feb 26
+bar_138,27 Feb 20,27 Feb 20-Imported,286.6,,2.000,0.0667,,#2f8f8f,vision,27 Feb 20,printed_date_anchor,Imported,yes,Feb 27 - Mar 08
+bar_138,27 Feb 20,27 Feb 20-Imported,314.7,,2.000,0.0667,,#2f8f8f,vision,27 Feb 20,inherited_section_anchor,Imported,no,Feb 27 - Mar 08
+bar_138,27 Feb 20,27 Feb 20-Local,342.8,,1.000,0.0333,,#853333,vision,bar-7,inherited_section_anchor,Local,no,Feb 27 - Mar 08
+bar_138,27 Feb 20,27 Feb 20-Local,370.9,,4.000,0.1333,,#853333,vision,bar-8,inherited_section_anchor,Local,no,Feb 27 - Mar 08
+bar_138,27 Feb 20,27 Feb 20-Imported,399.1,,1.000,0.0333,,#2f8f8f,vision,bar-9,inherited_section_anchor,Imported,no,Feb 27 - Mar 08
+bar_138,27 Feb 20,27 Feb 20-Local,427.2,,1.000,0.0333,,#853333,vision,bar-10,inherited_section_anchor,Local,no,Feb 27 - Mar 08
+bar_138,09 Mar 20,09 Mar 20-Local,455.3,,1.000,0.0333,,#853333,vision,09 Mar 20,printed_date_anchor,Local,yes,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Imported,483.4,,1.000,0.0333,,#2f8f8f,vision,09 Mar 20,inherited_section_anchor,Imported,no,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Local,511.6,,1.000,0.0333,,#853333,vision,09 Mar 20,inherited_section_anchor,Local,no,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Imported,539.7,,5.000,0.1667,,#2f8f8f,vision,bar-14,inherited_section_anchor,Imported,no,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Local,567.8,,3.000,0.1000,,#853333,vision,bar-15,inherited_section_anchor,Local,no,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Imported,595.9,,5.000,0.1667,,#2f8f8f,vision,bar-16,inherited_section_anchor,Imported,no,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Imported,624.1,,8.000,0.2667,,#2f8f8f,vision,bar-17,inherited_section_anchor,Imported,no,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Imported,652.2,,3.000,0.1000,,#2f8f8f,vision,bar-18,inherited_section_anchor,Imported,no,Mar 09 - Mar 16
+bar_138,09 Mar 20,09 Mar 20-Imported,680.3,,5.000,0.1667,,#2f8f8f,vision,bar-19,inherited_section_anchor,Imported,no,Mar 09 - Mar 16
+bar_138,17 Mar 20,17 Mar 20-Imported,708.4,,15.000,0.5000,,#2f8f8f,vision,17 Mar 20,printed_date_anchor,Imported,yes,Mar 17 - Mar 24
+bar_138,17 Mar 20,17 Mar 20-Local,736.6,,2.000,0.0667,,#853333,vision,17 Mar 20,inherited_section_anchor,Local,no,Mar 17 - Mar 24
+bar_138,17 Mar 20,17 Mar 20-Imported,764.7,,17.000,0.5667,,#2f8f8f,vision,17 Mar 20,inherited_section_anchor,Imported,no,Mar 17 - Mar 24
+bar_138,17 Mar 20,17 Mar 20-Imported,792.8,,21.000,0.7000,,#2f8f8f,vision,bar-23,inherited_section_anchor,Imported,no,Mar 17 - Mar 24
+bar_138,17 Mar 20,17 Mar 20-Imported,820.9,,27.000,0.9000,,#2f8f8f,vision,bar-24,inherited_section_anchor,Imported,no,Mar 17 - Mar 24
+bar_138,17 Mar 20,17 Mar 20-Imported,849.1,,10.000,0.3333,,#2f8f8f,vision,bar-25,inherited_section_anchor,Imported,no,Mar 17 - Mar 24
+bar_138,17 Mar 20,17 Mar 20-Local,877.2,,1.000,0.0333,,#853333,vision,bar-26,inherited_section_anchor,Local,no,Mar 17 - Mar 24
+bar_138,17 Mar 20,17 Mar 20-Imported,905.3,,16.000,0.5333,,#2f8f8f,vision,bar-27,inherited_section_anchor,Imported,no,Mar 17 - Mar 24
+bar_138,25 Mar 20,25 Mar 20-Local,933.4,,8.000,0.2667,,#853333,vision,25 Mar 20,printed_date_anchor,Local,yes,Mar 25 - Mar 31
+bar_138,25 Mar 20,25 Mar 20-Imported,961.6,,19.000,0.6333,,#2f8f8f,vision,25 Mar 20,inherited_section_anchor,Imported,no,Mar 25 - Mar 31
+bar_138,25 Mar 20,25 Mar 20-Imported,989.7,,29.000,0.9667,,#2f8f8f,vision,25 Mar 20,inherited_section_anchor,Imported,no,Mar 25 - Mar 31
+bar_138,25 Mar 20,25 Mar 20-Imported,1017.8,,24.000,0.8000,,#2f8f8f,vision,bar-31,inherited_section_anchor,Imported,no,Mar 25 - Mar 31
+bar_138,25 Mar 20,25 Mar 20-Local,1045.9,,3.000,0.1000,,#853333,vision,bar-32,inherited_section_anchor,Local,no,Mar 25 - Mar 31

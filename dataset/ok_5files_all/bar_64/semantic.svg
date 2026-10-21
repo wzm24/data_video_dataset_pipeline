@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f3c74d"/>
+<rect id="scene-background-shade" x="0" y="0" width="1280" height="720" fill="#e8a73a" opacity="0.25"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">World Population</text>
+<g id="chart-plot" data-role="plot">
+<g id="entity-lactose-intolerant" data-role="entity" data-entity-id="lactose-intolerant" data-label="Lactose intolerant">
+<rect id="lactose-intolerant-bar" data-role="bar" data-entity-id="lactose-intolerant" data-value="65" x="502.0" y="360.0" width="598.0" height="90.0" fill="#3d6fb4" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<text id="lactose-intolerant-value-label" data-role="value-label" data-entity-id="lactose-intolerant" x="801.0" y="401.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#f7d845">65%</text>
+<text id="lactose-intolerant-label" data-role="category-label" data-entity-id="lactose-intolerant" x="801.0" y="439.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f2f2f2">LACTOSE INTOLERANT</text>
+</g>
+<g id="entity-lactose-tolerant" data-role="entity" data-entity-id="lactose-tolerant" data-label="Lactose tolerant">
+<rect id="lactose-tolerant-bar" data-role="bar" data-entity-id="lactose-tolerant" data-value="35" x="180.0" y="360.0" width="322.0" height="90.0" fill="#ffffff" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+</g>
+</g>
+</svg>

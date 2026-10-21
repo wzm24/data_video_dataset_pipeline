@@ -1,0 +1,235 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_115",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the deep partisan divide in public confidence in police officers, demonstrating that Republicans are significantly more likely to have high confidence than Democrats.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Republicans/Lean Rep rank higher than Democrats/Lean Dem in relative confidence in police officers.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.4659,
+     "note": "higher of the two relative values"
+    },
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.1442,
+     "note": "lower of the two relative values"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Rep/Lean Rep is higher than Dem/Lean Dem",
+    "Republicans and Republican leaners are more likely than Democrats and Democratic leaners to have high confidence",
+    "the Republican/Lean Rep relative value is above the Democratic/Lean Dem relative value"
+   ],
+   "visual_evidence_rule": "Both groups must be identifiable, and their displayed relative values must let a viewer determine that the Republican/Lean Rep value is greater than the Democratic/Lean Dem value.",
+   "temporal_anchor": "the clause stating views are deeply divided by party identification",
+   "reviewer_question": "Must the video explicitly rank Republicans/Lean Rep above Democrats/Lean Dem, rather than only showing two separate values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Republican/Lean Rep relative confidence value is approximately 0.466 and is the highest of the two groups.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.4659,
+     "note": "highest relative value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "about 0.47 on the relative-value scale",
+    "the larger relative value is 0.4659",
+    "the Republican/Lean Rep relative score is approximately 0.466"
+   ],
+   "visual_evidence_rule": "The Republican/Lean Rep relative value must be visible or inferable as the largest of the two displayed values.",
+   "temporal_anchor": "the clause about Republicans and Republican leaners having high confidence",
+   "reviewer_question": "Should the video state the Republican/Lean Rep relative value itself, not just its higher rank?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The Democratic/Lean Dem relative confidence value is approximately 0.144 and is the lowest of the two groups.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.1442,
+     "note": "lowest relative value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "about 0.14 on the relative-value scale",
+    "the smaller relative value is 0.1442",
+    "the Democratic/Lean Dem relative score is approximately 0.144"
+   ],
+   "visual_evidence_rule": "The Democratic/Lean Dem relative value must be visible or inferable as the smallest of the two displayed values.",
+   "temporal_anchor": "the clause about Democrats and Democratic leaners",
+   "reviewer_question": "Should the video state the Democratic/Lean Dem relative value itself, not just its lower rank?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The relative confidence gap between Republicans/Lean Rep and Democrats/Lean Dem is about 0.322 relative-value units.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.4659,
+     "note": "higher value used in subtraction"
+    },
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.1442,
+     "note": "lower value used in subtraction"
+    }
+   ],
+   "computation": "0.4659 - 0.1442 = 0.3217",
+   "accepted_routes": [
+    "about 0.32 higher on the relative-value scale",
+    "the difference is approximately 0.322 relative-value units",
+    "the gap between the two groups is about 0.32"
+   ],
+   "visual_evidence_rule": "The difference between the two displayed relative values must be discernible, not just their rank order.",
+   "temporal_anchor": "the clause comparing Republicans/Lean Rep with Democrats/Lean Dem",
+   "reviewer_question": "Should the video quantify the size of the gap, or is a simple higher/lower comparison enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The Republican/Lean Rep relative confidence is about 3.2 times the Democratic/Lean Dem relative confidence.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.4659,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.1442,
+     "note": "denominator for ratio"
+    }
+   ],
+   "computation": "0.4659 / 0.1442 = 3.230...",
+   "accepted_routes": [
+    "about 3.2 times as high",
+    "roughly threefold higher",
+    "more than triple the Democratic/Lean Dem relative value"
+   ],
+   "visual_evidence_rule": "The displayed relative values must support comparing the Republican/Lean Rep value as roughly three times the Democratic/Lean Dem value.",
+   "temporal_anchor": "the clause contrasting Republicans/Lean Rep with Democrats/Lean Dem",
+   "reviewer_question": "Is the multiple/ratio comparison required, or is the difference/gap sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "An optional annotation showing the exact table decimals 0.4659 and 0.1442.",
+  "An optional statement that the Democratic/Lean Dem value is less than one-third of the Republican/Lean Rep value, since 0.1442 / 0.4659 is about 0.31.",
+  "An optional note that the Republican/Lean Rep value is more than double the Democratic/Lean Dem value."
+ ],
+ "unsupported_to_avoid": [
+  "Do not render the narration's percentage-like wording as percentages, counts, or dollar amounts; the table only has relative_value.",
+  "Do not claim statistical significance, causation, or that one party's identity causes the confidence difference.",
+  "Do not add parties, categories, or time points not present in the table.",
+  "Do not treat the two relative values as parts of a whole share composition."
+ ],
+ "notes": "Because the table is relative_only, all units use relative-scale values and comparisons; no percentages, counts, or absolute quantities are proposed. The narration's percentage-like wording must not be copied into the ground truth as absolute quantities.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.19
+ },
+ "draft_cost": {
+  "sec": 40.3,
+  "usage": {
+   "prompt_tokens": 953,
+   "completion_tokens": 8877,
+   "total_tokens": 9830,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7152
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 441
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

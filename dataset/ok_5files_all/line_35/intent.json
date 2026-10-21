@@ -1,0 +1,28 @@
+{
+ "clip_id": "line_35",
+ "intent_en": "To demonstrate that the stock market is growing faster than wages, illustrating how capital returns outpace labor income and contribute to wealth concentration.",
+ "previous_intent": "To illustrate the divergence between stock market growth and wage growth, demonstrating that capital returns are outpacing labor income.",
+ "narration_support": "The rate of the return on capital or wealth is higher than the growth rate of the overall economy.",
+ "chart_support": "Line chart comparing Indexed S&P 500 and Wage & Salary Accruals from 2007 to 2014, showing the S&P 500 rising much more steeply than wages.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states that returns on capital exceed economic growth, and the chart visualizes this by showing the S&P 500 (capital) diverging significantly upward from wages (labor income) over the period 2007-2014.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "bar_31",
+ "intent_en": "To illustrate the monthly price of the arthritis drug Humira across different countries.",
+ "previous_intent": "To demonstrate the significant variation in monthly prices of the arthritis drug Humira across different countries, highlighting the exceptionally high cost in the United States compared to other developed nations.",
+ "narration_support": "Humera for arthritis?",
+ "chart_support": "Bar chart displaying the monthly price of Humira for Norway, France, United Kingdom, Canada, Australia, Germany, and the United States.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": true,
+ "contains_answer_values": false,
+ "confidence": 0.9,
+ "evidence_note": "Narration contains a typo ('Humera' for 'Humira') and is very short, serving as a topic introduction for the chart data.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": true
+}

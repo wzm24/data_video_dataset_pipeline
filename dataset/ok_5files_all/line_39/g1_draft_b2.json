@@ -1,0 +1,279 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_39",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the inverse relationship between job supply and salaries when unrealistic job expectations are promoted.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Supply series rises from a very low relative level at the start to the top of the relative scale by the end.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Supply",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.02,
+     "note": "Supply begins near the bottom of the relative scale."
+    },
+    {
+     "entity": "Supply",
+     "x": "middle",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "Mid-series Supply is still below half of the maximum."
+    },
+    {
+     "entity": "Supply",
+     "x": "end",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Supply ends at the maximum relative value."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Supply increases steadily from near the bottom to the maximum by the end.",
+    "Supply is the rising series, going from a very low start to the top of the scale.",
+    "Supply climbs across the clip and ends highest."
+   ],
+   "visual_evidence_rule": "The Supply trend must be visibly ascending from the early part of the clip to the final part.",
+   "temporal_anchor": "The narration clause 'supply rises'.",
+   "reviewer_question": "Must the video show the full upward Supply trend, rather than only its final high point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Salary series falls from near the top of the relative scale at the start to a very low level by the end.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Salary",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "Salary begins near the maximum."
+    },
+    {
+     "entity": "Salary",
+     "x": "middle",
+     "field": "relative_value",
+     "value": 0.5,
+     "note": "Mid-series Salary is about half of the maximum."
+    },
+    {
+     "entity": "Salary",
+     "x": "end",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "Salary ends near the bottom of the relative scale."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Salary decreases steadily from near the maximum to near the minimum.",
+    "Salary is the falling series, starting high and ending low.",
+    "Salary drops across the clip and ends near the bottom of the scale."
+   ],
+   "visual_evidence_rule": "The Salary trend must be visibly descending from the early part of the clip to the final part.",
+   "temporal_anchor": "The narration clause 'salaries fall'.",
+   "reviewer_question": "Must the video show the full downward Salary trend, rather than only its final low point?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Across the same progression, Supply moves upward while Salary moves downward, producing an inverse/opposite-direction pattern.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Supply",
+     "x": "start to end",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Supply starts at 0.02 and ends at 1.00."
+    },
+    {
+     "entity": "Salary",
+     "x": "start to end",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "Salary starts at 0.95 and ends at 0.05."
+    }
+   ],
+   "computation": "Supply change = 1.00 - 0.02 = +0.98 relative_value units; Salary change = 0.05 - 0.95 = -0.90 relative_value units.",
+   "accepted_routes": [
+    "Supply rises as Salary falls.",
+    "The two series move in opposite directions.",
+    "One series climbs while the other drops, showing an inverse pattern."
+   ],
+   "visual_evidence_rule": "Both Supply and Salary trends must be visible together long enough to show their opposing slopes.",
+   "temporal_anchor": "The narration clause 'supply rises and salaries fall'.",
+   "reviewer_question": "Is showing both opposing slopes together required to convey the inverse relationship?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Supply starts below Salary but later overtakes it, with the crossover occurring around the middle of the relative scale.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Supply",
+     "x": "pre-crossing sample",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "Supply is below Salary at this sample."
+    },
+    {
+     "entity": "Salary",
+     "x": "pre-crossing sample",
+     "field": "relative_value",
+     "value": 0.46,
+     "note": "Salary is above Supply at this sample."
+    },
+    {
+     "entity": "Supply",
+     "x": "post-crossing sample",
+     "field": "relative_value",
+     "value": 0.43,
+     "note": "Supply is above Salary at this sample."
+    },
+    {
+     "entity": "Salary",
+     "x": "post-crossing sample",
+     "field": "relative_value",
+     "value": 0.42,
+     "note": "Salary is below Supply at this sample."
+    }
+   ],
+   "computation": "First sampled row where Supply > Salary: 0.43 > 0.42; the previous sample had 0.40 < 0.46.",
+   "accepted_routes": [
+    "Supply overtakes Salary around the middle of the series.",
+    "The two series cross when both are near the middle of the relative scale.",
+    "Supply moves from below Salary to above Salary."
+   ],
+   "visual_evidence_rule": "The crossing of the two series must be visible if this unit is included.",
+   "temporal_anchor": "Not explicitly narrated; would occur between the 'supply rises' and 'salaries fall' clauses.",
+   "reviewer_question": "Should the crossover be treated as required, or is it optional detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At the start, Salary is much higher than Supply, establishing a large initial gap before the trends reverse.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Supply",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.02,
+     "note": "Supply starts near the bottom of the relative scale."
+    },
+    {
+     "entity": "Salary",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.95,
+     "note": "Salary starts near the top of the relative scale."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Salary starts much higher than Supply.",
+    "At the start, Salary is near maximum while Supply is near minimum.",
+    "The initial gap is large, with Salary far above Supply."
+   ],
+   "visual_evidence_rule": "At the start of the clip, the Salary series must be visibly much higher than the Supply series.",
+   "temporal_anchor": "The opening state before the narration's 'supply rises and salaries fall'.",
+   "reviewer_question": "Is the initial high-Salary/low-Supply gap required or just contextual?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The exact crossover point as an annotation or callout.",
+  "The Salary series flattening near the bottom after its steep fall.",
+  "The Supply series slowing near the top of the scale before reaching its maximum.",
+  "The final reversal where Supply is at maximum and Salary is at minimum."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims that unrealistic expectations directly cause the observed movements.",
+  "Any absolute salary amounts, job counts, or percentages.",
+  "Extrapolating beyond the supplied start and end of the series.",
+  "Treating relative_value as a percentage share of a whole.",
+  "Using colors, pixel positions, axis ticks, or chart type as the meaning of a unit."
+ ],
+ "notes": "All cited magnitudes are relative_value on a 0-1 normalisation, not absolute amounts or percentages. The required core is the opposing Supply and Salary trends; the crossover and initial gap are optional but valid.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.2
+ },
+ "draft_cost": {
+  "sec": 43.0,
+  "usage": {
+   "prompt_tokens": 4218,
+   "completion_tokens": 9489,
+   "total_tokens": 13707,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7602
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 3578
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,139 @@
+{
+ "clip_id": "line_72",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:temp anomaly @ pre-first-positive minimum",
+    "mark:temp anomaly @ pre-first-positive maximum"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "temp anomaly @ pre-first-positive minimum",
+      "value": -0.432
+     },
+     {
+      "mark": "temp anomaly @ pre-first-positive maximum",
+      "value": -0.016
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The early portion must remain below zero and not exceed the small negative value near -0.016 before the first positive point."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": false,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:temp anomaly @ first positive row",
+    "mark:temp anomaly @ row before first positive"
+   ],
+   "assertion": {
+    "series": "temp anomaly",
+    "values": [
+     0.052,
+     -0.016
+    ],
+    "threshold_between": [
+     -0.016,
+     0.052
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A zero crossing must be visible, with the first positive plotted value at 0.0520."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:temp anomaly @ 1950"
+   ],
+   "assertion": {
+    "mark": "temp anomaly @ 1950",
+    "field": "value",
+    "expected": -0.098,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 1950 time marker must be identifiable and show a value below zero."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:temp anomaly @ 1950",
+    "mark:temp anomaly @ final row"
+   ],
+   "assertion": {
+    "low": "temp anomaly @ 1950",
+    "low_value": -0.098,
+    "high": "temp anomaly @ final row",
+    "high_value": 0.946,
+    "delta": 1.044,
+    "ratio": -9.6531,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must show both the 1950 point (below zero) and the final endpoint (0.9460), or make the difference 1.0440 visually comparable."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "temp anomaly @ final row",
+    "extreme": "max",
+    "expected": 0.946,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final plotted value must be visibly the highest of the series."
+  }
+ ]
+}

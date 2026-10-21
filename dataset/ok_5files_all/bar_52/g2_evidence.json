@@ -1,0 +1,149 @@
+{
+ "clip_id": "bar_52",
+ "family": "bar",
+ "chart_form": "bar/stacked",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Poorest @ Payroll taxes",
+    "mark:2nd @ Payroll taxes",
+    "mark:4th @ Payroll taxes",
+    "mark:8th @ Payroll taxes",
+    "mark:9th @ Payroll taxes",
+    "mark:10th @ Payroll taxes",
+    "mark:Richest @ Payroll taxes"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Poorest @ Payroll taxes",
+      "value": 10.6
+     },
+     {
+      "mark": "2nd @ Payroll taxes",
+      "value": 10.9
+     },
+     {
+      "mark": "4th @ Payroll taxes",
+      "value": 10.4
+     },
+     {
+      "mark": "8th @ Payroll taxes",
+      "value": 10.4
+     },
+     {
+      "mark": "9th @ Payroll taxes",
+      "value": 9.8
+     },
+     {
+      "mark": "10th @ Payroll taxes",
+      "value": 1.0
+     },
+     {
+      "mark": "Richest @ Payroll taxes",
+      "value": 0.4
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Payroll tax bars or stacked payroll segments must visibly form a high plateau across the left/middle income groups and a sharp drop for 10th and Richest."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:2nd @ Income taxes",
+    "mark:2nd @ Corporate and property taxes",
+    "mark:2nd @ Payroll taxes",
+    "mark:Richest @ Income taxes",
+    "mark:Richest @ Corporate and property taxes",
+    "mark:Richest @ Estate taxes",
+    "mark:Richest @ Payroll taxes"
+   ],
+   "assertion": {
+    "low": "Richest @ Payroll taxes",
+    "low_value": 0.4,
+    "high": "2nd @ Payroll taxes",
+    "high_value": 10.9,
+    "delta": 10.5,
+    "ratio": 27.25,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A before/after or stacked-total view must show the payroll segment adding a large amount to the 2nd group's bar and a tiny sliver to the Richest group's bar."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:2nd @ Corporate and property taxes",
+    "mark:2nd @ Income taxes"
+   ],
+   "assertion": {
+    "greater": "2nd @ Corporate and property taxes",
+    "lesser": "2nd @ Income taxes",
+    "expected_ratio": 1.3,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must allow comparison of total tax burden for the 2nd and 10th groups with and without payroll, or explicitly show the gap shrinking."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:2nd @ Payroll taxes",
+    "segment:2nd @ Income taxes",
+    "segment:2nd @ Corporate and property taxes",
+    "segment:Richest @ Payroll taxes",
+    "segment:Richest @ Income taxes",
+    "segment:Richest @ Corporate and property taxes",
+    "segment:Richest @ Estate taxes"
+   ],
+   "assertion": {
+    "segment": "2nd @ Payroll taxes",
+    "expected_share": 0.8258,
+    "total_of": "the same category's stacked series",
+    "total": 13.2,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Stacked bars must show the payroll segment taking most of the total for low/middle groups and a very small slice for top groups."
+  }
+ ]
+}

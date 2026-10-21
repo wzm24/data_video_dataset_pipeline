@@ -1,0 +1,10 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,entity_original,entity_source
+bar_50,POOREST,poorest,209.4,,11.000,0.3667,,#E9C85B,printed,,
+bar_50,POOREST,bar-1,328.4,,11.000,0.3667,,#E9C85B,printed,bar-2,semantic_svg_backfill
+bar_50,Group 3,bar-3,447.2,,12.000,0.4000,,#E9C85B,printed,bar-3,semantic_svg_backfill
+bar_50,Group 4,bar-4,566.1,,11.000,0.3667,,#E9C85B,printed,bar-4,semantic_svg_backfill
+bar_50,Group 5,bar-5,685.0,,11.000,0.3667,,#E9C85B,printed,bar-5,semantic_svg_backfill
+bar_50,Group 6,bar-6,803.9,,11.000,0.3667,,#E9C85B,printed,bar-6,semantic_svg_backfill
+bar_50,Group 7,bar-7,922.8,,10.400,0.3467,,#E9C85B,printed,bar-7,semantic_svg_backfill
+bar_50,Group 8,bar-8,1041.6,,10.400,0.3467,,#E9C85B,printed,bar-8,semantic_svg_backfill
+bar_50,RICHEST,richest,1160.5,,10.000,0.3333,,#E9C85B,printed,,

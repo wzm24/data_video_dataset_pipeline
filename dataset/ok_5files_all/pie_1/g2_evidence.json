@@ -1,0 +1,136 @@
+{
+ "clip_id": "pie_1",
+ "family": "pie",
+ "chart_form": "pie/full_pie",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "required_candidate": true,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:Drive alone @ mode share"
+   ],
+   "assertion": {
+    "segment": "Drive alone @ mode share",
+    "expected_share": 0.7762,
+    "total_of": "%",
+    "total": 98.3,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A chart mark for Drive alone must be labeled or directly readable as 76.3% and visually the largest slice/bar."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Drive alone @ mode share",
+    "mark:Public transportation @ mode share"
+   ],
+   "assertion": {
+    "greater": "Drive alone @ mode share",
+    "lesser": "Public transportation @ mode share",
+    "expected_ratio": 14.6731,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the non-Drive-alone total readable or show all other slices/bars summing to about 23.7%, with Drive alone at 76.3%."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "trend_or_order",
+   "required_candidate": false,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Carpool @ mode share",
+    "mark:Drive alone @ mode share"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Carpool @ mode share",
+      "value": 8.2
+     },
+     {
+      "mark": "Drive alone @ mode share",
+      "value": 76.3
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Carpool must be visually or textually identifiable as the second-largest category, with 8.2% visible/readable."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Drive alone @ mode share",
+    "mark:Carpool @ mode share"
+   ],
+   "assertion": {
+    "low": "Carpool @ mode share",
+    "low_value": 8.2,
+    "high": "Drive alone @ mode share",
+    "high_value": 76.3,
+    "delta": 68.1,
+    "ratio": 9.3049,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both Drive alone 76.3% and Carpool 8.2% must be visible/readable if this ratio is stated."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Drive alone @ mode share",
+    "mark:Carpool @ mode share"
+   ],
+   "assertion": {
+    "greater": "Drive alone @ mode share",
+    "lesser": "Carpool @ mode share",
+    "expected_ratio": 9.3049,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "Drive alone 76.3% and Carpool 8.2% must both be visible/readable if this gap is stated."
+  }
+ ]
+}

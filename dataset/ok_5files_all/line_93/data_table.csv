@@ -1,0 +1,13 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_93,Asian*,asian,,,22,0.22,%,,estimated
+line_93,Asian*,asian,,,75,0.75,%,,estimated
+line_93,Asian*,asian,,,94,0.94,%,,estimated
+line_93,Hispanic,hispanic,,,16,0.16,%,,estimated
+line_93,Hispanic,hispanic,,,68,0.68,%,,estimated
+line_93,Hispanic,hispanic,,,76,0.76,%,,estimated
+line_93,White,white,,,21,0.21,%,,estimated
+line_93,White,white,,,65,0.65,%,,estimated
+line_93,White,white,,,72,0.72,%,,estimated
+line_93,Black,black,,,15,0.15,%,,estimated
+line_93,Black,black,,,60,0.6,%,,estimated
+line_93,Black,black,,,70,0.7,%,,estimated

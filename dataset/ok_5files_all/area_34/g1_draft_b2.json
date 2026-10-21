@@ -1,0 +1,293 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_34",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the purchasing power and lifestyle implications of the average computer programmer's salary in the United States, specifically regarding housing affordability ranging from luxury homes to small rentals in high-cost areas.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The series follows a single rise-then-fall relative profile: it starts near zero, reaches its highest relative level in the middle, and then returns to near zero at the end.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Housing affordability",
+     "x": "series start",
+     "field": "relative_value",
+     "value": 0.0075,
+     "note": "start of the series"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "middle/peak",
+     "field": "relative_value",
+     "value": 0.9998,
+     "note": "highest sample in the series"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "series end",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "end of the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "starts near zero, climbs to near one, then falls back to near zero",
+    "a single-peaked rise-and-fall shape",
+    "an inverted-U relative profile from start to end"
+   ],
+   "visual_evidence_rule": "The plotted series must visibly rise from near the bottom to near the top, then descend back to near the bottom.",
+   "temporal_anchor": "the whole narration, especially the contrast between 'big fancy house' and 'rent a closet'",
+   "reviewer_question": "Is the full rise-and-fall trajectory required, or would showing only the peak be acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The maximum relative value is 0.9998, essentially the top of the normalized scale, occurring in the middle of the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Housing affordability",
+     "x": "middle/peak",
+     "field": "relative_value",
+     "value": 0.9998,
+     "note": "highest value in the table, equal at two adjacent samples"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the highest relative value is 0.9998",
+    "the series reaches the top of the relative scale",
+    "the peak is essentially 1 on the relative scale"
+   ],
+   "visual_evidence_rule": "The highest point of the series must be visibly near the top of the normalized range.",
+   "temporal_anchor": "the clause 'many can afford a big fancy house'",
+   "reviewer_question": "Must the video explicitly call out the peak relative value, or is showing the peak visually enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The endpoints are both near zero relative values: the series starts at 0.0075 and ends at 0.0000, far below the peak.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Housing affordability",
+     "x": "series start",
+     "field": "relative_value",
+     "value": 0.0075,
+     "note": "first value"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "series end",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "last value, also the minimum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the series starts at 0.0075 and ends at 0.0000",
+    "both endpoints are near zero",
+    "the end is the absolute minimum, with the start just above it"
+   ],
+   "visual_evidence_rule": "Both ends of the series must sit near the bottom of the normalized scale, far below the peak.",
+   "temporal_anchor": "the clause 'or rent a closet in San Francisco'",
+   "reviewer_question": "Are both endpoint values required, or only the final zero?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The series crosses about half of its maximum twice: once while rising and once while falling; the halfway level is 0.9998/2 ≈ 0.4999, bracketed by 0.4941 and 0.5186 on each side.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Housing affordability",
+     "x": "maximum for threshold derivation",
+     "field": "relative_value",
+     "value": 0.9998,
+     "note": "peak used to derive half level"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "rising-side crossing bracket low",
+     "field": "relative_value",
+     "value": 0.4941,
+     "note": "just below half on the rise"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "rising-side crossing bracket high",
+     "field": "relative_value",
+     "value": 0.5186,
+     "note": "just above half on the rise"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "falling-side crossing bracket high",
+     "field": "relative_value",
+     "value": 0.5186,
+     "note": "just above half on the fall"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "falling-side crossing bracket low",
+     "field": "relative_value",
+     "value": 0.4941,
+     "note": "just below half on the fall"
+    }
+   ],
+   "computation": "half of maximum = 0.9998 / 2 ≈ 0.4999; crossings bracket between 0.4941 and 0.5186 on the rising side, and between 0.5186 and 0.4941 on the falling side",
+   "accepted_routes": [
+    "the curve crosses the halfway level twice",
+    "there is one rising crossing and one falling crossing of about half the peak",
+    "the middle high region exceeds half the peak"
+   ],
+   "visual_evidence_rule": "A reference level at about half the peak must visibly intersect the series at two points, one on the rise and one on the fall.",
+   "temporal_anchor": "the transition from 'many can afford' to 'rent a closet'",
+   "reviewer_question": "Should the two halfway crossings be explicitly marked, or is the curve alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series is approximately symmetric around its peak, with matching relative values on the rising and falling sides (e.g., 0.0086 appears on both sides, and 0.4941 appears on both sides).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Housing affordability",
+     "x": "early rising side",
+     "field": "relative_value",
+     "value": 0.0086,
+     "note": "low value on the rise"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "late falling side",
+     "field": "relative_value",
+     "value": 0.0086,
+     "note": "matching low value on the fall"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "earlier rising side",
+     "field": "relative_value",
+     "value": 0.4941,
+     "note": "mid-low value on the rise"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "later falling side",
+     "field": "relative_value",
+     "value": 0.4941,
+     "note": "matching mid-low value on the fall"
+    },
+    {
+     "entity": "Housing affordability",
+     "x": "middle/peak",
+     "field": "relative_value",
+     "value": 0.9998,
+     "note": "central maximum"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "the left and right sides mirror each other",
+    "matching relative values appear on both sides of the peak",
+    "the profile is approximately symmetric about its highest point"
+   ],
+   "visual_evidence_rule": "The left and right limbs of the curve must have corresponding heights at comparable distances from the peak.",
+   "temporal_anchor": "not tied to a specific clause; optional visual reinforcement of the affordability range",
+   "reviewer_question": "Is approximate symmetry worth calling out, or is it just a visual property?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The peak is a two-sample plateau: 0.9998 occurs at two adjacent samples.",
+  "The start value (0.0075) is slightly higher than the end value (0.0000), so the absolute minimum is at the end.",
+  "The total relative range spans from 0.0000 to 0.9998."
+ ],
+ "unsupported_to_avoid": [
+  "Any absolute salary, home price, rent, count of programmers, or location-specific cost (e.g., San Francisco rent).",
+  "Converting relative_value into percentages, dollars, counts, or 'average salary' amounts.",
+  "Treating luxury homes and small rentals as separate data entities or categories; the table has only one 'Housing affordability' series.",
+  "Causal claims that programmer salary causes the affordability pattern.",
+  "Extrapolating beyond the provided series or assuming a statistical distribution not stated in the table.",
+  "Chart-type, axis, color, or position details."
+ ],
+ "notes": "All cited numbers are relative_value entries from the table or explicit arithmetic (half of peak). The table has no absolute values, so the video must stay at the relative/order/comparison level.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.12
+ },
+ "draft_cost": {
+  "sec": 55.7,
+  "usage": {
+   "prompt_tokens": 6287,
+   "completion_tokens": 13480,
+   "total_tokens": 19767,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 11230
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 5647
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

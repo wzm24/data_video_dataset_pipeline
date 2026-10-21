@@ -1,0 +1,120 @@
+{
+ "clip_id": "area_31",
+ "family": "area",
+ "chart_form": "area/two_panel_area",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 2,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Both entity labels 'YouTube' and 'TV' must be visible with the Revenue metric identified."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:YouTube @ Revenue"
+   ],
+   "assertion": {
+    "mark": "YouTube @ Revenue",
+    "field": "value",
+    "expected": 120.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "YouTube's revenue amount must be readable as 120 euro."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:TV @ Revenue"
+   ],
+   "assertion": {
+    "mark": "TV @ Revenue",
+    "field": "value",
+    "expected": 57.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "TV's revenue amount must be readable as 57 euro."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:YouTube @ Revenue",
+    "mark:TV @ Revenue"
+   ],
+   "assertion": {
+    "greater": "YouTube @ Revenue",
+    "lesser": "TV @ Revenue",
+    "expected_ratio": 2.1053,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The visual comparison must make YouTube's 120 euro revenue appear larger than TV's 57 euro revenue."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:YouTube @ Revenue",
+    "mark:TV @ Revenue"
+   ],
+   "assertion": {
+    "greater": "YouTube @ Revenue",
+    "lesser": "TV @ Revenue",
+    "expected_ratio": 2.1053,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The relative magnitudes must be visually consistent with a roughly 2:1 ratio, YouTube about twice TV."
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f4f4f4"/>
+<text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#222">VERY UNFAVORABLE ATTITUDE TOWARDS THE OTHER SIDE</text>
+<text x="340" y="110" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#222">Democrats</text>
+<rect x="116.2" y="512.6" width="72.5" height="107.4" fill="#b0b0d0"/>
+<text x="152.5" y="502.6" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">16%</text>
+<text x="152.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">1994</text>
+<rect x="241.2" y="371.6" width="72.5" height="248.4" fill="#9595c0"/>
+<text x="277.5" y="361.6" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">37%</text>
+<text x="277.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">2008</text>
+<rect x="366.2" y="331.3" width="72.5" height="288.7" fill="#7575a0"/>
+<text x="402.5" y="321.3" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">43%</text>
+<text x="402.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">2014</text>
+<rect x="491.2" y="250.7" width="72.5" height="369.3" fill="#454565"/>
+<text x="527.5" y="240.7" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">55%</text>
+<text x="527.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">2016</text>
+<text x="900" y="110" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#222">Republicans</text>
+<rect x="676.2" y="505.9" width="72.5" height="114.1" fill="#c88878"/>
+<text x="712.5" y="495.9" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">17%</text>
+<text x="712.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">1994</text>
+<rect x="801.2" y="405.1" width="72.5" height="214.9" fill="#b57060"/>
+<text x="837.5" y="395.1" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">32%</text>
+<text x="837.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">2008</text>
+<rect x="926.2" y="311.1" width="72.5" height="308.9" fill="#9d5040"/>
+<text x="962.5" y="301.1" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">46%</text>
+<text x="962.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">2014</text>
+<rect x="1051.2" y="230.6" width="72.5" height="389.4" fill="#833525"/>
+<text x="1087.5" y="220.6" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#222">58%</text>
+<text x="1087.5" y="648" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">2016</text>
+<text x="640" y="695" text-anchor="middle" font-family="Arial" font-size="13" fill="#777">Source: Pew Research Center Survey</text>
+</svg>

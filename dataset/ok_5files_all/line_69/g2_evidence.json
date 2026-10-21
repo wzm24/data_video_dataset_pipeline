@@ -1,0 +1,142 @@
+{
+ "clip_id": "line_69",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A single line labeled as the Sahm index must be visible with time labels spanning at least 1990 to 2010."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:Sahm index @ between 1990 and 1995",
+    "mark:Sahm index @ between 2000 and 2005",
+    "mark:Sahm index @ between 2005 and 2010",
+    "mark:Sahm index @ between 1990 and 1995"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Sahm index @ between 1990 and 1995",
+      "value": 1.5767
+     },
+     {
+      "mark": "Sahm index @ between 2000 and 2005",
+      "value": 1.6763
+     },
+     {
+      "mark": "Sahm index @ between 2005 and 2010",
+      "value": 3.946
+     },
+     {
+      "mark": "Sahm index @ between 1990 and 1995",
+      "value": -0.1237
+     }
+    ],
+    "direction": "decreasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Three prominent upward peaks must be visible along the line, with lower or negative values between them."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": true,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "Sahm index @ between 2005 and 2010",
+    "extreme": "max",
+    "expected": 3.946,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest point on the line must be visibly marked or labeled with a value near 3.9460."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Sahm index @ between 2005 and 2010",
+    "mark:Sahm index @ between 2000 and 2005"
+   ],
+   "assertion": {
+    "greater": "Sahm index @ between 2005 and 2010",
+    "lesser": "Sahm index @ between 2000 and 2005",
+    "expected_ratio": 2.354,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "The highest peak must be visibly at least twice as tall as the two earlier major peaks."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:Sahm index @ after 2005 marker",
+    "mark:Sahm index @ between 2005 and 2010"
+   ],
+   "assertion": {
+    "low": "Sahm index @ after 2005 marker",
+    "low_value": -0.054,
+    "high": "Sahm index @ between 2005 and 2010",
+    "high_value": 3.946,
+    "delta": 4.0,
+    "ratio": -73.0741,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "A visibly steep rise from near zero/negative to the highest peak must be shown, with the magnitude of the rise made explicit if this unit is used."
+  }
+ ]
+}

@@ -1,0 +1,629 @@
+clip_id,entity,entity_id,x_px,value,relative_value,unit,source_type
+area_17,Ice surface,ice-surface,180.0,0.462,,km,svg_geometry
+area_17,Ice surface,ice-surface,183.0,0.491,,km,svg_geometry
+area_17,Ice surface,ice-surface,186.0,0.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,189.0,0.525,,km,svg_geometry
+area_17,Ice surface,ice-surface,192.0,0.525,,km,svg_geometry
+area_17,Ice surface,ice-surface,195.0,0.525,,km,svg_geometry
+area_17,Ice surface,ice-surface,198.0,0.578,,km,svg_geometry
+area_17,Ice surface,ice-surface,201.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,204.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,207.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,210.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,213.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,216.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,219.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,222.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,225.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,228.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,231.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,234.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,237.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,240.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,243.0,0.578,,km,svg_geometry
+area_17,Ice surface,ice-surface,246.0,0.525,,km,svg_geometry
+area_17,Ice surface,ice-surface,249.0,0.538,,km,svg_geometry
+area_17,Ice surface,ice-surface,252.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,255.0,0.654,,km,svg_geometry
+area_17,Ice surface,ice-surface,258.0,0.699,,km,svg_geometry
+area_17,Ice surface,ice-surface,261.0,0.729,,km,svg_geometry
+area_17,Ice surface,ice-surface,264.0,0.791,,km,svg_geometry
+area_17,Ice surface,ice-surface,267.0,0.796,,km,svg_geometry
+area_17,Ice surface,ice-surface,270.0,0.983,,km,svg_geometry
+area_17,Ice surface,ice-surface,273.0,1.191,,km,svg_geometry
+area_17,Ice surface,ice-surface,276.0,1.340,,km,svg_geometry
+area_17,Ice surface,ice-surface,279.0,1.540,,km,svg_geometry
+area_17,Ice surface,ice-surface,282.0,1.665,,km,svg_geometry
+area_17,Ice surface,ice-surface,285.0,1.748,,km,svg_geometry
+area_17,Ice surface,ice-surface,288.0,1.843,,km,svg_geometry
+area_17,Ice surface,ice-surface,291.0,1.882,,km,svg_geometry
+area_17,Ice surface,ice-surface,294.0,1.927,,km,svg_geometry
+area_17,Ice surface,ice-surface,297.0,1.985,,km,svg_geometry
+area_17,Ice surface,ice-surface,300.0,1.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,303.0,2.002,,km,svg_geometry
+area_17,Ice surface,ice-surface,306.0,2.097,,km,svg_geometry
+area_17,Ice surface,ice-surface,309.0,2.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,312.0,2.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,315.0,2.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,318.0,2.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,321.0,2.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,324.0,2.065,,km,svg_geometry
+area_17,Ice surface,ice-surface,327.0,1.966,,km,svg_geometry
+area_17,Ice surface,ice-surface,330.0,1.923,,km,svg_geometry
+area_17,Ice surface,ice-surface,333.0,1.923,,km,svg_geometry
+area_17,Ice surface,ice-surface,336.0,1.923,,km,svg_geometry
+area_17,Ice surface,ice-surface,339.0,1.860,,km,svg_geometry
+area_17,Ice surface,ice-surface,342.0,1.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,345.0,1.843,,km,svg_geometry
+area_17,Ice surface,ice-surface,348.0,1.766,,km,svg_geometry
+area_17,Ice surface,ice-surface,351.0,1.723,,km,svg_geometry
+area_17,Ice surface,ice-surface,354.0,1.766,,km,svg_geometry
+area_17,Ice surface,ice-surface,357.0,1.785,,km,svg_geometry
+area_17,Ice surface,ice-surface,360.0,1.727,,km,svg_geometry
+area_17,Ice surface,ice-surface,363.0,1.727,,km,svg_geometry
+area_17,Ice surface,ice-surface,366.0,1.774,,km,svg_geometry
+area_17,Ice surface,ice-surface,369.0,1.682,,km,svg_geometry
+area_17,Ice surface,ice-surface,372.0,1.682,,km,svg_geometry
+area_17,Ice surface,ice-surface,375.0,1.723,,km,svg_geometry
+area_17,Ice surface,ice-surface,378.0,1.723,,km,svg_geometry
+area_17,Ice surface,ice-surface,381.0,1.723,,km,svg_geometry
+area_17,Ice surface,ice-surface,384.0,1.641,,km,svg_geometry
+area_17,Ice surface,ice-surface,387.0,1.589,,km,svg_geometry
+area_17,Ice surface,ice-surface,390.0,1.589,,km,svg_geometry
+area_17,Ice surface,ice-surface,393.0,1.589,,km,svg_geometry
+area_17,Ice surface,ice-surface,396.0,1.589,,km,svg_geometry
+area_17,Ice surface,ice-surface,399.0,1.535,,km,svg_geometry
+area_17,Ice surface,ice-surface,402.0,1.523,,km,svg_geometry
+area_17,Ice surface,ice-surface,405.0,1.518,,km,svg_geometry
+area_17,Ice surface,ice-surface,408.0,1.456,,km,svg_geometry
+area_17,Ice surface,ice-surface,411.0,1.456,,km,svg_geometry
+area_17,Ice surface,ice-surface,414.0,1.331,,km,svg_geometry
+area_17,Ice surface,ice-surface,417.0,1.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,420.0,1.249,,km,svg_geometry
+area_17,Ice surface,ice-surface,423.0,1.191,,km,svg_geometry
+area_17,Ice surface,ice-surface,426.0,1.131,,km,svg_geometry
+area_17,Ice surface,ice-surface,429.0,1.058,,km,svg_geometry
+area_17,Ice surface,ice-surface,432.0,1.131,,km,svg_geometry
+area_17,Ice surface,ice-surface,435.0,1.191,,km,svg_geometry
+area_17,Ice surface,ice-surface,438.0,1.191,,km,svg_geometry
+area_17,Ice surface,ice-surface,441.0,1.215,,km,svg_geometry
+area_17,Ice surface,ice-surface,444.0,1.312,,km,svg_geometry
+area_17,Ice surface,ice-surface,447.0,1.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,450.0,1.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,453.0,1.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,456.0,1.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,459.0,1.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,462.0,1.348,,km,svg_geometry
+area_17,Ice surface,ice-surface,465.0,1.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,468.0,1.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,471.0,1.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,474.0,1.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,477.0,1.432,,km,svg_geometry
+area_17,Ice surface,ice-surface,480.0,1.456,,km,svg_geometry
+area_17,Ice surface,ice-surface,483.0,1.531,,km,svg_geometry
+area_17,Ice surface,ice-surface,486.0,1.723,,km,svg_geometry
+area_17,Ice surface,ice-surface,489.0,1.923,,km,svg_geometry
+area_17,Ice surface,ice-surface,492.0,1.927,,km,svg_geometry
+area_17,Ice surface,ice-surface,495.0,2.024,,km,svg_geometry
+area_17,Ice surface,ice-surface,498.0,2.189,,km,svg_geometry
+area_17,Ice surface,ice-surface,501.0,2.202,,km,svg_geometry
+area_17,Ice surface,ice-surface,504.0,2.548,,km,svg_geometry
+area_17,Ice surface,ice-surface,507.0,2.718,,km,svg_geometry
+area_17,Ice surface,ice-surface,510.0,2.634,,km,svg_geometry
+area_17,Ice surface,ice-surface,513.0,2.482,,km,svg_geometry
+area_17,Ice surface,ice-surface,516.0,2.456,,km,svg_geometry
+area_17,Ice surface,ice-surface,519.0,2.456,,km,svg_geometry
+area_17,Ice surface,ice-surface,522.0,2.482,,km,svg_geometry
+area_17,Ice surface,ice-surface,525.0,2.589,,km,svg_geometry
+area_17,Ice surface,ice-surface,528.0,2.602,,km,svg_geometry
+area_17,Ice surface,ice-surface,531.0,2.656,,km,svg_geometry
+area_17,Ice surface,ice-surface,534.0,2.705,,km,svg_geometry
+area_17,Ice surface,ice-surface,537.0,2.705,,km,svg_geometry
+area_17,Ice surface,ice-surface,540.0,2.789,,km,svg_geometry
+area_17,Ice surface,ice-surface,543.0,2.813,,km,svg_geometry
+area_17,Ice surface,ice-surface,546.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,549.0,2.880,,km,svg_geometry
+area_17,Ice surface,ice-surface,552.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,555.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,558.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,561.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,564.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,567.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,570.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,573.0,2.963,,km,svg_geometry
+area_17,Ice surface,ice-surface,576.0,2.869,,km,svg_geometry
+area_17,Ice surface,ice-surface,579.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,582.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,585.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,588.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,591.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,594.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,597.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,600.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,603.0,2.931,,km,svg_geometry
+area_17,Ice surface,ice-surface,606.0,2.963,,km,svg_geometry
+area_17,Ice surface,ice-surface,609.0,2.981,,km,svg_geometry
+area_17,Ice surface,ice-surface,612.0,3.056,,km,svg_geometry
+area_17,Ice surface,ice-surface,615.0,3.060,,km,svg_geometry
+area_17,Ice surface,ice-surface,618.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,621.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,624.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,627.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,630.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,633.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,636.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,639.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,642.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,645.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,648.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,651.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,654.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,657.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,660.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,663.0,3.176,,km,svg_geometry
+area_17,Ice surface,ice-surface,666.0,3.189,,km,svg_geometry
+area_17,Ice surface,ice-surface,669.0,3.189,,km,svg_geometry
+area_17,Ice surface,ice-surface,672.0,3.189,,km,svg_geometry
+area_17,Ice surface,ice-surface,675.0,3.271,,km,svg_geometry
+area_17,Ice surface,ice-surface,678.0,3.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,681.0,3.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,684.0,3.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,687.0,3.346,,km,svg_geometry
+area_17,Ice surface,ice-surface,690.0,3.387,,km,svg_geometry
+area_17,Ice surface,ice-surface,693.0,3.387,,km,svg_geometry
+area_17,Ice surface,ice-surface,696.0,3.387,,km,svg_geometry
+area_17,Ice surface,ice-surface,699.0,3.400,,km,svg_geometry
+area_17,Ice surface,ice-surface,702.0,3.497,,km,svg_geometry
+area_17,Ice surface,ice-surface,705.0,3.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,708.0,3.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,711.0,3.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,714.0,3.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,717.0,3.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,720.0,3.533,,km,svg_geometry
+area_17,Ice surface,ice-surface,723.0,3.587,,km,svg_geometry
+area_17,Ice surface,ice-surface,726.0,3.587,,km,svg_geometry
+area_17,Ice surface,ice-surface,729.0,3.587,,km,svg_geometry
+area_17,Ice surface,ice-surface,732.0,3.643,,km,svg_geometry
+area_17,Ice surface,ice-surface,735.0,3.654,,km,svg_geometry
+area_17,Ice surface,ice-surface,738.0,3.658,,km,svg_geometry
+area_17,Ice surface,ice-surface,741.0,3.746,,km,svg_geometry
+area_17,Ice surface,ice-surface,744.0,3.787,,km,svg_geometry
+area_17,Ice surface,ice-surface,747.0,3.787,,km,svg_geometry
+area_17,Ice surface,ice-surface,750.0,3.787,,km,svg_geometry
+area_17,Ice surface,ice-surface,753.0,3.800,,km,svg_geometry
+area_17,Ice surface,ice-surface,756.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,759.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,762.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,765.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,768.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,771.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,774.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,777.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,780.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,783.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,786.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,789.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,792.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,795.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,798.0,3.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,801.0,3.849,,km,svg_geometry
+area_17,Ice surface,ice-surface,804.0,3.778,,km,svg_geometry
+area_17,Ice surface,ice-surface,807.0,3.720,,km,svg_geometry
+area_17,Ice surface,ice-surface,810.0,3.720,,km,svg_geometry
+area_17,Ice surface,ice-surface,813.0,3.720,,km,svg_geometry
+area_17,Ice surface,ice-surface,816.0,3.658,,km,svg_geometry
+area_17,Ice surface,ice-surface,819.0,3.654,,km,svg_geometry
+area_17,Ice surface,ice-surface,822.0,3.654,,km,svg_geometry
+area_17,Ice surface,ice-surface,825.0,3.630,,km,svg_geometry
+area_17,Ice surface,ice-surface,828.0,3.533,,km,svg_geometry
+area_17,Ice surface,ice-surface,831.0,3.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,834.0,3.520,,km,svg_geometry
+area_17,Ice surface,ice-surface,837.0,3.510,,km,svg_geometry
+area_17,Ice surface,ice-surface,840.0,3.454,,km,svg_geometry
+area_17,Ice surface,ice-surface,843.0,3.443,,km,svg_geometry
+area_17,Ice surface,ice-surface,846.0,3.387,,km,svg_geometry
+area_17,Ice surface,ice-surface,849.0,3.333,,km,svg_geometry
+area_17,Ice surface,ice-surface,852.0,3.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,855.0,3.213,,km,svg_geometry
+area_17,Ice surface,ice-surface,858.0,3.189,,km,svg_geometry
+area_17,Ice surface,ice-surface,861.0,3.189,,km,svg_geometry
+area_17,Ice surface,ice-surface,864.0,3.127,,km,svg_geometry
+area_17,Ice surface,ice-surface,867.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,870.0,3.123,,km,svg_geometry
+area_17,Ice surface,ice-surface,873.0,3.071,,km,svg_geometry
+area_17,Ice surface,ice-surface,876.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,879.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,882.0,2.989,,km,svg_geometry
+area_17,Ice surface,ice-surface,885.0,2.976,,km,svg_geometry
+area_17,Ice surface,ice-surface,888.0,2.923,,km,svg_geometry
+area_17,Ice surface,ice-surface,891.0,2.910,,km,svg_geometry
+area_17,Ice surface,ice-surface,894.0,2.856,,km,svg_geometry
+area_17,Ice surface,ice-surface,897.0,2.852,,km,svg_geometry
+area_17,Ice surface,ice-surface,900.0,2.763,,km,svg_geometry
+area_17,Ice surface,ice-surface,903.0,2.718,,km,svg_geometry
+area_17,Ice surface,ice-surface,906.0,2.660,,km,svg_geometry
+area_17,Ice surface,ice-surface,909.0,2.613,,km,svg_geometry
+area_17,Ice surface,ice-surface,912.0,2.576,,km,svg_geometry
+area_17,Ice surface,ice-surface,915.0,2.482,,km,svg_geometry
+area_17,Ice surface,ice-surface,918.0,2.402,,km,svg_geometry
+area_17,Ice surface,ice-surface,921.0,2.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,924.0,2.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,927.0,2.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,930.0,2.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,933.0,2.376,,km,svg_geometry
+area_17,Ice surface,ice-surface,936.0,2.376,,km,svg_geometry
+area_17,Ice surface,ice-surface,939.0,2.376,,km,svg_geometry
+area_17,Ice surface,ice-surface,942.0,2.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,945.0,2.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,948.0,2.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,951.0,2.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,954.0,2.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,957.0,2.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,960.0,2.323,,km,svg_geometry
+area_17,Ice surface,ice-surface,963.0,2.376,,km,svg_geometry
+area_17,Ice surface,ice-surface,966.0,2.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,969.0,2.389,,km,svg_geometry
+area_17,Ice surface,ice-surface,972.0,2.402,,km,svg_geometry
+area_17,Ice surface,ice-surface,975.0,2.456,,km,svg_geometry
+area_17,Ice surface,ice-surface,978.0,2.415,,km,svg_geometry
+area_17,Ice surface,ice-surface,981.0,2.415,,km,svg_geometry
+area_17,Ice surface,ice-surface,984.0,2.510,,km,svg_geometry
+area_17,Ice surface,ice-surface,987.0,2.523,,km,svg_geometry
+area_17,Ice surface,ice-surface,990.0,2.523,,km,svg_geometry
+area_17,Ice surface,ice-surface,993.0,2.535,,km,svg_geometry
+area_17,Ice surface,ice-surface,996.0,2.589,,km,svg_geometry
+area_17,Ice surface,ice-surface,999.0,2.589,,km,svg_geometry
+area_17,Ice surface,ice-surface,1002.0,2.630,,km,svg_geometry
+area_17,Ice surface,ice-surface,1005.0,2.705,,km,svg_geometry
+area_17,Ice surface,ice-surface,1008.0,2.660,,km,svg_geometry
+area_17,Ice surface,ice-surface,1011.0,2.763,,km,svg_geometry
+area_17,Ice surface,ice-surface,1014.0,2.789,,km,svg_geometry
+area_17,Ice surface,ice-surface,1017.0,2.789,,km,svg_geometry
+area_17,Ice surface,ice-surface,1020.0,2.789,,km,svg_geometry
+area_17,Ice surface,ice-surface,1023.0,2.789,,km,svg_geometry
+area_17,Ice surface,ice-surface,1026.0,2.789,,km,svg_geometry
+area_17,Ice surface,ice-surface,1029.0,2.776,,km,svg_geometry
+area_17,Ice surface,ice-surface,1032.0,2.680,,km,svg_geometry
+area_17,Ice surface,ice-surface,1035.0,2.594,,km,svg_geometry
+area_17,Ice surface,ice-surface,1038.0,2.548,,km,svg_geometry
+area_17,Ice surface,ice-surface,1041.0,2.523,,km,svg_geometry
+area_17,Ice surface,ice-surface,1044.0,2.497,,km,svg_geometry
+area_17,Ice surface,ice-surface,1047.0,2.348,,km,svg_geometry
+area_17,Ice surface,ice-surface,1050.0,2.297,,km,svg_geometry
+area_17,Ice surface,ice-surface,1053.0,2.194,,km,svg_geometry
+area_17,Ice surface,ice-surface,1056.0,2.065,,km,svg_geometry
+area_17,Ice surface,ice-surface,1059.0,2.015,,km,svg_geometry
+area_17,Ice surface,ice-surface,1062.0,1.914,,km,svg_geometry
+area_17,Ice surface,ice-surface,1065.0,1.815,,km,svg_geometry
+area_17,Ice surface,ice-surface,1068.0,1.673,,km,svg_geometry
+area_17,Ice surface,ice-surface,1071.0,1.473,,km,svg_geometry
+area_17,Ice surface,ice-surface,1074.0,1.273,,km,svg_geometry
+area_17,Ice surface,ice-surface,1077.0,1.099,,km,svg_geometry
+area_17,Ice surface,ice-surface,1080.0,1.015,,km,svg_geometry
+area_17,Ice surface,ice-surface,1083.0,0.978,,km,svg_geometry
+area_17,Ice surface,ice-surface,1086.0,0.925,,km,svg_geometry
+area_17,Ice surface,ice-surface,1089.0,0.925,,km,svg_geometry
+area_17,Ice surface,ice-surface,1092.0,0.899,,km,svg_geometry
+area_17,Ice surface,ice-surface,1095.0,0.854,,km,svg_geometry
+area_17,Ice surface,ice-surface,1098.0,0.791,,km,svg_geometry
+area_17,Ice surface,ice-surface,1101.0,0.733,,km,svg_geometry
+area_17,Ice surface,ice-surface,1104.0,0.649,,km,svg_geometry
+area_17,Ice surface,ice-surface,1107.0,0.591,,km,svg_geometry
+area_17,Ice surface,ice-surface,1110.0,0.578,,km,svg_geometry
+area_17,Ice surface,ice-surface,1113.0,0.525,,km,svg_geometry
+area_17,Ice surface,ice-surface,1116.0,0.525,,km,svg_geometry
+area_17,Ice surface,ice-surface,1119.0,0.525,,km,svg_geometry
+area_17,Bedrock,bedrock,180.0,-2.127,,km,svg_geometry
+area_17,Bedrock,bedrock,183.0,-2.040,,km,svg_geometry
+area_17,Bedrock,bedrock,186.0,-1.953,,km,svg_geometry
+area_17,Bedrock,bedrock,189.0,-1.940,,km,svg_geometry
+area_17,Bedrock,bedrock,192.0,-1.940,,km,svg_geometry
+area_17,Bedrock,bedrock,195.0,-1.981,,km,svg_geometry
+area_17,Bedrock,bedrock,198.0,-1.886,,km,svg_geometry
+area_17,Bedrock,bedrock,201.0,-1.847,,km,svg_geometry
+area_17,Bedrock,bedrock,204.0,-1.740,,km,svg_geometry
+area_17,Bedrock,bedrock,207.0,-1.740,,km,svg_geometry
+area_17,Bedrock,bedrock,210.0,-1.574,,km,svg_geometry
+area_17,Bedrock,bedrock,213.0,-1.424,,km,svg_geometry
+area_17,Bedrock,bedrock,216.0,-0.675,,km,svg_geometry
+area_17,Bedrock,bedrock,219.0,-0.615,,km,svg_geometry
+area_17,Bedrock,bedrock,222.0,-0.490,,km,svg_geometry
+area_17,Bedrock,bedrock,225.0,-0.409,,km,svg_geometry
+area_17,Bedrock,bedrock,228.0,-0.346,,km,svg_geometry
+area_17,Bedrock,bedrock,231.0,-0.342,,km,svg_geometry
+area_17,Bedrock,bedrock,234.0,-0.280,,km,svg_geometry
+area_17,Bedrock,bedrock,237.0,-0.275,,km,svg_geometry
+area_17,Bedrock,bedrock,240.0,-0.103,,km,svg_geometry
+area_17,Bedrock,bedrock,243.0,0.084,,km,svg_geometry
+area_17,Bedrock,bedrock,246.0,0.129,,km,svg_geometry
+area_17,Bedrock,bedrock,249.0,0.187,,km,svg_geometry
+area_17,Bedrock,bedrock,252.0,0.116,,km,svg_geometry
+area_17,Bedrock,bedrock,255.0,0.103,,km,svg_geometry
+area_17,Bedrock,bedrock,258.0,0.032,,km,svg_geometry
+area_17,Bedrock,bedrock,261.0,0.099,,km,svg_geometry
+area_17,Bedrock,bedrock,264.0,0.099,,km,svg_geometry
+area_17,Bedrock,bedrock,267.0,0.312,,km,svg_geometry
+area_17,Bedrock,bedrock,270.0,0.351,,km,svg_geometry
+area_17,Bedrock,bedrock,273.0,0.432,,km,svg_geometry
+area_17,Bedrock,bedrock,276.0,0.533,,km,svg_geometry
+area_17,Bedrock,bedrock,279.0,0.591,,km,svg_geometry
+area_17,Bedrock,bedrock,282.0,0.604,,km,svg_geometry
+area_17,Bedrock,bedrock,285.0,0.632,,km,svg_geometry
+area_17,Bedrock,bedrock,288.0,0.508,,km,svg_geometry
+area_17,Bedrock,bedrock,291.0,0.458,,km,svg_geometry
+area_17,Bedrock,bedrock,294.0,0.471,,km,svg_geometry
+area_17,Bedrock,bedrock,297.0,0.596,,km,svg_geometry
+area_17,Bedrock,bedrock,300.0,0.557,,km,svg_geometry
+area_17,Bedrock,bedrock,303.0,0.671,,km,svg_geometry
+area_17,Bedrock,bedrock,306.0,0.574,,km,svg_geometry
+area_17,Bedrock,bedrock,309.0,0.217,,km,svg_geometry
+area_17,Bedrock,bedrock,312.0,0.191,,km,svg_geometry
+area_17,Bedrock,bedrock,315.0,0.196,,km,svg_geometry
+area_17,Bedrock,bedrock,318.0,0.258,,km,svg_geometry
+area_17,Bedrock,bedrock,321.0,0.258,,km,svg_geometry
+area_17,Bedrock,bedrock,324.0,-0.009,,km,svg_geometry
+area_17,Bedrock,bedrock,327.0,-0.058,,km,svg_geometry
+area_17,Bedrock,bedrock,330.0,-0.151,,km,svg_geometry
+area_17,Bedrock,bedrock,333.0,-0.174,,km,svg_geometry
+area_17,Bedrock,bedrock,336.0,-0.092,,km,svg_geometry
+area_17,Bedrock,bedrock,339.0,-0.404,,km,svg_geometry
+area_17,Bedrock,bedrock,342.0,-0.316,,km,svg_geometry
+area_17,Bedrock,bedrock,345.0,-0.361,,km,svg_geometry
+area_17,Bedrock,bedrock,348.0,-0.499,,km,svg_geometry
+area_17,Bedrock,bedrock,351.0,-0.329,,km,svg_geometry
+area_17,Bedrock,bedrock,354.0,-0.391,,km,svg_geometry
+area_17,Bedrock,bedrock,357.0,-0.404,,km,svg_geometry
+area_17,Bedrock,bedrock,360.0,-0.533,,km,svg_geometry
+area_17,Bedrock,bedrock,363.0,-0.267,,km,svg_geometry
+area_17,Bedrock,bedrock,366.0,-0.142,,km,svg_geometry
+area_17,Bedrock,bedrock,369.0,-0.226,,km,svg_geometry
+area_17,Bedrock,bedrock,372.0,-0.228,,km,svg_geometry
+area_17,Bedrock,bedrock,375.0,-0.417,,km,svg_geometry
+area_17,Bedrock,bedrock,378.0,-0.316,,km,svg_geometry
+area_17,Bedrock,bedrock,381.0,-0.241,,km,svg_geometry
+area_17,Bedrock,bedrock,384.0,-0.170,,km,svg_geometry
+area_17,Bedrock,bedrock,387.0,-0.217,,km,svg_geometry
+area_17,Bedrock,bedrock,390.0,-0.183,,km,svg_geometry
+area_17,Bedrock,bedrock,393.0,-0.308,,km,svg_geometry
+area_17,Bedrock,bedrock,396.0,-0.217,,km,svg_geometry
+area_17,Bedrock,bedrock,399.0,-0.604,,km,svg_geometry
+area_17,Bedrock,bedrock,402.0,-0.591,,km,svg_geometry
+area_17,Bedrock,bedrock,405.0,-0.675,,km,svg_geometry
+area_17,Bedrock,bedrock,408.0,-0.675,,km,svg_geometry
+area_17,Bedrock,bedrock,411.0,-0.624,,km,svg_geometry
+area_17,Bedrock,bedrock,414.0,-0.548,,km,svg_geometry
+area_17,Bedrock,bedrock,417.0,-0.288,,km,svg_geometry
+area_17,Bedrock,bedrock,420.0,-0.275,,km,svg_geometry
+area_17,Bedrock,bedrock,423.0,-0.400,,km,svg_geometry
+area_17,Bedrock,bedrock,426.0,-0.632,,km,svg_geometry
+area_17,Bedrock,bedrock,429.0,-0.475,,km,svg_geometry
+area_17,Bedrock,bedrock,432.0,-0.342,,km,svg_geometry
+area_17,Bedrock,bedrock,435.0,-0.690,,km,svg_geometry
+area_17,Bedrock,bedrock,438.0,-0.609,,km,svg_geometry
+area_17,Bedrock,bedrock,441.0,-0.733,,km,svg_geometry
+area_17,Bedrock,bedrock,444.0,-0.417,,km,svg_geometry
+area_17,Bedrock,bedrock,447.0,-0.288,,km,svg_geometry
+area_17,Bedrock,bedrock,450.0,-0.032,,km,svg_geometry
+area_17,Bedrock,bedrock,453.0,-0.125,,km,svg_geometry
+area_17,Bedrock,bedrock,456.0,-0.191,,km,svg_geometry
+area_17,Bedrock,bedrock,459.0,-0.290,,km,svg_geometry
+area_17,Bedrock,bedrock,462.0,-0.178,,km,svg_geometry
+area_17,Bedrock,bedrock,465.0,-0.183,,km,svg_geometry
+area_17,Bedrock,bedrock,468.0,-0.417,,km,svg_geometry
+area_17,Bedrock,bedrock,471.0,-0.499,,km,svg_geometry
+area_17,Bedrock,bedrock,474.0,-0.249,,km,svg_geometry
+area_17,Bedrock,bedrock,477.0,0.009,,km,svg_geometry
+area_17,Bedrock,bedrock,480.0,0.004,,km,svg_geometry
+area_17,Bedrock,bedrock,483.0,0.342,,km,svg_geometry
+area_17,Bedrock,bedrock,486.0,0.467,,km,svg_geometry
+area_17,Bedrock,bedrock,489.0,1.131,,km,svg_geometry
+area_17,Bedrock,bedrock,492.0,1.131,,km,svg_geometry
+area_17,Bedrock,bedrock,495.0,1.258,,km,svg_geometry
+area_17,Bedrock,bedrock,498.0,1.224,,km,svg_geometry
+area_17,Bedrock,bedrock,501.0,1.269,,km,svg_geometry
+area_17,Bedrock,bedrock,504.0,1.290,,km,svg_geometry
+area_17,Bedrock,bedrock,507.0,1.344,,km,svg_geometry
+area_17,Bedrock,bedrock,510.0,1.508,,km,svg_geometry
+area_17,Bedrock,bedrock,513.0,1.589,,km,svg_geometry
+area_17,Bedrock,bedrock,516.0,1.589,,km,svg_geometry
+area_17,Bedrock,bedrock,519.0,1.589,,km,svg_geometry
+area_17,Bedrock,bedrock,522.0,1.574,,km,svg_geometry
+area_17,Bedrock,bedrock,525.0,1.490,,km,svg_geometry
+area_17,Bedrock,bedrock,528.0,1.415,,km,svg_geometry
+area_17,Bedrock,bedrock,531.0,1.241,,km,svg_geometry
+area_17,Bedrock,bedrock,534.0,1.282,,km,svg_geometry
+area_17,Bedrock,bedrock,537.0,1.348,,km,svg_geometry
+area_17,Bedrock,bedrock,540.0,1.265,,km,svg_geometry
+area_17,Bedrock,bedrock,543.0,1.215,,km,svg_geometry
+area_17,Bedrock,bedrock,546.0,1.232,,km,svg_geometry
+area_17,Bedrock,bedrock,549.0,0.991,,km,svg_geometry
+area_17,Bedrock,bedrock,552.0,1.140,,km,svg_geometry
+area_17,Bedrock,bedrock,555.0,1.157,,km,svg_geometry
+area_17,Bedrock,bedrock,558.0,1.065,,km,svg_geometry
+area_17,Bedrock,bedrock,561.0,0.933,,km,svg_geometry
+area_17,Bedrock,bedrock,564.0,0.619,,km,svg_geometry
+area_17,Bedrock,bedrock,567.0,0.658,,km,svg_geometry
+area_17,Bedrock,bedrock,570.0,0.542,,km,svg_geometry
+area_17,Bedrock,bedrock,573.0,0.366,,km,svg_geometry
+area_17,Bedrock,bedrock,576.0,0.271,,km,svg_geometry
+area_17,Bedrock,bedrock,579.0,0.342,,km,svg_geometry
+area_17,Bedrock,bedrock,582.0,0.351,,km,svg_geometry
+area_17,Bedrock,bedrock,585.0,0.391,,km,svg_geometry
+area_17,Bedrock,bedrock,588.0,0.351,,km,svg_geometry
+area_17,Bedrock,bedrock,591.0,0.325,,km,svg_geometry
+area_17,Bedrock,bedrock,594.0,0.329,,km,svg_geometry
+area_17,Bedrock,bedrock,597.0,0.374,,km,svg_geometry
+area_17,Bedrock,bedrock,600.0,0.325,,km,svg_geometry
+area_17,Bedrock,bedrock,603.0,0.366,,km,svg_geometry
+area_17,Bedrock,bedrock,606.0,0.166,,km,svg_geometry
+area_17,Bedrock,bedrock,609.0,0.092,,km,svg_geometry
+area_17,Bedrock,bedrock,612.0,0.366,,km,svg_geometry
+area_17,Bedrock,bedrock,615.0,0.471,,km,svg_geometry
+area_17,Bedrock,bedrock,618.0,0.383,,km,svg_geometry
+area_17,Bedrock,bedrock,621.0,0.632,,km,svg_geometry
+area_17,Bedrock,bedrock,624.0,0.658,,km,svg_geometry
+area_17,Bedrock,bedrock,627.0,0.658,,km,svg_geometry
+area_17,Bedrock,bedrock,630.0,0.654,,km,svg_geometry
+area_17,Bedrock,bedrock,633.0,0.490,,km,svg_geometry
+area_17,Bedrock,bedrock,636.0,0.529,,km,svg_geometry
+area_17,Bedrock,bedrock,639.0,0.404,,km,svg_geometry
+area_17,Bedrock,bedrock,642.0,0.351,,km,svg_geometry
+area_17,Bedrock,bedrock,645.0,0.237,,km,svg_geometry
+area_17,Bedrock,bedrock,648.0,0.316,,km,svg_geometry
+area_17,Bedrock,bedrock,651.0,0.133,,km,svg_geometry
+area_17,Bedrock,bedrock,654.0,0.099,,km,svg_geometry
+area_17,Bedrock,bedrock,657.0,0.080,,km,svg_geometry
+area_17,Bedrock,bedrock,660.0,0.217,,km,svg_geometry
+area_17,Bedrock,bedrock,663.0,0.374,,km,svg_geometry
+area_17,Bedrock,bedrock,666.0,0.525,,km,svg_geometry
+area_17,Bedrock,bedrock,669.0,0.690,,km,svg_geometry
+area_17,Bedrock,bedrock,672.0,0.686,,km,svg_geometry
+area_17,Bedrock,bedrock,675.0,0.766,,km,svg_geometry
+area_17,Bedrock,bedrock,678.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,681.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,684.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,687.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,690.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,693.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,696.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,699.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,702.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,705.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,708.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,711.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,714.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,717.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,720.0,0.903,,km,svg_geometry
+area_17,Bedrock,bedrock,723.0,0.858,,km,svg_geometry
+area_17,Bedrock,bedrock,726.0,0.858,,km,svg_geometry
+area_17,Bedrock,bedrock,729.0,0.858,,km,svg_geometry
+area_17,Bedrock,bedrock,732.0,0.858,,km,svg_geometry
+area_17,Bedrock,bedrock,735.0,0.858,,km,svg_geometry
+area_17,Bedrock,bedrock,738.0,0.920,,km,svg_geometry
+area_17,Bedrock,bedrock,741.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,744.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,747.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,750.0,1.006,,km,svg_geometry
+area_17,Bedrock,bedrock,753.0,1.049,,km,svg_geometry
+area_17,Bedrock,bedrock,756.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,759.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,762.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,765.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,768.0,1.054,,km,svg_geometry
+area_17,Bedrock,bedrock,771.0,0.991,,km,svg_geometry
+area_17,Bedrock,bedrock,774.0,0.935,,km,svg_geometry
+area_17,Bedrock,bedrock,777.0,0.899,,km,svg_geometry
+area_17,Bedrock,bedrock,780.0,0.815,,km,svg_geometry
+area_17,Bedrock,bedrock,783.0,0.804,,km,svg_geometry
+area_17,Bedrock,bedrock,786.0,0.695,,km,svg_geometry
+area_17,Bedrock,bedrock,789.0,0.662,,km,svg_geometry
+area_17,Bedrock,bedrock,792.0,0.658,,km,svg_geometry
+area_17,Bedrock,bedrock,795.0,0.658,,km,svg_geometry
+area_17,Bedrock,bedrock,798.0,0.632,,km,svg_geometry
+area_17,Bedrock,bedrock,801.0,0.729,,km,svg_geometry
+area_17,Bedrock,bedrock,804.0,0.774,,km,svg_geometry
+area_17,Bedrock,bedrock,807.0,0.766,,km,svg_geometry
+area_17,Bedrock,bedrock,810.0,0.615,,km,svg_geometry
+area_17,Bedrock,bedrock,813.0,0.615,,km,svg_geometry
+area_17,Bedrock,bedrock,816.0,0.374,,km,svg_geometry
+area_17,Bedrock,bedrock,819.0,0.432,,km,svg_geometry
+area_17,Bedrock,bedrock,822.0,0.480,,km,svg_geometry
+area_17,Bedrock,bedrock,825.0,0.716,,km,svg_geometry
+area_17,Bedrock,bedrock,828.0,0.738,,km,svg_geometry
+area_17,Bedrock,bedrock,831.0,0.675,,km,svg_geometry
+area_17,Bedrock,bedrock,834.0,0.742,,km,svg_geometry
+area_17,Bedrock,bedrock,837.0,0.615,,km,svg_geometry
+area_17,Bedrock,bedrock,840.0,0.615,,km,svg_geometry
+area_17,Bedrock,bedrock,843.0,0.615,,km,svg_geometry
+area_17,Bedrock,bedrock,846.0,0.675,,km,svg_geometry
+area_17,Bedrock,bedrock,849.0,0.729,,km,svg_geometry
+area_17,Bedrock,bedrock,852.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,855.0,0.738,,km,svg_geometry
+area_17,Bedrock,bedrock,858.0,0.712,,km,svg_geometry
+area_17,Bedrock,bedrock,861.0,0.716,,km,svg_geometry
+area_17,Bedrock,bedrock,864.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,867.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,870.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,873.0,0.832,,km,svg_geometry
+area_17,Bedrock,bedrock,876.0,0.957,,km,svg_geometry
+area_17,Bedrock,bedrock,879.0,1.148,,km,svg_geometry
+area_17,Bedrock,bedrock,882.0,1.299,,km,svg_geometry
+area_17,Bedrock,bedrock,885.0,1.323,,km,svg_geometry
+area_17,Bedrock,bedrock,888.0,1.323,,km,svg_geometry
+area_17,Bedrock,bedrock,891.0,1.187,,km,svg_geometry
+area_17,Bedrock,bedrock,894.0,1.125,,km,svg_geometry
+area_17,Bedrock,bedrock,897.0,1.174,,km,svg_geometry
+area_17,Bedrock,bedrock,900.0,1.099,,km,svg_geometry
+area_17,Bedrock,bedrock,903.0,1.112,,km,svg_geometry
+area_17,Bedrock,bedrock,906.0,1.112,,km,svg_geometry
+area_17,Bedrock,bedrock,909.0,1.108,,km,svg_geometry
+area_17,Bedrock,bedrock,912.0,1.062,,km,svg_geometry
+area_17,Bedrock,bedrock,915.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,918.0,1.082,,km,svg_geometry
+area_17,Bedrock,bedrock,921.0,1.191,,km,svg_geometry
+area_17,Bedrock,bedrock,924.0,1.041,,km,svg_geometry
+area_17,Bedrock,bedrock,927.0,0.966,,km,svg_geometry
+area_17,Bedrock,bedrock,930.0,0.690,,km,svg_geometry
+area_17,Bedrock,bedrock,933.0,0.615,,km,svg_geometry
+area_17,Bedrock,bedrock,936.0,0.757,,km,svg_geometry
+area_17,Bedrock,bedrock,939.0,0.742,,km,svg_geometry
+area_17,Bedrock,bedrock,942.0,0.908,,km,svg_geometry
+area_17,Bedrock,bedrock,945.0,0.983,,km,svg_geometry
+area_17,Bedrock,bedrock,948.0,1.058,,km,svg_geometry
+area_17,Bedrock,bedrock,951.0,0.920,,km,svg_geometry
+area_17,Bedrock,bedrock,954.0,1.148,,km,svg_geometry
+area_17,Bedrock,bedrock,957.0,1.191,,km,svg_geometry
+area_17,Bedrock,bedrock,960.0,1.241,,km,svg_geometry
+area_17,Bedrock,bedrock,963.0,1.323,,km,svg_geometry
+area_17,Bedrock,bedrock,966.0,1.316,,km,svg_geometry
+area_17,Bedrock,bedrock,969.0,1.273,,km,svg_geometry
+area_17,Bedrock,bedrock,972.0,1.419,,km,svg_geometry
+area_17,Bedrock,bedrock,975.0,1.299,,km,svg_geometry
+area_17,Bedrock,bedrock,978.0,1.282,,km,svg_geometry
+area_17,Bedrock,bedrock,981.0,1.308,,km,svg_geometry
+area_17,Bedrock,bedrock,984.0,1.215,,km,svg_geometry
+area_17,Bedrock,bedrock,987.0,0.877,,km,svg_geometry
+area_17,Bedrock,bedrock,990.0,0.832,,km,svg_geometry
+area_17,Bedrock,bedrock,993.0,0.854,,km,svg_geometry
+area_17,Bedrock,bedrock,996.0,0.832,,km,svg_geometry
+area_17,Bedrock,bedrock,999.0,0.738,,km,svg_geometry
+area_17,Bedrock,bedrock,1002.0,0.725,,km,svg_geometry
+area_17,Bedrock,bedrock,1005.0,0.774,,km,svg_geometry
+area_17,Bedrock,bedrock,1008.0,0.677,,km,svg_geometry
+area_17,Bedrock,bedrock,1011.0,0.458,,km,svg_geometry
+area_17,Bedrock,bedrock,1014.0,0.458,,km,svg_geometry
+area_17,Bedrock,bedrock,1017.0,0.458,,km,svg_geometry
+area_17,Bedrock,bedrock,1020.0,0.520,,km,svg_geometry
+area_17,Bedrock,bedrock,1023.0,0.766,,km,svg_geometry
+area_17,Bedrock,bedrock,1026.0,0.811,,km,svg_geometry
+area_17,Bedrock,bedrock,1029.0,0.925,,km,svg_geometry
+area_17,Bedrock,bedrock,1032.0,0.925,,km,svg_geometry
+area_17,Bedrock,bedrock,1035.0,0.925,,km,svg_geometry
+area_17,Bedrock,bedrock,1038.0,0.882,,km,svg_geometry
+area_17,Bedrock,bedrock,1041.0,0.845,,km,svg_geometry
+area_17,Bedrock,bedrock,1044.0,0.791,,km,svg_geometry
+area_17,Bedrock,bedrock,1047.0,0.837,,km,svg_geometry
+area_17,Bedrock,bedrock,1050.0,0.806,,km,svg_geometry
+area_17,Bedrock,bedrock,1053.0,0.796,,km,svg_geometry
+area_17,Bedrock,bedrock,1056.0,0.708,,km,svg_geometry
+area_17,Bedrock,bedrock,1059.0,0.583,,km,svg_geometry
+area_17,Bedrock,bedrock,1062.0,0.520,,km,svg_geometry
+area_17,Bedrock,bedrock,1065.0,0.299,,km,svg_geometry
+area_17,Bedrock,bedrock,1068.0,0.370,,km,svg_geometry
+area_17,Bedrock,bedrock,1071.0,0.299,,km,svg_geometry
+area_17,Bedrock,bedrock,1074.0,0.387,,km,svg_geometry
+area_17,Bedrock,bedrock,1077.0,0.391,,km,svg_geometry
+area_17,Bedrock,bedrock,1080.0,0.308,,km,svg_geometry
+area_17,Bedrock,bedrock,1083.0,0.370,,km,svg_geometry
+area_17,Bedrock,bedrock,1086.0,0.374,,km,svg_geometry
+area_17,Bedrock,bedrock,1089.0,0.267,,km,svg_geometry
+area_17,Bedrock,bedrock,1092.0,0.241,,km,svg_geometry
+area_17,Bedrock,bedrock,1095.0,0.022,,km,svg_geometry
+area_17,Bedrock,bedrock,1098.0,-0.067,,km,svg_geometry
+area_17,Bedrock,bedrock,1101.0,-1.157,,km,svg_geometry
+area_17,Bedrock,bedrock,1104.0,-1.589,,km,svg_geometry
+area_17,Bedrock,bedrock,1107.0,-1.690,,km,svg_geometry
+area_17,Bedrock,bedrock,1110.0,-1.540,,km,svg_geometry
+area_17,Bedrock,bedrock,1113.0,-1.865,,km,svg_geometry
+area_17,Bedrock,bedrock,1116.0,-1.998,,km,svg_geometry
+area_17,Bedrock,bedrock,1119.0,-2.297,,km,svg_geometry

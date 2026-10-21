@@ -1,0 +1,241 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "pie_8",
+ "family": "pie",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the population of the UAE is overwhelmingly composed of expatriates rather than native citizens.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "Expats make up 83.3% of the UAE population, the dominant share.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Expats",
+     "x": "0",
+     "field": "value",
+     "value": 83.3,
+     "note": "Expats' population share in percent from slice-1."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Expats account for 83.3% of the UAE population.",
+    "About 83% of UAE residents are expatriates.",
+    "Expatriates make up roughly five-sixths (83.3%) of the population.",
+    "The UAE population is about 83% expat."
+   ],
+   "visual_evidence_rule": "A chart slice, bar, or callout for Expats must show 83.3% or a rounded 83% and be visually dominant.",
+   "temporal_anchor": "The opening narration clause about the expat share, corrected to the table value.",
+   "reviewer_question": "Should 83.3% be the required expat share rather than the narration's 85%?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "Native citizens make up the remaining 16.7% of the UAE population.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Native citizens",
+     "x": "1",
+     "field": "value",
+     "value": 16.7,
+     "note": "Native citizens' population share in percent from slice-2."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Native citizens are 16.7% of the population.",
+    "About 17% of residents are native citizens.",
+    "Native Emiratis make up roughly one-sixth (16.7%) of the population.",
+    "The non-expat/native-citizen share is 16.7%."
+   ],
+   "visual_evidence_rule": "The smaller slice/bar must be labeled Native citizens with 16.7% or a rounded 17%.",
+   "temporal_anchor": "The contrast portion of the pie display where the non-expat category is shown.",
+   "reviewer_question": "Must the native-citizen share be explicitly labeled, or can it remain implicit as the complement of expats?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Expats outnumber native citizens by roughly five to one.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Expats",
+     "x": "0",
+     "field": "value",
+     "value": 83.3,
+     "note": "Expats' share used in the ratio numerator."
+    },
+    {
+     "entity": "Native citizens",
+     "x": "1",
+     "field": "value",
+     "value": 16.7,
+     "note": "Native citizens' share used in the ratio denominator."
+    }
+   ],
+   "computation": "83.3 / 16.7 = 4.99, approximately 5.0; equivalently 0.8330 / 0.1670 = 4.99.",
+   "accepted_routes": [
+    "Expats outnumber native citizens by about 5 to 1.",
+    "For every native citizen there are roughly five expats.",
+    "The expat-to-citizen ratio is about 5:1 (83.3% vs 16.7%).",
+    "Native citizens are about one-fifth as numerous as expats."
+   ],
+   "visual_evidence_rule": "A ratio annotation or side-by-side visual must make the expat-to-citizen contrast roughly 5:1, not merely show two pie slices.",
+   "temporal_anchor": "The 'compared to' contrast clause or the moment both expat and native-citizen values are on screen.",
+   "reviewer_question": "Is the derived 5:1 outnumbering ratio required, or do the two shares alone satisfy the intent?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Expats exceed 80% and native citizens are below 20%, crossing the four-fifths threshold.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Expats",
+     "x": "0",
+     "field": "value",
+     "value": 83.3,
+     "note": "83.3 is above the 80% threshold."
+    },
+    {
+     "entity": "Native citizens",
+     "x": "1",
+     "field": "value",
+     "value": 16.7,
+     "note": "16.7 is below the 20% threshold."
+    }
+   ],
+   "computation": "Compare table values to thresholds: 83.3 > 80 and 16.7 < 20.",
+   "accepted_routes": [
+    "More than 4 in 5 UAE residents are expats.",
+    "Expat share exceeds 80% of the population.",
+    "Native citizens are less than one-fifth of the population.",
+    "The split is over 80% expat and under 20% native citizen."
+   ],
+   "visual_evidence_rule": "A threshold line at 80%/20% or an annotation such as 'over 80%' / 'under 20%' must be visible if this unit is conveyed.",
+   "temporal_anchor": "The opening claim about expats dominating the population.",
+   "reviewer_question": "Does the video need an explicit 80/20 threshold cue, or is the exact 83.3/16.7 split enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "Expats and native citizens together account for 100% of the population shown, with no other category.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Expats",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.833,
+     "note": "Relative share for Expats."
+    },
+    {
+     "entity": "Native citizens",
+     "x": "1",
+     "field": "relative_value",
+     "value": 0.167,
+     "note": "Relative share for Native citizens."
+    }
+   ],
+   "computation": "0.8330 + 0.1670 = 1.0000 (100%); equivalently 83.3 + 16.7 = 100.0.",
+   "accepted_routes": [
+    "Together the two slices total 100% of the UAE population.",
+    "Expats and native citizens are the only two groups shown in the pie.",
+    "The chart partitions the whole population into expats and native citizens.",
+    "The two categories sum to 100%."
+   ],
+   "visual_evidence_rule": "The chart must show exactly two categories partitioning the whole, or include a 100% total label.",
+   "temporal_anchor": "Throughout the pie display, especially when both slices are introduced.",
+   "reviewer_question": "Must the video explicitly state the pie totals 100%/no other groups, or is a two-category pie self-evident?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Qualitative labels such as 'vast majority' or 'overwhelmingly expatriate' without introducing new numbers.",
+  "A visual ratio cue such as an icon array or waffle chart illustrating the approximately 5:1 expat-to-citizen contrast.",
+  "Color emphasis on the larger expat slice to reinforce the composition contrast."
+ ],
+ "unsupported_to_avoid": [
+  "America's 14% expat share from the narration, because it is not in the table.",
+  "The narration's 85% expat share, because the table value is 83.3%.",
+  "Any non-UAE country comparison or ranking.",
+  "Causal claims explaining why expats dominate the UAE population.",
+  "Future projections, year labels, or absolute population counts not present in the table."
+ ],
+ "notes": "The table contains only UAE expat and native-citizen shares (83.3% and 16.7%), so all numeric claims must be based on these or derived ratios/sums. The narration's 85% and America's 14% are not table-supported and should be treated as unsupported or corrected.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.04
+ },
+ "draft_cost": {
+  "sec": 36.9,
+  "usage": {
+   "prompt_tokens": 707,
+   "completion_tokens": 9385,
+   "total_tokens": 10092,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7452
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 323
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

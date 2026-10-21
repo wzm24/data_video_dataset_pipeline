@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f0f4f8"/>
+<rect x="160.9" y="160.0" width="68.2" height="450.0" fill="#4a6fa5"/>
+<rect x="270.9" y="452.5" width="68.2" height="157.5" fill="#4a6fa5"/>
+<rect x="380.9" y="497.5" width="68.2" height="112.5" fill="#4a6fa5"/>
+<rect x="490.9" y="520.0" width="68.2" height="90.0" fill="#4a6fa5"/>
+<rect x="600.9" y="542.5" width="68.2" height="67.5" fill="#4a6fa5"/>
+<rect x="710.9" y="565.0" width="68.2" height="45.0" fill="#4a6fa5"/>
+<rect x="820.9" y="565.0" width="68.2" height="45.0" fill="#4a6fa5"/>
+<rect x="930.9" y="574.0" width="68.2" height="36.0" fill="#4a6fa5"/>
+<rect x="1040.9" y="583.0" width="68.2" height="27.0" fill="#4a6fa5"/>
+<rect x="1150.9" y="583.0" width="68.2" height="27.0" fill="#4a6fa5"/>
+<text x="140.0" y="136.0" font-family="Arial" font-size="22" fill="#111" font-weight="700">Dewi's Family</text>
+<text x="1240.0" y="656.0" text-anchor="end" font-family="Arial" font-size="22" fill="#111" font-weight="700">Putri's Family</text>
+</svg>

@@ -1,0 +1,139 @@
+{
+ "clip_id": "line_92",
+ "family": "line",
+ "chart_form": "line/single_line",
+ "measure": "mark_height",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:All adults @ start (first row)",
+    "mark:All adults @ end (last row)"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "All adults @ start (first row)",
+      "value": 0.0
+     },
+     {
+      "mark": "All adults @ end (last row)",
+      "value": 1.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "The animated line/curve for All adults shows an upward progression from the lowest to the highest relative value, with no downward segments."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "All adults @ start (first row)",
+    "extreme": "min",
+    "expected": 0.0,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The first point of the All adults line is at the lowest relative level (0.0000)."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:All adults @ end (last row)"
+   ],
+   "assertion": {
+    "mark": "All adults @ end (last row)",
+    "field": "value",
+    "expected": 1.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The final point/end of the All adults line is visibly at the highest relative level (1.0000)."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "threshold_or_crossing",
+   "required_candidate": true,
+   "evidence_type": "value_threshold",
+   "requires": [
+    "mark:All adults @ first row above midpoint",
+    "mark:All adults @ end (last row)"
+   ],
+   "assertion": {
+    "series": "All adults",
+    "values": [
+     0.5097,
+     1.0
+    ],
+    "threshold_between": [
+     0.5097,
+     1.0
+    ],
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart shows the All adults line crossing above the middle of the relative scale and remaining there until the end; a reference to 0.5 or halfway may be shown."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:All adults @ first row above midpoint",
+    "mark:All adults @ end (last row)"
+   ],
+   "assertion": {
+    "low": "All adults @ first row above midpoint",
+    "low_value": 0.5097,
+    "high": "All adults @ end (last row)",
+    "high_value": 1.0,
+    "delta": 0.4903,
+    "ratio": 1.9619,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart shows continued upward movement after the line passes the relative midpoint, ending at 1.0000."
+  }
+ ]
+}

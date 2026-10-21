@@ -1,0 +1,214 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "bar_18",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the projected future population scale of sub-Saharan Africa by the end of the century.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The projected population series shown is for sub-Saharan Africa, not for another region or the world.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2099)",
+     "x": "2099",
+     "field": "value",
+     "value": 4,
+     "note": "The table's entity is the projected population series; the clip intent identifies it as sub-Saharan Africa."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "sub-Saharan Africa's projected population",
+    "the projected population for sub-Saharan Africa",
+    "not another region or the world"
+   ],
+   "visual_evidence_rule": "The region or series label must identify sub-Saharan Africa or clearly refer to this projected population series.",
+   "temporal_anchor": "the clause naming sub-Saharan Africa",
+   "reviewer_question": "Must the video explicitly name sub-Saharan Africa, or is a generic regional reference enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The quantity is population measured in billions, not another metric or unit.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2099)",
+     "x": "2099",
+     "field": "value",
+     "value": 4,
+     "note": "The table unit column is billion."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "population measured in billion people",
+    "4 billion people",
+    "people, not GDP or percent"
+   ],
+   "visual_evidence_rule": "The label or annotation must indicate population in billions rather than an unrelated metric.",
+   "temporal_anchor": "the population-scale clause",
+   "reviewer_question": "Must the unit 'billion people' be visible or stated, or is 'population' enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The projected population endpoint value is 4 billion.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2099)",
+     "x": "2099",
+     "field": "value",
+     "value": 4,
+     "note": "Table value is 4 with unit billion."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "4 billion people by 2099",
+    "about 4 billion at the end of the century",
+    "the endpoint reaches 4 billion"
+   ],
+   "visual_evidence_rule": "The endpoint or final marker must be labeled or annotated as 4 billion.",
+   "temporal_anchor": "the clause stating the projected population scale",
+   "reviewer_question": "Is the endpoint value required to be exactly 4 billion, or may it be rounded or described approximately?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The projection endpoint is the year 2099, i.e. the end of the century.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2099)",
+     "x": "2099",
+     "field": "x_value",
+     "value": 2099,
+     "note": "Table x_value is 2099."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "by 2099",
+    "at the end of the century",
+    "the 2099 endpoint"
+   ],
+   "visual_evidence_rule": "The time endpoint must be labeled as 2099 or clearly indicated as the end of the century.",
+   "temporal_anchor": "the closing end-of-century time clause",
+   "reviewer_question": "Must the clip use the table's 2099, or is 'end of the century' sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The value is a projection for the future, not an observed current or historical population.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Projected population (2099)",
+     "x": "2099",
+     "field": "value",
+     "value": 4,
+     "note": "The entity label includes 'Projected', and source_type is printed."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "projected population",
+    "a projection for 2099",
+    "future estimate, not current population"
+   ],
+   "visual_evidence_rule": "The chart or annotation must signal projected/forecast status rather than presenting the value as current or observed.",
+   "temporal_anchor": "the projection or conditional framing clause",
+   "reviewer_question": "Must the clip explicitly mark the value as projected/forecast?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The clip may optionally indicate that this is the table's only/normalized maximum value (relative_value = 1.0), but with one row this adds no comparison."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why population growth continues",
+  "Current growth-rate percentages or any rate not in the table",
+  "Present-day population values or comparisons not in the table",
+  "Other regions, world totals, or global population comparisons",
+  "Percentage shares, counts, or absolute quantities beyond the 4 billion value",
+  "A different end-of-century year than the table's 2099 endpoint"
+ ],
+ "notes": "Only one table row is available, so no trend, change, share, or cross-entity comparison is supported. The units focus on identity, metric, endpoint value, time horizon, and projection status.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.85
+ },
+ "draft_cost": {
+  "sec": 36.1,
+  "usage": {
+   "prompt_tokens": 874,
+   "completion_tokens": 7500,
+   "total_tokens": 8374,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6166
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 362
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

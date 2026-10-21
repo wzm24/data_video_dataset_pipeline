@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#111111"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#ffffff" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#ffffff" stroke-width="3"/>
+<g id="entity-carter" data-role="entity" data-entity-id="carter" data-label="Carter" data-series="true">
+<polyline id="carter-polyline" data-role="polyline" data-entity-id="carter" points="120.0,144.6 230.0,163.0 340.0,181.4 450.0,296.4 560.0,291.8 670.0,319.4 780.0,296.4 890.0,310.2 1000.0,337.8 1110.0,351.6 1220.0,351.6" fill="none" stroke="#0000FF" stroke-width="3" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="120.0" cy="144.6" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="230.0" cy="163.0" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="340.0" cy="181.4" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="450.0" cy="296.4" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="560.0" cy="291.8" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="670.0" cy="319.4" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="780.0" cy="296.4" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="890.0" cy="310.2" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="1000.0" cy="337.8" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="1110.0" cy="351.6" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="1220.0" cy="351.6" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="carter" cx="1220.0" cy="351.6" r="6" fill="#0000FF" stroke="#ffffff" stroke-width="2"/>
+</g>
+<g id="entity-reagan" data-role="entity" data-entity-id="reagan" data-label="Reagan" data-series="true">
+<polyline id="reagan-polyline" data-role="polyline" data-entity-id="reagan" points="120.0,356.2 230.0,374.6 340.0,351.6 450.0,351.6 560.0,365.4 670.0,365.4 780.0,365.4 890.0,333.2 1000.0,287.2 1110.0,236.6 1220.0,204.4" fill="none" stroke="#FF5733" stroke-width="3" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="120.0" cy="356.2" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="230.0" cy="374.6" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="340.0" cy="351.6" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="450.0" cy="351.6" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="560.0" cy="365.4" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="670.0" cy="365.4" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="780.0" cy="365.4" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="890.0" cy="333.2" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="1000.0" cy="287.2" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="1110.0" cy="236.6" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="1220.0" cy="204.4" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="reagan" cx="1220.0" cy="204.4" r="6" fill="#FF5733" stroke="#ffffff" stroke-width="2"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1979</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">1980</text>
+<line x1="520.0" y1="92" x2="600.0" y2="92" stroke="#0000FF" stroke-width="3"/>
+<text x="610.0" y="100" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Carter</text>
+<line x1="520.0" y1="124" x2="600.0" y2="124" stroke="#FF5733" stroke-width="3"/>
+<text x="610.0" y="132" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Reagan</text>
+</g>
+</svg>

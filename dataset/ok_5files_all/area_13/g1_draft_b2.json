@@ -1,0 +1,244 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "area_13",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To explain how public health responses aim to keep infection rates below healthcare capacity to ensure treatment availability and prevent hospital overload.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The infection curve follows a single rise-and-fall pattern: it starts near zero, climbs to a peak, and then falls back toward zero.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "start",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "first row"
+    },
+    {
+     "entity": "Infections",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.3112,
+     "note": "highest infection value in table"
+    },
+    {
+     "entity": "Infections",
+     "x": "end",
+     "field": "relative_value",
+     "value": 0.0,
+     "note": "last row"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The infection curve rises from near zero to a peak and then declines back toward zero.",
+    "Infections increase, reach a maximum, then decrease.",
+    "The trend is a single up-and-down wave."
+   ],
+   "visual_evidence_rule": "A single infection line/area that visibly goes up and then down, with low values at both ends and a high point in between.",
+   "temporal_anchor": "infection rates",
+   "reviewer_question": "Is the rise-then-fall shape of the infection curve obligatory, or is only the comparison to capacity needed?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The infection curve reaches its maximum at a relative level of about 0.3112, which is the highest infection value in the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.3112,
+     "note": "maximum relative_value among Infections rows"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The infection curve peaks at a relative value of about 0.3112.",
+    "The highest infection point is roughly 0.311 on the relative scale.",
+    "Infections reach a maximum relative level of about 0.311."
+   ],
+   "visual_evidence_rule": "The infection curve has a clear maximum at this relative level; no higher infection point is visible.",
+   "temporal_anchor": "infection rates",
+   "reviewer_question": "Must the exact peak value be shown, or is it sufficient to show that the peak is below capacity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Healthcare capacity is represented as a constant reference level at relative value 0.3347 across the series.",
+   "unit_kind": "identity_or_series",
+   "weight_template": 0.15,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Healthcare capacity",
+     "x": "constant",
+     "field": "relative_value",
+     "value": 0.3347,
+     "note": "constant for both capacity rows"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "Healthcare capacity is a flat line at about 0.3347 on the relative scale.",
+    "Capacity stays constant at roughly 0.335.",
+    "The capacity level does not change over the series."
+   ],
+   "visual_evidence_rule": "A horizontal or constant capacity line/reference at the same relative level throughout the chart.",
+   "temporal_anchor": "healthcare capacity",
+   "reviewer_question": "Is it necessary to show capacity as a constant line, or can it be conveyed only as a comparison level?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The infection curve remains below healthcare capacity; even the infection peak (0.3112) is lower than the capacity level (0.3347).",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.3112,
+     "note": "highest infection value"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "constant",
+     "field": "relative_value",
+     "value": 0.3347,
+     "note": "capacity level"
+    }
+   ],
+   "computation": "0.3347 > 0.3112",
+   "accepted_routes": [
+    "Infections stay below healthcare capacity throughout the series.",
+    "The infection peak does not exceed the capacity level.",
+    "Capacity remains above the infection curve, including at its highest point."
+   ],
+   "visual_evidence_rule": "The capacity reference is visibly above the infection curve at every point, especially at the infection peak; no crossing is shown.",
+   "temporal_anchor": "no crunch point with overwhelmed hospitals",
+   "reviewer_question": "Is the key takeaway that infections stay below capacity, rather than the exact values?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The closest approach between infections and capacity occurs at the infection peak, where the relative margin is about 0.0235 (0.3347 minus 0.3112).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Infections",
+     "x": "peak",
+     "field": "relative_value",
+     "value": 0.3112,
+     "note": "highest infection value"
+    },
+    {
+     "entity": "Healthcare capacity",
+     "x": "constant",
+     "field": "relative_value",
+     "value": 0.3347,
+     "note": "capacity level"
+    }
+   ],
+   "computation": "0.3347 - 0.3112 = 0.0235",
+   "accepted_routes": [
+    "The infection curve comes closest to capacity at its peak, with a small positive margin.",
+    "The smallest gap between capacity and infections is about 0.0235 relative units.",
+    "At the peak, capacity is only slightly above infections."
+   ],
+   "visual_evidence_rule": "At the infection peak, the vertical distance to the capacity line is small but positive, showing the margin.",
+   "temporal_anchor": "everyone who gets sick can get treatment",
+   "reviewer_question": "Is the size of the margin important, or only the fact that the peak stays below capacity?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The infection curve begins and ends at relative value 0.0000.",
+  "The gap between capacity and infections is widest at the start and end of the series.",
+  "Early infections are very low relative to the capacity level."
+ ],
+ "unsupported_to_avoid": [
+  "Percentages, absolute case counts, bed counts, or infection rates per capita.",
+  "Causal claims that public health responses caused the infection curve to stay below capacity.",
+  "Hospital overload counts or ICU occupancy numbers not present in the table.",
+  "Using x_px as a time axis or stating dates, days, or weeks.",
+  "Claiming the infection curve crosses or exceeds capacity.",
+  "Treating relative_value 0.3347 as 33.47%."
+ ],
+ "notes": "All numbers are relative_value from the table; capacity is 0.3347 and the infection peak is 0.3112. The chart must show infections staying below capacity, with no absolute units or causal claims.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.07
+ },
+ "draft_cost": {
+  "sec": 32.1,
+  "usage": {
+   "prompt_tokens": 5760,
+   "completion_tokens": 7976,
+   "total_tokens": 13736,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6322
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 5120
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

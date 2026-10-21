@@ -1,0 +1,303 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_10",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the historical progression of human development in Asian nations, demonstrating how countries like South Korea, India, Thailand, and the Philippines have advanced from low to high development levels over time.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Asian series in the table—North Korea, Thailand, and India—each rise from their first table HDI value to a higher last table HDI value, conveying the low-to-high development progression.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "North Korea",
+     "x": "first table point",
+     "field": "value",
+     "value": 0.0501,
+     "note": "start of North Korea series"
+    },
+    {
+     "entity": "North Korea",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.94,
+     "note": "end of North Korea series"
+    },
+    {
+     "entity": "Thailand",
+     "x": "first table point",
+     "field": "value",
+     "value": 0.0501,
+     "note": "start of Thailand series"
+    },
+    {
+     "entity": "Thailand",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.5201,
+     "note": "end of Thailand series"
+    },
+    {
+     "entity": "India",
+     "x": "first table point",
+     "field": "value",
+     "value": 0.0401,
+     "note": "start of India series"
+    },
+    {
+     "entity": "India",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.3999,
+     "note": "end of India series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "North Korea, Thailand, and India all end at higher HDI index values than they start",
+    "The Asian series shown all move upward over the sequence",
+    "Each Asian country's HDI index increases from first to last table point"
+   ],
+   "visual_evidence_rule": "For North Korea, Thailand, and India, the final plotted HDI value must be visibly above the first plotted HDI value.",
+   "temporal_anchor": "the 'advanced from low to high development levels over time' clause",
+   "reviewer_question": "Should the clip be required to show upward progression for all three Asian table entities, or only for the named India/Thailand examples?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "India's HDI index rises from 0.0401 at its first table point to 0.3999 at its last, an increase of 0.3598 HDI index units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "India",
+     "x": "first table point",
+     "field": "value",
+     "value": 0.0401,
+     "note": "India start"
+    },
+    {
+     "entity": "India",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.3999,
+     "note": "India end"
+    }
+   ],
+   "computation": "0.3999 - 0.0401 = 0.3598",
+   "accepted_routes": [
+    "India goes from 0.0401 to 0.3999",
+    "India gains about 0.36 HDI index units",
+    "India's HDI index ends near 0.40 after starting near 0.04"
+   ],
+   "visual_evidence_rule": "India's series must start visibly at 0.0401 and end visibly at 0.3999, with an overall increase.",
+   "temporal_anchor": "the clause naming India as a country that has gone through a similar process",
+   "reviewer_question": "Is India's exact endpoint/change required, or is a general upward India trend enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "Thailand's HDI index rises from 0.0501 at its first table point to 0.5201 at its last, an increase of 0.4700 HDI index units.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Thailand",
+     "x": "first table point",
+     "field": "value",
+     "value": 0.0501,
+     "note": "Thailand start"
+    },
+    {
+     "entity": "Thailand",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.5201,
+     "note": "Thailand end"
+    }
+   ],
+   "computation": "0.5201 - 0.0501 = 0.4700",
+   "accepted_routes": [
+    "Thailand goes from 0.0501 to 0.5201",
+    "Thailand gains about 0.47 HDI index units",
+    "Thailand's HDI index ends just above 0.5 after starting near 0.05"
+   ],
+   "visual_evidence_rule": "Thailand's series must start visibly at 0.0501 and end visibly at 0.5201, with an overall increase.",
+   "temporal_anchor": "the clause naming Thailand as a country that has gone through a similar process",
+   "reviewer_question": "Should Thailand's endpoint be required alongside India's, or can one Asian example stand in for the pattern?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "North Korea and Thailand share the same first HDI index value (0.0501), but North Korea's last value (0.9400) is 0.4199 higher than Thailand's last value (0.5201).",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "North Korea",
+     "x": "first table point",
+     "field": "value",
+     "value": 0.0501,
+     "note": "North Korea start"
+    },
+    {
+     "entity": "Thailand",
+     "x": "first table point",
+     "field": "value",
+     "value": 0.0501,
+     "note": "Thailand start"
+    },
+    {
+     "entity": "North Korea",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.94,
+     "note": "North Korea end"
+    },
+    {
+     "entity": "Thailand",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.5201,
+     "note": "Thailand end"
+    }
+   ],
+   "computation": "0.9400 - 0.5201 = 0.4199",
+   "accepted_routes": [
+    "North Korea and Thailand start at the same HDI value but North Korea finishes much higher",
+    "North Korea ends 0.4199 HDI index units above Thailand",
+    "Both start at 0.0501; North Korea reaches 0.9400 versus Thailand's 0.5201"
+   ],
+   "visual_evidence_rule": "The North Korea and Thailand series must share the same starting HDI value and show different final HDI values, with North Korea's final point above Thailand's.",
+   "temporal_anchor": "the 'similar process often even faster' comparison clause",
+   "reviewer_question": "Should the clip include North Korea as a contrasting Asian case even though the narration lists other countries?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "At the last table point, the HDI index values are ordered North Korea 0.9400 > Thailand 0.5201 > Portugal 0.4800 > India 0.3999 > DR Congo 0.3501.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "North Korea",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.94,
+     "note": "highest final value"
+    },
+    {
+     "entity": "Thailand",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.5201,
+     "note": "second final value"
+    },
+    {
+     "entity": "Portugal",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.48,
+     "note": "third final value"
+    },
+    {
+     "entity": "India",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.3999,
+     "note": "fourth final value"
+    },
+    {
+     "entity": "DR Congo",
+     "x": "last table point",
+     "field": "value",
+     "value": 0.3501,
+     "note": "lowest final value"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "North Korea ends on top, then Thailand, Portugal, India, and DR Congo",
+    "Final HDI order among table entities is North Korea > Thailand > Portugal > India > DR Congo",
+    "DR Congo ends lowest at 0.3501 and North Korea highest at 0.9400"
+   ],
+   "visual_evidence_rule": "The final HDI values must be visibly ordered: North Korea highest, then Thailand, Portugal, India, and DR Congo lowest.",
+   "temporal_anchor": "the concluding clause about countries advancing to higher development levels",
+   "reviewer_question": "Is the full final ranking required, or only the progression of the named Asian countries?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [],
+ "unsupported_to_avoid": [],
+ "notes": "",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.25
+ },
+ "draft_cost": {
+  "sec": 65.7,
+  "usage": {
+   "prompt_tokens": 5161,
+   "completion_tokens": 16000,
+   "total_tokens": 21161,
+   "prompt_tokens_details": {
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 13821
+   },
+   "prompt_cache_hit_tokens": 640,
+   "prompt_cache_miss_tokens": 4521
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111">Democrats are much more likely than Republicans to say they have received a COVID-19 vaccine</text>
+<text x="640" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">% of U.S. adults who say they have received at least one dose of a vaccine to prevent COVID-19</text>
+<text x="249" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#333">Feb '21</text>
+<text x="816" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#333">June '21</text>
+<text x="1127" y="636.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#333">Aug '21</text>
+<polyline points="249.0,518.0 815.6,310.0 1126.8,266.0" fill="none" stroke="#4db8d9" stroke-width="3.4"/>
+<polyline points="249.0,546.0 815.6,410.0 1126.8,370.0" fill="none" stroke="#d9534f" stroke-width="3.4"/>
+<text x="237.0" y="522.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#4db8d9">23</text>
+<text x="237.0" y="540.0" text-anchor="end" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#d9534f">16</text>
+<text x="1138.8" y="258.0" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#4db8d9">86 Dem/Lean Dem</text>
+<text x="1138.8" y="362.0" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#d9534f">60 Rep/Lean Rep</text>
+<text x="640" y="690" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#777">Source: Surveys of U.S. adults conducted Feb. 16-21, June 14-27, Aug. 23-29, 2021 | PEW RESEARCH CENTER</text>
+</svg>

@@ -1,0 +1,46 @@
+﻿clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type,series
+bar_54,Poorest,Poorest-Corporate and property taxes,134.0,,1.003,0.0416,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,Poorest,Poorest-Payroll taxes,134.0,,10.602,0.4398,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,Poorest,Poorest-Consumption taxes,134.0,,12.499,0.5186,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,2nd,2nd-Income taxes,234.0,,1.003,0.0415,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,2nd,2nd-Corporate and property taxes,234.0,,1.299,0.0537,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,2nd,2nd-Payroll taxes,234.0,,10.897,0.4503,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,2nd,2nd-Consumption taxes,234.0,,10.998,0.4545,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,3rd,3rd-Income taxes,334.0,,3.002,0.1206,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,3rd,3rd-Corporate and property taxes,334.0,,1.501,0.0603,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,3rd,3rd-Payroll taxes,334.0,,10.897,0.4377,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,3rd,3rd-Consumption taxes,334.0,,9.497,0.3814,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,4th,4th-Income taxes,434.0,,3.998,0.1639,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,4th,4th-Corporate and property taxes,434.0,,1.999,0.0819,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,4th,4th-Payroll taxes,434.0,,10.399,0.4262,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,4th,4th-Consumption taxes,434.0,,8.004,0.328,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,5th,5th-Income taxes,534.0,,5.997,0.2343,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,5th,5th-Corporate and property taxes,534.0,,2.201,0.086,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,5th,5th-Payroll taxes,534.0,,10.399,0.4063,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,5th,5th-Consumption taxes,534.0,,7.0,0.2735,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,6th,6th-Income taxes,634.0,,7.0,0.2642,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,6th,6th-Corporate and property taxes,634.0,,2.598,0.098,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,6th,6th-Payroll taxes,634.0,,10.399,0.3924,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,6th,6th-Consumption taxes,634.0,,6.502,0.2454,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,7th,7th-Income taxes,734.0,,8.004,0.2921,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,7th,7th-Corporate and property taxes,734.0,,3.002,0.1096,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,7th,7th-Payroll taxes,734.0,,10.399,0.3795,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,7th,7th-Consumption taxes,734.0,,5.997,0.2188,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,8th,8th-Income taxes,834.0,,10.003,0.3497,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,8th,8th-Corporate and property taxes,834.0,,3.197,0.1118,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,8th,8th-Payroll taxes,834.0,,10.399,0.3636,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,8th,8th-Consumption taxes,834.0,,5.001,0.1749,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,9th,9th-Income taxes,934.0,,12.002,0.3999,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,9th,9th-Corporate and property taxes,934.0,,3.702,0.1234,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,9th,9th-Payroll taxes,934.0,,9.8,0.3266,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,9th,9th-Consumption taxes,934.0,,4.504,0.1501,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,10th,10th-Income taxes,1034.0,,17.998,0.5712,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,10th,10th-Corporate and property taxes,1034.0,,9.201,0.292,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,10th,10th-Estate taxes,1034.0,,0.303,0.0096,%,#7da0c4,svg_geometry,Estate taxes
+bar_54,10th,10th-Payroll taxes,1034.0,,1.003,0.0318,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,10th,10th-Consumption taxes,1034.0,,3.002,0.0953,%,#E2705A,svg_geometry,Consumption taxes
+bar_54,Richest,Richest-Income taxes,1134.0,,10.003,0.4221,%,#5B4B8A,svg_geometry,Income taxes
+bar_54,Richest,Richest-Corporate and property taxes,1134.0,,10.5,0.4431,%,#23527c,svg_geometry,Corporate and property taxes
+bar_54,Richest,Richest-Estate taxes,1134.0,,0.801,0.0338,%,#7da0c4,svg_geometry,Estate taxes
+bar_54,Richest,Richest-Payroll taxes,1134.0,,0.397,0.0167,%,#E9C85B,svg_geometry,Payroll taxes
+bar_54,Richest,Richest-Consumption taxes,1134.0,,1.999,0.0843,%,#E2705A,svg_geometry,Consumption taxes

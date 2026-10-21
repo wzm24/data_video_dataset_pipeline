@@ -1,0 +1,201 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_16",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the rapid growth of the human population over a century.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The human population quadrupled over the depicted period, i.e., grew by a factor of 4.000.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "1",
+     "x": "",
+     "field": "value",
+     "value": 4.0,
+     "note": "Table row for entity 1; interpreted as the quadrupling factor."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "quadrupled",
+    "increased fourfold",
+    "grew by a factor of 4",
+    "4× growth"
+   ],
+   "visual_evidence_rule": "A label or annotation stating 4×/quadrupled, or a visual factor comparison between the two population bars.",
+   "temporal_anchor": "The narration clause 'the human population quadrupled'.",
+   "reviewer_question": "Should the video explicitly state the 4.000 factor (quadrupling) as the core growth claim?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The final human population value is 7.700 (billion, if the unit is implied by context).",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "4",
+     "x": "",
+     "field": "value",
+     "value": 7.7,
+     "note": "Table row for entity 4; interpreted as the ending population."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "7.7 billion",
+    "approximately 7.7",
+    "ending population was 7.700",
+    "final value 7.700"
+   ],
+   "visual_evidence_rule": "The ending bar or endpoint must be labeled or visibly scaled to 7.700.",
+   "temporal_anchor": "The end of the depicted period, after the quadrupling clause.",
+   "reviewer_question": "Should the 7.700 value be treated as the final population endpoint in the video?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The starting human population was about 1.925 (billion), derived from 7.700 divided by 4.000.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.25,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "4",
+     "x": "",
+     "field": "value",
+     "value": 7.7,
+     "note": "Final population."
+    },
+    {
+     "entity": "1",
+     "x": "",
+     "field": "value",
+     "value": 4.0,
+     "note": "Quadrupling factor."
+    }
+   ],
+   "computation": "7.700 / 4.000 = 1.925",
+   "accepted_routes": [
+    "about 1.9",
+    "roughly 1.93",
+    "starting population was 1.925",
+    "initial value near 1.9"
+   ],
+   "visual_evidence_rule": "A starting bar or endpoint must be shown or labeled near 1.925, or the derivation must be stated.",
+   "temporal_anchor": "The beginning of the depicted period, before the quadrupling clause.",
+   "reviewer_question": "Should the derived starting population 1.925 be shown, or is the quadrupling factor alone sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The absolute increase in human population over the period was 5.775, i.e., 7.700 minus the derived starting value 1.925.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.25,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "4",
+     "x": "",
+     "field": "value",
+     "value": 7.7,
+     "note": "Final population."
+    },
+    {
+     "entity": "1",
+     "x": "",
+     "field": "value",
+     "value": 4.0,
+     "note": "Quadrupling factor."
+    }
+   ],
+   "computation": "7.700 - (7.700 / 4.000) = 5.775",
+   "accepted_routes": [
+    "increase of 5.775",
+    "grew by about 5.8",
+    "added 5.775",
+    "absolute change 5.775"
+   ],
+   "visual_evidence_rule": "A difference arrow, bracket, or annotation showing the gap between the starting and ending values.",
+   "temporal_anchor": "Any point after both start and end values are established.",
+   "reviewer_question": "Is the absolute increase 5.775 necessary, or is it optional supporting detail?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "A direct visual comparison of the starting and ending bars (1.925 vs 7.700).",
+  "The ratio 7.700 / 1.925 = 4.000 as an alternative way to show quadrupling.",
+  "A note that the change is a 300% increase, computed as (7.700 - 1.925) / 1.925 = 3.000, where 1.925 = 7.700 / 4.000."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why the population grew.",
+  "Extrapolation beyond the 7.700 endpoint.",
+  "Specific year labels or a 100-year duration as if sourced from the table; the table provides no time values.",
+  "Using 4.000 as the starting population and 7.700 as the final population to compute a 1.925× growth factor; this contradicts the quadrupling claim.",
+  "Treating the 0.0703 relative_value as a population share without a known denominator."
+ ],
+ "notes": "The table's 4.000 is read as the quadrupling factor and 7.700 as the final population; the start value 1.925 is derived. The reviewer should decide whether both endpoints are required or whether the factor alone suffices.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 4,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 0.9
+ },
+ "draft_cost": {
+  "sec": 49.3,
+  "usage": {
+   "prompt_tokens": 617,
+   "completion_tokens": 12094,
+   "total_tokens": 12711,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 10706
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 361
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

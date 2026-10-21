@@ -1,0 +1,143 @@
+{
+ "clip_id": "bar_74",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": 1,
+    "category_count": 4,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "All four entities and their location counts must be visible as labels or value-annotated bars; a viewer should be able to read each count."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:KFC @ global locations",
+    "mark:Starbucks @ global locations",
+    "mark:McDonald's @ global locations",
+    "mark:Subway @ global locations"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "KFC @ global locations",
+      "value": 20000.0
+     },
+     {
+      "mark": "Starbucks @ global locations",
+      "value": 30000.0
+     },
+     {
+      "mark": "McDonald's @ global locations",
+      "value": 37000.0
+     },
+     {
+      "mark": "Subway @ global locations",
+      "value": 43000.0
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must make the full descending order clear, e.g., sorted bars or labels/annotations showing Subway > McDonald's > Starbucks > KFC."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Subway @ global locations",
+    "mark:McDonald's @ global locations"
+   ],
+   "assertion": {
+    "greater": "Subway @ global locations",
+    "lesser": "McDonald's @ global locations",
+    "expected_ratio": 1.1622,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If conveyed, the chart must show paired differences or stepwise annotations between adjacent bars; otherwise this unit is not present."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "comparison",
+   "required_candidate": false,
+   "evidence_type": "pair_ratio",
+   "requires": [
+    "mark:Subway @ global locations",
+    "mark:KFC @ global locations"
+   ],
+   "assertion": {
+    "greater": "Subway @ global locations",
+    "lesser": "KFC @ global locations",
+    "expected_ratio": 2.15,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "If conveyed, the chart must show both Subway and KFC values or an annotation with their difference/ratio."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "share_or_composition",
+   "required_candidate": false,
+   "evidence_type": "sector_or_segment_share",
+   "requires": [
+    "segment:KFC @ global locations",
+    "segment:Starbucks @ global locations",
+    "segment:McDonald's @ global locations",
+    "segment:Subway @ global locations"
+   ],
+   "assertion": {
+    "segment": "KFC @ global locations",
+    "expected_share": 0.1538,
+    "total_of": "unknown",
+    "total": 130000.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "If conveyed, the chart must show the 130,000 total and either a stacked share bar or percentage labels for each chain."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "clip_id": "donut_16",
+ "intent_en": "To demonstrate that public support for marijuana legalization exceeds opposition among Americans.",
+ "previous_intent": "To illustrate the rapid shift in American public opinion where support for marijuana legalization is now outpacing opposition.",
+ "narration_support": "Support for marijuana legalization is rapidly outpacing opposition.",
+ "chart_support": "A radial chart with a US map background showing a longer green arc (representing support) compared to a shorter pink arc (representing opposition), visually indicating a majority favoring legalization.",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": true,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly states that support (52%) is outpacing opposition (45%), and the chart visualizes this majority with a larger green arc over the pink arc within a US map context.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": true
+ },
+ "needs_video_escalation": false
+}

@@ -1,0 +1,9 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+bar_160,FIN,fin,282.6,,,0.6533,relative,#C47F6A,relative_only
+bar_160,DEU,deu,407.6,,,0.6667,relative,#C47F6A,relative_only
+bar_160,ISR,isr,532.5,,,0.6400,relative,#C47F6A,relative_only
+bar_160,AUS,aus,657.5,,,0.6267,relative,#C47F6A,relative_only
+bar_160,UK,uk,782.5,,,0.6133,relative,#C47F6A,relative_only
+bar_160,NZL,nzl,907.5,,,0.5867,relative,#C47F6A,relative_only
+bar_160,OECD,oecd,1032.5,,,0.5867,relative,#C47F6A,relative_only
+bar_160,USA,usa,1157.5,,,0.4333,relative,#C47F6A,relative_only

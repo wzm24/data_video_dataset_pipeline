@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f0f0f0"/>
+<g id="chart-plot" data-role="plot">
+<line data-role="axis" x1="120" y1="600" x2="1220" y2="600" stroke="#888888" stroke-width="3"/>
+<line data-role="axis" x1="120" y1="140" x2="120" y2="600" stroke="#888888" stroke-width="3"/>
+<g id="entity-item" data-role="entity" data-entity-id="item" data-label="" data-series="true">
+<polyline id="item-polyline" data-role="polyline" data-entity-id="item" points="120.0,176.8 211.7,232.0 303.3,287.2 395.0,370.0 486.7,457.4 578.3,457.4 670.0,457.4 761.7,471.2 853.3,480.4 945.0,448.2 1036.7,411.4 1128.3,388.4 1220.0,365.4" fill="none" stroke="#d96c6c" stroke-width="6" data-animation-property="points"/>
+<circle data-role="point-mark" data-entity-id="item" cx="120.0" cy="176.8" r="6" fill="#d96c6c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="303.3" cy="287.2" r="6" fill="#d96c6c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="486.7" cy="457.4" r="6" fill="#d96c6c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="670.0" cy="457.4" r="6" fill="#d96c6c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="853.3" cy="480.4" r="6" fill="#d96c6c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1036.7" cy="411.4" r="6" fill="#d96c6c" stroke="#ffffff" stroke-width="2"/>
+<circle data-role="point-mark" data-entity-id="item" cx="1220.0" cy="365.4" r="6" fill="#d96c6c" stroke="#ffffff" stroke-width="2"/>
+</g>
+<text data-role="x-axis-label" x="120.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">1950</text>
+<text data-role="x-axis-label" x="486.7" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">1970</text>
+<text data-role="x-axis-label" x="853.3" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">1990</text>
+<text data-role="x-axis-label" x="1220.0" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000000">2010</text>
+</g>
+</svg>

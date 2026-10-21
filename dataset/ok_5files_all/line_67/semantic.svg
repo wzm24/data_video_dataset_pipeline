@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect width="1280" height="720" fill="#2b2f3d"/>
+<text x="640" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#ffffff">Yield curve</text>
+<rect x="40" y="28" width="160" height="30" fill="#c8102e"/>
+<text x="120" y="49" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#ffffff">The Economist</text>
+<text x="640" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">Time</text>
+<text x="230" y="662" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">3m</text>
+<text x="1090" y="662" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">10y</text>
+<text x="1170" y="390" text-anchor="middle" transform="rotate(90 1170 390)" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Interest rate</text>
+<line x1="240" y1="170.0" x2="1080" y2="170.0" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+<line x1="240" y1="282.5" x2="1080" y2="282.5" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+<line x1="240" y1="395.0" x2="1080" y2="395.0" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+<line x1="240" y1="507.5" x2="1080" y2="507.5" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+<line x1="240" y1="620.0" x2="1080" y2="620.0" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+<path d="M 240 500 Q 660 330 1080 240" fill="none" stroke="#ffffff" stroke-width="3.5"/>
+<circle cx="240" cy="500" r="8" fill="#ffffff"/>
+<circle cx="1080" cy="240" r="8" fill="#ffffff"/>
+<path d="M 240 330 Q 660 390 1080 540" fill="none" stroke="#e60000" stroke-width="3.5"/>
+<circle cx="240" cy="330" r="8" fill="#e60000"/>
+<circle cx="1080" cy="540" r="8" fill="#e60000"/>
+<text x="1090" y="222" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">Normal</text>
+<text x="1090" y="562" font-family="Arial, sans-serif" font-size="20" fill="#e60000">Inverted</text>
+</svg>

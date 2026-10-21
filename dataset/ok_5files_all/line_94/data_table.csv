@@ -1,0 +1,7 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+line_94,Dem/Lean Dem,dem,,,23,0.23,%,,printed
+line_94,Dem/Lean Dem,dem,,,75,0.75,%,,estimated
+line_94,Dem/Lean Dem,dem,,,86,0.86,%,,printed
+line_94,Rep/Lean Rep,rep,,,16,0.16,%,,printed
+line_94,Rep/Lean Rep,rep,,,50,0.5,%,,estimated
+line_94,Rep/Lean Rep,rep,,,60,0.6,%,,printed

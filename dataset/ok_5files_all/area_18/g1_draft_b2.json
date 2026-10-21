@@ -1,0 +1,292 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "area_18",
+ "family": "area",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the relative size of the Moon compared to other planets in the solar system.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The Moon's diameter is 3,474 km.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "MOON",
+     "x": "0",
+     "field": "value",
+     "value": 3474,
+     "note": "Moon diameter from table."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The Moon is 3,474 km across.",
+    "Moon diameter: 3,474 km.",
+    "The Moon measures about 3,474 kilometers in diameter."
+   ],
+   "visual_evidence_rule": "Moon must be labeled or scaled to its 3,474 km diameter; if a size scale is used, the Moon's size encoding must correspond to 3,474 km.",
+   "temporal_anchor": "the 'So how big is the moon?' opening clause",
+   "reviewer_question": "Must the video state the Moon's absolute diameter, or is relative scale sufficient?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The Moon is smaller in diameter than every listed planet: Mars, Earth, Neptune, and Jupiter.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "MOON",
+     "x": "0",
+     "field": "value",
+     "value": 3474,
+     "note": "Moon diameter."
+    },
+    {
+     "entity": "MARS",
+     "x": "0",
+     "field": "value",
+     "value": 6779,
+     "note": "Mars diameter."
+    },
+    {
+     "entity": "EARTH",
+     "x": "0",
+     "field": "value",
+     "value": 12742,
+     "note": "Earth diameter."
+    },
+    {
+     "entity": "NEPTUNE",
+     "x": "0",
+     "field": "value",
+     "value": 49528,
+     "note": "Neptune diameter."
+    },
+    {
+     "entity": "JUPITER",
+     "x": "0",
+     "field": "value",
+     "value": 142984,
+     "note": "Jupiter diameter."
+    }
+   ],
+   "computation": "3474 < 6779 < 12742 < 49528 < 142984",
+   "accepted_routes": [
+    "The Moon is smaller than Mars, Earth, Neptune, and Jupiter.",
+    "Every planet shown is larger than the Moon.",
+    "The Moon is the smallest body in this comparison."
+   ],
+   "visual_evidence_rule": "Moon's circle/bar must appear smaller than the corresponding shapes/bars for Mars, Earth, Neptune, and Jupiter.",
+   "temporal_anchor": "the 'it kind of depends how you define big' comparison beat",
+   "reviewer_question": "Must the video explicitly compare the Moon to all four listed planets, or is a general smaller-than-planets statement enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "By diameter, the ranking among the compared bodies is Jupiter > Neptune > Earth > Mars > Moon.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "JUPITER",
+     "x": "0",
+     "field": "value",
+     "value": 142984,
+     "note": "Largest listed value."
+    },
+    {
+     "entity": "NEPTUNE",
+     "x": "0",
+     "field": "value",
+     "value": 49528,
+     "note": "Second-largest listed value."
+    },
+    {
+     "entity": "EARTH",
+     "x": "0",
+     "field": "value",
+     "value": 12742,
+     "note": "Third-largest listed value."
+    },
+    {
+     "entity": "MARS",
+     "x": "0",
+     "field": "value",
+     "value": 6779,
+     "note": "Fourth-largest listed value."
+    },
+    {
+     "entity": "MOON",
+     "x": "0",
+     "field": "value",
+     "value": 3474,
+     "note": "Smallest listed value."
+    }
+   ],
+   "computation": "sort descending by value: 142984 > 49528 > 12742 > 6779 > 3474",
+   "accepted_routes": [
+    "Largest to smallest: Jupiter, Neptune, Earth, Mars, Moon.",
+    "Jupiter is largest, then Neptune, Earth, Mars, and the Moon is smallest.",
+    "Jupiter outranks Neptune, which outranks Earth, Mars, and the Moon."
+   ],
+   "visual_evidence_rule": "The chart must show the five bodies in descending size order or a scale that preserves Jupiter > Neptune > Earth > Mars > Moon.",
+   "temporal_anchor": "the second narration clause introducing the comparison",
+   "reviewer_question": "Is the full five-body diameter ordering required, or only the Moon's position as smallest?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The Moon's diameter is about 27% of Earth's diameter, or Earth is about 3.67 times wider than the Moon.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "MOON",
+     "x": "0",
+     "field": "value",
+     "value": 3474,
+     "note": "Moon diameter."
+    },
+    {
+     "entity": "EARTH",
+     "x": "0",
+     "field": "value",
+     "value": 12742,
+     "note": "Earth diameter."
+    }
+   ],
+   "computation": "3474 / 12742 = 0.27264; 12742 / 3474 = 3.668",
+   "accepted_routes": [
+    "The Moon's diameter is about 27% of Earth's.",
+    "Earth's diameter is about 3.67 times the Moon's.",
+    "The Moon is roughly one-quarter Earth's width in diameter."
+   ],
+   "visual_evidence_rule": "Earth and Moon must be shown side-by-side or otherwise visually compared, with a ratio/percent label or a scale showing Moon ≈ 27% of Earth's diameter.",
+   "temporal_anchor": "the 'depends how you define big' clause, if Earth is used as the reference",
+   "reviewer_question": "Should the video include the Moon-Earth diameter ratio, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The Moon's diameter is about 2.4% of Jupiter's diameter, or Jupiter is about 41 times wider than the Moon.",
+   "unit_kind": "share_or_composition",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "MOON",
+     "x": "0",
+     "field": "value",
+     "value": 3474,
+     "note": "Moon diameter."
+    },
+    {
+     "entity": "JUPITER",
+     "x": "0",
+     "field": "value",
+     "value": 142984,
+     "note": "Jupiter diameter."
+    },
+    {
+     "entity": "MOON",
+     "x": "0",
+     "field": "relative_value",
+     "value": 0.0243,
+     "note": "Moon's table relative_value against Jupiter."
+    }
+   ],
+   "computation": "3474 / 142984 = 0.02430; 142984 / 3474 = 41.16; 1 / 0.02430 = 41.15",
+   "accepted_routes": [
+    "The Moon's diameter is about 2.4% of Jupiter's.",
+    "Jupiter is about 41 times wider than the Moon.",
+    "The Moon is only about 0.024 of Jupiter's diameter."
+   ],
+   "visual_evidence_rule": "Jupiter and Moon must be shown side-by-side or on a shared scale with a ratio/percent label or a scale showing Moon ≈ 2.4% of Jupiter's diameter.",
+   "temporal_anchor": "the 'depends how you define big' clause, if Jupiter is used as the reference",
+   "reviewer_question": "Is the Moon-Jupiter ratio required because the table's relative_value is normalized to Jupiter, or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "Moon's diameter is about 51% of Mars's diameter (3474 / 6779 = 0.5125).",
+  "Moon's diameter is about 7.0% of Neptune's diameter (3474 / 49528 = 0.0701).",
+  "Neptune's diameter is about 3.89 times Earth's diameter (49528 / 12742 = 3.887)."
+ ],
+ "unsupported_to_avoid": [
+  "Volume-based size claims unless explicitly derived from cubed diameters and labeled as volume; the table unit is km_diameter.",
+  "Comparisons to planets not in the table, such as Mercury, Venus, Saturn, Uranus, or the Sun.",
+  "Gravity, mass, density, or tidal claims not present in the table.",
+  "Causal statements such as why the Moon is small or how it formed.",
+  "Stating the Moon is a planet rather than a natural satellite."
+ ],
+ "notes": "The strongest required content is Moon's absolute diameter and its smallest-position comparison/order against the four listed planets. Earth and Jupiter ratio units are derived and optional unless the reviewer treats the table's Jupiter-normalized relative_value as mandatory.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.14
+ },
+ "draft_cost": {
+  "sec": 43.7,
+  "usage": {
+   "prompt_tokens": 690,
+   "completion_tokens": 10260,
+   "total_tokens": 10950,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8097
+   },
+   "prompt_cache_hit_tokens": 256,
+   "prompt_cache_miss_tokens": 434
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

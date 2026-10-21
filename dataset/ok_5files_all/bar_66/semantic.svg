@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
+<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#222222"/>
+<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">CORPORATE TAX RATE</text>
+<g id="chart-plot" data-role="plot">
+<g id="entity-corporate-tax-rate" data-role="entity" data-entity-id="corporate-tax-rate" data-label="Corporate tax rate">
+<rect id="corporate-tax-rate-bar" data-role="bar" data-entity-id="corporate-tax-rate" data-value="21" x="250.0" y="320.0" width="472.5" height="60.0" fill="#3C3B6E" data-animation-property="width" data-anchor="left" data-animation-axis="x" data-orientation="horizontal"/>
+<rect x="250.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="282.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="314.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="346.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="378.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="410.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="442.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="474.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="506.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="538.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="570.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="602.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="634.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="666.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/><rect x="698.0" y="320.0" width="16.0" height="60.0" fill="#ffffff" opacity="0.25"/>
+<text id="corporate-tax-rate-value-label" data-role="value-label" data-entity-id="corporate-tax-rate" x="632.5" y="362.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#f2f2f2">21.0%</text>
+</g>
+</g>
+</svg>

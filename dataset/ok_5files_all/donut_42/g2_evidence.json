@@ -1,0 +1,98 @@
+{
+ "clip_id": "donut_42",
+ "family": "donut",
+ "chart_form": "donut/partial_ring",
+ "measure": "sector_angle",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "required_candidate": true,
+   "evidence_type": "pair_ratio",
+   "requires": [],
+   "assertion": {
+    "greater": null,
+    "lesser": "more likely to be introverted @ more-likely-to-be-introverted",
+    "expected_ratio": null,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "route_note": "geometry requires the two marks to share a zero baseline; a truncated axis fails geometry but may still pass by label",
+   "needs_review": false,
+   "visual_evidence_rule_original": "A comparison cue must show cat owners as higher/more likely on introversion, not lower or equal."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:more likely to be introverted @ more-likely-to-be-introverted"
+   ],
+   "assertion": {
+    "mark": "more likely to be introverted @ more-likely-to-be-introverted",
+    "field": "value",
+    "expected": 11.0,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The chart must display the 11% value or its 0.11 decimal equivalent as the magnitude of the effect."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "required_candidate": true,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:more likely to be introverted @ more-likely-to-be-introverted",
+    "mark:more likely to be introverted @ more-likely-to-be-introverted"
+   ],
+   "assertion": {
+    "low": "more likely to be introverted @ more-likely-to-be-introverted",
+    "low_value": 0.11,
+    "high": "more likely to be introverted @ more-likely-to-be-introverted",
+    "high_value": 11.0,
+    "delta": 10.89,
+    "ratio": 100.0,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The label must include 'more likely'/'higher likelihood' or another explicit relative-change cue; it must not label the 11% as a share of cat owners."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "identity_or_series",
+   "required_candidate": true,
+   "evidence_type": "series_identity",
+   "requires": [
+    "legend or series names visible"
+   ],
+   "assertion": {
+    "series_count": null,
+    "category_count": null,
+    "tolerance": 0
+   },
+   "routes": [
+    "structure"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Cat-related labeling and introversion labeling must appear or be unambiguously implied."
+  }
+ ]
+}

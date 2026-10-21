@@ -1,0 +1,22 @@
+{
+ "clip_id": "line_38",
+ "family": "line",
+ "sub_type": "single_line",
+ "orientation": "cartesian",
+ "series_count": 1,
+ "panel_count": 1,
+ "has_markers": true,
+ "has_dashed_segment": false,
+ "has_axis": true,
+ "has_legend": null,
+ "has_value_labels": null,
+ "text_count": 4,
+ "row_count": 13,
+ "derived_from": [
+  "data_table",
+  "semantic.svg"
+ ],
+ "confidence": "high",
+ "needs_review": false,
+ "time_behavior": "snapshot"
+}

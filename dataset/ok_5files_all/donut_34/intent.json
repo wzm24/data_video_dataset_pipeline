@@ -1,0 +1,28 @@
+{
+ "clip_id": "donut_34",
+ "intent_en": "To justify the proposal for taxing capital gains by demonstrating that a large majority of Americans believe wealthy individuals are not paying their fair share of taxes.",
+ "previous_intent": "To illustrate that a large majority of Americans are concerned about wealthy individuals not paying their fair share of taxes.",
+ "narration_support": "Most Americans are bothered that wealthy people don't pay their fair share",
+ "chart_support": "Donut chart showing the proportion of Americans bothered that some wealthy people do not pay their fair share of taxes",
+ "supported_by_narration": true,
+ "supported_by_chart": true,
+ "dual_source_verified": true,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "contains_answer_values": false,
+ "confidence": 0.95,
+ "evidence_note": "The narration explicitly links public concern about wealth taxation to the policy proposal of capital gains taxes, which is visually supported by the chart showing a large majority of Americans hold this view.",
+ "gate_failed": "",
+ "intent_official": "en",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "regen_batch": "2026-09-23b",
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false
+}

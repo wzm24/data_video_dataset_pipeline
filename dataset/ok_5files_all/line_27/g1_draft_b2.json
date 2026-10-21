@@ -1,0 +1,228 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "clip_id": "line_27",
+ "family": "line",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To illustrate the dramatic increase in the share of profits that major American companies allocate to stock buybacks from 1982 to 2018.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The starting relative level of the buyback-share series is very low at about 0.02, far below later values.",
+   "unit_kind": "key_value_endpoint",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Share spent on buybacks",
+     "x": "first observation",
+     "field": "relative_value",
+     "value": 0.02,
+     "note": "first row in the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The opening value is about 0.02 on the relative scale.",
+    "The series starts at a very low relative level, near the bottom of the observed range.",
+    "The first point is far below the later peak and final values."
+   ],
+   "visual_evidence_rule": "The first marked value must be visibly low compared with the later rise and peak.",
+   "temporal_anchor": "opening narration clause",
+   "reviewer_question": "Is explicitly establishing the low starting level required, or is the net increase alone enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The series has a large net increase from its first relative value (0.02) to its final relative value (0.72): a gain of 0.70 relative points, and the final value is about 36 times the initial value.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Share spent on buybacks",
+     "x": "first observation",
+     "field": "relative_value",
+     "value": 0.02,
+     "note": "start of series"
+    },
+    {
+     "entity": "Share spent on buybacks",
+     "x": "last observation",
+     "field": "relative_value",
+     "value": 0.72,
+     "note": "end of series"
+    }
+   ],
+   "computation": "(0.72 - 0.02) = 0.70 relative points; (0.72 / 0.02) = 36x",
+   "accepted_routes": [
+    "The ending relative value is much higher than the starting relative value.",
+    "There is a large net increase from about 0.02 to about 0.72.",
+    "The final value is roughly 36 times the initial value."
+   ],
+   "visual_evidence_rule": "A viewer must be able to compare the first and last relative values and see a large net upward change.",
+   "temporal_anchor": "opening-to-today narration span",
+   "reviewer_question": "Is the start-to-end net increase the mandatory core of the clip?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The series reaches its highest relative value, 0.96, at a late point before the final observation, making that peak the maximum of the series.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "Share spent on buybacks",
+     "x": "late observation",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "highest value in the table"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The maximum relative value in the series is 0.96.",
+    "The series peaks near the late part of the period before declining.",
+    "The highest point is well above the final value."
+   ],
+   "visual_evidence_rule": "The peak at 0.96 must be visible as the highest point of the series.",
+   "temporal_anchor": "late-period narration clause",
+   "reviewer_question": "Must the clip explicitly show the peak, or only the early-to-late increase?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "The final relative value (0.72) is below the peak (0.96) but still about three-quarters as large as the peak (0.72 / 0.96 = 0.75), and much higher than the start.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Share spent on buybacks",
+     "x": "late observation",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "peak"
+    },
+    {
+     "entity": "Share spent on buybacks",
+     "x": "last observation",
+     "field": "relative_value",
+     "value": 0.72,
+     "note": "final value"
+    }
+   ],
+   "computation": "(0.72 / 0.96) = 0.75; final is about three-quarters of the peak",
+   "accepted_routes": [
+    "The final value is lower than the peak but still roughly three-quarters of the peak.",
+    "The ending level is below the maximum but remains high relative to the start.",
+    "After the peak, the final value is still substantial compared with the peak."
+   ],
+   "visual_evidence_rule": "The final point must be visibly lower than the peak while still high relative to the early values.",
+   "temporal_anchor": "today narration clause",
+   "reviewer_question": "Is the final-vs-peak comparison required, or is it optional context?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The series is not a smooth monotonic rise: it fluctuates and includes a notable mid-series dip to 0.10 before later rising again.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "Share spent on buybacks",
+     "x": "mid-series observation",
+     "field": "relative_value",
+     "value": 0.1,
+     "note": "notable dip within the series"
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "The line rises unevenly and has several up-and-down movements.",
+    "There is a visible mid-period dip to about 0.10.",
+    "The overall increase is not a straight or uninterrupted climb."
+   ],
+   "visual_evidence_rule": "The series must visibly show fluctuations, including the dip to 0.10, rather than only a straight upward trend.",
+   "temporal_anchor": "overall narration span",
+   "reviewer_question": "Must the clip preserve the non-monotonic volatility, or may it simplify to a cleaner upward trend?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The entity is the share spent on buybacks for major American companies.",
+  "The start-to-end increase is large even though the final value is below the peak.",
+  "The series has a late peak followed by a decline and partial recovery."
+ ],
+ "unsupported_to_avoid": [
+  "Do not state percentages, dollar amounts, or counts from the narration; the table unit is relative_value.",
+  "Do not claim that buybacks caused a recession or any other causal relationship.",
+  "Do not extrapolate beyond the final observation or invent years/values not present in the table.",
+  "Do not present the series as a perfectly smooth monotonic rise."
+ ],
+ "notes": "Table is relative_only, so all units are expressed in relative terms; no absolute percentages or counts should be used. The required core is the low start, the large net increase, and the peak at 0.96, with final-vs-peak and volatility as optional-but-valid refinements.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 40.6,
+  "usage": {
+   "prompt_tokens": 2392,
+   "completion_tokens": 10058,
+   "total_tokens": 12450,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 8366
+   },
+   "prompt_cache_hit_tokens": 512,
+   "prompt_cache_miss_tokens": 1880
+  }
+ },
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}

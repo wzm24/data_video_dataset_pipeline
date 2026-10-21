@@ -1,0 +1,156 @@
+{
+ "clip_id": "bar_140",
+ "family": "bar",
+ "chart_form": "bar/simple",
+ "measure": "mark_length",
+ "policy": {
+  "ratio_tolerance": 0.05,
+  "value_tolerance": 0.02,
+  "measured_from": "data_table + chart_spec (not from our svg)"
+ },
+ "evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1980 @ 1980",
+    "mark:2019 @ 2019"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1980 @ 1980",
+      "value": 0.4314
+     },
+     {
+      "mark": "2019 @ 2019",
+      "value": 0.5972
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": true,
+   "visual_evidence_rule_original": "Both the 1980 and 2019 relative-value marks must be visible, and the 2019 mark must be higher than the 1980 mark."
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "required_candidate": true,
+   "evidence_type": "monotonic_order",
+   "requires": [
+    "mark:1980 @ 1980",
+    "mark:1990 @ 1990",
+    "mark:2000 @ 2000",
+    "mark:2010 @ 2010",
+    "mark:2019 @ 2019"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1980 @ 1980",
+      "value": 0.4314
+     },
+     {
+      "mark": "1990 @ 1990",
+      "value": 0.4788
+     },
+     {
+      "mark": "2000 @ 2000",
+      "value": 0.5024
+     },
+     {
+      "mark": "2010 @ 2010",
+      "value": 0.5546
+     },
+     {
+      "mark": "2019 @ 2019",
+      "value": 0.5972
+     }
+    ],
+    "direction": "increasing",
+    "strict": true,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "Consecutive benchmark-year relative-value marks must appear in increasing order, with no downward step between them."
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "required_candidate": true,
+   "evidence_type": "value_at_mark",
+   "requires": [
+    "mark:1980 @ 1980"
+   ],
+   "assertion": {
+    "mark": "1980 @ 1980",
+    "field": "value",
+    "expected": 0.4314,
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The clip must display or state the two endpoint relative values, and their 1980/2019 timing must be clear."
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "change_or_rate",
+   "required_candidate": false,
+   "evidence_type": "endpoint_change",
+   "requires": [
+    "mark:1980 @ 1980",
+    "mark:2019 @ 2019"
+   ],
+   "assertion": {
+    "low": "1980 @ 1980",
+    "low_value": 0.4314,
+    "high": "2019 @ 2019",
+    "high_value": 0.5972,
+    "delta": 0.1658,
+    "ratio": 1.3843,
+    "tolerance": 0.05
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The difference between the 2019 and 1980 relative-value marks must be shown or stated as an increase."
+  },
+  {
+   "unit_id": "U5",
+   "unit_kind": "key_value_extreme",
+   "required_candidate": false,
+   "evidence_type": "extreme_mark",
+   "requires": [
+    "all marks of the compared set visible"
+   ],
+   "assertion": {
+    "mark": "1980 @ 1980",
+    "extreme": "min",
+    "expected": 0.4314,
+    "compared_set": "whole table",
+    "tolerance": 0.02
+   },
+   "routes": [
+    "geometry",
+    "label"
+   ],
+   "needs_review": false,
+   "visual_evidence_rule_original": "The 2019 relative-value mark must be visibly the highest and the 1980 mark visibly the lowest among the five benchmark years."
+  }
+ ]
+}

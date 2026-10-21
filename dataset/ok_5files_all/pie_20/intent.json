@@ -1,0 +1,26 @@
+{
+ "intent_en": "To illustrate that a majority of Uber drivers earn less than minimum wage, while most also have other primary sources of income.",
+ "supported_by_chart": true,
+ "contains_answer_values": false,
+ "multi_chart_in_clip": false,
+ "narration_sparse": false,
+ "confidence": 0.9,
+ "notes": "The chart visualizes the percentage of drivers earning below minimum wage and those with other income, supporting the narration's points about low wages and supplementary employment.",
+ "clip_id": "pie_20",
+ "intent_source": [
+  "narration",
+  "keyframe"
+ ],
+ "draft_by": "agent:qwen3.7-flash-2026-07-15",
+ "confirmed_by": null,
+ "leak_check": {
+  "contains_answer_values": false
+ },
+ "needs_video_escalation": false,
+ "intent_official": "en",
+ "narration_support": "less than minimum wage for 54 % of drivers",
+ "chart_support": "Two pie charts labeled '<MIN WAGE' and 'OTHER INCOME' show the pink segment occupying more than 50% of the circle in both cases, visually representing the majority (54% and ~60%) respectively.",
+ "supported_by_narration": true,
+ "evidence_note": "",
+ "dual_source_verified": true
+}

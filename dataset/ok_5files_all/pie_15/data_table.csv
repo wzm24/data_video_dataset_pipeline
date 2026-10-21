@@ -1,0 +1,5 @@
+clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
+pie_15,Carbon dioxide,slice-1,0,,76,0.7600,%,#e84d4d,printed
+pie_15,Methane,slice-2,1,,16,0.1600,%,#8cb3c4,printed
+pie_15,Nitrous oxide,slice-3,2,,6,0.0600,%,#5b7fa3,printed
+pie_15,Other,slice-4,3,,2,0.0200,%,#1f6b7a,printed

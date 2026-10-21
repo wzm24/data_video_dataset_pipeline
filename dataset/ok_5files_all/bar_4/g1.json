@@ -1,0 +1,51 @@
+{
+ "clip_id": "bar_4",
+ "version": "g1_r_u_v1",
+ "intent": "Show how Africa's childhood mortality changed from 1950 to 2017, and convey that Africa made considerable progress in reducing it over time.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How did Africa's childhood mortality change from 1950 to 2017?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Africa"
+    ],
+    "measure": "childhood mortality rate",
+    "time": "1950-2017"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Africa's childhood mortality fell from 32.0% in 1950 to 7.5% in 2017 - a 24.5-percentage-point (77%) reduction, showing considerable progress.",
+   "accept": [
+    "32.0% in 1950 and 7.5% in 2017",
+    "a 24.5 percentage-point drop",
+    "a 77% relative reduction",
+    "an animated bar falling from 32.0 to 7.5"
+   ],
+   "reject": [
+    "reversed direction (7.5 in 1950 to 32.0 in 2017)",
+    "saying 'progress' without any quantities",
+    "attributing the change to another country"
+   ],
+   "evidence": "The bar animates from 32.0% to 7.5% (or both endpoints and the drop are shown)."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Intermediate values 30.3% (1954), 16.5% (1992), 9.1% (2012)"
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21"
+}

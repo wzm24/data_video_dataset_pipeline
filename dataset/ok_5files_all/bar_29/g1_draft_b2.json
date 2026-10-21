@@ -1,0 +1,287 @@
+{
+ "contract_version": "g1-draft-0.1",
+ "clip_id": "bar_29",
+ "family": "bar",
+ "status": "agent_draft_pending_human_review",
+ "drafted_by": "deepseek-flash",
+ "draft_prompt_version": "2026-10-01",
+ "intent": "To demonstrate that the monthly price of the Advair asthma inhaler is significantly higher in the United States compared to other developed nations.",
+ "units": [
+  {
+   "id": "U1",
+   "meaning": "The United States has the highest monthly Advair price among the seven listed countries, at 318.863 table-value units.",
+   "unit_kind": "key_value_extreme",
+   "weight_template": 0.22,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 318.863,
+     "note": "Highest table value."
+    },
+    {
+     "entity": "Canada",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 82.225,
+     "note": "Highest non-U.S. value, used to show the gap."
+    }
+   ],
+   "computation": "none",
+   "accepted_routes": [
+    "U.S. price is 318.863, the highest of the seven countries.",
+    "The U.S. bar tops the chart at about 318.9.",
+    "United States is the maximum at 318.863, with all other countries lower."
+   ],
+   "visual_evidence_rule": "The U.S. bar must be visibly tallest and labeled or annotated with 318.863 or approximately 318.9; bars for other countries must be present for comparison.",
+   "temporal_anchor": "The narration clause stating Advair is more expensive in the U.S., or its visual equivalent.",
+   "reviewer_question": "Is the exact U.S. value 318.863 required, or is showing the U.S. as the highest enough?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U2",
+   "meaning": "The U.S. price is about 3.9 times Canada's price, where Canada is the highest-priced non-U.S. country in the table.",
+   "unit_kind": "comparison",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 318.863,
+     "note": "Numerator."
+    },
+    {
+     "entity": "Canada",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 82.225,
+     "note": "Highest non-U.S. value and denominator."
+    }
+   ],
+   "computation": "318.863 / 82.225 = 3.877...",
+   "accepted_routes": [
+    "The U.S. is almost four times Canada, the highest other country.",
+    "U.S. price is about 3.9x Canada's 82.225.",
+    "Canada is the most expensive non-U.S. country, but the U.S. is 236.638 higher (318.863 - 82.225)."
+   ],
+   "visual_evidence_rule": "Both the U.S. and Canada bars must be visible, and the comparison or ratio to Canada must be shown or stated.",
+   "temporal_anchor": "The comparison clause contrasting the U.S. with other developed nations.",
+   "reviewer_question": "Should the benchmark require a comparison to Canada specifically as the highest non-U.S. comparator, or is any non-U.S. comparator acceptable?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U3",
+   "meaning": "The U.S. price is about six times the average of the other six listed countries.",
+   "unit_kind": "change_or_rate",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 318.863,
+     "note": "Numerator."
+    },
+    {
+     "entity": "Other six countries (sum)",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 317.201,
+     "note": "42.316 + 47.821 + 49.885 + 36.812 + 58.142 + 82.225."
+    }
+   ],
+   "computation": "318.863 / ((42.316 + 47.821 + 49.885 + 36.812 + 58.142 + 82.225) / 6) = 318.863 / 52.866833... = 6.031...",
+   "accepted_routes": [
+    "The U.S. price is about 6 times the mean of the other six countries.",
+    "Compared with the non-U.S. average of 52.867, the U.S. is about 6.03x higher.",
+    "U.S. price is just over six times the non-U.S. average."
+   ],
+   "visual_evidence_rule": "The U.S. bar and either all six other bars or an average line labeled approximately 52.867 must be visible, with the approximately 6x comparison indicated.",
+   "temporal_anchor": "The narration clause emphasizing that the U.S. is much more expensive than other developed nations.",
+   "reviewer_question": "Is the average-of-other-countries comparison required as evidence of 'significantly higher,' or is it optional?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U4",
+   "meaning": "Among the seven listed countries, the descending price order is United States > Canada > United Kingdom > Germany > France > Australia > Norway.",
+   "unit_kind": "trend_or_order",
+   "weight_template": 0.25,
+   "weight_actual": 0.2,
+   "required_candidate": false,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 318.863,
+     "note": "Rank 1."
+    },
+    {
+     "entity": "Canada",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 82.225,
+     "note": "Rank 2."
+    },
+    {
+     "entity": "United Kingdom",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 58.142,
+     "note": "Rank 3."
+    },
+    {
+     "entity": "Germany",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 49.885,
+     "note": "Rank 4."
+    },
+    {
+     "entity": "France",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 47.821,
+     "note": "Rank 5."
+    },
+    {
+     "entity": "Australia",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 42.316,
+     "note": "Rank 6."
+    },
+    {
+     "entity": "Norway",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 36.812,
+     "note": "Rank 7."
+    }
+   ],
+   "computation": "Sort descending by value: 318.863 (US), 82.225 (Canada), 58.142 (UK), 49.885 (Germany), 47.821 (France), 42.316 (Australia), 36.812 (Norway).",
+   "accepted_routes": [
+    "US is first, followed by Canada, the UK, Germany, France, Australia, and Norway.",
+    "The non-U.S. order is Canada > UK > Germany > France > Australia > Norway.",
+    "The U.S. is top and Norway is bottom, with Canada second overall."
+   ],
+   "visual_evidence_rule": "Bars must be ordered or clearly labeled so the full descending ranking can be read.",
+   "temporal_anchor": "Any narration segment listing or visually sequencing the countries.",
+   "reviewer_question": "Should the benchmark require the full seven-country order, or only the U.S.-is-highest and Canada-is-next facts?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  },
+  {
+   "id": "U5",
+   "meaning": "The U.S. is the only country above 300 table-value units, while every other listed country is below 100.",
+   "unit_kind": "threshold_or_crossing",
+   "weight_template": 0.2,
+   "weight_actual": 0.2,
+   "required_candidate": true,
+   "basis": [
+    {
+     "entity": "United States",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 318.863,
+     "note": "Above 300."
+    },
+    {
+     "entity": "Canada",
+     "x": "Advair monthly price",
+     "field": "value",
+     "value": 82.225,
+     "note": "Highest non-U.S. value; below 100."
+    }
+   ],
+   "computation": "318.863 > 300; max non-US = 82.225 < 100, so every non-US value is < 100.",
+   "accepted_routes": [
+    "Only the U.S. exceeds 300; no other country reaches 100.",
+    "The U.S. is above 300 while Canada, the next-highest, is only 82.225.",
+    "Every other country is under 100, whereas the U.S. is 318.863."
+   ],
+   "visual_evidence_rule": "The U.S. bar must cross a 300 reference line or be labeled 318.863; all other bars must remain below a 100 reference line or be labeled under 100.",
+   "temporal_anchor": "The clause making the U.S. price contrast explicit.",
+   "reviewer_question": "Should a threshold statement like 'only U.S. above 300 and all others below 100' be required, or is it enough to show the ratio?",
+   "review": {
+    "decision": null,
+    "edited_meaning": null,
+    "reviewer": null,
+    "adjudicated": false
+   }
+  }
+ ],
+ "optional_valid": [
+  "The U.S. price is about 50.1% of the combined listed prices across all seven countries (318.863 / 636.064).",
+  "Norway has the lowest price at 36.812.",
+  "Canada is the second-highest overall at 82.225.",
+  "The United Kingdom is the third-highest at 58.142."
+ ],
+ "unsupported_to_avoid": [
+  "Causal claims about why U.S. prices are higher, such as insurance, patents, or regulation.",
+  "Extrapolating to other inhalers, other drugs, or countries not listed in the table.",
+  "Using a global average or denominator not derivable from the seven table rows.",
+  "Treating relative_value as a share of total; it does not sum to 1.",
+  "Claiming the table proves Advair is a top-selling drug; the table only lists country prices.",
+  "Values not in the table, such as $10, $500, or specific prices for countries outside the seven listed."
+ ],
+ "notes": "The strongest obligatory units are U1, U2, and U5; U3 and U4 are valid but optional ways to show the magnitude and order. All arithmetic uses only the seven table values.",
+ "auto_checks": {
+  "basis_values_not_in_table": [],
+  "unit_count": 5,
+  "weight_sum": 1.0,
+  "weight_template_sum_reference": 1.17
+ },
+ "draft_cost": {
+  "sec": 41.8,
+  "usage": {
+   "prompt_tokens": 923,
+   "completion_tokens": 9776,
+   "total_tokens": 10699,
+   "prompt_tokens_details": {
+    "cached_tokens": 384
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7362
+   },
+   "prompt_cache_hit_tokens": 384,
+   "prompt_cache_miss_tokens": 539
+  }
+ },
+ "input_contract": "B2",
+ "input_materials": [
+  "table",
+  "intent"
+ ],
+ "file_naming": "one G1 per input contract; B1/B3/B4/B5 need separate drafts",
+ "narration_use": "reference only when drafting; required units must be derivable from the public B2 inputs (table + intent)",
+ "weight_mode": "uniform",
+ "weight_mode_note": "every unit gets 1/n so coverage is a plain share; weight_template is kept for per-type analysis only"
+}
